@@ -1,0 +1,36 @@
+{
+  "name": "nitrozen",
+  "version": "0.1.0",
+  "private": false,
+  "main": "dist/nitrozen.umd.js",
+  "module": "dist/nitrozen.umd.js",
+  "unpkg": "dist/nitrozen.umd.min.js",
+  "scripts": {
+    "serve": "vue-cli-service serve --port 4000",
+    "build": "vue-cli-service build",
+    "build-website": "rm -rf public && vue-cli-service build --dest public src/main.js",
+    "build-bundle": "vue-cli-service build --target lib --name nitrozen src/entry-lib.js",
+    "lint": "vue-cli-service lint",
+    "start": "node server.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.5"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "babel-eslint": "^10.0.3",
+    "compression-webpack-plugin": "^3.1.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-merge": "^4.2.2"
+  }
+}

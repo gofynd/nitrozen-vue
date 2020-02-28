@@ -1,0 +1,124 @@
+@import './../../base/base.less';
+.n-input {
+    // margin: 4px 0px 0px 0px;
+    padding: 0 0 0 12px;
+    height: 40px;
+    color: @TypographyPrimaryColor;
+    border: 1px solid @BorderColor;
+    border-radius: 3px;
+    width:100%;
+    background: @WhiteColor;
+    font-family: @PrimaryFont;
+    outline: none;
+    &:focus {
+        border: 1px solid @SecondaryColor;
+    }
+}
+
+.n-input-textarea{
+    height: 96px;
+    line-height: 21px;
+    padding-top: 6px;  
+}
+
+.n-input:disabled{
+  background: @HoverColor;
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;  
+}
+
+.n-input:disabled + .n-input-label{
+  opacity: 0.5;
+}
+
+.form-input{
+    outline: none;
+    // &:focus { 
+    //     label{
+    //         color: @SecondaryColor;
+    //         font-weight: 600;
+    //     }
+    // }
+}
+
+.n-input-hint{
+  color: @LabelColor;
+  font-family: @PrimaryFont;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 21px;
+}
+ .n-input-label{
+    
+    // padding: 0px 0px 0px 2px;
+    position: relative;
+    bottom: 65px;
+    left: 3px;
+    // width:100%;
+    display: flex;
+ }
+
+ .n-input-textarea-label{
+   bottom: 130px;
+ }
+
+ .n-input:focus + .n-input-label{
+    color: @SecondaryColor !important;
+    // font-weight: 600;
+}
+
+
+
+ ::-webkit-input-placeholder { /* Edge */
+    color: @PlaceholderColor;
+    font-size: 12px;
+    font-family: @PrimaryFont;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: @PlaceholderColor;
+    font-size: 12px;
+    font-family: @PrimaryFont;
+  }
+  
+  ::placeholder {
+    color: @PlaceholderColor;
+    font-size: 12px;
+    font-family: @PrimaryFont;
+  }
+
+  input[type="search"]::-webkit-search-cancel-button{
+    position: relative;
+    right: 10px;
+    font-size: @BaseFontSize + 4px;
+    cursor: pointer;
+  }
+
+  .loader-div{
+    float: right;
+    position: relative;
+    top: 60px;
+    left: 20px;
+    img{
+      width: 65px;
+    }
+  }
+
+  .search-icon{
+    position: relative;
+    top: 32px;
+    left: 10px;
+  }
+
+  // .tooltip-icon{
+  //   width: 1%;
+  //   position: relative;
+  //   left: 9%;
+  //   bottom: 25px;
+  // }
+
+  .search-input-padding{
+    padding-left: 30px;
+  }
+ 

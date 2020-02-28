@@ -1,0 +1,120 @@
+@import './../../base/base.less';
+
+.n-button{
+    height: 48px; 
+    cursor: pointer;
+    box-shadow: none;
+    font-family: @PrimaryFont;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+    text-align: center;
+    outline: none;
+    border: 0;
+    letter-spacing: 1px;
+    background: none;
+    text-decoration: none;
+    // &:hover { 
+    //     text-decoration: underline;
+    //     text-underline-position: under;
+    // }
+}
+.n-button-primary{
+    color: @PrimaryColor;
+}
+.n-button-secondary{
+    color: @SecondaryColor;    
+}
+.hover-state {
+    pointer-events: none;
+}
+
+.large-btn {
+    height: 64px !important;
+    padding: 0 65px !important;
+}
+.btn-notprogress {
+    opacity: 0;
+    transition: opacity .25s ease-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .fx-wt {
+    width: 66.38px;
+ }
+
+
+  .n-flat-button{
+    padding: 0px 48px;
+    border-radius: 3px;    
+    color: @WhiteColor;
+      &:focus { 
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+  }
+
+  .n-flat-button-primary{
+    background-color: @PrimaryColor; 
+    &:hover:not([disabled]) {
+        background-color: @PrimaryHoverColor;
+      }
+ }
+ .n-flat-button-secondary{
+    background-color: @SecondaryColor; 
+    &:hover:not([disabled]) {
+        background-color: @SecondaryHoverColor;
+      }
+ }
+
+
+
+.n-button-stroke{
+    padding: 0px 48px;
+    border-radius: 3px;    
+    background: @WhiteColor;
+    &:focus { 
+        text-decoration: underline;
+        text-underline-position: under;
+  }
+}
+
+.n-button-stroke-primary{
+    border: 1px solid @PrimaryColor;
+    color: @PrimaryColor;
+    // background-color: #B5FFE7;
+    &:hover:not([disabled]) {
+        background-color: #DFEFE9;
+    }
+}
+
+.n-button-stroke-secondary{
+    border: 1px solid @SecondaryColor;
+    color: @SecondaryColor;
+    &:hover:not([disabled]) {
+        background-color: #E2E4F1;
+    }
+}
+
+  .n-button-stroke:disabled, .n-flat-button:disabled, .n-button-rounded:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .n-button-rounded{
+    border-radius: 24px;
+    padding: 0px 32px;
+}
+
+.n-button-large{
+    padding: 0px 64px;
+    height: 64px;
+}
+.n-button-focused{
+    text-decoration: underline;
+    text-underline-position: under;
+}
