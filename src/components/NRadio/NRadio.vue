@@ -1,6 +1,6 @@
 <template>
-<div>
-    <input :id="id" type="radio" @input="changeEvent" :value="radioValue" name="radio-group ripple" :disabled="disabled">
+<div class="nitrozen-radio-group">
+    <input :id="id" type="radio" @input="changeEvent" :value="radioValue" name="ripple" :disabled="disabled">
     <label :for="id">
         <slot/>
     </label>
@@ -40,7 +40,8 @@ methods: {
 <style lang="less">
 @import './../../base/base.less';
 
-input[type="radio"]:checked,
+.nitrozen-radio-group{
+    input[type="radio"]:checked,
 input[type="radio"]:not(:checked) {
     position: absolute;
     visibility: hidden;
@@ -94,4 +95,6 @@ input[type="radio"]:disabled + label{
     opacity: 0.5;
     pointer-events: none;
 }
+}
+
 </style>

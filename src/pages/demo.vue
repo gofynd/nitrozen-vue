@@ -213,6 +213,12 @@
         <nitrozen-chips :disable="true">Disable Chips</nitrozen-chips>
     </div>
 
+     <div class="main-div space-between">
+        <nitrozen-chips :state="'error'">Nitro Error</nitrozen-chips>
+        <nitrozen-chips :state="'success'">Nitro Success Chips</nitrozen-chips>
+        <nitrozen-chips :state="'progress'">Nitro Progress</nitrozen-chips>
+    </div>
+
     <div class="main-div">
         <span class="chips-input">
             <nitrozen-chips v-for="(item, index) in fruits" :key="index">{{item.name}}

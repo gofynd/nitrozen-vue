@@ -4,7 +4,7 @@
         <slot class="nitrozen-icon" />
 
         <transition name="nitrozen-input-action">
-            <span :ref="iconId" class="nitrozen-icon" v-on:click="spliceElement(id)" v-if="!disable && deletable">
+            <span :ref="iconId" class="nitrozen-icon" v-on:click="spliceElement(chipId)" v-if="!disable && deletable">
                 <nitrozen-inline :icon="'cross'"></nitrozen-inline>
             </span>
             <span :ref="iconId" class="nitrozen-icon" v-if="!disable && inProgress">
@@ -58,15 +58,21 @@ export default {
         multiSelect: {
             type: Boolean,
             default: false
+        },
+        state: {
+            type: String,
+            default: 'none'
         }
-
     },
     computed: {
         chipClasses() {
             return {
                 'nitrozen-disabled': this.disable,
                 'nitrozen-inprogress': this.inProgress,
-                'nitrozen-error': this.error                
+                'nitrozen-error': this.error,
+                'nitrozen-chip-error': this.state == 'error',
+                'nitrozen-chip-success': this.state == 'success',
+                'nitrozen-chip-progress': this.state == 'progress'
             }
         }
     },
@@ -155,6 +161,19 @@ export default {
     }
     &.nitrozen-secondary-active-chip{
         background: @SecondaryColor;
+        color: @WhiteColor;
+    }
+    &.nitrozen-chip-error{
+        background: @ErrorColor;
+        color: @WhiteColor;
+        border: 1px solid @ErrorColor;
+    }
+    &.nitrozen-chip-success{
+        background: @SuccessColor;
+        color: @WhiteColor;
+    }
+    &.nitrozen-chip-progress{
+        background: @ProgressColor;
         color: @WhiteColor;
     }
     .nitrozen-icon {

@@ -4,12 +4,12 @@
         <img src="./../../assets/loader.gif">
     </label>
 
-    <label class="search-icon" v-if="showSearchIcon">
+    <label class="nitrozen-search-icon" v-if="showSearchIcon">
         <!-- <img src="./../../assets/search-black.svg"> -->
     <nitrozen-inline :icon="'search'"></nitrozen-inline>
     </label>
     
-    <input v-if="type != 'textarea'" :type="type" :placeholder="placeholder" :id="id" @input="valueChange" :disabled="disabled" class="n-input input-text" v-bind:class="{'search-input-padding' : showSearchIcon}" :value="value"
+    <input v-if="type != 'textarea'" :type="type" :placeholder="placeholder" :id="id" @input="valueChange" :disabled="disabled" class="n-input input-text" v-bind:class="{'nitrozen-search-input-padding' : showSearchIcon}" :value="value"
      v-on:keyup="eventEmit($event,'keyup')"
      v-on:change="eventEmit($event,'change')"
      v-on:blur="eventEmit($event,'blur')"

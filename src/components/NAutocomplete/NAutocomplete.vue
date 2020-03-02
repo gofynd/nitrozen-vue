@@ -1,5 +1,5 @@
 <template>
-<div class="autocomplete" id="parent-div">
+<div class="nitrozen-autocomplete" id="parent-div">
     <nitrozen-input :type="type" :showSearchIcon="true" v-model="autocompleteModal" @input="autocomplete($event)" @keydown="keydownFunc($event)" :id="id" :placeholder="placeholder"></nitrozen-input>
 </div>
 </template>
@@ -52,7 +52,7 @@ export default {
             /*create a DIV element that will contain the items (values):*/
             autocompleteList = document.createElement("DIV");
             autocompleteList.setAttribute("id", this.id + "autocomplete-list");
-            autocompleteList.setAttribute("class", "autocomplete-items");
+            autocompleteList.setAttribute("class", "nitrozen-autocomplete-items");
             /*append the DIV element as a child of the autocomplete container:*/
             document.getElementById('parent-div').appendChild(autocompleteList);
             /*for each item in the array...*/
@@ -124,7 +124,7 @@ export default {
         closeAllLists: function (element) {
             /*close all autocomplete lists in the document,
             except the one passed as an argument:*/
-            var x = document.getElementsByClassName("autocomplete-items");
+            var x = document.getElementsByClassName("nitrozen-autocomplete-items");
             for (var i = 0; i < x.length; i++) {
                 if (element != x[i]) {
                     x[i].parentNode.removeChild(x[i]);
@@ -138,7 +138,7 @@ export default {
 <style lang="less">
 @import './../../base/base.less';
 
-.autocomplete-items {
+.nitrozen-autocomplete-items {
   position: absolute;
   border: 1px solid @BorderColor;
   font-family: @PrimaryFont;  
@@ -156,7 +156,7 @@ export default {
   box-shadow: 0 2px 4px -1px @BoxShadow, 0 4px 5px 0 @BoxShadow, 0 1px 10px 0 @BoxShadow;
 }
 
-.autocomplete-items div {
+.nitrozen-autocomplete-items div {
   padding: 10px;
   cursor: pointer;
   background-color: @WhiteColor; 
@@ -171,7 +171,7 @@ export default {
 //   color: #ffffff; 
 // }
 /*the container must be positioned relative:*/
-.autocomplete {
+.nitrozen-autocomplete {
   position: relative;
   width: 100%;
 }

@@ -1,8 +1,8 @@
 <template>
     <!-- <span v-on="$listeners">
-        <img src="./../../assets/cross.svg" class="inline-svg" />
+        <img src="./../../assets/cross.svg" class="nitrozen-inline-svg" />
     </span> -->
-    <span v-on="$listeners" v-html="getSVG" class="inline-svg"></span>
+    <span v-on="$listeners" v-html="getSVG" class="nitrozen-inline-svg"></span>
 </template>
 
 <script>
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="less">
-.inline-svg{
+.nitrozen-inline-svg{
     height: 10px;
 }
 </style>

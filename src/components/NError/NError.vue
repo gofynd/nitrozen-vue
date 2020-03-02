@@ -1,5 +1,5 @@
 <template>
-<div class="error-visible">
+<div class="nitrozen-error-visible">
     <slot />    
 </div>
 </template>
@@ -12,7 +12,7 @@ name: 'nitrozen-error'
 
 <style lang="less">
 @import './../../base/base.less';
- .error-visible{
+ .nitrozen-error-visible{
      width: 100%;
      color: @ErrorColor;
      font-family: @PrimaryFont;

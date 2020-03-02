@@ -1,8 +1,8 @@
 <template>
-<div class="tooltip">
-    <!-- <img src="./../../assets/tooltip.svg"> -->
+<div class="nitrozen-tooltip">
+    <!-- <img src="./../../assets/nitrozen-tooltip.svg"> -->
     <nitrozen-inline :icon="'info'"></nitrozen-inline>
-    <span class="tooltiptext" v-bind:class="tooltipPositionClass">{{tooltipText}}</span>
+    <span class="nitrozen-tooltiptext" v-bind:class="tooltipPositionClass">{{tooltipText}}</span>
 </div>
 </template>
 
@@ -10,7 +10,7 @@
 import NitrozenInline from './../NInline';
 
 export default {
-    name: 'nitrozen-tooltip',
+    name: 'nitrozen-nitrozen-tooltip',
     components: {
         'nitrozen-inline': NitrozenInline
     },
@@ -40,12 +40,12 @@ export default {
 <style lang="less">
 @import './../../base/base.less';
 
-.tooltip {
+.nitrozen-tooltip {
     position: relative;
     display: inline-block;
     cursor: pointer;
 
-    .tooltiptext {
+    .nitrozen-tooltiptext {
         visibility: hidden;
         width: 90px;
         background-color: @LabelColor;
@@ -59,13 +59,13 @@ export default {
     }
 
     &:hover {
-        .tooltiptext {
+        .nitrozen-tooltiptext {
             visibility: visible;
         }
     }
 }
 
-/* Position the tooltip */
+/* Position the nitrozen-tooltip */
 .bottom {
     top: 100%;
     left: 50%;
