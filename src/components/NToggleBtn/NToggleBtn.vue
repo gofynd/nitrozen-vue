@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="nitrozen-toggle-container">
         <label class="switch">
             <input type="checkbox" @change="change" :checked="value" :value="value" />
             <span class="slider round"></span>

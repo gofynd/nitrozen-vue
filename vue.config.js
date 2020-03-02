@@ -1,6 +1,6 @@
 // const merge = require('webpack-merge');
 // const path = require('path');
-// const CompressionPlugin = require('compression-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 
 // var config = {
@@ -58,7 +58,7 @@
 
 // module.exports= {
 //   configureWebpack: config => {
-    
+
 //   }
 // }
 
@@ -73,3 +73,41 @@
 //   //   config.plugins.delete('prefetch')
 //   // }
 // }
+
+var config = {
+    plugins: [
+        new CompressionPlugin({
+            test: /\.js$|\.css$|\.html$/,
+            algorithm: 'gzip',
+        })
+    ],
+    rules: [{
+        test: /\.(jpg|jpeg|gif|png)$/,
+        loader: 'file-loader',
+        query: {
+            name: 'assets/[name].[ext]',
+            publicPath: '/'
+        }
+    }]
+}
+
+// module.exports = {
+//     configureWebpack : {
+//         plugins: [
+//             new CompressionPlugin({
+//                 test: /\.js$|\.css$|\.html$/,
+//                 algorithm: 'gzip',
+//             })
+//         ]},
+//         chainWebpack: config => {
+//             config.module
+//             .rule('assets')
+//             .test(/\.(jpg|jpeg|gif|png)$/)
+//             .use('file-loader')
+//             .loader('file-loader')
+//             .options({
+//                 name: 'assets/[name].[ext]',
+//             })
+//             .end()
+//         }
+// };

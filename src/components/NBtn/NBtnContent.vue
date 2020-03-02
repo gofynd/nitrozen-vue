@@ -2,7 +2,8 @@
 <div class="n-button-content">
     <div class="social-icon" v-if="icon">
         <img v-if="icon == 'facebook'" src="./../../assets/facebook-icon.png">
-        <img v-if="icon == 'bag'" src="./../../assets/Bag_Icon.svg">
+        <!-- <img v-if="icon == 'bag'" src="./../../assets/Bag_Icon.svg"> -->
+        
         
     </div>
     <slot v-if="!showProgress" />
