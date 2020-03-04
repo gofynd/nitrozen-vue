@@ -105,8 +105,8 @@
 
     <!-- Large Button -->
     <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :large="true">Large Button</nitrozen-button>
-        <nitrozen-button v-flat-btn :large="true" :theme="'secondary'">Large Button</nitrozen-button>
+        <nitrozen-button v-flat-btn :size="'large'">Large Button</nitrozen-button>
+        <nitrozen-button v-flat-btn :size="'large'" :theme="'secondary'">Large Button</nitrozen-button>
     </div>
 
     <!-- Basic Button -->
