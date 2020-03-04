@@ -35,9 +35,9 @@ export default {
             type: Boolean,
             default: false
         },
-        large: {
-            type: Boolean,
-            default: false
+        size: {
+            type: String,
+            default: 'small'
         },
         focused: {
             type: Boolean,
@@ -61,7 +61,8 @@ export default {
                 'n-button-rounded': this.rounded,
                 'n-button-primary': this.theme == 'primary',
                 'n-button-secondary': this.theme == 'secondary',
-                'n-button-large': this.large,
+                'n-button-large': this.size == 'large',
+                'n-button-mid': this.size == 'medium',
                 'n-button-focused': this.focused
             }],
             attrs: {

@@ -657,9 +657,9 @@ external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(flatBtn); // bind
       type: Boolean,
       default: false
     },
-    large: {
-      type: Boolean,
-      default: false
+    size: {
+      type: String,
+      default: 'small'
     },
     focused: {
       type: Boolean,
@@ -683,7 +683,8 @@ external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(flatBtn); // bind
         'n-button-rounded': this.rounded,
         'n-button-primary': this.theme == 'primary',
         'n-button-secondary': this.theme == 'secondary',
-        'n-button-large': this.large,
+        'n-button-large': this.size == 'large',
+        'n-button-mid': this.size == 'medium',
         'n-button-focused': this.focused
       }],
       attrs: {
@@ -808,12 +809,12 @@ var NToggleBtn_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/NToggleBtn/index.js
 
 /* harmony default export */ var components_NToggleBtn = (NToggleBtn);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"046ba296-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=template&id=0197b386&
-var NInputvue_type_template_id_0197b386_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-input"},[(_vm.loaderShow && _vm.search)?_c('label',{staticClass:"loader-div"},[_c('img',{attrs:{"src":__webpack_require__("fa5e")}})]):_vm._e(),(_vm.showSearchIcon)?_c('label',{staticClass:"nitrozen-search-icon"},[_c('nitrozen-inline',{attrs:{"icon":'search'}})],1):_vm._e(),(_vm.type != 'textarea')?_c('input',{staticClass:"n-input input-text",class:{'nitrozen-search-input-padding' : _vm.showSearchIcon},attrs:{"type":_vm.type,"placeholder":_vm.placeholder,"id":_vm.id,"disabled":_vm.disabled},domProps:{"value":_vm.value},on:{"input":_vm.valueChange,"keyup":function($event){return _vm.eventEmit($event,'keyup')},"change":function($event){return _vm.eventEmit($event,'change')},"blur":function($event){return _vm.eventEmit($event,'blur')},"focus":function($event){return _vm.eventEmit($event,'focus')},"click":function($event){return _vm.eventEmit($event,'click')},"keypress":function($event){return _vm.eventEmit($event,'keypress')}}}):_vm._e(),(_vm.type == 'textarea')?_c('textarea',{staticClass:"n-input input-text",class:{'n-input-textarea' : _vm.type == 'textarea'},attrs:{"disabled":_vm.disabled,"placeholder":_vm.placeholder},domProps:{"value":_vm.value},on:{"input":_vm.valueChange}}):_vm._e(),(_vm.label)?_c('label',{staticClass:"n-input-label n-input-hint",class:{'n-input-textarea-label' : _vm.type == 'textarea'}},[_vm._v(_vm._s(_vm.label)+" "),(_vm.showTooltip)?_c('div',{staticClass:"tooltip-icon"},[_c('nitrozen-tooltip',{attrs:{"tooltipText":_vm.tooltipText}})],1):_vm._e()]):_vm._e()])}
-var NInputvue_type_template_id_0197b386_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"046ba296-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=template&id=69503f28&
+var NInputvue_type_template_id_69503f28_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-input"},[(_vm.loaderShow && _vm.search)?_c('label',{staticClass:"nitrozen-loader-div"},[_c('img',{attrs:{"src":__webpack_require__("fa5e")}})]):_vm._e(),(_vm.showSearchIcon)?_c('label',{staticClass:"nitrozen-search-icon"},[_c('nitrozen-inline',{attrs:{"icon":'search'}})],1):_vm._e(),(_vm.type != 'textarea')?_c('input',{staticClass:"n-input input-text",class:{'nitrozen-search-input-padding' : _vm.showSearchIcon},attrs:{"type":_vm.type,"placeholder":_vm.placeholder,"id":_vm.id,"disabled":_vm.disabled},domProps:{"value":_vm.value},on:{"input":_vm.valueChange,"keyup":function($event){return _vm.eventEmit($event,'keyup')},"change":function($event){return _vm.eventEmit($event,'change')},"blur":function($event){return _vm.eventEmit($event,'blur')},"focus":function($event){return _vm.eventEmit($event,'focus')},"click":function($event){return _vm.eventEmit($event,'click')},"keypress":function($event){return _vm.eventEmit($event,'keypress')}}}):_vm._e(),(_vm.type == 'textarea')?_c('textarea',{staticClass:"n-input input-text",class:{'n-input-textarea' : _vm.type == 'textarea'},attrs:{"disabled":_vm.disabled,"placeholder":_vm.placeholder},domProps:{"value":_vm.value},on:{"input":_vm.valueChange}}):_vm._e(),(_vm.label)?_c('label',{staticClass:"n-input-label n-input-hint",class:{'n-input-textarea-label' : _vm.type == 'textarea'}},[_vm._v(_vm._s(_vm.label)+" "),(_vm.showTooltip)?_c('div',{staticClass:"tooltip-icon"},[_c('nitrozen-tooltip',{attrs:{"tooltipText":_vm.tooltipText}})],1):_vm._e()]):_vm._e()])}
+var NInputvue_type_template_id_69503f28_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=template&id=0197b386&
+// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=template&id=69503f28&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"046ba296-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NInput/NInputPrefix.vue?vue&type=template&id=0872c97f&
 var NInputPrefixvue_type_template_id_0872c97f_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._t("default")],2)}
@@ -1185,8 +1186,8 @@ var NInputvue_type_style_index_0_lang_less_ = __webpack_require__("fcf0");
 
 var NInput_component = normalizeComponent(
   NInput_NInputvue_type_script_lang_js_,
-  NInputvue_type_template_id_0197b386_render,
-  NInputvue_type_template_id_0197b386_staticRenderFns,
+  NInputvue_type_template_id_69503f28_render,
+  NInputvue_type_template_id_69503f28_staticRenderFns,
   false,
   null,
   null,

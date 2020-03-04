@@ -1,6 +1,6 @@
 <template>
 <div class="form-input">
-     <label class="loader-div" v-if="loaderShow && search">
+     <label class="nitrozen-loader-div" v-if="loaderShow && search">
         <img src="./../../assets/loader.gif">
     </label>
 

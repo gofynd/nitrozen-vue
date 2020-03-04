@@ -29,10 +29,6 @@
     pointer-events: none;
 }
 
-.large-btn {
-    height: 64px !important;
-    padding: 0 65px !important;
-}
 .btn-notprogress {
     opacity: 0;
     transition: opacity .25s ease-out;
@@ -42,10 +38,11 @@
     transform: translate(-50%,-50%);
   }
   .n-flat-button{
-    padding: 0px 48px;
-    border-radius: 3px;    
+    padding: 0px 40px;
+    height: 40px;
+    border-radius: 4px;
     color: @WhiteColor;
-      &:focus { 
+      &:focus {
         text-decoration: underline;
         text-underline-position: under;
     }
@@ -67,8 +64,9 @@
 
 
 .n-button-stroke{
-    padding: 0px 48px;
-    border-radius: 3px;    
+    padding: 0px 40px;
+    height: 40px;
+    border-radius: 4px;
     background: @WhiteColor;
     &:focus { 
         text-decoration: underline;
@@ -107,6 +105,10 @@
 .n-button-large{
     padding: 0px 64px;
     height: 64px;
+}
+.n-button-large{
+    padding: 0px 48px;
+    height: 48px;
 }
 .n-button-focused{
     text-decoration: underline;
