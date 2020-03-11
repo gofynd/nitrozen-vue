@@ -1,8 +1,8 @@
 <template>
     <div class="nitrozen-toggle-container">
-        <label class="switch">
+        <label class="nitrozen-switch">
             <input type="checkbox" @change="change" :checked="value" :value="value" />
-            <span class="slider round"></span>
+            <span class="nitrozen-slider nitrozen-round"></span>
         </label>
     </div>
 </template>
