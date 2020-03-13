@@ -1,5 +1,5 @@
 <template>
-<div class="form-input">
+<div class="nitrozen-form-input">
      <label class="nitrozen-loader-div" v-if="loaderShow && search">
         <img src="./../../assets/loader.gif">
     </label>

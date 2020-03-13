@@ -27,10 +27,10 @@ export default {
     computed: {
         tooltipPositionClass: function () {
             return {
-                'top': this.position == 'top',
-                'right': this.position == 'right',
-                'left': this.position == 'left',
-                'bottom': this.position == 'bottom'
+                'nitrozen-tooltip-top': this.position == 'top',
+                'nitrozen-tooltip-right': this.position == 'right',
+                'nitrozen-tooltip-left': this.position == 'left',
+                'nitrozen-tooltip-bottom': this.position == 'bottom'
             }
         }
     }
@@ -47,12 +47,13 @@ export default {
 
     .nitrozen-tooltiptext {
         visibility: hidden;
-        width: 90px;
+        min-width: 150px;
+        max-width: 300px;
         background-color: @LabelColor;
         color: @WhiteColor;
         text-align: center;
         border-radius: 6px;
-        padding: 5px 0;
+        padding: 5px;
         font-family: @PrimaryFont;
         position: absolute;
         z-index: 1;
@@ -66,24 +67,24 @@ export default {
 }
 
 /* Position the nitrozen-tooltip */
-.bottom {
+.nitrozen-tooltip-bottom {
     top: 100%;
     left: 50%;
     margin-left: -45px;
 }
 
-.top {
+.nitrozen-tooltip-top {
     bottom: 100%;
     left: 50%;
     margin-left: -45px;
 }
 
-.left {
+.nitrozen-tooltip-left {
     top: -5px;
     right: 105%;
 }
 
-.right {
+.nitrozen-tooltip-right {
     top: -5px;
     left: 105%;
 }

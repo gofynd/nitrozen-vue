@@ -154,7 +154,7 @@
     </div>
 
     <div class="main-div">
-        <nitrozen-input :id="7" :showTooltip="true" :tooltipText="'Tooltip text'" :type="'text'" :placeholder="'Enter Name'" :label="'Search Icon Input'" v-model="inputModel"></nitrozen-input>
+        <nitrozen-input :id="7" :showTooltip="true" :tooltipText="'Tooltip text Tooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip text'" :type="'text'" :placeholder="'Enter Name'" :label="'Search Icon Input'" v-model="inputModel"></nitrozen-input>
     </div>
 
     <div class="main-div">
