@@ -168,8 +168,8 @@
     </div>
 
     <div class="main-div space-between">
-        <nitrozen-radio v-model="radioModel" @change="changeEvent" :radioValue="'1'">Basic Radio 1</nitrozen-radio>
-        <nitrozen-radio v-model="radioModel" @change="changeEvent" :radioValue="'2'">Basic Radio 2</nitrozen-radio>
+        <nitrozen-radio :name="'radio-1'" v-model="radioModel" @change="changeEvent" :radioValue="'1'">Basic Radio 1</nitrozen-radio>
+        <nitrozen-radio :name="'radio-1'" v-model="radioModel" @change="changeEvent" :radioValue="'2'">Basic Radio 2</nitrozen-radio>
         {{radioModel}}
     </div>
 

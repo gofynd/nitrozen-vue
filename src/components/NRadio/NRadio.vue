@@ -7,7 +7,7 @@
       @change="changeEvent"
       v-model="nitrozenModel"
       :value="radioValue"
-      name="ripple"
+      :name="name"
       :disabled="disabled"
     />
     <label :for="id">
@@ -36,6 +36,11 @@ export default {
     id: {
       type: [Number, String],
       default: () => "nitrozen-radio" + NitrozenUuid()
+    },
+    name: {
+      type: [Number, String],
+      required: true,
+      default: () => "nitrozen-radio-name"
     },
     value: {}
   },
