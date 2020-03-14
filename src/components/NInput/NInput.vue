@@ -1,5 +1,16 @@
 <template>
   <div class="nitrozen-form-input">
+    <div>
+      <label class="n-input-label" v-if="label">
+        {{ label }}
+        <span class="tooltip-icon" v-if="showTooltip">
+          <nitrozen-tooltip :tooltipText="tooltipText"></nitrozen-tooltip>
+        </span>
+      </label>
+      <label class="n-input-label n-input-maxlength" v-if="maxlength">
+        {{ length }}/{{ maxlength }}
+      </label>
+    </div>
     <label class="nitrozen-loader-div" v-if="loaderShow && search">
       <img src="./../../assets/loader.gif" />
     </label>
@@ -11,20 +22,21 @@
 
     <input
       v-if="type != 'textarea'"
-      :type="type"
-      :placeholder="placeholder"
-      :id="id"
-      @input="valueChange"
-      :disabled="disabled"
-      class="n-input input-text"
       v-bind:class="{ 'nitrozen-search-input-padding': showSearchIcon }"
-      :value="value"
       v-on:keyup="eventEmit($event, 'keyup')"
       v-on:change="eventEmit($event, 'change')"
       v-on:blur="eventEmit($event, 'blur')"
       v-on:focus="eventEmit($event, 'focus')"
       v-on:click="eventEmit($event, 'click')"
       v-on:keypress="eventEmit($event, 'keypress')"
+      class="n-input input-text"
+      :maxlength="maxlength"
+      :type="type"
+      :placeholder="placeholder"
+      :id="id"
+      :disabled="disabled"
+      :value="value"
+      @input="valueChange"
     />
     <textarea
       v-if="type == 'textarea'"
@@ -34,24 +46,16 @@
       v-on:focus="eventEmit($event, 'focus')"
       v-on:click="eventEmit($event, 'click')"
       v-on:keypress="eventEmit($event, 'keypress')"
-      @input="valueChange"
-      :disabled="disabled"
-      class="n-input input-text"
       v-bind:class="{ 'n-input-textarea': type == 'textarea' }"
+      class="n-input input-text"
+      :maxlength="maxlength"
+      :disabled="disabled"
       :placeholder="placeholder"
       :value="value"
+      @input="valueChange"
     ></textarea>
 
-    <label
-      class="n-input-label n-input-hint"
-      v-bind:class="{ 'n-input-textarea-label': type == 'textarea' }"
-      v-if="label"
-      >{{ label }}
-      <div class="tooltip-icon" v-if="showTooltip">
-        <nitrozen-tooltip :tooltipText="tooltipText"></nitrozen-tooltip>
-      </div>
-    </label>
-    <!-- <label class="n-input-hint" v-if="hint">{{ hint }}</label> -->
+    <!-- <label class="n-input-label" v-if="hint">{{ hint }}</label> -->
 
     <!-- <div
             v-bind:class="[{ 'error-visible': showError && value == '' }]"
@@ -80,6 +84,11 @@ export default {
     return {
       loaderShow: false
     };
+  },
+  computed: {
+    length: function() {
+      return this.value.length;
+    }
   },
   props: {
     type: {
@@ -129,6 +138,9 @@ export default {
     id: {
       type: [Number, String],
       default: () => "nitrozen-input" + NitrozenUuid()
+    },
+    maxlength: {
+      type: Number
     }
   },
   methods: {
