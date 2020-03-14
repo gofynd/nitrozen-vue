@@ -17,7 +17,14 @@
      v-on:click="eventEmit($event,'click')"
      v-on:keypress="eventEmit($event,'keypress')"     
       />
-    <textarea v-if="type == 'textarea'" @input="valueChange" :disabled="disabled" class="n-input input-text" v-bind:class="{'n-input-textarea' : type == 'textarea'}" :placeholder="placeholder" :value="value"></textarea>
+    <textarea v-if="type == 'textarea'"
+    v-on:keyup="eventEmit($event,'keyup')"
+     v-on:change="eventEmit($event,'change')"
+     v-on:blur="eventEmit($event,'blur')"
+     v-on:focus="eventEmit($event,'focus')"
+     v-on:click="eventEmit($event,'click')"
+     v-on:keypress="eventEmit($event,'keypress')" 
+     @input="valueChange" :disabled="disabled" class="n-input input-text" v-bind:class="{'n-input-textarea' : type == 'textarea'}" :placeholder="placeholder" :value="value"></textarea>
     
     <label class="n-input-label n-input-hint" v-bind:class="{'n-input-textarea-label' : type == 'textarea'}" v-if="label">{{ label }}
         <div class="tooltip-icon" v-if="showTooltip">
