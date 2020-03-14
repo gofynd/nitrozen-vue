@@ -168,8 +168,8 @@
     </div>
 
     <div class="main-div space-between">
-        <nitrozen-radio :id="'radio1'" v-model="radioModel" :radioValue="'1'">Basic Radio 1</nitrozen-radio>
-        <nitrozen-radio :id="'radio2'" v-model="radioModel" :radioValue="'2'">Basic Radio 2</nitrozen-radio>
+        <nitrozen-radio v-model="radioModel" @change="changeEvent" :radioValue="'1'">Basic Radio 1</nitrozen-radio>
+        <nitrozen-radio v-model="radioModel" @change="changeEvent" :radioValue="'2'">Basic Radio 2</nitrozen-radio>
         {{radioModel}}
     </div>
 
@@ -251,7 +251,7 @@ export default {
             inputModel: 'Some Value',
             autoModel: '',
             checkArray: [],
-            radioModel: '',
+            radioModel: '1',
             fruits: [{
                     name: 'Lemon'
                 },
@@ -301,6 +301,10 @@ export default {
             else{
                 this.selectedItems.splice(index,1);
             }
+        },
+        changeEvent: function(event){
+        console.log(event);
+        
         }
     }
 }

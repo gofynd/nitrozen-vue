@@ -1261,12 +1261,12 @@ var NError_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/NError/index.js
 
 /* harmony default export */ var components_NError = (NError);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"046ba296-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=template&id=90c7c614&
-var NRadiovue_type_template_id_90c7c614_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-radio-group"},[_c('input',{attrs:{"id":_vm.id,"type":"radio","name":"ripple","disabled":_vm.disabled},domProps:{"value":_vm.radioValue},on:{"input":_vm.changeEvent}}),_c('label',{attrs:{"for":_vm.id}},[_vm._t("default")],2)])}
-var NRadiovue_type_template_id_90c7c614_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"046ba296-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=template&id=4f587c83&
+var NRadiovue_type_template_id_4f587c83_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-radio-group"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.nitrozenModel),expression:"nitrozenModel"}],attrs:{"id":_vm.id,"type":"radio","name":"ripple","disabled":_vm.disabled},domProps:{"value":_vm.radioValue,"checked":_vm._q(_vm.nitrozenModel,_vm.radioValue)},on:{"input":_vm.inputEvent,"change":[function($event){_vm.nitrozenModel=_vm.radioValue},_vm.changeEvent]}}),_c('label',{attrs:{"for":_vm.id}},[_vm._t("default")],2)])}
+var NRadiovue_type_template_id_4f587c83_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NRadio/NRadio.vue?vue&type=template&id=90c7c614&
+// CONCATENATED MODULE: ./src/components/NRadio/NRadio.vue?vue&type=template&id=4f587c83&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=script&lang=js&
 //
@@ -1279,8 +1279,17 @@ var NRadiovue_type_template_id_90c7c614_staticRenderFns = []
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ var NRadiovue_type_script_lang_js_ = ({
-  name: 'nitrozen-radio',
+  name: "nitrozen-radio",
   props: {
     disabled: {
       type: Boolean,
@@ -1292,16 +1301,27 @@ var NRadiovue_type_template_id_90c7c614_staticRenderFns = []
     },
     radioValue: {
       type: [String, Number],
-      default: ''
+      default: ""
     },
     id: {
-      type: [String, Number],
-      default: ''
-    }
+      type: [Number, String],
+      default: () => "nitrozen-radio" + NUuid()
+    },
+    value: {}
   },
+
+  data() {
+    return {
+      nitrozenModel: this.value
+    };
+  },
+
   methods: {
+    inputEvent: function (event) {
+      this.$emit("input", event.target.value);
+    },
     changeEvent: function (event) {
-      this.$emit('input', event.target.value);
+      this.$emit("change", event.target.value);
     }
   }
 });
@@ -1321,8 +1341,8 @@ var NRadiovue_type_style_index_0_lang_less_ = __webpack_require__("b2f7");
 
 var NRadio_component = normalizeComponent(
   NRadio_NRadiovue_type_script_lang_js_,
-  NRadiovue_type_template_id_90c7c614_render,
-  NRadiovue_type_template_id_90c7c614_staticRenderFns,
+  NRadiovue_type_template_id_4f587c83_render,
+  NRadiovue_type_template_id_4f587c83_staticRenderFns,
   false,
   null,
   null,
