@@ -1,4 +1,5 @@
 import NitrozenButton from './NBtn';
+import NitrozenDropdown from './NDropdown';
 import NitrozenToggleBtn from './NToggleBtn';
 import NitrozenInput from './NInput';
 import NitrozenError from './NError';
@@ -11,6 +12,7 @@ import NitrozenInline from './NInline';
 
 export {
     NitrozenButton,
+    NitrozenDropdown,
     NitrozenToggleBtn,
     NitrozenInput,
     NitrozenError,

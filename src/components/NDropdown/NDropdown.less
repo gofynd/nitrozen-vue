@@ -1,0 +1,125 @@
+@import './../../base/base.less';
+
+.dropdown-container {
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    width: 100%;
+
+    select {
+        display: none;
+    }
+
+    .nitrozen-select-wrapper {
+        position: relative;
+        user-select: none;
+        width: 100%;
+    }
+    .nitrozen-select {
+        box-sizing: border-box;
+        border: 1px solid @InputBorderColor;
+        border-radius: 3px;
+        background-color: #ffffff;
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .nitrozen-select__trigger {
+        color: @TypographyPrimaryColor;
+        border-radius: 3px;
+        font-size: 14px;
+        line-height: 22px;
+        padding: 9px 14px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #ffffff;
+        cursor: pointer;
+    }
+    .nitrozen-options {
+        position: absolute;
+        display: block;
+        top: 43px;
+        left: 0;
+        right: 0;
+        border: 1px solid @InputBorderColor;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px 0 rgba(229, 229, 229, 0.2),
+            0 6px 20px 0 rgba(229, 229, 229, 0.19);
+        background: #fff;
+        transition: all 0.5s;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: 2;
+    }
+    .nitrozen-select.open .nitrozen-options {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+    .nitrozen-option {
+        position: relative;
+        display: block;
+        padding: 9px 14px;
+        font-size: 14px;
+        color: @TypographyPrimaryColor;
+        line-height: 22px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    .nitrozen-option:hover {
+        cursor: pointer;
+        background-color: @HoverColor;
+    }
+    .nitrozen-option.selected {
+        color: #ffffff;
+        background-color: @SecondaryColor;
+    }
+    // Disabled
+    .nitrozen-select.disabled {
+        background-color: @InputBorderColor;
+    }
+    .nitrozen-select.disabled .nitrozen-select__trigger {
+        color: @DisabledColor;
+        background-color: @InputBorderColor;
+        cursor: not-allowed;
+    }
+    .nitrozen-select.disabled .nitrozen-select__trigger .arrow {
+        color: @DisabledColor;
+    }
+
+    // Arrow
+
+    .arrow {
+        position: relative;
+        height: 15px;
+        width: 15px;
+        color: @SecondaryColor;
+    }
+    .arrow::after {
+        content: '▼';
+        position: absolute;
+        bottom: 0px;
+        height: 100%;
+    }
+    .arrow::after {
+        left: 5px;
+        top: -3px;
+    }
+    .open .arrow::after {
+        left: 5px;
+        transform: rotate(180deg);
+        top: 3px;
+    }
+}
+
+.label {
+    color: @LabelColor;
+    font-family: @PrimaryFont;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 21px;
+}
