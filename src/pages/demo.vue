@@ -1,6 +1,16 @@
 <template>
 <div id="app">
 
+
+    <div class="main-div space-between">
+            <nitrozen-dropdown label="State" :items="dropdownItems" v-model="selectedDropdown" >
+            </nitrozen-dropdown>
+            <nitrozen-dropdown label="State Advanced" :items="dropdownItems" v-model="selectedDropdown" :required="true">
+            </nitrozen-dropdown>
+            <nitrozen-dropdown label="State Disabled" :items="dropdownItems" v-model="selectedDropdown" :disabled="true">
+            </nitrozen-dropdown>
+    </div>
+    
     <!-- Flat Button -->
     <div class="main-div space-between">
         <nitrozen-button v-flat-btn @click="someFunc">Primary Flat {{numberOfClick}}</nitrozen-button>
@@ -238,6 +248,7 @@
 
     </div>
 
+
 </div>
 </template>
 
@@ -252,6 +263,17 @@ export default {
             autoModel: '',
             checkArray: [],
             radioModel: '1',
+            dropdownItems: [{
+             text: 'Maharashtra',
+             value: 1,   
+            },{
+             text: 'Andhra Pradesh',
+             value: 2,   
+            },{
+             text: 'West Bengal',
+             value: 3,   
+            }],
+            selectedDropdown: 2,
             fruits: [{
                     name: 'Lemon'
                 },
