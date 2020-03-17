@@ -93,7 +93,7 @@ export default {
   methods: {
     selectItem(item) {
       this.selected = item;
-      this.$emit("input", item.value);
+      this.$emit("input", item.value); // v-model implementation
     },
     toggle() {
       if (this.disabled) return;
