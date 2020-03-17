@@ -158,7 +158,7 @@
     </div>
 
     <div class="main-div">
-        <nitrozen-input :id="8" :type="'textarea'" :placeholder="'Enter Name'" :label="'Textarea'" v-model="inputModel"></nitrozen-input>
+        <nitrozen-input :id="8" :type="'textarea'" :placeholder="'Enter description'" :label="'Textarea'" v-model="inputModel" v-bind:maxlength="15"></nitrozen-input>
     </div>
 
     <div class="main-div space-between">
