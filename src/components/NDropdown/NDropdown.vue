@@ -30,9 +30,17 @@
   </div>
 </template>
 <script>
+import NitrozenUuid from "./../../utils/NUuid";
 export default {
   name: "nitrozen-dropdown",
   props: {
+    /**
+     * Unique identifier
+     */
+    id: {
+      type: [Number, String],
+      default: () => "nitrozen-dropdown-" + NitrozenUuid()
+    },
     /**
      * array of item in dropdown
      * @example `
