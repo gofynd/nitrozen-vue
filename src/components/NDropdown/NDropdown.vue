@@ -1,6 +1,6 @@
 <template>
-  <div class="dropdown-container">
-    <label v-if="label" class="label">
+  <div class="nitrozen-dropdown-container">
+    <label v-if="label" class="nitrozen-dropdown-label">
       {{ label }} {{ required ? " *" : "" }}</label
     >
     <div class="nitrozen-select-wrapper" @click="toggle">
@@ -11,7 +11,7 @@
       >
         <div class="nitrozen-select__trigger">
           <span>{{ selectedText }}</span>
-          <div class="arrow"></div>
+          <div class="nitrozen-dropdown-arrow"></div>
         </div>
         <div class="nitrozen-options">
           <span
@@ -105,13 +105,13 @@ export default {
     },
     toggle() {
       if (this.disabled) return;
-      this.$refs.n_dropdown.classList.toggle("open");
+      this.$refs.n_dropdown.classList.toggle("nitrozen-dropdown-open");
     },
     documentClick(e) {
       // close dropdown on outside click
       const select = this.$refs.n_dropdown;
       if (!select.contains(e.target)) {
-        select.classList.remove("open");
+        select.classList.remove("nitrozen-dropdown-open");
       }
     }
   },
