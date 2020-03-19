@@ -51,7 +51,7 @@
         pointer-events: none;
         z-index: 2;
     }
-    .nitrozen-select.open .nitrozen-options {
+    .nitrozen-select.nitrozen-dropdown-open .nitrozen-options {
         opacity: 1;
         visibility: visible;
         pointer-events: all;
@@ -83,7 +83,7 @@
         background-color: @InputBorderColor;
         cursor: not-allowed;
     }
-    .nitrozen-select.disabled .nitrozen-select__trigger .arrow {
+    .nitrozen-select.disabled .nitrozen-select__trigger .nitrozen-dropdown-arrow {
         color: @DisabledColor;
     }
 
@@ -100,10 +100,8 @@
         position: absolute;
         bottom: 0px;
         height: 100%;
-    }
-    .nitrozen-dropdown-arrow::after {
-        left: 5px;
         top: -3px;
+        left: 5px;
     }
     .nitrozen-dropdown-open .nitrozen-dropdown-arrow::after {
         left: 5px;
