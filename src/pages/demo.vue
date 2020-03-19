@@ -248,6 +248,27 @@
 
     </div>
 
+    <div class="main-div">
+      <span class="chips-input">
+        <nitrozen-badge title="Normal">NORMAL</nitrozen-badge>
+        <nitrozen-badge title="Info" state="info"></nitrozen-badge>
+        <nitrozen-badge title="Success" state="success"></nitrozen-badge>
+        <nitrozen-badge title="Warning" state="warn"></nitrozen-badge>
+        <nitrozen-badge title="Error" state="error"></nitrozen-badge>
+        <nitrozen-badge title="Disable" state="disable"></nitrozen-badge>
+      </span>
+    </div>
+    
+    <div class="main-div">
+      <span class="chips-input">
+        <nitrozen-badge :fill="true" title="Normal">NORMAL</nitrozen-badge>
+        <nitrozen-badge :fill="true" title="Info" state="info"></nitrozen-badge>
+        <nitrozen-badge :fill="true" title="Success" state="success"></nitrozen-badge>
+        <nitrozen-badge :fill="true" title="Warning" state="warn"></nitrozen-badge>
+        <nitrozen-badge :fill="true" title="Error" state="error"></nitrozen-badge>
+        <nitrozen-badge :fill="true" title="Disable" state="disable"></nitrozen-badge>
+      </span>
+    </div>
 
 </div>
 </template>

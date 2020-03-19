@@ -9,6 +9,7 @@ import NitrozenCheckBox from './NCheckbox';
 import NitrozenAutocomplete from './NAutocomplete';
 import NitrozenChips from './NChips';
 import NitrozenInline from './NInline';
+import NitrozenBadge from './NBadge';
 
 export {
     NitrozenButton,
@@ -21,5 +22,6 @@ export {
     NitrozenCheckBox,
     NitrozenAutocomplete,
     NitrozenChips,
-    NitrozenInline
+    NitrozenInline,
+    NitrozenBadge,
 }
