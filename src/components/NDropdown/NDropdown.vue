@@ -90,12 +90,15 @@ export default {
   },
   computed: {
     selectedText: function() {
-      this.selected = this.items.find(i => i.value == this.value);
+      if (this.value) {
+        this.selected = this.items.find(i => i.value == this.value);
+      }
       if (this.selected) {
         return this.selected.text;
-      } else {
+      } else if (this.label) {
         return `Choose ${this.label}`;
       }
+      return "";
     }
   },
   methods: {

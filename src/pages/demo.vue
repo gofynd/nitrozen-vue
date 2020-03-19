@@ -5,6 +5,8 @@
     <div class="main-div space-between">
             <nitrozen-dropdown label="State" :items="dropdownItems" v-model="selectedDropdown" >
             </nitrozen-dropdown>
+            <nitrozen-dropdown  :items="dropdownItems" >
+            </nitrozen-dropdown>
             <nitrozen-dropdown label="State Advanced" :items="dropdownItems" v-model="selectedDropdown" :required="true">
             </nitrozen-dropdown>
             <nitrozen-dropdown label="State Disabled" :items="dropdownItems" v-model="selectedDropdown" :disabled="true">
