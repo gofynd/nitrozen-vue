@@ -1,6 +1,6 @@
 @import './../../base/base.less';
 
-.dropdown-container {
+.nitrozen-dropdown-container {
     display: flex;
     padding: 12px;
     flex-direction: column;
@@ -51,7 +51,7 @@
         pointer-events: none;
         z-index: 2;
     }
-    .nitrozen-select.open .nitrozen-options {
+    .nitrozen-select.nitrozen-dropdown-open .nitrozen-options {
         opacity: 1;
         visibility: visible;
         pointer-events: all;
@@ -83,36 +83,34 @@
         background-color: @InputBorderColor;
         cursor: not-allowed;
     }
-    .nitrozen-select.disabled .nitrozen-select__trigger .arrow {
+    .nitrozen-select.disabled .nitrozen-select__trigger .nitrozen-dropdown-arrow {
         color: @DisabledColor;
     }
 
     // Arrow
 
-    .arrow {
+    .nitrozen-dropdown-arrow {
         position: relative;
         height: 15px;
         width: 15px;
         color: @SecondaryColor;
     }
-    .arrow::after {
+    .nitrozen-dropdown-arrow::after {
         content: '▼';
         position: absolute;
         bottom: 0px;
         height: 100%;
-    }
-    .arrow::after {
-        left: 5px;
         top: -3px;
+        left: 5px;
     }
-    .open .arrow::after {
+    .nitrozen-dropdown-open .nitrozen-dropdown-arrow::after {
         left: 5px;
         transform: rotate(180deg);
         top: 3px;
     }
 }
 
-.label {
+.nitrozen-dropdown-label {
     color: @LabelColor;
     font-family: @PrimaryFont;
     font-size: 12px;
