@@ -2,7 +2,7 @@
 
 .nitrozen-dropdown-container {
     display: flex;
-    padding: 12px;
+    padding: 0;
     flex-direction: column;
     width: 100%;
 
@@ -33,6 +33,10 @@
         justify-content: space-between;
         background: #ffffff;
         cursor: pointer;
+        span{
+            overflow: hidden;
+            white-space: nowrap;
+        }
     }
     .nitrozen-options {
         position: absolute;
@@ -83,7 +87,9 @@
         background-color: @InputBorderColor;
         cursor: not-allowed;
     }
-    .nitrozen-select.disabled .nitrozen-select__trigger .nitrozen-dropdown-arrow {
+    .nitrozen-select.disabled
+        .nitrozen-select__trigger
+        .nitrozen-dropdown-arrow {
         color: @DisabledColor;
     }
 
@@ -91,6 +97,7 @@
 
     .nitrozen-dropdown-arrow {
         position: relative;
+        right: 2px;
         height: 15px;
         width: 15px;
         color: @SecondaryColor;
