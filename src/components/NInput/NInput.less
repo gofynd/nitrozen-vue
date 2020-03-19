@@ -34,6 +34,8 @@
 
 .nitrozen-form-input {
     outline: none;
+    display: flex;
+    flex-direction: column-reverse;
     // &:focus {
     //     label{
     //         color: @SecondaryColor;
@@ -48,16 +50,20 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 21px;
-    display: contents;
+    display: flex;
 }
 
 .n-input-maxlength {
-    display: block;
-    float: right;
+    // display: block;
+    // float: right;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 20px;
+    left: 10px;
 }
 .n-input:focus + .n-input-label {
     color: @SecondaryColor !important;
-    // font-weight: 600;
 }
 
 ::-webkit-input-placeholder {
@@ -90,7 +96,7 @@ input[type='search']::-webkit-search-cancel-button {
 .nitrozen-loader-div {
     float: right;
     position: relative;
-    top: 60px;
+    bottom: 52px;
     left: 20px;
     img {
         width: 65px;
@@ -99,17 +105,21 @@ input[type='search']::-webkit-search-cancel-button {
 
 .nitrozen-search-icon {
     position: relative;
-    top: 32px;
+    top: 44px;
     left: 10px;
+    display: flex;
+    width: 1%;
 }
 
-// .tooltip-icon{
-//   width: 1%;
-//   position: relative;
-//   left: 9%;
-//   bottom: 25px;
-// }
+.nitrozen-tooltip-icon{
+    margin-left: 5px;
+}
 
 .nitrozen-search-input-padding {
     padding-left: 30px;
+}
+
+.nitrozen-input-label-div{
+    display: flex;
+    justify-content: space-between;
 }

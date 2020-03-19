@@ -3,9 +3,9 @@
     <input
       :id="id"
       type="radio"
-      @input="inputEvent"
-      @change="changeEvent"
-      v-model="nitrozenModel"
+      @input="changeEvent($event,'input')"
+      @change="changeEvent($event,'change')"
+      :checked="value==radioValue"
       :value="radioValue"
       :name="name"
       :disabled="disabled"
@@ -15,7 +15,6 @@
     </label>
   </div>
 </template>
-
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
 export default {
@@ -46,23 +45,17 @@ export default {
   },
   data() {
       return{
-         nitrozenModel : this.value
       }
   },
   methods: {
-    inputEvent: function(event) {
-      this.$emit("input", event.target.value);
-    },
-    changeEvent: function(event){
-      this.$emit("change", event.target.value);
+    changeEvent: function(event,type){
+      this.$emit(type, this.radioValue);
     }
   }
 };
 </script>
-
 <style lang="less">
 @import "./../../base/base.less";
-
 .nitrozen-radio-group {
   input[type="radio"]:checked,
   input[type="radio"]:not(:checked) {
@@ -119,3 +112,4 @@ export default {
   }
 }
 </style>
+
