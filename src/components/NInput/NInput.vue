@@ -1,24 +1,5 @@
 <template>
   <div class="nitrozen-form-input">
-    <div>
-      <label class="n-input-label" v-if="label">
-        {{ label }}
-        <span class="tooltip-icon" v-if="showTooltip">
-          <nitrozen-tooltip :tooltipText="tooltipText"></nitrozen-tooltip>
-        </span>
-      </label>
-      <label class="n-input-label n-input-maxlength" v-if="maxlength">
-        {{ length }}/{{ maxlength }}
-      </label>
-    </div>
-    <label class="nitrozen-loader-div" v-if="loaderShow && search">
-      <img src="./../../assets/loader.gif" />
-    </label>
-
-    <label class="nitrozen-search-icon" v-if="showSearchIcon">
-      <!-- <img src="./../../assets/search-black.svg"> -->
-      <nitrozen-inline :icon="'search'"></nitrozen-inline>
-    </label>
 
     <input
       v-if="type != 'textarea'"
@@ -55,6 +36,25 @@
       @input="valueChange"
     ></textarea>
 
+ <label class="n-input-label" v-if="label">
+        {{ label }}
+        <span class="nitrozen-tooltip-icon" v-if="showTooltip">
+          <nitrozen-tooltip :tooltipText="tooltipText"></nitrozen-tooltip>
+        </span>
+      </label>
+      <label class="n-input-label n-input-maxlength" v-if="maxlength">
+        {{ length }}/{{ maxlength }}
+      </label>
+     
+
+
+ <label class="nitrozen-loader-div" v-if="loaderShow && search">
+      <img src="./../../assets/loader.gif" />
+    </label>
+
+    <label class="nitrozen-search-icon" v-if="showSearchIcon">
+      <nitrozen-inline :icon="'search'"></nitrozen-inline>
+    </label>
     <!-- <label class="n-input-label" v-if="hint">{{ hint }}</label> -->
 
     <!-- <div

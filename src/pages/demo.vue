@@ -140,7 +140,7 @@
     <!-- Input -->
     <div class="main-div">
         <nitrozen-input :id="1" v-model="inputModel" @input="getState" :label="'Input with Error Message'"></nitrozen-input>
-        <nitrozen-error class="nitrozen-error" v-if="inputModel == ''">Field is required</nitrozen-error>
+        <nitrozen-error v-if="inputModel == ''">Field is required</nitrozen-error>
     </div>
 
     <div class="main-div">
@@ -151,9 +151,9 @@
         <nitrozen-input :id="3" :type="'search'" :placeholder="'Search'" :label="'Input with Search'"></nitrozen-input>
     </div>
 
-    <div class="main-div">
+    <!-- <div class="main-div">
         <nitrozen-input :id="4" :type="'text'" :placeholder="'Enter Name'" :label="'Input with Loader'" :search="true"></nitrozen-input>
-    </div>
+    </div> -->
 
     <div class="main-div">
         <nitrozen-input :id="5" :disabled="true" :type="'text'" :placeholder="'Enter Name'" :label="'Disabled Input'" v-model="inputModel"></nitrozen-input>
@@ -361,12 +361,6 @@ export default {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.09), 0 6px 20px 0 rgba(0, 0, 0, 0.09) !important;
     }
 }
-
-.nitrozen-error {
-    position: relative;
-    bottom: 20px;
-}
-
 // .nitrozen-icon {
 //     padding-left: 12px;
 // }
