@@ -14,10 +14,6 @@ export default {
       type: String,
       default: "none"
     },
-    title: {
-      type: String,
-      default: "none"
-    },
     fill: {
       type: Boolean,
       default: false
