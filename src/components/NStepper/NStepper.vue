@@ -161,6 +161,7 @@ export default {
     }
     .text{
         font-family: @PrimaryFont;
+        color: @SecondaryColor;
         font-size: 16px;
         position:relative;
         left:calc(-45%);
