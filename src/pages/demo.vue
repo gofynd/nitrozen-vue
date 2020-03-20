@@ -1,6 +1,11 @@
 <template>
 <div id="app">
 
+    <div class="main-div">
+      <nitrozen-stepper>
+          
+      </nitrozen-stepper>
+    </div>
 
     <div class="main-div space-between">
             <nitrozen-dropdown label="State" :items="dropdownItems" v-model="selectedDropdown" >
@@ -271,6 +276,8 @@
         <nitrozen-badge :fill="true" title="Disable" state="disable"></nitrozen-badge>
       </span>
     </div>
+
+    
 
 </div>
 </template>
