@@ -10,6 +10,7 @@ import NitrozenAutocomplete from './NAutocomplete';
 import NitrozenChips from './NChips';
 import NitrozenInline from './NInline';
 import NitrozenBadge from './NBadge';
+import NitrozenStepper from './NStepper';
 
 export {
     NitrozenButton,
@@ -24,4 +25,5 @@ export {
     NitrozenChips,
     NitrozenInline,
     NitrozenBadge,
+    NitrozenStepper
 }
