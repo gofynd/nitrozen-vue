@@ -1,24 +1,114 @@
 # nitrozen-vue
 
-## Project setup
+### Nitrozen Badge
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+name: 'nitrozen-badge',
+props:
+    state:
+        1. info
+        2. success
+        3. warn
+        4. disable
+        5. none,
+    fill: Boolean
 ```
 
-### Lints and fixes files
+### Nitrozen Button
 ```
-npm run lint
+name: 'nitrozen-button',
+directives:
+    1. strokeBtn
+    2. flatBtn
+props:
+    href
+    type
+    disabled: Boolean
+    rounded: Boolean
+    theme: 'primary' or 'secondary'
+    size: 'small' or 'medium' or 'large'
+    focused: Boolean
+    showProgress: Boolean
+
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Nitrozen Chips
+```
+name: 'nitrozen-chips',
+props:
+    disable: Boolean
+    theme: 'primary' or 'secondary'
+    inProgress: Boolean
+    error: Boolean
+    multiSelect: Boolean
+    state:
+        1. error
+        2. success
+        3. progress
+        4. selected
+```
+
+### Nitrozen Dropdown
+```
+name: 'nitrozen-dropdown',
+props:
+    items: Array
+    disabled: Boolean
+    label: String
+    required: Boolean
+    value: v-model
+```
+
+### Nitrozen Input
+```
+name: 'nitrozen-input',
+props:
+    type:
+        1. text
+        2. textarea
+    label
+    placeholder
+    disabled: Boolean
+    value: v-model
+    search: Boolean
+    showSearchIcon: Boolean
+    showTooltip: Boolean
+    tooltipText
+    maxlength: Number
+```
+
+### Nitrozen Radio
+```
+name: 'nitrozen-radio'
+props:
+    disabled: Boolean
+    radioValue: String or Number
+    name: String
+    value: v-model
+```
+
+### Nitrozen Stepper
+```
+name: 'nitrozen-stepper'
+props:
+    active_index: Number
+    elements: Array
+```
+
+### Nitrozen Toggle Button
+```
+name: 'nitrozen-toggle-btn'
+props:
+    v-model: Boolean
+```
+
+### Nitrozen Tooltip
+```
+name: 'nitrozen-tooltip`
+props:
+    position:
+        1. bottom
+        2. top
+        3. right
+        4. left
+    tooltipText
+```
