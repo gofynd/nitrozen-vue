@@ -9,6 +9,8 @@
             @stepperClicked = "stepperClicked"
       >
       </nitrozen-stepper>
+    <nitrozen-button v-flat-btn @click="stepperNext">Next</nitrozen-button>
+
     </div>
 
     <div class="main-div space-between">
@@ -358,6 +360,13 @@ export default {
         }
     },
     methods: {
+        stepperNext(){
+            let next = this.stepper.activeIndex + 1
+            if(this.stepper.maxActiveIndex < next){
+                this.stepper = Object.assign({},this.stepper,{maxActiveIndex:next})
+            }
+            this.stepper = Object.assign({},this.stepper,{activeIndex:next})
+        },
         stepperClicked(event){
             this.stepper = Object.assign({},this.stepper,{activeIndex:event.nextIndex})
         },

@@ -41,12 +41,12 @@ export default {
     name: 'nitrozen-stepper',
     watch: {
         activeIndex(index){
-            if((index <= this.data.maxActiveIndex)){
+            if((index <= this.maxActiveIndex)){
                 this.data.activeIndex = index
             }
         },
         maxActiveIndex(maxIndex){
-            if(this.data.activeIndex <= maxIndex){
+            if(this.activeIndex <= maxIndex){
                 this.data.maxActiveIndex = maxIndex
             }
         }
