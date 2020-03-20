@@ -166,6 +166,7 @@ export default {
         position:relative;
         left:calc(-45%);
         text-align: center;
+        font-weight: 500;
     }
     .hidden{
         visibility: hidden;
