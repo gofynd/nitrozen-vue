@@ -64,7 +64,7 @@ export default {
                         text : "Step 1"
                     },
                     {
-                        text : "Step 2 Step 2 Step 2 Step 2 Step 2 Step 2 Step 2Step 2Step 2"
+                        text : "Step 2"
                     },
                     {
                         text : "Step 3"
