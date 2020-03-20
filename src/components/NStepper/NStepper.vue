@@ -2,8 +2,8 @@
     <div class="nitrozen-stepper">
 
         <div class="nitrozen-stepper-container">
-            <div v-for="(item,index) in elements" :key="index" class="stepper-group">
-                <div class="flex-center">
+            <div v-for="(item,index) in elements" :key="index" class="nitrozen-stepper-group">
+                <div class="nitrozen-flex-center">
                     <div @click="circleClicked(index)" v-if="index == active_index" class="nitrozen-circle-outer-container">
                         <div class="nitrozen-circle-outer"></div>
                         <div class="nitrozen-circle-inner"></div>
@@ -11,28 +11,28 @@
                     
                     <div @click="circleClicked(index)" v-if="index < active_index" class="nitrozen-cirle-check-container">
                         <div class="nitrozen-circle-outer"></div>
-                        <div class="checkmark"></div>
+                        <div class="nitrozen-checkmark"></div>
                     </div>
 
                     <div @click="circleClicked(index)" v-if="index <= elements.length-1 && index > active_index" class="nitrozen-circle-outer-container">
-                        <div class="nitrozen-circle-outer disabled"></div>
-                        <div class="checkmark checkbox-hidden"></div>
+                        <div class="nitrozen-circle-outer nitrozen-disabled"></div>
+                        <div class="nitrozen-checkmark nitrozen-checkbox-hidden"></div>
                     </div>
 
 
-                    <div v-if="index != elements.length-1 && index < active_index" class="nitrozen-bar active"></div>
-                    <div v-if="index != elements.length-1 && index >= active_index" class="nitrozen-bar disabled"></div>
+                    <div v-if="index != elements.length-1 && index < active_index" class="nitrozen-bar nitrozen-active"></div>
+                    <div v-if="index != elements.length-1 && index >= active_index" class="nitrozen-bar nitrozen-disabled"></div>
 
-                    <div v-if="index == elements.length-1 && index < active_index" class="nitrozen-bar active hidden"></div>
-                    <div v-if="index == elements.length-1 && index >= active_index" class="nitrozen-bar disabled hidden"></div>
+                    <!-- <div v-if="index == elements.length-1 && index < active_index" class="nitrozen-bar nitrozen-active nitrozen-hidden"></div> -->
+                    <!-- <div v-if="index == elements.length-1 && index >= active_index" class="nitrozen-bar nitrozen-disabled nitrozen-hidden"></div> -->
                 </div>
-                <div class="text">{{ item.text }}</div>
+                <div class="nitrozen-text">{{ item.text }}</div>
             </div>
         </div>
 <!--         
         <div class="nitrozen-cirle-check-container">
             <div class="nitrozen-circle-outer"></div>
-            <div class="checkmark"></div>
+            <div class="nitrozen-checkmark"></div>
         </div>
 
         <div class="nitrozen-circle-outer-container">
@@ -49,6 +49,8 @@
 </template>
 
 <script>
+import NitrozenUuid from './../../utils/NUuid';
+
 export default {
     name: 'nitrozen-stepper',
     props: {
@@ -57,7 +59,7 @@ export default {
             default: 3
         },
         elements: {
-            type: Array, // { text:"", img_url:"",class:"" }
+            type: Array, // { text:""}
             default: () => {
                 return [
                     {
@@ -80,8 +82,8 @@ export default {
         }
     },
     methods:{
-        circleClicked(e){
-            console.log(e)
+        circleClicked(index){
+            this.$emit("circleClicked",{index})
         }
     }
 }
@@ -92,7 +94,7 @@ export default {
     .nitrozen-stepper{
         width: 100%;
     }
-    .stepper-group{
+    .nitrozen-stepper-group{
         display:flex;
         flex-direction: column;
         flex-grow:10;
@@ -101,7 +103,7 @@ export default {
     .nitrozen-stepper-container{
         display:flex;
     }
-    .checkmark{
+    .nitrozen-checkmark{
         display: inline-block;
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
@@ -143,23 +145,23 @@ export default {
         position:relative;
         top: -2px;
     }
-    .active{
+    .nitrozen-active{
         background-color: @SecondaryColor;
     }
-    .disabled{
+    .nitrozen-disabled{
         background-color: @StepperDisabledColor;
     }
-    .checkbox-hidden{
+    .nitrozen-checkbox-hidden{
         display: none;
     }
     .nitrozen-no-display{
         display: none;
     }
-    .flex-center{
+    .nitrozen-flex-center{
         display:flex;
         align-items: center;
     }
-    .text{
+    .nitrozen-text{
         font-family: @PrimaryFont;
         color: @SecondaryColor;
         font-size: 16px;
@@ -168,7 +170,7 @@ export default {
         text-align: center;
         font-weight: 500;
     }
-    .hidden{
+    .nitrozen-hidden{
         visibility: hidden;
     }
 </style>
