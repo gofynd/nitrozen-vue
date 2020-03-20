@@ -1,6 +1,5 @@
 <template>
-    <div class="nitrozen-stepper">
-
+    <div class="nitrozen-stepper" :id="id">
         <div class="nitrozen-stepper-container">
             <div v-for="(item,index) in elements" :key="index" class="nitrozen-stepper-group">
                 <div class="nitrozen-flex-center">
@@ -63,22 +62,26 @@ export default {
             default: () => {
                 return [
                     {
-                        text : "Step 1"
+                        text : "Step 1",
                     },
                     {
-                        text : "Step 2"
+                        text : "Step 2",
                     },
                     {
-                        text : "Step 3"
+                        text : "Step 3",
                     },
                     {
-                        text : "Step 4"
+                        text : "Step 4",
                     },
                     {
-                        text : "Step 5"
+                        text : "Step 5",
                     }
                 ];
             }
+        },
+        id: {
+            type: [Number, String],
+            default: () => "nitrozen-stepper" + NitrozenUuid()
         }
     },
     methods:{
@@ -99,6 +102,10 @@ export default {
         flex-direction: column;
         flex-grow:10;
         flex-basis:100%;
+    }
+    .nitrozen-stepper-group:nth-last-child(1){
+        flex-grow: 2;
+        flex-basis: 30%;
     }
     .nitrozen-stepper-container{
         display:flex;
@@ -170,7 +177,8 @@ export default {
         text-align: center;
         font-weight: 500;
     }
+    
     .nitrozen-hidden{
-        visibility: hidden;
+        display:none;
     }
 </style>
