@@ -1,6 +1,14 @@
 <template>
   <div class="nitrozen-form-input">
 
+     <span class="nitrozen-loader-div" v-if="loaderShow && search">
+      <img src="./../../assets/loader.gif" />
+    </span>
+
+    <span class="nitrozen-search-icon" v-if="showSearchIcon">
+      <nitrozen-inline :icon="'search'"></nitrozen-inline>
+    </span>
+
     <input
       v-if="type != 'textarea'"
       v-bind:class="{ 'nitrozen-search-input-padding': showSearchIcon }"
@@ -48,13 +56,7 @@
      
 
 
- <label class="nitrozen-loader-div" v-if="loaderShow && search">
-      <img src="./../../assets/loader.gif" />
-    </label>
 
-    <label class="nitrozen-search-icon" v-if="showSearchIcon">
-      <nitrozen-inline :icon="'search'"></nitrozen-inline>
-    </label>
     <!-- <label class="n-input-label" v-if="hint">{{ hint }}</label> -->
 
     <!-- <div

@@ -9,6 +9,7 @@
     width: 100%;
     background: @WhiteColor;
     font-family: @PrimaryFont;
+    position: relative;
     outline: none;
     &:focus {
         border: 1px solid @SecondaryColor;
@@ -104,11 +105,15 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 .nitrozen-search-icon {
-    position: relative;
-    top: 44px;
-    left: 10px;
-    display: flex;
-    width: 1%;
+    // position: relative;
+    // top: 44px;
+    // left: 10px;
+    // display: flex;
+    // width: 1%;
+    z-index: 2;
+    margin-top: -11px;
+    margin-left: 7px;
+    position: absolute;
 }
 
 .nitrozen-tooltip-icon{

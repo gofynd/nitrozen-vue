@@ -174,8 +174,5 @@ export default {
 .nitrozen-autocomplete {
   position: relative;
   width: 100%;
-  .nitrozen-search-icon{
-      top: 23px;
-  }
 }
 </style>
