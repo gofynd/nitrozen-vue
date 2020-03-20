@@ -1,6 +1,8 @@
 <template>
   <transition name="nitrozen-badge">
-    <div class="nitrozen-badge" :class="[addClass]">{{title.toUpperCase()}}</div>
+    <div class="nitrozen-badge" :class="[addClass]">
+      <slot />
+    </div>
   </transition>
 </template>
 
@@ -61,7 +63,7 @@ export default {
 @import "./../../base/base.less";
 
 .nitrozen-badge {
-  height: 18px;
+  height: 16px;
   padding: 4px 8px;
   margin: 0 8px 0 0;
   display: inline-block;
@@ -70,10 +72,10 @@ export default {
   border: 1px solid @LabelColor;
   color: @WhiteColor;
   font-size: @BaseFontSize;
-  vertical-align: middle;
   white-space: nowrap;
   font-family: @PrimaryFont;
   line-height: 18px;
+  text-transform: uppercase;
 
   &:focus {
     outline: none;
