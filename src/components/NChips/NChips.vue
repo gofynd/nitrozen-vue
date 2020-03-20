@@ -72,7 +72,8 @@ export default {
                 'nitrozen-error': this.error,
                 'nitrozen-chip-error': this.state == 'error',
                 'nitrozen-chip-success': this.state == 'success',
-                'nitrozen-chip-progress': this.state == 'progress'
+                'nitrozen-chip-progress': this.state == 'progress',
+                'nitrozen-chip-selected': this.state == 'selected'
             }
         }
     },
@@ -122,7 +123,7 @@ export default {
     white-space: nowrap;
     font-family: @PrimaryFont;
     cursor: pointer;
-
+    box-sizing: border-box;
     &:focus {
         outline: none;
         //   text-decoration: underline;
@@ -158,10 +159,12 @@ export default {
     &.nitrozen-primary-active-chip{
         background: @PrimaryColor;
         color: @WhiteColor;
+        border-color: @PrimaryColor;
     }
     &.nitrozen-secondary-active-chip{
         background: @SecondaryColor;
         color: @WhiteColor;
+        border-color: @SecondaryColor;
     }
     &.nitrozen-chip-error{
         background: @ErrorColor;
@@ -171,10 +174,17 @@ export default {
     &.nitrozen-chip-success{
         background: @SuccessColor;
         color: @WhiteColor;
+        border-color: @SuccessColor;
     }
     &.nitrozen-chip-progress{
         background: @ProgressColor;
         color: @WhiteColor;
+        border-color: @ProgressColor;
+    }
+    &.nitrozen-chip-selected{
+        background: @SecondaryColor;
+        color: @WhiteColor;
+        border-color: @SecondaryColor;
     }
     .nitrozen-icon {
         padding-left: 12px;

@@ -1,7 +1,6 @@
 "use strict";
 var svgs={}; 
 svgs['cross'] = `<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>B2F47002-4B3E-4C9A-82FF-5C2DFD3B49BF</title>
                 <desc>Created with sketchtool.</desc>
                 <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Text-fields" transform="translate(-1076.000000, -1612.000000)">
@@ -13,7 +12,6 @@ svgs['cross'] = `<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1"
                 </g>
                 </svg>`
 svgs['search'] = `<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>358978F6-66EE-4F74-A3F5-34E7E5AF6744</title>
                 <desc>Created with sketchtool.</desc>
                 <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Text-fields" transform="translate(-167.000000, -1346.000000)" fill="#41434C" fill-rule="nonzero">
@@ -26,7 +24,6 @@ svgs['search'] = `<svg width="14px" height="14px" viewBox="0 0 14 14" version="1
                 </g>
                 </svg>`
 svgs['info'] = `<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <title>032FF7EC-AE8C-4FB0-9B2C-FA4C5CC76E89</title>
                     <desc>Created with sketchtool.</desc>
                     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g id="Text-fields" transform="translate(-312.000000, -1846.000000)" fill="#41434C" fill-rule="nonzero">

@@ -5,7 +5,7 @@
     <div class="main-div space-between">
             <nitrozen-dropdown label="State" :items="dropdownItems" v-model="selectedDropdown" >
             </nitrozen-dropdown>
-            <nitrozen-dropdown  :items="dropdownItems" >
+            <nitrozen-dropdown v-model="selectedDropdown" :items="dropdownItems" >
             </nitrozen-dropdown>
             <nitrozen-dropdown label="State Advanced" :items="dropdownItems" v-model="selectedDropdown" :required="true">
             </nitrozen-dropdown>
@@ -229,6 +229,7 @@
         <nitrozen-chips :state="'error'">Nitro Error</nitrozen-chips>
         <nitrozen-chips :state="'success'">Nitro Success Chips</nitrozen-chips>
         <nitrozen-chips :state="'progress'">Nitro Progress</nitrozen-chips>
+        <nitrozen-chips :state="'selected'">Nitro Selected</nitrozen-chips>
     </div>
 
     <div class="main-div">

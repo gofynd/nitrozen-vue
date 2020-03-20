@@ -132,7 +132,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 var svgs = {};
 svgs['cross'] = `<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>B2F47002-4B3E-4C9A-82FF-5C2DFD3B49BF</title>
                 <desc>Created with sketchtool.</desc>
                 <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Text-fields" transform="translate(-1076.000000, -1612.000000)">
@@ -144,7 +143,6 @@ svgs['cross'] = `<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1"
                 </g>
                 </svg>`;
 svgs['search'] = `<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>358978F6-66EE-4F74-A3F5-34E7E5AF6744</title>
                 <desc>Created with sketchtool.</desc>
                 <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Text-fields" transform="translate(-167.000000, -1346.000000)" fill="#41434C" fill-rule="nonzero">
@@ -157,7 +155,6 @@ svgs['search'] = `<svg width="14px" height="14px" viewBox="0 0 14 14" version="1
                 </g>
                 </svg>`;
 svgs['info'] = `<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <title>032FF7EC-AE8C-4FB0-9B2C-FA4C5CC76E89</title>
                     <desc>Created with sketchtool.</desc>
                     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g id="Text-fields" transform="translate(-312.000000, -1846.000000)" fill="#41434C" fill-rule="nonzero">
@@ -1123,12 +1120,12 @@ var NInputSuffix_component = normalizeComponent(
 )
 
 /* harmony default export */ var NInputSuffix = (NInputSuffix_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"046ba296-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NTooltip/NTooltip.vue?vue&type=template&id=5773779e&
-var NTooltipvue_type_template_id_5773779e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-tooltip"},[_c('nitrozen-inline',{attrs:{"icon":'info'}}),_c('span',{staticClass:"nitrozen-tooltiptext",class:_vm.tooltipPositionClass},[_vm._v(_vm._s(_vm.tooltipText))])],1)}
-var NTooltipvue_type_template_id_5773779e_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"046ba296-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NTooltip/NTooltip.vue?vue&type=template&id=bf01d99a&
+var NTooltipvue_type_template_id_bf01d99a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-tooltip"},[_c('nitrozen-inline',{attrs:{"icon":'info'}}),_c('span',{staticClass:"nitrozen-tooltiptext",class:_vm.tooltipPositionClass},[_vm._v(_vm._s(_vm.tooltipText))])],1)}
+var NTooltipvue_type_template_id_bf01d99a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NTooltip/NTooltip.vue?vue&type=template&id=5773779e&
+// CONCATENATED MODULE: ./src/components/NTooltip/NTooltip.vue?vue&type=template&id=bf01d99a&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"046ba296-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NInline/NInline.vue?vue&type=template&id=65d43b41&
 var NInlinevue_type_template_id_65d43b41_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',_vm._g({staticClass:"nitrozen-inline-svg",domProps:{"innerHTML":_vm._s(_vm.getSVG)}},_vm.$listeners))}
@@ -1212,27 +1209,27 @@ var NInline_component = normalizeComponent(
 //
 
 /* harmony default export */ var NTooltipvue_type_script_lang_js_ = ({
-  name: 'nitrozen-nitrozen-tooltip',
+  name: "nitrozen-nitrozen-tooltip",
   components: {
-    'nitrozen-inline': components_NInline
+    "nitrozen-inline": components_NInline
   },
   props: {
     position: {
       type: String,
-      default: 'bottom'
+      default: "bottom"
     },
     tooltipText: {
       type: String,
-      default: ''
+      default: ""
     }
   },
   computed: {
     tooltipPositionClass: function () {
       return {
-        'nitrozen-tooltip-top': this.position == 'top',
-        'nitrozen-tooltip-right': this.position == 'right',
-        'nitrozen-tooltip-left': this.position == 'left',
-        'nitrozen-tooltip-bottom': this.position == 'bottom'
+        "nitrozen-tooltip-top": this.position == "top",
+        "nitrozen-tooltip-right": this.position == "right",
+        "nitrozen-tooltip-left": this.position == "left",
+        "nitrozen-tooltip-bottom": this.position == "bottom"
       };
     }
   }
@@ -1253,8 +1250,8 @@ var NTooltipvue_type_style_index_0_lang_less_ = __webpack_require__("b224");
 
 var NTooltip_component = normalizeComponent(
   NTooltip_NTooltipvue_type_script_lang_js_,
-  NTooltipvue_type_template_id_5773779e_render,
-  NTooltipvue_type_template_id_5773779e_staticRenderFns,
+  NTooltipvue_type_template_id_bf01d99a_render,
+  NTooltipvue_type_template_id_bf01d99a_staticRenderFns,
   false,
   null,
   null,
@@ -1900,12 +1897,12 @@ var NAutocomplete_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/NAutocomplete/index.js
 
 /* harmony default export */ var components_NAutocomplete = (NAutocomplete);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"046ba296-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NChips/NChips.vue?vue&type=template&id=30d0da2e&
-var NChipsvue_type_template_id_30d0da2e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"nitrozen-chip"}},[_c('div',_vm._g({ref:_vm.chipId,staticClass:"nitrozen-chip ripple",class:[_vm.chipClasses],attrs:{"tabindex":"0"},on:{"click":_vm.setBackground}},_vm.$listeners),[_vm._t("default"),_c('transition',{attrs:{"name":"nitrozen-input-action"}},[(!_vm.disable && _vm.deletable)?_c('span',{ref:_vm.iconId,staticClass:"nitrozen-icon",on:{"click":function($event){return _vm.spliceElement(_vm.chipId)}}},[_c('nitrozen-inline',{attrs:{"icon":'cross'}})],1):_vm._e(),(!_vm.disable && _vm.inProgress)?_c('span',{ref:_vm.iconId,staticClass:"nitrozen-icon"},[_c('nitrozen-tooltip',{attrs:{"tooltipText":'Info Text'}})],1):_vm._e()])],2)])}
-var NChipsvue_type_template_id_30d0da2e_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"046ba296-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NChips/NChips.vue?vue&type=template&id=ff36e9ee&
+var NChipsvue_type_template_id_ff36e9ee_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"nitrozen-chip"}},[_c('div',_vm._g({ref:_vm.chipId,staticClass:"nitrozen-chip ripple",class:[_vm.chipClasses],attrs:{"tabindex":"0"},on:{"click":_vm.setBackground}},_vm.$listeners),[_vm._t("default"),_c('transition',{attrs:{"name":"nitrozen-input-action"}},[(!_vm.disable && _vm.deletable)?_c('span',{ref:_vm.iconId,staticClass:"nitrozen-icon",on:{"click":function($event){return _vm.spliceElement(_vm.chipId)}}},[_c('nitrozen-inline',{attrs:{"icon":'cross'}})],1):_vm._e(),(!_vm.disable && _vm.inProgress)?_c('span',{ref:_vm.iconId,staticClass:"nitrozen-icon"},[_c('nitrozen-tooltip',{attrs:{"tooltipText":'Info Text'}})],1):_vm._e()])],2)])}
+var NChipsvue_type_template_id_ff36e9ee_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NChips/NChips.vue?vue&type=template&id=30d0da2e&
+// CONCATENATED MODULE: ./src/components/NChips/NChips.vue?vue&type=template&id=ff36e9ee&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NChips/NChips.vue?vue&type=script&lang=js&
 //
@@ -1980,7 +1977,8 @@ var NChipsvue_type_template_id_30d0da2e_staticRenderFns = []
         'nitrozen-error': this.error,
         'nitrozen-chip-error': this.state == 'error',
         'nitrozen-chip-success': this.state == 'success',
-        'nitrozen-chip-progress': this.state == 'progress'
+        'nitrozen-chip-progress': this.state == 'progress',
+        'nitrozen-chip-selected': this.state == 'selected'
       };
     }
 
@@ -2023,8 +2021,8 @@ var NChipsvue_type_style_index_0_lang_less_ = __webpack_require__("2168");
 
 var NChips_component = normalizeComponent(
   NChips_NChipsvue_type_script_lang_js_,
-  NChipsvue_type_template_id_30d0da2e_render,
-  NChipsvue_type_template_id_30d0da2e_staticRenderFns,
+  NChipsvue_type_template_id_ff36e9ee_render,
+  NChipsvue_type_template_id_ff36e9ee_staticRenderFns,
   false,
   null,
   null,
