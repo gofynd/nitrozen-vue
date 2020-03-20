@@ -73,6 +73,7 @@ export default {
   vertical-align: middle;
   white-space: nowrap;
   font-family: @PrimaryFont;
+  line-height: 18px;
 
   &:focus {
     outline: none;
