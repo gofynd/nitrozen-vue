@@ -3,17 +3,17 @@
         <div class="nitrozen-stepper-container">
             <div v-for="(item,index) in elements" :key="index" class="nitrozen-stepper-group">
                 <div class="nitrozen-flex-center">
-                    <div @click="circleClicked(index)" v-if="index == active_index" class="nitrozen-circle-outer-container">
+                    <div @click="stepperClicked(index)" v-if="index == active_index" class="nitrozen-circle-outer-container">
                         <div class="nitrozen-circle-outer"></div>
                         <div class="nitrozen-circle-inner"></div>
                     </div>
                     
-                    <div @click="circleClicked(index)" v-if="index < active_index" class="nitrozen-cirle-check-container">
+                    <div @click="stepperClicked(index)" v-if="index < active_index" class="nitrozen-cirle-check-container">
                         <div class="nitrozen-circle-outer"></div>
                         <div class="nitrozen-checkmark"></div>
                     </div>
 
-                    <div @click="circleClicked(index)" v-if="index <= elements.length-1 && index > active_index" class="nitrozen-circle-outer-container">
+                    <div @click="stepperClicked(index)" v-if="index <= elements.length-1 && index > active_index" class="nitrozen-circle-outer-container">
                         <div class="nitrozen-circle-outer nitrozen-disabled"></div>
                         <div class="nitrozen-checkmark nitrozen-checkbox-hidden"></div>
                     </div>
@@ -85,8 +85,11 @@ export default {
         }
     },
     methods:{
-        circleClicked(index){
-            this.$emit("circleClicked",{index})
+        stepperClicked(next_index){
+            this.$emit("stepperClicked",{
+                previous_index:this.active_index,
+                next_index:next_index
+            })
         }
     }
 }
