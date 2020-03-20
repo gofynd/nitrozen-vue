@@ -105,6 +105,7 @@ export default {
     selectItem(item) {
       this.selected = item;
       this.$emit("input", item.value); // v-model implementation
+      this.$emit("change", item.value);
     },
     toggle() {
       if (this.disabled) return;

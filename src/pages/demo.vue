@@ -1,17 +1,5 @@
 <template>
 <div id="app">
-
-
-    <div class="main-div space-between">
-            <nitrozen-dropdown label="State" :items="dropdownItems" v-model="selectedDropdown" >
-            </nitrozen-dropdown>
-            <nitrozen-dropdown  :items="dropdownItems" >
-            </nitrozen-dropdown>
-            <nitrozen-dropdown label="State Advanced" :items="dropdownItems" v-model="selectedDropdown" :required="true">
-            </nitrozen-dropdown>
-            <nitrozen-dropdown label="State Disabled" :items="dropdownItems" v-model="selectedDropdown" :disabled="true">
-            </nitrozen-dropdown>
-    </div>
     
     <!-- Flat Button -->
     <div class="main-div space-between">
@@ -248,6 +236,17 @@
         </span>
         {{selectedItems.toString()}}
 
+    </div>
+
+    <div class="main-div space-between">
+            <nitrozen-dropdown label="State" :items="dropdownItems" v-model="selectedDropdown" >
+            </nitrozen-dropdown>
+            <nitrozen-dropdown v-model="selectedDropdown" :items="dropdownItems" @change="changeEvent">
+            </nitrozen-dropdown>
+            <nitrozen-dropdown label="State Advanced" :items="dropdownItems" v-model="selectedDropdown" :required="true">
+            </nitrozen-dropdown>
+            <nitrozen-dropdown label="State Disabled" :items="dropdownItems" v-model="selectedDropdown" :disabled="true">
+            </nitrozen-dropdown>
     </div>
 
     <div class="main-div">
