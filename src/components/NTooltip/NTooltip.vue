@@ -1,6 +1,5 @@
 <template>
   <div class="nitrozen-tooltip">
-    <!-- <img src="./../../assets/nitrozen-tooltip.svg"> -->
     <nitrozen-inline :icon="'info'"></nitrozen-inline>
     <span class="nitrozen-tooltiptext" v-bind:class="tooltipPositionClass">{{tooltipText}}</span>
   </div>
