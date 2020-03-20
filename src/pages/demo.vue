@@ -1,6 +1,13 @@
 <template>
 <div id="app">
 
+    <h1>Nitrozen Demo H1</h1>
+    <h2>Nitrozen Demo H2</h2>
+    <h3>Nitrozen Demo H3</h3>
+    <h4>Nitrozen Demo H4</h4>
+    <h5>Nitrozen Demo H5</h5>
+    <h6>Nitrozen Demo H6</h6>
+
     <div class="main-div">
       <nitrozen-stepper>
           

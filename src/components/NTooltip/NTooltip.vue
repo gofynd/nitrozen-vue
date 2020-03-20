@@ -9,7 +9,7 @@
 import NitrozenInline from "./../NInline";
 
 export default {
-  name: "nitrozen-nitrozen-tooltip",
+  name: "nitrozen-tooltip",
   components: {
     "nitrozen-inline": NitrozenInline
   },
