@@ -256,25 +256,36 @@
 
     </div>
 
+    <div class="main-div space-between">
+            <nitrozen-dropdown label="State" :items="dropdownItems" v-model="selectedDropdown" >
+            </nitrozen-dropdown>
+            <nitrozen-dropdown v-model="selectedDropdown" :items="dropdownItems" @change="changeEvent">
+            </nitrozen-dropdown>
+            <nitrozen-dropdown label="State Advanced" :items="dropdownItems" v-model="selectedDropdown" :required="true">
+            </nitrozen-dropdown>
+            <nitrozen-dropdown label="State Disabled" :items="dropdownItems" v-model="selectedDropdown" :disabled="true">
+            </nitrozen-dropdown>
+    </div>
+
     <div class="main-div">
       <span class="chips-input">
-        <nitrozen-badge title="Normal">NORMAL</nitrozen-badge>
-        <nitrozen-badge title="Info" state="info"></nitrozen-badge>
-        <nitrozen-badge title="Success" state="success"></nitrozen-badge>
-        <nitrozen-badge title="Warning" state="warn"></nitrozen-badge>
-        <nitrozen-badge title="Error" state="error"></nitrozen-badge>
-        <nitrozen-badge title="Disable" state="disable"></nitrozen-badge>
+        <nitrozen-badge>Normal</nitrozen-badge>
+        <nitrozen-badge state="info">Info</nitrozen-badge>
+        <nitrozen-badge state="success">Success</nitrozen-badge>
+        <nitrozen-badge state="warn">Warning</nitrozen-badge>
+        <nitrozen-badge state="error">Error</nitrozen-badge>
+        <nitrozen-badge state="disable">Disable</nitrozen-badge>
       </span>
     </div>
     
     <div class="main-div">
       <span class="chips-input">
-        <nitrozen-badge :fill="true" title="Normal">NORMAL</nitrozen-badge>
-        <nitrozen-badge :fill="true" title="Info" state="info"></nitrozen-badge>
-        <nitrozen-badge :fill="true" title="Success" state="success"></nitrozen-badge>
-        <nitrozen-badge :fill="true" title="Warning" state="warn"></nitrozen-badge>
-        <nitrozen-badge :fill="true" title="Error" state="error"></nitrozen-badge>
-        <nitrozen-badge :fill="true" title="Disable" state="disable"></nitrozen-badge>
+        <nitrozen-badge :fill="true" >Normal</nitrozen-badge>
+        <nitrozen-badge :fill="true" state="info">Info</nitrozen-badge>
+        <nitrozen-badge :fill="true" state="success">Success</nitrozen-badge>
+        <nitrozen-badge :fill="true" state="warn">Warning</nitrozen-badge>
+        <nitrozen-badge :fill="true" state="error">Error</nitrozen-badge>
+        <nitrozen-badge :fill="true" state="disable">Disable</nitrozen-badge>
       </span>
     </div>
 
