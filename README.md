@@ -90,7 +90,8 @@ props:
 ```
 name: 'nitrozen-stepper'
 props:
-    active_index: Number
+    activeIndex: Number
+    maxActiveIndex: Number
     elements: Array
 ```
 
