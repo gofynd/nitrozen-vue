@@ -2,7 +2,7 @@
     <div class="nitrozen-stepper">
 
         <div class="nitrozen-stepper-container">
-            <div v-for="(item,index) in elements" :key="index" >
+            <div v-for="(item,index) in elements" :key="index" class="stepper-group">
                 <div class="flex-center">
                     <div @click="circleClicked(index)" v-if="index == active_index" class="nitrozen-circle-outer-container">
                         <div class="nitrozen-circle-outer"></div>
@@ -64,7 +64,7 @@ export default {
                         text : "Step 1"
                     },
                     {
-                        text : "Step 2"
+                        text : "Step 2 Step 2 Step 2 Step 2 Step 2 Step 2 Step 2Step 2Step 2"
                     },
                     {
                         text : "Step 3"
@@ -91,6 +91,12 @@ export default {
 @import './../../base/base.less';
     .nitrozen-stepper{
         width: 100%;
+    }
+    .stepper-group{
+        display:flex;
+        flex-direction: column;
+        flex-grow:10;
+        flex-basis:100%;
     }
     .nitrozen-stepper-container{
         display:flex;
@@ -125,14 +131,14 @@ export default {
         top: 7px;
     }
     .nitrozen-circle-outer{
-        height: 25px;
-        width: 25px;
+        height: 24px;
+        width: 24px;
         background-color: @SecondaryColor;
         border-radius: 50%;
         display: inline-block;
     }
     .nitrozen-bar{
-        width: 100px;
+        flex-grow:1;
         height:5px;
         position:relative;
         top: -2px;
@@ -154,10 +160,11 @@ export default {
         align-items: center;
     }
     .text{
-        width: 125px;
+        font-family: @PrimaryFont;
+        font-size: 16px;
+        position:relative;
+        left:calc(-45%);
         text-align: center;
-        position: relative;
-        left: -50px;
     }
     .hidden{
         visibility: hidden;
