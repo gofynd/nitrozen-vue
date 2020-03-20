@@ -20,8 +20,8 @@ directives:
     1. strokeBtn
     2. flatBtn
 props:
-    href
-    type
+    href: String
+    type: String
     disabled: Boolean
     rounded: Boolean
     theme: 'primary' or 'secondary'
@@ -65,14 +65,14 @@ props:
     type:
         1. text
         2. textarea
-    label
-    placeholder
+    label: String
+    placeholder: String
     disabled: Boolean
     value: v-model
     search: Boolean
     showSearchIcon: Boolean
     showTooltip: Boolean
-    tooltipText
+    tooltipText: String
     maxlength: Number
 ```
 
@@ -110,5 +110,5 @@ props:
         2. top
         3. right
         4. left
-    tooltipText
+    tooltipText: String
 ```
