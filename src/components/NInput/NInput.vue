@@ -1,7 +1,6 @@
 <template>
   <div class="nitrozen-form-input">
-
-     <span class="nitrozen-loader-div" v-if="loaderShow && search">
+    <span class="nitrozen-loader-div" v-if="loaderShow && search">
       <img src="./../../assets/loader.gif" />
     </span>
 
@@ -44,18 +43,13 @@
       @input="valueChange"
     ></textarea>
 
- <label class="n-input-label" v-if="label">
-        {{ label }}
-        <span class="nitrozen-tooltip-icon" v-if="showTooltip">
-          <nitrozen-tooltip :tooltipText="tooltipText"></nitrozen-tooltip>
-        </span>
-      </label>
-      <label class="n-input-label n-input-maxlength" v-if="maxlength">
-        {{ length }}/{{ maxlength }}
-      </label>
-     
-
-
+    <label class="n-input-label" v-if="label">
+      {{ label }}
+      <span class="nitrozen-tooltip-icon" v-if="showTooltip">
+        <nitrozen-tooltip :tooltipText="tooltipText"></nitrozen-tooltip>
+      </span>
+    </label>
+    <label class="n-input-label n-input-maxlength" v-if="maxlength">{{ length }}/{{ maxlength }}</label>
 
     <!-- <label class="n-input-label" v-if="hint">{{ hint }}</label> -->
 
@@ -63,7 +57,7 @@
             v-bind:class="[{ 'error-visible': showError && value == '' }]"
         >
             Field is required
-        </div> -->
+    </div>-->
   </div>
 </template>
 
@@ -167,4 +161,8 @@ export default {
 
 <style lang="less">
 @import "./NInput.less";
+
+textarea {
+  resize: vertical;
+}
 </style>
