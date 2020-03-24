@@ -297,7 +297,7 @@
         <nitrozen-dialog ref="confirm_dialog" title="Confirm" @close="onCloseDialog"> 
             <template v-slot:body name="body">Are you sure you want to delete this company?</template>
         </nitrozen-dialog>
-        <nitrozen-dialog ref="choose_dialog" title="Confirm" @close="onCloseDialog"> 
+        <nitrozen-dialog ref="choose_dialog" title="Choose Radio" @close="onCloseDialog"> 
             <template v-slot:body name="body">
                 <nitrozen-radio :name="'radio-1'" v-model="radioModel" @change="changeEvent" :radioValue="'1'">Basic Radio 1</nitrozen-radio>
                 <nitrozen-radio :name="'radio-1'" v-model="radioModel" @change="changeEvent" :radioValue="'2'">Basic Radio 2</nitrozen-radio>
