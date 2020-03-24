@@ -1,10 +1,12 @@
 {
   "name": "nitrozen",
+  "author": "Fynd",
   "version": "0.1.0",
   "private": false,
   "main": "dist/nitrozen.umd.js",
   "module": "dist/nitrozen.umd.js",
   "unpkg": "dist/nitrozen.umd.min.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve --port 4000",
     "build": "vue-cli-service build",
