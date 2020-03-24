@@ -292,7 +292,7 @@
         </div>
 
         <nitrozen-dialog ref="alert_dialog" title="Done!"> 
-            <template v-slot:body name="body">Items loaded succesfully</template>
+            <template v-slot:body name="body">Items loaded succesfully.</template>
         </nitrozen-dialog>
 
     </div>
@@ -405,7 +405,7 @@ export default {
             console.log(event);
         },
         showDialog(){
-            this.$refs['alert_dialog'].open()
+            this.$refs['alert_dialog'].open({width: 300})
         }
     }
 }

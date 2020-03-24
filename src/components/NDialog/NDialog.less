@@ -6,7 +6,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@
         min-width: 280px;
         border: 1px solid @BorderColor;
         border-radius: 3px;
-        box-shadow: 0 8px 24px 0 @BoxShadow;
+        // box-shadow: 0 8px 24px 0 @BoxShadow;
         overflow-x: auto;
         display: flex;
         flex-direction: column;
@@ -39,11 +39,11 @@
 
     .nitrozen-dialog-footer {
         height: 36px;
-        // border-top: 1px solid @BorderColor;
         justify-content: flex-end;
     }
 
     .nitrozen-dialog-body {
+        flex: 1;
         position: relative;
         line-height: 19px;
         font-size: 14px;
@@ -52,11 +52,11 @@
 }
 
 .nitrozen-dialog-fade-enter,
-  .nitrozen-dialog-fade-leave-active {
+.nitrozen-dialog-fade-leave-active {
     opacity: 0;
-  }
+}
 
-  .nitrozen-dialog-fade-enter-active,
-  .nitrozen-dialog-fade-leave-active {
-    transition: opacity .5s ease
-  }
+.nitrozen-dialog-fade-enter-active,
+.nitrozen-dialog-fade-leave-active {
+    transition: opacity 0.5s ease;
+}
