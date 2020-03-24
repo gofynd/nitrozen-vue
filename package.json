@@ -17,7 +17,8 @@
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "types"
   ],
   "dependencies": {
     "core-js": "^3.6.4",
