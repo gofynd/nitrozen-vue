@@ -9,7 +9,11 @@
           :aria-labelledby="id + '_title'"
           :aria-describedby="id + '_desc'"
         >
-          <header class="nitrozen-dialog-header" :id="id + '_title'">
+          <header
+            class="nitrozen-dialog-header"
+            v-show="title"
+            :id="id + '_title'"
+          >
             <slot name="header">
               {{ title }}
             </slot>
@@ -19,8 +23,24 @@
           </section>
           <footer class="nitrozen-dialog-footer">
             <slot name="footer">
-              <nitrozen-button type="button" @click="close('')">
-                Ok
+              <nitrozen-button
+                v-if="neutralButtonLabel"
+                theme="secondary"
+                @click="close(neutralButtonLabel)"
+              >
+                {{ neutralButtonLabel }}
+              </nitrozen-button>
+              <nitrozen-button
+                v-if="negativeButtonLabel"
+                @click="close(negativeButtonLabel)"
+              >
+                {{ negativeButtonLabel }}
+              </nitrozen-button>
+              <nitrozen-button
+                v-if="positiveButtonLabel"
+                @click="close(positiveButtonLabel)"
+              >
+                {{ positiveButtonLabel }}
               </nitrozen-button>
             </slot>
           </footer>
@@ -50,16 +70,29 @@ export default {
   },
   data: () => {
     return {
-      isModalVisible: false
+      isModalVisible: false,
+      positiveButtonLabel: false,
+      negativeButtonLabel: false,
+      neutralButtonLabel: "Ok"
     };
   },
   computed: {},
   methods: {
     open(config = {}) {
       this.isModalVisible = true;
-      if (config.height)
+      if (config.height != undefined)
         this.$refs["dialog"].style.height = `${config.height}px`;
-      if (config.width) this.$refs["dialog"].style.width = `${config.width}px`;
+      if (config.width != undefined)
+        this.$refs["dialog"].style.width = `${config.width}px`;
+      if (config.positiveButtonLabel != undefined) {
+        this.positiveButtonLabel = config.positiveButtonLabel;
+      }
+      if (config.negativeButtonLabel != undefined) {
+        this.negativeButtonLabel = config.negativeButtonLabel;
+      }
+      if (config.neutralButtonLabel != undefined) {
+        this.neutralButtonLabel = config.neutralButtonLabel;
+      }
       this.$emit("open");
       return this;
     },

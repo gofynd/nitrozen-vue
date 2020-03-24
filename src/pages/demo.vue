@@ -12,13 +12,6 @@
         <nitrozen-button v-flat-btn @click="stepperNext">Next</nitrozen-button>
 
         </div>
-
-        <div class="main-div space-between">
-            <nitrozen-button v-flat-btn @click="showDialog"> Alert Dialog </nitrozen-button>
-            <nitrozen-button v-flat-btn @click="showDialog"> Confirmation Dialog </nitrozen-button>
-            <nitrozen-button v-flat-btn @click="showDialog"> Select Dialog </nitrozen-button>
-            <nitrozen-button v-flat-btn @click="showDialog"> Choose Dialog </nitrozen-button>
-        </div>
         
         <!-- Flat Button -->
         <div class="main-div space-between">
@@ -270,29 +263,45 @@
         </div>
 
         <div class="main-div">
-        <span class="chips-input">
-            <nitrozen-badge>Normal</nitrozen-badge>
-            <nitrozen-badge state="info">Info</nitrozen-badge>
-            <nitrozen-badge state="success">Success</nitrozen-badge>
-            <nitrozen-badge state="warn">Warning</nitrozen-badge>
-            <nitrozen-badge state="error">Error</nitrozen-badge>
-            <nitrozen-badge state="disable">Disable</nitrozen-badge>
-        </span>
+            <span class="chips-input">
+                <nitrozen-badge>Normal</nitrozen-badge>
+                <nitrozen-badge state="info">Info</nitrozen-badge>
+                <nitrozen-badge state="success">Success</nitrozen-badge>
+                <nitrozen-badge state="warn">Warning</nitrozen-badge>
+                <nitrozen-badge state="error">Error</nitrozen-badge>
+                <nitrozen-badge state="disable">Disable</nitrozen-badge>
+            </span>
         </div>
         
         <div class="main-div">
-        <span class="chips-input">
-            <nitrozen-badge :fill="true" >Normal</nitrozen-badge>
-            <nitrozen-badge :fill="true" state="info">Info</nitrozen-badge>
-            <nitrozen-badge :fill="true" state="success">Success</nitrozen-badge>
-            <nitrozen-badge :fill="true" state="warn">Warning</nitrozen-badge>
-            <nitrozen-badge :fill="true" state="error">Error</nitrozen-badge>
-            <nitrozen-badge :fill="true" state="disable">Disable</nitrozen-badge>
-        </span>
+            <span class="chips-input">
+                <nitrozen-badge :fill="true" >Normal</nitrozen-badge>
+                <nitrozen-badge :fill="true" state="info">Info</nitrozen-badge>
+                <nitrozen-badge :fill="true" state="success">Success</nitrozen-badge>
+                <nitrozen-badge :fill="true" state="warn">Warning</nitrozen-badge>
+                <nitrozen-badge :fill="true" state="error">Error</nitrozen-badge>
+                <nitrozen-badge :fill="true" state="disable">Disable</nitrozen-badge>
+            </span>
         </div>
 
-        <nitrozen-dialog ref="alert_dialog" title="Done!"> 
-            <template v-slot:body name="body">Items loaded succesfully.</template>
+        <div class="main-div space-between">
+            <nitrozen-button v-flat-btn @click="openDialog('alert')"> Alert Dialog </nitrozen-button>
+            <nitrozen-button v-flat-btn @click="openDialog('confirm')"> Confirmation Dialog </nitrozen-button>
+            <nitrozen-button v-flat-btn @click="openDialog"> Select Dialog </nitrozen-button>
+            <nitrozen-button v-flat-btn @click="openDialog('choose')"> Choose Dialog </nitrozen-button>
+        </div>
+
+        <nitrozen-dialog ref="alert_dialog" title="Success" @close="onCloseDialog"> 
+            <template v-slot:body name="body">Image Uploaded Successfully</template>
+        </nitrozen-dialog>
+        <nitrozen-dialog ref="confirm_dialog" title="Confirm" @close="onCloseDialog"> 
+            <template v-slot:body name="body">Are you sure you want to delete this company?</template>
+        </nitrozen-dialog>
+        <nitrozen-dialog ref="choose_dialog" title="Confirm" @close="onCloseDialog"> 
+            <template v-slot:body name="body">
+                <nitrozen-radio :name="'radio-1'" v-model="radioModel" @change="changeEvent" :radioValue="'1'">Basic Radio 1</nitrozen-radio>
+                <nitrozen-radio :name="'radio-1'" v-model="radioModel" @change="changeEvent" :radioValue="'2'">Basic Radio 2</nitrozen-radio>
+            </template>
         </nitrozen-dialog>
 
     </div>
@@ -404,8 +413,29 @@ export default {
         changeEvent: function(event){
             console.log(event);
         },
-        showDialog(){
-            this.$refs['alert_dialog'].open({width: 300})
+        openDialog(type){
+            switch(type){
+                case 'alert':
+                    this.$refs['alert_dialog'].open({ width: 300 })
+                    break;
+                case 'confirm':
+                    this.$refs['confirm_dialog'].open({
+                            width: 300,
+                            positiveButtonLabel: 'Delete',
+                            negativeButtonLabel: 'Cancel',
+                            neutralButtonLabel: false,
+                        })
+                    break;
+                case 'choose':
+                    this.$refs['choose_dialog'].open({ width: 300 })
+                    break;
+                default:
+                    this.$refs['alert_dialog'].open()
+            }
+           
+        },
+        onCloseDialog(data){
+            window.console.log(data)
         }
     }
 }
@@ -440,11 +470,5 @@ export default {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.09), 0 6px 20px 0 rgba(0, 0, 0, 0.09) !important;
     }
 }
-// .nitrozen-icon {
-//     padding-left: 12px;
-// }
 
-// .chips-input{
-//     position: absolute;
-// }
 </style>
