@@ -1,7 +1,7 @@
 <template>
   <div v-show="isModalVisible">
     <transition name="nitrozen-dialog-fade">
-      <div class="nitrozen-dialog-backdrop">
+      <div class="nitrozen-dialog-backdrop" @click="backdropClick">
         <div
           ref="dialog"
           class="nitrozen-dialog"
@@ -70,20 +70,21 @@ export default {
   },
   data: () => {
     return {
+      data: null,
+      dismissible: true,
       isModalVisible: false,
-      positiveButtonLabel: false,
       negativeButtonLabel: false,
-      neutralButtonLabel: "Ok"
+      neutralButtonLabel: "Ok",
+      positiveButtonLabel: false
     };
   },
-  computed: {},
   methods: {
     open(config = {}) {
       this.isModalVisible = true;
       if (config.height != undefined)
-        this.$refs["dialog"].style.height = `${config.height}px`;
+        this.$refs["dialog"].style.height = config.height;
       if (config.width != undefined)
-        this.$refs["dialog"].style.width = `${config.width}px`;
+        this.$refs["dialog"].style.width = config.width;
       if (config.positiveButtonLabel != undefined) {
         this.positiveButtonLabel = config.positiveButtonLabel;
       }
@@ -93,6 +94,12 @@ export default {
       if (config.neutralButtonLabel != undefined) {
         this.neutralButtonLabel = config.neutralButtonLabel;
       }
+      if (config.dismissible != undefined) {
+        this.dismissible = config.dismissible;
+      }
+      if (config.data != undefined) {
+        this.data = config.data;
+      }
       this.$emit("open");
       return this;
     },
@@ -100,6 +107,16 @@ export default {
       this.isModalVisible = false;
       this.$emit("close", data);
       return this;
+    },
+    isOpen() {
+      return this.isModalVisible;
+    },
+    backdropClick(e) {
+      // close dialog on outside click
+      const dialog = this.$refs["dialog"];
+      if (this.dismissible && !dialog.contains(e.target)) {
+        this.close(null);
+      }
     }
   }
 };

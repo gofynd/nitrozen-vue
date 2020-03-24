@@ -416,21 +416,21 @@ export default {
         openDialog(type){
             switch(type){
                 case 'alert':
-                    this.$refs['alert_dialog'].open({ width: 300 })
+                    this.$refs['alert_dialog'].open({ width: '300px' })
                     break;
                 case 'confirm':
                     this.$refs['confirm_dialog'].open({
-                            width: 300,
+                            width: '300px',
                             positiveButtonLabel: 'Delete',
                             negativeButtonLabel: 'Cancel',
                             neutralButtonLabel: false,
                         })
                     break;
                 case 'choose':
-                    this.$refs['choose_dialog'].open({ width: 300 })
+                    this.$refs['choose_dialog'].open({ width: '300px' })
                     break;
                 default:
-                    this.$refs['alert_dialog'].open()
+                    this.$refs['alert_dialog'].open({ dismissible: false })
             }
            
         },
