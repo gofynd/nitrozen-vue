@@ -11,7 +11,9 @@
       >
         <div class="nitrozen-select__trigger">
           <span>{{ selectedText }}</span>
-          <div class="nitrozen-dropdown-arrow"></div>
+          <div class="nitrozen-dropdown-arrow">
+            <nitrozen-inline icon="dropdown_arrow_down"></nitrozen-inline>
+          </div>
         </div>
         <div class="nitrozen-options">
           <span
@@ -31,8 +33,12 @@
 </template>
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
+import NitrozenInline from "./../NInline";
 export default {
   name: "nitrozen-dropdown",
+  components: {
+    "nitrozen-inline": NitrozenInline
+  },
   props: {
     /**
      * Unique identifier
