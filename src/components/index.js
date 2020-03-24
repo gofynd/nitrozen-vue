@@ -11,6 +11,8 @@ import NitrozenChips from './NChips';
 import NitrozenInline from './NInline';
 import NitrozenBadge from './NBadge';
 import NitrozenStepper from './NStepper';
+import NitrozenMenu from './NMenu';
+import NitrozenMenuItem from './NMenuItem';
 
 export {
     NitrozenButton,
@@ -25,5 +27,7 @@ export {
     NitrozenChips,
     NitrozenInline,
     NitrozenBadge,
-    NitrozenStepper
+    NitrozenStepper,
+    NitrozenMenu,
+    NitrozenMenuItem
 }

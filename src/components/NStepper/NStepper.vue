@@ -138,8 +138,8 @@ export default {
         transform: rotate(45deg);
         height: 11px;
         width: 3px;
-        border-bottom: 2px solid @StepperCheckBoxColor;
-        border-right: 2px solid @StepperCheckBoxColor;
+        border-bottom: 2px solid @WhiteColor;
+        border-right: 2px solid @WhiteColor;
         position: absolute;
         left: 10px;
         top: 4px;

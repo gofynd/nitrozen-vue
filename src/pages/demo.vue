@@ -1,6 +1,16 @@
 <template>
 <div id="app">
 
+     <div class="main-div">
+         <nitrozen-menu>
+             <nitrozen-menu-item>Item 1</nitrozen-menu-item>
+             <nitrozen-menu-item>Item 2</nitrozen-menu-item>
+             <nitrozen-menu-item>Item 3</nitrozen-menu-item>
+             <nitrozen-menu-item>Item 4</nitrozen-menu-item>
+             <nitrozen-menu-item>Item 5</nitrozen-menu-item>
+         </nitrozen-menu>
+     </div>
+
     <h1>Nitrozen Demo H1</h1>
     <h2>Nitrozen Demo H2</h2>
     <h3>Nitrozen Demo H3</h3>
