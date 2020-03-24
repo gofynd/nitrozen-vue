@@ -51,8 +51,12 @@
 </template>
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
+import NitrozenButton from "./../NBtn";
 export default {
   name: "nitrozen-dialog",
+  components: {
+    "nitrozen-button": NitrozenButton
+  },
   props: {
     /**
      * Unique identifier
