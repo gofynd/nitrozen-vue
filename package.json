@@ -1,10 +1,15 @@
 {
-  "name": "nitrozen",
-  "version": "0.1.0",
+  "name": "@gofynd/nitrozen-vue",
+  "version": "0.0.1",
+  "description": "Fynd Design Library for Vue",
+  "homepage": "https://github.com/gofynd/nitrozen-vue#readme",
+  "author": "Aayush Jain<aayushjain3011@gmail.com>",
+  "license": "MIT",
   "private": false,
   "main": "dist/nitrozen.umd.js",
   "module": "dist/nitrozen.umd.js",
   "unpkg": "dist/nitrozen.umd.min.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve --port 4000",
     "build": "vue-cli-service build",
@@ -15,7 +20,8 @@
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "types"
   ],
   "dependencies": {
     "core-js": "^3.6.4",

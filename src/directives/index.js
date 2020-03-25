@@ -1,5 +1,6 @@
 import strokeBtn from "./NStrokeBtn";
 import flatBtn from "./NFlatBtn";
+import clickOutside from "./NClickOutside";
 
 
 // import Vue from 'vue';
@@ -15,5 +16,6 @@ import flatBtn from "./NFlatBtn";
 // })
 export {
     strokeBtn,
-    flatBtn
+    flatBtn,
+    clickOutside
 };

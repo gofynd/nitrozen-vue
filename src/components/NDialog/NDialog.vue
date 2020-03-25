@@ -16,6 +16,12 @@
           >
             <slot name="header">
               {{ title }}
+              <nitrozen-inline
+                v-if="showcloseButton"
+                title="close"
+                @click="close('close')"
+                icon="cross"
+              ></nitrozen-inline>
             </slot>
           </header>
           <section class="nitrozen-dialog-body" :id="id + '_desc'">
@@ -51,8 +57,14 @@
 </template>
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
+import NitrozenButton from "./../NBtn";
+import NitrozenInline from "./../NInline";
 export default {
   name: "nitrozen-dialog",
+  components: {
+    "nitrozen-button": NitrozenButton,
+    "nitrozen-inline": NitrozenInline
+  },
   props: {
     /**
      * Unique identifier
@@ -75,7 +87,8 @@ export default {
       isModalVisible: false,
       negativeButtonLabel: false,
       neutralButtonLabel: "Ok",
-      positiveButtonLabel: false
+      positiveButtonLabel: false,
+      showcloseButton: false
     };
   },
   methods: {
@@ -96,6 +109,9 @@ export default {
       }
       if (config.dismissible != undefined) {
         this.dismissible = config.dismissible;
+      }
+      if (config.showcloseButton != undefined) {
+        this.showcloseButton = config.showcloseButton;
       }
       if (config.data != undefined) {
         this.data = config.data;

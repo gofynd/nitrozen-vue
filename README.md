@@ -1,6 +1,7 @@
 # nitrozen-vue
 
 ### Nitrozen Badge
+
 ```
 name: 'nitrozen-badge',
 props:
@@ -14,6 +15,7 @@ props:
 ```
 
 ### Nitrozen Button
+
 ```
 name: 'nitrozen-button',
 directives:
@@ -32,6 +34,7 @@ props:
 ```
 
 ### Nitrozen Chips
+
 ```
 name: 'nitrozen-chips',
 props:
@@ -47,7 +50,31 @@ props:
         4. selected
 ```
 
+### Nitrozen Dialog
+
+```
+name: 'nitrozen-dialog',
+props:
+    id: String
+    title: String
+methods:
+    open(config?: DialogConfig): NitrozenDialog
+    close()
+    isOpen(): Boolean
+
+DialogConfig:{
+      data: null,
+      dismissible: true,
+      isModalVisible: false,
+      negativeButtonLabel: false,
+      neutralButtonLabel: "Ok",
+      positiveButtonLabel: false
+      showcloseButton: false,
+}
+```
+
 ### Nitrozen Dropdown
+
 ```
 name: 'nitrozen-dropdown',
 props:
@@ -59,6 +86,7 @@ props:
 ```
 
 ### Nitrozen Input
+
 ```
 name: 'nitrozen-input',
 props:
@@ -76,7 +104,23 @@ props:
     maxlength: Number
 ```
 
+### Nitrozen Menu
+
+```
+name: "nitrozen-menu",
+directives: clickOutside
+methods: 
+        closeMenu()
+```
+
+### Nitrozen Menu Item
+
+```
+name: "nitrozen-menu-item"
+```
+
 ### Nitrozen Radio
+
 ```
 name: 'nitrozen-radio'
 props:
@@ -87,6 +131,7 @@ props:
 ```
 
 ### Nitrozen Stepper
+
 ```
 name: 'nitrozen-stepper'
 props:
@@ -96,6 +141,7 @@ props:
 ```
 
 ### Nitrozen Toggle Button
+
 ```
 name: 'nitrozen-toggle-btn'
 props:
@@ -103,6 +149,7 @@ props:
 ```
 
 ### Nitrozen Tooltip
+
 ```
 name: 'nitrozen-tooltip`
 props:

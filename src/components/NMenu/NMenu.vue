@@ -1,7 +1,7 @@
 <template>
   <transition>
-    <div :id="id" class="nitrozen-menu-content" @click="toggleMenu = !toggleMenu">
-      Click Menu
+    <div :id="id" v-clickOutside="closeMenu" class="nitrozen-menu-content" @click="toggleMenu = !toggleMenu">
+      <nitrozen-inline :icon="'dots'"></nitrozen-inline>
       <transition name="fade">
         <ul v-if="toggleMenu">
           <slot />
@@ -14,9 +14,13 @@
 
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
+import clickOutside from "./../../directives/NClickOutside"
 
 export default {
   name: "nitrozen-menu",
+  directives: {
+    clickOutside
+  },
   props: {
     id: {
       type: [Number, String],
@@ -27,6 +31,11 @@ export default {
     return {
       toggleMenu: false
     };
+  },
+  methods: {
+    closeMenu(){
+      this.toggleMenu = false;
+    }
   }
 };
 </script>
@@ -41,8 +50,9 @@ export default {
   position: relative;
   cursor: pointer;
   ul {
-    width: 250px;
-    height: 150px;
+    width: 200px;
+    height: auto;
+    max-height: 150px;
     overflow-y: scroll;
     background-color: @WhiteColor;
     font-family: @PrimaryFont;
@@ -51,6 +61,7 @@ export default {
     position: absolute;
     padding-left: 0px;
     margin-top: 2em;
+    border-radius: 2px;
     /* width */
     &::-webkit-scrollbar {
       width: 5px;
@@ -77,7 +88,7 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;

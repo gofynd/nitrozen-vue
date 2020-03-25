@@ -1,13 +1,19 @@
 <template>
 <div id="app">
 
-     <div class="main-div">
+     <div class="main-div space-between">
          <nitrozen-menu>
              <nitrozen-menu-item>Item 1</nitrozen-menu-item>
              <nitrozen-menu-item>Item 2</nitrozen-menu-item>
              <nitrozen-menu-item>Item 3</nitrozen-menu-item>
              <nitrozen-menu-item>Item 4</nitrozen-menu-item>
              <nitrozen-menu-item>Item 5</nitrozen-menu-item>
+         </nitrozen-menu>
+
+         <nitrozen-menu>
+             <nitrozen-menu-item>Item 1</nitrozen-menu-item>
+             <nitrozen-menu-item>Item 2</nitrozen-menu-item>
+             <nitrozen-menu-item>Item 3</nitrozen-menu-item>
          </nitrozen-menu>
      </div>
 
@@ -27,7 +33,6 @@
       >
       </nitrozen-stepper>
     <nitrozen-button v-flat-btn @click="stepperNext">Next</nitrozen-button>
-    <div id="app">
 
         <div class="main-div">
         <nitrozen-stepper
@@ -333,6 +338,7 @@
         </nitrozen-dialog>
 
     </div>
+</div>
 </template>
 
 <script>

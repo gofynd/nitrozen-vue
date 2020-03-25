@@ -26,6 +26,8 @@ export default {
   font-size: @BaseFontSize + 2;
   color: @TypographyPrimaryColor;
   padding: 12px;
+  word-break: break-all;
+  line-height: 21px;
   &:hover {
     background-color: @SecondaryColor;
     color: @WhiteColor;
