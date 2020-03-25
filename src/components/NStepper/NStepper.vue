@@ -122,7 +122,7 @@ export default {
     .nitrozen-stepper-group:last-child{
         flex-basis: auto;
         .nitrozen-text:last-child{
-            left:calc(-38%);
+            left: calc(-50% + 12px);
             width: max-content;
         }
     }
