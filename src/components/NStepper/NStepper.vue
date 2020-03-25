@@ -120,10 +120,10 @@ export default {
         flex-basis:100%;
     }
     .nitrozen-stepper-group:last-child{
-        flex-grow: 2;
-        flex-basis: 30%;
+        flex-basis: auto;
         .nitrozen-text:last-child{
             left:calc(-38%);
+            width: max-content;
         }
     }
     .nitrozen-pointer{
@@ -195,7 +195,7 @@ export default {
         color: @SecondaryColor;
         font-size: 16px;
         position:relative;
-        left:calc(-45%);
+        left: calc(-50% + 12px);
         text-align: center;
         font-weight: 500;
     }
