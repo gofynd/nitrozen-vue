@@ -1962,12 +1962,12 @@ var NDropdown_component = normalizeComponent(
 
 
 /* harmony default export */ var components_NDropdown = (NDropdown);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"59fe874d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDialog/NDialog.vue?vue&type=template&id=1b8ac617&
-var NDialogvue_type_template_id_1b8ac617_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isModalVisible),expression:"isModalVisible"}]},[_c('transition',{attrs:{"name":"nitrozen-dialog-fade"}},[_c('div',{staticClass:"nitrozen-dialog-backdrop",on:{"click":_vm.backdropClick}},[_c('div',{ref:"dialog",staticClass:"nitrozen-dialog",attrs:{"role":"dialog","aria-labelledby":_vm.id + '_title',"aria-describedby":_vm.id + '_desc'}},[_c('header',{directives:[{name:"show",rawName:"v-show",value:(_vm.title),expression:"title"}],staticClass:"nitrozen-dialog-header",attrs:{"id":_vm.id + '_title'}},[_vm._t("header",[_vm._v(" "+_vm._s(_vm.title)+" ")])],2),_c('section',{staticClass:"nitrozen-dialog-body",attrs:{"id":_vm.id + '_desc'}},[_vm._t("body")],2),_c('footer',{staticClass:"nitrozen-dialog-footer"},[_vm._t("footer",[(_vm.neutralButtonLabel)?_c('nitrozen-button',{attrs:{"theme":"secondary"},on:{"click":function($event){return _vm.close(_vm.neutralButtonLabel)}}},[_vm._v(" "+_vm._s(_vm.neutralButtonLabel)+" ")]):_vm._e(),(_vm.negativeButtonLabel)?_c('nitrozen-button',{on:{"click":function($event){return _vm.close(_vm.negativeButtonLabel)}}},[_vm._v(" "+_vm._s(_vm.negativeButtonLabel)+" ")]):_vm._e(),(_vm.positiveButtonLabel)?_c('nitrozen-button',{on:{"click":function($event){return _vm.close(_vm.positiveButtonLabel)}}},[_vm._v(" "+_vm._s(_vm.positiveButtonLabel)+" ")]):_vm._e()])],2)])])])],1)}
-var NDialogvue_type_template_id_1b8ac617_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"59fe874d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDialog/NDialog.vue?vue&type=template&id=3d47d9b8&
+var NDialogvue_type_template_id_3d47d9b8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isModalVisible),expression:"isModalVisible"}]},[_c('transition',{attrs:{"name":"nitrozen-dialog-fade"}},[_c('div',{staticClass:"nitrozen-dialog-backdrop",on:{"click":_vm.backdropClick}},[_c('div',{ref:"dialog",staticClass:"nitrozen-dialog",attrs:{"role":"dialog","aria-labelledby":_vm.id + '_title',"aria-describedby":_vm.id + '_desc'}},[_c('header',{directives:[{name:"show",rawName:"v-show",value:(_vm.title),expression:"title"}],staticClass:"nitrozen-dialog-header",attrs:{"id":_vm.id + '_title'}},[_vm._t("header",[_vm._v(" "+_vm._s(_vm.title)+" "),(_vm.showcloseButton)?_c('nitrozen-inline',{attrs:{"title":"close","icon":"cross"},on:{"click":function($event){return _vm.close('close')}}}):_vm._e()])],2),_c('section',{staticClass:"nitrozen-dialog-body",attrs:{"id":_vm.id + '_desc'}},[_vm._t("body")],2),_c('footer',{staticClass:"nitrozen-dialog-footer"},[_vm._t("footer",[(_vm.neutralButtonLabel)?_c('nitrozen-button',{attrs:{"theme":"secondary"},on:{"click":function($event){return _vm.close(_vm.neutralButtonLabel)}}},[_vm._v(" "+_vm._s(_vm.neutralButtonLabel)+" ")]):_vm._e(),(_vm.negativeButtonLabel)?_c('nitrozen-button',{on:{"click":function($event){return _vm.close(_vm.negativeButtonLabel)}}},[_vm._v(" "+_vm._s(_vm.negativeButtonLabel)+" ")]):_vm._e(),(_vm.positiveButtonLabel)?_c('nitrozen-button',{on:{"click":function($event){return _vm.close(_vm.positiveButtonLabel)}}},[_vm._v(" "+_vm._s(_vm.positiveButtonLabel)+" ")]):_vm._e()])],2)])])])],1)}
+var NDialogvue_type_template_id_3d47d9b8_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NDialog/NDialog.vue?vue&type=template&id=1b8ac617&
+// CONCATENATED MODULE: ./src/components/NDialog/NDialog.vue?vue&type=template&id=3d47d9b8&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDialog/NDialog.vue?vue&type=script&lang=js&
 //
@@ -2021,12 +2021,20 @@ var NDialogvue_type_template_id_1b8ac617_staticRenderFns = []
 //
 //
 //
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ var NDialogvue_type_script_lang_js_ = ({
   name: "nitrozen-dialog",
   components: {
-    "nitrozen-button": components_NBtn
+    "nitrozen-button": components_NBtn,
+    "nitrozen-inline": components_NInline
   },
   props: {
     /**
@@ -2051,7 +2059,8 @@ var NDialogvue_type_template_id_1b8ac617_staticRenderFns = []
       isModalVisible: false,
       negativeButtonLabel: false,
       neutralButtonLabel: "Ok",
-      positiveButtonLabel: false
+      positiveButtonLabel: false,
+      showcloseButton: false
     };
   },
   methods: {
@@ -2074,6 +2083,10 @@ var NDialogvue_type_template_id_1b8ac617_staticRenderFns = []
 
       if (config.dismissible != undefined) {
         this.dismissible = config.dismissible;
+      }
+
+      if (config.showcloseButton != undefined) {
+        this.showcloseButton = config.showcloseButton;
       }
 
       if (config.data != undefined) {
@@ -2121,8 +2134,8 @@ var NDialogvue_type_style_index_0_lang_less_ = __webpack_require__("c5cf");
 
 var NDialog_component = normalizeComponent(
   NDialog_NDialogvue_type_script_lang_js_,
-  NDialogvue_type_template_id_1b8ac617_render,
-  NDialogvue_type_template_id_1b8ac617_staticRenderFns,
+  NDialogvue_type_template_id_3d47d9b8_render,
+  NDialogvue_type_template_id_3d47d9b8_staticRenderFns,
   false,
   null,
   null,
