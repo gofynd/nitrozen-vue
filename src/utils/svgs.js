@@ -1,5 +1,5 @@
 "use strict";
-var svgs={}; 
+var svgs = {};
 svgs['cross'] = `<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <desc>Created with sketchtool.</desc>
                 <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -39,5 +39,16 @@ svgs['info'] = `<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1
                         </g>
                     </g>
                     </svg>`
+svgs['dropdown_arrow_down'] = `<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                                <title>DropDown Arrow Down</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Group-8">
+                                        <rect id="Rectangle" fill-opacity="0.01" fill="#FFFFFF" x="0" y="0" width="24" height="24"></rect>
+                                        <polygon id="Shape" fill="#5C6BDD" points="8 10 12 14 16 10"></polygon>
+                                    </g>
+                                </g>
+                            </svg>`
 
 module.exports = svgs;
