@@ -69,6 +69,7 @@ DialogConfig:{
       negativeButtonLabel: false,
       neutralButtonLabel: "Ok",
       positiveButtonLabel: false
+      showcloseButton: false,
 }
 ```
 

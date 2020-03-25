@@ -430,7 +430,7 @@ export default {
                     this.$refs['choose_dialog'].open({ width: '300px' })
                     break;
                 default:
-                    this.$refs['alert_dialog'].open({ dismissible: false })
+                    this.$refs['alert_dialog'].open({ dismissible: false, showcloseButton: true })
             }
            
         },
