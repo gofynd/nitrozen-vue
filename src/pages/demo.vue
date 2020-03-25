@@ -1,5 +1,38 @@
 <template>
-    <div id="app">
+<div id="app">
+
+     <div class="main-div space-between">
+         <nitrozen-menu>
+             <nitrozen-menu-item>Item 1</nitrozen-menu-item>
+             <nitrozen-menu-item>Item 2</nitrozen-menu-item>
+             <nitrozen-menu-item>Item 3</nitrozen-menu-item>
+             <nitrozen-menu-item>Item 4</nitrozen-menu-item>
+             <nitrozen-menu-item>Item 5</nitrozen-menu-item>
+         </nitrozen-menu>
+
+         <nitrozen-menu>
+             <nitrozen-menu-item>Item 1</nitrozen-menu-item>
+             <nitrozen-menu-item>Item 2</nitrozen-menu-item>
+             <nitrozen-menu-item>Item 3</nitrozen-menu-item>
+         </nitrozen-menu>
+     </div>
+
+    <h1>Nitrozen Demo H1</h1>
+    <h2>Nitrozen Demo H2</h2>
+    <h3>Nitrozen Demo H3</h3>
+    <h4>Nitrozen Demo H4</h4>
+    <h5>Nitrozen Demo H5</h5>
+    <h6>Nitrozen Demo H6</h6>
+
+    <div class="main-div">
+      <nitrozen-stepper
+            :elements = "stepper.elements"
+            :activeIndex = "stepper.activeIndex"
+            :maxActiveIndex = "stepper.maxActiveIndex"
+            @stepperClicked = "stepperClicked"
+      >
+      </nitrozen-stepper>
+    <nitrozen-button v-flat-btn @click="stepperNext">Next</nitrozen-button>
 
         <div class="main-div">
         <nitrozen-stepper
@@ -305,6 +338,7 @@
         </nitrozen-dialog>
 
     </div>
+</div>
 </template>
 
 <script>
@@ -430,7 +464,7 @@ export default {
                     this.$refs['choose_dialog'].open({ width: '300px' })
                     break;
                 default:
-                    this.$refs['alert_dialog'].open({ dismissible: false, showcloseButton: true })
+                    this.$refs['alert_dialog'].open({ dismissible: false })
             }
            
         },

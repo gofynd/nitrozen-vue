@@ -8,6 +8,8 @@ import NitrozenDialog from './NDialog';
 import NitrozenError from './NError';
 import NitrozenInline from './NInline';
 import NitrozenInput from './NInput';
+import NitrozenMenu from './NMenu';
+import NitrozenMenuItem from './NMenuItem';
 import NitrozenRadio from './NRadio';
 import NitrozenStepper from './NStepper';
 import NitrozenToggleBtn from './NToggleBtn';
@@ -24,6 +26,8 @@ export {
     NitrozenError,
     NitrozenInline,
     NitrozenInput,
+    NitrozenMenu,
+    NitrozenMenuItem,
     NitrozenRadio,
     NitrozenStepper,
     NitrozenToggleBtn,

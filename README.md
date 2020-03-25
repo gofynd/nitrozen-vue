@@ -104,6 +104,21 @@ props:
     maxlength: Number
 ```
 
+### Nitrozen Menu
+
+```
+name: "nitrozen-menu",
+directives: clickOutside
+methods: 
+        closeMenu()
+```
+
+### Nitrozen Menu Item
+
+```
+name: "nitrozen-menu-item"
+```
+
 ### Nitrozen Radio
 
 ```
