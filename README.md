@@ -13,7 +13,7 @@ props:
         5. none,
     fill: Boolean
 
-![Nitrozen Badges](./demo_images/badges.png)
+![Nitrozen Badges](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/badges.png)
 
 ```
 
@@ -34,9 +34,9 @@ props:
     focused: Boolean
     showProgress: Boolean
 
-![Nitrozen Primary Button](./demo_images/primary-button.png)
-![Nitrozen Secondary Button](./demo_images/secondary-button.png)
-![Nitrozen Button](./demo_images/button.png)
+![Nitrozen Primary Button](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/primary-button.png)
+![Nitrozen Secondary Button](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/secondary-button.png)
+![Nitrozen Button](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/button.png)
 
 
 ```
@@ -57,7 +57,7 @@ props:
         3. progress
         4. selected
 
-![Nitrozen Chips](./demo_images/chips.png)
+![Nitrozen Chips](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/chips.png)
 ```
 
 ### Nitrozen Dialog
@@ -82,8 +82,8 @@ DialogConfig:{
       showcloseButton: false,
 }
 
-![Nitrozen Dialog 1](./demo_images/dialog-1.png)
-![Nitrozen Dialog 2](./demo_images/dialog-2.png)
+![Nitrozen Dialog 1](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/dialog-1.png)
+![Nitrozen Dialog 2](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/dialog-2.png)
 ```
 
 ### Nitrozen Dropdown
@@ -97,7 +97,7 @@ props:
     required: Boolean
     value: v-model
 
-![Nitrozen Dropdown](./demo_images/dropdown.png)
+![Nitrozen Dropdown](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/dropdown.png)
 ```
 
 ### Nitrozen Input
@@ -118,9 +118,9 @@ props:
     tooltipText: String
     maxlength: Number
 
-![Nitrozen Input 1](./demo_images/input-1.png)
-![Nitrozen Input 2](./demo_images/input-2.png)
-![Nitrozen Input 3](./demo_images/input-3.png)
+![Nitrozen Input 1](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/input-1.png)
+![Nitrozen Input 2](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/input-2.png)
+![Nitrozen Input 3](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/input-3.png)
 ```
 
 ### Nitrozen Menu
@@ -131,7 +131,7 @@ directives: clickOutside
 methods: 
         closeMenu()
 
-![Nitrozen Menu](./demo_images/menu.png)
+![Nitrozen Menu](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/menu.png)
 ```
 
 ### Nitrozen Menu Item
@@ -150,7 +150,7 @@ props:
     name: String
     value: v-model
 
-![Nitrozen Radio](./demo_images/radio.png)
+![Nitrozen Radio](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/radio.png)
 ```
 
 ### Nitrozen Stepper
@@ -162,7 +162,7 @@ props:
     maxActiveIndex: Number
     elements: Array
 
-![Nitrozen Stepper](./demo_images/tepper.png)
+![Nitrozen Stepper](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/tepper.png)
 
 ```
 
@@ -173,7 +173,7 @@ name: 'nitrozen-toggle-btn'
 props:
     v-model: Boolean
 
-![Nitrozen Toggle](./demo_images/toggle.png)
+![Nitrozen Toggle](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/toggle.png)
 
 ```
 
