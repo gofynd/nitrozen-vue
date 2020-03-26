@@ -1,0 +1,21 @@
+@import "./variable.less";
+
+.nitrozen-scrollbar {
+    /* scrollbar */
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+        border: 1px solid @BorderColor;
+        background-color: @BackgroundColor;
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        border: 3px solid @BackgroundColor;
+        background-clip: padding-box;
+        background: @ScrollBarThumbColor;
+        width: 4px;
+        border-radius: 5px;
+    }
+}
