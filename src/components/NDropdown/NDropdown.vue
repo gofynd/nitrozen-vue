@@ -7,7 +7,10 @@
       <div
         class="nitrozen-select"
         ref="n_dropdown"
-        v-bind:class="{ disabled: disabled }"
+        v-bind:class="{
+          disabled: disabled,
+          'nitrozen-dropdown-open': showOptions
+        }"
       >
         <div class="nitrozen-select__trigger">
           <span>{{ selectedText }}</span>
@@ -15,7 +18,7 @@
             <nitrozen-inline icon="dropdown_arrow_down"></nitrozen-inline>
           </div>
         </div>
-        <div class="nitrozen-options">
+        <div class="nitrozen-options" v-show="showOptions">
           <span
             v-for="(item, index) in items"
             v-bind:key="index"
@@ -91,7 +94,8 @@ export default {
   },
   data: () => {
     return {
-      selected: null
+      selected: null,
+      showOptions: false
     };
   },
   computed: {
@@ -115,7 +119,7 @@ export default {
     },
     toggle() {
       if (this.disabled) return;
-      this.$refs.n_dropdown.classList.toggle("nitrozen-dropdown-open");
+      this.showOptions = !this.showOptions;
     },
     documentClick(e) {
       // close dropdown on outside click
