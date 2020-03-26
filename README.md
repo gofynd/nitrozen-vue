@@ -119,6 +119,22 @@ methods:
 name: "nitrozen-menu-item"
 ```
 
+### Nitrozen Pagination
+
+```
+name: 'nitrozen-pagination'
+props:
+    name: String
+    pageSizeOptions: String or Number
+    value: v-model (PaginationConfig)
+
+    PaginationConfig : {
+         limit: Number,
+         total: Number,
+         current: Number
+      }
+```
+
 ### Nitrozen Radio
 
 ```

@@ -318,6 +318,11 @@
         </div>
 
         <div class="main-div space-between">
+            <nitrozen-pagination name="Pages" v-model="paginationConfig" @change="paginationChange" :pageSizeOptions="[5,10,20,50]">
+                            </nitrozen-pagination>
+        </div>
+
+        <div class="main-div space-between">
             <nitrozen-button v-flat-btn @click="openDialog('alert')"> Alert Dialog </nitrozen-button>
             <nitrozen-button v-flat-btn @click="openDialog('confirm')"> Confirmation Dialog </nitrozen-button>
             <nitrozen-button v-flat-btn @click="openDialog"> Select Dialog </nitrozen-button>
@@ -398,6 +403,11 @@ export default {
                     }
                 ],
             },
+            paginationConfig: {
+                limit: 10,
+                current: 1,
+                total: 95
+            }
         }
     },
     methods: {
@@ -470,6 +480,9 @@ export default {
         },
         onCloseDialog(data){
             window.console.log(data)
+        },
+        paginationChange(e){
+            console.log(e)
         }
     }
 }

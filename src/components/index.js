@@ -10,6 +10,7 @@ import NitrozenInline from './NInline';
 import NitrozenInput from './NInput';
 import NitrozenMenu from './NMenu';
 import NitrozenMenuItem from './NMenuItem';
+import NitrozenPagination from './NPagination';
 import NitrozenRadio from './NRadio';
 import NitrozenStepper from './NStepper';
 import NitrozenToggleBtn from './NToggleBtn';
@@ -28,6 +29,7 @@ export {
     NitrozenInput,
     NitrozenMenu,
     NitrozenMenuItem,
+    NitrozenPagination,
     NitrozenRadio,
     NitrozenStepper,
     NitrozenToggleBtn,
