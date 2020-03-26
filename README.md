@@ -1,7 +1,9 @@
 # nitrozen-vue
-
+​
+<br>
+​
 ### Nitrozen Badge
-
+​
 ```
 name: 'nitrozen-badge',
 props:
@@ -12,10 +14,14 @@ props:
         4. disable
         5. none,
     fill: Boolean
+​
 ```
-
+​
+<img width=600px src="demo_images/badges.png" alt="Nitrozen Badges"><br><br><br><br><hr>
+​
+​
 ### Nitrozen Button
-
+​
 ```
 name: 'nitrozen-button',
 directives:
@@ -30,11 +36,14 @@ props:
     size: 'small' or 'medium' or 'large'
     focused: Boolean
     showProgress: Boolean
-
+​
 ```
-
+<img width=600px src="demo_images/primary-button.png" alt="Nitrozen Primary Button"><br>
+<img width=600px src="demo_images/secondary-button.png" alt="Nitrozen Secondary Button"><br>
+<img width=600px src="demo_images/button.png" alt="Nitrozen Button"><br><br><br><br><hr>
+​
 ### Nitrozen Chips
-
+​
 ```
 name: 'nitrozen-chips',
 props:
@@ -48,10 +57,12 @@ props:
         2. success
         3. progress
         4. selected
+​
 ```
-
+<img width=600px src="demo_images/chips.png" alt="Nitrozen Chips"><br><br><br><br><hr>
+​
 ### Nitrozen Dialog
-
+​
 ```
 name: 'nitrozen-dialog',
 props:
@@ -61,7 +72,7 @@ methods:
     open(config?: DialogConfig): NitrozenDialog
     close()
     isOpen(): Boolean
-
+​
 DialogConfig:{
       data: null,
       dismissible: true,
@@ -71,10 +82,13 @@ DialogConfig:{
       positiveButtonLabel: false
       showcloseButton: false,
 }
+​
 ```
-
+<img width=600px src="demo_images/dialog-1.png" alt="Nitrozen Dialog 1"><br>
+<img width=600px src="demo_images/dialog-2.png" alt="Nitrozen Dialog 2"><br><br><br><br><hr>
+​
 ### Nitrozen Dropdown
-
+​
 ```
 name: 'nitrozen-dropdown',
 props:
@@ -83,10 +97,12 @@ props:
     label: String
     required: Boolean
     value: v-model
+​
 ```
-
+<img width=600px src="demo_images/dropdown.png" alt="Nitrozen Dropdown"><br><br><br><br><hr>
+​
 ### Nitrozen Input
-
+​
 ```
 name: 'nitrozen-input',
 props:
@@ -102,19 +118,25 @@ props:
     showTooltip: Boolean
     tooltipText: String
     maxlength: Number
+​
 ```
-
+<img width=600px src="demo_images/input-1.png" alt="Nitrozen Input 1"><br>
+<img width=600px src="demo_images/input-2.png" alt="Nitrozen Input 2"><br>
+<img width=600px src="demo_images/input-3.png" alt="Nitrozen Input 3"><br><br><br><br><hr>
+​
 ### Nitrozen Menu
-
+​
 ```
 name: "nitrozen-menu",
 directives: clickOutside
 methods: 
         closeMenu()
+​
 ```
-
+<img width=600px src="demo_images/context-menu.png" alt="Nitrozen Menu"><br><br><br><br><hr>
+​
 ### Nitrozen Menu Item
-
+​
 ```
 name: "nitrozen-menu-item"
 ```
@@ -135,8 +157,11 @@ props:
       }
 ```
 
+​
+<br><br><br><br><hr>
+​
 ### Nitrozen Radio
-
+​
 ```
 name: 'nitrozen-radio'
 props:
@@ -144,28 +169,35 @@ props:
     radioValue: String or Number
     name: String
     value: v-model
+​
 ```
-
+<img width=600px src="demo_images/radio.png" alt="Nitrozen Radio"><br><br><br><br><hr>
+​
 ### Nitrozen Stepper
-
+​
 ```
 name: 'nitrozen-stepper'
 props:
     activeIndex: Number
     maxActiveIndex: Number
     elements: Array
+​
 ```
-
+<img width=600px src="demo_images/stepper.png" alt="Nitrozen Stepper"><br><br><br><br><hr>
+​
 ### Nitrozen Toggle Button
-
+​
 ```
 name: 'nitrozen-toggle-btn'
 props:
     v-model: Boolean
+​
 ```
-
+​
+<img width=600px src="demo_images/toggle.png" alt="Nitrozen Toggle"><br><br><br><br><hr>
+​
 ### Nitrozen Tooltip
-
+​
 ```
 name: 'nitrozen-tooltip`
 props:
