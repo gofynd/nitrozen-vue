@@ -287,7 +287,7 @@
         <div class="main-div space-between">
                 <nitrozen-dropdown label="State" :items="dropdownItems" v-model="selectedDropdown" >
                 </nitrozen-dropdown>
-                <nitrozen-dropdown v-model="selectedDropdown" :items="dropdownItems" @change="changeEvent">
+                <nitrozen-dropdown v-model="selectedDropdown" :items="[...dropdownItems,...dropdownItems,...dropdownItems,...dropdownItems,...dropdownItems,...dropdownItems]" @change="changeEvent">
                 </nitrozen-dropdown>
                 <nitrozen-dropdown label="State Advanced" :items="dropdownItems" v-model="selectedDropdown" :required="true">
                 </nitrozen-dropdown>

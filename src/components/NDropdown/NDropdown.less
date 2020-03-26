@@ -1,6 +1,7 @@
 @import './../../base/base.less';
 
 .nitrozen-dropdown-container {
+    font-family: @PrimaryFont;
     display: flex;
     padding: 0;
     flex-direction: column;
@@ -26,6 +27,7 @@
         border-radius: 3px;
         font-size: 14px;
         line-height: 22px;
+        min-height: 22px;
         padding: 8px 14px;
         position: relative;
         display: flex;
@@ -41,7 +43,7 @@
     .nitrozen-options {
         position: absolute;
         display: block;
-        top: 43px;
+        transform: translate3d(0px, 42px, 0px);
         left: 0;
         right: 0;
         border: 1px solid @InputBorderColor;
@@ -51,9 +53,13 @@
         background: #fff;
         transition: all 0.5s;
         opacity: 0;
+        max-height: 50vh;
+        overflow-y: auto;
         visibility: hidden;
         pointer-events: none;
         z-index: 2;
+
+        .nitrozen-scrollbar
     }
     .nitrozen-select.nitrozen-dropdown-open .nitrozen-options {
         opacity: 1;

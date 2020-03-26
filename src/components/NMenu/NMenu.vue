@@ -1,6 +1,11 @@
 <template>
   <transition>
-    <div :id="id" v-clickOutside="closeMenu" class="nitrozen-menu-content" @click="toggleMenu = !toggleMenu">
+    <div
+      :id="id"
+      v-clickOutside="closeMenu"
+      class="nitrozen-menu-content"
+      @click="toggleMenu = !toggleMenu"
+    >
       <nitrozen-inline :icon="'dots'"></nitrozen-inline>
       <transition name="fade">
         <ul v-if="toggleMenu">
@@ -14,7 +19,7 @@
 
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
-import clickOutside from "./../../directives/NClickOutside"
+import clickOutside from "./../../directives/NClickOutside";
 
 export default {
   name: "nitrozen-menu",
@@ -33,7 +38,7 @@ export default {
     };
   },
   methods: {
-    closeMenu(){
+    closeMenu() {
       this.toggleMenu = false;
     }
   }
@@ -53,7 +58,7 @@ export default {
     width: 200px;
     height: auto;
     max-height: 150px;
-    overflow-y: scroll;
+    overflow-y: auto;
     background-color: @WhiteColor;
     font-family: @PrimaryFont;
     list-style: none;
@@ -62,27 +67,8 @@ export default {
     padding-left: 0px;
     margin-top: 2em;
     border-radius: 2px;
-    /* width */
-    &::-webkit-scrollbar {
-      width: 5px;
-    }
 
-    /* Track */
-    &::-webkit-scrollbar-track {
-      background: @WhiteColor;
-      border-radius: 10px;
-    }
-
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-      background: @TypographyPrimaryColor;
-      border-radius: 10px;
-    }
-
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-      background: #555;
-    }
+    .nitrozen-scrollbar;
   }
 }
 
