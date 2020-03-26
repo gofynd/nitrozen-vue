@@ -94,11 +94,7 @@ export default {
     }
   },
   data: () => {
-    return {
-      selected: null,
-      showOptions: false,
-      selectedPageSize: 10
-    };
+    return {};
   },
   computed: {
     pages: function() {
@@ -111,7 +107,13 @@ export default {
       const po = this.pageSizeOptions.map(p => {
         return { text: p, value: p };
       });
-      this.selectedPageSize = po.length > 0 ? po[0].value : null;
+      if (!this.selectedPageSize) {
+        this.selectedPageSize = this.value.limit
+          ? this.value.limit
+          : po.length > 0
+          ? po[0].value
+          : null;
+      }
       return po;
     },
     firstRecord() {
