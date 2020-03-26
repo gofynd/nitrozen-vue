@@ -1,7 +1,9 @@
 # nitrozen-vue
-
+​
+<br>
+​
 ### Nitrozen Badge
-
+​
 ```
 name: 'nitrozen-badge',
 props:
@@ -12,13 +14,14 @@ props:
         4. disable
         5. none,
     fill: Boolean
-
-![Nitrozen Badges](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/badges.png)
-
+​
 ```
-
+​
+<img width=600px src="demo_images/badges.png" alt="Nitrozen Badges"><br><br><br><br><hr>
+​
+​
 ### Nitrozen Button
-
+​
 ```
 name: 'nitrozen-button',
 directives:
@@ -33,16 +36,14 @@ props:
     size: 'small' or 'medium' or 'large'
     focused: Boolean
     showProgress: Boolean
-
-![Nitrozen Primary Button](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/primary-button.png)
-![Nitrozen Secondary Button](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/secondary-button.png)
-![Nitrozen Button](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/button.png)
-
-
+​
 ```
-
+<img width=600px src="demo_images/primary-button.png" alt="Nitrozen Primary Button"><br>
+<img width=600px src="demo_images/secondary-button.png" alt="Nitrozen Secondary Button"><br>
+<img width=600px src="demo_images/button.png" alt="Nitrozen Button"><br><br><br><br><hr>
+​
 ### Nitrozen Chips
-
+​
 ```
 name: 'nitrozen-chips',
 props:
@@ -56,12 +57,12 @@ props:
         2. success
         3. progress
         4. selected
-
-![Nitrozen Chips](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/chips.png)
+​
 ```
-
+<img width=600px src="demo_images/chips.png" alt="Nitrozen Chips"><br><br><br><br><hr>
+​
 ### Nitrozen Dialog
-
+​
 ```
 name: 'nitrozen-dialog',
 props:
@@ -71,7 +72,7 @@ methods:
     open(config?: DialogConfig): NitrozenDialog
     close()
     isOpen(): Boolean
-
+​
 DialogConfig:{
       data: null,
       dismissible: true,
@@ -81,13 +82,13 @@ DialogConfig:{
       positiveButtonLabel: false
       showcloseButton: false,
 }
-
-![Nitrozen Dialog 1](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/dialog-1.png)
-![Nitrozen Dialog 2](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/dialog-2.png)
+​
 ```
-
+<img width=600px src="demo_images/dialog-1.png" alt="Nitrozen Dialog 1"><br>
+<img width=600px src="demo_images/dialog-2.png" alt="Nitrozen Dialog 2"><br><br><br><br><hr>
+​
 ### Nitrozen Dropdown
-
+​
 ```
 name: 'nitrozen-dropdown',
 props:
@@ -96,12 +97,12 @@ props:
     label: String
     required: Boolean
     value: v-model
-
-![Nitrozen Dropdown](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/dropdown.png)
+​
 ```
-
+<img width=600px src="demo_images/dropdown.png" alt="Nitrozen Dropdown"><br><br><br><br><hr>
+​
 ### Nitrozen Input
-
+​
 ```
 name: 'nitrozen-input',
 props:
@@ -117,31 +118,33 @@ props:
     showTooltip: Boolean
     tooltipText: String
     maxlength: Number
-
-![Nitrozen Input 1](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/input-1.png)
-![Nitrozen Input 2](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/input-2.png)
-![Nitrozen Input 3](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/input-3.png)
+​
 ```
-
+<img width=600px src="demo_images/input-1.png" alt="Nitrozen Input 1"><br>
+<img width=600px src="demo_images/input-2.png" alt="Nitrozen Input 2"><br>
+<img width=600px src="demo_images/input-3.png" alt="Nitrozen Input 3"><br><br><br><br><hr>
+​
 ### Nitrozen Menu
-
+​
 ```
 name: "nitrozen-menu",
 directives: clickOutside
 methods: 
         closeMenu()
-
-![Nitrozen Menu](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/menu.png)
+​
 ```
-
+<img width=600px src="demo_images/context-menu.png" alt="Nitrozen Menu"><br><br><br><br><hr>
+​
 ### Nitrozen Menu Item
-
+​
 ```
 name: "nitrozen-menu-item"
 ```
-
+​
+<br><br><br><br><hr>
+​
 ### Nitrozen Radio
-
+​
 ```
 name: 'nitrozen-radio'
 props:
@@ -149,36 +152,35 @@ props:
     radioValue: String or Number
     name: String
     value: v-model
-
-![Nitrozen Radio](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/radio.png)
+​
 ```
-
+<img width=600px src="demo_images/radio.png" alt="Nitrozen Radio"><br><br><br><br><hr>
+​
 ### Nitrozen Stepper
-
+​
 ```
 name: 'nitrozen-stepper'
 props:
     activeIndex: Number
     maxActiveIndex: Number
     elements: Array
-
-![Nitrozen Stepper](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/tepper.png)
-
+​
 ```
-
+<img width=600px src="demo_images/stepper.png" alt="Nitrozen Stepper"><br><br><br><br><hr>
+​
 ### Nitrozen Toggle Button
-
+​
 ```
 name: 'nitrozen-toggle-btn'
 props:
     v-model: Boolean
-
-![Nitrozen Toggle](https://github.com/gofynd/nitrozen-vue/blob/readme/demo_images/toggle.png)
-
+​
 ```
-
+​
+<img width=600px src="demo_images/toggle.png" alt="Nitrozen Toggle"><br><br><br><br><hr>
+​
 ### Nitrozen Tooltip
-
+​
 ```
 name: 'nitrozen-tooltip`
 props:
