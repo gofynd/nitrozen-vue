@@ -170,10 +170,12 @@ export default {
     this.calculateViewport();
     document.addEventListener("click", this.documentClick);
     window.addEventListener("resize", this.calculateViewport);
+    window.addEventListener("scroll", this.calculateViewport);
   },
   destroyed() {
     document.removeEventListener("click", this.documentClick);
     window.removeEventListener("resize", this.calculateViewport);
+    window.removeEventListener("scroll", this.calculateViewport);
   }
 };
 </script>
