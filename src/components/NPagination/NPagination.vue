@@ -1,5 +1,5 @@
 <template>
-  <div class="nitrozen-pagination-container">
+  <div class="nitrozen-pagination-container" v-if="value.total > 0">
     <div class="nitrozen-pagination">
       <div class="nitrozen-pagination__left">
         <span class="nitrozen-pagination__count">
