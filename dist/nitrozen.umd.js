@@ -198,6 +198,26 @@ svgs['dots'] = `<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1
                     </g>
                 </g>
             </svg>`;
+svgs['arrow-left-black'] = `<svg width="24px" height="24px" transform="rotate(180)" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+                                <desc>Created with Sketch.</desc>
+                                <g id="arrow-left-black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+                                    <g id="Line-+-Line-Copy-4" transform="translate(12.500000, 12.500000) rotate(90.000000) translate(-12.500000, -12.500000) translate(8.000000, 9.000000)" stroke="#41434C">
+                                        <path d="M0.236842105,5.70567867 L4.5,1.039012" id="Line"></path>
+                                        <path d="M4.5,5.70567867 L8.76315789,1.039012" id="Line-Copy-4" transform="translate(6.631579, 3.372345) scale(-1, 1) translate(-6.631579, -3.372345) "></path>
+                                    </g>
+                                </g>
+                            </svg>`;
+svgs['arrow-right-black'] = `<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+                                <desc>Created with Sketch.</desc>
+                                <g id="arrow-right-black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+                                    <g id="Line-+-Line-Copy-4" transform="translate(12.500000, 12.500000) rotate(90.000000) translate(-12.500000, -12.500000) translate(8.000000, 9.000000)" stroke="#41434C">
+                                        <path d="M0.236842105,5.70567867 L4.5,1.039012" id="Line"></path>
+                                        <path d="M4.5,5.70567867 L8.76315789,1.039012" id="Line-Copy-4" transform="translate(6.631579, 3.372345) scale(-1, 1) translate(-6.631579, -3.372345) "></path>
+                                    </g>
+                                </g>
+                            </svg>`;
 module.exports = svgs;
 
 /***/ }),
@@ -238,6 +258,17 @@ module.exports = svgs;
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "31a4":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NPagination_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("874e");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NPagination_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NPagination_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NPagination_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -296,6 +327,13 @@ module.exports = svgs;
 /***/ }),
 
 /***/ "5f91":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "874e":
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -2408,6 +2446,212 @@ var NMenuItem_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/NMenuItem/index.js
 
 /* harmony default export */ var components_NMenuItem = (NMenuItem);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"59fe874d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=template&id=4bd90f85&
+var NPaginationvue_type_template_id_4bd90f85_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-pagination-container"},[_c('div',{staticClass:"nitrozen-pagination"},[_c('div',{staticClass:"nitrozen-pagination__left"},[_c('span',{staticClass:"nitrozen-pagination__count"},[_vm._v(" "+_vm._s(_vm.firstRecord)+" - "+_vm._s(_vm.lastRecord)+" / "+_vm._s(_vm.value.total)+" "+_vm._s(_vm.name || "")+" ")])]),_c('div',{staticClass:"nitrozen-pagination__right"},[_c('div',{staticClass:"nitrozen-pagination__select"},[_c('span',{staticClass:"nitrozen-pagination__select__label"},[_vm._v("Rows per page")]),_c('nitrozen-dropdown',{staticClass:"nitrozen-pagination-page-size",attrs:{"items":_vm.pageSizes},on:{"change":_vm.pageSizeChange},model:{value:(_vm.selectedPageSize),callback:function ($$v) {_vm.selectedPageSize=$$v},expression:"selectedPageSize"}})],1),_c('nitrozen-button',{staticClass:"nitrozen-pagination__prev",attrs:{"title":"Previous"},on:{"click":_vm.previous}},[_c('nitrozen-inline',{attrs:{"icon":"arrow-left-black"}})],1),_c('nitrozen-button',{staticClass:"nitrozen-pagination__next",attrs:{"title":"Next"},on:{"click":_vm.next}},[_c('nitrozen-inline',{attrs:{"icon":"arrow-right-black"}})],1)],1)])])}
+var NPaginationvue_type_template_id_4bd90f85_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/NPagination/NPagination.vue?vue&type=template&id=4bd90f85&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ var NPaginationvue_type_script_lang_js_ = ({
+  name: "nitrozen-pagination",
+  components: {
+    "nitrozen-button": components_NBtn,
+    "nitrozen-dropdown": components_NDropdown,
+    "nitrozen-inline": components_NInline
+  },
+  props: {
+    /**
+     * Unique identifier
+     */
+    id: {
+      type: [Number, String],
+      default: () => "nitrozen-pagination-" + NUuid()
+    },
+
+    /**
+     * kind of pagination
+     */
+    name: {
+      type: String
+    },
+
+    /**
+     * page size dropdown options
+     */
+    pageSizeOptions: {
+      type: Array,
+      default: () => {
+        return [10, 20, 50, 100];
+      }
+    },
+
+    /**
+     * pagination config value
+     * @example `
+     * {
+     *     limit: Number,
+     *     total: Number,
+     *     current: Number
+     *  }
+     * `
+     */
+    value: {
+      type: Object,
+      required: true,
+      default: () => {
+        return {
+          limit: 0,
+          total: 0,
+          current: 0
+        };
+      }
+    }
+  },
+  data: () => {
+    return {};
+  },
+  computed: {
+    pages: function () {
+      if (this.value.limit > 0) {
+        return Math.ceil(this.value.total / this.value.limit);
+      }
+
+      return 0;
+    },
+
+    pageSizes() {
+      const po = this.pageSizeOptions.map(p => {
+        return {
+          text: p,
+          value: p
+        };
+      });
+
+      if (!this.selectedPageSize) {
+        this.selectedPageSize = this.value.limit ? this.value.limit : po.length > 0 ? po[0].value : null;
+      }
+
+      return po;
+    },
+
+    firstRecord() {
+      return this.value.limit * (this.value.current - 1) + 1;
+    },
+
+    lastRecord() {
+      return this.value.limit * this.value.current < this.value.total ? this.value.limit * this.value.current : this.value.total;
+    }
+
+  },
+  methods: {
+    previous() {
+      if (this.value.current === 1) return;
+      this.value.current--;
+      this.change();
+    },
+
+    next() {
+      if (this.value.current >= this.pages) {
+        this.value.current = this.pages;
+        return;
+      }
+
+      if (this.pages === 0) {
+        this.value.current = 0;
+        return;
+      }
+
+      this.value.current++;
+      this.change();
+    },
+
+    pageSizeChange(size) {
+      this.value.current = 1;
+      this.value.limit = size;
+      this.change();
+    },
+
+    change() {
+      this.$emit("input", this.value);
+      this.$emit("change", this.value);
+    }
+
+  }
+});
+// CONCATENATED MODULE: ./src/components/NPagination/NPagination.vue?vue&type=script&lang=js&
+ /* harmony default export */ var NPagination_NPaginationvue_type_script_lang_js_ = (NPaginationvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/components/NPagination/NPagination.vue?vue&type=style&index=0&lang=less&
+var NPaginationvue_type_style_index_0_lang_less_ = __webpack_require__("31a4");
+
+// CONCATENATED MODULE: ./src/components/NPagination/NPagination.vue
+
+
+
+
+
+
+/* normalize component */
+
+var NPagination_component = normalizeComponent(
+  NPagination_NPaginationvue_type_script_lang_js_,
+  NPaginationvue_type_template_id_4bd90f85_render,
+  NPaginationvue_type_template_id_4bd90f85_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var NPagination = (NPagination_component.exports);
+// CONCATENATED MODULE: ./src/components/NPagination/index.js
+
+
+/* harmony default export */ var components_NPagination = (NPagination);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"59fe874d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=template&id=4c1d842e&
 var NRadiovue_type_template_id_4c1d842e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-radio-group"},[_c('input',{attrs:{"id":_vm.id,"type":"radio","name":_vm.name,"disabled":_vm.disabled},domProps:{"checked":_vm.value==_vm.radioValue,"value":_vm.radioValue},on:{"input":function($event){return _vm.changeEvent($event,'input')},"change":function($event){return _vm.changeEvent($event,'change')}}}),_c('label',{attrs:{"for":_vm.id}},[_vm._t("default")],2)])}
 var NRadiovue_type_template_id_4c1d842e_staticRenderFns = []
@@ -2731,6 +2975,7 @@ var NToggleBtn_component = normalizeComponent(
 
 
 
+
 // CONCATENATED MODULE: ./src/directives/index.js
 
 
@@ -2770,6 +3015,7 @@ var NToggleBtn_component = normalizeComponent(
 /* concated harmony reexport NitrozenInput */__webpack_require__.d(__webpack_exports__, "NitrozenInput", function() { return components_NInput; });
 /* concated harmony reexport NitrozenMenu */__webpack_require__.d(__webpack_exports__, "NitrozenMenu", function() { return components_NMenu; });
 /* concated harmony reexport NitrozenMenuItem */__webpack_require__.d(__webpack_exports__, "NitrozenMenuItem", function() { return components_NMenuItem; });
+/* concated harmony reexport NitrozenPagination */__webpack_require__.d(__webpack_exports__, "NitrozenPagination", function() { return components_NPagination; });
 /* concated harmony reexport NitrozenRadio */__webpack_require__.d(__webpack_exports__, "NitrozenRadio", function() { return components_NRadio; });
 /* concated harmony reexport NitrozenStepper */__webpack_require__.d(__webpack_exports__, "NitrozenStepper", function() { return components_NStepper; });
 /* concated harmony reexport NitrozenToggleBtn */__webpack_require__.d(__webpack_exports__, "NitrozenToggleBtn", function() { return components_NToggleBtn; });
