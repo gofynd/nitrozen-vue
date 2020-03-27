@@ -135,11 +135,6 @@ methods:
 ```
 <img width=600px src="demo_images/context-menu.png" alt="Nitrozen Menu"><br><br><br><br><hr>
 ​
-### Nitrozen Menu Item
-​
-```
-name: "nitrozen-menu-item"
-```
 
 ### Nitrozen Pagination
 
@@ -157,9 +152,9 @@ props:
       }
 ```
 
-​
-<br><br><br><br><hr>
-​
+<img width=600px src="demo_images/pagination.png" alt="Nitrozen Pagination"><br><br><br><br><hr>
+
+​​
 ### Nitrozen Radio
 ​
 ```
