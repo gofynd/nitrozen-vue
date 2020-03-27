@@ -2786,12 +2786,12 @@ var NRadio_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/NRadio/index.js
 
 /* harmony default export */ var components_NRadio = (NRadio);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"59fe874d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NStepper/NStepper.vue?vue&type=template&id=7e62299e&
-var NSteppervue_type_template_id_7e62299e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-stepper",attrs:{"id":_vm.id}},[_c('div',{staticClass:"nitrozen-stepper-container"},_vm._l((_vm.elements),function(item,index){return _c('div',{key:index,staticClass:"nitrozen-stepper-group"},[_c('div',{staticClass:"nitrozen-flex-center"},[(index == _vm.data.activeIndex)?_c('div',{staticClass:"nitrozen-circle-outer-container nitrozen-pointer",on:{"click":function($event){return _vm.stepperClicked(index)}}},[_c('div',{staticClass:"nitrozen-circle-outer"}),_c('div',{staticClass:"nitrozen-circle-inner"})]):_vm._e(),(index != _vm.data.activeIndex && index <= _vm.data.maxActiveIndex)?_c('div',{staticClass:"nitrozen-cirle-check-container nitrozen-pointer",on:{"click":function($event){return _vm.stepperClicked(index)}}},[_c('div',{staticClass:"nitrozen-circle-outer"}),_c('div',{staticClass:"nitrozen-checkmark"})]):_vm._e(),(index <= _vm.elements.length-1 && index > _vm.data.maxActiveIndex)?_c('div',{staticClass:"nitrozen-circle-outer-container",on:{"click":function($event){return _vm.stepperClicked(index)}}},[_c('div',{staticClass:"nitrozen-circle-outer nitrozen-disabled"}),_c('div',{staticClass:"nitrozen-checkmark nitrozen-checkbox-hidden"})]):_vm._e(),(index != _vm.elements.length-1 && index < _vm.data.maxActiveIndex)?_c('div',{staticClass:"nitrozen-bar nitrozen-active"}):_vm._e(),(index != _vm.elements.length-1 && index > _vm.data.maxActiveIndex-1)?_c('div',{staticClass:"nitrozen-bar nitrozen-disabled"}):_vm._e()]),(!(index == _vm.data.activeIndex || index <= _vm.data.maxActiveIndex))?_c('div',{staticClass:"nitrozen-text nitrozen-text-disabled"},[_vm._v(_vm._s(item.text))]):_vm._e(),(index == _vm.data.activeIndex || index <= _vm.data.maxActiveIndex)?_c('div',{staticClass:"nitrozen-text"},[_vm._v(_vm._s(item.text))]):_vm._e()])}),0)])}
-var NSteppervue_type_template_id_7e62299e_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"59fe874d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NStepper/NStepper.vue?vue&type=template&id=2023bb58&
+var NSteppervue_type_template_id_2023bb58_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-stepper",attrs:{"id":_vm.id}},[_c('div',{staticClass:"nitrozen-stepper-container"},_vm._l((_vm.elements),function(item,index){return _c('div',{key:index,staticClass:"nitrozen-stepper-group"},[_c('div',{staticClass:"nitrozen-flex-center"},[(index <= _vm.data.maxActiveIndex)?_c('div',{staticClass:"nitrozen-bar nitrozen-active"}):_vm._e(),(index > _vm.data.maxActiveIndex)?_c('div',{staticClass:"nitrozen-bar nitrozen-disabled"}):_vm._e(),(index == _vm.data.activeIndex)?_c('div',{staticClass:"nitrozen-circle-outer-container nitrozen-pointer",on:{"click":function($event){return _vm.stepperClicked(index)}}},[_c('div',{staticClass:"nitrozen-circle-outer"}),_c('div',{staticClass:"nitrozen-circle-inner"})]):_vm._e(),(index != _vm.data.activeIndex && index <= _vm.data.maxActiveIndex)?_c('div',{staticClass:"nitrozen-cirle-check-container nitrozen-pointer",on:{"click":function($event){return _vm.stepperClicked(index)}}},[_c('div',{staticClass:"nitrozen-circle-outer"}),_c('div',{staticClass:"nitrozen-checkmark"})]):_vm._e(),(index <= _vm.elements.length-1 && index > _vm.data.maxActiveIndex)?_c('div',{staticClass:"nitrozen-circle-outer-container",on:{"click":function($event){return _vm.stepperClicked(index)}}},[_c('div',{staticClass:"nitrozen-circle-outer nitrozen-disabled"}),_c('div',{staticClass:"nitrozen-checkmark nitrozen-checkbox-hidden"})]):_vm._e(),(index < _vm.data.maxActiveIndex)?_c('div',{staticClass:"nitrozen-bar nitrozen-active"}):_vm._e(),(index > _vm.data.maxActiveIndex-1)?_c('div',{staticClass:"nitrozen-bar nitrozen-disabled"}):_vm._e()]),(!(index == _vm.data.activeIndex || index <= _vm.data.maxActiveIndex))?_c('div',{staticClass:"nitrozen-text nitrozen-text-disabled"},[_vm._v(_vm._s(item.text))]):_vm._e(),(index == _vm.data.activeIndex || index <= _vm.data.maxActiveIndex)?_c('div',{staticClass:"nitrozen-text"},[_vm._v(_vm._s(item.text))]):_vm._e()])}),0)])}
+var NSteppervue_type_template_id_2023bb58_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NStepper/NStepper.vue?vue&type=template&id=7e62299e&
+// CONCATENATED MODULE: ./src/components/NStepper/NStepper.vue?vue&type=template&id=2023bb58&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NStepper/NStepper.vue?vue&type=script&lang=js&
 //
@@ -2835,13 +2835,13 @@ var NSteppervue_type_template_id_7e62299e_staticRenderFns = []
   name: 'nitrozen-stepper',
   watch: {
     activeIndex(index) {
-      if (index <= this.maxActiveIndex) {
+      if (index <= this.maxActiveIndex && index < this.elements.length) {
         this.data.activeIndex = index;
       }
     },
 
     maxActiveIndex(maxIndex) {
-      if (this.activeIndex <= maxIndex) {
+      if (this.activeIndex <= maxIndex && maxIndex < this.elements.length) {
         this.data.maxActiveIndex = maxIndex;
       }
     }
@@ -2914,8 +2914,8 @@ var NSteppervue_type_style_index_0_lang_less_ = __webpack_require__("d329");
 
 var NStepper_component = normalizeComponent(
   NStepper_NSteppervue_type_script_lang_js_,
-  NSteppervue_type_template_id_7e62299e_render,
-  NSteppervue_type_template_id_7e62299e_staticRenderFns,
+  NSteppervue_type_template_id_2023bb58_render,
+  NSteppervue_type_template_id_2023bb58_staticRenderFns,
   false,
   null,
   null,
