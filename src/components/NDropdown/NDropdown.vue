@@ -18,7 +18,10 @@
             <nitrozen-inline icon="dropdown_arrow_down"></nitrozen-inline>
           </div>
         </div>
-        <div class="nitrozen-options" v-show="showOptions">
+        <div
+          class="nitrozen-options"
+          v-bind:class="{ 'nitrozen-dropup': dropUp }"
+        >
           <span
             v-for="(item, index) in items"
             v-bind:key="index"
@@ -95,7 +98,9 @@ export default {
   data: () => {
     return {
       selected: null,
-      showOptions: false
+      showOptions: false,
+      dropUp: false,
+      viewport: null
     };
   },
   computed: {
@@ -120,6 +125,26 @@ export default {
     toggle() {
       if (this.disabled) return;
       this.showOptions = !this.showOptions;
+      if (this.showOptions) {
+        this.calculateDropUpDown();
+      }
+    },
+    /**
+     * @description calclulate position of dropdwon
+     */
+    calculateDropUpDown() {
+      const dropdown = this.$refs["n_dropdown"];
+      if (!dropdown) return;
+      const dropdownRect = dropdown.getBoundingClientRect();
+      const topSpace = dropdownRect.top;
+      const bottomSpace =
+        this.viewport.height - dropdownRect.top - dropdown.offsetHeight;
+      const dropdownOptionsHeight = dropdown.children[1].offsetHeight;
+      if (dropdownOptionsHeight < bottomSpace) {
+        this.dropUp = false;
+      } else {
+        this.dropUp = true;
+      }
     },
     documentClick(e) {
       // close dropdown on outside click
@@ -127,13 +152,30 @@ export default {
       if (!select.contains(e.target)) {
         select.classList.remove("nitrozen-dropdown-open");
       }
+    },
+    calculateViewport() {
+      const vw = Math.max(
+        document.documentElement.clientWidth,
+        window.innerWidth || 0
+      );
+      const vh = Math.max(
+        document.documentElement.clientHeight,
+        window.innerHeight || 0
+      );
+      this.viewport = { width: vw, height: vh };
+      this.calculateDropUpDown();
     }
   },
   created() {
+    this.calculateViewport();
     document.addEventListener("click", this.documentClick);
+    window.addEventListener("resize", this.calculateViewport);
+    window.addEventListener("scroll", this.calculateViewport);
   },
   destroyed() {
     document.removeEventListener("click", this.documentClick);
+    window.removeEventListener("resize", this.calculateViewport);
+    window.removeEventListener("scroll", this.calculateViewport);
   }
 };
 </script>

@@ -38,9 +38,9 @@ props:
     showProgress: Boolean
 ​
 ```
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/primary-button.png" alt="Nitrozen Primary Button"><br>
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/secondary-button.png" alt="Nitrozen Secondary Button"><br>
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/button.png" alt="Nitrozen Button"><br><br><br><br><hr>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/primary-button.png" alt="Nitrozen Primary Button"><br>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/secondary-button.png" alt="Nitrozen Secondary Button"><br>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/button.png" alt="Nitrozen Button"><br><br><br><br><hr>
 ​
 ### Nitrozen Chips
 ​
@@ -59,7 +59,7 @@ props:
         4. selected
 ​
 ```
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/chips.png" alt="Nitrozen Chips"><br><br><br><br><hr>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/chips.png" alt="Nitrozen Chips"><br><br><br><br><hr>
 ​
 ### Nitrozen Dialog
 ​
@@ -84,8 +84,8 @@ DialogConfig:{
 }
 ​
 ```
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/dialog-1.png" alt="Nitrozen Dialog 1"><br>
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/dialog-2.png" alt="Nitrozen Dialog 2"><br><br><br><br><hr>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/dialog-1.png" alt="Nitrozen Dialog 1"><br>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/dialog-2.png" alt="Nitrozen Dialog 2"><br><br><br><br><hr>
 ​
 ### Nitrozen Dropdown
 ​
@@ -99,7 +99,7 @@ props:
     value: v-model
 ​
 ```
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/dropdown.png" alt="Nitrozen Dropdown"><br><br><br><br><hr>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/dropdown.png" alt="Nitrozen Dropdown"><br><br><br><br><hr>
 ​
 ### Nitrozen Input
 ​
@@ -120,9 +120,9 @@ props:
     maxlength: Number
 ​
 ```
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/input-1.png" alt="Nitrozen Input 1"><br>
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/input-2.png" alt="Nitrozen Input 2"><br>
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/input-3.png" alt="Nitrozen Input 3"><br><br><br><br><hr>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/input-1.png" alt="Nitrozen Input 1"><br>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/input-2.png" alt="Nitrozen Input 2"><br>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/input-3.png" alt="Nitrozen Input 3"><br><br><br><br><hr>
 ​
 ### Nitrozen Menu
 ​
@@ -133,7 +133,7 @@ methods:
         closeMenu()
 ​
 ```
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/context-menu.png" alt="Nitrozen Menu"><br><br><br><br><hr>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/context-menu.png" alt="Nitrozen Menu"><br><br><br><br><hr>
 ​
 
 ### Nitrozen Pagination
@@ -152,7 +152,7 @@ props:
       }
 ```
 
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/pagination.png" alt="Nitrozen Pagination"><br><br><br><br><hr>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/pagination.png" alt="Nitrozen Pagination"><br><br><br><br><hr>
 
 ​​
 ### Nitrozen Radio
@@ -166,7 +166,7 @@ props:
     value: v-model
 ​
 ```
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/radio.png" alt="Nitrozen Radio"><br><br><br><br><hr>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/radio.png" alt="Nitrozen Radio"><br><br><br><br><hr>
 ​
 ### Nitrozen Stepper
 ​
@@ -178,7 +178,7 @@ props:
     elements: Array
 ​
 ```
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/stepper.png" alt="Nitrozen Stepper"><br><br><br><br><hr>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/stepper.png" alt="Nitrozen Stepper"><br><br><br><br><hr>
 ​
 ### Nitrozen Toggle Button
 ​
@@ -189,7 +189,7 @@ props:
 ​
 ```
 ​
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/toggle.png" alt="Nitrozen Toggle"><br><br><br><br><hr>
+<img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/toggle.png" alt="Nitrozen Toggle"><br><br><br><br><hr>
 ​
 ### Nitrozen Tooltip
 ​
