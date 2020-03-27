@@ -17,7 +17,7 @@ props:
 ​
 ```
 ​
-<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/badges.png" alt="Nitrozen Badges"><br><br><br><br><hr>
+<img width=600px src="https://github.com/gofynd/nitrozen-vue/tree/master/demo_images/badges.png?raw=true" alt="Nitrozen Badges"><br><br><br><br><hr>
 ​
 ​
 ### Nitrozen Button
