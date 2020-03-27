@@ -506,7 +506,7 @@ export default {
     }
 }
 .stepper-btn-container{
-    margin:0 auto;
+    text-align: center;
     width:100%;
 }
 .hover-new {
