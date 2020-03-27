@@ -3,7 +3,9 @@
         <div class="nitrozen-stepper-container">
             <div v-for="(item,index) in elements" :key="index" class="nitrozen-stepper-group">
                 <div class="nitrozen-flex-center">
-                    <!-- current one -->
+                    <div v-if="index <= data.maxActiveIndex" class="nitrozen-bar nitrozen-active"></div>
+                    <div v-if="index > data.maxActiveIndex" class="nitrozen-bar nitrozen-disabled"></div>
+
                     <div @click="stepperClicked(index)" v-if="index == data.activeIndex" class="nitrozen-circle-outer-container nitrozen-pointer">
                         <div class="nitrozen-circle-outer"></div>
                         <div class="nitrozen-circle-inner"></div>
@@ -21,14 +23,12 @@
                         <div class="nitrozen-checkmark nitrozen-checkbox-hidden"></div>
                     </div>
 
-
-                    <div v-if="index != elements.length-1 && index < data.maxActiveIndex" class="nitrozen-bar nitrozen-active"></div>
-                    <div v-if="index != elements.length-1 && index > data.maxActiveIndex-1" class="nitrozen-bar nitrozen-disabled"></div>
+                    <div v-if="index < data.maxActiveIndex" class="nitrozen-bar nitrozen-active"></div>
+                    <div v-if="index > data.maxActiveIndex-1" class="nitrozen-bar nitrozen-disabled"></div>
 
                 </div>
                 <div v-if="!(index == data.activeIndex || index <= data.maxActiveIndex)" class="nitrozen-text nitrozen-text-disabled">{{ item.text }}</div>
                 <div v-if="index == data.activeIndex || index <= data.maxActiveIndex" class="nitrozen-text">{{ item.text }}</div>
-
             </div>
         </div>
     </div>
@@ -41,12 +41,12 @@ export default {
     name: 'nitrozen-stepper',
     watch: {
         activeIndex(index){
-            if((index <= this.maxActiveIndex)){
+            if(index <= this.maxActiveIndex && index < this.elements.length){
                 this.data.activeIndex = index
             }
         },
         maxActiveIndex(maxIndex){
-            if(this.activeIndex <= maxIndex){
+            if(this.activeIndex <= maxIndex && maxIndex < this.elements.length){
                 this.data.maxActiveIndex = maxIndex
             }
         }
@@ -111,7 +111,7 @@ export default {
 <style lang="less">
 @import './../../base/base.less';
     .nitrozen-stepper{
-        width: 100%;
+        margin:0 auto;
     }
     .nitrozen-stepper-group{
         display:flex;
@@ -119,13 +119,7 @@ export default {
         flex-grow:10;
         flex-basis:100%;
     }
-    .nitrozen-stepper-group:last-child{
-        flex-basis: auto;
-        .nitrozen-text:last-child{
-            left: calc(-50% + 12px);
-            width: max-content;
-        }
-    }
+    
     .nitrozen-pointer{
         cursor:pointer;
     }
@@ -152,14 +146,14 @@ export default {
         position:relative;
     }
     .nitrozen-circle-inner{
-        height: 11px;
-        width: 11px;
+        height: 12px;
+        width: 12px;
         background-color: white;
         border-radius: 50%;
         display: inline-block;
         position: absolute;
-        left: 7px;
-        top: 7px;
+        left: 6px;
+        top: 6px;
     }
     .nitrozen-circle-outer{
         height: 24px;
@@ -173,6 +167,16 @@ export default {
         height:5px;
         position:relative;
         top: -2px;
+    }
+    .nitrozen-stepper-group:first-child{
+        .nitrozen-bar:first-child{
+            visibility: hidden;
+        }
+    }
+    .nitrozen-stepper-group:last-child{
+        .nitrozen-bar:last-child{
+            visibility: hidden;
+        }
     }
     .nitrozen-active{
         background-color: @SecondaryColor;
@@ -194,8 +198,6 @@ export default {
         font-family: @PrimaryFont;
         color: @SecondaryColor;
         font-size: 16px;
-        position:relative;
-        left: calc(-50% + 12px);
         text-align: center;
         font-weight: 500;
     }
