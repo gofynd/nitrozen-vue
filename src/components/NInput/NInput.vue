@@ -105,7 +105,7 @@ export default {
       default: false
     },
     value: {
-      type: String,
+      type: [Number, String],
       default: ""
     },
     showError: {
@@ -142,7 +142,13 @@ export default {
   },
   methods: {
     valueChange: function(event) {
-      this.$emit("input", event.target.value);
+      let value = event.target.value;
+      if (this.type === 'number')
+      {
+        value = Number(event.target.value)
+      }
+
+      this.$emit("input", value);
       if (this.search) {
         // Do this with debouncing
         this.loaderShow = true;
