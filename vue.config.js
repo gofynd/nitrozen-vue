@@ -1,6 +1,7 @@
 // const merge = require('webpack-merge');
 // const path = require('path');
 const CompressionPlugin = require('compression-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 // var config = {
@@ -95,8 +96,12 @@ var config = {
 //     configureWebpack : {
 //         plugins: [
 //             new CompressionPlugin({
-//                 test: /\.js$|\.css$|\.html$/,
+//                 test: /\.js$|\.html$/,
 //                 algorithm: 'gzip',
+//             }),
+//             new MiniCssExtractPlugin({
+//                 test: /\.css$/i,
+//                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
 //             })
 //         ]},
 //         chainWebpack: config => {
