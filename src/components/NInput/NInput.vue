@@ -43,14 +43,15 @@
       @input="valueChange"
     ></textarea>
 
-    <label class="n-input-label" v-if="label">
-      {{ label }}
-      <span class="nitrozen-tooltip-icon" v-if="showTooltip">
-        <nitrozen-tooltip :tooltipText="tooltipText"></nitrozen-tooltip>
-      </span>
-    </label>
-    <label class="n-input-label n-input-maxlength" v-if="maxlength">{{ length }}/{{ maxlength }}</label>
-
+    <div class="n-input-label-container">
+      <label class="n-input-label" v-if="label">
+        {{ label }}
+        <span class="nitrozen-tooltip-icon" v-if="showTooltip">
+          <nitrozen-tooltip :tooltipText="tooltipText"></nitrozen-tooltip>
+        </span>
+      </label>
+      <label class="n-input-label n-input-maxlength" v-if="maxlength">{{ length }}/{{ maxlength }}</label>
+    </div>
     <!-- <label class="n-input-label" v-if="hint">{{ hint }}</label> -->
 
     <!-- <div

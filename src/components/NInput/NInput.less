@@ -53,6 +53,7 @@
     font-weight: 500;
     line-height: 21px;
     display: flex;
+    flex: 1
 }
 
 .n-input-maxlength {
@@ -61,7 +62,6 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
-    top: 20px;
 }
 .n-input:focus + .n-input-label {
     color: @SecondaryColor !important;
@@ -127,4 +127,8 @@ input[type='search']::-webkit-search-cancel-button {
 .nitrozen-input-label-div{
     display: flex;
     justify-content: space-between;
+}
+
+.n-input-label-container{
+    display: flex;
 }
