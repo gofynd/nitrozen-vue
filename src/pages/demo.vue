@@ -219,7 +219,7 @@
         <nitrozen-checkbox checkboxValue="'Check 4'" @change="testFunc($event)" v-model="checkArray">Check 4</nitrozen-checkbox>        
     <span>Checked names: {{ checkArray }}</span>
 
-            <nitrozen-checkbox @change="checkValue" v-model="abcd">Checkbox</nitrozen-checkbox>
+            <nitrozen-checkbox v-model="abcd">Checkbox</nitrozen-checkbox>
 {{abcd}}
             <!-- <div id='example-3'>
     <input type="checkbox" id="jack" value="Jack" @change="testFunc($event)"  v-model="checkArray">
