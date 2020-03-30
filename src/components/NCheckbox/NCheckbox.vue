@@ -47,9 +47,8 @@ export default {
         this.$emit("input", checkboxModel);
         this.$emit("change", checkboxModel);
       } else {
-        checkboxModel = !checkboxModel;        
         this.$emit("change", event);
-        this.$emit("input", checkboxModel);
+        this.$emit("input", event.target.checked);
       }
     }
   }

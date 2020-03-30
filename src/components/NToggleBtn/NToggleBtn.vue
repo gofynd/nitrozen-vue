@@ -27,6 +27,7 @@ export default {
     methods: {
         change(event) {
             // console.log(this.value,'selectedState',this.selectedState)
+            this.$emit("input", event.target.checked);
             this.$emit('change', event);
         }
     }
