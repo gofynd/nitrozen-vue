@@ -213,14 +213,14 @@
         </div>
 
         <div class="main-div space-between">
-            <!-- <nitrozen-checkbox :id="'check1'" v-model="checkArray" @change="testFunc($event)" value="'Check 1'">Check 1</nitrozen-checkbox> 
-        <nitrozen-checkbox :id="'check2'" value="'Check 2'" @change="testFunc($event)" v-model="checkArray">Check 2</nitrozen-checkbox>        
-        <nitrozen-checkbox :id="'check3'" value="'Check 3'" @change="testFunc($event)" v-model="checkArray">Check 3</nitrozen-checkbox>        
-        <nitrozen-checkbox :id="'check4'" value="'Check 4'" @change="testFunc($event)" v-model="checkArray">Check 4</nitrozen-checkbox>        
-    <span>Checked names: {{ checkArray }}</span> -->
+            <nitrozen-checkbox v-model="checkArray" @change="testFunc($event)" checkboxValue="'Check 1'">Check 1</nitrozen-checkbox> 
+        <nitrozen-checkbox checkboxValue="'Check 2'" @change="testFunc($event)" v-model="checkArray">Check 2</nitrozen-checkbox>        
+        <nitrozen-checkbox checkboxValue="'Check 3'" @change="testFunc($event)" v-model="checkArray">Check 3</nitrozen-checkbox>        
+        <nitrozen-checkbox checkboxValue="'Check 4'" @change="testFunc($event)" v-model="checkArray">Check 4</nitrozen-checkbox>        
+    <span>Checked names: {{ checkArray }}</span>
 
-            <nitrozen-checkbox :id="'check1'" @change="checkValue" v-model="abcd">Checkbox</nitrozen-checkbox>
-
+            <nitrozen-checkbox @change="checkValue" v-model="abcd">Checkbox</nitrozen-checkbox>
+{{abcd}}
             <!-- <div id='example-3'>
     <input type="checkbox" id="jack" value="Jack" @change="testFunc($event)"  v-model="checkArray">
     <label for="jack">Jack</label>
@@ -426,7 +426,7 @@ export default {
         },
         checkValue(event) {
             console.log(event);
-            this.abcd = event.target.checked;
+            this.abcd = event;
         },
         addFruit(event) {
             var value = this.fruitName;
