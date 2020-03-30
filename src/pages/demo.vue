@@ -426,7 +426,7 @@ export default {
         },
         checkValue(event) {
             console.log(event);
-            this.abcd = event;
+            this.abcd = event.target.checked;
         },
         addFruit(event) {
             var value = this.fruitName;
