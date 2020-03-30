@@ -128,6 +128,7 @@ export default {
     selectedText: function() {
       if (this.value) {
         this.selected = this.items.find(i => i.value == this.value);
+        this.searchInput = this.selected.text
       }
       if (this.selected) {
         return this.selected.text;
@@ -139,6 +140,10 @@ export default {
   },
   mounted(){
     this.searchInputPlaceholder = `Search ${this.label}`
+    if(this.value){
+      let selected = this.items.find(i => i.value == this.value);
+      this.searchInput = selected.text;
+    }
   },
   methods: {
     clearSearchInput(){

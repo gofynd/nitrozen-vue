@@ -6,7 +6,7 @@
         <div class="main-div space-between">
             <div>Searchable Dropdown</div>
             <nitrozen-dropdown
-                label="State"
+                label="data"
                 id="searchable-dropdown-1"
                 :items="dropdownItemsFiltered"
                 v-model="selectedDropdown"
@@ -373,7 +373,16 @@ export default {
              text: 'West Bengal',
              value: 3,   
             }],
-            dropdownItemsFiltered:[],
+            dropdownItemsFiltered:[{
+             text: 'Maharashtra',
+             value: 1,   
+            },{
+             text: 'Andhra Pradesh',
+             value: 2,   
+            },{
+             text: 'West Bengal',
+             value: 3,   
+            }],
             selectedDropdown: 2,
             fruits: [{
                     name: 'Lemon'
