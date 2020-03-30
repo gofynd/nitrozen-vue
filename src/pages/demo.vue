@@ -225,10 +225,10 @@
         </div>
 
         <div class="main-div space-between">
-            <nitrozen-checkbox v-model="checkArray" @change="testFunc($event)" checkboxValue="'Check 1'">Check 1</nitrozen-checkbox> 
-        <nitrozen-checkbox checkboxValue="'Check 2'" @change="testFunc($event)" v-model="checkArray">Check 2</nitrozen-checkbox>        
-        <nitrozen-checkbox checkboxValue="'Check 3'" @change="testFunc($event)" v-model="checkArray">Check 3</nitrozen-checkbox>        
-        <nitrozen-checkbox checkboxValue="'Check 4'" @change="testFunc($event)" v-model="checkArray">Check 4</nitrozen-checkbox>        
+            <nitrozen-checkbox v-model="checkArray" @change="testFunc($event)" checkboxValue="Check 1">Check 1</nitrozen-checkbox> 
+        <nitrozen-checkbox checkboxValue="Check 2" @change="testFunc($event)" v-model="checkArray">Check 2</nitrozen-checkbox>        
+        <nitrozen-checkbox checkboxValue="Check 3" @change="testFunc($event)" v-model="checkArray">Check 3</nitrozen-checkbox>        
+        <nitrozen-checkbox checkboxValue="Check 4" @change="testFunc($event)" v-model="checkArray">Check 4</nitrozen-checkbox>        
     <span>Checked names: {{ checkArray }}</span>
 
             <nitrozen-checkbox v-model="abcd">Checkbox</nitrozen-checkbox>
@@ -361,7 +361,7 @@ export default {
             abcd: false,
             inputModel: 'Some Value',
             autoModel: '',
-            checkArray: [],
+            checkArray: ["Check 1"],
             radioModel: '1',
             dropdownItems: [{
              text: 'Maharashtra',

@@ -1615,16 +1615,14 @@ var NBadge_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/NBadge/index.js
 
 /* harmony default export */ var components_NBadge = (NBadge);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"68121e1c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=cab32c2a&
-var NCheckboxvue_type_template_id_cab32c2a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('label',{staticClass:"nitrozen-container"},[_vm._t("default"),_c('input',{attrs:{"id":_vm.id,"type":"checkbox","disabled":_vm.disabled},domProps:{"value":_vm.value},on:{"change":_vm.valueChange}}),_c('span',{staticClass:"nitrozen-checkbox",attrs:{"for":_vm.id}})],2)])}
-var NCheckboxvue_type_template_id_cab32c2a_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"68121e1c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=75af162c&
+var NCheckboxvue_type_template_id_75af162c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('label',{staticClass:"nitrozen-container"},[_vm._t("default"),_c('input',{attrs:{"id":_vm.id,"type":"checkbox","disabled":_vm.disabled},domProps:{"value":_vm.checkboxValue || _vm.value,"checked":_vm.isSelected},on:{"change":_vm.valueChange}}),_c('span',{staticClass:"nitrozen-checkbox",attrs:{"for":_vm.id}})],2)])}
+var NCheckboxvue_type_template_id_75af162c_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=cab32c2a&
+// CONCATENATED MODULE: ./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=75af162c&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=script&lang=js&
-//
-//
 //
 //
 //
@@ -1657,6 +1655,16 @@ var NCheckboxvue_type_template_id_cab32c2a_staticRenderFns = []
     }
   },
   event: "change",
+  computed: {
+    isSelected() {
+      if (Array.isArray(this.value)) {
+        return this.value.includes(this.checkboxValue);
+      }
+
+      return this.checkboxValue ? this.checkboxValue === this.value : this.value;
+    }
+
+  },
   methods: {
     valueChange: function (event) {
       let checkboxModel = this.value;
@@ -1696,8 +1704,8 @@ var NCheckboxvue_type_style_index_0_lang_less_ = __webpack_require__("351f");
 
 var NCheckbox_component = normalizeComponent(
   NCheckbox_NCheckboxvue_type_script_lang_js_,
-  NCheckboxvue_type_template_id_cab32c2a_render,
-  NCheckboxvue_type_template_id_cab32c2a_staticRenderFns,
+  NCheckboxvue_type_template_id_75af162c_render,
+  NCheckboxvue_type_template_id_75af162c_staticRenderFns,
   false,
   null,
   null,

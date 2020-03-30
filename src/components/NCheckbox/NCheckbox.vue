@@ -2,14 +2,12 @@
   <div>
     <label class="nitrozen-container">
       <slot />
-      <input :id="id" type="checkbox" @change="valueChange" :value="value" :disabled="disabled" />
-
+      <input :id="id" type="checkbox" @change="valueChange" :value="checkboxValue || value"  :checked="isSelected" :disabled="disabled" />
       <!-- <input :id="id" type="checkbox" v-model="checkboxModel" @change="valueChange" :value="checkboxValue" :disabled="disabled">         -->
       <span :for="id" class="nitrozen-checkbox"></span>
     </label>
   </div>
 </template>
-
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
 export default {
@@ -33,6 +31,14 @@ export default {
     }
   },
   event: "change",
+  computed:{
+    isSelected(){
+       if (Array.isArray(this.value)) {
+          return this.value.includes(this.checkboxValue);
+       }
+       return this.checkboxValue?this.checkboxValue===this.value:this.value;
+    }
+  },
   methods: {
     valueChange: function(event) {
       let checkboxModel = this.value;
@@ -54,10 +60,8 @@ export default {
   }
 };
 </script>
-
 <style lang="less">
 @import "./../../base/base.less";
-
 /* The nitrozen-container */
 .nitrozen-container {
   display: block;
@@ -74,7 +78,6 @@ export default {
   font-family: @PrimaryFont;
   color: @TypographyPrimaryColor;
 }
-
 /* Hide the browser's default checkbox */
 .nitrozen-container input {
   position: absolute;
@@ -83,7 +86,6 @@ export default {
   height: 0;
   width: 0;
 }
-
 /* Create a custom checkbox */
 .nitrozen-checkbox {
   position: absolute;
@@ -95,29 +97,24 @@ export default {
   border: 1px solid @TypographyPrimaryColor;
   border-radius: 3px;
 }
-
 /* On mouse-over, add a grey background color */
 .nitrozen-container:hover input ~ .nitrozen-checkbox {
   background-color: @WhiteColor;
 }
-
 /* When the checkbox is checked, add a blue background */
 .nitrozen-container input:checked ~ .nitrozen-checkbox {
   background-color: @TypographyPrimaryColor;
 }
-
 /* Create the nitrozen-checkbox/indicator (hidden when not checked) */
 .nitrozen-checkbox:after {
   content: "";
   position: absolute;
   display: none;
 }
-
 /* Show the nitrozen-checkbox when checked */
 .nitrozen-container input:checked ~ .nitrozen-checkbox:after {
   display: block;
 }
-
 /* Style the nitrozen-checkbox/indicator */
 .nitrozen-container .nitrozen-checkbox:after {
   left: 5px;
@@ -132,7 +129,6 @@ export default {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-
 input[type="checkbox"]:disabled + .nitrozen-checkbox {
   opacity: 0.5;
   pointer-events: none;
