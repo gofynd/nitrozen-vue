@@ -13,7 +13,15 @@
         }"
       >
         <div class="nitrozen-select__trigger">
-          <span>{{ selectedText }}</span>
+          <span v-if="searchable" class="nitrozen-searchable-input-container">
+            <input
+              v-model="searchInput"
+              v-on:keyup="eventEmit(searchInput, 'change')"
+            />
+          </span>
+          <span v-if="!searchable">
+            {{ selectedText }}
+          </span>
           <div class="nitrozen-dropdown-arrow">
             <nitrozen-inline icon="dropdown_arrow_down"></nitrozen-inline>
           </div>
@@ -93,11 +101,18 @@ export default {
      */
     value: {
       required: true
+    },
+    /**
+     * searchable value
+     */
+    searchable: {
+      default: false
     }
   },
   data: () => {
     return {
       selected: null,
+      searchInput: "",
       showOptions: false,
       dropUp: false,
       viewport: null
@@ -164,6 +179,9 @@ export default {
       );
       this.viewport = { width: vw, height: vh };
       this.calculateDropUpDown();
+    },
+    eventEmit(event, type) {
+      this.$emit(type, event);
     }
   },
   created() {
@@ -176,9 +194,20 @@ export default {
     document.removeEventListener("click", this.documentClick);
     window.removeEventListener("resize", this.calculateViewport);
     window.removeEventListener("scroll", this.calculateViewport);
-  }
+  },
+  
 };
 </script>
 <style lang="less">
 @import "./NDropdown.less";
+.nitrozen-searchable-input-container{
+  width:100%;
+  input{
+    width:100%;
+    border: none;
+  }
+  input:focus, textarea:focus {
+      outline: none;
+  }
+}
 </style>

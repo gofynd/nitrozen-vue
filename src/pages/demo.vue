@@ -4,6 +4,16 @@
 
     <div class="main-div">
         <div class="main-div space-between">
+                <nitrozen-dropdown
+                    label="State"
+                    :items="dropdownItems"
+                    v-model="selectedDropdown"
+                    :searchable="true"
+                    @change="dropdownInputChange"
+                >
+                </nitrozen-dropdown>
+        </div>
+        <div class="main-div space-between">
             <nitrozen-menu>
                 <nitrozen-menu-item>Item 1</nitrozen-menu-item>
                 <nitrozen-menu-item>Item 2</nitrozen-menu-item>
@@ -477,6 +487,10 @@ export default {
         },
         paginationChange(e){
             console.log(e)
+        },
+        dropdownInputChange(e){
+            console.log(e)
+            this.dropdownItems = this.dropdownItems.filter(a=>a.text.toLowerCase().indexOf(e.toLowerCase()) > -1)
         }
     }
 }
