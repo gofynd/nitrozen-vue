@@ -10,7 +10,7 @@
                 :items="dropdownItemsFiltered"
                 v-model="selectedDropdown"
                 :searchable="true"
-                @change="dropdownInputChange"
+                @searchInputChange="dropdownInputChange"
             >
             </nitrozen-dropdown>
         </div>
@@ -495,7 +495,12 @@ export default {
         },
         dropdownInputChange(e){
             console.log(e)
-            this.dropdownItemsFiltered = this.dropdownItems.filter(a=>a.text.toLowerCase().indexOf(e.toLowerCase()) > -1)
+            if(e){
+                this.dropdownItemsFiltered = this.dropdownItems.filter(a=>a.text.toLowerCase().indexOf(e.toLowerCase()) > -1)
+            }
+            else{
+                this.dropdownItemsFiltered = this.dropdownItems
+            }
         }
     }
 }

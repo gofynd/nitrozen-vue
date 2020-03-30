@@ -16,9 +16,10 @@
           <span v-if="searchable" class="nitrozen-searchable-input-container">
             <input
               v-model="searchInput"
-              v-on:keyup="eventEmit(searchInput, 'change')"
+              v-on:keyup="eventEmit(searchInput, 'searchInputChange')"
               :placeholder="searchInputPlaceholder"
             />
+            <span @click="clearSearchInput">&#10005;</span>
           </span>
           <span v-if="!searchable">
             {{ selectedText }}
@@ -40,6 +41,9 @@
             @click="selectItem(item)"
           >
             {{ item.text }}
+          </span>
+          <span v-if="searchable && items.length == 0" class="nitrozen-option">
+            No {{ label }} Found
           </span>
         </div>
       </div>
@@ -137,8 +141,16 @@ export default {
     this.searchInputPlaceholder = `Search ${this.label}`
   },
   methods: {
+    clearSearchInput(){
+      this.searchInput = ""
+      this.eventEmit(this.searchInput, 'searchInputChange')
+    },
     selectItem(item) {
       this.selected = item;
+      if(item.text){
+        this.searchInput = item.text
+        this.eventEmit(this.searchInput, 'searchInputChange')
+      }
       this.$emit("input", item.value); // v-model implementation
       this.$emit("change", item.value);
     },
@@ -208,7 +220,7 @@ export default {
 .nitrozen-searchable-input-container{
   width:100%;
   input{
-    width:100%;
+    width:calc(100% - 20px);
     border: none;
   }
   input:focus, textarea:focus {
