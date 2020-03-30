@@ -14,14 +14,9 @@
 import NitrozenUuid from './../../utils/NUuid';
 export default {
     name: 'nitrozen-checkbox',
-    data() {
-        return {
-            checkboxModel: this.value
-        }
-    },
     props: {
         value: {
-            type: [Array, Object, Boolean, String],
+            type: [Array, Boolean],
             default: false,
         },
         disabled: {
@@ -40,24 +35,19 @@ export default {
     event: 'change',
     methods: {
         valueChange: function (event) {
-            // if(this.value instanceof Array){
-            //     // console.log(this.checkboxModel)       
-            //     let index = this.checkboxModel.indexOf(this.checkboxValue)
-            //     // console.log(this.checkboxValue)
-            //     if(index == -1){
-            //         this.checkboxModel.push(this.checkboxValue)                
-            //     }
-            //     else{
-            //         this.checkboxModel.splice(index,1)
-            //     }
-            // }
-            // else{
-            //     this.checkboxModel = this.value;                
-            // }
-            // console.log(this.checkboxModel)
+            let checkboxModel = this.value
+             if(Array.isArray(this.value)){
+                checkboxModel = [...this.value];
+                 let index = checkboxModel.indexOf(this.checkboxValue)
+                 if(index == -1){
+                     checkboxModel.push(this.checkboxValue)                
+                 }
+                 else{
+                    checkboxModel.splice(index, 1)
+                 }
+             }
             
-            this.$emit('change', event);
-            // console.log(event)
+            this.$emit('input', checkboxModel);
         }
     }
 }
