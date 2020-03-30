@@ -74,6 +74,7 @@ export default {
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 12px;
+    line-height: 18px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
