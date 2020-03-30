@@ -4,14 +4,15 @@
 
     <div class="main-div">
         <div class="main-div space-between">
-                <nitrozen-dropdown
-                    label="State"
-                    :items="dropdownItems"
-                    v-model="selectedDropdown"
-                    :searchable="true"
-                    @change="dropdownInputChange"
-                >
-                </nitrozen-dropdown>
+            <div>Searchable Dropdown</div>
+            <nitrozen-dropdown
+                label="State"
+                :items="dropdownItemsFiltered"
+                v-model="selectedDropdown"
+                :searchable="true"
+                @change="dropdownInputChange"
+            >
+            </nitrozen-dropdown>
         </div>
         <div class="main-div space-between">
             <nitrozen-menu>
@@ -371,6 +372,7 @@ export default {
              text: 'West Bengal',
              value: 3,   
             }],
+            dropdownItemsFiltered:[],
             selectedDropdown: 2,
             fruits: [{
                     name: 'Lemon'
@@ -413,6 +415,9 @@ export default {
                 total: 95
             }
         }
+    },
+    mounted(){
+        this.dropdownItemsFiltered = this.dropdownItems
     },
     methods: {
         stepperNext(){
@@ -490,7 +495,7 @@ export default {
         },
         dropdownInputChange(e){
             console.log(e)
-            this.dropdownItems = this.dropdownItems.filter(a=>a.text.toLowerCase().indexOf(e.toLowerCase()) > -1)
+            this.dropdownItemsFiltered = this.dropdownItems.filter(a=>a.text.toLowerCase().indexOf(e.toLowerCase()) > -1)
         }
     }
 }

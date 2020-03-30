@@ -17,6 +17,7 @@
             <input
               v-model="searchInput"
               v-on:keyup="eventEmit(searchInput, 'change')"
+              :placeholder="searchInputPlaceholder"
             />
           </span>
           <span v-if="!searchable">
@@ -115,7 +116,8 @@ export default {
       searchInput: "",
       showOptions: false,
       dropUp: false,
-      viewport: null
+      viewport: null,
+      searchInputPlaceholder: ""
     };
   },
   computed: {
@@ -130,6 +132,9 @@ export default {
       }
       return "";
     }
+  },
+  mounted(){
+    this.searchInputPlaceholder = `Search ${this.label}`
   },
   methods: {
     selectItem(item) {
