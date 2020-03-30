@@ -7,6 +7,7 @@
             <div>Searchable Dropdown</div>
             <nitrozen-dropdown
                 label="State"
+                id="searchable-dropdown-1"
                 :items="dropdownItemsFiltered"
                 v-model="selectedDropdown"
                 :searchable="true"
@@ -494,9 +495,9 @@ export default {
             console.log(e)
         },
         dropdownInputChange(e){
-            console.log(e)
-            if(e){
-                this.dropdownItemsFiltered = this.dropdownItems.filter(a=>a.text.toLowerCase().indexOf(e.toLowerCase()) > -1)
+            if(e && e.text){
+                let text = e.text
+                this.dropdownItemsFiltered = this.dropdownItems.filter(a=>a.text.toLowerCase().indexOf(text.toLowerCase()) > -1)
             }
             else{
                 this.dropdownItemsFiltered = this.dropdownItems
