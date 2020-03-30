@@ -210,7 +210,6 @@ export default {
       this.calculateDropUpDown();
     },
     eventEmit(event, type) {
-      console.log("EVENT",event)
       this.$emit(type, event);
     }
   },
