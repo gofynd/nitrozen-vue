@@ -16,7 +16,7 @@
           <span v-if="searchable" class="nitrozen-searchable-input-container">
             <input
               v-model="searchInput"
-              v-on:keyup="eventEmit(searchInput, 'searchInputChange')"
+              v-on:keyup="searchInputChange()"
               :placeholder="searchInputPlaceholder"
             />
             <span @click="clearSearchInput">&#10005;</span>
@@ -143,16 +143,23 @@ export default {
   methods: {
     clearSearchInput(){
       this.searchInput = ""
-      this.eventEmit(this.searchInput, 'searchInputChange')
+      this.searchInputChange()
     },
     selectItem(item) {
       this.selected = item;
       if(item.text){
         this.searchInput = item.text
-        this.eventEmit(this.searchInput, 'searchInputChange')
+        this.searchInputChange()
       }
       this.$emit("input", item.value); // v-model implementation
       this.$emit("change", item.value);
+    },
+    searchInputChange(){
+      let obj = {
+          text : this.searchInput,
+          id: this.id
+      }
+      this.eventEmit(obj, 'searchInputChange')
     },
     toggle() {
       if (this.disabled) return;
@@ -198,6 +205,7 @@ export default {
       this.calculateDropUpDown();
     },
     eventEmit(event, type) {
+      console.log("EVENT",event)
       this.$emit(type, event);
     }
   },
