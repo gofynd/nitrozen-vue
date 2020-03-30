@@ -1615,12 +1615,12 @@ var NBadge_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/NBadge/index.js
 
 /* harmony default export */ var components_NBadge = (NBadge);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"68121e1c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=1a1727f2&
-var NCheckboxvue_type_template_id_1a1727f2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('label',{staticClass:"nitrozen-container"},[_vm._t("default"),_c('input',{attrs:{"id":_vm.id,"type":"checkbox","disabled":_vm.disabled},domProps:{"checked":_vm.value,"value":_vm.value},on:{"change":_vm.valueChange}}),_c('span',{staticClass:"nitrozen-checkbox",attrs:{"for":_vm.id}})],2)])}
-var NCheckboxvue_type_template_id_1a1727f2_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"68121e1c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=75af162c&
+var NCheckboxvue_type_template_id_75af162c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('label',{staticClass:"nitrozen-container"},[_vm._t("default"),_c('input',{attrs:{"id":_vm.id,"type":"checkbox","disabled":_vm.disabled},domProps:{"value":_vm.checkboxValue || _vm.value,"checked":_vm.isSelected},on:{"change":_vm.valueChange}}),_c('span',{staticClass:"nitrozen-checkbox",attrs:{"for":_vm.id}})],2)])}
+var NCheckboxvue_type_template_id_75af162c_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=1a1727f2&
+// CONCATENATED MODULE: ./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=75af162c&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=script&lang=js&
 //
@@ -1633,21 +1633,12 @@ var NCheckboxvue_type_template_id_1a1727f2_staticRenderFns = []
 //
 //
 //
-//
-//
 
 /* harmony default export */ var NCheckboxvue_type_script_lang_js_ = ({
-  name: 'nitrozen-checkbox',
-
-  data() {
-    return {
-      checkboxModel: this.value
-    };
-  },
-
+  name: "nitrozen-checkbox",
   props: {
     value: {
-      type: [Array, Object, Boolean, String],
+      type: [Array, Boolean],
       default: false
     },
     disabled: {
@@ -1660,28 +1651,40 @@ var NCheckboxvue_type_template_id_1a1727f2_staticRenderFns = []
     },
     id: {
       type: [Number, String],
-      default: () => 'nitrozen-checkbox' + NUuid()
+      default: () => "nitrozen-checkbox" + NUuid()
     }
   },
-  event: 'change',
+  event: "change",
+  computed: {
+    isSelected() {
+      if (Array.isArray(this.value)) {
+        return this.value.includes(this.checkboxValue);
+      }
+
+      return this.checkboxValue ? this.checkboxValue === this.value : this.value;
+    }
+
+  },
   methods: {
     valueChange: function (event) {
-      // if(this.value instanceof Array){
-      //     // console.log(this.checkboxModel)       
-      //     let index = this.checkboxModel.indexOf(this.checkboxValue)
-      //     // console.log(this.checkboxValue)
-      //     if(index == -1){
-      //         this.checkboxModel.push(this.checkboxValue)                
-      //     }
-      //     else{
-      //         this.checkboxModel.splice(index,1)
-      //     }
-      // }
-      // else{
-      //     this.checkboxModel = this.value;                
-      // }
-      // console.log(this.checkboxModel)
-      this.$emit('change', event); // console.log(event)
+      let checkboxModel = this.value;
+
+      if (Array.isArray(this.value)) {
+        checkboxModel = [...this.value];
+        let index = checkboxModel.indexOf(this.checkboxValue);
+
+        if (index == -1) {
+          checkboxModel.push(this.checkboxValue);
+        } else {
+          checkboxModel.splice(index, 1);
+        }
+
+        this.$emit("input", checkboxModel);
+        this.$emit("change", checkboxModel);
+      } else {
+        this.$emit("change", event);
+        this.$emit("input", event.target.checked);
+      }
     }
   }
 });
@@ -1701,8 +1704,8 @@ var NCheckboxvue_type_style_index_0_lang_less_ = __webpack_require__("351f");
 
 var NCheckbox_component = normalizeComponent(
   NCheckbox_NCheckboxvue_type_script_lang_js_,
-  NCheckboxvue_type_template_id_1a1727f2_render,
-  NCheckboxvue_type_template_id_1a1727f2_staticRenderFns,
+  NCheckboxvue_type_template_id_75af162c_render,
+  NCheckboxvue_type_template_id_75af162c_staticRenderFns,
   false,
   null,
   null,
@@ -1851,17 +1854,30 @@ var NChips_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/NChips/index.js
 
 /* harmony default export */ var components_NChips = (NChips);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"68121e1c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=template&id=c85fae18&
-var NDropdownvue_type_template_id_c85fae18_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-dropdown-container"},[(_vm.label)?_c('label',{staticClass:"nitrozen-dropdown-label"},[_vm._v(" "+_vm._s(_vm.label)+" "+_vm._s(_vm.required ? " *" : ""))]):_vm._e(),_c('div',{staticClass:"nitrozen-select-wrapper",on:{"click":_vm.toggle}},[_c('div',{ref:"n_dropdown",staticClass:"nitrozen-select",class:{
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"68121e1c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=template&id=a203ae3e&
+var NDropdownvue_type_template_id_a203ae3e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-dropdown-container"},[(_vm.label)?_c('label',{staticClass:"nitrozen-dropdown-label"},[_vm._v(" "+_vm._s(_vm.label)+" "+_vm._s(_vm.required ? " *" : ""))]):_vm._e(),_c('div',{staticClass:"nitrozen-select-wrapper",on:{"click":_vm.toggle}},[_c('div',{ref:"n_dropdown",staticClass:"nitrozen-select",class:{
         disabled: _vm.disabled,
         'nitrozen-dropdown-open': _vm.showOptions
-      }},[_c('div',{staticClass:"nitrozen-select__trigger"},[_c('span',[_vm._v(_vm._s(_vm.selectedText))]),_c('div',{staticClass:"nitrozen-dropdown-arrow"},[_c('nitrozen-inline',{attrs:{"icon":"dropdown_arrow_down"}})],1)]),_c('div',{staticClass:"nitrozen-options",class:{ 'nitrozen-dropup': _vm.dropUp }},_vm._l((_vm.items),function(item,index){return _c('span',{key:index,staticClass:"nitrozen-option ",class:{ selected: item == _vm.selected },attrs:{"data-value":item.value},on:{"click":function($event){return _vm.selectItem(item)}}},[_vm._v(" "+_vm._s(item.text)+" ")])}),0)])])])}
-var NDropdownvue_type_template_id_c85fae18_staticRenderFns = []
+      }},[_c('div',{staticClass:"nitrozen-select__trigger"},[(_vm.searchable)?_c('span',{staticClass:"nitrozen-searchable-input-container"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.searchInput),expression:"searchInput"}],attrs:{"placeholder":_vm.searchInputPlaceholder},domProps:{"value":(_vm.searchInput)},on:{"keyup":function($event){return _vm.searchInputChange()},"input":function($event){if($event.target.composing){ return; }_vm.searchInput=$event.target.value}}}),_c('span',{on:{"click":_vm.clearSearchInput}},[_vm._v("✕")])]):_vm._e(),(!_vm.searchable)?_c('span',[_vm._v(" "+_vm._s(_vm.selectedText)+" ")]):_vm._e(),_c('div',{staticClass:"nitrozen-dropdown-arrow"},[_c('nitrozen-inline',{attrs:{"icon":"dropdown_arrow_down"}})],1)]),_c('div',{staticClass:"nitrozen-options",class:{ 'nitrozen-dropup': _vm.dropUp }},[_vm._l((_vm.items),function(item,index){return _c('span',{key:index,staticClass:"nitrozen-option ",class:{ selected: item == _vm.selected },attrs:{"data-value":item.value},on:{"click":function($event){return _vm.selectItem(item)}}},[_vm._v(" "+_vm._s(item.text)+" ")])}),(_vm.searchable && _vm.items.length == 0)?_c('span',{staticClass:"nitrozen-option"},[_vm._v(" No "+_vm._s(_vm.label)+" Found ")]):_vm._e()],2)])])])}
+var NDropdownvue_type_template_id_a203ae3e_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=template&id=c85fae18&
+// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=template&id=a203ae3e&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1961,14 +1977,23 @@ var NDropdownvue_type_template_id_c85fae18_staticRenderFns = []
      */
     value: {
       required: true
+    },
+
+    /**
+     * searchable value
+     */
+    searchable: {
+      default: false
     }
   },
   data: () => {
     return {
       selected: null,
+      searchInput: "",
       showOptions: false,
       dropUp: false,
-      viewport: null
+      viewport: null,
+      searchInputPlaceholder: ""
     };
   },
   computed: {
@@ -1986,12 +2011,36 @@ var NDropdownvue_type_template_id_c85fae18_staticRenderFns = []
       return "";
     }
   },
+
+  mounted() {
+    this.searchInputPlaceholder = `Search ${this.label}`;
+  },
+
   methods: {
+    clearSearchInput() {
+      this.searchInput = "";
+      this.searchInputChange();
+    },
+
     selectItem(item) {
       this.selected = item;
+
+      if (item.text) {
+        this.searchInput = item.text;
+        this.searchInputChange();
+      }
+
       this.$emit("input", item.value); // v-model implementation
 
       this.$emit("change", item.value);
+    },
+
+    searchInputChange() {
+      let obj = {
+        text: this.searchInput,
+        id: this.id
+      };
+      this.eventEmit(obj, 'searchInputChange');
     },
 
     toggle() {
@@ -2038,6 +2087,11 @@ var NDropdownvue_type_template_id_c85fae18_staticRenderFns = []
         height: vh
       };
       this.calculateDropUpDown();
+    },
+
+    eventEmit(event, type) {
+      console.log("EVENT", event);
+      this.$emit(type, event);
     }
 
   },
@@ -2072,8 +2126,8 @@ var NDropdownvue_type_style_index_0_lang_less_ = __webpack_require__("b67f");
 
 var NDropdown_component = normalizeComponent(
   NDropdown_NDropdownvue_type_script_lang_js_,
-  NDropdownvue_type_template_id_c85fae18_render,
-  NDropdownvue_type_template_id_c85fae18_staticRenderFns,
+  NDropdownvue_type_template_id_a203ae3e_render,
+  NDropdownvue_type_template_id_a203ae3e_staticRenderFns,
   false,
   null,
   null,
@@ -2927,12 +2981,12 @@ var NStepper_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/NStepper/index.js
 
 /* harmony default export */ var components_NStepper = (NStepper);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"68121e1c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=template&id=2aaa734e&
-var NToggleBtnvue_type_template_id_2aaa734e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-toggle-container"},[_c('label',{staticClass:"nitrozen-switch"},[_c('input',{attrs:{"type":"checkbox"},domProps:{"checked":_vm.value,"value":_vm.value},on:{"change":_vm.change}}),_c('span',{staticClass:"nitrozen-slider nitrozen-round"})])])}
-var NToggleBtnvue_type_template_id_2aaa734e_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"68121e1c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=template&id=4a462506&
+var NToggleBtnvue_type_template_id_4a462506_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-toggle-container"},[_c('label',{staticClass:"nitrozen-switch"},[_c('input',{attrs:{"type":"checkbox"},domProps:{"checked":_vm.value,"value":_vm.value},on:{"change":_vm.change}}),_c('span',{staticClass:"nitrozen-slider nitrozen-round"})])])}
+var NToggleBtnvue_type_template_id_4a462506_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=template&id=2aaa734e&
+// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=template&id=4a462506&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=script&lang=js&
 //
@@ -2965,6 +3019,7 @@ var NToggleBtnvue_type_template_id_2aaa734e_staticRenderFns = []
   methods: {
     change(event) {
       // console.log(this.value,'selectedState',this.selectedState)
+      this.$emit("input", event.target.checked);
       this.$emit('change', event);
     }
 
@@ -2986,8 +3041,8 @@ var NToggleBtnvue_type_style_index_0_lang_less_ = __webpack_require__("c2a2");
 
 var NToggleBtn_component = normalizeComponent(
   NToggleBtn_NToggleBtnvue_type_script_lang_js_,
-  NToggleBtnvue_type_template_id_2aaa734e_render,
-  NToggleBtnvue_type_template_id_2aaa734e_staticRenderFns,
+  NToggleBtnvue_type_template_id_4a462506_render,
+  NToggleBtnvue_type_template_id_4a462506_staticRenderFns,
   false,
   null,
   null,
