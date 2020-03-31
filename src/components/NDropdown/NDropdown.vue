@@ -232,6 +232,7 @@ export default {
 .nitrozen-searchable-input-container{
   width:100%;
   input{
+    font-size: 14px;
     width:calc(100% - 20px);
     border: none;
   }
