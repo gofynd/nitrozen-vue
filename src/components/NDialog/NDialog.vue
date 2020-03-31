@@ -17,7 +17,7 @@
             <slot name="header">
               {{ title }}
               <nitrozen-inline
-                v-if="showcloseButton"
+                v-if="showCloseButton"
                 title="close"
                 @click="close('close')"
                 icon="cross"
@@ -88,7 +88,7 @@ export default {
       negativeButtonLabel: false,
       neutralButtonLabel: "Ok",
       positiveButtonLabel: false,
-      showcloseButton: false
+      showCloseButton: false
     };
   },
   methods: {
@@ -110,8 +110,8 @@ export default {
       if (config.dismissible != undefined) {
         this.dismissible = config.dismissible;
       }
-      if (config.showcloseButton != undefined) {
-        this.showcloseButton = config.showcloseButton;
+      if (config.showCloseButton != undefined) {
+        this.showCloseButton = config.showCloseButton;
       }
       if (config.data != undefined) {
         this.data = config.data;

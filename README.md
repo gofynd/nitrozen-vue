@@ -80,7 +80,7 @@ DialogConfig:{
       negativeButtonLabel: false,
       neutralButtonLabel: "Ok",
       positiveButtonLabel: false
-      showcloseButton: false,
+      showCloseButton: false,
 }
 ​
 ```
