@@ -19,7 +19,7 @@
               v-on:keyup="searchInputChange()"
               :placeholder="searchInputPlaceholder"
             />
-            <span @click="clearSearchInput">&#10005;</span>
+            <span v-if="searchInput" @click="clearSearchInput">&#10005;</span>
           </span>
           <span v-if="!searchable">
             {{ selectedText }}
