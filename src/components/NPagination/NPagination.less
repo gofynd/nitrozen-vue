@@ -4,36 +4,49 @@
     font-family: @PrimaryFont;
     width: 100%;
     color: @TypographyPrimaryColor;
+
     .nitrozen-pagination {
         display: flex;
         font-size: 14px;
+
         .nitrozen-pagination__left {
             flex: 1;
             display: flex;
             align-items: center;
         }
+
         .nitrozen-pagination__right {
             display: flex;
             flex: 1;
             justify-content: flex-end;
             align-items: center;
+
             .nitrozen-pagination__select {
                 display: flex;
                 align-items: center;
+
                 .nitrozen-pagination-page-size {
                     width: 72px;
                     margin: 0 12px;
                 }
             }
+
             .nitrozen-pagination__prev,
             .nitrozen-pagination__next {
                 width: 24px;
                 height: 24px;
                 margin: 0 8px;
+
                 .nitrozen-inline-svg {
                     width: 24px;
                     height: 24px;
                 }
+            }
+
+            .pagination-diabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+                pointer-events: none;
             }
         }
     }

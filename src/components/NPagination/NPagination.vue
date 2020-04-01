@@ -22,7 +22,7 @@
           class="nitrozen-pagination__prev"
           title="Previous"
           @click="previous"
-          :disabled="value.current == 1"
+          :class="{'pagination-diabled' : value.current == 1}"
         >
           <nitrozen-inline icon="arrow-left-black"></nitrozen-inline>
         </nitrozen-button>
@@ -30,7 +30,7 @@
           class="nitrozen-pagination__next"
           title="Next"
           @click="next"
-          :disabled="value.current >= pages"
+          :class="{'pagination-diabled' : value.current >= pages}"
         >
           <nitrozen-inline icon="arrow-right-black"></nitrozen-inline>
         </nitrozen-button>
