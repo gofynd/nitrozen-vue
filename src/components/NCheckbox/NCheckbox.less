@@ -1,10 +1,9 @@
 @import "./../../base/base.less";
-/* The nitrozen-container */
-.nitrozen-container {
+/* The nitrozen-checkbox-container */
+.nitrozen-checkbox-container {
   display: block;
   position: relative;
   padding-left: 30px;
-  margin-bottom: 12px;
   cursor: pointer;
   font-size: 12px;
   line-height: 18px;
@@ -16,7 +15,7 @@
   color: @TypographyPrimaryColor;
 }
 /* Hide the browser's default checkbox */
-.nitrozen-container input {
+.nitrozen-checkbox-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -35,11 +34,11 @@
   border-radius: 3px;
 }
 /* On mouse-over, add a grey background color */
-.nitrozen-container:hover input ~ .nitrozen-checkbox {
+.nitrozen-checkbox-container:hover input ~ .nitrozen-checkbox {
   background-color: @WhiteColor;
 }
 /* When the checkbox is checked, add a blue background */
-.nitrozen-container input:checked ~ .nitrozen-checkbox {
+.nitrozen-checkbox-container input:checked ~ .nitrozen-checkbox {
   background-color: @SecondaryColor;
   border: 1px solid @SecondaryColor;
 }
@@ -50,11 +49,11 @@
   display: none;
 }
 /* Show the nitrozen-checkbox when checked */
-.nitrozen-container input:checked ~ .nitrozen-checkbox:after {
+.nitrozen-checkbox-container input:checked ~ .nitrozen-checkbox:after {
   display: block;
 }
 /* Style the nitrozen-checkbox/indicator */
-.nitrozen-container .nitrozen-checkbox:after {
+.nitrozen-checkbox-container .nitrozen-checkbox:after {
   left: 5px;
   top: 0px;
   width: 4px;

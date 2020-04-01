@@ -1,9 +1,15 @@
 <template>
   <div>
-    <label class="nitrozen-container">
+    <label class="nitrozen-checkbox-container">
       <slot />
-      <input :id="id" type="checkbox" @change="valueChange" :value="checkboxValue || value"  :checked="isSelected" :disabled="disabled" />
-      <!-- <input :id="id" type="checkbox" v-model="checkboxModel" @change="valueChange" :value="checkboxValue" :disabled="disabled">         -->
+      <input
+        :id="id"
+        type="checkbox"
+        @change="toggle"
+        :value="checkboxValue || value"
+        :checked="isSelected"
+        :disabled="disabled"
+      />
       <span :for="id" class="nitrozen-checkbox"></span>
     </label>
   </div>
@@ -31,16 +37,18 @@ export default {
     }
   },
   event: "change",
-  computed:{
-    isSelected(){
-       if (Array.isArray(this.value)) {
-          return this.value.includes(this.checkboxValue);
-       }
-       return this.checkboxValue?this.checkboxValue===this.value:this.value;
+  computed: {
+    isSelected() {
+      if (Array.isArray(this.value)) {
+        return this.value.includes(this.checkboxValue);
+      }
+      return this.checkboxValue
+        ? this.checkboxValue === this.value
+        : this.value;
     }
   },
   methods: {
-    valueChange: function(event) {
+    toggle: function(event) {
       let checkboxModel = this.value;
       if (Array.isArray(this.value)) {
         checkboxModel = [...this.value];
@@ -53,13 +61,13 @@ export default {
         this.$emit("input", checkboxModel);
         this.$emit("change", checkboxModel);
       } else {
-        this.$emit("change", event);
-        this.$emit("input", event.target.checked);
+        this.$emit("change", event); // TODO: need to look into this, why we need?
+        this.$emit("input", event.target.value);
       }
     }
   }
 };
 </script>
 <style lang="less">
-@import './NCheckbox.less';
+@import "./NCheckbox.less";
 </style>

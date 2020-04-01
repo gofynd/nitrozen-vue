@@ -1,6 +1,8 @@
 <template>
   <div class="nitrozen-dropdown-container">
-    <label v-if="label" class="nitrozen-dropdown-label">{{ label }} {{ required ? " *" : "" }}</label>
+    <label v-if="label" class="nitrozen-dropdown-label">
+      {{ label }} {{ required ? " *" : "" }}
+    </label>
     <div class="nitrozen-select-wrapper" @click="toggle">
       <div
         class="nitrozen-select"
@@ -24,48 +26,36 @@
             <nitrozen-inline icon="dropdown_arrow_down"></nitrozen-inline>
           </div>
         </div>
-        <div class="nitrozen-options" ref="nitrozen-select-option" v-on:scroll.passive="handleScroll" v-bind:class="{ 'nitrozen-dropup': dropUp }">
+        <div
+          class="nitrozen-options"
+          ref="nitrozen-select-option"
+          v-on:scroll.passive="handleScroll"
+          v-bind:class="{ 'nitrozen-dropup': dropUp }"
+        >
           <span
             v-for="(item, index) in items"
             v-bind:key="index"
             :data-value="item.value"
             class="nitrozen-option ripple"
             v-bind:class="{ selected: item == selected }"
-            @click="selectItem(item)"
+            @click="selectItem(index, item)"
           >
             <template v-if="multiple">
               <nitrozen-checkbox
                 :checkboxValue="item.value"
                 @change="setCheckedItem"
-                v-model="selectedItem"
-              >{{ item.text }}</nitrozen-checkbox>
+                v-model="selectedItems"
+                :ref="`multicheckbox-${index}`"
+              >
+                {{ item.text }}
+              </nitrozen-checkbox>
             </template>
-            <template v-else>{{ item.text }}</template>
+            <template v-else> {{ item.text }} </template>
           </span>
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">No {{ label }} Found</span>
+          <span v-if="searchable && items.length == 0" class="nitrozen-option">
+            No {{ label }} Found
+          </span>
         </div>
-
-         <!-- <div class="nitrozen-options" ref="nitrozen-select-option" v-on:scroll.passive="handleScroll" v-bind:class="{ 'nitrozen-dropup': dropUp }">
-          <span v-for="(item, index) in items"
-            v-bind:key="index"
-            :data-value="item.value"
-            >
-            <span v-bind:class="{ selected: item == selected }" v-if="!multiple" class="nitrozen-option ripple" @click="selectItem(item)">
-              {{item.text}}
-            </span>
-            <span v-if="multiple">
-                          <nitrozen-checkbox
-                :checkboxValue="item.value"
-                @change="setCheckedItem"
-                v-model="selectedItem"
-              >{{ item.text }}</nitrozen-checkbox>
-            </span>
-
-          </span>
-         
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">No {{ label }} Found</span>
-        </div> -->
-
       </div>
     </div>
   </div>
@@ -118,17 +108,17 @@ export default {
       type: String
     },
     /**
+     * multiselect value
+     */
+    multiple: {
+      default: false
+    },
+    /**
      * dropdown selection required
      */
     required: {
       type: Boolean,
       default: false
-    },
-    /**
-     * selected value
-     */
-    value: {
-      required: true
     },
     /**
      * searchable value
@@ -137,17 +127,16 @@ export default {
       default: false
     },
     /**
-     * multiselect value
+     * selected value
      */
-    multiple: {
-      default: false
+    value: {
+      required: true
     }
   },
   data: () => {
     return {
       selected: null,
-      // selectedArray = [],
-      selectedItem: [],
+      selectedItems: [],
       searchInput: "",
       showOptions: false,
       dropUp: false,
@@ -175,11 +164,11 @@ export default {
         let selected = {};
         if (this.value) {
           // this.selected = [...this.value];
-          this.selectedItem = [...this.value];
+          this.selectedItems = [...this.value];
           this.searchInput = "";
         }
-        if (this.selectedItem.length) {
-          this.selectedItem.forEach(ele => {
+        if (this.selectedItems.length) {
+          this.selectedItems.forEach(ele => {
             if (!selected[ele]) {
               selected[ele] = true;
             }
@@ -189,7 +178,7 @@ export default {
               }
             });
           });
-          tmp = [...new Set(tmp)]; 
+          tmp = [...new Set(tmp)];
           return tmp.toString();
         } else if (this.label) {
           return `Choose ${this.label}`;
@@ -206,9 +195,8 @@ export default {
         this.searchInput = selected.text;
       }
     } else {
-      // this.selected = [];
       if (this.value) {
-        this.selectedItem = [...this.value];
+        this.selectedItems = [...this.value];
         this.searchInput = "";
       }
     }
@@ -218,7 +206,7 @@ export default {
       this.searchInput = "";
       this.searchInputChange();
     },
-    selectItem(item) {
+    selectItem(index, item) {
       if (!this.multiple) {
         this.selected = item;
         if (item.text) {
@@ -228,22 +216,14 @@ export default {
         this.$emit("input", item.value); // v-model implementation
         this.$emit("change", item.value);
       } else {
-        // let index = this.selectedItem.findIndex(ele => {
-        //   return ele.value == item.value
-        // })
-        // if(index == -1){
-        //   this.selectedItem.push(item.value)
-        // }
-        // else{
-        //   this.selectedItem.splice(index, 1)
-        // }
-        // this.setCheckedItem();
+        const multicheckbox = this.$refs[`multicheckbox-${index}`][0];
+        if (multicheckbox) multicheckbox.toggle();
         event.stopPropagation();
       }
     },
     setCheckedItem() {
-      this.$emit("input", this.selectedItem); // v-model implementation
-      this.$emit("change", this.selectedItem);
+      this.$emit("input", this.selectedItems); // v-model implementation
+      this.$emit("change", this.selectedItems);
     },
     searchInputChange() {
       let obj = {
@@ -298,21 +278,9 @@ export default {
     eventEmit(event, type) {
       this.$emit(type, event);
     },
-    handleScroll(event){
-      // let elem = document.getElementById('nitrozen-select-option');
-      let elem = this.$refs['nitrozen-select-option'];
-      // console.log(elem.scrollTop,elem.offsetHeight,elem.scrollHeight);
-      this.$emit('scroll',elem)
-      // let bottomOfWindow = elem.scrollTop + elem.innerHeight >= elem.scrollHeight;
-      // if(bottomOfWindow){
-      //   console.log('bottomOfWindow');
-        
-      // }
-            // if (
-            //     elem.offsetHeight + elem.scrollTop === elem.scrollHeight &&
-            //     this.currentIndex < this.filters.data.length
-            // )
-            //     this.currentIndex = this.currentIndex + 10;
+    handleScroll(event) {
+      let elem = this.$refs["nitrozen-select-option"];
+      this.$emit("scroll", elem);
     }
   },
   created() {

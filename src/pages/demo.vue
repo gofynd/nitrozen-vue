@@ -324,7 +324,7 @@
         </div>
 
         <div class="main-div space-between">
-<nitrozen-dropdown label="State" :items="dropdownItems" :multiple="true" @change="changeEvent" v-model="multiSelect" >
+                <nitrozen-dropdown label="State" :items="dropdownItems" :multiple="true" @change="changeEvent" v-model="multiSelect" >
                 </nitrozen-dropdown>
         </div>
 
