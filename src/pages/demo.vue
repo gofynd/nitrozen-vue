@@ -324,6 +324,11 @@
         </div>
 
         <div class="main-div space-between">
+<nitrozen-dropdown label="State" :items="dropdownItems" :multiple="true" @change="changeEvent" v-model="multiSelect" >
+                </nitrozen-dropdown>
+        </div>
+
+        <div class="main-div space-between">
             <nitrozen-pagination name="Pages" v-model="paginationConfig" @change="paginationChange" :pageSizeOptions="[5,10,20,50]">
                             </nitrozen-pagination>
         </div>
@@ -357,6 +362,7 @@ export default {
     name: 'App',
     data() {
         return {
+            multiSelect: [1],
             numberOfClick: 0,
             abcd: false,
             inputModel: 'Some Value',
@@ -474,7 +480,7 @@ export default {
             }
         },
         changeEvent: function(event){
-            console.log(event);
+            console.log(event,'event');
         },
         openDialog(type){
             switch(type){

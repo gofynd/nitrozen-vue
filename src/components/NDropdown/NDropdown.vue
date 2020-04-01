@@ -1,8 +1,6 @@
 <template>
   <div class="nitrozen-dropdown-container">
-    <label v-if="label" class="nitrozen-dropdown-label">
-      {{ label }} {{ required ? " *" : "" }}</label
-    >
+    <label v-if="label" class="nitrozen-dropdown-label">{{ label }} {{ required ? " *" : "" }}</label>
     <div class="nitrozen-select-wrapper" @click="toggle">
       <div
         class="nitrozen-select"
@@ -21,31 +19,53 @@
             />
             <span v-if="searchInput" @click="clearSearchInput">&#10005;</span>
           </span>
-          <span v-if="!searchable">
-            {{ selectedText }}
-          </span>
+          <span v-if="!searchable">{{ selectedText }}</span>
           <div class="nitrozen-dropdown-arrow">
             <nitrozen-inline icon="dropdown_arrow_down"></nitrozen-inline>
           </div>
         </div>
-        <div
-          class="nitrozen-options"
-          v-bind:class="{ 'nitrozen-dropup': dropUp }"
-        >
+        <div class="nitrozen-options" ref="nitrozen-select-option" v-on:scroll.passive="handleScroll" v-bind:class="{ 'nitrozen-dropup': dropUp }">
           <span
             v-for="(item, index) in items"
             v-bind:key="index"
             :data-value="item.value"
-            class="nitrozen-option "
+            class="nitrozen-option ripple"
             v-bind:class="{ selected: item == selected }"
             @click="selectItem(item)"
           >
-            {{ item.text }}
+            <template v-if="multiple">
+              <nitrozen-checkbox
+                :checkboxValue="item.value"
+                @change="setCheckedItem"
+                v-model="selectedItem"
+              >{{ item.text }}</nitrozen-checkbox>
+            </template>
+            <template v-else>{{ item.text }}</template>
           </span>
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">
-            No {{ label }} Found
-          </span>
+          <span v-if="searchable && items.length == 0" class="nitrozen-option">No {{ label }} Found</span>
         </div>
+
+         <!-- <div class="nitrozen-options" ref="nitrozen-select-option" v-on:scroll.passive="handleScroll" v-bind:class="{ 'nitrozen-dropup': dropUp }">
+          <span v-for="(item, index) in items"
+            v-bind:key="index"
+            :data-value="item.value"
+            >
+            <span v-bind:class="{ selected: item == selected }" v-if="!multiple" class="nitrozen-option ripple" @click="selectItem(item)">
+              {{item.text}}
+            </span>
+            <span v-if="multiple">
+                          <nitrozen-checkbox
+                :checkboxValue="item.value"
+                @change="setCheckedItem"
+                v-model="selectedItem"
+              >{{ item.text }}</nitrozen-checkbox>
+            </span>
+
+          </span>
+         
+          <span v-if="searchable && items.length == 0" class="nitrozen-option">No {{ label }} Found</span>
+        </div> -->
+
       </div>
     </div>
   </div>
@@ -53,10 +73,13 @@
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
 import NitrozenInline from "./../NInline";
+import NitrozenCheckbox from "./../NCheckbox";
+
 export default {
   name: "nitrozen-dropdown",
   components: {
-    "nitrozen-inline": NitrozenInline
+    "nitrozen-inline": NitrozenInline,
+    "nitrozen-checkbox": NitrozenCheckbox
   },
   props: {
     /**
@@ -112,11 +135,19 @@ export default {
      */
     searchable: {
       default: false
+    },
+    /**
+     * multiselect value
+     */
+    multiple: {
+      default: false
     }
   },
   data: () => {
     return {
       selected: null,
+      // selectedArray = [],
+      selectedItem: [],
       searchInput: "",
       showOptions: false,
       dropUp: false,
@@ -126,45 +157,100 @@ export default {
   },
   computed: {
     selectedText: function() {
-      if (this.value) {
-        this.selected = this.items.find(i => i.value == this.value);
-        this.searchInput = this.selected.text
+      if (!this.multiple) {
+        this.selected = {};
+        if (this.value) {
+          this.selected = this.items.find(i => i.value == this.value);
+          this.searchInput = this.selected.text;
+        }
+        if (this.selected) {
+          return this.selected.text;
+        } else if (this.label) {
+          return `Choose ${this.label}`;
+        }
+        return "";
+      } else {
+        // this.selected = [];
+        let tmp = [];
+        let selected = {};
+        if (this.value) {
+          // this.selected = [...this.value];
+          this.selectedItem = [...this.value];
+          this.searchInput = "";
+        }
+        if (this.selectedItem.length) {
+          this.selectedItem.forEach(ele => {
+            if (!selected[ele]) {
+              selected[ele] = true;
+            }
+            this.items.forEach(ele => {
+              if (selected[ele.value]) {
+                tmp.push(ele.text);
+              }
+            });
+          });
+          tmp = [...new Set(tmp)]; 
+          return tmp.toString();
+        } else if (this.label) {
+          return `Choose ${this.label}`;
+        }
+        return "";
       }
-      if (this.selected) {
-        return this.selected.text;
-      } else if (this.label) {
-        return `Choose ${this.label}`;
-      }
-      return "";
     }
   },
-  mounted(){
-    this.searchInputPlaceholder = `Search ${this.label}`
-    if(this.value){
-      let selected = this.items.find(i => i.value == this.value);
-      this.searchInput = selected.text;
+  mounted() {
+    this.searchInputPlaceholder = `Search ${this.label}`;
+    if (!this.multiple) {
+      if (this.value) {
+        let selected = this.items.find(i => i.value == this.value);
+        this.searchInput = selected.text;
+      }
+    } else {
+      // this.selected = [];
+      if (this.value) {
+        this.selectedItem = [...this.value];
+        this.searchInput = "";
+      }
     }
   },
   methods: {
-    clearSearchInput(){
-      this.searchInput = ""
-      this.searchInputChange()
+    clearSearchInput() {
+      this.searchInput = "";
+      this.searchInputChange();
     },
     selectItem(item) {
-      this.selected = item;
-      if(item.text){
-        this.searchInput = item.text
-        this.searchInputChange()
+      if (!this.multiple) {
+        this.selected = item;
+        if (item.text) {
+          this.searchInput = item.text;
+          this.searchInputChange();
+        }
+        this.$emit("input", item.value); // v-model implementation
+        this.$emit("change", item.value);
+      } else {
+        // let index = this.selectedItem.findIndex(ele => {
+        //   return ele.value == item.value
+        // })
+        // if(index == -1){
+        //   this.selectedItem.push(item.value)
+        // }
+        // else{
+        //   this.selectedItem.splice(index, 1)
+        // }
+        // this.setCheckedItem();
+        event.stopPropagation();
       }
-      this.$emit("input", item.value); // v-model implementation
-      this.$emit("change", item.value);
     },
-    searchInputChange(){
+    setCheckedItem() {
+      this.$emit("input", this.selectedItem); // v-model implementation
+      this.$emit("change", this.selectedItem);
+    },
+    searchInputChange() {
       let obj = {
-          text : this.searchInput,
-          id: this.id
-      }
-      this.eventEmit(obj, 'searchInputChange')
+        text: this.searchInput,
+        id: this.id
+      };
+      this.eventEmit(obj, "searchInputChange");
     },
     toggle() {
       if (this.disabled) return;
@@ -211,6 +297,22 @@ export default {
     },
     eventEmit(event, type) {
       this.$emit(type, event);
+    },
+    handleScroll(event){
+      // let elem = document.getElementById('nitrozen-select-option');
+      let elem = this.$refs['nitrozen-select-option'];
+      // console.log(elem.scrollTop,elem.offsetHeight,elem.scrollHeight);
+      this.$emit('scroll',elem)
+      // let bottomOfWindow = elem.scrollTop + elem.innerHeight >= elem.scrollHeight;
+      // if(bottomOfWindow){
+      //   console.log('bottomOfWindow');
+        
+      // }
+            // if (
+            //     elem.offsetHeight + elem.scrollTop === elem.scrollHeight &&
+            //     this.currentIndex < this.filters.data.length
+            // )
+            //     this.currentIndex = this.currentIndex + 10;
     }
   },
   created() {
@@ -223,21 +325,21 @@ export default {
     document.removeEventListener("click", this.documentClick);
     window.removeEventListener("resize", this.calculateViewport);
     window.removeEventListener("scroll", this.calculateViewport);
-  },
-  
+  }
 };
 </script>
 <style lang="less">
 @import "./NDropdown.less";
-.nitrozen-searchable-input-container{
-  width:100%;
-  input{
+.nitrozen-searchable-input-container {
+  width: 100%;
+  input {
     font-size: 14px;
-    width:calc(100% - 20px);
+    width: calc(100% - 20px);
     border: none;
   }
-  input:focus, textarea:focus {
-      outline: none;
+  input:focus,
+  textarea:focus {
+    outline: none;
   }
 }
 </style>
