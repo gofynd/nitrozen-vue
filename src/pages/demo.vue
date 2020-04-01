@@ -231,26 +231,12 @@
         <nitrozen-checkbox checkboxValue="Check 4" @change="testFunc($event)" v-model="checkArray">Check 4</nitrozen-checkbox>        
     <span>Checked names: {{ checkArray }}</span>
 
-            <nitrozen-checkbox v-model="abcd">Checkbox</nitrozen-checkbox>
+            <nitrozen-checkbox :disabled="true" v-model="abcd">Checkbox</nitrozen-checkbox>
 {{abcd}}
-            <!-- <div id='example-3'>
-    <input type="checkbox" id="jack" value="Jack" @change="testFunc($event)"  v-model="checkArray">
-    <label for="jack">Jack</label>
-    <input type="checkbox" id="john" value="John" @change="testFunc($event)" v-model="checkArray">
-    <label for="john">John</label>
-    <input type="checkbox" id="mike" value="Mike" @change="testFunc($event)"  v-model="checkArray">
-    <label for="mike">Mike</label>
-    <br>
-    <span>Checked names: {{ checkArray }}</span>
-    </div> -->
+            
 
         </div>
-        <!-- <div class="main-div space-between">
-        <nitrozen-radio :selected="true">Selected Radio</nitrozen-radio>        
-    </div> -->
-        <!-- <div class="main-div space-between">
-        <nitrozen-radio :disabled="true">Disabled Radio</nitrozen-radio>        
-    </div> -->
+        
 
         <div class="main-div space-between">
             <nitrozen-autocomplete :id="'auto'" v-model="autoModel" :dataset="autoArray" :placeholder="'Start Type'"></nitrozen-autocomplete>
@@ -324,7 +310,9 @@
         </div>
 
         <div class="main-div space-between">
-                <nitrozen-dropdown label="State" :items="dropdownItems" :multiple="true" @change="changeEvent" v-model="multiSelect" >
+                <nitrozen-dropdown label="Multiple State" :items="dropdownItemsFiltered"
+:searchable="true"
+@searchInputChange="dropdownInputChange" :multiple="true" @change="changeEvent" v-model="multiSelect" >
                 </nitrozen-dropdown>
         </div>
 
@@ -364,7 +352,7 @@ export default {
         return {
             multiSelect: [1],
             numberOfClick: 0,
-            abcd: false,
+            abcd: true,
             inputModel: 'Some Value',
             autoModel: '',
             checkArray: ["Check 1"],

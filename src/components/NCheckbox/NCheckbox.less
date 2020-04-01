@@ -33,7 +33,6 @@
   border: 1px solid @TypographyPrimaryColor;
   border-radius: 3px;
 }
-/* On mouse-over, add a grey background color */
 .nitrozen-checkbox-container:hover input ~ .nitrozen-checkbox {
   background-color: @WhiteColor;
 }
@@ -70,4 +69,9 @@ input[type="checkbox"]:disabled + .nitrozen-checkbox {
   opacity: 0.5;
   pointer-events: none;
   background: @DisabledColor;
+  border: 1px solid @DisabledColor;
+  &::after{
+    border: 1px solid @TypographyPrimaryColor;
+    border-width: 0 2px 2px 0;
+  }
 }
