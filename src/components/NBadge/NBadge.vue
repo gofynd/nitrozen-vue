@@ -61,7 +61,6 @@ export default {
 .nitrozen-badge {
   height: 16px;
   padding: 4px 8px;
-  margin: 0 8px 0 0;
   display: inline-block;
   cursor: default;
   border-radius: 2px;

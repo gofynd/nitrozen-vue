@@ -276,49 +276,52 @@
 
         </div>
 
-        <div class="main-div">
-            <span class="chips-input">
-                <nitrozen-badge>Normal</nitrozen-badge>
-                <nitrozen-badge state="info">Info</nitrozen-badge>
-                <nitrozen-badge state="success">Success</nitrozen-badge>
-                <nitrozen-badge state="warn">Warning</nitrozen-badge>
-                <nitrozen-badge state="error">Error</nitrozen-badge>
-                <nitrozen-badge state="disable">Disable</nitrozen-badge>
-            </span>
+        <div class="main-div space-between">
+            <nitrozen-badge>Normal</nitrozen-badge>
+            <nitrozen-badge state="info">Info</nitrozen-badge>
+            <nitrozen-badge state="success">Success</nitrozen-badge>
+            <nitrozen-badge state="warn">Warning</nitrozen-badge>
+            <nitrozen-badge state="error">Error</nitrozen-badge>
+            <nitrozen-badge state="disable">Disable</nitrozen-badge>
         </div>
         
-        <div class="main-div">
-            <span class="chips-input">
-                <nitrozen-badge :fill="true" >Normal</nitrozen-badge>
-                <nitrozen-badge :fill="true" state="info">Info</nitrozen-badge>
-                <nitrozen-badge :fill="true" state="success">Success</nitrozen-badge>
-                <nitrozen-badge :fill="true" state="warn">Warning</nitrozen-badge>
-                <nitrozen-badge :fill="true" state="error">Error</nitrozen-badge>
-                <nitrozen-badge :fill="true" state="disable">Disable</nitrozen-badge>
-            </span>
+        <div class="main-div space-between">
+            <nitrozen-badge :fill="true" >Normal</nitrozen-badge>
+            <nitrozen-badge :fill="true" state="info">Info</nitrozen-badge>
+            <nitrozen-badge :fill="true" state="success">Success</nitrozen-badge>
+            <nitrozen-badge :fill="true" state="warn">Warning</nitrozen-badge>
+            <nitrozen-badge :fill="true" state="error">Error</nitrozen-badge>
+            <nitrozen-badge :fill="true" state="disable">Disable</nitrozen-badge>
         </div>
 
         <div class="main-div space-between">
-                <nitrozen-dropdown label="State" :items="dropdownItems" v-model="selectedDropdown" >
-                </nitrozen-dropdown>
-                <nitrozen-dropdown v-model="selectedDropdown" :items="[...dropdownItems,...dropdownItems,...dropdownItems,...dropdownItems,...dropdownItems,...dropdownItems]" @change="changeEvent">
-                </nitrozen-dropdown>
-                <nitrozen-dropdown label="State Advanced" :items="dropdownItems" v-model="selectedDropdown" :required="true">
-                </nitrozen-dropdown>
-                <nitrozen-dropdown label="State Disabled" :items="dropdownItems" v-model="selectedDropdown" :disabled="true">
-                </nitrozen-dropdown>
+            <nitrozen-dropdown label="State" :items="dropdownItems" v-model="selectedDropdown" >
+            </nitrozen-dropdown>
+            <nitrozen-dropdown v-model="selectedDropdown" :items="[...dropdownItems,...dropdownItems,...dropdownItems,...dropdownItems,...dropdownItems,...dropdownItems]" @change="changeEvent">
+            </nitrozen-dropdown>
+            <nitrozen-dropdown label="State Advanced" :items="dropdownItems" v-model="selectedDropdown" :required="true">
+            </nitrozen-dropdown>
+            <nitrozen-dropdown label="State Disabled" :items="dropdownItems" v-model="selectedDropdown" :disabled="true">
+            </nitrozen-dropdown>
         </div>
 
         <div class="main-div space-between">
-                <nitrozen-dropdown label="Multiple State" :items="dropdownItemsFiltered"
-:searchable="true"
-@searchInputChange="dropdownInputChange" :multiple="true" @change="changeEvent" v-model="multiSelect" >
-                </nitrozen-dropdown>
+            <nitrozen-dropdown label="Multiple State" :items="dropdownItemsFiltered"
+                :searchable="true"
+                @searchInputChange="dropdownInputChange" 
+                :multiple="true" 
+                @change="changeEvent" 
+                v-model="multiSelect" >
+            </nitrozen-dropdown>
         </div>
 
         <div class="main-div space-between">
-            <nitrozen-pagination name="Pages" v-model="paginationConfig" @change="paginationChange" :pageSizeOptions="[5,10,20,50]">
-                            </nitrozen-pagination>
+            <nitrozen-pagination 
+                name="Pages" 
+                v-model="paginationConfig" 
+                @change="paginationChange" 
+                :pageSizeOptions="[5,10,20,50]"
+            ></nitrozen-pagination>
         </div>
 
         <div class="main-div space-between">
