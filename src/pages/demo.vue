@@ -30,6 +30,15 @@
                 <nitrozen-menu-item>Item 3</nitrozen-menu-item>
             </nitrozen-menu>
         </div>
+        <div class="main-div space-between">
+            <nitrozen-tab>
+                <nitrozen-tab-item>Item 1</nitrozen-tab-item>
+                <nitrozen-tab-item>Item 2</nitrozen-tab-item>
+                <nitrozen-tab-item>Item 3</nitrozen-tab-item>
+                <nitrozen-tab-item>Item 4</nitrozen-tab-item>
+                <nitrozen-tab-item>Item 5</nitrozen-tab-item>
+            </nitrozen-tab>
+        </div>
         <div class="main-div">
             <nitrozen-stepper
                     :elements = "stepper.elements"
