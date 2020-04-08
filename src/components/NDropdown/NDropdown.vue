@@ -138,6 +138,11 @@ export default {
       searchInputPlaceholder: ""
     };
   },
+  watch: {
+    value(){
+        this.selectedItems = [...this.value];
+    }
+  },
   computed: {
     selectedText: function() {
       if (!this.multiple) {
@@ -158,7 +163,7 @@ export default {
         let selected = {};
         if (this.value) {
           // this.selected = [...this.value];
-          this.selectedItems = [...this.value];
+          // this.selectedItems = [...this.value];
           this.searchInput = "";
         }
         if (this.selectedItems.length) {
