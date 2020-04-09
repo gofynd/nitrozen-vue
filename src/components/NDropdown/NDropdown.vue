@@ -140,7 +140,9 @@ export default {
   },
   watch: {
     value(){
+      if(Array.isArray(this.value)){
         this.selectedItems = [...this.value];
+      }
     }
   },
   computed: {
