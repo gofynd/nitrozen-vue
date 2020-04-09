@@ -2,7 +2,7 @@
   <div :id="id" class="nitrozen-tab-container">
     <ul class="nitrozen-tab">
       {{activeTab}} 
-      <nitrozen-tab-item @click="selectTab(index)" :class="{'nitrozen-tab-active': activeTab == index}" v-for="(item, index) in tabItem" :key="index">{{item[label]}}</nitrozen-tab-item>
+      <nitrozen-tab-item @click="selectTab(index,item)" :class="{'nitrozen-tab-active': activeTab == index}" v-for="(item, index) in tabItem" :key="index">{{item[label]}}</nitrozen-tab-item>
     </ul>
   </div>
 </template>
@@ -59,8 +59,13 @@ export default {
     }
   },
   methods: {
-    selectTab: function(index){
+    selectTab: function(index,item){
+      let obj = {
+        index: index,
+        item: item
+      }
       this.activeTab = index;
+      this.$emit('tab-change',obj);
     }
   }
 };
