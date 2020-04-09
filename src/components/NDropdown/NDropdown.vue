@@ -1,8 +1,6 @@
 <template>
   <div class="nitrozen-dropdown-container">
-    <label v-if="label" class="nitrozen-dropdown-label">
-      {{ label }} {{ required ? " *" : "" }}
-    </label>
+    <label v-if="label" class="nitrozen-dropdown-label">{{ label }} {{ required ? " *" : "" }}</label>
     <div class="nitrozen-select-wrapper" @click="toggle">
       <div
         class="nitrozen-select"
@@ -46,15 +44,11 @@
                 @change="setCheckedItem"
                 v-model="selectedItems"
                 :ref="`multicheckbox-${index}`"
-              >
-                {{ item.text }}
-              </nitrozen-checkbox>
+              >{{ item.text }}</nitrozen-checkbox>
             </template>
-            <template v-else> {{ item.text }} </template>
+            <template v-else>{{ item.text }}</template>
           </span>
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">
-            No {{ label }} Found
-          </span>
+          <span v-if="searchable && items.length == 0" class="nitrozen-option">No {{ label }} Found</span>
         </div>
       </div>
     </div>
@@ -144,6 +138,13 @@ export default {
       searchInputPlaceholder: ""
     };
   },
+  watch: {
+    value(){
+      if(Array.isArray(this.value)){
+        this.selectedItems = [...this.value];
+      }
+    }
+  },
   computed: {
     selectedText: function() {
       if (!this.multiple) {
@@ -164,7 +165,7 @@ export default {
         let selected = {};
         if (this.value) {
           // this.selected = [...this.value];
-          this.selectedItems = [...this.value];
+          // this.selectedItems = [...this.value];
           this.searchInput = "";
         }
         if (this.selectedItems.length) {
@@ -172,11 +173,11 @@ export default {
             if (!selected[ele]) {
               selected[ele] = true;
             }
-            this.items.forEach(ele => {
-              if (selected[ele.value]) {
-                tmp.push(ele.text);
-              }
-            });
+          });
+          this.items.forEach(ele => {
+            if (selected[ele.value]) {
+              tmp.push(ele.text);
+            }
           });
           tmp = [...new Set(tmp)];
           return tmp.toString();
