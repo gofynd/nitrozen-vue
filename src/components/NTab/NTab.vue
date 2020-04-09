@@ -1,6 +1,6 @@
 <template>
-  <div :id="id" class="tab-container">
-    <ul class="tab">
+  <div :id="id" class="nitrozen-tab-container">
+    <ul class="nitrozen-tab">
       <slot />
     </ul>
   </div>
@@ -8,9 +8,9 @@
 
 <style lang="less" scoped>
 @import "./../../base/base.less";
-.tab-container {
+.nitrozen-tab-container {
   display: flex;
-  .tab {
+  .nitrozen-tab {
     display: flex;
     list-style: none;
     justify-content: flex-start;

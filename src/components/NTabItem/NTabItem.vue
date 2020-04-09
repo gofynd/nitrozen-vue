@@ -1,5 +1,5 @@
 <template>
-  <li class="tab-item" v-on="$listeners" @click="selectTab">
+  <li class="nitrozen-tab-item" v-on="$listeners" @click="selectTab">
     <slot />
   </li>
 </template>
@@ -24,7 +24,7 @@ export default {
 </script>
 <style lang="less" scoped>
 @import "./../../base/base.less";
-.tab-item {
+.nitrozen-tab-item {
   display: flex;
   justify-content: center;
   color: #514c51;
