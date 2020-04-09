@@ -1,8 +1,7 @@
 <template>
   <div :id="id" class="nitrozen-tab-container">
     <ul class="nitrozen-tab">
-      {{activeTab}} 
-      <nitrozen-tab-item @click="selectTab(index,item)" :class="{'nitrozen-tab-active': activeTab == index}" v-for="(item, index) in tabItem" :key="index">{{item[label]}}</nitrozen-tab-item>
+      <nitrozen-tab-item @click="selectTab(index,item)" :class="{'nitrozen-tab-active': activeTab == index}" v-for="(item, index) in tabItem" :key="index">{{item[label] || item}}</nitrozen-tab-item>
     </ul>
   </div>
 </template>
@@ -45,8 +44,7 @@ export default {
       required: true
     },
     label: {
-      type: String,
-      required: true
+      type: String
     },
     activeIndex: {
       type: Number,

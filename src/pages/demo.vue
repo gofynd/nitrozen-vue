@@ -31,7 +31,7 @@
             </nitrozen-menu>
         </div>
         <div class="main-div space-between">
-            <nitrozen-tab :tabItem="fruits" :label="'name'">
+            <nitrozen-tab @tab-change="tabChange" :tabItem="fruits" :label="'name'">
                 <!-- <nitrozen-tab-item>Item 1</nitrozen-tab-item>
                 <nitrozen-tab-item class= "active">Item 2</nitrozen-tab-item>
                 <nitrozen-tab-item>Item 3</nitrozen-tab-item>
@@ -362,6 +362,7 @@ export default {
     name: 'App',
     data() {
         return {
+            tabArray: ['Item1', 'Item2', 'Item3'],
             multiSelect: [1],
             numberOfClick: 0,
             abcd: true,
@@ -517,6 +518,10 @@ export default {
             else{
                 this.dropdownItemsFiltered = this.dropdownItems
             }
+        },
+        tabChange(event){
+            console.log(event);
+            
         }
     }
 }
