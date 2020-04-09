@@ -1,6 +1,8 @@
 <template>
   <div class="nitrozen-dropdown-container">
-    <label v-if="label" class="nitrozen-dropdown-label">{{ label }} {{ required ? " *" : "" }}</label>
+    <label v-if="label" class="nitrozen-dropdown-label"
+      >{{ label }} {{ required ? " *" : "" }}</label
+    >
     <div class="nitrozen-select-wrapper" @click="toggle">
       <div
         class="nitrozen-select"
@@ -44,11 +46,15 @@
                 @change="setCheckedItem"
                 v-model="selectedItems"
                 :ref="`multicheckbox-${index}`"
-              >{{ item.text }}</nitrozen-checkbox>
+              >
+                {{ item.text }}
+              </nitrozen-checkbox>
             </template>
             <template v-else>{{ item.text }}</template>
           </span>
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">No {{ label }} Found</span>
+          <span v-if="searchable && items.length == 0" class="nitrozen-option">
+            No {{ label }} Found
+          </span>
         </div>
       </div>
     </div>
@@ -139,8 +145,8 @@ export default {
     };
   },
   watch: {
-    value(){
-      if(Array.isArray(this.value)){
+    value() {
+      if (Array.isArray(this.value)) {
         this.selectedItems = [...this.value];
       }
     }
@@ -193,7 +199,7 @@ export default {
     if (!this.multiple) {
       if (this.value) {
         let selected = this.items.find(i => i.value == this.value);
-        this.searchInput = selected.text;
+        this.searchInput = selected ? selected.text : "";
       }
     } else {
       if (this.value) {
