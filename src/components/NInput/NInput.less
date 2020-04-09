@@ -132,3 +132,33 @@ input[type='search']::-webkit-search-cancel-button {
 .n-input-label-container{
     display: flex;
 }
+
+.n-input-prefix, .n-input-suffix {
+    height: 40px;
+    margin: auto;
+    box-sizing: border-box;
+    color: @TypographyPrimaryColor;
+    border-radius: 3px;
+    background-color: @PrefixSuffixBackground;
+  }
+
+  .remove-left-border {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left-color: @WhiteColor;
+  }
+
+  .remove-right-border {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-color: @WhiteColor;
+  }
+
+  .n-input-grp {
+    display: flex;
+  }
+  
+  .prefix-padding, .suffix-padding {
+    padding: 10px;
+    border: 1px solid @BorderColor;
+  }

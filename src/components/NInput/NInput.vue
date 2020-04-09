@@ -8,40 +8,62 @@
       <nitrozen-inline :icon="'search'"></nitrozen-inline>
     </span>
 
-    <input
-      v-if="type != 'textarea'"
-      v-bind:class="{ 'nitrozen-search-input-padding': showSearchIcon }"
-      v-on:keyup="eventEmit($event, 'keyup')"
-      v-on:change="eventEmit($event, 'change')"
-      v-on:blur="eventEmit($event, 'blur')"
-      v-on:focus="eventEmit($event, 'focus')"
-      v-on:click="eventEmit($event, 'click')"
-      v-on:keypress="eventEmit($event, 'keypress')"
-      class="n-input input-text"
-      :maxlength="maxlength"
-      :type="type"
-      :placeholder="placeholder"
-      :id="id"
-      :disabled="disabled"
-      :value="value"
-      @input="valueChange"
-    />
-    <textarea
-      v-if="type == 'textarea'"
-      v-on:keyup="eventEmit($event, 'keyup')"
-      v-on:change="eventEmit($event, 'change')"
-      v-on:blur="eventEmit($event, 'blur')"
-      v-on:focus="eventEmit($event, 'focus')"
-      v-on:click="eventEmit($event, 'click')"
-      v-on:keypress="eventEmit($event, 'keypress')"
-      v-bind:class="{ 'n-input-textarea': type == 'textarea' }"
-      class="n-input input-text"
-      :maxlength="maxlength"
-      :disabled="disabled"
-      :placeholder="placeholder"
-      :value="value"
-      @input="valueChange"
-    ></textarea>
+    <div class="n-input-grp">
+      <NInputPrefix 
+          v-if="showPrefix" 
+          class="n-input-prefix remove-right-border"
+          v-bind:class="{ 'prefix-padding': !custom }"
+          >
+            <span v-if="custom" class="padding-unset"><slot/></span>
+            <span v-else>{{ prefix }}</span>
+      </NInputPrefix>
+      <input
+        v-if="type != 'textarea'"
+        v-bind:class="{ 
+          'nitrozen-search-input-padding': showSearchIcon,
+          'remove-left-border': showPrefix, 
+          'remove-right-border': showSuffix 
+        }"
+        v-on:keyup="eventEmit($event, 'keyup')"
+        v-on:change="eventEmit($event, 'change')"
+        v-on:blur="eventEmit($event, 'blur')"
+        v-on:focus="eventEmit($event, 'focus')"
+        v-on:click="eventEmit($event, 'click')"
+        v-on:keypress="eventEmit($event, 'keypress')"
+        class="n-input input-text"
+        :maxlength="maxlength"
+        :type="type"
+        :placeholder="placeholder"
+        :id="id"
+        :disabled="disabled"
+        :value="value"
+        @input="valueChange"
+      />
+      <textarea
+        v-if="type == 'textarea'"
+        v-on:keyup="eventEmit($event, 'keyup')"
+        v-on:change="eventEmit($event, 'change')"
+        v-on:blur="eventEmit($event, 'blur')"
+        v-on:focus="eventEmit($event, 'focus')"
+        v-on:click="eventEmit($event, 'click')"
+        v-on:keypress="eventEmit($event, 'keypress')"
+        v-bind:class="{ 'n-input-textarea': type == 'textarea' }"
+        class="n-input input-text"
+        :maxlength="maxlength"
+        :disabled="disabled"
+        :placeholder="placeholder"
+        :value="value"
+        @input="valueChange"
+      ></textarea>
+      <NInputSuffix 
+        v-if="showSuffix" 
+        class="n-input-suffix remove-left-border" 
+        v-bind:class="{ 'suffix-padding': !custom }"
+        >
+          <span v-if="custom"><slot/></span>
+          <span v-else>{{ suffix }}</span>
+      </NInputSuffix>
+    </div>
 
     <div class="n-input-label-container">
       <label class="n-input-label" v-if="label">
@@ -138,6 +160,24 @@ export default {
     },
     maxlength: {
       type: Number
+    },
+    showPrefix: {
+        type: Boolean,
+        default: false
+    },
+    showSuffix: {
+        type: Boolean,
+        default: false
+    },
+    prefix: {
+        type: String
+    },
+    suffix: {
+        type: String
+    },
+    custom: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {

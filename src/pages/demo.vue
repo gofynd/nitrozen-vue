@@ -226,6 +226,26 @@
             <nitrozen-input :id="10" :type="'text'" :placeholder="'Last Name'" :label="'Last Name'"></nitrozen-input>
 
         </div>
+        <div class="main-div space-between">
+            <nitrozen-input class="box" :id="11" :type="'text'" :showPrefix="true" prefix="%" :placeholder="'Percentage'"></nitrozen-input>
+            <nitrozen-input class="box" :id="12" :type="'text'" :showSuffix="true" suffix="₹" :placeholder="'Rupee'"></nitrozen-input>
+            <nitrozen-input class="box" :id="13" :type="'text'" :showPrefix="true" prefix="$" :showSuffix="true" suffix=".00"></nitrozen-input>
+            <nitrozen-input class="box" :id="14" :type="'text'" :showPrefix="true" prefix="https://example.com/users/" :placeholder="'Url'"></nitrozen-input>
+
+            <nitrozen-input class="box" :id="15" :type="'text'" :showPrefix="true" :custom="true" :placeholder="'value'">
+                <nitrozen-dropdown
+                    :items="dropdownItemsPrefix"
+                    v-model="selectedDropdown"
+                ></nitrozen-dropdown>
+            </nitrozen-input>
+
+            <nitrozen-input class="box" :id="11" :type="'text'" :showSuffix="true" :custom="true" :placeholder="'value'">
+                <nitrozen-dropdown
+                    :items="dropdownItemsPrefix"
+                    v-model="selectedDropdown"
+                ></nitrozen-dropdown>
+            </nitrozen-input>
+        </div>
 
         <div class="main-div space-between">
             <nitrozen-radio :name="'radio-1'" v-model="radioModel" @change="changeEvent" :radioValue="'1'">Basic Radio 1</nitrozen-radio>
@@ -430,7 +450,19 @@ export default {
                 limit: 10,
                 current: 1,
                 total: 95
-            }
+            },
+            dropdownItemsPrefix:[
+                {
+                    text: '%',
+                    value: 1,
+                },{
+                    text: 'px',
+                    value: 2,
+                },{
+                    text: 'rem',
+                    value: 3,
+                }
+            ],
         }
     },
     mounted(){
@@ -537,6 +569,10 @@ export default {
 .space-between {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    .box {
+        margin: 20px;
+    }
 }
 
 .grouping {
