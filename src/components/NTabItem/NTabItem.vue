@@ -1,5 +1,5 @@
 <template>
-  <li class="tab-item" v-on="$listeners">
+  <li class="tab-item" v-on="$listeners" @click="selectTab">
     <slot />
   </li>
 </template>
@@ -13,6 +13,11 @@ export default {
     id: {
       type: [Number, String],
       default: () => "nitrozen-tab-item" + NitrozenUuid(),
+    },
+  },
+  methods: {
+    selectTab() {
+      //Function to turn all aria selected false and make this true
     },
   },
 };
@@ -38,6 +43,10 @@ export default {
   // }
 }
 .active {
+  color: #5c6bdd;
+  border-bottom: 3px solid #5c6bdd;
+}
+li [aria-selected="true"] {
   color: #5c6bdd;
   border-bottom: 3px solid #5c6bdd;
 }
