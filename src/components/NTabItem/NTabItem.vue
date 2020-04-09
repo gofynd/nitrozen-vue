@@ -1,5 +1,5 @@
 <template>
-  <li class="menu-item" v-on="$listeners">
+  <li class="tab-item" v-on="$listeners">
     <slot />
   </li>
 </template>
@@ -18,11 +18,12 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.menu-item {
+@import "./../../base/base.less";
+.tab-item {
   display: flex;
   justify-content: center;
   color: #514c51;
-  font-family: 'Poppins', sans-serif;
+  font-family: @PrimaryFont;
   margin-right: 40px;
   padding: 20px 0px;
   font-size: 14px;

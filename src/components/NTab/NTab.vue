@@ -1,20 +1,26 @@
 <template>
-  <ul class="menu">
-    <slot />
-  </ul>
+  <div :id="id" class="tab-container">
+    <ul class="tab">
+      <slot />
+    </ul>
+  </div>
 </template>
 
 <style lang="less" scoped>
-.menu {
+@import "./../../base/base.less";
+.tab-container {
   display: flex;
-  list-style: none;
-  justify-content: flex-start;
-  background-color: white;
-  overflow-x: scroll;
-  -ms-overflow-style: none;
-  padding: 0 24px;
-  &::-webkit-scrollbar {
-    display: none;
+  .tab {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    background-color: @WhiteColor;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    padding: 0 24px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 </style>
