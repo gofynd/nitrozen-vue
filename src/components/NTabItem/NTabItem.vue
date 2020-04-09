@@ -18,6 +18,8 @@ export default {
   methods: {
     selectTab() {
       //Function to turn all aria selected false and make this true
+      console.log(event);
+      
     },
   },
 };
