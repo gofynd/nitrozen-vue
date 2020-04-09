@@ -1,7 +1,13 @@
 <template>
   <div :id="id" class="nitrozen-tab-container">
     <ul class="nitrozen-tab">
-      <nitrozen-tab-item @click="selectTab(index,item)" :class="{'nitrozen-tab-active': activeTab == index}" v-for="(item, index) in tabItem" :key="index">{{item[label] || item}}</nitrozen-tab-item>
+      <nitrozen-tab-item
+        @click="selectTab(index, item)"
+        :class="{ 'nitrozen-tab-active': activeTab == index }"
+        v-for="(item, index) in tabItem"
+        :key="index"
+        >{{ item[label] || item }}</nitrozen-tab-item
+      >
     </ul>
   </div>
 </template>
@@ -10,8 +16,11 @@
 @import "./../../base/base.less";
 .nitrozen-tab-container {
   display: flex;
+  width: 100%;
   .nitrozen-tab {
     display: flex;
+    width:100%;
+    box-sizing: border-box;
     list-style: none;
     justify-content: flex-start;
     background-color: @WhiteColor;
@@ -31,7 +40,7 @@ import NitrozenTabItem from "./../NTabItem";
 export default {
   name: "nitrozen-tab",
   components: {
-    'nitrozen-tab-item': NitrozenTabItem
+    "nitrozen-tab-item": NitrozenTabItem,
   },
   props: {
     id: {
@@ -41,30 +50,30 @@ export default {
     tabItem: {
       type: Array,
       default: () => [],
-      required: true
+      required: true,
     },
     label: {
-      type: String
+      type: String,
     },
     activeIndex: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
-  data(){
-    return{
-      activeTab: this.activeIndex
-    }
+  data() {
+    return {
+      activeTab: this.activeIndex,
+    };
   },
   methods: {
-    selectTab: function(index,item){
+    selectTab: function(index, item) {
       let obj = {
         index: index,
-        item: item
-      }
+        item: item,
+      };
       this.activeTab = index;
-      this.$emit('tab-change',obj);
-    }
-  }
+      this.$emit("tab-change", obj);
+    },
+  },
 };
 </script>
