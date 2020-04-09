@@ -37,4 +37,8 @@ export default {
   //   border-bottom: 3px solid #5c6bdd;
   // }
 }
+.active {
+  color: #5c6bdd;
+  border-bottom: 3px solid #5c6bdd;
+}
 </style>
