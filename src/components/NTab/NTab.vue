@@ -1,17 +1,17 @@
 <template>
-  <div :id="id" class="tab-container">
-    <ul class="tab">
+  <div :id="id" class="nitrozen-tab-container">
+    <ul class="nitrozen-tab">
       {{activeTab}} 
-      <nitrozen-tab-item @click="selectTab(index)" :class="{'active': activeTab == index}" v-for="(item, index) in tabItem" :key="index">{{item[label]}}</nitrozen-tab-item>
+      <nitrozen-tab-item @click="selectTab(index)" :class="{'nitrozen-tab-active': activeTab == index}" v-for="(item, index) in tabItem" :key="index">{{item[label]}}</nitrozen-tab-item>
     </ul>
   </div>
 </template>
 
 <style lang="less" scoped>
 @import "./../../base/base.less";
-.tab-container {
+.nitrozen-tab-container {
   display: flex;
-  .tab {
+  .nitrozen-tab {
     display: flex;
     list-style: none;
     justify-content: flex-start;
