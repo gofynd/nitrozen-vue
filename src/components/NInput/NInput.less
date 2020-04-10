@@ -63,7 +63,8 @@
     justify-content: flex-end;
     position: relative;
 }
-.n-input:focus + .n-input-label-container > .n-input-label {
+
+.nitrozen-input-grp:focus-within + .n-input-label-container > .n-input-label {
     color: @SecondaryColor !important;
 }
 
@@ -133,7 +134,7 @@ input[type='search']::-webkit-search-cancel-button {
     display: flex;
 }
 
-.n-input-prefix, .n-input-suffix {
+.nitrozen-input-prefix, .nitrozen-input-suffix {
     height: 40px;
     margin: auto;
     box-sizing: border-box;
@@ -142,23 +143,23 @@ input[type='search']::-webkit-search-cancel-button {
     background-color: @PrefixSuffixBackground;
   }
 
-  .remove-left-border {
+  .nitrozen-remove-left-border {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-left-color: @WhiteColor;
   }
 
-  .remove-right-border {
+  .nitrozen-remove-right-border {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-right-color: @WhiteColor;
   }
 
-  .n-input-grp {
+  .nitrozen-input-grp {
     display: flex;
   }
   
-  .prefix-padding, .suffix-padding {
+  .nitrozen-prefix-padding, .nitrozen-suffix-padding {
     padding: 10px;
     border: 1px solid @BorderColor;
   }

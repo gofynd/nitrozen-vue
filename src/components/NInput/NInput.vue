@@ -8,21 +8,21 @@
       <nitrozen-inline :icon="'search'"></nitrozen-inline>
     </span>
 
-    <div class="n-input-grp">
-      <NInputPrefix 
+    <div class="nitrozen-input-grp">
+      <nitrozen-input-prefix 
           v-if="showPrefix" 
-          class="n-input-prefix remove-right-border"
-          v-bind:class="{ 'prefix-padding': !custom }"
+          class="nitrozen-input-prefix nitrozen-remove-right-border"
+          v-bind:class="{ 'nitrozen-prefix-padding': !custom }"
           >
-            <span v-if="custom" class="padding-unset"><slot/></span>
+            <span v-if="custom"><slot/></span>
             <span v-else>{{ prefix }}</span>
-      </NInputPrefix>
+      </nitrozen-input-prefix>
       <input
         v-if="type != 'textarea'"
         v-bind:class="{ 
           'nitrozen-search-input-padding': showSearchIcon,
-          'remove-left-border': showPrefix, 
-          'remove-right-border': showSuffix 
+          'nitrozen-remove-left-border': showPrefix, 
+          'nitrozen-remove-right-border': showSuffix 
         }"
         v-on:keyup="eventEmit($event, 'keyup')"
         v-on:change="eventEmit($event, 'change')"
@@ -55,14 +55,14 @@
         :value="value"
         @input="valueChange"
       ></textarea>
-      <NInputSuffix 
+      <nitrozen-input-suffix 
         v-if="showSuffix" 
-        class="n-input-suffix remove-left-border" 
-        v-bind:class="{ 'suffix-padding': !custom }"
+        class="nitrozen-input-suffix nitrozen-remove-left-border" 
+        v-bind:class="{ 'nitrozen-suffix-padding': !custom }"
         >
           <span v-if="custom"><slot/></span>
           <span v-else>{{ suffix }}</span>
-      </NInputSuffix>
+      </nitrozen-input-suffix>
     </div>
 
     <div class="n-input-label-container">
@@ -94,8 +94,8 @@ import NitrozenUuid from "./../../utils/NUuid";
 export default {
   name: "nitrozen-input",
   components: {
-    NInputPrefix,
-    NInputSuffix,
+    'nitrozen-input-prefix': NInputPrefix,
+    'nitrozen-input-suffix': NInputSuffix,
     "nitrozen-tooltip": NTooltip,
     "nitrozen-inline": NitrozenInline
   },
