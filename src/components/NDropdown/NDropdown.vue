@@ -149,9 +149,9 @@ export default {
       if (Array.isArray(this.value)) {
         this.selectedItems = [...this.value];
       }
-      const selected = this.items.find(i => i.value == this.value);
-      if (!this.multiple && !selected && this.searchable) {
-        this.searchInput = this.value;
+      if (!this.multiple && this.searchable) {
+        const selected = this.items.find(i => i.value == this.value);
+        this.searchInput = selected ? selected.text : this.value;
       }
     }
   },
@@ -170,12 +170,9 @@ export default {
         }
         return "";
       } else {
-        // this.selected = [];
         let tmp = [];
         let selected = {};
         if (this.value) {
-          // this.selected = [...this.value];
-          // this.selectedItems = [...this.value];
           this.searchInput = "";
         }
         if (this.selectedItems.length) {
