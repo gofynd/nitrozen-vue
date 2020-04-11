@@ -8,40 +8,62 @@
       <nitrozen-inline :icon="'search'"></nitrozen-inline>
     </span>
 
-    <input
-      v-if="type != 'textarea'"
-      v-bind:class="{ 'nitrozen-search-input-padding': showSearchIcon }"
-      v-on:keyup="eventEmit($event, 'keyup')"
-      v-on:change="eventEmit($event, 'change')"
-      v-on:blur="eventEmit($event, 'blur')"
-      v-on:focus="eventEmit($event, 'focus')"
-      v-on:click="eventEmit($event, 'click')"
-      v-on:keypress="eventEmit($event, 'keypress')"
-      class="n-input input-text"
-      :maxlength="maxlength"
-      :type="type"
-      :placeholder="placeholder"
-      :id="id"
-      :disabled="disabled"
-      :value="value"
-      @input="valueChange"
-    />
-    <textarea
-      v-if="type == 'textarea'"
-      v-on:keyup="eventEmit($event, 'keyup')"
-      v-on:change="eventEmit($event, 'change')"
-      v-on:blur="eventEmit($event, 'blur')"
-      v-on:focus="eventEmit($event, 'focus')"
-      v-on:click="eventEmit($event, 'click')"
-      v-on:keypress="eventEmit($event, 'keypress')"
-      v-bind:class="{ 'n-input-textarea': type == 'textarea' }"
-      class="n-input input-text"
-      :maxlength="maxlength"
-      :disabled="disabled"
-      :placeholder="placeholder"
-      :value="value"
-      @input="valueChange"
-    ></textarea>
+    <div class="nitrozen-input-grp">
+      <nitrozen-input-prefix 
+          v-if="showPrefix" 
+          class="nitrozen-input-prefix nitrozen-remove-right-border"
+          v-bind:class="{ 'nitrozen-prefix-padding': !custom }"
+          >
+            <span v-if="custom"><slot/></span>
+            <span v-else>{{ prefix }}</span>
+      </nitrozen-input-prefix>
+      <input
+        v-if="type != 'textarea'"
+        v-bind:class="{ 
+          'nitrozen-search-input-padding': showSearchIcon,
+          'nitrozen-remove-left-border': showPrefix, 
+          'nitrozen-remove-right-border': showSuffix 
+        }"
+        v-on:keyup="eventEmit($event, 'keyup')"
+        v-on:change="eventEmit($event, 'change')"
+        v-on:blur="eventEmit($event, 'blur')"
+        v-on:focus="eventEmit($event, 'focus')"
+        v-on:click="eventEmit($event, 'click')"
+        v-on:keypress="eventEmit($event, 'keypress')"
+        class="n-input input-text"
+        :maxlength="maxlength"
+        :type="type"
+        :placeholder="placeholder"
+        :id="id"
+        :disabled="disabled"
+        :value="value"
+        @input="valueChange"
+      />
+      <textarea
+        v-if="type == 'textarea'"
+        v-on:keyup="eventEmit($event, 'keyup')"
+        v-on:change="eventEmit($event, 'change')"
+        v-on:blur="eventEmit($event, 'blur')"
+        v-on:focus="eventEmit($event, 'focus')"
+        v-on:click="eventEmit($event, 'click')"
+        v-on:keypress="eventEmit($event, 'keypress')"
+        v-bind:class="{ 'n-input-textarea': type == 'textarea' }"
+        class="n-input input-text"
+        :maxlength="maxlength"
+        :disabled="disabled"
+        :placeholder="placeholder"
+        :value="value"
+        @input="valueChange"
+      ></textarea>
+      <nitrozen-input-suffix 
+        v-if="showSuffix" 
+        class="nitrozen-input-suffix nitrozen-remove-left-border" 
+        v-bind:class="{ 'nitrozen-suffix-padding': !custom }"
+        >
+          <span v-if="custom"><slot/></span>
+          <span v-else>{{ suffix }}</span>
+      </nitrozen-input-suffix>
+    </div>
 
     <div class="n-input-label-container">
       <label class="n-input-label" v-if="label">
@@ -72,8 +94,8 @@ import NitrozenUuid from "./../../utils/NUuid";
 export default {
   name: "nitrozen-input",
   components: {
-    NInputPrefix,
-    NInputSuffix,
+    'nitrozen-input-prefix': NInputPrefix,
+    'nitrozen-input-suffix': NInputSuffix,
     "nitrozen-tooltip": NTooltip,
     "nitrozen-inline": NitrozenInline
   },
@@ -138,6 +160,24 @@ export default {
     },
     maxlength: {
       type: Number
+    },
+    showPrefix: {
+        type: Boolean,
+        default: false
+    },
+    showSuffix: {
+        type: Boolean,
+        default: false
+    },
+    prefix: {
+        type: String
+    },
+    suffix: {
+        type: String
+    },
+    custom: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
