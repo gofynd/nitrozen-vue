@@ -239,7 +239,7 @@
                 ></nitrozen-dropdown>
             </nitrozen-input>
 
-            <nitrozen-input class="box" :id="11" :type="'text'" :showSuffix="true" :custom="true" :placeholder="'value'">
+            <nitrozen-input class="box" id="a11" :type="'text'" :showSuffix="true" :custom="true" :placeholder="'value'">
                 <nitrozen-dropdown
                     :items="dropdownItemsPrefix"
                     v-model="selectedDropdown"
@@ -543,6 +543,7 @@ export default {
             console.log(e)
         },
         dropdownInputChange(e){
+            console.log(e)
             if(e && e.text){
                 let text = e.text
                 this.dropdownItemsFiltered = this.dropdownItems.filter(a=>a.text.toLowerCase().indexOf(text.toLowerCase()) > -1)
