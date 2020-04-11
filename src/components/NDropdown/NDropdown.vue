@@ -22,7 +22,7 @@
               :placeholder="searchInputPlaceholder"
             />
           </span>
-          <span v-if="!searchable">{{ selectedText }}</span>
+          <span v-else>{{ selectedText }}</span>
           <div class="nitrozen-dropdown-arrow">
             <nitrozen-inline icon="dropdown_arrow_down"></nitrozen-inline>
           </div>
@@ -148,6 +148,10 @@ export default {
     value() {
       if (Array.isArray(this.value)) {
         this.selectedItems = [...this.value];
+      }
+      const selected = this.items.find(i => i.value == this.value);
+      if (!this.multiple && !selected && this.searchable) {
+        this.searchInput = this.value;
       }
     }
   },
