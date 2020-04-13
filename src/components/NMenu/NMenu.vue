@@ -6,7 +6,7 @@
       class="nitrozen-menu-content"
       @click="toggleMenu = !toggleMenu"
     >
-      <nitrozen-inline :icon="'dots'"></nitrozen-inline>
+      <nitrozen-inline v-bind:class="{ vertical: mode == 'vertical' }" :icon="'dots'"></nitrozen-inline>
       <transition name="fade">
         <ul v-if="toggleMenu">
           <slot />
@@ -30,6 +30,11 @@ export default {
     id: {
       type: [Number, String],
       default: () => "nitrozen-menu" + NitrozenUuid()
+    },
+    mode:{
+      type: String,
+      default: () => "horizontal"
+
     }
   },
   data() {
@@ -54,6 +59,11 @@ export default {
   color: @TypographyPrimaryColor;
   position: relative;
   cursor: pointer;
+  .vertical{
+    transform: rotate(90deg);
+    position: relative;
+    left: 190px;
+  }
   ul {
     width: 200px;
     height: auto;
