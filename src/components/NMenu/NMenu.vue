@@ -6,9 +6,9 @@
       class="nitrozen-menu-content"
       @click="toggleMenu = !toggleMenu"
     >
-      <nitrozen-inline v-bind:class="{ vertical: mode == 'vertical' }" :icon="'dots'"></nitrozen-inline>
+      <nitrozen-inline :class="{ 'vertical-dots': mode == 'vertical' }" :icon="'dots'"></nitrozen-inline>
       <transition name="fade">
-        <ul v-if="toggleMenu">
+        <ul v-if="toggleMenu" :class="{ 'vertical-dropdown': mode == 'vertical' }">
           <slot />
           <!-- <li v-for="(item, index) in menuItem" :key="index">{{item.text}}</li> -->
         </ul>
@@ -62,10 +62,12 @@ export default {
   color: @TypographyPrimaryColor;
   position: relative;
   cursor: pointer;
-  .vertical{
+  .vertical-dots{
     transform: rotate(90deg);
-    position: relative;
-    left: 190px;
+  }
+  .vertical-dropdown{
+    position: absolute;
+    right: 20px;
   }
   ul {
     width: 200px;
