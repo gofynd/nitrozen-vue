@@ -15,13 +15,14 @@
         <div class="nitrozen-select__trigger">
           <span v-if="searchable" class="nitrozen-searchable-input-container">
             <input
+              type="search"
               v-model="searchInput"
+              @search="searchInputChange()"
               v-on:keyup="searchInputChange()"
               :placeholder="searchInputPlaceholder"
             />
-            <span v-if="searchInput" @click="clearSearchInput">&#10005;</span>
           </span>
-          <span v-if="!searchable">{{ selectedText }}</span>
+          <span v-else>{{ selectedText }}</span>
           <div class="nitrozen-dropdown-arrow">
             <nitrozen-inline icon="dropdown_arrow_down"></nitrozen-inline>
           </div>
@@ -140,14 +141,17 @@ export default {
       searchInput: "",
       showOptions: false,
       dropUp: false,
-      viewport: null,
-      searchInputPlaceholder: ""
+      viewport: null
     };
   },
   watch: {
     value() {
       if (Array.isArray(this.value)) {
         this.selectedItems = [...this.value];
+      }
+      if (!this.multiple && this.searchable) {
+        const selected = this.items.find(i => i.value == this.value);
+        this.searchInput = selected ? selected.text : this.value;
       }
     }
   },
@@ -168,12 +172,9 @@ export default {
         }
         return "";
       } else {
-        // this.selected = [];
         let tmp = [];
         let selected = {};
         if (this.value) {
-          // this.selected = [...this.value];
-          // this.selectedItems = [...this.value];
           this.searchInput = "";
         }
         if (this.selectedItems.length) {
@@ -194,10 +195,12 @@ export default {
         }
         return "";
       }
+    },
+    searchInputPlaceholder: function() {
+      return `Search ${this.label}`;
     }
   },
   mounted() {
-    this.searchInputPlaceholder = `Search ${this.label}`;
     if (!this.multiple) {
       if (this.value) {
         let selected = this.items.find(i => i.value == this.value);
@@ -211,10 +214,6 @@ export default {
     }
   },
   methods: {
-    clearSearchInput() {
-      this.searchInput = "";
-      this.searchInputChange();
-    },
     selectItem(index, item) {
       if (!this.multiple) {
         this.selected = item;
@@ -311,7 +310,7 @@ export default {
   width: 100%;
   input {
     font-size: 14px;
-    width: calc(100% - 20px);
+    width: 100%;
     border: none;
   }
   input:focus,
