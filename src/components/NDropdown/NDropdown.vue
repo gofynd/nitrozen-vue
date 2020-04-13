@@ -156,8 +156,10 @@ export default {
       if (!this.multiple) {
         this.selected = {};
         if (this.value) {
-          this.selected = this.items.find(i => i.value == this.value);
-          this.searchInput = this.selected.text;
+          if(this.items.length){
+            this.selected = this.items.find(i => i.value == this.value);
+            this.searchInput = this.selected.text;
+          }
         }
         if (this.selected) {
           return this.selected.text;
