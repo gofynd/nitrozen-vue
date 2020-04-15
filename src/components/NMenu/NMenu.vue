@@ -9,9 +9,8 @@
       <!-- <nitrozen-inline :class="{ 'vertical-dots': mode == 'vertical' }" :icon="'dots'"></nitrozen-inline> -->
       <img :class="{ 'vertical-dots': mode == 'vertical' }" src="./../../assets/dots.svg">
       <transition name="fade">
-        <ul v-if="toggleMenu" :class="{ 'vertical-dropdown': mode == 'vertical' }">
+        <ul v-if="toggleMenu" :class="{ 'nitrozen-menu-vertical-dropdown': mode == 'vertical' }">
           <slot />
-          <!-- <li v-for="(item, index) in menuItem" :key="index">{{item.text}}</li> -->
         </ul>
       </transition>
     </div>
@@ -35,10 +34,9 @@ export default {
       type: [Number, String],
       default: () => "nitrozen-menu" + NitrozenUuid()
     },
-    mode:{
+    mode: {
       type: String,
       default: () => "horizontal"
-
     }
   },
   data() {
@@ -58,15 +56,18 @@ export default {
 @import "./../../base/base.less";
 
 .nitrozen-menu-content {
+  height: 30px;
   display: flex;
   justify-content: space-between;
   color: @TypographyPrimaryColor;
   position: relative;
   cursor: pointer;
-  .vertical-dots{
+  .nitrozen-menu-vertical-dots {
+    height: 30px;
     transform: rotate(90deg);
   }
-  .vertical-dropdown{
+  .nitrozen-menu-vertical-dropdown {
+    z-index: 2;
     position: absolute;
     right: 20px;
   }
