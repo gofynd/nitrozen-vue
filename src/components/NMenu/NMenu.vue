@@ -6,8 +6,7 @@
       class="nitrozen-menu-content"
       @click="toggleMenu = !toggleMenu"
     >
-      <nitrozen-inline :class="{ 'vertical-dots': mode == 'vertical' }" :icon="'dots'"></nitrozen-inline>
-      <!-- <img :class="{ 'vertical-dots': mode == 'vertical' }" src="./../../assets/dots.svg"> -->
+      <nitrozen-inline :class="{ 'nitrozen-menu-vertical-dots': mode == 'vertical' }" :icon="'dots'"></nitrozen-inline>
       <transition name="fade">
         <ul v-if="toggleMenu" :class="{ 'nitrozen-menu-vertical-dropdown': mode == 'vertical' }">
           <slot />
