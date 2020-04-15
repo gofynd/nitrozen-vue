@@ -16,7 +16,7 @@
             </nitrozen-dropdown>
         </div>
         <div class="main-div space-between">
-            <nitrozen-menu>
+            <nitrozen-menu :mode="'vertical'">
                 <nitrozen-menu-item>Item 1</nitrozen-menu-item>
                 <nitrozen-menu-item>Item 2</nitrozen-menu-item>
                 <nitrozen-menu-item>Item 3</nitrozen-menu-item>
@@ -226,6 +226,26 @@
             <nitrozen-input :id="10" :type="'text'" :placeholder="'Last Name'" :label="'Last Name'"></nitrozen-input>
 
         </div>
+        <div class="main-div space-between">
+            <nitrozen-input class="box" :id="11" :type="'text'" :showPrefix="true" prefix="%" :placeholder="'Percentage'"></nitrozen-input>
+            <nitrozen-input class="box" :id="12" :type="'text'" :showSuffix="true" suffix="₹" :placeholder="'Rupee'"></nitrozen-input>
+            <nitrozen-input class="box" :id="13" :type="'text'" :showPrefix="true" prefix="$" :showSuffix="true" suffix=".00"></nitrozen-input>
+            <nitrozen-input class="box" :id="14" :type="'text'" :showPrefix="true" prefix="https://example.com/users/" :placeholder="'Url'"></nitrozen-input>
+
+            <nitrozen-input class="box" :id="15" :type="'text'" :showPrefix="true" :custom="true" :placeholder="'value'">
+                <nitrozen-dropdown
+                    :items="dropdownItemsPrefix"
+                    v-model="selectedDropdown"
+                ></nitrozen-dropdown>
+            </nitrozen-input>
+
+            <nitrozen-input class="box" id="a11" :type="'text'" :showSuffix="true" :custom="true" :placeholder="'value'">
+                <nitrozen-dropdown
+                    :items="dropdownItemsPrefix"
+                    v-model="selectedDropdown"
+                ></nitrozen-dropdown>
+            </nitrozen-input>
+        </div>
 
         <div class="main-div space-between">
             <nitrozen-radio :name="'radio-1'" v-model="radioModel" @change="changeEvent" :radioValue="'1'">Basic Radio 1</nitrozen-radio>
@@ -430,7 +450,19 @@ export default {
                 limit: 10,
                 current: 1,
                 total: 95
-            }
+            },
+            dropdownItemsPrefix:[
+                {
+                    text: '%',
+                    value: 1,
+                },{
+                    text: 'px',
+                    value: 2,
+                },{
+                    text: 'rem',
+                    value: 3,
+                }
+            ],
         }
     },
     mounted(){
@@ -511,6 +543,7 @@ export default {
             console.log(e)
         },
         dropdownInputChange(e){
+            console.log(e)
             if(e && e.text){
                 let text = e.text
                 this.dropdownItemsFiltered = this.dropdownItems.filter(a=>a.text.toLowerCase().indexOf(text.toLowerCase()) > -1)
@@ -537,6 +570,10 @@ export default {
 .space-between {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    .box {
+        margin: 20px;
+    }
 }
 
 .grouping {

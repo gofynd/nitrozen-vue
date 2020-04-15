@@ -6,11 +6,13 @@
       class="nitrozen-menu-content"
       @click="toggleMenu = !toggleMenu"
     >
-      <nitrozen-inline :icon="'dots'"></nitrozen-inline>
+      <nitrozen-inline
+        :class="{ 'nitrozen-menu-vertical-dots': mode == 'vertical' }"
+        :icon="'dots'"
+      ></nitrozen-inline>
       <transition name="fade">
-        <ul v-if="toggleMenu">
+        <ul v-if="toggleMenu" :class="{ 'nitrozen-menu-vertical-dropdown': mode == 'vertical' }">
           <slot />
-          <!-- <li v-for="(item, index) in menuItem" :key="index">{{item.text}}</li> -->
         </ul>
       </transition>
     </div>
@@ -20,16 +22,23 @@
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
 import clickOutside from "./../../directives/NClickOutside";
-
+import NitrozenInline from "../NInline";
 export default {
   name: "nitrozen-menu",
   directives: {
     clickOutside
   },
+  components: {
+    "nitrozen-inline": NitrozenInline
+  },
   props: {
     id: {
       type: [Number, String],
       default: () => "nitrozen-menu" + NitrozenUuid()
+    },
+    mode: {
+      type: String,
+      default: () => "horizontal"
     }
   },
   data() {
@@ -49,11 +58,21 @@ export default {
 @import "./../../base/base.less";
 
 .nitrozen-menu-content {
+  height: 30px;
   display: flex;
   justify-content: space-between;
   color: @TypographyPrimaryColor;
   position: relative;
   cursor: pointer;
+  .nitrozen-menu-vertical-dots {
+    height: 30px;
+    transform: rotate(90deg);
+  }
+  .nitrozen-menu-vertical-dropdown {
+    z-index: 2;
+    position: absolute;
+    right: 20px;
+  }
   ul {
     width: 200px;
     height: auto;

@@ -1,6 +1,8 @@
 <template>
   <div class="nitrozen-dropdown-container">
-    <label v-if="label" class="nitrozen-dropdown-label">{{ label }} {{ required ? " *" : "" }}</label>
+    <label v-if="label" class="nitrozen-dropdown-label"
+      >{{ label }} {{ required ? " *" : "" }}</label
+    >
     <div class="nitrozen-select-wrapper" @click="toggle">
       <div
         class="nitrozen-select"
@@ -13,13 +15,14 @@
         <div class="nitrozen-select__trigger">
           <span v-if="searchable" class="nitrozen-searchable-input-container">
             <input
+              type="search"
               v-model="searchInput"
+              @search="searchInputChange()"
               v-on:keyup="searchInputChange()"
               :placeholder="searchInputPlaceholder"
             />
-            <span v-if="searchInput" @click="clearSearchInput">&#10005;</span>
           </span>
-          <span v-if="!searchable">{{ selectedText }}</span>
+          <span v-else>{{ selectedText }}</span>
           <div class="nitrozen-dropdown-arrow">
             <nitrozen-inline icon="dropdown_arrow_down"></nitrozen-inline>
           </div>
@@ -44,11 +47,15 @@
                 @change="setCheckedItem"
                 v-model="selectedItems"
                 :ref="`multicheckbox-${index}`"
-              >{{ item.text }}</nitrozen-checkbox>
+              >
+                {{ item.text }}
+              </nitrozen-checkbox>
             </template>
             <template v-else>{{ item.text }}</template>
           </span>
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">No {{ label }} Found</span>
+          <span v-if="searchable && items.length == 0" class="nitrozen-option">
+            No {{ label }} Found
+          </span>
         </div>
       </div>
     </div>
@@ -134,14 +141,17 @@ export default {
       searchInput: "",
       showOptions: false,
       dropUp: false,
-      viewport: null,
-      searchInputPlaceholder: ""
+      viewport: null
     };
   },
   watch: {
-    value(){
-      if(Array.isArray(this.value)){
+    value() {
+      if (Array.isArray(this.value)) {
         this.selectedItems = [...this.value];
+      }
+      if (!this.multiple && this.searchable) {
+        const selected = this.items.find(i => i.value == this.value);
+        this.searchInput = selected ? selected.text : this.value;
       }
     }
   },
@@ -150,8 +160,10 @@ export default {
       if (!this.multiple) {
         this.selected = {};
         if (this.value) {
-          this.selected = this.items.find(i => i.value == this.value);
-          this.searchInput = this.selected.text;
+          if(this.items.length){
+            this.selected = this.items.find(i => i.value == this.value);
+            this.searchInput = this.selected.text;
+          }
         }
         if (this.selected) {
           return this.selected.text;
@@ -160,12 +172,9 @@ export default {
         }
         return "";
       } else {
-        // this.selected = [];
         let tmp = [];
         let selected = {};
         if (this.value) {
-          // this.selected = [...this.value];
-          // this.selectedItems = [...this.value];
           this.searchInput = "";
         }
         if (this.selectedItems.length) {
@@ -186,14 +195,16 @@ export default {
         }
         return "";
       }
+    },
+    searchInputPlaceholder: function() {
+      return `Search ${this.label}`;
     }
   },
   mounted() {
-    this.searchInputPlaceholder = `Search ${this.label}`;
     if (!this.multiple) {
       if (this.value) {
         let selected = this.items.find(i => i.value == this.value);
-        this.searchInput = selected.text;
+        this.searchInput = selected ? selected.text : "";
       }
     } else {
       if (this.value) {
@@ -203,10 +214,6 @@ export default {
     }
   },
   methods: {
-    clearSearchInput() {
-      this.searchInput = "";
-      this.searchInputChange();
-    },
     selectItem(index, item) {
       if (!this.multiple) {
         this.selected = item;
@@ -303,7 +310,7 @@ export default {
   width: 100%;
   input {
     font-size: 14px;
-    width: calc(100% - 20px);
+    width: 100%;
     border: none;
   }
   input:focus,
