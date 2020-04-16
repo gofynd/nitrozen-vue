@@ -38,7 +38,7 @@
             </div>
             <div>
                 This is custom html content tooltip
-                <nitrozen-tooltip :custom="true">
+                <nitrozen-tooltip>
                     <div class="tooltip-custom">
                          <I>Custom </I> 
                         <b>Html </b> 
