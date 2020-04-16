@@ -48,7 +48,7 @@
                 </nitrozen-tooltip>
             </div>
         </div>
-        <div class="main-div space-between pad bg-white">
+        <div class="main-div space-between">
             <nitrozen-tab @tab-change="tabChange" :tabItem="fruits" :label="'name'">
             </nitrozen-tab>
         </div>

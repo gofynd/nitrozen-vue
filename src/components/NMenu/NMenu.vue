@@ -65,6 +65,10 @@ export default {
     height: 30px;
     transform: rotate(90deg);
   }
+  &:hover{
+    background-color: @HoverColor;
+    border-radius: 50%;
+  }
   .nitrozen-menu-vertical-dropdown {
     z-index: 2;
     position: absolute;

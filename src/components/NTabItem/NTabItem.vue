@@ -25,8 +25,8 @@ export default {
   color: @TypographyPrimaryColor;
   font-family: @PrimaryFont;
   cursor: pointer;
-  margin-right: 40px;
-  padding-bottom: 20px;
+  margin-right: 24px;
+  padding-bottom: 24px;
   font-size: 14px;
   font-weight: 400;
 }
