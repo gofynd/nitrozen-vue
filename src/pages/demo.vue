@@ -30,13 +30,26 @@
                 <nitrozen-menu-item>Item 3</nitrozen-menu-item>
             </nitrozen-menu>
         </div>
+        
+        <div class="main-div space-between">
+            <div>
+                This is text tooltip
+                <nitrozen-tooltip tooltipText="Text tooltip">
+                </nitrozen-tooltip>
+            </div>
+            <div>
+                This is custom html content tooltip
+                <nitrozen-tooltip>
+                    <div class="tooltip-custom">
+                         <I>Custom </I> 
+                        <b>Html </b> 
+                        <strike>content </strike>
+                    </div>
+                </nitrozen-tooltip>
+            </div>
+        </div>
         <div class="main-div space-between pad bg-white">
             <nitrozen-tab @tab-change="tabChange" :tabItem="fruits" :label="'name'">
-                <!-- <nitrozen-tab-item>Item 1</nitrozen-tab-item>
-                <nitrozen-tab-item class= "active">Item 2</nitrozen-tab-item>
-                <nitrozen-tab-item>Item 3</nitrozen-tab-item>
-                <nitrozen-tab-item>Item 4</nitrozen-tab-item>
-                <nitrozen-tab-item>Item 5</nitrozen-tab-item> -->
             </nitrozen-tab>
         </div>
         <div class="main-div">
@@ -601,6 +614,11 @@ export default {
     .n-button {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.09), 0 6px 20px 0 rgba(0, 0, 0, 0.09) !important;
     }
+}
+.tooltip-custom {
+    padding: 1px;
+    border: 1px dotted gray;
+    margin: 10px;
 }
 
 </style>

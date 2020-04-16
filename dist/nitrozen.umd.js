@@ -814,12 +814,12 @@ var NInputSuffix_component = normalizeComponent(
 )
 
 /* harmony default export */ var NInputSuffix = (NInputSuffix_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aabd3f7-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NTooltip/NTooltip.vue?vue&type=template&id=b410c0a8&
-var NTooltipvue_type_template_id_b410c0a8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-tooltip"},[_c('nitrozen-inline',{attrs:{"icon":'info'}}),_c('span',{staticClass:"nitrozen-tooltiptext",class:_vm.tooltipPositionClass},[_vm._v(_vm._s(_vm.tooltipText))])],1)}
-var NTooltipvue_type_template_id_b410c0a8_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aabd3f7-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NTooltip/NTooltip.vue?vue&type=template&id=78f5e4c4&
+var NTooltipvue_type_template_id_78f5e4c4_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-tooltip"},[_c('nitrozen-inline',{attrs:{"icon":'info'}}),_c('span',{staticClass:"nitrozen-tooltiptext",class:_vm.tooltipPositionClass},[(_vm.tooltipText)?[_vm._v(_vm._s(_vm.tooltipText))]:[_vm._t("default")]],2)],1)}
+var NTooltipvue_type_template_id_78f5e4c4_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NTooltip/NTooltip.vue?vue&type=template&id=b410c0a8&
+// CONCATENATED MODULE: ./src/components/NTooltip/NTooltip.vue?vue&type=template&id=78f5e4c4&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aabd3f7-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NInline/NInline.vue?vue&type=template&id=65d43b41&
 var NInlinevue_type_template_id_65d43b41_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',_vm._g({staticClass:"nitrozen-inline-svg",domProps:{"innerHTML":_vm._s(_vm.getSVG)}},_vm.$listeners))}
@@ -900,6 +900,9 @@ var NInline_component = normalizeComponent(
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ var NTooltipvue_type_script_lang_js_ = ({
   name: "nitrozen-tooltip",
@@ -943,8 +946,8 @@ var NTooltipvue_type_style_index_0_lang_less_ = __webpack_require__("b224");
 
 var NTooltip_component = normalizeComponent(
   NTooltip_NTooltipvue_type_script_lang_js_,
-  NTooltipvue_type_template_id_b410c0a8_render,
-  NTooltipvue_type_template_id_b410c0a8_staticRenderFns,
+  NTooltipvue_type_template_id_78f5e4c4_render,
+  NTooltipvue_type_template_id_78f5e4c4_staticRenderFns,
   false,
   null,
   null,
