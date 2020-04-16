@@ -30,6 +30,7 @@
                 <nitrozen-menu-item>Item 3</nitrozen-menu-item>
             </nitrozen-menu>
         </div>
+        
         <div class="main-div space-between">
             <div>
                 This is text tooltip
@@ -47,13 +48,8 @@
                 </nitrozen-tooltip>
             </div>
         </div>
-        <div class="main-div space-between">
+        <div class="main-div space-between pad bg-white">
             <nitrozen-tab @tab-change="tabChange" :tabItem="fruits" :label="'name'">
-                <!-- <nitrozen-tab-item>Item 1</nitrozen-tab-item>
-                <nitrozen-tab-item class= "active">Item 2</nitrozen-tab-item>
-                <nitrozen-tab-item>Item 3</nitrozen-tab-item>
-                <nitrozen-tab-item>Item 4</nitrozen-tab-item>
-                <nitrozen-tab-item>Item 5</nitrozen-tab-item> -->
             </nitrozen-tab>
         </div>
         <div class="main-div">
@@ -582,6 +578,12 @@ export default {
     margin-top: 2%;
     padding: 40px;
     background: #F8F8F8;
+    &.pad {
+        padding: 24px;
+    }
+    &.bg-white {
+        background: #ffffff
+    }
 }
 
 .space-between {

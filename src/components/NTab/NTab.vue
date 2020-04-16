@@ -6,8 +6,7 @@
         :class="{ 'nitrozen-tab-active': activeTab == index }"
         v-for="(item, index) in tabItem"
         :key="index"
-        >{{ item[label] || item }}</nitrozen-tab-item
-      >
+      >{{ item[label] || item }}</nitrozen-tab-item>
     </ul>
   </div>
 </template>
@@ -19,14 +18,15 @@
   width: 100%;
   .nitrozen-tab {
     display: flex;
-    width:100%;
+    width: 100%;
     box-sizing: border-box;
     list-style: none;
     justify-content: flex-start;
     background-color: @WhiteColor;
     overflow-x: scroll;
     -ms-overflow-style: none;
-    padding: 0 24px;
+    padding: 0;
+    margin: 0;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -40,40 +40,40 @@ import NitrozenTabItem from "./../NTabItem";
 export default {
   name: "nitrozen-tab",
   components: {
-    "nitrozen-tab-item": NitrozenTabItem,
+    "nitrozen-tab-item": NitrozenTabItem
   },
   props: {
     id: {
       type: [Number, String],
-      default: () => "nitrozen-tab" + NitrozenUuid(),
+      default: () => "nitrozen-tab" + NitrozenUuid()
     },
     tabItem: {
       type: Array,
       default: () => [],
-      required: true,
+      required: true
     },
     label: {
-      type: String,
+      type: String
     },
     activeIndex: {
       type: Number,
-      default: 0,
-    },
+      default: 0
+    }
   },
   data() {
     return {
-      activeTab: this.activeIndex,
+      activeTab: this.activeIndex
     };
   },
   methods: {
     selectTab: function(index, item) {
       let obj = {
         index: index,
-        item: item,
+        item: item
       };
       this.activeTab = index;
       this.$emit("tab-change", obj);
-    },
-  },
+    }
+  }
 };
 </script>
