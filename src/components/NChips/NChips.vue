@@ -80,6 +80,7 @@ export default {
     methods: {
         spliceElement: function (id) {
             this.$refs[id].parentElement.style.display = "none";
+            this.$emit("remove");
         },
         setBackground: function(){
             if(this.multiSelect){
