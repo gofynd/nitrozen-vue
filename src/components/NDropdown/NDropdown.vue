@@ -108,6 +108,9 @@ export default {
     multiple: {
       default: false
     },
+    placeholder: {
+      type: String
+    },
     /**
      * dropdown selection required
      */
@@ -168,7 +171,7 @@ export default {
         if (this.selected) {
           return this.selected.text;
         } else if (this.label) {
-          return `Choose ${this.label}`;
+          return this.placeholder || `Choose ${this.label}`;
         }
         return "";
       } else {
@@ -191,13 +194,13 @@ export default {
           tmp = [...new Set(tmp)];
           return tmp.toString();
         } else if (this.label) {
-          return `Choose ${this.label}`;
+          return this.placeholder || `Choose ${this.label}`;
         }
         return "";
       }
     },
     searchInputPlaceholder: function() {
-      return `Search ${this.label}`;
+      return this.placeholder || `Search ${this.label}`;
     }
   },
   mounted() {
