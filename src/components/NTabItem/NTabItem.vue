@@ -12,8 +12,8 @@ export default {
   props: {
     id: {
       type: [Number, String],
-      default: () => "nitrozen-tab-item" + NitrozenUuid(),
-    },
+      default: () => "nitrozen-tab-item" + NitrozenUuid()
+    }
   }
 };
 </script>
@@ -24,9 +24,9 @@ export default {
   justify-content: center;
   color: @TypographyPrimaryColor;
   font-family: @PrimaryFont;
-  cursor:pointer;
-  margin-right: 40px;
-  padding: 20px 0px;
+  cursor: pointer;
+  margin-right: 24px;
+  padding-bottom: 24px;
   font-size: 14px;
   font-weight: 400;
 }

@@ -6,10 +6,7 @@
       class="nitrozen-menu-content"
       @click="toggleMenu = !toggleMenu"
     >
-      <nitrozen-inline
-        :class="{ 'nitrozen-menu-vertical-dots': mode == 'vertical' }"
-        :icon="'dots'"
-      ></nitrozen-inline>
+      <nitrozen-inline :class="{ 'nitrozen-menu-vertical-dots': mode == 'vertical' }" :icon="'dots'"></nitrozen-inline>
       <transition name="fade">
         <ul v-if="toggleMenu" :class="{ 'nitrozen-menu-vertical-dropdown': mode == 'vertical' }">
           <slot />
@@ -67,6 +64,10 @@ export default {
   .nitrozen-menu-vertical-dots {
     height: 30px;
     transform: rotate(90deg);
+  }
+  &:hover{
+    background-color: @HoverColor;
+    border-radius: 50%;
   }
   .nitrozen-menu-vertical-dropdown {
     z-index: 2;
