@@ -142,12 +142,6 @@ export default {
     };
   },
   watch: {
-    items() {
-      if (!this.multiple && this.searchable) {
-        const selected = this.items.find(i => i.value == this.value);
-        this.searchInput = selected ? selected.text : this.searchInput;
-      }
-    },
     value() {
       if (Array.isArray(this.value)) {
         this.selectedItems = [...this.value];
