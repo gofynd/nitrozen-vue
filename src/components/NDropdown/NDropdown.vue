@@ -237,11 +237,13 @@ export default {
       this.$emit("change", this.selectedItems);
     },
     searchInputChange() {
+      this.showOptions = true;
       let obj = {
-        text: this.searchInput,
-        id: this.id
+        id: this.id,
+        text: this.searchInput
       };
       this.eventEmit(obj, "searchInputChange");
+      this.calculateViewport();
     },
     toggle() {
       if (this.disabled) return;
@@ -271,7 +273,7 @@ export default {
       // close dropdown on outside click
       const select = this.$refs.n_dropdown;
       if (!select.contains(e.target)) {
-        select.classList.remove("nitrozen-dropdown-open");
+        this.showOptions = false;
       }
     },
     calculateViewport() {
