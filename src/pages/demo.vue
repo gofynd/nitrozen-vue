@@ -267,6 +267,10 @@
         </div>
 
         <div class="main-div space-between">
+            <nitrozen-checkbox v-model="singleCheckboxModel">Test Single Checkbox</nitrozen-checkbox> 
+            <span>Checkbox model value: {{ singleCheckboxModel }}</span>
+        </div>
+        <div class="main-div space-between">
             <nitrozen-checkbox v-model="checkArray" @change="testFunc($event)" checkboxValue="Check 1">Check 1</nitrozen-checkbox> 
         <nitrozen-checkbox checkboxValue="Check 2" @change="testFunc($event)" v-model="checkArray">Check 2</nitrozen-checkbox>        
         <nitrozen-checkbox checkboxValue="Check 3" @change="testFunc($event)" v-model="checkArray">Check 3</nitrozen-checkbox>        
@@ -399,6 +403,7 @@ export default {
             multiSelect: [1],
             numberOfClick: 0,
             abcd: true,
+            singleCheckboxModel: true,
             inputModel: 'Some Value',
             autoModel: '',
             checkArray: ["Check 1"],

@@ -62,7 +62,7 @@ export default {
         this.$emit("change", checkboxModel);
       } else {
         this.$emit("change", event); // TODO: need to look into this, why we need?
-        this.$emit("input", event.target.value);
+        this.$emit("input", event.target.checked);
       }
     }
   }
