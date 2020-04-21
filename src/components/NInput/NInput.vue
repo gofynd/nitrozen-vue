@@ -66,7 +66,7 @@
     </div>
 
     <div class="n-input-label-container">
-      <label class="n-input-label" v-if="label">
+      <label class="n-input-label" v-if="label" :for="id">
         {{ label }}
         <span class="nitrozen-tooltip-icon" v-if="showTooltip">
           <nitrozen-tooltip :tooltipText="tooltipText"></nitrozen-tooltip>
