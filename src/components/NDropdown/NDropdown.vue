@@ -15,8 +15,8 @@
             <input
               type="search"
               v-model="searchInput"
-              @search="searchInputChange()"
-              v-on:keyup="searchInputChange()"
+              @search="searchInputChange"
+              v-on:keyup="searchInputChange"
               :placeholder="searchInputPlaceholder"
             />
           </span>
@@ -216,7 +216,6 @@ export default {
         this.selected = item;
         if (item.text) {
           this.searchInput = item.text;
-          this.searchInputChange();
         }
         this.$emit("input", item.value); // v-model implementation
         this.$emit("change", item.value);
@@ -230,8 +229,9 @@ export default {
       this.$emit("input", this.selectedItems); // v-model implementation
       this.$emit("change", this.selectedItems);
     },
-    searchInputChange() {
+    searchInputChange(e) {
       this.showOptions = true;
+      this.searchInput = e.target.value
       let obj = {
         id: this.id,
         text: this.searchInput
