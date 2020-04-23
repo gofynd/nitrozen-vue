@@ -1,6 +1,11 @@
 <template>
   <div class="nitrozen-dropdown-container">
-    <label v-if="label" class="nitrozen-dropdown-label">{{ label }} {{ required ? " *" : "" }}</label>
+    <label v-if="label" class="nitrozen-dropdown-label">
+      {{ label }} {{ required ? " *" : "" }}
+      <span class="nitrozen-tooltip-icon" v-if="tooltip!=''">
+        <nitrozen-tooltip :tooltipText="tooltip"></nitrozen-tooltip>
+      </span>
+    </label>
     <div class="nitrozen-select-wrapper" @click="toggle">
       <div
         class="nitrozen-select"
@@ -59,12 +64,14 @@
 import NitrozenUuid from "./../../utils/NUuid";
 import NitrozenInline from "./../NInline";
 import NitrozenCheckbox from "./../NCheckbox";
+import NTooltip from "./../NTooltip";
 
 export default {
   name: "nitrozen-dropdown",
   components: {
     "nitrozen-inline": NitrozenInline,
-    "nitrozen-checkbox": NitrozenCheckbox
+    "nitrozen-checkbox": NitrozenCheckbox,
+    "nitrozen-tooltip": NTooltip
   },
   props: {
     /**
@@ -123,6 +130,10 @@ export default {
      */
     searchable: {
       default: false
+    },
+    tooltip: {
+      type: String,
+      default: ""
     },
     /**
      * selected value
@@ -231,7 +242,7 @@ export default {
     },
     searchInputChange(e) {
       this.showOptions = true;
-      this.searchInput = e.target.value
+      this.searchInput = e.target.value;
       let obj = {
         id: this.id,
         text: this.searchInput

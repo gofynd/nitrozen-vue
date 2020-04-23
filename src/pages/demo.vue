@@ -8,6 +8,7 @@
             <nitrozen-dropdown
                 label="data"
                 id="searchable-dropdown-1"
+                tooltip="This is a searchable dropdown"
                 :items="dropdownItemsFiltered"
                 v-model="selectedDropdown"
                 :searchable="true"

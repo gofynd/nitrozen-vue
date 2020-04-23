@@ -1970,15 +1970,15 @@ var NChips_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/NChips/index.js
 
 /* harmony default export */ var components_NChips = (NChips);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5e4374c0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=template&id=1c17932c&
-var NDropdownvue_type_template_id_1c17932c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-dropdown-container"},[(_vm.label)?_c('label',{staticClass:"nitrozen-dropdown-label"},[_vm._v(_vm._s(_vm.label)+" "+_vm._s(_vm.required ? " *" : ""))]):_vm._e(),_c('div',{staticClass:"nitrozen-select-wrapper",on:{"click":_vm.toggle}},[_c('div',{ref:"n_dropdown",staticClass:"nitrozen-select",class:{
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5e4374c0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=template&id=438b6860&
+var NDropdownvue_type_template_id_438b6860_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-dropdown-container"},[(_vm.label)?_c('label',{staticClass:"nitrozen-dropdown-label"},[_vm._v(" "+_vm._s(_vm.label)+" "+_vm._s(_vm.required ? " *" : "")+" "),(_vm.tooltip!='')?_c('span',{staticClass:"nitrozen-tooltip-icon"},[_c('nitrozen-tooltip',{attrs:{"tooltipText":_vm.tooltip}})],1):_vm._e()]):_vm._e(),_c('div',{staticClass:"nitrozen-select-wrapper",on:{"click":_vm.toggle}},[_c('div',{ref:"n_dropdown",staticClass:"nitrozen-select",class:{
         disabled: _vm.disabled,
         'nitrozen-dropdown-open': _vm.showOptions
       }},[_c('div',{staticClass:"nitrozen-select__trigger"},[(_vm.searchable)?_c('span',{staticClass:"nitrozen-searchable-input-container"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.searchInput),expression:"searchInput"}],attrs:{"type":"search","placeholder":_vm.searchInputPlaceholder},domProps:{"value":(_vm.searchInput)},on:{"search":_vm.searchInputChange,"keyup":_vm.searchInputChange,"input":function($event){if($event.target.composing){ return; }_vm.searchInput=$event.target.value}}})]):_c('span',[_vm._v(_vm._s(_vm.selectedText))]),_c('div',{staticClass:"nitrozen-dropdown-arrow"},[_c('nitrozen-inline',{attrs:{"icon":"dropdown_arrow_down"}})],1)]),_c('div',{ref:"nitrozen-select-option",staticClass:"nitrozen-options",class:{ 'nitrozen-dropup': _vm.dropUp },on:{"&scroll":function($event){return _vm.handleScroll($event)}}},[_vm._l((_vm.items),function(item,index){return _c('span',{key:index,staticClass:"nitrozen-option ripple",class:{ selected: item == _vm.selected },attrs:{"data-value":item.value},on:{"click":function($event){return _vm.selectItem(index, item)}}},[(_vm.multiple)?[_c('nitrozen-checkbox',{ref:("multicheckbox-" + index),refInFor:true,attrs:{"checkboxValue":item.value},on:{"change":_vm.setCheckedItem},model:{value:(_vm.selectedItems),callback:function ($$v) {_vm.selectedItems=$$v},expression:"selectedItems"}},[_vm._v(_vm._s(item.text))])]:[_vm._v(_vm._s(item.text))]],2)}),(_vm.searchable && _vm.items.length == 0)?_c('span',{staticClass:"nitrozen-option"},[_vm._v("No "+_vm._s(_vm.label)+" Found")]):_vm._e()],2)])])])}
-var NDropdownvue_type_template_id_1c17932c_staticRenderFns = []
+var NDropdownvue_type_template_id_438b6860_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=template&id=1c17932c&
+// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=template&id=438b6860&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=script&lang=js&
 //
@@ -2038,6 +2038,12 @@ var NDropdownvue_type_template_id_1c17932c_staticRenderFns = []
 //
 //
 //
+//
+//
+//
+//
+//
+
 
 
 
@@ -2045,7 +2051,8 @@ var NDropdownvue_type_template_id_1c17932c_staticRenderFns = []
   name: "nitrozen-dropdown",
   components: {
     "nitrozen-inline": components_NInline,
-    "nitrozen-checkbox": components_NCheckbox
+    "nitrozen-checkbox": components_NCheckbox,
+    "nitrozen-tooltip": components_NTooltip
   },
   props: {
     /**
@@ -2110,6 +2117,10 @@ var NDropdownvue_type_template_id_1c17932c_staticRenderFns = []
      */
     searchable: {
       default: false
+    },
+    tooltip: {
+      type: String,
+      default: ""
     },
 
     /**
@@ -2331,8 +2342,8 @@ var NDropdownvue_type_style_index_0_lang_less_ = __webpack_require__("b67f");
 
 var NDropdown_component = normalizeComponent(
   NDropdown_NDropdownvue_type_script_lang_js_,
-  NDropdownvue_type_template_id_1c17932c_render,
-  NDropdownvue_type_template_id_1c17932c_staticRenderFns,
+  NDropdownvue_type_template_id_438b6860_render,
+  NDropdownvue_type_template_id_438b6860_staticRenderFns,
   false,
   null,
   null,
