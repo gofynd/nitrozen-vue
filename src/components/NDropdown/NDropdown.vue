@@ -173,7 +173,7 @@ export default {
             this.searchInput = this.selected.text;
           }
         }
-        if (this.selected) {
+        if (this.selected && this.selected.text) {
           return this.selected.text;
         } else if (this.label) {
           return this.placeholder || `Choose ${this.label}`;

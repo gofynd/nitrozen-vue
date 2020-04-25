@@ -429,7 +429,7 @@ export default {
              text: 'West Bengal',
              value: 3,   
             }],
-            selectedDropdown: 2,
+            selectedDropdown: '',
             fruits: [{
                     name: 'Lemon'
                 },
