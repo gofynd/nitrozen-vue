@@ -9,11 +9,7 @@
           :aria-labelledby="id + '_title'"
           :aria-describedby="id + '_desc'"
         >
-          <header
-            class="nitrozen-dialog-header"
-            v-show="title"
-            :id="id + '_title'"
-          >
+          <header class="nitrozen-dialog-header" v-show="title" :id="id + '_title'">
             <slot name="header">
               {{ title }}
               <nitrozen-inline
@@ -25,7 +21,7 @@
             </slot>
           </header>
           <section class="nitrozen-dialog-body" :id="id + '_desc'">
-            <slot name="body"> </slot>
+            <slot name="body"></slot>
           </section>
           <footer class="nitrozen-dialog-footer">
             <slot name="footer">
@@ -33,21 +29,16 @@
                 v-if="neutralButtonLabel"
                 theme="secondary"
                 @click="close(neutralButtonLabel)"
-              >
-                {{ neutralButtonLabel }}
-              </nitrozen-button>
+              >{{ neutralButtonLabel }}</nitrozen-button>
               <nitrozen-button
+                class="nitrozen-dialog-negative-button"
                 v-if="negativeButtonLabel"
                 @click="close(negativeButtonLabel)"
-              >
-                {{ negativeButtonLabel }}
-              </nitrozen-button>
+              >{{ negativeButtonLabel }}</nitrozen-button>
               <nitrozen-button
                 v-if="positiveButtonLabel"
                 @click="close(positiveButtonLabel)"
-              >
-                {{ positiveButtonLabel }}
-              </nitrozen-button>
+              >{{ positiveButtonLabel }}</nitrozen-button>
             </slot>
           </footer>
         </div>
