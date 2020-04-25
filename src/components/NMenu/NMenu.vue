@@ -88,7 +88,7 @@ export default {
     margin-top: 2em;
     border-radius: 2px;
 
-    .nitrozen-scrollbar;
+    .nitrozen-menu-scrollbar;
   }
 }
 

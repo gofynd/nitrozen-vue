@@ -388,6 +388,9 @@
             <template v-slot:body name="body">
                 <nitrozen-radio :name="'radio-1'" v-model="radioModel" @change="changeEvent" :radioValue="'1'">Basic Radio 1</nitrozen-radio>
                 <nitrozen-radio :name="'radio-1'" v-model="radioModel" @change="changeEvent" :radioValue="'2'">Basic Radio 2</nitrozen-radio>
+                <nitrozen-radio :name="'radio-1'" v-model="radioModel" @change="changeEvent" :radioValue="'3'">Basic Radio 3</nitrozen-radio>
+                <nitrozen-radio :name="'radio-1'" v-model="radioModel" @change="changeEvent" :radioValue="'4'" style="height:400px">Basic Radio 4</nitrozen-radio>
+                <nitrozen-radio :name="'radio-1'" v-model="radioModel" @change="changeEvent" :radioValue="'5'">Basic Radio 4</nitrozen-radio>
             </template>
         </nitrozen-dialog>
 
@@ -548,7 +551,7 @@ export default {
                         })
                     break;
                 case 'choose':
-                    this.$refs['choose_dialog'].open({ width: '300px' })
+                    this.$refs['choose_dialog'].open({ width: '300px', height: '400px', })
                     break;
                 default:
                     this.$refs['alert_dialog'].open({ dismissible: false })
