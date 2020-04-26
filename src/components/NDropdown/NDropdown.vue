@@ -197,7 +197,7 @@ export default {
             }
           });
           tmp = [...new Set(tmp)];
-          return tmp.toString();
+          return `${tmp.join(', ')}`;
         } else if (this.label) {
           return this.placeholder || `Choose ${this.label}`;
         }

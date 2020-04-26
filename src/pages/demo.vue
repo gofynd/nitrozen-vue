@@ -354,7 +354,6 @@
 
         <div class="main-div space-between">
             <nitrozen-dropdown label="Multiple State" :items="dropdownItemsFiltered"
-                :searchable="true"
                 @searchInputChange="dropdownInputChange" 
                 :multiple="true" 
                 @change="changeEvent" 
