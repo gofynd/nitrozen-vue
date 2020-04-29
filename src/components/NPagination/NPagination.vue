@@ -2,10 +2,7 @@
   <div class="nitrozen-pagination-container" v-if="value.total > 0">
     <div class="nitrozen-pagination">
       <div class="nitrozen-pagination__left">
-        <span class="nitrozen-pagination__count">
-          {{ firstRecord }} - {{ lastRecord }} / {{ value.total }}
-          {{ name || "" }}
-        </span>
+        <span class="nitrozen-pagination__count">{{countsText}}</span>
       </div>
       <div class="nitrozen-pagination__right">
         <div class="nitrozen-pagination__select">
@@ -15,8 +12,7 @@
             :items="pageSizes"
             v-model="selectedPageSize"
             @change="pageSizeChange"
-          >
-          </nitrozen-dropdown>
+          ></nitrozen-dropdown>
         </div>
         <nitrozen-button
           class="nitrozen-pagination__prev"
@@ -63,6 +59,14 @@ export default {
      */
     name: {
       type: String
+    },
+    /**
+     * Show total records available.
+     * default value is true.
+     */
+    showTotal: {
+      type: Boolean,
+      default: true
     },
     /**
      * page size dropdown options
@@ -125,6 +129,14 @@ export default {
       return this.value.limit * this.value.current < this.value.total
         ? this.value.limit * this.value.current
         : this.value.total;
+    },
+    countsText() {
+      let txt = ` ${this.firstRecord} - ${this.lastRecord}`;
+      if (this.showTotal) {
+        txt += ` / ${this.value.total}`;
+      }
+      txt += ` ${this.name || ""}`;
+      return txt;
     }
   },
   methods: {

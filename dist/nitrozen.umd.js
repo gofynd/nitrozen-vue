@@ -604,32 +604,7 @@ module.exports = __webpack_require__.p + "img/loader.a9ea6bef.gif";
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, "NitrozenAutocomplete", function() { return /* reexport */ components_NAutocomplete; });
-__webpack_require__.d(__webpack_exports__, "NitrozenButton", function() { return /* reexport */ components_NBtn; });
-__webpack_require__.d(__webpack_exports__, "NitrozenBadge", function() { return /* reexport */ components_NBadge; });
-__webpack_require__.d(__webpack_exports__, "NitrozenCheckBox", function() { return /* reexport */ components_NCheckbox; });
-__webpack_require__.d(__webpack_exports__, "NitrozenChips", function() { return /* reexport */ components_NChips; });
-__webpack_require__.d(__webpack_exports__, "NitrozenDropdown", function() { return /* reexport */ components_NDropdown; });
-__webpack_require__.d(__webpack_exports__, "NitrozenDialog", function() { return /* reexport */ components_NDialog; });
-__webpack_require__.d(__webpack_exports__, "NitrozenError", function() { return /* reexport */ components_NError; });
-__webpack_require__.d(__webpack_exports__, "NitrozenInline", function() { return /* reexport */ components_NInline; });
-__webpack_require__.d(__webpack_exports__, "NitrozenInput", function() { return /* reexport */ components_NInput; });
-__webpack_require__.d(__webpack_exports__, "NitrozenMenu", function() { return /* reexport */ components_NMenu; });
-__webpack_require__.d(__webpack_exports__, "NitrozenMenuItem", function() { return /* reexport */ components_NMenuItem; });
-__webpack_require__.d(__webpack_exports__, "NitrozenTab", function() { return /* reexport */ components_NTab; });
-__webpack_require__.d(__webpack_exports__, "NitrozenTabItem", function() { return /* reexport */ components_NTabItem; });
-__webpack_require__.d(__webpack_exports__, "NitrozenPagination", function() { return /* reexport */ components_NPagination; });
-__webpack_require__.d(__webpack_exports__, "NitrozenRadio", function() { return /* reexport */ components_NRadio; });
-__webpack_require__.d(__webpack_exports__, "NitrozenStepper", function() { return /* reexport */ components_NStepper; });
-__webpack_require__.d(__webpack_exports__, "NitrozenToggleBtn", function() { return /* reexport */ components_NToggleBtn; });
-__webpack_require__.d(__webpack_exports__, "NitrozenTooltip", function() { return /* reexport */ components_NTooltip; });
-__webpack_require__.d(__webpack_exports__, "strokeBtn", function() { return /* reexport */ NStrokeBtn; });
-__webpack_require__.d(__webpack_exports__, "flatBtn", function() { return /* reexport */ NFlatBtn; });
-__webpack_require__.d(__webpack_exports__, "clickOutside", function() { return /* reexport */ NClickOutside; });
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -2932,18 +2907,14 @@ var NTab_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/NTab/index.js
 
 /* harmony default export */ var components_NTab = (NTab);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5e4374c0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=template&id=56e11596&
-var NPaginationvue_type_template_id_56e11596_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.value.total > 0)?_c('div',{staticClass:"nitrozen-pagination-container"},[_c('div',{staticClass:"nitrozen-pagination"},[_c('div',{staticClass:"nitrozen-pagination__left"},[_c('span',{staticClass:"nitrozen-pagination__count"},[_vm._v(" "+_vm._s(_vm.firstRecord)+" - "+_vm._s(_vm.lastRecord)+" / "+_vm._s(_vm.value.total)+" "+_vm._s(_vm.name || "")+" ")])]),_c('div',{staticClass:"nitrozen-pagination__right"},[_c('div',{staticClass:"nitrozen-pagination__select"},[_c('span',{staticClass:"nitrozen-pagination__select__label"},[_vm._v("Rows per page")]),_c('nitrozen-dropdown',{staticClass:"nitrozen-pagination-page-size",attrs:{"items":_vm.pageSizes},on:{"change":_vm.pageSizeChange},model:{value:(_vm.selectedPageSize),callback:function ($$v) {_vm.selectedPageSize=$$v},expression:"selectedPageSize"}})],1),_c('nitrozen-button',{staticClass:"nitrozen-pagination__prev",class:{'pagination-diabled' : _vm.value.current == 1},attrs:{"title":"Previous"},on:{"click":_vm.previous}},[_c('nitrozen-inline',{attrs:{"icon":"arrow-left-black"}})],1),_c('nitrozen-button',{staticClass:"nitrozen-pagination__next",class:{'pagination-diabled' : _vm.value.current >= _vm.pages},attrs:{"title":"Next"},on:{"click":_vm.next}},[_c('nitrozen-inline',{attrs:{"icon":"arrow-right-black"}})],1)],1)])]):_vm._e()}
-var NPaginationvue_type_template_id_56e11596_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5e4374c0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=template&id=016f49ea&
+var NPaginationvue_type_template_id_016f49ea_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.value.total > 0)?_c('div',{staticClass:"nitrozen-pagination-container"},[_c('div',{staticClass:"nitrozen-pagination"},[_c('div',{staticClass:"nitrozen-pagination__left"},[_c('span',{staticClass:"nitrozen-pagination__count"},[_vm._v(_vm._s(_vm.countsText))])]),_c('div',{staticClass:"nitrozen-pagination__right"},[_c('div',{staticClass:"nitrozen-pagination__select"},[_c('span',{staticClass:"nitrozen-pagination__select__label"},[_vm._v("Rows per page")]),_c('nitrozen-dropdown',{staticClass:"nitrozen-pagination-page-size",attrs:{"items":_vm.pageSizes},on:{"change":_vm.pageSizeChange},model:{value:(_vm.selectedPageSize),callback:function ($$v) {_vm.selectedPageSize=$$v},expression:"selectedPageSize"}})],1),_c('nitrozen-button',{staticClass:"nitrozen-pagination__prev",class:{'pagination-diabled' : _vm.value.current == 1},attrs:{"title":"Previous"},on:{"click":_vm.previous}},[_c('nitrozen-inline',{attrs:{"icon":"arrow-left-black"}})],1),_c('nitrozen-button',{staticClass:"nitrozen-pagination__next",class:{'pagination-diabled' : _vm.value.current >= _vm.pages},attrs:{"title":"Next"},on:{"click":_vm.next}},[_c('nitrozen-inline',{attrs:{"icon":"arrow-right-black"}})],1)],1)])]):_vm._e()}
+var NPaginationvue_type_template_id_016f49ea_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NPagination/NPagination.vue?vue&type=template&id=56e11596&
+// CONCATENATED MODULE: ./src/components/NPagination/NPagination.vue?vue&type=template&id=016f49ea&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=script&lang=js&
-//
-//
-//
-//
 //
 //
 //
@@ -3005,6 +2976,15 @@ var NPaginationvue_type_template_id_56e11596_staticRenderFns = []
      */
     name: {
       type: String
+    },
+
+    /**
+     * Show total records available.
+     * default value is true.
+     */
+    showTotal: {
+      type: Boolean,
+      default: true
     },
 
     /**
@@ -3072,6 +3052,17 @@ var NPaginationvue_type_template_id_56e11596_staticRenderFns = []
 
     lastRecord() {
       return this.value.limit * this.value.current < this.value.total ? this.value.limit * this.value.current : this.value.total;
+    },
+
+    countsText() {
+      let txt = ` ${this.firstRecord} - ${this.lastRecord}`;
+
+      if (this.showTotal) {
+        txt += ` / ${this.value.total}`;
+      }
+
+      txt += ` ${this.name || ""}`;
+      return txt;
     }
 
   },
@@ -3126,8 +3117,8 @@ var NPaginationvue_type_style_index_0_lang_less_ = __webpack_require__("31a4");
 
 var NPagination_component = normalizeComponent(
   NPagination_NPaginationvue_type_script_lang_js_,
-  NPaginationvue_type_template_id_56e11596_render,
-  NPaginationvue_type_template_id_56e11596_staticRenderFns,
+  NPaginationvue_type_template_id_016f49ea_render,
+  NPaginationvue_type_template_id_016f49ea_staticRenderFns,
   false,
   null,
   null,
@@ -3494,6 +3485,28 @@ var NToggleBtn_component = normalizeComponent(
 
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib-no-default.js
+/* concated harmony reexport NitrozenAutocomplete */__webpack_require__.d(__webpack_exports__, "NitrozenAutocomplete", function() { return components_NAutocomplete; });
+/* concated harmony reexport NitrozenButton */__webpack_require__.d(__webpack_exports__, "NitrozenButton", function() { return components_NBtn; });
+/* concated harmony reexport NitrozenBadge */__webpack_require__.d(__webpack_exports__, "NitrozenBadge", function() { return components_NBadge; });
+/* concated harmony reexport NitrozenCheckBox */__webpack_require__.d(__webpack_exports__, "NitrozenCheckBox", function() { return components_NCheckbox; });
+/* concated harmony reexport NitrozenChips */__webpack_require__.d(__webpack_exports__, "NitrozenChips", function() { return components_NChips; });
+/* concated harmony reexport NitrozenDropdown */__webpack_require__.d(__webpack_exports__, "NitrozenDropdown", function() { return components_NDropdown; });
+/* concated harmony reexport NitrozenDialog */__webpack_require__.d(__webpack_exports__, "NitrozenDialog", function() { return components_NDialog; });
+/* concated harmony reexport NitrozenError */__webpack_require__.d(__webpack_exports__, "NitrozenError", function() { return components_NError; });
+/* concated harmony reexport NitrozenInline */__webpack_require__.d(__webpack_exports__, "NitrozenInline", function() { return components_NInline; });
+/* concated harmony reexport NitrozenInput */__webpack_require__.d(__webpack_exports__, "NitrozenInput", function() { return components_NInput; });
+/* concated harmony reexport NitrozenMenu */__webpack_require__.d(__webpack_exports__, "NitrozenMenu", function() { return components_NMenu; });
+/* concated harmony reexport NitrozenMenuItem */__webpack_require__.d(__webpack_exports__, "NitrozenMenuItem", function() { return components_NMenuItem; });
+/* concated harmony reexport NitrozenTab */__webpack_require__.d(__webpack_exports__, "NitrozenTab", function() { return components_NTab; });
+/* concated harmony reexport NitrozenTabItem */__webpack_require__.d(__webpack_exports__, "NitrozenTabItem", function() { return components_NTabItem; });
+/* concated harmony reexport NitrozenPagination */__webpack_require__.d(__webpack_exports__, "NitrozenPagination", function() { return components_NPagination; });
+/* concated harmony reexport NitrozenRadio */__webpack_require__.d(__webpack_exports__, "NitrozenRadio", function() { return components_NRadio; });
+/* concated harmony reexport NitrozenStepper */__webpack_require__.d(__webpack_exports__, "NitrozenStepper", function() { return components_NStepper; });
+/* concated harmony reexport NitrozenToggleBtn */__webpack_require__.d(__webpack_exports__, "NitrozenToggleBtn", function() { return components_NToggleBtn; });
+/* concated harmony reexport NitrozenTooltip */__webpack_require__.d(__webpack_exports__, "NitrozenTooltip", function() { return components_NTooltip; });
+/* concated harmony reexport strokeBtn */__webpack_require__.d(__webpack_exports__, "strokeBtn", function() { return NStrokeBtn; });
+/* concated harmony reexport flatBtn */__webpack_require__.d(__webpack_exports__, "flatBtn", function() { return NFlatBtn; });
+/* concated harmony reexport clickOutside */__webpack_require__.d(__webpack_exports__, "clickOutside", function() { return NClickOutside; });
 
 
 
