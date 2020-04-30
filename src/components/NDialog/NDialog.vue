@@ -84,6 +84,10 @@ export default {
   },
   methods: {
     open(config = {}) {
+      // background scroll disabled on nitrozen dialog open
+      document.body.style.top = `-${window.scrollY}px`;
+      document.body.style.position = "fixed";
+
       this.isModalVisible = true;
       if (config.height != undefined)
         this.$refs["dialog"].style.height = config.height;
@@ -111,6 +115,12 @@ export default {
       return this;
     },
     close(data) {
+      // background scroll enable on nitrozen dialog close
+      const scrollY = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+
       this.isModalVisible = false;
       this.$emit("close", data);
       return this;
