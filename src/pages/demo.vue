@@ -298,10 +298,11 @@
         </div>
 
         <div class="main-div space-between">
-            <nitrozen-chips :state="'error'">Nitro Error</nitrozen-chips>
-            <nitrozen-chips :state="'success'">Nitro Success Chips</nitrozen-chips>
-            <nitrozen-chips :state="'progress'">Nitro Progress</nitrozen-chips>
-            <nitrozen-chips :state="'selected'">Nitro Selected</nitrozen-chips>
+
+            <nitrozen-chips @click="$snackbar.global.showError('Error Snackbar')" :state="'error'">Nitro Error</nitrozen-chips>
+            <nitrozen-chips @click="$snackbar.global.showSuccess('Success snackbar')" :state="'success'">Nitro Success Chips</nitrozen-chips>
+            <nitrozen-chips @click="$snackbar.global.showWarning('Warning snackbar')" :state="'progress'">Nitro Progress</nitrozen-chips>
+            <nitrozen-chips @click="$snackbar.global.show('Default snackbar')" :state="'selected'">Nitro Selected</nitrozen-chips>
         </div>
 
         <div class="main-div">
@@ -488,8 +489,6 @@ export default {
     },
     mounted(){
         this.dropdownItemsFiltered = this.dropdownItems
-        console.log(this.$snackbar)
-        this.$snackbar.global.show('Application mounted')
     },
     methods: {
         stepperNext(){
@@ -584,6 +583,10 @@ export default {
 </script>
 
 <style lang="less">
+
+body{
+    font-family: 'Poppins';
+}
 .main-div {
     margin-top: 2%;
     padding: 40px;

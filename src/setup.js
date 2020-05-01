@@ -7,16 +7,41 @@ let NitrozenVuePlugin = {
       Vue.component(NComponent.name, NComponent)
     });
 
+    // Snackbar
     Vue.use(NitrozenSnackbar);
     Vue.snackbar.register(
       'show',
-      message => {
-        return message;
-      },
+      message => message,
       {
-        theme: 'nitrozen-snackbar-primary',
         position: 'top-center',
         duration: 2000
+      }
+    );
+    Vue.snackbar.register(
+      'showSuccess',
+      message => message,
+      {
+        position: 'top-center',
+        duration: 2000,
+        type: 'success'
+      }
+    );
+    Vue.snackbar.register(
+      'showError',
+      message => message,
+      {
+        position: 'top-center',
+        duration: 2000,
+        type: 'error'
+      }
+    );
+    Vue.snackbar.register(
+      'showWarning',
+      message => message,
+      {
+        position: 'top-center',
+        duration: 2000,
+        type: 'warning'
       }
     );
   }
