@@ -488,6 +488,8 @@ export default {
     },
     mounted(){
         this.dropdownItemsFiltered = this.dropdownItems
+        console.log(this.$snackbar)
+        this.$snackbar.global.show('Application mounted')
     },
     methods: {
         stepperNext(){

@@ -1,0 +1,157 @@
+@import 'mixins';
+@import 'themes';
+
+.nitrozen-snackbar-container {
+    // fix for min-height bug in IE
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10000;
+
+    &.full-width {
+        display: flex;
+        flex-direction: column;
+        max-width: 86%;
+        width: 100%;
+
+        // check if user needs this to be fitted into screen
+        &.fit-to-screen {
+            @include fit-to-screen;
+        }
+    }
+
+    // Positioning
+
+    &.top-right {
+        top: 10%;
+        right: 7%;
+    }
+
+    &.top-left {
+        top: 10%;
+        left: 7%;
+    }
+
+    &.top-center {
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &.bottom-right {
+        right: 5%;
+        bottom: 7%;
+    }
+
+    &.bottom-left {
+        left: 5%;
+        bottom: 7%;
+    }
+
+    &.bottom-center {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 7%;
+    }
+
+    // fix positioning floating
+    &.top-left .nitrozen-snackbar,
+    &.bottom-left .nitrozen-snackbar {
+        float: left;
+    }
+
+    &.top-right .nitrozen-snackbar,
+    &.bottom-right .nitrozen-snackbar {
+        float: right;
+    }
+
+    // toast element styling
+    .nitrozen-snackbar {
+        top: 35px;
+        width: auto;
+        clear: both;
+        margin-top: 10px;
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        word-break: normal;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: inherit;
+
+        .material-icons,
+        .fa,
+        .fas,
+        .far,
+        .fab,
+        .mdi {
+            margin-right: 0.5rem;
+            margin-left: -0.4rem;
+
+            &.after {
+                margin-left: 0.5rem;
+                margin-right: -0.4rem;
+            }
+        }
+
+        // Toast Action Styling
+        .action {
+            text-decoration: none;
+            font-size: 0.8rem;
+            padding: 8px;
+            margin: 5px -7px 5px 7px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            font-weight: 600;
+            cursor: pointer;
+
+            &.icon {
+                padding: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .material-icons,
+                .fa,
+                .mdi {
+                    margin-right: 0;
+                    margin-left: 4px;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .nitrozen-snackbar-container {
+        @include fit-to-screen;
+
+        &.top-center,
+        &.bottom-center {
+            align-items: stretch !important;
+        }
+
+        &.top-right,
+        &.top-left,
+        &.bottom-left,
+        &.bottom-right {
+            .nitrozen-snackbar {
+                float: none;
+            }
+        }
+
+        .nitrozen-snackbar {
+            border-radius: 0;
+        }
+    }
+}
