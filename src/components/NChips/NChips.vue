@@ -190,41 +190,5 @@ export default {
     .nitrozen-icon {
         padding-left: 12px;
     }
-
-    // .md-button.md-input-action {
-    //   width: 18px;
-    //   min-width: 18px;
-    //   height: 18px;
-    //   margin: 0;
-    //   position: absolute;
-    //   top: 50%;
-    //   right: 7px;
-    //   z-index: 11;
-    //   transform: translate3D(0, -50%, 0);
-    //   transition-duration: .3s;
-    //   transition-timing-function: $md-transition-stand-timing;
-    //   font-size: 18px;
-
-    //   .md-ripple {
-    //     padding: 0;
-    //   }
-
-    //   .md-button-content {
-    //     height: 14px;
-    //   }
-
-    //   .md-icon {
-    //     width: 14px;
-    //     min-width: 14px;
-    //     height: 14px;
-    //     font-size: 14px !important;
-    //     vertical-align: top;
-
-    //     svg {
-    //       transition-duration: .3s;
-    //       transition-timing-function: $md-transition-stand-timing;
-    //     }
-    //   }
-    // }
 }
 </style>
