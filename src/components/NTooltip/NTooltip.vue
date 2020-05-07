@@ -58,7 +58,7 @@ export default {
     padding: 5px;
     font-family: @PrimaryFont;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     font-size: @BaseFontSize - 2;
     &::after {
       content: " ";
