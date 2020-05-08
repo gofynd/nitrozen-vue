@@ -8,7 +8,7 @@
           id="searchable-dropdown-1"
           tooltip="This is a searchable dropdown"
           :items="dropdownItemsFiltered"
-          v-model="selectedDropdown"
+          v-model="selectedGroupDropdown"
           :searchable="true"
           @searchInputChange="dropdownInputChange"
         >
@@ -812,6 +812,7 @@ export default {
       ],
       dropdownItemsFiltered: [],
       selectedDropdown: "",
+      selectedGroupDropdown: [],
       fruits: [
         {
           name: "Lemon"

@@ -188,7 +188,6 @@ export default {
         if (this.value) {
           if (this.items.length) {
             this.selected = this.items.find(i => i.value == this.value);
-            if (!this.selected) console.log("Dirty value: ", this.value);
             this.searchInput = this.selected.text;
           }
         }
