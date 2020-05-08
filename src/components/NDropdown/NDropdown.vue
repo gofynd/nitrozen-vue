@@ -68,7 +68,16 @@
                 </span>
               </nitrozen-checkbox>
             </template>
-            <template v-else>{{ item.text }}</template>
+            <template v-else>
+              <span
+                :class="{
+                  'nitrozen-option-child-label':
+                    items.find(i => i.isGroupLabel) && !item.isGroupLabel
+                }"
+              >
+                {{ item.text }}
+              </span>
+            </template>
           </span>
           <span v-if="searchable && items.length == 0" class="nitrozen-option">
             No {{ label }} Found
