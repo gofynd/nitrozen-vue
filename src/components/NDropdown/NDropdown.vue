@@ -2,8 +2,11 @@
   <div class="nitrozen-dropdown-container">
     <label v-if="label" class="nitrozen-dropdown-label">
       {{ label }} {{ required ? " *" : "" }}
-      <span class="nitrozen-tooltip-icon" v-if="tooltip!=''">
-        <nitrozen-tooltip :tooltipText="tooltip"></nitrozen-tooltip>
+      <span class="nitrozen-tooltip-icon" v-if="tooltip != ''">
+        <nitrozen-tooltip
+          :tooltipText="tooltip"
+          position="top"
+        ></nitrozen-tooltip>
       </span>
     </label>
     <div class="nitrozen-select-wrapper" @click="toggle">
@@ -34,27 +37,42 @@
           class="nitrozen-options"
           ref="nitrozen-select-option"
           v-on:scroll.passive="handleScroll"
-          v-bind:class="{ 'nitrozen-dropup': dropUp }"
+          :class="{ 'nitrozen-dropup': dropUp }"
         >
           <span
             v-for="(item, index) in items"
-            v-bind:key="index"
+            :key="index"
             :data-value="item.value"
             class="nitrozen-option ripple"
-            v-bind:class="{ selected: item == selected }"
+            :class="{
+              selected: item == selected,
+              'nitrozen-option-group-label': item.isGroupLabel
+            }"
             @click="selectItem(index, item)"
           >
-            <template v-if="multiple">
+            <template v-if="multiple && !item.isGroupLabel">
               <nitrozen-checkbox
                 :checkboxValue="item.value"
                 @change="setCheckedItem"
                 v-model="selectedItems"
                 :ref="`multicheckbox-${index}`"
-              >{{ item.text }}</nitrozen-checkbox>
+              >
+                <span
+                  :class="{
+                    'nitrozen-dropdown-multicheckbox-selected': selectedItems.includes(
+                      item.value
+                    )
+                  }"
+                >
+                  {{ item.text }}
+                </span>
+              </nitrozen-checkbox>
             </template>
             <template v-else>{{ item.text }}</template>
           </span>
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">No {{ label }} Found</span>
+          <span v-if="searchable && items.length == 0" class="nitrozen-option">
+            No {{ label }} Found
+          </span>
         </div>
       </div>
     </div>
@@ -170,6 +188,7 @@ export default {
         if (this.value) {
           if (this.items.length) {
             this.selected = this.items.find(i => i.value == this.value);
+            if (!this.selected) console.log("Dirty value: ", this.value);
             this.searchInput = this.selected.text;
           }
         }
@@ -197,7 +216,7 @@ export default {
             }
           });
           tmp = [...new Set(tmp)];
-          return `${tmp.join(', ')}`;
+          return `${tmp.join(", ")}`;
         } else if (this.label) {
           return this.placeholder || `Choose ${this.label}`;
         }
@@ -223,6 +242,10 @@ export default {
   },
   methods: {
     selectItem(index, item) {
+      if (item.isGroupLabel) {
+        return;
+      }
+
       if (!this.multiple) {
         this.selected = item;
         if (item.text) {
@@ -277,7 +300,7 @@ export default {
     documentClick(e) {
       // close dropdown on outside click
       const select = this.$refs.n_dropdown;
-      if (!select.contains(e.target)) {
+      if (select && !select.contains(e.target)) {
         this.showOptions = false;
       }
     },

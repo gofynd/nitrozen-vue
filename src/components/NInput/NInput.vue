@@ -9,20 +9,20 @@
     </span>
 
     <div class="nitrozen-input-grp">
-      <nitrozen-input-prefix 
-          v-if="showPrefix" 
-          class="nitrozen-input-prefix nitrozen-remove-right-border"
-          v-bind:class="{ 'nitrozen-prefix-padding': !custom }"
-          >
-            <span v-if="custom"><slot/></span>
-            <span v-else>{{ prefix }}</span>
+      <nitrozen-input-prefix
+        v-if="showPrefix"
+        class="nitrozen-input-prefix nitrozen-remove-right-border"
+        v-bind:class="{ 'nitrozen-prefix-padding': !custom }"
+      >
+        <span v-if="custom"><slot /></span>
+        <span v-else>{{ prefix }}</span>
       </nitrozen-input-prefix>
       <input
         v-if="type != 'textarea'"
-        v-bind:class="{ 
+        v-bind:class="{
           'nitrozen-search-input-padding': showSearchIcon,
-          'nitrozen-remove-left-border': showPrefix, 
-          'nitrozen-remove-right-border': showSuffix 
+          'nitrozen-remove-left-border': showPrefix,
+          'nitrozen-remove-right-border': showSuffix
         }"
         v-on:keyup="eventEmit($event, 'keyup')"
         v-on:change="eventEmit($event, 'change')"
@@ -55,13 +55,13 @@
         :value="value"
         @input="valueChange"
       ></textarea>
-      <nitrozen-input-suffix 
-        v-if="showSuffix" 
-        class="nitrozen-input-suffix nitrozen-remove-left-border" 
+      <nitrozen-input-suffix
+        v-if="showSuffix"
+        class="nitrozen-input-suffix nitrozen-remove-left-border"
         v-bind:class="{ 'nitrozen-suffix-padding': !custom }"
-        >
-          <span v-if="custom"><slot/></span>
-          <span v-else>{{ suffix }}</span>
+      >
+        <span v-if="custom"><slot /></span>
+        <span v-else>{{ suffix }}</span>
       </nitrozen-input-suffix>
     </div>
 
@@ -69,18 +69,16 @@
       <label class="n-input-label" v-if="label" :for="id">
         {{ label }}
         <span class="nitrozen-tooltip-icon" v-if="showTooltip">
-          <nitrozen-tooltip :tooltipText="tooltipText"></nitrozen-tooltip>
+          <nitrozen-tooltip
+            :tooltipText="tooltipText"
+            position="top"
+          ></nitrozen-tooltip>
         </span>
       </label>
-      <label class="n-input-label n-input-maxlength" v-if="maxlength">{{ length }}/{{ maxlength }}</label>
+      <label class="n-input-label n-input-maxlength" v-if="maxlength"
+        >{{ length }}/{{ maxlength }}</label
+      >
     </div>
-    <!-- <label class="n-input-label" v-if="hint">{{ hint }}</label> -->
-
-    <!-- <div
-            v-bind:class="[{ 'error-visible': showError && value == '' }]"
-        >
-            Field is required
-    </div>-->
   </div>
 </template>
 
@@ -94,8 +92,8 @@ import NitrozenUuid from "./../../utils/NUuid";
 export default {
   name: "nitrozen-input",
   components: {
-    'nitrozen-input-prefix': NInputPrefix,
-    'nitrozen-input-suffix': NInputSuffix,
+    "nitrozen-input-prefix": NInputPrefix,
+    "nitrozen-input-suffix": NInputSuffix,
     "nitrozen-tooltip": NTooltip,
     "nitrozen-inline": NitrozenInline
   },
@@ -162,18 +160,18 @@ export default {
       type: Number
     },
     showPrefix: {
-        type: Boolean,
-        default: false
+      type: Boolean,
+      default: false
     },
     showSuffix: {
-        type: Boolean,
-        default: false
+      type: Boolean,
+      default: false
     },
     prefix: {
-        type: String
+      type: String
     },
     suffix: {
-        type: String
+      type: String
     },
     custom: {
       type: Boolean,
@@ -183,9 +181,8 @@ export default {
   methods: {
     valueChange: function(event) {
       let value = event.target.value;
-      if (this.type === 'number')
-      {
-        value = Number(event.target.value)
+      if (this.type === "number") {
+        value = Number(event.target.value);
       }
 
       this.$emit("input", value);

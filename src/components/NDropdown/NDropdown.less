@@ -23,7 +23,7 @@
         display: flex;
         flex-direction: column;
     }
-    .nitrozen-select:focus-within{
+    .nitrozen-select:focus-within {
         border-color: @SecondaryColor;
     }
     .nitrozen-select__trigger {
@@ -98,6 +98,17 @@
             .nitrozen-checkbox {
                 margin-top: 2px;
             }
+        }
+        &.nitrozen-option-group-label {
+            pointer-events: none;
+            height: 24px;
+            font-size: 16px;
+            color: @TypographySecondaryColor;
+        }
+
+        .nitrozen-dropdown-multicheckbox-selected {
+            color: @SecondaryColor;
+            font-weight: bold;
         }
     }
     .nitrozen-option:hover {
