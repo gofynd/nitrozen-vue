@@ -367,7 +367,8 @@ export default {
       $event.stopPropagation();
       this.selectedItems = this.selectedItems.filter((item)=> {
         return !(item === itemValue)
-      })
+      });
+      this.setCheckedItem();
     }
   },
   
