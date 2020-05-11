@@ -643,6 +643,16 @@
         >
         </nitrozen-dropdown>
       </div>
+      <div class="main-div space-between">
+        <nitrozen-tag-dropdown
+          label="Multiple State with Tags"
+          :items="dropdownItemsFiltered"
+          :multiple="true"
+          @change="changeEvent"
+          v-model="multiSelect"
+        >
+        </nitrozen-tag-dropdown>
+      </div>
 
       <div class="main-div space-between">
         <nitrozen-pagination

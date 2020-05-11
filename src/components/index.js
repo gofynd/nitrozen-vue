@@ -17,6 +17,7 @@ import NitrozenRadio from './NRadio';
 import NitrozenStepper from './NStepper';
 import NitrozenToggleBtn from './NToggleBtn';
 import NitrozenTooltip from './NTooltip';
+import NitrozenTagDropdown from './NTagDropdown'
 
 export {
     NitrozenAutocomplete,
@@ -38,4 +39,5 @@ export {
     NitrozenStepper,
     NitrozenToggleBtn,
     NitrozenTooltip,
+    NitrozenTagDropdown
 }
