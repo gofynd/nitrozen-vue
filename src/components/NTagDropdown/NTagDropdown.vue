@@ -292,6 +292,7 @@ export default {
         const multicheckbox = this.$refs[`multicheckbox-${index}`][0];
         if (multicheckbox) multicheckbox.toggle();
         event.stopPropagation();
+        this.calculateDropUpDown();
       }
     },
     setCheckedItem() {
@@ -330,7 +331,7 @@ export default {
       const dropdownOptionsHeight = dropdownOptions.offsetHeight;
       if (dropdownOptionsHeight < bottomSpace) {
         this.dropUp = false;
-        dropdownOptions.style.top=`0px`
+        dropdownOptions.style.top=`${dropdown.offsetHeight}px`
       } else {
         this.dropUp = true;
         dropdownOptions.style.top=`-${dropdownOptionsHeight + 4}px`

@@ -18,7 +18,7 @@
         border: 1px solid @InputBorderColor;
         border-radius: 3px;
         background-color: #ffffff;
-
+        min-height: 68px;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -31,7 +31,7 @@
         border-radius: 3px;
         font-size: 14px;
         line-height: 22px;
-        min-height: 22px;
+        min-height: 68px;
         padding: 8px 14px;
         position: relative;
         display: flex;
@@ -65,7 +65,7 @@
         }
     }
     .nitrozen-options {
-        position: relative;
+        position: absolute;
         display: block;
         border: 1px solid @InputBorderColor;
         border-radius: 3px;
@@ -80,6 +80,9 @@
         pointer-events: none;
         z-index: 2;
         margin-top: 2px;
+        left:0;
+        right: 0;
+        z-index: 10;
         .nitrozen-menu-scrollbar;
     }
     .nitrozen-options.nitrozen-dropdown-open {
