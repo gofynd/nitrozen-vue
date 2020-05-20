@@ -1,5 +1,5 @@
 <template>
-<div class="n-button-content">
+<div class="n-button-content" :class="{'disable-click':showProgress}">
     <div class="social-icon" v-if="icon">
         <img v-if="icon == 'facebook'" src="./../../assets/facebook-icon.png">
         <!-- <img v-if="icon == 'bag'" src="./../../assets/Bag_Icon.svg"> -->
@@ -52,5 +52,8 @@ export default {
         height: 24px;
         width: 24px;
     }
+}
+.disable-click {
+    pointer-events: none;
 }
 </style>
