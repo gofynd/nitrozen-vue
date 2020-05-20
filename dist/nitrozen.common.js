@@ -491,13 +491,6 @@ module.exports = require("vue");
 
 /***/ }),
 
-/***/ "c635":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/loader-white.99baa26e.gif";
-
-/***/ }),
-
 /***/ "c760":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1400,16 +1393,14 @@ var NAutocomplete_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/NAutocomplete/index.js
 
 /* harmony default export */ var components_NAutocomplete = (NAutocomplete);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"31510fd7-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=template&id=7042c6ec&
-var NBtnContentvue_type_template_id_7042c6ec_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"n-button-content"},[(_vm.icon)?_c('div',{staticClass:"social-icon"},[(_vm.icon == 'facebook')?_c('img',{attrs:{"src":__webpack_require__("d553")}}):_vm._e()]):_vm._e(),(!_vm.showProgress)?_vm._t("default"):_vm._e(),(_vm.showProgress)?_c('div',{staticClass:"n-btn-spin"},[_c('img',{staticClass:"n-btn-spinner",staticStyle:{"width":"50px"},attrs:{"src":__webpack_require__("c635")}})]):_vm._e()],2)}
-var NBtnContentvue_type_template_id_7042c6ec_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"31510fd7-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=template&id=1a0036da&
+var NBtnContentvue_type_template_id_1a0036da_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"n-button-content",class:{'disable-click':_vm.showProgress}},[(_vm.icon)?_c('div',{staticClass:"social-icon"},[(_vm.icon == 'facebook')?_c('img',{attrs:{"src":__webpack_require__("d553")}}):_vm._e()]):_vm._e(),(!_vm.showProgress)?_vm._t("default"):_vm._e(),(_vm.showProgress)?_c('div',{staticClass:"n-btn-spin"},[_c('img',{staticClass:"n-btn-spinner",staticStyle:{"width":"50px"},attrs:{"src":"https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/src/assets/loader-white.gif"}})]):_vm._e()],2)}
+var NBtnContentvue_type_template_id_1a0036da_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue?vue&type=template&id=7042c6ec&
+// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue?vue&type=template&id=1a0036da&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=script&lang=js&
-//
-//
 //
 //
 //
@@ -1451,8 +1442,8 @@ var NBtnContentvue_type_style_index_0_lang_less_ = __webpack_require__("8eba");
 
 var NBtnContent_component = normalizeComponent(
   NBtn_NBtnContentvue_type_script_lang_js_,
-  NBtnContentvue_type_template_id_7042c6ec_render,
-  NBtnContentvue_type_template_id_7042c6ec_staticRenderFns,
+  NBtnContentvue_type_template_id_1a0036da_render,
+  NBtnContentvue_type_template_id_1a0036da_staticRenderFns,
   false,
   null,
   null,
