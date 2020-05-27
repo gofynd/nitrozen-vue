@@ -2,11 +2,11 @@
   <div class="nitrozen-dropdown-container">
     <label v-if="label" class="nitrozen-dropdown-label">
       {{ label }} {{ required ? " *" : "" }}
-      <span class="nitrozen-tooltip-icon" v-if="tooltip != ''">
-        <nitrozen-tooltip
-          :tooltipText="tooltip"
-          position="top"
-        ></nitrozen-tooltip>
+      <span
+        class="nitrozen-tooltip-icon"
+        v-if="tooltip != ''"
+      >
+        <nitrozen-tooltip :tooltipText="tooltip" position="top"></nitrozen-tooltip>
       </span>
     </label>
     <div class="nitrozen-select-wrapper" @click="toggle">
@@ -19,7 +19,7 @@
         }"
       >
         <div class="nitrozen-select__trigger">
-          <span v-if="searchable" class="nitrozen-searchable-input-container">
+          <span v-if="searchable && !disabled" class="nitrozen-searchable-input-container">
             <input
               type="search"
               v-model="searchInput"
@@ -63,9 +63,7 @@
                       item.value
                     )
                   }"
-                >
-                  {{ item.text }}
-                </span>
+                >{{ item.text }}</span>
               </nitrozen-checkbox>
             </template>
             <template v-else>
@@ -75,13 +73,12 @@
                     items.find(i => i.isGroupLabel) && !item.isGroupLabel
                 }"
               >
+                <img v-if="item.logo" class="nitrozen-option-logo" :src="item.logo" alt="logo" />
                 {{ item.text }}
               </span>
             </template>
           </span>
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">
-            No {{ label }} Found
-          </span>
+          <span v-if="searchable && items.length == 0" class="nitrozen-option">No {{ label }} Found</span>
         </div>
       </div>
     </div>
