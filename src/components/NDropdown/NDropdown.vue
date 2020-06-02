@@ -50,35 +50,41 @@
             }"
             @click="selectItem(index, item)"
           >
-            <template v-if="multiple && !item.isGroupLabel">
-              <nitrozen-checkbox
-                :checkboxValue="item.value"
-                @change="setCheckedItem"
-                v-model="selectedItems"
-                :ref="`multicheckbox-${index}`"
-              >
-                <span
-                  :class="{
+            <slot :item="item" :selected="item == selected" name="option">
+              <div class="nitrozen-option-container">
+                <template v-if="multiple && !item.isGroupLabel">
+                  <nitrozen-checkbox
+                    :checkboxValue="item.value"
+                    @change="setCheckedItem"
+                    v-model="selectedItems"
+                    :ref="`multicheckbox-${index}`"
+                  >
+                    <span
+                      :class="{
                     'nitrozen-dropdown-multicheckbox-selected': selectedItems.includes(
                       item.value
                     )
                   }"
-                >{{ item.text }}</span>
-              </nitrozen-checkbox>
-            </template>
-            <template v-else>
-              <span
-                :class="{
+                    >{{ item.text }}</span>
+                  </nitrozen-checkbox>
+                </template>
+                <template v-else>
+                  <span
+                    :class="{
                   'nitrozen-option-child-label':
                     items.find(i => i.isGroupLabel) && !item.isGroupLabel
                 }"
-              >
-                <img v-if="item.logo" class="nitrozen-option-logo" :src="item.logo" alt="logo" />
-                {{ item.text }}
-              </span>
-            </template>
+                  >
+                    <img v-if="item.logo" class="nitrozen-option-logo" :src="item.logo" alt="logo" />
+                    {{ item.text }}
+                  </span>
+                </template>
+              </div>
+            </slot>
           </span>
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">No {{ label }} Found</span>
+          <span v-if="searchable && items.length == 0" class="nitrozen-option">
+            <div class="nitrozen-option-container">No {{ label }} Found</div>
+          </span>
         </div>
       </div>
     </div>
@@ -121,7 +127,7 @@ export default {
       }
     },
     /**
-     * disbaled dropdown
+     * disabled dropdown
      */
     disabled: {
       type: Boolean,

@@ -455,6 +455,18 @@
       </div>
 
       <div class="main-div space-between">
+        <nitrozen-dropdown
+          label="Custom Dropdown"
+          :items="dropdownItems"
+          v-model="selectedDropdown"
+        >
+          <template v-slot:option="slotProps">
+            <div
+              class="custom-dropdown-option"
+              :class="{'selected':slotProps.selected}"
+            >{{slotProps.item }} {{slotProps.selected}}</div>
+          </template>
+        </nitrozen-dropdown>
         <nitrozen-dropdown label="State" :items="dropdownItems" v-model="selectedDropdown"></nitrozen-dropdown>
         <nitrozen-dropdown
           v-model="selectedDropdown"
@@ -866,5 +878,14 @@ body {
   padding: 1px;
   border: 1px dotted gray;
   margin: 10px;
+}
+
+.custom-dropdown-option {
+  height: 50px;
+  color: green;
+  &.selected {
+    color: white;
+    background-color: green;
+  }
 }
 </style>
