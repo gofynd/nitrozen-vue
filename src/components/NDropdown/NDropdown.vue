@@ -82,7 +82,9 @@
               </div>
             </slot>
           </span>
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">No {{ label }} Found</span>
+          <span v-if="searchable && items.length == 0" class="nitrozen-option">
+            <div class="nitrozen-option-container">No {{ label }} Found</div>
+          </span>
         </div>
       </div>
     </div>
