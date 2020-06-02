@@ -127,13 +127,6 @@ export default {
       }
     },
     /**
-     * custom dropdown
-     */
-    custom: {
-      type: Boolean,
-      default: false
-    },
-    /**
      * disabled dropdown
      */
     disabled: {
