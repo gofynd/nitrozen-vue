@@ -1,5 +1,5 @@
 <template>
-  <div class="nitrozen-pagination-container" v-if="show">
+  <div class="nitrozen-pagination-container">
     <div class="nitrozen-pagination">
       <div class="nitrozen-pagination__left">
         <span class="nitrozen-pagination__count">{{countsText}}</span>
@@ -127,18 +127,6 @@ export default {
     return {};
   },
   computed: {
-    show() {
-      return true;
-    },
-    showCountText() {
-      if (this.value.total) {
-        return true;
-      }
-      if (this.value.currentTotal) {
-        return true;
-      }
-      return false;
-    },
     pages: function() {
       if (this.value.limit > 0) {
         return Math.ceil(this.value.total / this.value.limit);
