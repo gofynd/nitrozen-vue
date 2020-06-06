@@ -2967,12 +2967,12 @@ var NTab_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/NTab/index.js
 
 /* harmony default export */ var components_NTab = (NTab);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"8759effe-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=template&id=016f49ea&
-var NPaginationvue_type_template_id_016f49ea_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.value.total > 0)?_c('div',{staticClass:"nitrozen-pagination-container"},[_c('div',{staticClass:"nitrozen-pagination"},[_c('div',{staticClass:"nitrozen-pagination__left"},[_c('span',{staticClass:"nitrozen-pagination__count"},[_vm._v(_vm._s(_vm.countsText))])]),_c('div',{staticClass:"nitrozen-pagination__right"},[_c('div',{staticClass:"nitrozen-pagination__select"},[_c('span',{staticClass:"nitrozen-pagination__select__label"},[_vm._v("Rows per page")]),_c('nitrozen-dropdown',{staticClass:"nitrozen-pagination-page-size",attrs:{"items":_vm.pageSizes},on:{"change":_vm.pageSizeChange},model:{value:(_vm.selectedPageSize),callback:function ($$v) {_vm.selectedPageSize=$$v},expression:"selectedPageSize"}})],1),_c('nitrozen-button',{staticClass:"nitrozen-pagination__prev",class:{'pagination-diabled' : _vm.value.current == 1},attrs:{"title":"Previous"},on:{"click":_vm.previous}},[_c('nitrozen-inline',{attrs:{"icon":"arrow-left-black"}})],1),_c('nitrozen-button',{staticClass:"nitrozen-pagination__next",class:{'pagination-diabled' : _vm.value.current >= _vm.pages},attrs:{"title":"Next"},on:{"click":_vm.next}},[_c('nitrozen-inline',{attrs:{"icon":"arrow-right-black"}})],1)],1)])]):_vm._e()}
-var NPaginationvue_type_template_id_016f49ea_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"8759effe-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=template&id=e2ed4ea0&
+var NPaginationvue_type_template_id_e2ed4ea0_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.show)?_c('div',{staticClass:"nitrozen-pagination-container"},[_c('div',{staticClass:"nitrozen-pagination"},[_c('div',{staticClass:"nitrozen-pagination__left"},[_c('span',{staticClass:"nitrozen-pagination__count"},[_vm._v(_vm._s(_vm.countsText))])]),_c('div',{staticClass:"nitrozen-pagination__right"},[_c('div',{staticClass:"nitrozen-pagination__select"},[_c('span',{staticClass:"nitrozen-pagination__select__label"},[_vm._v("Rows per page")]),_c('nitrozen-dropdown',{staticClass:"nitrozen-pagination-page-size",attrs:{"items":_vm.pageSizes},on:{"change":_vm.pageSizeChange},model:{value:(_vm.selectedPageSize),callback:function ($$v) {_vm.selectedPageSize=$$v},expression:"selectedPageSize"}})],1),_c('nitrozen-button',{staticClass:"nitrozen-pagination__prev",class:{'pagination-diabled' : !_vm.showPrev},attrs:{"title":"Previous"},on:{"click":_vm.previous}},[_c('nitrozen-inline',{attrs:{"icon":"arrow-left-black"}})],1),_c('nitrozen-button',{staticClass:"nitrozen-pagination__next",class:{'pagination-diabled' : !_vm.showNext},attrs:{"title":"Next"},on:{"click":_vm.next}},[_c('nitrozen-inline',{attrs:{"icon":"arrow-right-black"}})],1)],1)])]):_vm._e()}
+var NPaginationvue_type_template_id_e2ed4ea0_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NPagination/NPagination.vue?vue&type=template&id=016f49ea&
+// CONCATENATED MODULE: ./src/components/NPagination/NPagination.vue?vue&type=template&id=e2ed4ea0&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=script&lang=js&
 //
@@ -3015,6 +3015,8 @@ var NPaginationvue_type_template_id_016f49ea_staticRenderFns = []
 
 
 
+const MODE_REGULAR = "regular";
+const MODE_CURSOR = "cursor";
 /* harmony default export */ var NPaginationvue_type_script_lang_js_ = ({
   name: "nitrozen-pagination",
   components: {
@@ -3039,12 +3041,14 @@ var NPaginationvue_type_template_id_016f49ea_staticRenderFns = []
     },
 
     /**
-     * Show total records available.
-     * default value is true.
+     * mode of pagination, via
+     * 'regular' - skip-limit counts or
+     * 'cursor' - next-page and previous-page Ids
      */
-    showTotal: {
-      type: Boolean,
-      default: true
+    mode: {
+      type: String,
+      enum: [MODE_REGULAR, MODE_CURSOR],
+      default: MODE_REGULAR
     },
 
     /**
@@ -3063,7 +3067,11 @@ var NPaginationvue_type_template_id_016f49ea_staticRenderFns = []
      * {
      *     limit: Number,
      *     total: Number,
-     *     current: Number
+     *     current: Number,
+     *     prevPage: String,
+           nextPage: String,
+           currentPage: String,
+           currentTotal: Number,
      *  }
      * `
      */
@@ -3074,15 +3082,45 @@ var NPaginationvue_type_template_id_016f49ea_staticRenderFns = []
         return {
           limit: 0,
           total: 0,
-          current: 0
+          current: 0,
+          prevPage: "",
+          nextPage: "",
+          // currentPage is computed.
+          // on prev-button press it will be set to prevPage value
+          // on next-button press it will be set to nextPage value
+          currentPage: "",
+          // currentTotal is count of items in current page.
+          // Used when total is not available.
+          currentTotal: 0
         };
       }
     }
   },
+
+  created() {
+    this.setDefaults();
+  },
+
   data: () => {
     return {};
   },
   computed: {
+    show() {
+      return true;
+    },
+
+    showCountText() {
+      if (this.value.total) {
+        return true;
+      }
+
+      if (this.value.currentTotal) {
+        return true;
+      }
+
+      return false;
+    },
+
     pages: function () {
       if (this.value.limit > 0) {
         return Math.ceil(this.value.total / this.value.limit);
@@ -3115,36 +3153,96 @@ var NPaginationvue_type_template_id_016f49ea_staticRenderFns = []
     },
 
     countsText() {
-      let txt = ` ${this.firstRecord} - ${this.lastRecord}`;
+      let txt = "";
 
       if (this.showTotal) {
+        txt = ` ${this.firstRecord} - ${this.lastRecord}`;
         txt += ` / ${this.value.total}`;
+        txt += ` ${this.name || ""}`;
+      } else if (this.value.currentTotal) {
+        txt = `Showing ${this.value.currentTotal} ${this.name}`;
+      } else {
+        txt = "";
       }
 
-      txt += ` ${this.name || ""}`;
       return txt;
+    },
+
+    showTotal() {
+      if (this.value.total) {
+        return true;
+      }
+
+      return false;
+    },
+
+    showPrev() {
+      if (this.value.total && this.value.current === 1) {
+        return false;
+      }
+
+      if (this.mode === MODE_CURSOR && !this.value.prevPage) {
+        return false;
+      }
+
+      return true;
+    },
+
+    showNext() {
+      if (this.value.total && this.value.current >= this.pages) {
+        return false;
+      }
+
+      if (this.mode === MODE_CURSOR && !this.value.nextPage) {
+        return false;
+      }
+
+      return true;
     }
 
   },
   methods: {
+    setDefaults() {
+      if (!this.value.current) {
+        this.$set(this.value, "current", 1);
+      }
+    },
+
     previous() {
-      if (this.value.current === 1) return;
-      this.value.current--;
+      if (this.value.total) {
+        if (this.value.current === 1) {
+          return;
+        }
+
+        this.value.current--;
+      } else if (this.mode === MODE_CURSOR) {
+        if (!this.value.prevPage) return;
+        this.value.currentPage = this.value.prevPage;
+      }
+
       this.change();
     },
 
     next() {
-      if (this.value.current >= this.pages) {
-        this.value.current = this.pages;
-        return;
+      if (this.value.total) {
+        if (this.value.current >= this.pages) {
+          this.value.current = this.pages;
+          return;
+        }
+
+        if (this.pages === 0) {
+          this.value.current = 0;
+          return;
+        }
+
+        this.value.current++;
       }
 
-      if (this.pages === 0) {
-        this.value.current = 0;
-        return;
+      if (this.mode === MODE_CURSOR) {
+        if (!this.value.nextPage) return;
+        this.value.currentPage = this.value.nextPage;
       }
 
-      this.value.current++;
       this.change();
     },
 
@@ -3177,8 +3275,8 @@ var NPaginationvue_type_style_index_0_lang_less_ = __webpack_require__("31a4");
 
 var NPagination_component = normalizeComponent(
   NPagination_NPaginationvue_type_script_lang_js_,
-  NPaginationvue_type_template_id_016f49ea_render,
-  NPaginationvue_type_template_id_016f49ea_staticRenderFns,
+  NPaginationvue_type_template_id_e2ed4ea0_render,
+  NPaginationvue_type_template_id_e2ed4ea0_staticRenderFns,
   false,
   null,
   null,

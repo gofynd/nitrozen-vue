@@ -503,6 +503,16 @@
       </div>
 
       <div class="main-div space-between">
+        <nitrozen-pagination
+          name="Pages"
+          mode="cursor"
+          v-model="cursorPaginationConfig"
+          @change="paginationChange"
+          :pageSizeOptions="[5, 10, 20, 50]"
+        ></nitrozen-pagination>
+      </div>
+
+      <div class="main-div space-between">
         <nitrozen-button v-flat-btn @click="openDialog('alert')">Alert Dialog</nitrozen-button>
         <nitrozen-button v-flat-btn @click="openDialog('confirm')">Confirmation Dialog</nitrozen-button>
         <nitrozen-button v-flat-btn @click="openDialog">Select Dialog</nitrozen-button>
@@ -688,7 +698,14 @@ export default {
       paginationConfig: {
         limit: 10,
         current: 1,
-        total: 95
+        total: 45
+      },
+      cursorPaginationConfig: {
+        limit: 10,
+        total: 45,
+        currentTotal: 8,
+        prevPage: "sample-prev-page-id",
+        nextPage: "sample-next-page-id"
       },
       dropdownItemsPrefix: [
         {

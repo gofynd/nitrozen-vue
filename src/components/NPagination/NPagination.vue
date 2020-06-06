@@ -1,5 +1,5 @@
 <template>
-  <div class="nitrozen-pagination-container" v-if="value.total > 0">
+  <div class="nitrozen-pagination-container" v-if="show">
     <div class="nitrozen-pagination">
       <div class="nitrozen-pagination__left">
         <span class="nitrozen-pagination__count">{{countsText}}</span>
@@ -18,7 +18,7 @@
           class="nitrozen-pagination__prev"
           title="Previous"
           @click="previous"
-          :class="{'pagination-diabled' : value.current == 1}"
+          :class="{'pagination-diabled' : !showPrev}"
         >
           <nitrozen-inline icon="arrow-left-black"></nitrozen-inline>
         </nitrozen-button>
@@ -26,7 +26,7 @@
           class="nitrozen-pagination__next"
           title="Next"
           @click="next"
-          :class="{'pagination-diabled' : value.current >= pages}"
+          :class="{'pagination-diabled' : !showNext}"
         >
           <nitrozen-inline icon="arrow-right-black"></nitrozen-inline>
         </nitrozen-button>
@@ -39,6 +39,10 @@ import NitrozenUuid from "./../../utils/NUuid";
 import NitrozenButton from "./../NBtn";
 import NitrozenDropdown from "./../NDropdown";
 import NitrozenInline from "./../NInline";
+
+const MODE_REGULAR = "regular";
+const MODE_CURSOR = "cursor";
+
 export default {
   name: "nitrozen-pagination",
   components: {
@@ -61,12 +65,14 @@ export default {
       type: String
     },
     /**
-     * Show total records available.
-     * default value is true.
+     * mode of pagination, via
+     * 'regular' - skip-limit counts or
+     * 'cursor' - next-page and previous-page Ids
      */
-    showTotal: {
-      type: Boolean,
-      default: true
+    mode: {
+      type: String,
+      enum: [MODE_REGULAR, MODE_CURSOR],
+      default: MODE_REGULAR
     },
     /**
      * page size dropdown options
@@ -83,7 +89,11 @@ export default {
      * {
      *     limit: Number,
      *     total: Number,
-     *     current: Number
+     *     current: Number,
+     *     prevPage: String,
+           nextPage: String,
+           currentPage: String,
+           currentTotal: Number,
      *  }
      * `
      */
@@ -94,15 +104,41 @@ export default {
         return {
           limit: 0,
           total: 0,
-          current: 0
+          current: 0,
+          prevPage: "",
+          nextPage: "",
+
+          // currentPage is computed.
+          // on prev-button press it will be set to prevPage value
+          // on next-button press it will be set to nextPage value
+          currentPage: "",
+
+          // currentTotal is count of items in current page.
+          // Used when total is not available.
+          currentTotal: 0
         };
       }
     }
+  },
+  created() {
+    this.setDefaults();
   },
   data: () => {
     return {};
   },
   computed: {
+    show() {
+      return true;
+    },
+    showCountText() {
+      if (this.value.total) {
+        return true;
+      }
+      if (this.value.currentTotal) {
+        return true;
+      }
+      return false;
+    },
     pages: function() {
       if (this.value.limit > 0) {
         return Math.ceil(this.value.total / this.value.limit);
@@ -131,30 +167,77 @@ export default {
         : this.value.total;
     },
     countsText() {
-      let txt = ` ${this.firstRecord} - ${this.lastRecord}`;
+      let txt = "";
       if (this.showTotal) {
+        txt = ` ${this.firstRecord} - ${this.lastRecord}`;
         txt += ` / ${this.value.total}`;
+        txt += ` ${this.name || ""}`;
+      } else if (this.value.currentTotal) {
+        txt = `Showing ${this.value.currentTotal} ${this.name}`;
+      } else {
+        txt = "";
       }
-      txt += ` ${this.name || ""}`;
       return txt;
+    },
+    showTotal() {
+      if (this.value.total) {
+        return true;
+      }
+      return false;
+    },
+    showPrev() {
+      if (this.value.total && this.value.current === 1) {
+        return false;
+      }
+      if (this.mode === MODE_CURSOR && !this.value.prevPage) {
+        return false;
+      }
+      return true;
+    },
+    showNext() {
+      if (this.value.total && this.value.current >= this.pages) {
+        return false;
+      }
+      if (this.mode === MODE_CURSOR && !this.value.nextPage) {
+        return false;
+      }
+      return true;
     }
   },
   methods: {
+    setDefaults() {
+      if (!this.value.current) {
+        this.$set(this.value, "current", 1);
+      }
+    },
     previous() {
-      if (this.value.current === 1) return;
-      this.value.current--;
+      if (this.value.total) {
+        if (this.value.current === 1) {
+          return;
+        }
+        this.value.current--;
+      } else if (this.mode === MODE_CURSOR) {
+        if (!this.value.prevPage) return;
+        this.value.currentPage = this.value.prevPage;
+      }
       this.change();
     },
     next() {
-      if (this.value.current >= this.pages) {
-        this.value.current = this.pages;
-        return;
+      if (this.value.total) {
+        if (this.value.current >= this.pages) {
+          this.value.current = this.pages;
+          return;
+        }
+        if (this.pages === 0) {
+          this.value.current = 0;
+          return;
+        }
+        this.value.current++;
       }
-      if (this.pages === 0) {
-        this.value.current = 0;
-        return;
+      if (this.mode === MODE_CURSOR) {
+        if (!this.value.nextPage) return;
+        this.value.currentPage = this.value.nextPage;
       }
-      this.value.current++;
       this.change();
     },
     pageSizeChange(size) {
