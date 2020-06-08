@@ -208,7 +208,7 @@ export default {
         if (!this.value.prevPage) return;
         this.value.currentPage = this.value.prevPage;
       }
-      this.change();
+      this.change("previous");
     },
     next() {
       if (this.value.total) {
@@ -226,16 +226,16 @@ export default {
         if (!this.value.nextPage) return;
         this.value.currentPage = this.value.nextPage;
       }
-      this.change();
+      this.change("next");
     },
     pageSizeChange(size) {
       this.value.current = 1;
       this.value.limit = size;
       this.change();
     },
-    change() {
-      this.$emit("input", this.value);
-      this.$emit("change", this.value);
+    change(action) {
+      this.$emit("input", this.value, action);
+      this.$emit("change", this.value, action);
     }
   }
 };
