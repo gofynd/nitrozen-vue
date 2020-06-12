@@ -35,6 +35,7 @@
         :type="type"
         :placeholder="placeholder"
         :id="id"
+        :ref="id"
         :disabled="disabled"
         :value="value"
         @input="valueChange"
@@ -51,6 +52,7 @@
         class="n-input input-text"
         :maxlength="maxlength"
         :disabled="disabled"
+        :ref="id"
         :placeholder="placeholder"
         :value="value"
         @input="valueChange"
@@ -176,6 +178,15 @@ export default {
     custom: {
       type: Boolean,
       default: false
+    },
+    autofocus: {
+      type: Boolean,
+      default: false
+    }
+  },
+  mounted(){
+    if(this.autofocus){      
+      this.$refs[this.id].focus()
     }
   },
   methods: {

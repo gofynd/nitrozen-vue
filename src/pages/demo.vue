@@ -196,6 +196,7 @@
       <div class="main-div">
         <nitrozen-input
           :id="1"
+          :autofocus="true"
           v-model="inputModel"
           @input="getState"
           :label="'Input with Error Message'"
