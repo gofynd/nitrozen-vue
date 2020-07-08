@@ -184,7 +184,7 @@
 
       <div class="main-div space-between">
         <nitrozen-button v-flat-btn :icon="'facebook'" :theme="'secondary'">Facebook</nitrozen-button>
-        <nitrozen-button v-flat-btn :icon="'bag'" :theme="'secondary'">Bag</nitrozen-button>
+        <nitrozen-button @click="autofocusSearch = !autofocusSearch" v-flat-btn :icon="'bag'" :theme="'secondary'">Bag</nitrozen-button>
       </div>
       <!-- Toggle Button -->
       <div class="main-div space-between">
@@ -195,8 +195,7 @@
       <!-- Input -->
       <div class="main-div">
         <nitrozen-input
-          :id="1"
-          :autofocus="true"
+          :autofocus="autofocusSearch"
           v-model="inputModel"
           @input="getState"
           :label="'Input with Error Message'"
@@ -594,15 +593,22 @@ export default {
       radioModel: "1",
       dropdownItems: [
         {
-          text: "Maharashtra"
+          text: "Maharashtra",
+          value: 1,
+          logo:
+            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg"
         },
         {
           text: "Andhra Pradesh",
-          value: 2
+          value: 2,
+          logo:
+            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg"
         },
         {
           text: "West Bengal",
-          value: 3
+          value: 3,
+          logo:
+            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg"
         }
       ],
       dropdownItemsGroup: [
@@ -733,11 +739,15 @@ export default {
           text: "rem",
           value: 3
         }
-      ]
+      ],
+      autofocusSearch: false
     };
   },
   mounted() {
     this.dropdownItemsFiltered = this.dropdownItemsGroup;
+    setTimeout(() => {
+        this.autofocusSearch = true;
+    }, 5000);
   },
   methods: {
     stepperNext() {

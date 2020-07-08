@@ -60,16 +60,20 @@
                     :ref="`multicheckbox-${index}`"
                   >
                     <span
+                    class="nitrozen-option-image"
                       :class="{
                     'nitrozen-dropdown-multicheckbox-selected': selectedItems.includes(
                       item.value
                     )
                   }"
-                    >{{ item.text }}</span>
+                    >
+                    <img v-if="item.logo" class="nitrozen-option-logo" :src="item.logo" alt="logo" />
+                    {{ item.text }}</span>
                   </nitrozen-checkbox>
                 </template>
                 <template v-else>
                   <span
+                  class="nitrozen-option-image"
                     :class="{
                   'nitrozen-option-child-label':
                     items.find(i => i.isGroupLabel) && !item.isGroupLabel

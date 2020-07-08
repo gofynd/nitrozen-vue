@@ -184,8 +184,15 @@ export default {
       default: false
     }
   },
+  watch: {
+    autofocus(){
+      if(this.autofocus){            
+        this.$refs[this.id].focus()
+      }
+    }
+  },
   mounted(){
-    if(this.autofocus){      
+    if(this.autofocus){            
       this.$refs[this.id].focus()
     }
   },
