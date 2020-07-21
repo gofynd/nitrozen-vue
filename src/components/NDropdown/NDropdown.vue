@@ -2,11 +2,11 @@
   <div class="nitrozen-dropdown-container">
     <label v-if="label" class="nitrozen-dropdown-label">
       {{ label }} {{ required ? " *" : "" }}
-      <span
-        class="nitrozen-tooltip-icon"
-        v-if="tooltip != ''"
-      >
-        <nitrozen-tooltip :tooltipText="tooltip" position="top"></nitrozen-tooltip>
+      <span class="nitrozen-tooltip-icon" v-if="tooltip != ''">
+        <nitrozen-tooltip
+          :tooltipText="tooltip"
+          position="top"
+        ></nitrozen-tooltip>
       </span>
     </label>
     <div class="nitrozen-select-wrapper" @click="toggle">
@@ -15,11 +15,14 @@
         ref="n_dropdown"
         v-bind:class="{
           disabled: disabled,
-          'nitrozen-dropdown-open': showOptions
+          'nitrozen-dropdown-open': showOptions,
         }"
       >
         <div class="nitrozen-select__trigger">
-          <span v-if="searchable && !disabled" class="nitrozen-searchable-input-container">
+          <span
+            v-if="searchable && !disabled"
+            class="nitrozen-searchable-input-container"
+          >
             <input
               type="search"
               v-model="searchInput"
@@ -46,7 +49,7 @@
             class="nitrozen-option ripple"
             :class="{
               selected: item == selected,
-              'nitrozen-option-group-label': item.isGroupLabel
+              'nitrozen-option-group-label': item.isGroupLabel,
             }"
             @click="selectItem(index, item)"
           >
@@ -60,26 +63,37 @@
                     :ref="`multicheckbox-${index}`"
                   >
                     <span
-                    class="nitrozen-option-image"
+                      class="nitrozen-option-image"
                       :class="{
-                    'nitrozen-dropdown-multicheckbox-selected': selectedItems.includes(
-                      item.value
-                    )
-                  }"
+                        'nitrozen-dropdown-multicheckbox-selected': selectedItems.includes(
+                          item.value
+                        ),
+                      }"
                     >
-                    <img v-if="item.logo" class="nitrozen-option-logo" :src="item.logo" alt="logo" />
-                    {{ item.text }}</span>
+                      <img
+                        v-if="item.logo"
+                        class="nitrozen-option-logo"
+                        :src="item.logo"
+                        alt="logo"
+                      />
+                      {{ item.text }}</span
+                    >
                   </nitrozen-checkbox>
                 </template>
                 <template v-else>
                   <span
-                  class="nitrozen-option-image"
+                    class="nitrozen-option-image"
                     :class="{
-                  'nitrozen-option-child-label':
-                    items.find(i => i.isGroupLabel) && !item.isGroupLabel
-                }"
+                      'nitrozen-option-child-label':
+                        items.find((i) => i.isGroupLabel) && !item.isGroupLabel,
+                    }"
                   >
-                    <img v-if="item.logo" class="nitrozen-option-logo" :src="item.logo" alt="logo" />
+                    <img
+                      v-if="item.logo"
+                      class="nitrozen-option-logo"
+                      :src="item.logo"
+                      alt="logo"
+                    />
                     {{ item.text }}
                   </span>
                 </template>
@@ -105,7 +119,7 @@ export default {
   components: {
     "nitrozen-inline": NitrozenInline,
     "nitrozen-checkbox": NitrozenCheckbox,
-    "nitrozen-tooltip": NTooltip
+    "nitrozen-tooltip": NTooltip,
   },
   props: {
     /**
@@ -113,7 +127,7 @@ export default {
      */
     id: {
       type: [Number, String],
-      default: () => "nitrozen-dropdown-" + NitrozenUuid()
+      default: () => "nitrozen-dropdown-" + NitrozenUuid(),
     },
     /**
      * array of item in dropdown
@@ -128,53 +142,53 @@ export default {
       type: Array,
       default: () => {
         return [];
-      }
+      },
     },
     /**
      * disabled dropdown
      */
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * dropdown label
      */
     label: {
-      type: String
+      type: String,
     },
     /**
      * multiselect value
      */
     multiple: {
-      default: false
+      default: false,
     },
     placeholder: {
-      type: String
+      type: String,
     },
     /**
      * dropdown selection required
      */
     required: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * searchable value
      */
     searchable: {
-      default: false
+      default: false,
     },
     tooltip: {
       type: String,
-      default: ""
+      default: "",
     },
     /**
      * selected value
      */
     value: {
-      required: true
-    }
+      required: true,
+    },
   },
   data: () => {
     return {
@@ -183,7 +197,7 @@ export default {
       searchInput: "",
       showOptions: false,
       dropUp: false,
-      viewport: null
+      viewport: null,
     };
   },
   watch: {
@@ -192,10 +206,10 @@ export default {
         this.selectedItems = [...this.value];
       }
       if (!this.multiple && this.searchable) {
-        const selected = this.items.find(i => i.value == this.value);
+        const selected = this.items.find((i) => i.value == this.value);
         this.searchInput = selected ? selected.text : this.value;
       }
-    }
+    },
   },
   computed: {
     selectedText: function() {
@@ -203,7 +217,7 @@ export default {
         this.selected = {};
         if (this.value) {
           if (this.items.length) {
-            this.selected = this.items.find(i => i.value == this.value);
+            this.selected = this.items.find((i) => i.value == this.value);
             this.searchInput = this.selected.text;
           }
         }
@@ -220,12 +234,12 @@ export default {
           this.searchInput = "";
         }
         if (this.selectedItems.length) {
-          this.selectedItems.forEach(ele => {
+          this.selectedItems.forEach((ele) => {
             if (!selected[ele]) {
               selected[ele] = true;
             }
           });
-          this.items.forEach(ele => {
+          this.items.forEach((ele) => {
             if (selected[ele.value]) {
               tmp.push(ele.text);
             }
@@ -240,12 +254,12 @@ export default {
     },
     searchInputPlaceholder: function() {
       return this.placeholder || `Search ${this.label}`;
-    }
+    },
   },
   mounted() {
     if (!this.multiple) {
       if (this.value) {
-        const selected = this.items.find(i => i.value == this.value);
+        const selected = this.items.find((i) => i.value == this.value);
         this.searchInput = selected ? selected.text : "";
       }
     } else {
@@ -283,7 +297,7 @@ export default {
       this.searchInput = e.target.value;
       let obj = {
         id: this.id,
-        text: this.searchInput
+        text: this.searchInput,
       };
       this.eventEmit(obj, "searchInputChange");
       this.calculateViewport();
@@ -337,19 +351,29 @@ export default {
     handleScroll(event) {
       let elem = this.$refs["nitrozen-select-option"];
       this.$emit("scroll", elem);
-    }
+    },
+    handleTABKey: function(event) {
+      // TAB key detection
+      if (event.keyCode == 9 && this.showOptions) {
+        event.preventDefault();
+        event.stopPropagation();
+        this.showOptions = false;
+      }
+    },
   },
   created() {
     this.calculateViewport();
     document.addEventListener("click", this.documentClick);
     window.addEventListener("resize", this.calculateViewport);
     window.addEventListener("scroll", this.calculateViewport);
+    window.addEventListener("keydown", this.handleTABKey);
   },
   destroyed() {
     document.removeEventListener("click", this.documentClick);
     window.removeEventListener("resize", this.calculateViewport);
     window.removeEventListener("scroll", this.calculateViewport);
-  }
+    window.removeEventListener("keydown", this.handleTABKey);
+  },
 };
 </script>
 <style lang="less">
