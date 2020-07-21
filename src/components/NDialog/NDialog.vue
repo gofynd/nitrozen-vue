@@ -9,7 +9,11 @@
           :aria-labelledby="id + '_title'"
           :aria-describedby="id + '_desc'"
         >
-          <header class="nitrozen-dialog-header" v-show="title" :id="id + '_title'">
+          <header
+            class="nitrozen-dialog-header"
+            v-show="title"
+            :id="id + '_title'"
+          >
             <slot name="header">
               {{ title }}
               <nitrozen-inline
@@ -29,16 +33,19 @@
                 v-if="neutralButtonLabel"
                 theme="secondary"
                 @click="close(neutralButtonLabel)"
-              >{{ neutralButtonLabel }}</nitrozen-button>
+                >{{ neutralButtonLabel }}</nitrozen-button
+              >
               <nitrozen-button
                 class="nitrozen-dialog-negative-button"
                 v-if="negativeButtonLabel"
                 @click="close(negativeButtonLabel)"
-              >{{ negativeButtonLabel }}</nitrozen-button>
+                >{{ negativeButtonLabel }}</nitrozen-button
+              >
               <nitrozen-button
                 v-if="positiveButtonLabel"
                 @click="close(positiveButtonLabel)"
-              >{{ positiveButtonLabel }}</nitrozen-button>
+                >{{ positiveButtonLabel }}</nitrozen-button
+              >
             </slot>
           </footer>
         </div>
@@ -54,7 +61,7 @@ export default {
   name: "nitrozen-dialog",
   components: {
     "nitrozen-button": NitrozenButton,
-    "nitrozen-inline": NitrozenInline
+    "nitrozen-inline": NitrozenInline,
   },
   props: {
     /**
@@ -62,14 +69,14 @@ export default {
      */
     id: {
       type: [Number, String],
-      default: () => "nitrozen-dialog-" + NitrozenUuid()
+      default: () => "nitrozen-dialog-" + NitrozenUuid(),
     },
     /**
      * title of dialog
      */
     title: {
-      type: String
-    }
+      type: String,
+    },
   },
   data: () => {
     return {
@@ -79,7 +86,7 @@ export default {
       negativeButtonLabel: false,
       neutralButtonLabel: "Ok",
       positiveButtonLabel: false,
-      showCloseButton: false
+      showCloseButton: false,
     };
   },
   methods: {
@@ -134,8 +141,24 @@ export default {
       if (this.dismissible && !dialog.contains(e.target)) {
         this.close(null);
       }
+    },
+    handleESCKey: function(event) {
+      // ESC key detection
+      if (event.keyCode == 27 && this.dismissible && this.isOpen()) {
+        event.preventDefault();
+        event.stopPropagation();
+        this.close("close");
+      }
+    },
+  },
+  created() {
+    if (typeof document !== "undefined") {
+      document.addEventListener("keydown", this.handleESCKey);
     }
-  }
+  },
+  destroyed() {
+    document.removeEventListener("keydown", this.handleESCKey);
+  },
 };
 </script>
 <style lang="less">
