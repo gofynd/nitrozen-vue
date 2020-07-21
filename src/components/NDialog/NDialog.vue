@@ -152,10 +152,12 @@ export default {
     },
   },
   created() {
-    window.addEventListener("keydown", this.handleESCKey);
+    if (typeof document !== "undefined") {
+      document.addEventListener("keydown", this.handleESCKey);
+    }
   },
   destroyed() {
-    window.removeEventListener("keydown", this.handleESCKey);
+    document.removeEventListener("keydown", this.handleESCKey);
   },
 };
 </script>

@@ -363,16 +363,20 @@ export default {
   },
   created() {
     this.calculateViewport();
-    document.addEventListener("click", this.documentClick);
-    window.addEventListener("resize", this.calculateViewport);
-    window.addEventListener("scroll", this.calculateViewport);
-    window.addEventListener("keydown", this.handleTABKey);
+    if (typeof document !== "undefined") {
+      document.addEventListener("click", this.documentClick);
+      document.addEventListener("keydown", this.handleTABKey);
+    }
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", this.calculateViewport);
+      window.addEventListener("scroll", this.calculateViewport);
+    }
   },
   destroyed() {
     document.removeEventListener("click", this.documentClick);
+    document.removeEventListener("keydown", this.handleTABKey);
     window.removeEventListener("resize", this.calculateViewport);
     window.removeEventListener("scroll", this.calculateViewport);
-    window.removeEventListener("keydown", this.handleTABKey);
   },
 };
 </script>
