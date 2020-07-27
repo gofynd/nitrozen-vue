@@ -988,7 +988,7 @@ export default {
           break;
         case "confirm":
           this.$refs["confirm_dialog"].open({
-            width: "300px",
+            width: "500px",
             positiveButtonLabel: "Delete",
             negativeButtonLabel: "Cancel",
             neutralButtonLabel: false,
