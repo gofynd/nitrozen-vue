@@ -218,7 +218,7 @@ export default {
         if (this.value) {
           if (this.items.length) {
             this.selected = this.items.find((i) => i.value == this.value);
-            this.searchInput = this.selected.text;
+            this.searchInput = this.selected ? this.selected.text: '';
           }
         }
         if (this.selected && this.selected.text) {
