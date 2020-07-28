@@ -2467,12 +2467,46 @@ var NDropdown_component = normalizeComponent(
 
 
 /* harmony default export */ var components_NDropdown = (NDropdown);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0fc3ccd6-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDialog/NDialog.vue?vue&type=template&id=ad9973ee&
-var NDialogvue_type_template_id_ad9973ee_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isModalVisible),expression:"isModalVisible"}]},[_c('transition',{attrs:{"name":"nitrozen-dialog-fade"}},[_c('div',{staticClass:"nitrozen-dialog-backdrop",on:{"click":_vm.backdropClick}},[_c('div',{ref:"dialog",staticClass:"nitrozen-dialog",attrs:{"role":"dialog","aria-labelledby":_vm.id + '_title',"aria-describedby":_vm.id + '_desc'}},[_c('header',{directives:[{name:"show",rawName:"v-show",value:(_vm.title),expression:"title"}],staticClass:"nitrozen-dialog-header",attrs:{"id":_vm.id + '_title'}},[_vm._t("header",[_vm._v(" "+_vm._s(_vm.title)+" "),(_vm.showCloseButton)?_c('nitrozen-inline',{attrs:{"title":"close","icon":"cross"},on:{"click":function($event){return _vm.close('close')}}}):_vm._e()])],2),_c('section',{staticClass:"nitrozen-dialog-body",attrs:{"id":_vm.id + '_desc'}},[_vm._t("body")],2),_c('footer',{staticClass:"nitrozen-dialog-footer"},[_vm._t("footer",[(_vm.positiveButtonLabel)?_c('nitrozen-button',{directives:[{name:"flat-btn",rawName:"v-flat-btn"}],staticClass:"nitrozen-dialog-footer-button-margin",attrs:{"theme":("" + (_vm.theme || 'secondary'))},on:{"click":function($event){return _vm.close(_vm.positiveButtonLabel)}}},[_vm._v(_vm._s(_vm.positiveButtonLabel))]):_vm._e(),(_vm.neutralButtonLabel)?_c('nitrozen-button',{staticClass:"nitrozen-dialog-footer-button-margin",attrs:{"theme":("" + (_vm.theme || 'secondary'))},on:{"click":function($event){return _vm.close(_vm.neutralButtonLabel)}}},[_vm._v(_vm._s(_vm.neutralButtonLabel))]):_vm._e(),(_vm.negativeButtonLabel)?_c('nitrozen-button',{directives:[{name:"stroke-btn",rawName:"v-stroke-btn"}],attrs:{"theme":("" + (_vm.theme || 'secondary'))},on:{"click":function($event){return _vm.close(_vm.negativeButtonLabel)}}},[_vm._v(_vm._s(_vm.negativeButtonLabel))]):_vm._e()])],2)])])])],1)}
-var NDialogvue_type_template_id_ad9973ee_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0fc3ccd6-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDialog/NDialog.vue?vue&type=template&id=53436923&
+var NDialogvue_type_template_id_53436923_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isModalVisible),expression:"isModalVisible"}]},[_c('transition',{attrs:{"name":"nitrozen-dialog-fade"}},[_c('div',{staticClass:"nitrozen-dialog-backdrop",on:{"click":_vm.backdropClick}},[_c('div',{ref:"dialog",staticClass:"nitrozen-dialog",attrs:{"role":"dialog","aria-labelledby":_vm.id + '_title',"aria-describedby":_vm.id + '_desc'}},[_c('header',{directives:[{name:"show",rawName:"v-show",value:(_vm.title),expression:"title"}],staticClass:"nitrozen-dialog-header",attrs:{"id":_vm.id + '_title'}},[_vm._t("header",[_vm._v(" "+_vm._s(_vm.title)+" "),(_vm.showCloseButton)?_c('nitrozen-inline',{attrs:{"title":"close","icon":"cross"},on:{"click":function($event){return _vm.close('close')}}}):_vm._e()])],2),_c('section',{staticClass:"nitrozen-dialog-body",attrs:{"id":_vm.id + '_desc'}},[_vm._t("body")],2),_c('footer',{staticClass:"nitrozen-dialog-footer"},[_vm._t("footer",[(_vm.positiveButtonLabel)?_c('nitrozen-button',{directives:[{name:"flatBtn",rawName:"v-flatBtn"}],staticClass:"nitrozen-dialog-footer-button-margin",attrs:{"theme":("" + (_vm.theme || 'secondary'))},on:{"click":function($event){return _vm.close(_vm.positiveButtonLabel)}}},[_vm._v(_vm._s(_vm.positiveButtonLabel))]):_vm._e(),(_vm.neutralButtonLabel)?_c('nitrozen-button',{staticClass:"nitrozen-dialog-footer-button-margin",attrs:{"theme":("" + (_vm.theme || 'secondary'))},on:{"click":function($event){return _vm.close(_vm.neutralButtonLabel)}}},[_vm._v(_vm._s(_vm.neutralButtonLabel))]):_vm._e(),(_vm.negativeButtonLabel)?_c('nitrozen-button',{directives:[{name:"strokeBtn",rawName:"v-strokeBtn"}],attrs:{"theme":("" + (_vm.theme || 'secondary'))},on:{"click":function($event){return _vm.close(_vm.negativeButtonLabel)}}},[_vm._v(_vm._s(_vm.negativeButtonLabel))]):_vm._e()])],2)])])])],1)}
+var NDialogvue_type_template_id_53436923_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NDialog/NDialog.vue?vue&type=template&id=ad9973ee&
+// CONCATENATED MODULE: ./src/components/NDialog/NDialog.vue?vue&type=template&id=53436923&
+
+// CONCATENATED MODULE: ./src/directives/NClickOutside.js
+
+const clickOutside = external_commonjs_vue_commonjs2_vue_root_Vue_default.a.directive('click-outside', {
+  bind: function (el, binding, vnode) {
+    el.clickOutsideEvent = function (event) {
+      // Check that click was outside the element
+      if (!(el === event.target || el.contains(event.target))) {
+        // call  function expression assigned
+        vnode.context[binding.expression](event);
+      }
+    };
+
+    document.body.addEventListener('click', el.clickOutsideEvent);
+  },
+  unbind: function (el) {
+    document.body.removeEventListener('click', el.clickOutsideEvent);
+  }
+});
+external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(clickOutside);
+/* harmony default export */ var NClickOutside = (clickOutside);
+// CONCATENATED MODULE: ./src/directives/index.js
+
+
+ // import Vue from 'vue';
+// const directive = {
+//     storkeBtn,
+//     flatBtn
+// }
+// Vue.use(directive);
+// Object.values(directive).forEach(ele => {
+//     Vue.use(ele)
+// })
+
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDialog/NDialog.vue?vue&type=script&lang=js&
 //
@@ -2538,11 +2572,16 @@ var NDialogvue_type_template_id_ad9973ee_staticRenderFns = []
 
 
 
+
 /* harmony default export */ var NDialogvue_type_script_lang_js_ = ({
   name: "nitrozen-dialog",
   components: {
     "nitrozen-button": components_NBtn,
     "nitrozen-inline": components_NInline
+  },
+  directives: {
+    flatBtn: NFlatBtn,
+    strokeBtn: NStrokeBtn
   },
   props: {
     /**
@@ -2676,8 +2715,8 @@ var NDialogvue_type_style_index_0_lang_less_ = __webpack_require__("c5cf");
 
 var NDialog_component = normalizeComponent(
   NDialog_NDialogvue_type_script_lang_js_,
-  NDialogvue_type_template_id_ad9973ee_render,
-  NDialogvue_type_template_id_ad9973ee_staticRenderFns,
+  NDialogvue_type_template_id_53436923_render,
+  NDialogvue_type_template_id_53436923_staticRenderFns,
   false,
   null,
   null,
@@ -2753,26 +2792,6 @@ var NMenuvue_type_template_id_0e20a047_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/NMenu/NMenu.vue?vue&type=template&id=0e20a047&
 
-// CONCATENATED MODULE: ./src/directives/NClickOutside.js
-
-const clickOutside = external_commonjs_vue_commonjs2_vue_root_Vue_default.a.directive('click-outside', {
-  bind: function (el, binding, vnode) {
-    el.clickOutsideEvent = function (event) {
-      // Check that click was outside the element
-      if (!(el === event.target || el.contains(event.target))) {
-        // call  function expression assigned
-        vnode.context[binding.expression](event);
-      }
-    };
-
-    document.body.addEventListener('click', el.clickOutsideEvent);
-  },
-  unbind: function (el) {
-    document.body.removeEventListener('click', el.clickOutsideEvent);
-  }
-});
-external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(clickOutside);
-/* harmony default export */ var NClickOutside = (clickOutside);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NMenu/NMenu.vue?vue&type=script&lang=js&
 //
 //
@@ -3711,20 +3730,6 @@ var NToggleBtn_component = normalizeComponent(
 
 
 
-
-
-// CONCATENATED MODULE: ./src/directives/index.js
-
-
- // import Vue from 'vue';
-// const directive = {
-//     storkeBtn,
-//     flatBtn
-// }
-// Vue.use(directive);
-// Object.values(directive).forEach(ele => {
-//     Vue.use(ele)
-// })
 
 
 // CONCATENATED MODULE: ./src/entry-lib.js
