@@ -30,21 +30,26 @@
           <footer class="nitrozen-dialog-footer">
             <slot name="footer">
               <nitrozen-button
+                v-if="positiveButtonLabel"
+                :theme="`${theme || 'secondary'}`"
+                v-flat-btn
+                class="nitrozen-dialog-footer-button-margin"
+                @click="close(positiveButtonLabel)"
+                >{{ positiveButtonLabel }}</nitrozen-button
+              >
+              <nitrozen-button
                 v-if="neutralButtonLabel"
-                theme="secondary"
+                :theme="`${theme || 'secondary'}`"
+                class="nitrozen-dialog-footer-button-margin"
                 @click="close(neutralButtonLabel)"
                 >{{ neutralButtonLabel }}</nitrozen-button
               >
               <nitrozen-button
-                class="nitrozen-dialog-negative-button"
                 v-if="negativeButtonLabel"
+                :theme="`${theme || 'secondary'}`"
+                v-stroke-btn
                 @click="close(negativeButtonLabel)"
                 >{{ negativeButtonLabel }}</nitrozen-button
-              >
-              <nitrozen-button
-                v-if="positiveButtonLabel"
-                @click="close(positiveButtonLabel)"
-                >{{ positiveButtonLabel }}</nitrozen-button
               >
             </slot>
           </footer>
@@ -77,6 +82,12 @@ export default {
     title: {
       type: String,
     },
+    /**
+     * theme of button
+     */
+    theme: {
+      type: String
+    }
   },
   data: () => {
     return {
