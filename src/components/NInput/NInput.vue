@@ -52,6 +52,8 @@
         v-on:click="eventEmit($event, 'click')"
         v-on:keypress="eventEmit($event, 'keypress')"
         class="n-input input-text"
+        :min="min"
+        :max="max"
         :maxlength="maxlength"
         :type="type"
         :placeholder="placeholder"
@@ -196,6 +198,14 @@ export default {
     autofocus: {
       type: Boolean,
       default: false,
+    },
+    min: {
+      type: Number,
+      default: 0,
+    },
+    max: {
+      type: Number,
+      default: 0,
     },
   },
   watch: {

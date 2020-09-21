@@ -158,7 +158,7 @@ export default {
       let txt = "";
       if (this.showTotal) {
         txt = ` ${this.firstRecord} - ${this.lastRecord}`;
-        txt += ` / ${this.value.total}`;
+        txt += ` of ${this.value.total}`;
         txt += ` ${this.name || ""}`;
       } else if (this.value.currentTotal) {
         txt = `Showing ${this.value.currentTotal} ${this.name}`;

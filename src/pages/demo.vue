@@ -369,6 +369,17 @@
 
       <div class="main-div">
         <nitrozen-input
+          :type="'number'"
+          :placeholder="'Enter Number'"
+          :label="'Number'"
+          :min="1"
+          :max="10"
+          v-model="numberModel"
+        ></nitrozen-input>
+      </div>
+
+      <div class="main-div">
+        <nitrozen-input
           :id="8"
           :type="'textarea'"
           :placeholder="'Enter description'"
@@ -770,6 +781,7 @@ export default {
       abcd: true,
       singleCheckboxModel: true,
       inputModel: "Some Value",
+      numberModel: 1,
       autoModel: "",
       checkArray: ["Check 1"],
       radioModel: "1",
