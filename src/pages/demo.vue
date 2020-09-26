@@ -15,7 +15,7 @@
         ></nitrozen-dropdown>
       </div>
       <div class="main-div space-between">
-        <nitrozen-menu :mode="'vertical'">
+        <nitrozen-menu :inverted="true" :mode="'vertical'" style="background: black;">
           <nitrozen-menu-item>Item 1</nitrozen-menu-item>
           <nitrozen-menu-item>Item 2</nitrozen-menu-item>
           <nitrozen-menu-item>Item 3</nitrozen-menu-item>
@@ -939,9 +939,9 @@ export default {
   },
   mounted() {
     this.dropdownItemsFiltered = this.dropdownItemsGroup;
-    setTimeout(() => {
-      this.autofocusSearch = true;
-    }, 5000);
+    // setTimeout(() => {
+    //   this.autofocusSearch = true;
+    // }, 5000);
   },
   methods: {
     stepperNext() {

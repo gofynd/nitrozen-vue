@@ -4,11 +4,18 @@
       :id="id"
       v-clickOutside="closeMenu"
       class="nitrozen-menu-content"
+      :class="{'nitrozen-default-menu': !inverted}"
       @click="toggleMenu = !toggleMenu"
     >
-      <nitrozen-inline :class="{ 'nitrozen-menu-vertical-dots': mode == 'vertical' }" :icon="'dots'"></nitrozen-inline>
+      <nitrozen-inline
+        :class="{ 'nitrozen-menu-vertical-dots': mode == 'vertical' }"
+        :icon="inverted ? 'white-dots' : 'dots'"
+      ></nitrozen-inline>
       <transition name="fade">
-        <ul v-if="toggleMenu" :class="{ 'nitrozen-menu-vertical-dropdown': mode == 'vertical' }">
+        <ul
+          v-if="toggleMenu"
+          :class="{ 'nitrozen-menu-vertical-dropdown': mode == 'vertical' }"
+        >
           <slot />
         </ul>
       </transition>
@@ -23,31 +30,35 @@ import NitrozenInline from "../NInline";
 export default {
   name: "nitrozen-menu",
   directives: {
-    clickOutside
+    clickOutside,
   },
   components: {
-    "nitrozen-inline": NitrozenInline
+    "nitrozen-inline": NitrozenInline,
   },
   props: {
     id: {
       type: [Number, String],
-      default: () => "nitrozen-menu" + NitrozenUuid()
+      default: () => "nitrozen-menu" + NitrozenUuid(),
     },
     mode: {
       type: String,
-      default: () => "horizontal"
+      default: () => "horizontal",
+    },
+    inverted: {
+      type: Boolean,
+      default: false,
     }
   },
   data() {
     return {
-      toggleMenu: false
+      toggleMenu: false,
     };
   },
   methods: {
     closeMenu() {
       this.toggleMenu = false;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -64,10 +75,6 @@ export default {
   .nitrozen-menu-vertical-dots {
     height: 30px;
     transform: rotate(90deg);
-  }
-  &:hover{
-    background-color: @HoverColor;
-    border-radius: 50%;
   }
   .nitrozen-menu-vertical-dropdown {
     z-index: 2;
@@ -91,7 +98,12 @@ export default {
     .nitrozen-menu-scrollbar;
   }
 }
-
+.nitrozen-default-menu{
+  &:hover {
+    background-color: @HoverColor;
+    border-radius: 50%;
+  }
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s;

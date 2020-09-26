@@ -4,7 +4,7 @@
     font-family: @PrimaryFont;
     width: 100%;
     color: @TypographyPrimaryColor;
-
+    padding-bottom: 12px;
     .nitrozen-pagination {
         display: flex;
         font-size: 14px;
@@ -24,7 +24,11 @@
             .nitrozen-pagination__select {
                 display: flex;
                 align-items: center;
-
+                &__label {
+                    @media @mobile{
+                        display: none;
+                    }
+                }
                 .nitrozen-pagination-page-size {
                     width: 72px;
                     margin: 0 12px;

@@ -209,6 +209,17 @@ svgs['arrow-right-black'] = `<svg width="24px" height="24px" viewBox="0 0 24 24"
                                     </g>
                                 </g>
                             </svg>`;
+svgs['white-dots'] = `<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                            <title>Group 9</title>
+                            <desc>Created with Sketch.</desc>
+                            <g id="Link-Shortner" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Group-9">
+                                    <rect id="Rectangle" fill-opacity="0.01" fill="#FFFFFF" x="-5.32907052e-15" y="-5.32907052e-15" width="30" height="30"></rect>
+                                    <path d="M15,10 C16.375,10 17.5,8.875 17.5,7.5 C17.5,6.125 16.375,5 15,5 C13.625,5 12.5,6.125 12.5,7.5 C12.5,8.875 13.625,10 15,10 L15,10 Z M15,12.5 C13.625,12.5 12.5,13.625 12.5,15 C12.5,16.375 13.625,17.5 15,17.5 C16.375,17.5 17.5,16.375 17.5,15 C17.5,13.625 16.375,12.5 15,12.5 L15,12.5 Z M15,20 C13.625,20 12.5,21.125 12.5,22.5 C12.5,23.875 13.625,25 15,25 C16.375,25 17.5,23.875 17.5,22.5 C17.5,21.125 16.375,20 15,20 L15,20 Z" id="Shape-Copy-2" fill="#ffffff" transform="translate(15.000000, 15.000000) rotate(90.000000) translate(-15.000000, -15.000000) "></path>
+                                </g>
+                            </g>
+                        </svg>`;
 module.exports = svgs;
 
 /***/ }),
@@ -2791,14 +2802,21 @@ var NError_component = normalizeComponent(
 // };
 
 /* harmony default export */ var components_NInput = (NInput);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2dedbe68-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NMenu/NMenu.vue?vue&type=template&id=0e20a047&
-var NMenuvue_type_template_id_0e20a047_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',[_c('div',{directives:[{name:"clickOutside",rawName:"v-clickOutside",value:(_vm.closeMenu),expression:"closeMenu"}],staticClass:"nitrozen-menu-content",attrs:{"id":_vm.id},on:{"click":function($event){_vm.toggleMenu = !_vm.toggleMenu}}},[_c('nitrozen-inline',{class:{ 'nitrozen-menu-vertical-dots': _vm.mode == 'vertical' },attrs:{"icon":'dots'}}),_c('transition',{attrs:{"name":"fade"}},[(_vm.toggleMenu)?_c('ul',{class:{ 'nitrozen-menu-vertical-dropdown': _vm.mode == 'vertical' }},[_vm._t("default")],2):_vm._e()])],1)])}
-var NMenuvue_type_template_id_0e20a047_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2dedbe68-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NMenu/NMenu.vue?vue&type=template&id=2fc50a99&
+var NMenuvue_type_template_id_2fc50a99_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',[_c('div',{directives:[{name:"clickOutside",rawName:"v-clickOutside",value:(_vm.closeMenu),expression:"closeMenu"}],staticClass:"nitrozen-menu-content",class:{'nitrozen-default-menu': !_vm.inverted},attrs:{"id":_vm.id},on:{"click":function($event){_vm.toggleMenu = !_vm.toggleMenu}}},[_c('nitrozen-inline',{class:{ 'nitrozen-menu-vertical-dots': _vm.mode == 'vertical' },attrs:{"icon":_vm.inverted ? 'white-dots' : 'dots'}}),_c('transition',{attrs:{"name":"fade"}},[(_vm.toggleMenu)?_c('ul',{class:{ 'nitrozen-menu-vertical-dropdown': _vm.mode == 'vertical' }},[_vm._t("default")],2):_vm._e()])],1)])}
+var NMenuvue_type_template_id_2fc50a99_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NMenu/NMenu.vue?vue&type=template&id=0e20a047&
+// CONCATENATED MODULE: ./src/components/NMenu/NMenu.vue?vue&type=template&id=2fc50a99&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NMenu/NMenu.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2836,6 +2854,10 @@ var NMenuvue_type_template_id_0e20a047_staticRenderFns = []
     mode: {
       type: String,
       default: () => "horizontal"
+    },
+    inverted: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -2868,8 +2890,8 @@ var NMenuvue_type_style_index_0_lang_less_ = __webpack_require__("9771");
 
 var NMenu_component = normalizeComponent(
   NMenu_NMenuvue_type_script_lang_js_,
-  NMenuvue_type_template_id_0e20a047_render,
-  NMenuvue_type_template_id_0e20a047_staticRenderFns,
+  NMenuvue_type_template_id_2fc50a99_render,
+  NMenuvue_type_template_id_2fc50a99_staticRenderFns,
   false,
   null,
   null,

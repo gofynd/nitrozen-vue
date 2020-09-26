@@ -1,0 +1,24 @@
+@xs-min: 360px;
+@sm-min: 480px;
+@md-min: 768px;
+@lg-min: 801px;
+@xl-min: 1200px;
+
+@xs-max: (@sm-min - 1);
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+@lg-max: (@xl-min - 1);
+
+@mobile-sm:        ~"only screen and (max-width: @{xs-min})";
+@mobile-sm-strict: ~"only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})";
+
+@mobile:          ~"only screen and (max-width: @{sm-min})";
+@mobile-strict:   ~"only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})";
+
+@tablet:         ~"only screen and (max-width: @{md-min})";
+@tablet-strict:  ~"only screen and (min-width: @{md-min}) and (max-width: @{md-max})";
+
+@desktop:        ~"only screen and (max-width: @{lg-min})";
+@desktop-strict: ~"only screen and (min-width: @{lg-min}) and (max-width: @{lg-max})";
+
+@desktop-xl:   ~"only screen and (max-width: @{xl-min})";
