@@ -1,5 +1,5 @@
 <template>
-  <div v-show="isModalVisible">
+  <div v-show="isModalVisible" :id="id">
     <transition name="nitrozen-dialog-fade">
       <div class="nitrozen-dialog-backdrop" @click="backdropClick">
         <div
@@ -66,12 +66,12 @@ import { flatBtn, strokeBtn } from "./../../directives/index";
 export default {
   name: "nitrozen-dialog",
   components: {
-    "nitrozen-button": NitrozenButton,
-    "nitrozen-inline": NitrozenInline,
+    NitrozenButton,
+    NitrozenInline,
   },
-  directives:{
+  directives: {
     flatBtn,
-    strokeBtn
+    strokeBtn,
   },
   props: {
     /**
@@ -91,8 +91,8 @@ export default {
      * theme of button
      */
     theme: {
-      type: String
-    }
+      type: String,
+    },
   },
   data: () => {
     return {
