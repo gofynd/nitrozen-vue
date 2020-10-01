@@ -1,8 +1,8 @@
 <template>
-  <div class="nitrozen-pagination-container">
+  <div class="nitrozen-pagination-container" :id="id">
     <div class="nitrozen-pagination">
       <div class="nitrozen-pagination__left">
-        <span class="nitrozen-pagination__count">{{countsText}}</span>
+        <span class="nitrozen-pagination__count">{{ countsText }}</span>
       </div>
       <div class="nitrozen-pagination__right">
         <div class="nitrozen-pagination__select">
@@ -18,7 +18,7 @@
           class="nitrozen-pagination__prev"
           title="Previous"
           @click="previous"
-          :class="{'pagination-diabled' : !showPrev}"
+          :class="{ 'pagination-diabled': !showPrev }"
         >
           <nitrozen-inline icon="arrow-left-black"></nitrozen-inline>
         </nitrozen-button>
@@ -26,7 +26,7 @@
           class="nitrozen-pagination__next"
           title="Next"
           @click="next"
-          :class="{'pagination-diabled' : !showNext}"
+          :class="{ 'pagination-diabled': !showNext }"
         >
           <nitrozen-inline icon="arrow-right-black"></nitrozen-inline>
         </nitrozen-button>
@@ -46,9 +46,9 @@ const MODE_CURSOR = "cursor";
 export default {
   name: "nitrozen-pagination",
   components: {
-    "nitrozen-button": NitrozenButton,
-    "nitrozen-dropdown": NitrozenDropdown,
-    "nitrozen-inline": NitrozenInline
+    NitrozenButton,
+    NitrozenDropdown,
+    NitrozenInline,
   },
   props: {
     /**
@@ -56,13 +56,13 @@ export default {
      */
     id: {
       type: [Number, String],
-      default: () => "nitrozen-pagination-" + NitrozenUuid()
+      default: () => "nitrozen-pagination-" + NitrozenUuid(),
     },
     /**
      * kind of pagination
      */
     name: {
-      type: String
+      type: String,
     },
     /**
      * mode of pagination, via
@@ -72,7 +72,7 @@ export default {
     mode: {
       type: String,
       enum: [MODE_REGULAR, MODE_CURSOR],
-      default: MODE_REGULAR
+      default: MODE_REGULAR,
     },
     /**
      * page size dropdown options
@@ -81,7 +81,7 @@ export default {
       type: Array,
       default: () => {
         return [10, 20, 50, 100];
-      }
+      },
     },
     /**
      * pagination config value
@@ -115,10 +115,10 @@ export default {
 
           // currentTotal is count of items in current page.
           // Used when total is not available.
-          currentTotal: 0
+          currentTotal: 0,
         };
-      }
-    }
+      },
+    },
   },
   created() {
     this.setDefaults();
@@ -134,7 +134,7 @@ export default {
       return 0;
     },
     pageSizes() {
-      const po = this.pageSizeOptions.map(p => {
+      const po = this.pageSizeOptions.map((p) => {
         return { text: p, value: p };
       });
       if (!this.selectedPageSize) {
@@ -190,7 +190,7 @@ export default {
         return false;
       }
       return true;
-    }
+    },
   },
   methods: {
     setDefaults() {
@@ -206,6 +206,7 @@ export default {
         this.value.current--;
       } else if (this.mode === MODE_CURSOR) {
         if (!this.value.prevPage) return;
+        this.value.nextPage = "";
         this.value.currentPage = this.value.prevPage;
       }
       this.change();
@@ -224,6 +225,7 @@ export default {
       }
       if (this.mode === MODE_CURSOR) {
         if (!this.value.nextPage) return;
+        this.value.prevPage = "";
         this.value.currentPage = this.value.nextPage;
       }
       this.change();
@@ -231,13 +233,18 @@ export default {
     pageSizeChange(size) {
       this.value.current = 1;
       this.value.limit = size;
+      if (this.mode === MODE_CURSOR) {
+        this.value.nextPage = "";
+        this.value.prevPage = "";
+        this.value.currentPage = "";
+      }
       this.change();
     },
     change() {
       this.$emit("input", this.value);
       this.$emit("change", this.value);
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="less">
