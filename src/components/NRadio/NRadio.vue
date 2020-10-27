@@ -57,6 +57,7 @@ export default {
 <style lang="less">
 @import "./../../base/base.less";
 .nitrozen-radio-group {
+  height: 21px;
   input[type="radio"]:checked,
   input[type="radio"]:not(:checked) {
     position: absolute;
@@ -67,11 +68,15 @@ export default {
     position: relative;
     padding-left: 30px;
     cursor: pointer;
-    line-height: 20px;
-    display: inline-block;
+    line-height: 15px;
+    // display: inline-block;
     color: @TypographyPrimaryColor;
     font-family: @PrimaryFont;
-    font-size: 12px;
+    font-size: @BaseFontSize + 3;
+    font-weight: 600;
+    display: flex;
+    height: 100%;
+    align-items: center;
   }
   input[type="radio"]:checked + label:before,
   input[type="radio"]:not(:checked) + label:before {
@@ -81,7 +86,7 @@ export default {
     top: 0;
     width: 16px;
     height: 16px;
-    border: 1px solid @TypographyPrimaryColor;
+    border: 2px solid @SecondaryColor;
     border-radius: 100%;
     background: @WhiteColor;
   }
@@ -90,16 +95,20 @@ export default {
     content: "";
     width: 10px;
     height: 10px;
-    background: @TypographyPrimaryColor;
+    // background: @TypographyPrimaryColor;
+    background: @SecondaryColor;
     position: absolute;
-    top: 4px;
-    left: 4px;
+    top: 5px;
+    left: 5px;
     border-radius: 100%;
   }
   input[type="radio"]:not(:checked) + label:after {
     opacity: 0;
     -webkit-transform: scale(0);
     transform: scale(0);
+  }
+  input[type="radio"]:checked + label {
+    font-weight: 700;
   }
   input[type="radio"]:checked + label:after {
     opacity: 1;

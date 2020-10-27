@@ -43,7 +43,7 @@ export default {
 .social-icon{
     float: left;
     position: relative;
-    left: -35px;
+    left: -20px;
     display: flex;
     img{
         background: white;
