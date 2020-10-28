@@ -19,9 +19,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    letter-spacing: 0.5px;
 
     &:disabled {
-        opacity: 0.4;
+        // opacity: 0.4;
         cursor: not-allowed;
         pointer-events: none;
     }
@@ -112,10 +113,11 @@
 .n-button-stroke:disabled,
 .n-flat-button:disabled,
 .n-button-rounded:disabled {
-    opacity: 0.4;
+    // opacity: 0.4;
     cursor: not-allowed;
     pointer-events: none;
     background-color: @SecondaryDisabledColor;
+    color: @WhiteColor;
 }
 
 .n-button-rounded {

@@ -15,7 +15,7 @@
         ></nitrozen-dropdown>
       </div>
       <div class="main-div space-between">
-        <nitrozen-menu :inverted="true" :mode="'vertical'" style="background: black;">
+        <nitrozen-menu position="top" :inverted="true" :mode="'vertical'" style="background: black;">
           <nitrozen-menu-item>Item 1</nitrozen-menu-item>
           <nitrozen-menu-item>Item 2</nitrozen-menu-item>
           <nitrozen-menu-item>Item 3</nitrozen-menu-item>

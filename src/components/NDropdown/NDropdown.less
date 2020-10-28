@@ -15,7 +15,7 @@
   }
   .nitrozen-select {
     box-sizing: border-box;
-    border: 1px solid @InputBorderColor;
+    border: 1px solid @BorderColor;
     border-radius: 3px;
     background-color: #ffffff;
 
@@ -57,7 +57,7 @@
     transform: translate3d(0px, 42px, 0px);
     left: 0;
     right: 0;
-    border: 1px solid @InputBorderColor;
+    border: 1px solid @BorderColor;
     border-radius: 3px;
     box-shadow: 0 4px 8px 0 rgba(229, 229, 229, 0.2),
       0 6px 20px 0 rgba(229, 229, 229, 0.19);
@@ -140,11 +140,11 @@
   }
   // Disabled
   .nitrozen-select.disabled {
-    background-color: @InputBorderColor;
+    background-color: @BorderColor;
   }
   .nitrozen-select.disabled .nitrozen-select__trigger {
     color: @DisabledColor;
-    background-color: @InputBorderColor;
+    background-color: @BorderColor;
     cursor: not-allowed;
   }
   .nitrozen-select.disabled .nitrozen-select__trigger .nitrozen-dropdown-arrow {

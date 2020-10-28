@@ -113,7 +113,7 @@ export default {
     display: inline-block;
     cursor: default;
     border-radius: 39px;
-    border: 1px solid @ChipBorderColor;
+    border: 1px solid @BorderColor;
     color: @TypographyPrimaryColor;
     // transition: .3s $md-transition-stand-timing;
     // transition-property: background-color, color, opacity, transform, box-shadow;
