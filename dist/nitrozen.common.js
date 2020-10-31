@@ -2494,19 +2494,36 @@ var NDialogvue_type_template_id_59ca0221_staticRenderFns = []
 // CONCATENATED MODULE: ./src/directives/NClickOutside.js
 
 const clickOutside = external_commonjs_vue_commonjs2_vue_root_Vue_default.a.directive('click-outside', {
-  bind: function (el, binding, vnode) {
-    el.clickOutsideEvent = function (event) {
-      // Check that click was outside the element
-      if (!(el === event.target || el.contains(event.target))) {
-        // call  function expression assigned
-        vnode.context[binding.expression](event);
+  bind: function (el, binding, vNode) {
+    // Provided expression must evaluate to a function.
+    if (typeof binding.value !== 'function') {
+      const compName = vNode.context.name;
+      let warn = `[Nitrozen-click-outside:] provided expression '${binding.expression}' is not a function, but has to be`;
+
+      if (compName) {
+        warn += ` Found in component '${compName}'`;
+      }
+
+      console.warn(warn);
+    } // Define Handler and cache it on the element
+
+
+    const bubble = binding.modifiers.bubble;
+
+    const handler = e => {
+      if (bubble || -1 == e.path.indexOf(el)) {
+        binding.value(e);
       }
     };
 
-    document.body.addEventListener('click', el.clickOutsideEvent);
+    el.__nitrozenClickOutside__ = handler; // add Event Listeners
+
+    document.addEventListener('click', handler);
   },
-  unbind: function (el) {
-    document.body.removeEventListener('click', el.clickOutsideEvent);
+  unbind: function (el, binding) {
+    // Remove Event Listeners
+    document.removeEventListener('click', el.__nitrozenClickOutside__);
+    el.__nitrozenClickOutside__ = null;
   }
 });
 external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(clickOutside);
