@@ -25,7 +25,7 @@
           :items="dropdownItemsFiltered"
           v-model="selectedGroupDropdown"
           :searchable="true"
-          :add="true"
+          :add_option="true"
           @addOption="addOption"
           @searchInputChange="dropdownInputChange"
         ></nitrozen-dropdown>
