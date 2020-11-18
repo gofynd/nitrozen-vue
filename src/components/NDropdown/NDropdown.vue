@@ -106,7 +106,7 @@
               <div class="nitrozen-dropdown-empty"
                 @click="addOption"
               >
-                  <img class="nitrozen-add-btn" src="./../../assets/plus.svg">
+                  <nitrozen-inline icon="plus-btn"></nitrozen-inline>
                   <p>Add {{ searchInput }}</p>
               </div>
             </div>
