@@ -14,6 +14,23 @@
           @searchInputChange="dropdownInputChange"
         ></nitrozen-dropdown>
       </div>
+
+      <div class="main-div space-between">
+        <div>Custom Dropdown</div>
+        <nitrozen-dropdown
+          label="Data"
+          :disabled="false"
+          id="searchable-dropdown-1"
+          tooltip="This is a searchable dropdown"
+          :items="dropdownItemsFiltered"
+          v-model="selectedGroupDropdown"
+          :searchable="true"
+          :add="true"
+          @addOption="addOption"
+          @searchInputChange="dropdownInputChange"
+        ></nitrozen-dropdown>
+      </div>
+
       <div class="main-div space-between">
         <nitrozen-menu :inverted="true" :mode="'vertical'" style="background: black;">
           <nitrozen-menu-item>Item 1</nitrozen-menu-item>
@@ -960,6 +977,9 @@ export default {
     },
     someFunc() {
       this.numberOfClick += 1;
+    },
+    addOption(value) {
+      console.log(value);
     },
     testFunc(event) {
       console.log(event);
