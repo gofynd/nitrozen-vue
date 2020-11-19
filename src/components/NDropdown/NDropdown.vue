@@ -101,7 +101,15 @@
             </slot>
           </span>
           <span v-if="searchable && items.length == 0" class="nitrozen-option">
-            <div class="nitrozen-option-container">No {{ label }} Found</div>
+            <div class="nitrozen-option-container" v-if="!add_option">No {{ label }} Found</div>
+            <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length">
+              <div class="nitrozen-dropdown-empty"
+                @click="addOption"
+              >
+                  <nitrozen-inline icon="plus-btn"></nitrozen-inline>
+                  <p>Add {{ searchInput }}</p>
+              </div>
+            </div>
           </span>
         </div>
       </div>
@@ -189,6 +197,13 @@ export default {
     value: {
       required: true,
     },
+    /**
+     * Add if not present
+     */
+    add_option: {
+      type: Boolean,
+      default: false
+    }
   },
   data: () => {
     return {
@@ -287,6 +302,13 @@ export default {
         if (multicheckbox) multicheckbox.toggle();
         event.stopPropagation();
       }
+    },
+    addOption() {
+        let value = this.searchInput;
+        this.searchInput = '';
+        this.$emit("addOption", value);
+        this.eventEmit({}, "searchInputChange");
+        this.calculateViewport();
     },
     setCheckedItem() {
       this.$emit("input", this.selectedItems); // v-model implementation
