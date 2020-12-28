@@ -68,5 +68,7 @@ export default {
 };
 </script>
 <style lang="less">
-@import "./NCustomForm.less";
+.nitrozen-custom-form {
+  display: block;
+}
 </style>

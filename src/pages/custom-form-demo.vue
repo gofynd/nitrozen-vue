@@ -33,7 +33,7 @@ export default {
           ],
           key: "email",
           required: true,
-          type: "text",
+          type: "dropdown",
           tooltip: "asdf",
           default: "nikhil"
         },

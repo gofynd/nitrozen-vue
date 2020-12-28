@@ -19,7 +19,7 @@ function defaultResponseForInput(input) {
         if (input.default) {
             return input.default;
         }
-        return "asdf";
+        return null;
     } else if (input.type == "mobile") {
         return {
             countryCode: 91,
