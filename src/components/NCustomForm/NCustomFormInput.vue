@@ -11,12 +11,14 @@
         :required="input.required"
         :tooltipText="input.tooltip"
         :showTooltip="input.tooltip != undefined"
+        @change="willMoveToNext"
       />
     </template>
     <template v-else-if="input.type == 'toggle'">
       <div class="toggle-input">
         <span class="n-input-label">{{ titleFor(input) }}</span>
         <nitrozen-toggle
+          style="margin-right: -10px"
           v-model="formInputValue"
         ></nitrozen-toggle>
       </div>
@@ -162,6 +164,7 @@ export default {
       return input.error_message || "Please enter " + input.display;
     },
     inputChanged() {
+      this.hasError = false;
       this.$emit("change", this.formInputValue);
     },
     addResponse() {
@@ -171,7 +174,13 @@ export default {
     arrayInputChanged(index, valueAtIndex) {
       this.formInputValue[index] = valueAtIndex;
       this.inputChanged();
-    }
+    },
+    willMoveToNext() {
+      if (this.input.regex) {
+        var re = new RegExp(this.input.regex);
+        this.hasError = !re.test(this.formInputValue);
+      }
+    },
   },
 };
 </script>

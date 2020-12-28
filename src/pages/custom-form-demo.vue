@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span style="font-size: 26px; font-weight: 500; color: #41434c; margin-bottom: 20px">Typical Form</span>
+    <div style="font-size: 26px; font-weight: 500; color: #41434c; margin-bottom: 20px">Typical Form</div>
     <nitrozen-custom-form
       :inputs="inputs"
       v-model="response"
@@ -20,46 +20,47 @@ export default {
           key: "some_boolean",
         },
         {
-          display: "Email",
+          display: "A Dropdown",
           enum: [
             {
               key: "show",
-              display: "Show",
+              display: "Show next text input",
             },
             {
               key: "hide",
-              display: "hide",
+              display: "Hide next text input",
             },
           ],
-          key: "email",
+          key: "condition",
           required: true,
           type: "dropdown",
-          tooltip: "asdf",
-          default: "nikhil"
+          tooltip: "Selection of this dropdown will decide the fate of next input",
+          default: "hide"
         },
         {
-          display: "Conditional Input",
+          display: "A Conditional Text Input",
           enum: [],
-          key: "secret_mail",
+          key: "awesome_text",
           required: true,
           type: "text",
-          placeholder: "Pleaseeee",
+          placeholder: "Enter an awesome text here",
           visible_if: {
             "==": [
               {
-                var: "email",
+                var: "condition",
               },
               "show",
             ],
           },
         },
         {
-          display: "mobile",
-          key: "mobile",
+          display: "Pincode",
+          key: "pincode",
           required: true,
-          type: "mobile",
-          tooltip: "asdf",
-          placeholder: "Pleaseeee",
+          type: "number",
+          tooltip: "This is valid only if input is validated with '^[1-9][0-9]{5}$'",
+          placeholder: "Please enter your pincode",
+          regex: "^[1-9][0-9]{5}$"
         },
         {
           display: "Prop Bean Configs",
@@ -154,7 +155,7 @@ export default {
         },
       ],
       response: {
-        sheetNames: ["asdf", "asdfasdf"],
+        sheetNames: ["First Sheet", "Second Sheet"],
       },
     };
   },
