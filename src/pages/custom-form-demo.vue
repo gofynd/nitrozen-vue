@@ -41,7 +41,7 @@ export default {
           enum: [],
           key: "secret_mail",
           required: true,
-          type: "email",
+          type: "text",
           placeholder: "Pleaseeee",
           visible_if: {
             "==": [

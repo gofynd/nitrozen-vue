@@ -93,18 +93,11 @@
         >
           {{ titleFor(input) }}
         </legend>
-        <div
-          v-for="(subInput, index) in input.inputs"
-          :key="index"
-          :id="subInput.key"
-        >
-          <custom-form-input
-            :input="subInput"
-            v-model="formInputValue[subInput.key]"
-            @inputChanged="inputChanged"
-            style="margin: 0px 2px"
-          />
-        </div>
+        <nitrozen-custom-form
+          :inputs="input.inputs"
+          v-model="formInputValue"
+          @change="inputChanged"
+        />
       </fieldset>
     </template>
     <template v-else-if="input.type == 'array'">
@@ -116,14 +109,14 @@
           {{ titleFor(input) }}
         </legend>
         <div
-          v-for="(subResponse, index) in value"
+          v-for="(subResponse, index) in formInputValue"
           :key="index"
           :id="input.key + '[' + index + ']'"
         >
           <custom-form-input
             :input="input.input"
             v-model="formInputValue[index]"
-            @inputChanged="inputChanged"
+            @change="inputChanged"
           />
         </div>
         <nitrozen-button @click="addResponse" theme="secondary">
@@ -153,7 +146,7 @@ export default {
   data() {
     return {
       hasError: false,
-      formInputValue: this.value
+      formInputValue: this.value,
     };
   },
   components: {
@@ -162,11 +155,9 @@ export default {
   },
   event: "change",
   watch: {
-    value(){
-      if(!this.formInputValue){
-        this.formInputValue = this.value
-      }      
-    }
+    formInputValue() {
+      this.inputChanged();
+    },
   },
   methods: {
     titleFor(input) {
@@ -175,13 +166,13 @@ export default {
     errorTextFor(input) {
       return input.error_message || "Please enter " + input.display;
     },
-    inputChanged(event) {
-      this.$emit("change", this.value);
+    inputChanged() {
+      this.$emit("change", this.formInputValue);
     },
     addResponse() {
-      // this.value.push(defaultResponseForInput(this.input.input));
+      this.formInputValue.push(defaultResponseForInput(this.input.input));
       this.$forceUpdate();
-      this.inputChanged({});
+      this.inputChanged();
     },
   },
 };

@@ -6,7 +6,7 @@
         :input="input"
         v-if="!input.hidden"
         v-model="value[input.key]"
-        @change="inputChanged"
+        @change="inputChanged(input, $event)"
       />
     </template>
   </div>
@@ -36,7 +36,6 @@ export default {
     this.inputs.forEach((input) => {
       if (this.value[input.key] == undefined) {
         this.value[input.key] = defaultResponseForInput(input);
-        // console.log(this.value[input.key], input.key, input, defaultResponseForInput(input));
       }
     });
 
@@ -51,6 +50,8 @@ export default {
           this.$set(input, "hidden", hidden);
           if (hidden) {
             response[input.key] = undefined;
+          } else if (response[input.key] == undefined) {
+            response[input.key] = defaultResponseForInput(input);
           }
         }
 
@@ -59,7 +60,8 @@ export default {
         }
       });
     },
-    inputChanged() {
+    inputChanged(input, newValue) {
+      this.value[input.key] = newValue;
       this.recaliberateInputs(this.inputs, this.value);
       this.$emit("change", this.value);
     },
