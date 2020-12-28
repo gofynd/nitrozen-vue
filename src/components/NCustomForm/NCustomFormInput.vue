@@ -11,7 +11,6 @@
         :required="input.required"
         :tooltipText="input.tooltip"
         :showTooltip="input.tooltip != undefined"
-        @input="inputChanged"
       />
     </template>
     <template v-else-if="input.type == 'toggle'">
@@ -19,7 +18,6 @@
         <span class="n-input-label">{{ titleFor(input) }}</span>
         <nitrozen-toggle
           v-model="formInputValue"
-          @change="inputChanged"
         ></nitrozen-toggle>
       </div>
     </template>
@@ -51,7 +49,6 @@
               v-model="formInputValue"
               :checkboxValue="option.key"
               :name="input.key"
-              @input="inputChanged"
             >
               <span class="title">{{ option.display }}</span>
             </nitrozen-checkbox>
@@ -61,7 +58,6 @@
               v-model="formInputValue"
               :radioValue="option.key"
               :name="input.key"
-              @change="inputChanged"
             >
               <span class="title">{{ option.display }}</span>
             </nitrozen-radio>
@@ -82,7 +78,6 @@
         :required="input.required"
         :tooltipText="input.tooltip"
         :showTooltip="input.tooltip != undefined"
-        @change="inputChanged"
       ></nitrozen-dropdown>
     </template>
     <template v-else-if="input.type == 'object'">
@@ -116,7 +111,7 @@
           <custom-form-input
             :input="input.input"
             v-model="formInputValue[index]"
-            @change="inputChanged"
+            @change="arrayInputChanged(index, $event)"
           />
         </div>
         <nitrozen-button @click="addResponse" theme="secondary">
@@ -172,8 +167,11 @@ export default {
     addResponse() {
       this.formInputValue.push(defaultResponseForInput(this.input.input));
       this.$forceUpdate();
-      this.inputChanged();
     },
+    arrayInputChanged(index, valueAtIndex) {
+      this.formInputValue[index] = valueAtIndex;
+      this.inputChanged();
+    }
   },
 };
 </script>

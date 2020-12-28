@@ -5,11 +5,20 @@ function defaultResponseForInput(input) {
         } else if (input.enum.length) {
             return input.enum[0].key;
         }
+        return undefined
+    } else if (input.type == "dropdown") {
+        if (input.default) {
+            return input.default;
+        }
+        return undefined;
     } else if (input.type == "checkbox") {
         return [];
     } else if (
         ['text', 'textarea', 'email', 'number'].includes(input.type)
     ) {
+        if (input.default) {
+            return input.default;
+        }
         return "asdf";
     } else if (input.type == "mobile") {
         return {

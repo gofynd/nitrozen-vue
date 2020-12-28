@@ -45,8 +45,7 @@ export default {
     recaliberateInputs(inputs, response) {
       inputs.forEach((input) => {
         if (input.visible_if) {
-          let hidden = false;
-          hidden = !jsonLogic.apply(input.visible_if, response);
+          const hidden = !jsonLogic.apply(input.visible_if, response);
           this.$set(input, "hidden", hidden);
           if (hidden) {
             response[input.key] = undefined;

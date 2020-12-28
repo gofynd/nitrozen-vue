@@ -35,6 +35,7 @@ export default {
           required: true,
           type: "text",
           tooltip: "asdf",
+          default: "nikhil"
         },
         {
           display: "Conditional Input",
@@ -85,6 +86,7 @@ export default {
                 key: "datatype",
                 required: true,
                 type: "dropdown",
+                default: "FLOAT",
                 enum: [
                   {
                     key: "STRING",
