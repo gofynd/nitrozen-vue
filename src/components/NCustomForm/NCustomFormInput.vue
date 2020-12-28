@@ -5,7 +5,7 @@
     >
       <nitrozen-input
         :type="input.type"
-        v-model="value"
+        v-model="formInputValue"
         :label="input.display"
         :placeholder="input.placeholder"
         :required="input.required"
@@ -18,7 +18,7 @@
       <div class="toggle-input">
         <span class="n-input-label">{{ titleFor(input) }}</span>
         <nitrozen-toggle
-          v-model="value"
+          v-model="formInputValue"
           @change="inputChanged"
         ></nitrozen-toggle>
       </div>
@@ -34,7 +34,7 @@
         autocomplete="off"
         mode="international"
         :placeholder="input.placeholder"
-        v-model="value.number"
+        v-model="formInputValue.number"
         @input="inputChanged"
       ></vue-tel-input>
     </template>
@@ -48,7 +48,7 @@
         >
           <template v-if="input.type == 'checkbox'">
             <nitrozen-checkbox
-              v-model="value"
+              v-model="formInputValue"
               :checkboxValue="option.key"
               :name="input.key"
               @input="inputChanged"
@@ -58,7 +58,7 @@
           </template>
           <template v-else-if="input.type == 'radio'">
             <nitrozen-radio
-              v-model="value"
+              v-model="formInputValue"
               :radioValue="option.key"
               :name="input.key"
               @change="inputChanged"
@@ -76,7 +76,7 @@
             return { text: x.display, value: x.key };
           })
         "
-        v-model="value"
+        v-model="formInputValue"
         :label="input.display"
         :placeholder="input.placeholder"
         :required="input.required"
@@ -100,7 +100,7 @@
         >
           <custom-form-input
             :input="subInput"
-            v-model="value[subInput.key]"
+            v-model="formInputValue[subInput.key]"
             @inputChanged="inputChanged"
             style="margin: 0px 2px"
           />
@@ -122,7 +122,7 @@
         >
           <custom-form-input
             :input="input.input"
-            v-model="value[index]"
+            v-model="formInputValue[index]"
             @inputChanged="inputChanged"
           />
         </div>
@@ -153,6 +153,7 @@ export default {
   data() {
     return {
       hasError: false,
+      formInputValue: this.value
     };
   },
   components: {
@@ -160,6 +161,13 @@ export default {
     "vue-tel-input": VueTelInput,
   },
   event: "change",
+  watch: {
+    value(){
+      if(!this.formInputValue){
+        this.formInputValue = this.value
+      }      
+    }
+  },
   methods: {
     titleFor(input) {
       return input.display + (input.required ? " *" : "");

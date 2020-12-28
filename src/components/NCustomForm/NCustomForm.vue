@@ -36,7 +36,7 @@ export default {
     this.inputs.forEach((input) => {
       if (this.value[input.key] == undefined) {
         this.value[input.key] = defaultResponseForInput(input);
-        console.log(this.value[input.key], input.key, input, defaultResponseForInput(input));
+        // console.log(this.value[input.key], input.key, input, defaultResponseForInput(input));
       }
     });
 
