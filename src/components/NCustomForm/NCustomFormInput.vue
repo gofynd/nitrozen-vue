@@ -5,7 +5,7 @@
     >
       <nitrozen-input
         :type="input.type"
-        v-model="response.value"
+        v-model="value"
         :label="input.display"
         :placeholder="input.placeholder"
         :required="input.required"
@@ -18,7 +18,7 @@
       <div class="toggle-input">
         <span class="n-input-label">{{ titleFor(input) }}</span>
         <nitrozen-toggle
-          v-model="response.value"
+          v-model="value"
           @change="inputChanged"
         ></nitrozen-toggle>
       </div>
@@ -34,7 +34,7 @@
         autocomplete="off"
         mode="international"
         :placeholder="input.placeholder"
-        v-model="response.value"
+        v-model="value.number"
         @input="inputChanged"
       ></vue-tel-input>
     </template>
@@ -48,19 +48,19 @@
         >
           <template v-if="input.type == 'checkbox'">
             <nitrozen-checkbox
-              v-model="response.value"
-              radioValue="none"
-              name="route"
-              @change="inputChanged"
+              v-model="value"
+              :checkboxValue="option.key"
+              :name="input.key"
+              @input="inputChanged"
             >
               <span class="title">{{ option.display }}</span>
             </nitrozen-checkbox>
           </template>
           <template v-else-if="input.type == 'radio'">
             <nitrozen-radio
-              v-model="response.value"
-              radioValue="none"
-              name="route"
+              v-model="value"
+              :radioValue="option.key"
+              :name="input.key"
               @change="inputChanged"
             >
               <span class="title">{{ option.display }}</span>
@@ -76,7 +76,7 @@
             return { text: x.display, value: x.key };
           })
         "
-        v-model="response.value"
+        v-model="value"
         :label="input.display"
         :placeholder="input.placeholder"
         :required="input.required"
@@ -100,7 +100,7 @@
         >
           <custom-form-input
             :input="subInput"
-            :response="response.value[subInput.key]"
+            v-model="value[subInput.key]"
             @inputChanged="inputChanged"
             style="margin: 0px 2px"
           />
@@ -116,27 +116,22 @@
           {{ titleFor(input) }}
         </legend>
         <div
-          v-for="(subResponse, index) in response.value"
+          v-for="(subResponse, index) in value"
           :key="index"
           :id="input.key + '[' + index + ']'"
         >
           <custom-form-input
             :input="input.input"
-            :response="subResponse"
+            v-model="value[index]"
             @inputChanged="inputChanged"
           />
         </div>
-        <nitrozen-button
-          @click="addResponse"
-          theme="secondary"
-        >
+        <nitrozen-button @click="addResponse" theme="secondary">
           Add
         </nitrozen-button>
       </fieldset>
     </template>
-    <nitrozen-error v-if="response.showerror">{{
-      response.errortext
-    }}</nitrozen-error>
+    <nitrozen-error v-if="hasError">{{ errorTextFor(input) }}</nitrozen-error>
   </div>
 </template>
 
@@ -147,32 +142,36 @@ import NitrozenToggle from "./../NToggleBtn";
 export default {
   name: "custom-form-input",
   props: {
+    value: {
+      type: [Object, Array, Number, Boolean, String],
+    },
     input: {
       type: Object,
-    },
-    response: {
-      type: Object,
+      default: false,
     },
   },
   data() {
     return {
-      //
+      hasError: false,
     };
   },
   components: {
     NitrozenToggle,
     "vue-tel-input": VueTelInput,
   },
+  event: "change",
   methods: {
-    defaultResponseForInput,
     titleFor(input) {
       return input.display + (input.required ? " *" : "");
     },
+    errorTextFor(input) {
+      return input.error_message || "Please enter " + input.display;
+    },
     inputChanged(event) {
-      this.$emit("inputChanged", event);
+      this.$emit("change", this.value);
     },
     addResponse() {
-      this.response.value.push(this.defaultResponseForInput(this.input.input));
+      // this.value.push(defaultResponseForInput(this.input.input));
       this.$forceUpdate();
       this.inputChanged({});
     },

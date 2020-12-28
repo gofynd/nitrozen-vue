@@ -33,7 +33,7 @@ export default {
           ],
           key: "email",
           required: true,
-          type: "dropdown",
+          type: "text",
           tooltip: "asdf",
         },
         {
@@ -134,18 +134,6 @@ export default {
                   display: "ReGrowth",
                 },
                 {
-                  key: "regrowth",
-                  display: "ReGrowth",
-                },
-                {
-                  key: "regrowth",
-                  display: "ReGrowth",
-                },
-                {
-                  key: "regrowth",
-                  display: "ReGrowth",
-                },
-                {
                   key: "opex",
                   display: "OpEx",
                 },
@@ -163,7 +151,9 @@ export default {
           },
         },
       ],
-      response: {},
+      response: {
+        sheetNames: ["asdf", "asdfasdf"],
+      },
     };
   },
   methods: {

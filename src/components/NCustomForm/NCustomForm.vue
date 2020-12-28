@@ -5,8 +5,8 @@
         :key="index"
         :input="input"
         v-if="!input.hidden"
-        :response="value[input.key]"
-        @inputChanged="inputChanged"
+        v-model="value[input.key]"
+        @change="inputChanged"
       />
     </template>
   </div>
@@ -20,7 +20,6 @@ export default {
   name: "nitrozen-custom-form",
   props: {
     value: {
-      // response
       type: Object,
       default: false,
     },
@@ -35,31 +34,34 @@ export default {
   event: "change",
   beforeMount() {
     this.inputs.forEach((input) => {
-      this.value[input.key] = this.defaultResponseForInput(input);
+      if (this.value[input.key] == undefined) {
+        this.value[input.key] = defaultResponseForInput(input);
+        console.log(this.value[input.key], input.key, input, defaultResponseForInput(input));
+      }
     });
 
-    this.recaliberateInputs();
+    this.recaliberateInputs(this.inputs, this.value);
   },
   methods: {
-    defaultResponseForInput,
-    recaliberateInputs() {
-      let finalResponse = {};
-
-      this.inputs.forEach((input) => {
-        finalResponse[input.key] = this.value[input.key].value;
-      });
-
-      this.inputs.forEach((input) => {
-        let hidden = false;
+    recaliberateInputs(inputs, response) {
+      inputs.forEach((input) => {
         if (input.visible_if) {
-          hidden = !jsonLogic.apply(input.visible_if, finalResponse);
+          let hidden = false;
+          hidden = !jsonLogic.apply(input.visible_if, response);
+          this.$set(input, "hidden", hidden);
+          if (hidden) {
+            response[input.key] = undefined;
+          }
         }
-        this.$set(input, "hidden", hidden);
+
+        if (input.inputs) {
+          this.recaliberateInputs(input.inputs, response[input.key]);
+        }
       });
-      return finalResponse;
     },
     inputChanged() {
-      this.$emit("change", this.recaliberateInputs());
+      this.recaliberateInputs(this.inputs, this.value);
+      this.$emit("change", this.value);
     },
   },
 };
