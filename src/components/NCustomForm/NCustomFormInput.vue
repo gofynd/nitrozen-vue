@@ -11,7 +11,7 @@
         :required="input.required"
         :tooltipText="input.tooltip"
         :showTooltip="input.tooltip != undefined"
-        @change="willMoveToNext"
+        @blur="willMoveToNext"
       />
     </template>
     <template v-else-if="input.type == 'toggle'">
@@ -175,8 +175,16 @@ export default {
       this.formInputValue[index] = valueAtIndex;
       this.inputChanged();
     },
+    isEmpty(value) {
+      return value == "" || value == undefined || value == null;
+    },
     willMoveToNext() {
-      if (this.input.regex) {
+      if (this.input.required) {
+        this.hasError = this.isEmpty(this.formInputValue);
+        if (this.hasError) return;
+      }
+
+      if (this.input.regex && !this.isEmpty(this.formInputValue)) {
         var re = new RegExp(this.input.regex);
         this.hasError = !re.test(this.formInputValue);
       }

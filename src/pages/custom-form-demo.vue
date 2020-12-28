@@ -13,7 +13,7 @@ export default {
   name: "custom-form-demo",
   data() {
     return {
-      demoInputs: [
+      inputs: [
         {
           type: "toggle",
           display: "A Toggle switch",
@@ -156,7 +156,7 @@ export default {
           },
         },
       ],
-      inputs: [
+      Xinputs: [
         {
           type: "toggle",
           display: "Does your file have a header?",
@@ -301,8 +301,8 @@ export default {
           },
         },
       ],
-      // response: {},
-      response: {
+      response: {},
+      Xresponse: {
         fileHasHeader: true,
         headerIndex: 0,
         delimiter: ",",
