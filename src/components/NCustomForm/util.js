@@ -16,7 +16,7 @@ function defaultResponseForInput(input) {
     } else if (
         ['text', 'textarea', 'email', 'number'].includes(input.type)
     ) {
-        if (input.default) {
+        if (input.default || input.default == 0) {
             return input.default;
         }
         return null;
