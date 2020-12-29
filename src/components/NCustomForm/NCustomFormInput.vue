@@ -114,6 +114,7 @@
           <custom-form-input
             :input="input.input"
             v-model="formInputValue[index]"
+            :ref="input.key + '[' + index + ']'"
             @change="arrayInputChanged(index, $event)"
           />
         </div>
@@ -162,6 +163,9 @@ export default {
       return input.display + (input.required ? " *" : "");
     },
     errorTextFor(input) {
+      if (['dropdown', 'checkbox', 'radio'].includes(input.type)) {
+        return input.error_message || "Please select " + input.display;
+      }
       return input.error_message || "Please enter " + input.display;
     },
     inputChanged() {
@@ -189,6 +193,13 @@ export default {
             this.$refs[this.input.key].showValidationErrorsIfAny();
           }
         });
+      } else if (this.input.input) {
+        // this.formInputValue.forEach((val, index) => {
+        //   const refs = this.$refs[
+        //     this.input.key + "[" + index + "]"
+        //   ];
+        //   refs[0].showValidationErrorsIfAny();
+        // });
       } else {
         this.willMoveToNext();
       }
