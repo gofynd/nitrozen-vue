@@ -66,7 +66,6 @@ function validateResponsesForInputs(inputs, response) {
     let isValid = true;
     inputs.forEach((input) => {
         if (!input.hidden) {
-            if (input.key == 'pincode') debugger;
             isValid = validateResponseForInput(input, response[input.key]) && isValid;
         }
     });

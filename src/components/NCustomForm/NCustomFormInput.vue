@@ -94,6 +94,7 @@
           :inputs="input.inputs"
           v-model="formInputValue"
           @change="inputChanged"
+          :ref="input.key"
         />
       </fieldset>
     </template>
@@ -176,7 +177,21 @@ export default {
       this.inputChanged();
     },
     willMoveToNext() {
-      this.hasError = !validateResponseForInput(this.input, this.formInputValue);
+      this.hasError = !validateResponseForInput(
+        this.input,
+        this.formInputValue
+      );
+    },
+    showValidationErrorsIfAny() {
+      if (this.input.inputs) {
+        this.input.inputs.forEach((input) => {
+          if (!input.hidden) {
+            this.$refs[this.input.key].showValidationErrorsIfAny();
+          }
+        });
+      } else {
+        this.willMoveToNext();
+      }
     },
   },
 };

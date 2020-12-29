@@ -335,7 +335,11 @@ export default {
       console.log(response);
     },
     sendResponse() {
-      console.log(this.$refs.form.validate());
+      if (!this.$refs.form.isResponseValid()) {
+        this.$refs.form.showValidationErrorsIfAny();
+      } else {
+        console.log("Valid Response finally")
+      }
     },
   },
 };

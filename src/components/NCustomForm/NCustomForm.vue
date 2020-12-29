@@ -3,6 +3,7 @@
     <template v-for="(input, index) in inputs" :id="input.key">
       <custom-form-input
         :key="index"
+        :ref="input.key"
         :input="input"
         v-if="!input.hidden"
         v-model="value[input.key]"
@@ -64,8 +65,15 @@ export default {
       this.recaliberateInputs(this.inputs, this.value);
       this.$emit("change", this.value);
     },
-    validate() {
+    isResponseValid() {
       return validateResponsesForInputs(this.inputs, this.value);
+    },
+    showValidationErrorsIfAny() {
+      this.inputs.forEach((input) => {
+        if (!input.hidden) {
+          this.$refs[input.key][0].showValidationErrorsIfAny();
+        }
+      });
     },
   },
 };
