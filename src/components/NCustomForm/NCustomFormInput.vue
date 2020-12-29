@@ -164,6 +164,7 @@ export default {
     NitrozenError,
     NitrozenButton,
     VueTelInput,
+    NitrozenCustomForm: () => import("./NCustomForm.vue"),
   },
   event: "change",
   watch: {
@@ -176,7 +177,7 @@ export default {
       return input.display + (input.required ? " *" : "");
     },
     errorTextFor(input) {
-      if (['dropdown', 'checkbox', 'radio'].includes(input.type)) {
+      if (["dropdown", "checkbox", "radio"].includes(input.type)) {
         return input.error_message || "Please select " + input.display;
       }
       return input.error_message || "Please enter " + input.display;

@@ -145,7 +145,7 @@ export default {
               },
               {
                 display: "Data Type",
-                key: "datatype",
+                key: "dataType",
                 required: true,
                 type: "dropdown",
                 default: "FLOAT",

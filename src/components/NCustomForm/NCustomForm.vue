@@ -1,7 +1,7 @@
 <template>
   <div class="nitrozen-custom-form">
     <template v-for="(input, index) in inputs" :id="input.key">
-      <custom-form-input
+      <nitrozen-custom-form-input
         :key="index"
         :ref="input.key"
         :input="input"
@@ -15,8 +15,9 @@
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
 import jsonLogic from "json-logic-js";
-import NCustomFormInput from "./NCustomFormInput.vue";
+import NitrozenCustomFormInput from "./NCustomFormInput.vue";
 import { defaultResponseForInput, validateResponsesForInputs } from "./util.js";
+
 export default {
   name: "nitrozen-custom-form",
   props: {
@@ -30,7 +31,7 @@ export default {
     },
   },
   components: {
-    "custom-form-input": NCustomFormInput,
+    NitrozenCustomFormInput,
   },
   event: "change",
   beforeMount() {
