@@ -136,9 +136,10 @@ import NitrozenRadio from "./../NRadio";
 import NitrozenDropdown from "./../NDropdown";
 import NitrozenInput from "./../NInput";
 import NitrozenCustomForm from "./../NCustomForm";
+import NitrozenError from "./../NError";
 
 export default {
-  name: "custom-form-input",
+  name: "nitrozen-custom-form-input",
   props: {
     value: {
       type: [Object, Array, Number, Boolean, String],
@@ -161,6 +162,7 @@ export default {
     NitrozenCheckbox,
     NitrozenRadio,
     NitrozenToggle,
+    NitrozenError,
     VueTelInput,
   },
   event: "change",

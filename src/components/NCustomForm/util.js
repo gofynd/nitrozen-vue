@@ -22,7 +22,7 @@ function defaultResponseForInput(input) {
         return null;
     } else if (input.type == "mobile") {
         return {
-            countryCode: 91,
+            code: 91,
             number: ""
         };
     } else if (input.type == "object") {
