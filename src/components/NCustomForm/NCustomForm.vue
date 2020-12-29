@@ -15,7 +15,7 @@
 import NitrozenUuid from "./../../utils/NUuid";
 import jsonLogic from "json-logic-js";
 import NCustomFormInput from "./NCustomFormInput.vue";
-import { defaultResponseForInput } from "./util.js";
+import { defaultResponseForInput, validateResponsesForInputs } from "./util.js";
 export default {
   name: "nitrozen-custom-form",
   props: {
@@ -63,6 +63,9 @@ export default {
       this.value[input.key] = newValue;
       this.recaliberateInputs(this.inputs, this.value);
       this.$emit("change", this.value);
+    },
+    validate() {
+      return validateResponsesForInputs(this.inputs, this.value);
     },
   },
 };

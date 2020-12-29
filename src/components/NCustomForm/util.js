@@ -41,6 +41,40 @@ function defaultResponseForInput(input) {
     }
 }
 
+function isEmpty(value) {
+    return value == "" || value == undefined || value == null;
+}
+
+function validateResponseForInput(input, response) {
+    if (input.inputs) {
+        return validateResponsesForInputs(input.inputs, response)
+    }
+
+    if (input.regex && !isEmpty(response)) {
+        var re = new RegExp(input.regex);
+        return re.test(response);
+    }
+
+    if (input.required) {
+        return !isEmpty(response);
+    }
+
+    return true
+}
+
+function validateResponsesForInputs(inputs, response) {
+    let isValid = true;
+    inputs.forEach((input) => {
+        if (!input.hidden) {
+            if (input.key == 'pincode') debugger;
+            isValid = validateResponseForInput(input, response[input.key]) && isValid;
+        }
+    });
+    return isValid;
+}
+
 module.exports = {
+    validateResponsesForInputs: validateResponsesForInputs,
+    validateResponseForInput: validateResponseForInput,
     defaultResponseForInput: defaultResponseForInput
 };

@@ -126,7 +126,7 @@
 </template>
 
 <script>
-import { defaultResponseForInput } from "./util.js";
+import { defaultResponseForInput, validateResponseForInput } from "./util.js";
 import VueTelInput from "vue-tel-input";
 import NitrozenToggle from "./../NToggleBtn";
 export default {
@@ -175,19 +175,8 @@ export default {
       this.formInputValue[index] = valueAtIndex;
       this.inputChanged();
     },
-    isEmpty(value) {
-      return value == "" || value == undefined || value == null;
-    },
     willMoveToNext() {
-      if (this.input.required) {
-        this.hasError = this.isEmpty(this.formInputValue);
-        if (this.hasError) return;
-      }
-
-      if (this.input.regex && !this.isEmpty(this.formInputValue)) {
-        var re = new RegExp(this.input.regex);
-        this.hasError = !re.test(this.formInputValue);
-      }
+      this.hasError = !validateResponseForInput(this.input, this.formInputValue);
     },
   },
 };

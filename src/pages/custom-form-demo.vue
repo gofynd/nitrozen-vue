@@ -2,10 +2,14 @@
   <div>
     <div class="form-title">Typical Form</div>
     <nitrozen-custom-form
+      ref="form"
       :inputs="inputs"
       v-model="response"
       @change="formResponseChanged"
     />
+    <button class="common-btn submit-button" @click="sendResponse()">
+      <div>Submit</div>
+    </button>
   </div>
 </template>
 <script>
@@ -330,6 +334,9 @@ export default {
     formResponseChanged(response) {
       console.log(response);
     },
+    sendResponse() {
+      console.log(this.$refs.form.validate());
+    },
   },
 };
 </script>
@@ -339,5 +346,18 @@ export default {
   font-weight: 500;
   color: #41434c;
   margin-bottom: 20px;
+}
+.submit-button {
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 24px;
+  padding: 4px 20px;
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
 }
 </style>
