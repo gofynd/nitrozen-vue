@@ -111,7 +111,7 @@
           :key="index"
           :id="input.key + '[' + index + ']'"
         >
-          <custom-form-input
+          <nitrozen-custom-form-input
             :input="input.input"
             v-model="formInputValue[index]"
             :ref="input.key + '[' + index + ']'"
@@ -135,7 +135,6 @@ import NitrozenCheckbox from "./../NCheckbox";
 import NitrozenRadio from "./../NRadio";
 import NitrozenDropdown from "./../NDropdown";
 import NitrozenInput from "./../NInput";
-import NitrozenCustomForm from "./../NCustomForm";
 import NitrozenError from "./../NError";
 
 export default {
@@ -156,7 +155,6 @@ export default {
     };
   },
   components: {
-    NitrozenCustomForm,
     NitrozenInput,
     NitrozenDropdown,
     NitrozenCheckbox,
