@@ -131,6 +131,12 @@
 import { defaultResponseForInput, validateResponseForInput } from "./util.js";
 import VueTelInput from "vue-tel-input";
 import NitrozenToggle from "./../NToggleBtn";
+import NitrozenCheckbox from "./../NCheckbox";
+import NitrozenRadio from "./../NRadio";
+import NitrozenDropdown from "./../NDropdown";
+import NitrozenInput from "./../NInput";
+import NitrozenCustomForm from "./../NCustomForm";
+
 export default {
   name: "custom-form-input",
   props: {
@@ -149,8 +155,13 @@ export default {
     };
   },
   components: {
+    NitrozenCustomForm,
+    NitrozenInput,
+    NitrozenDropdown,
+    NitrozenCheckbox,
+    NitrozenRadio,
     NitrozenToggle,
-    "vue-tel-input": VueTelInput,
+    VueTelInput,
   },
   event: "change",
   watch: {
