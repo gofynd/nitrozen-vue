@@ -4,7 +4,7 @@
     <nitrozen-custom-form
       ref="form"
       :inputs="inputs"
-      v-model="response"
+      v-model="emptyResponse"
       @change="formResponseChanged"
     />
     <button class="common-btn submit-button" @click="sendResponse()">
@@ -18,149 +18,6 @@ export default {
   data() {
     return {
       inputs: [
-        {
-          type: "toggle",
-          display: "A Toggle switch",
-          key: "some_boolean",
-        },
-        {
-          display: "A Dropdown",
-          enum: [
-            {
-              key: "show",
-              display: "Show next text input",
-            },
-            {
-              key: "hide",
-              display: "Hide next text input",
-            },
-          ],
-          key: "condition",
-          required: true,
-          type: "dropdown",
-          tooltip:
-            "Selection of this dropdown will decide the fate of next input",
-          default: "hide",
-        },
-        {
-          display: "A Conditional Text Input",
-          enum: [],
-          key: "awesome_text",
-          required: true,
-          type: "text",
-          placeholder: "Enter an awesome text here",
-          visible_if: {
-            "==": [
-              {
-                var: "condition",
-              },
-              "show",
-            ],
-          },
-        },
-        {
-          display: "Pincode",
-          key: "pincode",
-          required: true,
-          type: "number",
-          tooltip:
-            "This is valid only if input is validated with '^[1-9][0-9]{5}$'",
-          placeholder: "Please enter your pincode",
-          regex: "^[1-9][0-9]{5}$",
-        },
-        {
-          display: "Prop Bean Configs",
-          key: "propBeanConfigs",
-          type: "array",
-          input: {
-            display: "",
-            type: "object",
-            inputs: [
-              {
-                display: "Source Field",
-                key: "sourceField",
-                required: true,
-                type: "text",
-              },
-              {
-                display: "Destination Field",
-                key: "destinationField",
-                required: true,
-                type: "text",
-              },
-              {
-                display: "Data Type",
-                key: "datatype",
-                required: true,
-                type: "dropdown",
-                default: "FLOAT",
-                enum: [
-                  {
-                    key: "STRING",
-                    display: "String",
-                  },
-                  {
-                    key: "FLOAT",
-                    display: "Float",
-                  },
-                  {
-                    key: "INTEGER",
-                    display: "Integer",
-                  },
-                ],
-              },
-            ],
-          },
-        },
-        {
-          display: "Team",
-          key: "team",
-          type: "object",
-          inputs: [
-            {
-              display: "Name",
-              key: "team_name",
-              required: true,
-              type: "text",
-            },
-            {
-              display: "Members",
-              key: "members",
-              type: "array",
-              input: {
-                display: "",
-                type: "text",
-              },
-            },
-            {
-              display: "Parent Team",
-              key: "parent_team",
-              required: true,
-              type: "checkbox",
-              enum: [
-                {
-                  key: "regrowth",
-                  display: "ReGrowth",
-                },
-                {
-                  key: "opex",
-                  display: "OpEx",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          display: "Sheet Names",
-          key: "sheetNames",
-          type: "array",
-          input: {
-            display: "",
-            type: "text",
-          },
-        },
-      ],
-      Xinputs: [
         {
           type: "toggle",
           display: "Does your file have a header?",
@@ -189,12 +46,28 @@ export default {
           tooltip: "Delimiter used in CSV",
           default: ",",
         },
-
         {
           type: "number",
           display: "Start index of your data",
           key: "dataStartIndex",
           default: 1,
+        },
+        {
+          display: "File type of your input",
+          key: "fileType",
+          required: true,
+          type: "dropdown",
+          enum: [
+            {
+              key: "EXCEL",
+              display: "Excel",
+            },
+            {
+              key: "CSV",
+              display: "CSV",
+            },
+          ],
+          default: 'CSV',
         },
         {
           display: "Charachter Encoding",
@@ -212,22 +85,14 @@ export default {
           required: true,
           type: "dropdown",
           placeholder: "Select Charset",
-        },
-        {
-          display: "File type of your input",
-          key: "fileType",
-          required: true,
-          type: "dropdown",
-          enum: [
-            {
-              key: "EXCEL",
-              display: "Excel",
-            },
-            {
-              key: "CSV",
-              display: "CSV",
-            },
-          ],
+          visible_if: {
+            "==": [
+              {
+                var: "fileType",
+              },
+              "CSV",
+            ],
+          },
         },
         {
           type: "toggle",
@@ -305,8 +170,8 @@ export default {
           },
         },
       ],
-      response: {},
-      Xresponse: {
+      emptyResponse: {},
+      filledResponse: {
         fileHasHeader: true,
         headerIndex: 0,
         delimiter: ",",
@@ -338,7 +203,7 @@ export default {
       if (!this.$refs.form.isResponseValid()) {
         this.$refs.form.showValidationErrorsIfAny();
       } else {
-        console.log("Valid Response finally")
+        console.log("Valid Response finally");
       }
     },
   },
