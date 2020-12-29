@@ -7,9 +7,7 @@
       v-model="emptyResponse"
       @change="formResponseChanged"
     />
-    <button class="common-btn submit-button" @click="sendResponse()">
-      <div>Submit</div>
-    </button>
+    <nitrozen-button v-flat-btn @click="sendResponse">Submit</nitrozen-button>
   </div>
 </template>
 <script>
@@ -67,7 +65,7 @@ export default {
               display: "CSV",
             },
           ],
-          default: 'CSV',
+          default: "CSV",
         },
         {
           display: "Charachter Encoding",
