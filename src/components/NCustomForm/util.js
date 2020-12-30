@@ -42,6 +42,7 @@ function defaultResponseForInput(input) {
             return false;
         case InputTypes.object.key:
             const subResponse = {};
+            input.inputs = input.inputs || []
             input.inputs.forEach((io) => {
                 subResponse[io.key] = defaultResponseForInput(io);
             });
@@ -55,7 +56,7 @@ function defaultResponseForInput(input) {
 }
 
 function isEmptyString(value) {
-    return value.trim() == "" || value == undefined || value == null;
+    return value == undefined || value == null || value.trim() == "";
 }
 
 function validateResponseForInput(input, response) {
@@ -99,11 +100,17 @@ function validateResponseForInput(input, response) {
         case InputTypes.object.key:
             return validateResponsesForInputs(input.inputs, response);
         case InputTypes.array.key:
-            // response.forEach(element => {
-            //     return validateResponseForInput(input, element);
-            // });
-            //TODO: Check min max of array
-            return true;
+            let isValid = true
+            if (input.min) {
+                isValid = input.min <= response.length && isValid
+            }
+            if (isValid && input.max) {
+                isValid = input.max >= response.length && isValid
+            }
+            response.forEach(element => {
+                isValid =  validateResponseForInput(input.input, element) && isValid;
+            });
+            return isValid;
         default:
             console.log(input.type + 'Unknown input type detected')
             return false

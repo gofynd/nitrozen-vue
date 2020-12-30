@@ -50,7 +50,7 @@ export default {
           const hidden = !jsonLogic.apply(input.visible_if, response);
           this.$set(input, "hidden", hidden);
           if (hidden) {
-            response[input.key] = undefined;
+            delete response[input.key];
           } else if (response[input.key] == undefined) {
             response[input.key] = defaultResponseForInput(input);
           }

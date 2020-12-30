@@ -110,6 +110,8 @@ export default {
           display: "Sheet Names",
           key: "sheetNames",
           type: "array",
+          min: 2,
+          max: 4,
           input: {
             display: "",
             type: "text",
@@ -200,6 +202,7 @@ export default {
     sendResponse() {
       if (!this.$refs.form.isResponseValid()) {
         this.$refs.form.showValidationErrorsIfAny();
+        console.error("InValid Response: ", this.emptyResponse);
       } else {
         console.log("Valid Response finally: ", this.emptyResponse);
       }
