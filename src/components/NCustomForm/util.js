@@ -1,65 +1,113 @@
+import InputTypes from "./InputTypes.js";
+
 function defaultResponseForInput(input) {
-    if (input.type == "radio") {
-        if (input.default) {
-            return input.default;
-        } else if (input.enum.length) {
-            return input.enum[0].key;
-        }
-        return undefined
-    } else if (input.type == "dropdown") {
-        if (input.default) {
-            return input.default;
-        }
-        return undefined;
-    } else if (input.type == "checkbox") {
-        return [];
-    } else if (
-        ['text', 'textarea', 'email', 'number'].includes(input.type)
-    ) {
-        if (input.default || input.default == 0) {
-            return input.default;
-        }
-        return null;
-    } else if (input.type == "mobile") {
-        return {
-            code: 91,
-            number: ""
-        };
-    } else if (input.type == "object") {
-        const subResponse = {};
-        input.inputs.forEach((io) => {
-            subResponse[io.key] = defaultResponseForInput(io);
-        });
-        return subResponse;
-    } else if (input.type == "array") {
-        return [];
-    } else if (input.type == "toggle") {
-        if (input.default) {
-            return input.default
-        }
-        return false;
+    switch (input.type) {
+        case InputTypes.text.key:
+        case InputTypes.textarea.key:
+        case InputTypes.email.key:
+        case InputTypes.number.key:
+            if (input.default || input.default == 0) {
+                return input.default;
+            }
+            return null;
+        case InputTypes.radio.key:
+            if (input.default) {
+                return input.default;
+            } else if (input.enum.length) {
+                return input.enum[0].key;
+            }
+            return null;
+        case InputTypes.dropdown.key:
+            if (input.default) {
+                return input.default;
+            }
+            return null;
+        case InputTypes.checkbox.key:
+            if (input.default) {
+                return input.default;
+            }
+            return [];
+        case InputTypes.mobile.key:
+            if (input.default) {
+                return input.default;
+            }
+            return {
+                code: 91,
+                number: ""
+            };
+        case InputTypes.toggle.key:
+            if (input.default) {
+                return input.default
+            }
+            return false;
+        case InputTypes.object.key:
+            const subResponse = {};
+            input.inputs.forEach((io) => {
+                subResponse[io.key] = defaultResponseForInput(io);
+            });
+            return subResponse;
+        case InputTypes.array.key:
+            return [];
+        default:
+            console.log(input.type + 'Unknown input type detected')
+            return undefined
     }
 }
 
-function isEmpty(value) {
-    return value == "" || value == undefined || value == null;
+function isEmptyString(value) {
+    return value.trim() == "" || value == undefined || value == null;
 }
 
 function validateResponseForInput(input, response) {
-    if (input.inputs) {
-        return validateResponsesForInputs(input.inputs, response)
+    switch (input.type) {
+        case InputTypes.text.key:
+        case InputTypes.textarea.key:
+        case InputTypes.email.key:
+        case InputTypes.number.key:
+            if (input.regex && !isEmptyString(response)) {
+                var re = new RegExp(input.regex);
+                return re.test(response);
+            }
+            if (input.required) {
+                return !isEmptyString(response);
+            }
+        case InputTypes.radio.key:
+            if (input.required) {
+                return response != null;
+            }
+            return true;
+        case InputTypes.dropdown.key:
+            if (input.required) {
+                return response != null;
+            }
+            return true;
+        case InputTypes.checkbox.key:
+            if (input.required) {
+                return Array.isArray(response) && response.length;
+            }
+            return true;
+        case InputTypes.mobile.key:
+            if (input.regex && !isEmptyString(response.number)) {
+                var re = new RegExp(input.regex);
+                return re.test(response.number);
+            }
+            if (input.required) {
+                return !isEmptyString(response.number);
+            }
+        case InputTypes.toggle.key:
+            return true;
+        case InputTypes.object.key:
+            return validateResponsesForInputs(input.inputs, response);
+        case InputTypes.array.key:
+            // response.forEach(element => {
+            //     return validateResponseForInput(input, element);
+            // });
+            //TODO: Check min max of array
+            return true;
+        default:
+            console.log(input.type + 'Unknown input type detected')
+            return false
     }
-
-    if (input.regex && !isEmpty(response)) {
-        var re = new RegExp(input.regex);
-        return re.test(response);
-    }
-
-    if (input.required) {
-        return !isEmpty(response);
-    }
-
-    return true
 }
 
 function validateResponsesForInputs(inputs, response) {
@@ -72,8 +120,8 @@ function validateResponsesForInputs(inputs, response) {
     return isValid;
 }
 
-module.exports = {
-    validateResponsesForInputs: validateResponsesForInputs,
-    validateResponseForInput: validateResponseForInput,
-    defaultResponseForInput: defaultResponseForInput
+export {
+    validateResponsesForInputs,
+    validateResponseForInput,
+    defaultResponseForInput,
 };
