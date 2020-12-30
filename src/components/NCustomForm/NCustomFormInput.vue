@@ -36,6 +36,7 @@
         :placeholder="input.placeholder"
         v-model="formInputValue.number"
         @input="inputChanged"
+        @blur="willMoveToNext"
       ></vue-tel-input>
     </template>
     <template
@@ -219,14 +220,12 @@ export default {
       if (this.input.inputs) {
         this.input.inputs.forEach((input) => {
           if (!input.hidden) {
-            this.$refs[this.input.key || 'form'].showValidationErrorsIfAny();
+            this.$refs[this.input.key || "form"].showValidationErrorsIfAny();
           }
         });
       } else if (this.input.input) {
         this.formInputValue.forEach((val, index) => {
-          const refs = this.$refs[
-            this.input.key + "[" + index + "]"
-          ];
+          const refs = this.$refs[this.input.key + "[" + index + "]"];
           refs[0].showValidationErrorsIfAny();
         });
       } else {

@@ -45,6 +45,13 @@ export default {
           default: ",",
         },
         {
+          display: "Mobile",
+          key: "mobile",
+          required: true,
+          type: "mobile",
+          tooltip: "mobile number",
+        },
+        {
           type: "number",
           display: "Start index of your data",
           key: "dataStartIndex",
@@ -65,7 +72,7 @@ export default {
               display: "CSV",
             },
           ],
-          default: "CSV",
+          default: "EXCEL",
         },
         {
           display: "Charachter Encoding",
@@ -96,7 +103,7 @@ export default {
           type: "toggle",
           display: "Should we read all the sheets?",
           key: "readAllSheets",
-          default: true,
+          default: false,
           visible_if: {
             "==": [
               {
