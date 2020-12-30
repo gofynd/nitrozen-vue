@@ -99,7 +99,7 @@
           :inputs="input.inputs"
           v-model="formInputValue"
           @change="inputChanged"
-          :ref="input.key"
+          :ref="input.key || 'form'"
         />
       </fieldset>
     </template>
@@ -186,7 +186,6 @@ export default {
       return input.display + (input.required ? " *" : "");
     },
     errorTextFor(input) {
-      debugger;
       if (
         [
           InputTypes.dropdown.key,
@@ -220,16 +219,16 @@ export default {
       if (this.input.inputs) {
         this.input.inputs.forEach((input) => {
           if (!input.hidden) {
-            this.$refs[this.input.key].showValidationErrorsIfAny();
+            this.$refs[this.input.key || 'form'].showValidationErrorsIfAny();
           }
         });
       } else if (this.input.input) {
-        // this.formInputValue.forEach((val, index) => {
-        //   const refs = this.$refs[
-        //     this.input.key + "[" + index + "]"
-        //   ];
-        //   refs[0].showValidationErrorsIfAny();
-        // });
+        this.formInputValue.forEach((val, index) => {
+          const refs = this.$refs[
+            this.input.key + "[" + index + "]"
+          ];
+          refs[0].showValidationErrorsIfAny();
+        });
       } else {
         this.willMoveToNext();
       }
