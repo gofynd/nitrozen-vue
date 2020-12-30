@@ -14,7 +14,7 @@
         @blur="willMoveToNext"
       />
     </template>
-    <template v-else-if="input.type == 'toggle'">
+    <template v-else-if="input.type == InputTypes.toggle.key">
       <div class="toggle-input">
         <span class="n-input-label">{{ titleFor(input) }}</span>
         <nitrozen-toggle
@@ -23,7 +23,7 @@
         ></nitrozen-toggle>
       </div>
     </template>
-    <template v-else-if="input.type == 'mobile'">
+    <template v-else-if="input.type == InputTypes.mobile.key">
       <span class="n-input-label">{{ titleFor(input) }}</span>
       <vue-tel-input
         class="n-input mobile-input"
@@ -38,7 +38,12 @@
         @input="inputChanged"
       ></vue-tel-input>
     </template>
-    <template v-else-if="input.type == 'checkbox' || input.type == 'radio'">
+    <template
+      v-else-if="
+        input.type == InputTypes.checkbox.key ||
+        input.type == InputTypes.radio.key
+      "
+    >
       <span class="n-input-label">{{ titleFor(input) }}</span>
       <div class="radio-group">
         <div
@@ -46,7 +51,7 @@
           :key="index"
           style="margin-right: 12px; margin-bottom: 4px"
         >
-          <template v-if="input.type == 'checkbox'">
+          <template v-if="input.type == InputTypes.checkbox.key">
             <nitrozen-checkbox
               v-model="formInputValue"
               :checkboxValue="option.key"
@@ -55,7 +60,7 @@
               <span class="title">{{ option.display }}</span>
             </nitrozen-checkbox>
           </template>
-          <template v-else-if="input.type == 'radio'">
+          <template v-else-if="input.type == InputTypes.radio.key">
             <nitrozen-radio
               v-model="formInputValue"
               :radioValue="option.key"
@@ -67,7 +72,7 @@
         </div>
       </div>
     </template>
-    <template v-else-if="input.type == 'dropdown'">
+    <template v-else-if="input.type == InputTypes.dropdown.key">
       <nitrozen-dropdown
         :items="
           input.enum.map((x) => {
@@ -82,7 +87,7 @@
         :showTooltip="input.tooltip != undefined"
       ></nitrozen-dropdown>
     </template>
-    <template v-else-if="input.type == 'object'">
+    <template v-else-if="input.type == InputTypes.object.key">
       <fieldset class="input-group">
         <legend
           class="n-input-label"
@@ -98,7 +103,7 @@
         />
       </fieldset>
     </template>
-    <template v-else-if="input.type == 'array'">
+    <template v-else-if="input.type == InputTypes.array.key">
       <fieldset class="input-group">
         <legend
           class="n-input-label"
@@ -129,7 +134,10 @@
 
 <script>
 import { defaultResponseForInput, validateResponseForInput } from "./util.js";
+import InputTypes from "./InputTypes.js";
+
 import VueTelInput from "vue-tel-input";
+
 import NitrozenToggle from "./../NToggleBtn";
 import NitrozenCheckbox from "./../NCheckbox";
 import NitrozenRadio from "./../NRadio";
@@ -153,6 +161,7 @@ export default {
     return {
       hasError: false,
       formInputValue: this.value,
+      InputTypes,
     };
   },
   components: {
@@ -164,7 +173,7 @@ export default {
     NitrozenError,
     NitrozenButton,
     VueTelInput,
-    NitrozenCustomForm: () => import("./NCustomForm.vue"),
+    NitrozenCustomForm: () => import("./NCustomForm.vue"), // Loophole for circular imports issue
   },
   event: "change",
   watch: {
@@ -177,7 +186,14 @@ export default {
       return input.display + (input.required ? " *" : "");
     },
     errorTextFor(input) {
-      if (["dropdown", "checkbox", "radio"].includes(input.type)) {
+      debugger;
+      if (
+        [
+          InputTypes.dropdown.key,
+          InputTypes.checkbox.key,
+          InputTypes.radio.key,
+        ].includes(input.type)
+      ) {
         return input.error_message || "Please select " + input.display;
       }
       return input.error_message || "Please enter " + input.display;
