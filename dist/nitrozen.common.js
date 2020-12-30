@@ -9817,12 +9817,12 @@ var NInput_component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1fc1b530-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCustomForm/NCustomForm.vue?vue&type=template&id=e8e97fdc&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1fc1b530-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCustomForm/NCustomForm.vue?vue&type=template&id=4bd65ef8&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-custom-form"},[_vm._l((_vm.inputs),function(input,index){return [(!input.hidden)?_c('nitrozen-custom-form-input',{key:index,ref:input.key,refInFor:true,attrs:{"input":input},on:{"change":function($event){return _vm.inputChanged(input, $event)}},model:{value:(_vm.value[input.key]),callback:function ($$v) {_vm.$set(_vm.value, input.key, $$v)},expression:"value[input.key]"}}):_vm._e()]})],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomForm.vue?vue&type=template&id=e8e97fdc&
+// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomForm.vue?vue&type=template&id=4bd65ef8&
 
 // EXTERNAL MODULE: ./src/utils/NUuid.js
 var NUuid = __webpack_require__("4fe2");
@@ -9842,9 +9842,6 @@ var NCustomFormInputvue_type_template_id_38a00d15_scoped_true_staticRenderFns = 
 
 
 // CONCATENATED MODULE: ./src/components/NCustomForm/NCustomFormInput.vue?vue&type=template&id=38a00d15&scoped=true&
-
-// EXTERNAL MODULE: ./src/components/NCustomForm/util.js
-var util = __webpack_require__("ee4d");
 
 // CONCATENATED MODULE: ./src/components/NCustomForm/InputTypes.js
 let InputTypes = {
@@ -9897,6 +9894,167 @@ Object.keys(InputTypes).forEach(key => {
   InputTypes[key].key = key;
 });
 /* harmony default export */ var NCustomForm_InputTypes = (InputTypes);
+// CONCATENATED MODULE: ./src/components/NCustomForm/util.js
+
+
+function defaultResponseForInput(input) {
+  switch (input.type) {
+    case NCustomForm_InputTypes.text.key:
+    case NCustomForm_InputTypes.textarea.key:
+    case NCustomForm_InputTypes.email.key:
+    case NCustomForm_InputTypes.number.key:
+      if (input.default || input.default == 0) {
+        return input.default;
+      }
+
+      return null;
+
+    case NCustomForm_InputTypes.radio.key:
+      if (input.default) {
+        return input.default;
+      } else if (input.enum.length) {
+        return input.enum[0].key;
+      }
+
+      return null;
+
+    case NCustomForm_InputTypes.dropdown.key:
+      if (input.default) {
+        return input.default;
+      }
+
+      return null;
+
+    case NCustomForm_InputTypes.checkbox.key:
+      if (input.default) {
+        return input.default;
+      }
+
+      return [];
+
+    case NCustomForm_InputTypes.mobile.key:
+      if (input.default) {
+        return input.default;
+      }
+
+      return {
+        code: 91,
+        number: ""
+      };
+
+    case NCustomForm_InputTypes.toggle.key:
+      if (input.default) {
+        return input.default;
+      }
+
+      return false;
+
+    case NCustomForm_InputTypes.object.key:
+      const subResponse = {};
+      input.inputs = input.inputs || [];
+      input.inputs.forEach(io => {
+        subResponse[io.key] = defaultResponseForInput(io);
+      });
+      return subResponse;
+
+    case NCustomForm_InputTypes.array.key:
+      return [];
+
+    default:
+      console.log(input.type + 'Unknown input type detected');
+      return undefined;
+  }
+}
+
+function isEmptyString(value) {
+  return value == undefined || value == null || value.trim() == "";
+}
+
+function validateResponseForInput(input, response) {
+  switch (input.type) {
+    case NCustomForm_InputTypes.text.key:
+    case NCustomForm_InputTypes.textarea.key:
+    case NCustomForm_InputTypes.email.key:
+    case NCustomForm_InputTypes.number.key:
+      if (input.regex && !isEmptyString(response)) {
+        var re = new RegExp(input.regex);
+        return re.test(response);
+      }
+
+      if (input.required) {
+        return !isEmptyString(response);
+      }
+
+    case NCustomForm_InputTypes.radio.key:
+      if (input.required) {
+        return response != null;
+      }
+
+      return true;
+
+    case NCustomForm_InputTypes.dropdown.key:
+      if (input.required) {
+        return response != null;
+      }
+
+      return true;
+
+    case NCustomForm_InputTypes.checkbox.key:
+      if (input.required) {
+        return Array.isArray(response) && response.length;
+      }
+
+      return true;
+
+    case NCustomForm_InputTypes.mobile.key:
+      if (input.regex && !isEmptyString(response.number)) {
+        var re = new RegExp(input.regex);
+        return re.test(response.number);
+      }
+
+      if (input.required) {
+        return !isEmptyString(response.number);
+      }
+
+    case NCustomForm_InputTypes.toggle.key:
+      return true;
+
+    case NCustomForm_InputTypes.object.key:
+      return validateResponsesForInputs(input.inputs, response);
+
+    case NCustomForm_InputTypes.array.key:
+      let isValid = true;
+
+      if (input.min) {
+        isValid = input.min <= response.length && isValid;
+      }
+
+      if (isValid && input.max) {
+        isValid = input.max >= response.length && isValid;
+      }
+
+      response.forEach(element => {
+        isValid = validateResponseForInput(input.input, element) && isValid;
+      });
+      return isValid;
+
+    default:
+      console.log(input.type + 'Unknown input type detected');
+      return false;
+  }
+}
+
+function validateResponsesForInputs(inputs, response) {
+  let isValid = true;
+  inputs.forEach(input => {
+    if (!input.hidden) {
+      isValid = validateResponseForInput(input, response[input.key]) && isValid;
+    }
+  });
+  return isValid;
+}
+
+
 // EXTERNAL MODULE: ./node_modules/vue-tel-input/dist/vue-tel-input.js
 var vue_tel_input = __webpack_require__("fb67");
 var vue_tel_input_default = /*#__PURE__*/__webpack_require__.n(vue_tel_input);
@@ -10125,7 +10283,7 @@ var NBtn = __webpack_require__("5e4a");
     },
 
     addResponse() {
-      this.formInputValue.push(Object(util["defaultResponseForInput"])(this.input.input));
+      this.formInputValue.push(defaultResponseForInput(this.input.input));
       this.$forceUpdate();
     },
 
@@ -10135,7 +10293,7 @@ var NBtn = __webpack_require__("5e4a");
     },
 
     willMoveToNext() {
-      this.hasError = !Object(util["validateResponseForInput"])(this.input, this.formInputValue);
+      this.hasError = !validateResponseForInput(this.input, this.formInputValue);
     },
 
     showValidationErrorsIfAny() {
@@ -10225,7 +10383,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   beforeMount() {
     this.inputs.forEach(input => {
       if (this.value[input.key] == undefined) {
-        this.value[input.key] = Object(util["defaultResponseForInput"])(input);
+        this.value[input.key] = defaultResponseForInput(input);
       }
     });
     this.recaliberateInputs(this.inputs, this.value);
@@ -10239,9 +10397,9 @@ var component = Object(componentNormalizer["a" /* default */])(
           this.$set(input, "hidden", hidden);
 
           if (hidden) {
-            response[input.key] = undefined;
+            delete response[input.key];
           } else if (response[input.key] == undefined) {
-            response[input.key] = Object(util["defaultResponseForInput"])(input);
+            response[input.key] = defaultResponseForInput(input);
           }
         }
 
@@ -10258,7 +10416,7 @@ var component = Object(componentNormalizer["a" /* default */])(
     },
 
     isResponseValid() {
-      return Object(util["validateResponsesForInputs"])(this.inputs, this.value);
+      return validateResponsesForInputs(this.inputs, this.value);
     },
 
     showValidationErrorsIfAny() {
@@ -10397,93 +10555,6 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABz
 /* harmony import */ var _node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NMenuItem_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NMenuItem_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
  /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NMenuItem_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
-/***/ "ee4d":
-/***/ (function(module, exports) {
-
-function defaultResponseForInput(input) {
-  if (input.type == "radio") {
-    if (input.default) {
-      return input.default;
-    } else if (input.enum.length) {
-      return input.enum[0].key;
-    }
-
-    return undefined;
-  } else if (input.type == "dropdown") {
-    if (input.default) {
-      return input.default;
-    }
-
-    return undefined;
-  } else if (input.type == "checkbox") {
-    return [];
-  } else if (['text', 'textarea', 'email', 'number'].includes(input.type)) {
-    if (input.default || input.default == 0) {
-      return input.default;
-    }
-
-    return null;
-  } else if (input.type == "mobile") {
-    return {
-      code: 91,
-      number: ""
-    };
-  } else if (input.type == "object") {
-    const subResponse = {};
-    input.inputs.forEach(io => {
-      subResponse[io.key] = defaultResponseForInput(io);
-    });
-    return subResponse;
-  } else if (input.type == "array") {
-    return [];
-  } else if (input.type == "toggle") {
-    if (input.default) {
-      return input.default;
-    }
-
-    return false;
-  }
-}
-
-function isEmpty(value) {
-  return value == "" || value == undefined || value == null;
-}
-
-function validateResponseForInput(input, response) {
-  if (input.inputs) {
-    return validateResponsesForInputs(input.inputs, response);
-  }
-
-  if (input.regex && !isEmpty(response)) {
-    var re = new RegExp(input.regex);
-    return re.test(response);
-  }
-
-  if (input.required) {
-    return !isEmpty(response);
-  }
-
-  return true;
-}
-
-function validateResponsesForInputs(inputs, response) {
-  let isValid = true;
-  inputs.forEach(input => {
-    if (!input.hidden) {
-      isValid = validateResponseForInput(input, response[input.key]) && isValid;
-    }
-  });
-  return isValid;
-}
-
-module.exports = {
-  validateResponsesForInputs: validateResponsesForInputs,
-  validateResponseForInput: validateResponseForInput,
-  defaultResponseForInput: defaultResponseForInput
-};
 
 /***/ }),
 
@@ -12201,7 +12272,7 @@ var NStepper_component = Object(componentNormalizer["a" /* default */])(
 // EXTERNAL MODULE: ./src/components/NToggleBtn/index.js + 5 modules
 var NToggleBtn = __webpack_require__("9cd1");
 
-// EXTERNAL MODULE: ./src/components/NCustomForm/NCustomForm.vue + 10 modules
+// EXTERNAL MODULE: ./src/components/NCustomForm/NCustomForm.vue + 11 modules
 var NCustomForm = __webpack_require__("c394");
 
 // CONCATENATED MODULE: ./src/components/NCustomForm/index.js
