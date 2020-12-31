@@ -114,7 +114,7 @@
         </legend>
         <div
           v-for="(subResponse, index) in formInputValue"
-          :key="index"
+          :key="index + subResponse"
           :id="input.key + '[' + index + ']'"
           style="display: flex"
         >
