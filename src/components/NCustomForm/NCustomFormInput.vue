@@ -116,13 +116,20 @@
           v-for="(subResponse, index) in formInputValue"
           :key="index"
           :id="input.key + '[' + index + ']'"
+          style="display: flex"
         >
           <nitrozen-custom-form-input
             :input="input.input"
             v-model="formInputValue[index]"
             :ref="input.key + '[' + index + ']'"
             @change="arrayInputChanged(index, $event)"
+            style="width: 100%"
           />
+          <nitrozen-inline
+            style="margin: -10px -11px -4px -6px; z-index: 1; opacity: 0.5"
+            @click="deleteResponseAt(index)"
+            :icon="'cross'"
+          ></nitrozen-inline>
         </div>
         <nitrozen-button @click="addResponse" theme="secondary">
           Add
@@ -146,6 +153,7 @@ import NitrozenDropdown from "./../NDropdown";
 import NitrozenInput from "./../NInput";
 import NitrozenError from "./../NError";
 import NitrozenButton from "./../NBtn";
+import NitrozenInline from "./../NInline";
 
 export default {
   name: "nitrozen-custom-form-input",
@@ -173,6 +181,7 @@ export default {
     NitrozenToggle,
     NitrozenError,
     NitrozenButton,
+    NitrozenInline,
     VueTelInput,
     NitrozenCustomForm: () => import("./NCustomForm.vue"), // Loophole for circular imports issue
   },
@@ -204,7 +213,9 @@ export default {
     },
     addResponse() {
       this.formInputValue.push(defaultResponseForInput(this.input.input));
-      this.$forceUpdate();
+    },
+    deleteResponseAt(deletionIndex) {
+      this.formInputValue.splice(deletionIndex, 1);
     },
     arrayInputChanged(index, valueAtIndex) {
       this.formInputValue[index] = valueAtIndex;
