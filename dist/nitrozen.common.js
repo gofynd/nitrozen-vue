@@ -9968,7 +9968,6 @@ function validateResponseForInput(input, response) {
     case NCustomForm_InputTypes.text.key:
     case NCustomForm_InputTypes.textarea.key:
     case NCustomForm_InputTypes.email.key:
-    case NCustomForm_InputTypes.number.key:
       if (input.regex && !isEmptyString(response)) {
         var re = new RegExp(input.regex);
         return re.test(response);
@@ -9977,6 +9976,19 @@ function validateResponseForInput(input, response) {
       if (input.required) {
         return !isEmptyString(response);
       }
+
+    case NCustomForm_InputTypes.number.key:
+      let isNumberValid = true;
+
+      if (input.min) {
+        isNumberValid = input.min <= response && isNumberValid;
+      }
+
+      if (isNumberValid && input.max) {
+        isNumberValid = input.max >= response && isNumberValid;
+      }
+
+      return isNumberValid;
 
     case NCustomForm_InputTypes.radio.key:
       if (input.required) {
