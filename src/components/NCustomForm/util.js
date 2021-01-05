@@ -64,7 +64,6 @@ function validateResponseForInput(input, response) {
         case InputTypes.text.key:
         case InputTypes.textarea.key:
         case InputTypes.email.key:
-        case InputTypes.number.key:
             if (input.regex && !isEmptyString(response)) {
                 var re = new RegExp(input.regex);
                 return re.test(response);
@@ -72,6 +71,15 @@ function validateResponseForInput(input, response) {
             if (input.required) {
                 return !isEmptyString(response);
             }
+        case InputTypes.number.key:
+            let isNumberValid = true
+            if (input.min) {
+                isNumberValid = input.min <= response && isNumberValid
+            }
+            if (isNumberValid && input.max) {
+                isNumberValid = input.max >= response && isNumberValid
+            }
+            return isNumberValid;
         case InputTypes.radio.key:
             if (input.required) {
                 return response != null;
@@ -108,7 +116,7 @@ function validateResponseForInput(input, response) {
                 isValid = input.max >= response.length && isValid
             }
             response.forEach(element => {
-                isValid =  validateResponseForInput(input.input, element) && isValid;
+                isValid = validateResponseForInput(input.input, element) && isValid;
             });
             return isValid;
         default:
