@@ -12,6 +12,7 @@
         :tooltipText="input.tooltip"
         :showTooltip="input.tooltip != undefined"
         @blur="willMoveToNext"
+        :disabled="input.disabled"
       />
     </template>
     <template v-else-if="input.type == InputTypes.toggle.key">
@@ -20,6 +21,7 @@
         <nitrozen-toggle
           style="margin-right: -10px"
           v-model="formInputValue"
+          :disabled="input.disabled"
         ></nitrozen-toggle>
       </div>
     </template>
@@ -37,6 +39,7 @@
         v-model="formInputValue.number"
         @input="inputChanged"
         @blur="willMoveToNext"
+        :disabled="input.disabled"
       ></vue-tel-input>
     </template>
     <template
@@ -51,12 +54,14 @@
           v-for="(option, index) in input.enum"
           :key="index"
           style="margin-right: 12px; margin-bottom: 4px"
+          :disabled="input.disabled"
         >
           <template v-if="input.type == InputTypes.checkbox.key">
             <nitrozen-checkbox
               v-model="formInputValue"
               :checkboxValue="option.key"
               :name="input.key"
+              :disabled="input.disabled"
             >
               <span class="title">{{ option.display }}</span>
             </nitrozen-checkbox>
@@ -66,6 +71,7 @@
               v-model="formInputValue"
               :radioValue="option.key"
               :name="input.key"
+              :disabled="input.disabled"
             >
               <span class="title">{{ option.display }}</span>
             </nitrozen-radio>
@@ -86,6 +92,7 @@
         :required="input.required"
         :tooltipText="input.tooltip"
         :showTooltip="input.tooltip != undefined"
+        :disabled="input.disabled"
       ></nitrozen-dropdown>
     </template>
     <template v-else-if="input.type == InputTypes.object.key">
@@ -131,7 +138,11 @@
             :icon="'cross'"
           ></nitrozen-inline>
         </div>
-        <nitrozen-button @click="addResponse" theme="secondary">
+        <nitrozen-button
+          @click="addResponse"
+          theme="secondary"
+          :disabled="input.disabled"
+        >
           Add
         </nitrozen-button>
       </fieldset>
