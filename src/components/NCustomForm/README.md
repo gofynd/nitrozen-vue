@@ -5,9 +5,10 @@ name: 'nitrozen-custom-form',
 props:
     inputs: Array of Inputs
     value: Object (Form Response v-model)
-​
 ```
-​
+
+---
+
 Example of an Input
 
 ```
@@ -18,6 +19,15 @@ Example of an Input
     default: false,
 }
 ```
+
+Response for a form containing only this input would be
+```
+{
+    fileHasHeader: false
+}
+```
+
+---
 
 
 Possible Values of `type`:
