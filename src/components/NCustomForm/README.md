@@ -20,7 +20,7 @@ Example of an Input
 ```
 
 
-Possible Values of Types:
+Possible Values of `type`:
 
 ```
 {
