@@ -133,9 +133,9 @@
             style="width: 100%"
           />
           <nitrozen-inline
-            style="margin: -10px -11px -4px -6px; z-index: 1; opacity: 0.5"
+            class="delete-icon"
             @click="deleteResponseAt(index)"
-            :icon="'cross'"
+            :icon="'cross-filled'"
           ></nitrozen-inline>
         </div>
         <nitrozen-button
@@ -263,7 +263,16 @@ export default {
 @import "./../../base/base.less";
 
 .custom-form-input {
-  padding-bottom: 8px;
+  padding-bottom: 12px;
+
+  .delete-icon {
+    margin: -8px -12px -4px -12px;
+    z-index: 1;
+
+    /deep/svg {
+      height: 16px;
+    }
+  }
 
   .mobile-input {
     border: 1px solid @BorderColor !important;
@@ -290,7 +299,7 @@ export default {
   .input-group {
     border: 1px solid #e4e5e6;
     border-radius: 4px;
-    padding: 4px 8px;
+    padding: 12px;
     margin: 0;
 
     legend {

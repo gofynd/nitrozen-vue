@@ -11,6 +11,11 @@ svgs['cross'] = `<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1"
                     </g>
                 </g>
                 </svg>`
+svgs['cross-filled'] = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="12" fill="#E0E0E0"/>
+                    <path d="M16.6666 8.2735L15.7266 7.3335L11.9999 11.0602L8.27325 7.3335L7.33325 8.2735L11.0599 12.0002L7.33325 15.7268L8.27325 16.6668L11.9999 12.9402L15.7266 16.6668L16.6666 15.7268L12.9399 12.0002L16.6666 8.2735Z" fill="#999999"/>
+                </svg>
+`
 svgs['search'] = `<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <desc>Created with sketchtool.</desc>
                 <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
