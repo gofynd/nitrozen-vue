@@ -86,7 +86,7 @@ Possible Values of `type`:
 
 `enum` key is needed for `dropdown`, `checkbox`and `radio` type of inputs.
 
-`disabled`, `default`, `tooltip`, `required` are the other common options supported in all inputs.
+`disabled`, `required`, `hidden` and `default` are the other common options supported in all inputs.
 
 `min` and `max` are supported for `number` type of inputs.
 
@@ -96,3 +96,4 @@ Possible Values of `type`:
 
 `tooltip` is supported for almost all kind of inputs.
 
+`visible_if` is supported for all inputs and [json-logic-js](https://www.npmjs.com/package/json-logic-js)
