@@ -64,13 +64,26 @@ function validateResponseForInput(input, response) {
         case InputTypes.text.key:
         case InputTypes.textarea.key:
         case InputTypes.email.key:
+            let isTextValid = true
+            
             if (input.regex && !isEmptyString(response)) {
                 var re = new RegExp(input.regex);
-                return re.test(response);
+                isTextValid = re.test(response) && isTextValid;
             }
-            if (input.required) {
-                return !isEmptyString(response);
+
+            if (isTextValid && input.required) {
+                isTextValid = !isEmptyString(response) && isTextValid;
             }
+
+            if (isTextValid && input.min_length) {
+                isTextValid = input.min_length <= response.length && isTextValid;
+            }
+            
+            if (isTextValid && input.max_length) {
+                isTextValid = input.max_length >= response.length && isTextValid;
+            }
+
+            return isTextValid;
         case InputTypes.number.key:
             let isNumberValid = true
             if (input.min) {

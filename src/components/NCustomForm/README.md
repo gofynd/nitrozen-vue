@@ -82,8 +82,17 @@ Possible Values of `type`:
 ```
 
 
-`key` from input will be used to store data in response.
+`key` from input will be used to store data in response and is compulsory for all inputs.
 
-`enum` key is needed for Dropdown, Checkbox, Radio type of inputs.
+`enum` key is needed for `dropdown`, `checkbox`and `radio` type of inputs.
 
 `disabled`, `default`, `tooltip`, `required` are the other common options supported in all inputs.
+
+`min` and `max` are supported for `number` type of inputs.
+
+`min_length` and `max_length` are supported for `text`, `textarea` and `email` type of inputs.
+
+`regex` is supported for `text` and `textarea` type of inputs.
+
+`tooltip` is supported for almost all kind of inputs.
+

@@ -13,6 +13,10 @@
         :showTooltip="input.tooltip != undefined"
         @blur="willMoveToNext"
         :disabled="input.disabled"
+        :minlength="input.min_length"
+        :maxlength="input.max_length"
+        :min="input.min"
+        :max="input.max"
       />
     </template>
     <template v-else-if="input.type == InputTypes.toggle.key">
