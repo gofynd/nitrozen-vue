@@ -96,4 +96,4 @@ Possible Values of `type`:
 
 `tooltip` is supported for almost all kind of inputs.
 
-`visible_if` is supported for all inputs and [json-logic-js](https://www.npmjs.com/package/json-logic-js)
+`visible_if` is supported for all inputs and [json-logic-js](https://www.npmjs.com/package/json-logic-js) is used for this.
