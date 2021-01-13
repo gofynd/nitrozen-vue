@@ -173,12 +173,9 @@ import NitrozenInline from "./../NInline";
 export default {
   name: "nitrozen-custom-form-input",
   props: {
-    value: {
-      type: [Object, Array, Number, Boolean, String],
-    },
+    value: {},
     input: {
       type: Object,
-      default: false,
     },
   },
   data() {

@@ -5,7 +5,7 @@ function defaultResponseForInput(input) {
         case InputTypes.text.key:
         case InputTypes.textarea.key:
         case InputTypes.email.key:
-            return input.default || null;
+            return input.default || "";
         case InputTypes.number.key:
             if (input.default || input.default == 0) {
                 return input.default;
