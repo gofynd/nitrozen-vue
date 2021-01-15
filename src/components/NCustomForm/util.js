@@ -155,13 +155,13 @@ function validateInput(input, skipKey = false) {
         return false
     }
 
-    if (!input.key && !skipKey) {
-        return false
-    }
+    // if (!input.key && !skipKey) {
+    //     return false
+    // }
 
-    if (skipKey && input.key) {
-        return false
-    }
+    // if (skipKey && input.key) {
+    //     return false
+    // }
 
     if (input.required != undefined && input.required != true && input.required != false) {
         return false

@@ -282,7 +282,7 @@ export default {
   .delete-icon {
     margin: -8px -12px -4px -12px;
     z-index: 1;
-
+    cursor: pointer;
     /deep/svg {
       height: 16px;
     }

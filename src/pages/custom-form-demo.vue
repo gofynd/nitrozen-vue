@@ -16,167 +16,193 @@ export default {
   data() {
     return {
       inputs: [
-        {
-          type: "toggle",
-          display: "Does your file have a header?",
-          key: "fileHasHeader",
-          default: false,
-        },
-        {
-          type: "number",
-          display: "Index of that Header",
-          key: "headerIndex",
-          default: 0,
-          visible_if: {
-            "==": [
-              {
-                var: "fileHasHeader",
-              },
-              true,
-            ],
-          },
-        },
-        {
-          display: "Delimiter",
-          key: "delimiter",
-          required: true,
-          type: "text",
-          tooltip: "Delimiter used in CSV",
-          default: ",",
-        },
-        {
-          display: "Mobile",
-          key: "mobile",
-          required: true,
-          type: "mobile",
-          tooltip: "mobile number",
-        },
-        {
-          type: "number",
-          display: "Start index of your data",
-          key: "dataStartIndex",
-          default: 1,
-        },
-        {
-          display: "File type of your input",
-          key: "fileType",
-          required: true,
-          type: "dropdown",
-          enum: [
+  {
+    "display": "File Configuration",
+    "key": "fileConfig",
+    "type": "object",
+    "inputs": [
+      {
+        "display": "Delimiter",
+        "key": "delimiter",
+        "required": true,
+        "type": "text",
+        "tooltip": "Delimiter used in CSV",
+        "default": ","
+      },
+      {
+        "display": "Prop Bean Configs",
+        "key": "propBeanConfigs",
+        "type": "array",
+        "input": {
+          "display": "",
+          "type": "object",
+          "inputs": [
             {
-              key: "EXCEL",
-              display: "Excel",
+              "display": "Source Field",
+              "key": "sourceField",
+              "required": true,
+              "type": "text"
             },
             {
-              key: "CSV",
-              display: "CSV",
-            },
-          ],
-          default: "EXCEL",
-        },
-        {
-          display: "Charachter Encoding",
-          enum: [
-            {
-              key: "UTF-8",
-              display: "UTF-8",
+              "display": "Destination Field",
+              "key": "destinationField",
+              "required": true,
+              "type": "text"
             },
             {
-              key: "UTF-16",
-              display: "UTF-16",
+              "display": "Mandatory",
+              "key": "required",
+              "required": true,
+              "type": "toggle",
+              "default": "true"
             },
-          ],
-          key: "charset",
-          required: true,
-          type: "dropdown",
-          placeholder: "Select Charset",
-          visible_if: {
-            "==": [
-              {
-                var: "fileType",
-              },
-              "CSV",
-            ],
-          },
+            {
+              "display": "Enrich From Catalog",
+              "key": "enrichFromMaster",
+              "required": true,
+              "type": "toggle",
+              "default": "false"
+            },
+            {
+              "display": "Data Type",
+              "key": "dataType",
+              "required": true,
+              "type": "dropdown",
+              "default": "FLOAT",
+              "enum": [
+                {
+                  "key": "STRING",
+                  "display": "String"
+                },
+                {
+                  "key": "FLOAT",
+                  "display": "Float"
+                },
+                {
+                  "key": "INTEGER",
+                  "display": "Integer"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "toggle",
+        "display": "Does your file have a header?",
+        "key": "fileHasHeader",
+        "default": false
+      },
+      {
+        "type": "number",
+        "display": "Index of that Header",
+        "key": "headerIndex",
+        "default": 0,
+        "visible_if": {
+          "==": [
+            {
+              "var": "fileHasHeader"
+            },
+            true
+          ]
         },
-        {
-          type: "toggle",
-          display: "Should we read all the sheets?",
-          key: "readAllSheets",
-          default: false,
-          visible_if: {
-            "==": [
-              {
-                var: "fileType",
-              },
-              "EXCEL",
-            ],
+        "hidden": true
+      },
+      {
+        "display": "Delimiter",
+        "key": "delimiter",
+        "required": true,
+        "type": "text",
+        "tooltip": "Delimiter used in CSV",
+        "default": ","
+      },
+      {
+        "type": "number",
+        "display": "Start index of your data",
+        "key": "dataStartIndex",
+        "default": 1
+      },
+      {
+        "display": "File type of your input",
+        "key": "fileType",
+        "required": true,
+        "type": "dropdown",
+        "enum": [
+          {
+            "key": "EXCEL",
+            "display": "Excel"
           },
+          {
+            "key": "CSV",
+            "display": "CSV"
+          }
+        ],
+        "default": "EXCEL"
+      },
+      {
+        "display": "Charachter Encoding",
+        "enum": [
+          {
+            "key": "UTF-8",
+            "display": "UTF-8"
+          },
+          {
+            "key": "UTF-16",
+            "display": "UTF-16"
+          }
+        ],
+        "key": "charset",
+        "required": true,
+        "type": "dropdown",
+        "placeholder": "Select Charset",
+        "visible_if": {
+          "==": [
+            {
+              "var": "fileType"
+            },
+            "CSV"
+          ]
         },
-        {
-          display: "Sheet Names",
-          key: "sheetNames",
-          type: "array",
-          min: 2,
-          max: 4,
-          input: {
-            display: "",
-            type: "text",
-          },
-          visible_if: {
-            "==": [
-              {
-                var: "readAllSheets",
-              },
-              false,
-            ],
-          },
+        "hidden": true
+      },
+      {
+        "type": "toggle",
+        "display": "Should we read all the sheets?",
+        "key": "readAllSheets",
+        "default": false,
+        "visible_if": {
+          "==": [
+            {
+              "var": "fileType"
+            },
+            "EXCEL"
+          ]
         },
-        {
-          display: "Prop Bean Configs",
-          key: "propBeanConfigs",
-          type: "array",
-          input: {
-            display: "",
-            type: "object",
-            inputs: [
-              {
-                display: "Source Field",
-                key: "sourceField",
-                required: true,
-                type: "text",
-              },
-              {
-                display: "Destination Field",
-                key: "destinationField",
-                required: true,
-                type: "text",
-              },
-              {
-                display: "Data Type",
-                key: "dataType",
-                required: true,
-                type: "dropdown",
-                default: "FLOAT",
-                enum: [
-                  {
-                    key: "STRING",
-                    display: "String",
-                  },
-                  {
-                    key: "FLOAT",
-                    display: "Float",
-                  },
-                  {
-                    key: "INTEGER",
-                    display: "Integer",
-                  },
-                ],
-              },
-            ],
-          },
+        "hidden": true
+      },
+      {
+        "display": "Sheet Names",
+        "key": "sheetNames",
+        "type": "array",
+        "min": 2,
+        "max": 4,
+        "input": {
+          "display": "",
+          "type": "text"
         },
-      ],
+        "visible_if": {
+          "==": [
+            {
+              "var": "readAllSheets"
+            },
+            false
+          ]
+        },
+        "hidden": true
+      }
+    ]
+  }
+],
       emptyResponse: {},
       filledResponse: {
         fileHasHeader: true,
