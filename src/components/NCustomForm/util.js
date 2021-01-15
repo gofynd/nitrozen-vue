@@ -117,6 +117,7 @@ function validateResponseForInput(input, response) {
             if (input.required) {
                 return !isEmptyString(response.number);
             }
+            return true;
         case InputTypes.toggle.key:
             return true;
         case InputTypes.object.key:
@@ -149,8 +150,61 @@ function validateResponsesForInputs(inputs, response) {
     return isValid;
 }
 
+function validateInput(input, skipKey = false) {
+    if (!input.type) {
+        return false
+    }
+
+    if (!input.key && !skipKey) {
+        return false
+    }
+
+    if (skipKey && input.key) {
+        return false
+    }
+
+    if (input.required != undefined && input.required != true && input.required != false) {
+        return false
+    }
+
+    switch (input.type) {
+        case InputTypes.text.key:
+        case InputTypes.textarea.key:
+        case InputTypes.email.key:
+            return true;
+        case InputTypes.number.key:
+            return true;
+        case InputTypes.radio.key:
+        case InputTypes.dropdown.key:
+        case InputTypes.checkbox.key:
+            if (!input.enum || input.enum.length == 0) {
+                return false;
+            }
+            return true;
+        case InputTypes.mobile.key:
+            return true;
+        case InputTypes.toggle.key:
+            return true;
+        case InputTypes.object.key:
+            if (!input.inputs || input.inputs.length == 0) {
+                return false;
+            }
+            let isValid = true
+            input.inputs.forEach(io => {
+                isValid = validateInput(io) && isValid;
+            });
+            return isValid;
+        case InputTypes.array.key:
+            return validateInput(input.input, true);
+        default:
+            console.log(input.type + 'Unknown input type detected')
+            return false
+    }
+}
+
 export {
     validateResponsesForInputs,
     validateResponseForInput,
     defaultResponseForInput,
+    validateInput,
 };

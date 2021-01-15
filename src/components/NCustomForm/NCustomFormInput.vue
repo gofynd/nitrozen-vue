@@ -1,7 +1,10 @@
 <template>
-  <div class="custom-form-input">
+  <div class="nitrozen-custom-form-input">
+    <template v-if="!validateInput(input)">
+      <div class="invalid-input">INVALID INPUT</div>
+    </template>
     <template
-      v-if="['text', 'textarea', 'email', 'number'].includes(input.type)"
+      v-else-if="['text', 'textarea', 'email', 'number'].includes(input.type)"
     >
       <nitrozen-input
         :type="input.type"
@@ -156,7 +159,11 @@
 </template>
 
 <script>
-import { defaultResponseForInput, validateResponseForInput } from "./util.js";
+import {
+  defaultResponseForInput,
+  validateResponseForInput,
+  validateInput,
+} from "./util.js";
 import InputTypes from "./InputTypes.js";
 
 import VueTelInput from "vue-tel-input";
@@ -204,6 +211,7 @@ export default {
     },
   },
   methods: {
+    validateInput,
     titleFor(input) {
       return input.display + (input.required ? " *" : "");
     },
@@ -263,8 +271,13 @@ export default {
 @import "~vue-tel-input/dist/vue-tel-input.css";
 @import "./../../base/base.less";
 
-.custom-form-input {
+.nitrozen-custom-form-input {
   padding-bottom: 12px;
+
+  .invalid-input {
+    color: @TypographyPrimaryColor;
+    text-align: center;
+  }
 
   .delete-icon {
     margin: -8px -12px -4px -12px;
