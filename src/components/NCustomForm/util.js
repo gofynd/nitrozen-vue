@@ -51,7 +51,6 @@ function defaultResponseForInput(input) {
         case InputTypes.array.key:
             return [];
         default:
-            console.log(input.type + 'Unknown input type detected')
             return undefined
     }
 }
@@ -135,7 +134,6 @@ function validateResponseForInput(input, response) {
             });
             return isValid;
         default:
-            console.log(input.type + 'Unknown input type detected')
             return false
     }
 }
@@ -197,7 +195,6 @@ function validateInput(input, skipKey = false) {
         case InputTypes.array.key:
             return validateInput(input.input, true);
         default:
-            console.log(input.type + 'Unknown input type detected')
             return false
     }
 }
