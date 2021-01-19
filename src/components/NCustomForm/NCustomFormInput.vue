@@ -283,8 +283,8 @@ export default {
     margin: -8px -12px -4px -12px;
     z-index: 1;
     cursor: pointer;
-    /deep/svg {
-      height: 16px;
+    ::v-deep svg {
+      height: 24px;
     }
   }
 
@@ -313,7 +313,7 @@ export default {
   .input-group {
     border: 1px solid #e4e5e6;
     border-radius: 4px;
-    padding: 12px;
+    padding: 20px;
     margin: 0;
 
     legend {
