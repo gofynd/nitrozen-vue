@@ -33,6 +33,19 @@ export default {
         "display": "Prop Bean Configs",
         "key": "propBeanConfigs",
         "type": "array",
+        "default": [
+            {
+              "sourceField": "brand ",
+              "destinationField": "brand",
+              "dataType": "STRING",
+              "__non_removable": true
+            },
+            {
+              "sourceField": "intf_store_id ",
+              "destinationField": "intf_store_id",
+              "dataType": "STRING",
+            },
+          ],
         "input": {
           "display": "",
           "type": "object",

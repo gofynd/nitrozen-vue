@@ -141,6 +141,7 @@
           />
           <nitrozen-inline
             class="delete-icon"
+            v-if="!subResponse.__non_removable"
             @click="deleteResponseAt(index)"
             :icon="'cross-filled'"
           ></nitrozen-inline>

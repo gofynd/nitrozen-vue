@@ -49,6 +49,9 @@ function defaultResponseForInput(input) {
             });
             return subResponse;
         case InputTypes.array.key:
+            if (input.default) {
+                return input.default
+            }
             return [];
         default:
             return undefined
