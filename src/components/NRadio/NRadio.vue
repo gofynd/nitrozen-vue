@@ -73,7 +73,7 @@ export default {
     color: @TypographyPrimaryColor;
     font-family: @PrimaryFont;
     font-size: @BaseFontSize + 3;
-    font-weight: 600;
+    font-weight: 400;
     display: flex;
     height: 100%;
     align-items: center;
