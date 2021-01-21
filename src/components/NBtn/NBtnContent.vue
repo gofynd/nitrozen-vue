@@ -31,6 +31,7 @@ export default {
     display: flex;
     align-items: center;
     height: 100%;
+    justify-content: center;
 }
 .n-btn-spinner{
   text-align:center;
