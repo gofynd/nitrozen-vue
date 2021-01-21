@@ -107,9 +107,9 @@ export default {
     -webkit-transform: scale(0);
     transform: scale(0);
   }
-  input[type="radio"]:checked + label {
-    font-weight: 700;
-  }
+  // input[type="radio"]:checked + label {
+  //   font-weight: 700;
+  // }
   input[type="radio"]:checked + label:after {
     opacity: 1;
     -webkit-transform: scale(1);

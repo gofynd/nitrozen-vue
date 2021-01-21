@@ -22,6 +22,7 @@ declare module '@gofynd/nitrozen-vue' {
     const NitrozenStepper: VueConstructor
     const NitrozenToggleBtn: VueConstructor
     const NitrozenTooltip: VueConstructor
+    const NitrozenCustomForm: VueConstructor
 
     // Directives
     const strokeBtn: DirectiveOptions
@@ -49,6 +50,7 @@ declare module '@gofynd/nitrozen-vue' {
         NitrozenStepper,
         NitrozenToggleBtn,
         NitrozenTooltip,
+        NitrozenCustomForm,
 
         strokeBtn,
         flatBtn,
