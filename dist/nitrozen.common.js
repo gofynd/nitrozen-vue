@@ -11076,12 +11076,12 @@ var component = Object(componentNormalizer["a" /* default */])(
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 8 modules
 var NBtn = __webpack_require__("5e4a");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"444111b5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NBadge/NBadge.vue?vue&type=template&id=a98d105a&
-var NBadgevue_type_template_id_a98d105a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"nitrozen-badge"}},[_c('div',{staticClass:"nitrozen-badge",class:[_vm.addClass]},[_vm._t("default")],2)])}
-var NBadgevue_type_template_id_a98d105a_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"444111b5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NBadge/NBadge.vue?vue&type=template&id=2234aa39&
+var NBadgevue_type_template_id_2234aa39_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"nitrozen-badge"}},[_c('div',{staticClass:"nitrozen-badge",class:[_vm.addClass]},[_vm._t("default")],2)])}
+var NBadgevue_type_template_id_2234aa39_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NBadge/NBadge.vue?vue&type=template&id=a98d105a&
+// CONCATENATED MODULE: ./src/components/NBadge/NBadge.vue?vue&type=template&id=2234aa39&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NBadge/NBadge.vue?vue&type=script&lang=js&
 //
@@ -11163,8 +11163,8 @@ var NBadgevue_type_style_index_0_lang_less_ = __webpack_require__("493f");
 
 var NBadge_component = Object(componentNormalizer["a" /* default */])(
   NBadge_NBadgevue_type_script_lang_js_,
-  NBadgevue_type_template_id_a98d105a_render,
-  NBadgevue_type_template_id_a98d105a_staticRenderFns,
+  NBadgevue_type_template_id_2234aa39_render,
+  NBadgevue_type_template_id_2234aa39_staticRenderFns,
   false,
   null,
   null,

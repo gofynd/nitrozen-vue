@@ -82,8 +82,8 @@ export default {
   }
 
   &.nitrozen-badge-info {
-    border: 1px solid @InfoColor;
-    color: @InfoColor;
+    border: 1px solid @SecondaryColor;
+    color: @SecondaryColor;
   }
 
   &.nitrozen-badge-success {
@@ -112,8 +112,8 @@ export default {
   }
 
   &.nitrozen-badge-info-fill {
-    background: @InfoColor;
-    border: 1px solid @InfoColor;
+    background: @SecondaryColor;
+    border: 1px solid @SecondaryColor;
   }
 
   &.nitrozen-badge-success-fill {
