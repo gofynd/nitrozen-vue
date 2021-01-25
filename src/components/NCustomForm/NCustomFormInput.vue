@@ -225,6 +225,8 @@ export default {
         ].includes(input.type)
       ) {
         return input.error_message || "Please select " + input.display;
+      } else if (input.type == InputTypes.array.key) {
+        return input.error_message || "Please add " + input.display;
       }
       return input.error_message || "Please enter " + input.display;
     },
@@ -260,6 +262,7 @@ export default {
           const refs = this.$refs[this.input.key + "[" + index + "]"];
           refs[0].showValidationErrorsIfAny();
         });
+        this.willMoveToNext();
       } else {
         this.willMoveToNext();
       }
