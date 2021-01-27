@@ -107,13 +107,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 
-/***/ "013b":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
 /***/ "051f":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1038,17 +1031,6 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "3362":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NCustomFormInput_vue_vue_type_style_index_0_id_c73836f0_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("013b");
-/* harmony import */ var _node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NCustomFormInput_vue_vue_type_style_index_0_id_c73836f0_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NCustomFormInput_vue_vue_type_style_index_0_id_c73836f0_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NCustomFormInput_vue_vue_type_style_index_0_id_c73836f0_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
 /***/ "34d0":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1068,6 +1050,13 @@ function normalizeComponent (
 /* harmony import */ var _node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NCheckbox_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NCheckbox_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
  /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NCheckbox_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "3a15":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -9840,31 +9829,28 @@ var NInput_component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"444111b5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCustomForm/NCustomForm.vue?vue&type=template&id=4bd65ef8&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"444111b5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCustomForm/NCustomForm.vue?vue&type=template&id=386a6270&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-custom-form"},[_vm._l((_vm.inputs),function(input,index){return [(!input.hidden)?_c('nitrozen-custom-form-input',{key:index,ref:input.key,refInFor:true,attrs:{"input":input},on:{"change":function($event){return _vm.inputChanged(input, $event)}},model:{value:(_vm.value[input.key]),callback:function ($$v) {_vm.$set(_vm.value, input.key, $$v)},expression:"value[input.key]"}}):_vm._e()]})],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomForm.vue?vue&type=template&id=4bd65ef8&
-
-// EXTERNAL MODULE: ./src/utils/NUuid.js
-var NUuid = __webpack_require__("4fe2");
+// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomForm.vue?vue&type=template&id=386a6270&
 
 // EXTERNAL MODULE: ./node_modules/json-logic-js/logic.js
 var logic = __webpack_require__("71be");
 var logic_default = /*#__PURE__*/__webpack_require__.n(logic);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"444111b5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=template&id=c73836f0&scoped=true&
-var NCustomFormInputvue_type_template_id_c73836f0_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-custom-form-input"},[(!_vm.validateInput(_vm.input))?[_c('div',{staticClass:"invalid-input"},[_vm._v("INVALID INPUT")])]:(['text', 'textarea', 'email', 'number'].includes(_vm.input.type))?[_c('nitrozen-input',{attrs:{"type":_vm.input.type,"label":_vm.input.display,"placeholder":_vm.input.placeholder,"required":_vm.input.required,"tooltipText":_vm.input.tooltip,"showTooltip":_vm.input.tooltip != undefined,"disabled":_vm.input.disabled,"minlength":_vm.input.min_length,"maxlength":_vm.input.max_length,"min":_vm.input.min,"max":_vm.input.max},on:{"blur":_vm.willMoveToNext},model:{value:(_vm.formInputValue),callback:function ($$v) {_vm.formInputValue=$$v},expression:"formInputValue"}})]:(_vm.input.type == _vm.InputTypes.toggle.key)?[_c('div',{staticClass:"toggle-input"},[_c('span',{staticClass:"n-input-label"},[_vm._v(_vm._s(_vm.titleFor(_vm.input)))]),_c('nitrozen-toggle',{staticStyle:{"margin-right":"-10px"},attrs:{"disabled":_vm.input.disabled},model:{value:(_vm.formInputValue),callback:function ($$v) {_vm.formInputValue=$$v},expression:"formInputValue"}})],1)]:(_vm.input.type == _vm.InputTypes.mobile.key)?[_c('span',{staticClass:"n-input-label"},[_vm._v(_vm._s(_vm.titleFor(_vm.input)))]),_c('vue-tel-input',{staticClass:"n-input mobile-input",attrs:{"disabledFormatting":"","enabledCountryCode":"","onlyCountries":['IN'],"required":_vm.input.required,"autocomplete":"off","mode":"international","placeholder":_vm.input.placeholder,"disabled":_vm.input.disabled},on:{"input":_vm.inputChanged,"blur":_vm.willMoveToNext},model:{value:(_vm.formInputValue.number),callback:function ($$v) {_vm.$set(_vm.formInputValue, "number", $$v)},expression:"formInputValue.number"}})]:(
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"444111b5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=template&id=bbdaa70e&scoped=true&
+var NCustomFormInputvue_type_template_id_bbdaa70e_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-custom-form-input"},[(!_vm.validateInput(_vm.input))?[_c('div',{staticClass:"invalid-input"},[_vm._v("INVALID INPUT")])]:(['text', 'textarea', 'email', 'number'].includes(_vm.input.type))?[_c('nitrozen-input',{attrs:{"type":_vm.input.type,"label":_vm.input.display,"placeholder":_vm.input.placeholder,"required":_vm.input.required,"tooltipText":_vm.input.tooltip,"showTooltip":_vm.input.tooltip != undefined,"disabled":_vm.input.disabled,"minlength":_vm.input.min_length,"maxlength":_vm.input.max_length,"min":_vm.input.min,"max":_vm.input.max},on:{"blur":_vm.willMoveToNext},model:{value:(_vm.formInputValue),callback:function ($$v) {_vm.formInputValue=$$v},expression:"formInputValue"}})]:(_vm.input.type == _vm.InputTypes.toggle.key)?[_c('div',{staticClass:"toggle-input"},[_c('span',{staticClass:"n-input-label"},[_vm._v(_vm._s(_vm.titleFor(_vm.input)))]),_c('nitrozen-toggle',{staticStyle:{"margin-right":"-10px"},attrs:{"disabled":_vm.input.disabled},model:{value:(_vm.formInputValue),callback:function ($$v) {_vm.formInputValue=$$v},expression:"formInputValue"}})],1)]:(_vm.input.type == _vm.InputTypes.mobile.key)?[_c('span',{staticClass:"n-input-label"},[_vm._v(_vm._s(_vm.titleFor(_vm.input)))]),_c('vue-tel-input',{staticClass:"n-input mobile-input",attrs:{"disabledFormatting":"","enabledCountryCode":"","onlyCountries":['IN'],"required":_vm.input.required,"autocomplete":"off","mode":"international","placeholder":_vm.input.placeholder,"disabled":_vm.input.disabled},on:{"input":_vm.inputChanged,"blur":_vm.willMoveToNext},model:{value:(_vm.formInputValue.number),callback:function ($$v) {_vm.$set(_vm.formInputValue, "number", $$v)},expression:"formInputValue.number"}})]:(
       _vm.input.type == _vm.InputTypes.checkbox.key ||
       _vm.input.type == _vm.InputTypes.radio.key
     )?[_c('span',{staticClass:"n-input-label"},[_vm._v(_vm._s(_vm.titleFor(_vm.input)))]),_c('div',{staticClass:"radio-group"},_vm._l((_vm.input.enum),function(option,index){return _c('div',{key:index,staticStyle:{"margin-right":"12px","margin-bottom":"4px"},attrs:{"disabled":_vm.input.disabled}},[(_vm.input.type == _vm.InputTypes.checkbox.key)?[_c('nitrozen-checkbox',{attrs:{"checkboxValue":option.key,"name":_vm.input.key,"disabled":_vm.input.disabled},model:{value:(_vm.formInputValue),callback:function ($$v) {_vm.formInputValue=$$v},expression:"formInputValue"}},[_c('span',{staticClass:"title"},[_vm._v(_vm._s(option.display))])])]:(_vm.input.type == _vm.InputTypes.radio.key)?[_c('nitrozen-radio',{attrs:{"radioValue":option.key,"name":_vm.input.key,"disabled":_vm.input.disabled},model:{value:(_vm.formInputValue),callback:function ($$v) {_vm.formInputValue=$$v},expression:"formInputValue"}},[_c('span',{staticClass:"title"},[_vm._v(_vm._s(option.display))])])]:_vm._e()],2)}),0)]:(_vm.input.type == _vm.InputTypes.dropdown.key)?[_c('nitrozen-dropdown',{attrs:{"items":_vm.input.enum.map(function (x) {
           return { text: x.display, value: x.key };
-        }),"label":_vm.input.display,"placeholder":_vm.input.placeholder,"required":_vm.input.required,"tooltipText":_vm.input.tooltip,"showTooltip":_vm.input.tooltip != undefined,"disabled":_vm.input.disabled},model:{value:(_vm.formInputValue),callback:function ($$v) {_vm.formInputValue=$$v},expression:"formInputValue"}})]:(_vm.input.type == _vm.InputTypes.object.key)?[_c('fieldset',{staticClass:"input-group"},[(_vm.input.display && _vm.input.display.length)?_c('legend',{staticClass:"n-input-label"},[_vm._v(" "+_vm._s(_vm.titleFor(_vm.input))+" ")]):_vm._e(),_c('nitrozen-custom-form',{ref:_vm.input.key || 'form',attrs:{"inputs":_vm.input.inputs},on:{"change":_vm.inputChanged},model:{value:(_vm.formInputValue),callback:function ($$v) {_vm.formInputValue=$$v},expression:"formInputValue"}})],1)]:(_vm.input.type == _vm.InputTypes.array.key)?[_c('fieldset',{staticClass:"input-group"},[(_vm.input.display && _vm.input.display.length)?_c('legend',{staticClass:"n-input-label"},[_vm._v(" "+_vm._s(_vm.titleFor(_vm.input))+" ")]):_vm._e(),_vm._l((_vm.formInputValue),function(subResponse,index){return _c('div',{key:index + subResponse,staticStyle:{"display":"flex"},attrs:{"id":_vm.input.key + '[' + index + ']'}},[_c('nitrozen-custom-form-input',{ref:_vm.input.key + '[' + index + ']',refInFor:true,staticStyle:{"width":"100%"},attrs:{"input":_vm.input.input},on:{"change":function($event){return _vm.arrayInputChanged(index, $event)}},model:{value:(_vm.formInputValue[index]),callback:function ($$v) {_vm.$set(_vm.formInputValue, index, $$v)},expression:"formInputValue[index]"}}),(!subResponse.__non_removable)?_c('nitrozen-inline',{staticClass:"delete-icon",attrs:{"icon":'cross-filled'},on:{"click":function($event){return _vm.deleteResponseAt(index)}}}):_vm._e()],1)}),_c('nitrozen-button',{attrs:{"theme":"secondary","disabled":_vm.input.disabled},on:{"click":_vm.addResponse}},[_vm._v(" Add ")])],2)]:_vm._e(),(_vm.hasError)?_c('nitrozen-error',[_vm._v(_vm._s(_vm.errorTextFor(_vm.input)))]):_vm._e()],2)}
-var NCustomFormInputvue_type_template_id_c73836f0_scoped_true_staticRenderFns = []
+        }),"label":_vm.input.display,"placeholder":_vm.input.placeholder,"required":_vm.input.required,"tooltipText":_vm.input.tooltip,"showTooltip":_vm.input.tooltip != undefined,"disabled":_vm.input.disabled},model:{value:(_vm.formInputValue),callback:function ($$v) {_vm.formInputValue=$$v},expression:"formInputValue"}})]:(_vm.input.type == _vm.InputTypes.object.key)?[_c('fieldset',{staticClass:"input-group"},[(_vm.input.display && _vm.input.display.length)?_c('legend',{staticClass:"n-input-label"},[_vm._v(" "+_vm._s(_vm.titleFor(_vm.input))+" ")]):_vm._e(),_c('nitrozen-custom-form',{ref:_vm.input.key || 'form',attrs:{"inputs":_vm.input.inputs},on:{"change":_vm.inputChanged},model:{value:(_vm.formInputValue),callback:function ($$v) {_vm.formInputValue=$$v},expression:"formInputValue"}})],1)]:(_vm.input.type == _vm.InputTypes.array.key)?[_c('fieldset',{staticClass:"input-group"},[(_vm.input.display && _vm.input.display.length)?_c('legend',{staticClass:"n-input-label"},[_vm._v(" "+_vm._s(_vm.titleFor(_vm.input))+" ")]):_vm._e(),_vm._l((_vm.formInputValue),function(subResponse,index){return _c('div',{key:index + subResponse,staticStyle:{"display":"flex"},attrs:{"id":_vm.input.key + '[' + index + ']'}},[_c('nitrozen-custom-form-input',{ref:_vm.input.key + '[' + index + ']',refInFor:true,staticStyle:{"width":"100%","padding-bottom":"20px"},attrs:{"input":_vm.input.input},on:{"change":function($event){return _vm.arrayInputChanged(index, $event)}},model:{value:(_vm.formInputValue[index]),callback:function ($$v) {_vm.$set(_vm.formInputValue, index, $$v)},expression:"formInputValue[index]"}}),(!subResponse.__non_removable)?_c('nitrozen-inline',{staticClass:"delete-icon",attrs:{"icon":'cross-filled'},on:{"click":function($event){return _vm.deleteResponseAt(index)}}}):_vm._e()],1)}),_c('nitrozen-button',{attrs:{"theme":"secondary","disabled":_vm.input.disabled},on:{"click":_vm.addResponse}},[_vm._v(" Add ")])],2)]:_vm._e(),(_vm.errorMessage)?_c('nitrozen-error',[_vm._v(_vm._s(_vm.errorMessage))]):_vm._e()],2)}
+var NCustomFormInputvue_type_template_id_bbdaa70e_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomFormInput.vue?vue&type=template&id=c73836f0&scoped=true&
+// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomFormInput.vue?vue&type=template&id=bbdaa70e&scoped=true&
 
 // CONCATENATED MODULE: ./src/components/NCustomForm/InputTypes.js
 let InputTypes = {
@@ -9999,101 +9985,182 @@ function isEmptyString(value) {
 }
 
 function validateResponseForInput(input, response) {
+  const inputDisplay = isEmptyString(input.display) ? "this input" : input.display;
+  let errorMessage = input.error_message || "Please enter " + inputDisplay;
+
+  if ([NCustomForm_InputTypes.dropdown.key, NCustomForm_InputTypes.checkbox.key, NCustomForm_InputTypes.radio.key].includes(input.type)) {
+    errorMessage = input.error_message || "Please select " + inputDisplay;
+  } else if (input.type == NCustomForm_InputTypes.array.key) {
+    errorMessage = input.error_message || "Please add " + inputDisplay;
+  }
+
+  let isValid = true;
+
   switch (input.type) {
     case NCustomForm_InputTypes.text.key:
     case NCustomForm_InputTypes.textarea.key:
     case NCustomForm_InputTypes.email.key:
-      let isTextValid = true;
-
       if (input.regex && !isEmptyString(response)) {
         var re = new RegExp(input.regex);
-        isTextValid = re.test(response) && isTextValid;
+        isValid = re.test(response) && isValid;
+
+        if (!isValid) {
+          errorMessage = "Please enter valid " + inputDisplay;
+        }
       }
 
-      if (isTextValid && input.required) {
-        isTextValid = !isEmptyString(response) && isTextValid;
+      if (isValid && input.required) {
+        isValid = !isEmptyString(response) && isValid;
+
+        if (!isValid) {
+          errorMessage = "Please enter " + inputDisplay;
+        }
       }
 
-      if (isTextValid && input.min_length) {
-        isTextValid = input.min_length <= response.length && isTextValid;
+      if (isValid && input.min_length) {
+        isValid = input.min_length <= response.length && isValid;
+
+        if (!isValid) {
+          errorMessage = "Minimum length required is " + input.min_length + " for " + inputDisplay;
+        }
       }
 
-      if (isTextValid && input.max_length) {
-        isTextValid = input.max_length >= response.length && isTextValid;
+      if (isValid && input.max_length) {
+        isValid = input.max_length >= response.length && isValid;
+
+        if (!isValid) {
+          errorMessage = "Max length is " + input.max_length + " for " + inputDisplay;
+        }
       }
 
-      return isTextValid;
+      return {
+        isValid,
+        errorMessage
+      };
 
     case NCustomForm_InputTypes.number.key:
-      let isNumberValid = true;
-
       if (input.min) {
-        isNumberValid = input.min <= response && isNumberValid;
+        isValid = input.min <= response && isValid;
+
+        if (!isValid) {
+          errorMessage = "Minimum value is " + input.min + " for " + inputDisplay;
+        }
       }
 
-      if (isNumberValid && input.max) {
-        isNumberValid = input.max >= response && isNumberValid;
+      if (isValid && input.max) {
+        isValid = input.max >= response && isValid;
+
+        if (!isValid) {
+          errorMessage = "Maximum value is " + input.max + " for " + inputDisplay;
+        }
       }
 
-      return isNumberValid;
+      return {
+        isValid,
+        errorMessage
+      };
 
     case NCustomForm_InputTypes.radio.key:
       if (input.required) {
-        return response != null;
+        isValid = response != null;
       }
 
-      return true;
+      return {
+        isValid,
+        errorMessage
+      };
 
     case NCustomForm_InputTypes.dropdown.key:
       if (input.required) {
-        return response != null;
+        isValid = response != null;
       }
 
-      return true;
+      return {
+        isValid,
+        errorMessage
+      };
 
     case NCustomForm_InputTypes.checkbox.key:
       if (input.required) {
-        return Array.isArray(response) && response.length;
+        isValid = Array.isArray(response) && response.length;
       }
 
-      return true;
+      return {
+        isValid,
+        errorMessage
+      };
 
     case NCustomForm_InputTypes.mobile.key:
       if (input.regex && !isEmptyString(response.number)) {
         var re = new RegExp(input.regex);
-        return re.test(response.number);
+        isValid = re.test(response.number);
       }
 
-      if (input.required) {
-        return !isEmptyString(response.number);
+      if (isValid && input.required) {
+        isValid = !isEmptyString(response.number) && isValid;
+
+        if (!isValid) {
+          errorMessage = "Please enter " + inputDisplay;
+        }
       }
 
-      return true;
+      return {
+        isValid,
+        errorMessage
+      };
 
     case NCustomForm_InputTypes.toggle.key:
-      return true;
+      return {
+        isValid,
+        errorMessage
+      };
+      0;
 
     case NCustomForm_InputTypes.object.key:
-      return validateResponsesForInputs(input.inputs, response);
+      isValid = validateResponsesForInputs(input.inputs, response);
+      return {
+        isValid,
+        errorMessage
+      };
 
     case NCustomForm_InputTypes.array.key:
-      let isValid = true;
-
       if (input.min) {
         isValid = input.min <= response.length && isValid;
+
+        if (!isValid) {
+          errorMessage = "Minimum limit for " + inputDisplay + " is " + input.min;
+        }
       }
 
       if (isValid && input.max) {
         isValid = input.max >= response.length && isValid;
+
+        if (!isValid) {
+          errorMessage = "Maximum limit for " + inputDisplay + " is " + input.max;
+        }
       }
 
-      response.forEach(element => {
-        isValid = validateResponseForInput(input.input, element) && isValid;
-      });
-      return isValid;
+      if (isValid) {
+        response.forEach(element => {
+          isValid = validateResponseForInput(input.input, element).isValid && isValid;
+        });
+
+        if (!isValid) {
+          errorMessage = "Please check enclosed inputs";
+        }
+      }
+
+      return {
+        isValid,
+        errorMessage
+      };
 
     default:
-      return false;
+      isValid = false;
+      return {
+        isValid,
+        errorMessage
+      };
   }
 }
 
@@ -10101,13 +10168,13 @@ function validateResponsesForInputs(inputs, response) {
   let isValid = true;
   inputs.forEach(input => {
     if (!input.hidden) {
-      isValid = validateResponseForInput(input, response[input.key]) && isValid;
+      isValid = validateResponseForInput(input, response[input.key]).isValid && isValid;
     }
   });
   return isValid;
 }
 
-function validateInput(input, skipKey = false) {
+function validateInput(input) {
   if (!input.type) {
     return false;
   } // if (!input.key && !skipKey) {
@@ -10144,7 +10211,7 @@ function validateInput(input, skipKey = false) {
       return true;
 
     case NCustomForm_InputTypes.toggle.key:
-      return true;
+      return input.default == undefined || input.default == null || input.default == true || input.default == false;
 
     case NCustomForm_InputTypes.object.key:
       if (!input.inputs || input.inputs.length == 0) {
@@ -10378,7 +10445,7 @@ var NInline = __webpack_require__("579b");
 
   data() {
     return {
-      hasError: false,
+      errorMessage: null,
       formInputValue: this.value,
       InputTypes: NCustomForm_InputTypes
     };
@@ -10411,16 +10478,8 @@ var NInline = __webpack_require__("579b");
       return input.display + (input.required ? " *" : "");
     },
 
-    errorTextFor(input) {
-      if ([NCustomForm_InputTypes.dropdown.key, NCustomForm_InputTypes.checkbox.key, NCustomForm_InputTypes.radio.key].includes(input.type)) {
-        return input.error_message || "Please select " + input.display;
-      }
-
-      return input.error_message || "Please enter " + input.display;
-    },
-
     inputChanged() {
-      this.hasError = false;
+      this.errorMessage = null;
       this.$emit("change", this.formInputValue);
     },
 
@@ -10438,7 +10497,11 @@ var NInline = __webpack_require__("579b");
     },
 
     willMoveToNext() {
-      this.hasError = !validateResponseForInput(this.input, this.formInputValue);
+      const {
+        isValid,
+        errorMessage
+      } = validateResponseForInput(this.input, this.formInputValue);
+      this.errorMessage = isValid ? null : errorMessage;
     },
 
     showValidationErrorsIfAny() {
@@ -10453,6 +10516,7 @@ var NInline = __webpack_require__("579b");
           const refs = this.$refs[this.input.key + "[" + index + "]"];
           refs[0].showValidationErrorsIfAny();
         });
+        this.willMoveToNext();
       } else {
         this.willMoveToNext();
       }
@@ -10462,8 +10526,8 @@ var NInline = __webpack_require__("579b");
 });
 // CONCATENATED MODULE: ./src/components/NCustomForm/NCustomFormInput.vue?vue&type=script&lang=js&
  /* harmony default export */ var NCustomForm_NCustomFormInputvue_type_script_lang_js_ = (NCustomFormInputvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/NCustomForm/NCustomFormInput.vue?vue&type=style&index=0&id=c73836f0&lang=less&scoped=true&
-var NCustomFormInputvue_type_style_index_0_id_c73836f0_lang_less_scoped_true_ = __webpack_require__("3362");
+// EXTERNAL MODULE: ./src/components/NCustomForm/NCustomFormInput.vue?vue&type=style&index=0&id=bbdaa70e&lang=less&scoped=true&
+var NCustomFormInputvue_type_style_index_0_id_bbdaa70e_lang_less_scoped_true_ = __webpack_require__("dd3d");
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__("2877");
@@ -10479,11 +10543,11 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   NCustomForm_NCustomFormInputvue_type_script_lang_js_,
-  NCustomFormInputvue_type_template_id_c73836f0_scoped_true_render,
-  NCustomFormInputvue_type_template_id_c73836f0_scoped_true_staticRenderFns,
+  NCustomFormInputvue_type_template_id_bbdaa70e_scoped_true_render,
+  NCustomFormInputvue_type_template_id_bbdaa70e_scoped_true_staticRenderFns,
   false,
   null,
-  "c73836f0",
+  "bbdaa70e",
   null
   
 )
@@ -10504,7 +10568,6 @@ var component = Object(componentNormalizer["a" /* default */])(
 //
 //
 //
-
 
 
 
@@ -10675,6 +10738,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABz
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "dd3d":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NCustomFormInput_vue_vue_type_style_index_0_id_bbdaa70e_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("3a15");
+/* harmony import */ var _node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NCustomFormInput_vue_vue_type_style_index_0_id_bbdaa70e_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NCustomFormInput_vue_vue_type_style_index_0_id_bbdaa70e_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_cli_service_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_less_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NCustomFormInput_vue_vue_type_style_index_0_id_bbdaa70e_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
