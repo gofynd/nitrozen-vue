@@ -53,6 +53,7 @@ export default {
             {
               "display": "Source Field",
               "key": "sourceField",
+              "min_length": 3,
               "required": true,
               "type": "text"
             },
@@ -67,14 +68,14 @@ export default {
               "key": "required",
               "required": true,
               "type": "toggle",
-              "default": "true"
+              "default": true
             },
             {
               "display": "Enrich From Catalog",
               "key": "enrichFromMaster",
               "required": true,
               "type": "toggle",
-              "default": "false"
+              "default": false
             },
             {
               "display": "Data Type",
@@ -201,7 +202,8 @@ export default {
         "max": 4,
         "input": {
           "display": "",
-          "type": "text"
+          "type": "text",
+          "min_length": 2
         },
         "visible_if": {
           "==": [

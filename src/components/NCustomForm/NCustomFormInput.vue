@@ -137,7 +137,7 @@
             v-model="formInputValue[index]"
             :ref="input.key + '[' + index + ']'"
             @change="arrayInputChanged(index, $event)"
-            style="width: 100%"
+            style="width: 100%; padding-bottom: 20px;"
           />
           <nitrozen-inline
             class="delete-icon"
@@ -155,7 +155,7 @@
         </nitrozen-button>
       </fieldset>
     </template>
-    <nitrozen-error v-if="hasError">{{ errorTextFor(input) }}</nitrozen-error>
+    <nitrozen-error v-if="errorMessage">{{ errorMessage }}</nitrozen-error>
   </div>
 </template>
 
@@ -188,7 +188,7 @@ export default {
   },
   data() {
     return {
-      hasError: false,
+      errorMessage: null,
       formInputValue: this.value,
       InputTypes,
     };
@@ -216,22 +216,8 @@ export default {
     titleFor(input) {
       return input.display + (input.required ? " *" : "");
     },
-    errorTextFor(input) {
-      if (
-        [
-          InputTypes.dropdown.key,
-          InputTypes.checkbox.key,
-          InputTypes.radio.key,
-        ].includes(input.type)
-      ) {
-        return input.error_message || "Please select " + input.display;
-      } else if (input.type == InputTypes.array.key) {
-        return input.error_message || "Please add " + input.display;
-      }
-      return input.error_message || "Please enter " + input.display;
-    },
     inputChanged() {
-      this.hasError = false;
+      this.errorMessage = null
       this.$emit("change", this.formInputValue);
     },
     addResponse() {
@@ -245,10 +231,11 @@ export default {
       this.inputChanged();
     },
     willMoveToNext() {
-      this.hasError = !validateResponseForInput(
+      const { isValid, errorMessage } = validateResponseForInput(
         this.input,
         this.formInputValue
       );
+      this.errorMessage = isValid ? null : errorMessage;
     },
     showValidationErrorsIfAny() {
       if (this.input.inputs) {

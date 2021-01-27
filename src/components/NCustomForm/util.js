@@ -63,81 +63,139 @@ function isEmptyString(value) {
 }
 
 function validateResponseForInput(input, response) {
+    const inputDisplay = isEmptyString(input.display) ? "this input" : input.display;
+    let errorMessage = input.error_message || "Please enter " + inputDisplay;
+    if (
+        [
+            InputTypes.dropdown.key,
+            InputTypes.checkbox.key,
+            InputTypes.radio.key,
+        ].includes(input.type)
+    ) {
+        errorMessage = input.error_message || "Please select " + inputDisplay;
+    } else if (input.type == InputTypes.array.key) {
+        errorMessage = input.error_message || "Please add " + inputDisplay;
+    }
+
+    let isValid = true
+
     switch (input.type) {
         case InputTypes.text.key:
         case InputTypes.textarea.key:
         case InputTypes.email.key:
-            let isTextValid = true
-            
             if (input.regex && !isEmptyString(response)) {
                 var re = new RegExp(input.regex);
-                isTextValid = re.test(response) && isTextValid;
+                isValid = re.test(response) && isValid;
+
+                if (!isValid) {
+                    errorMessage = "Please enter valid " + inputDisplay
+                }
             }
 
-            if (isTextValid && input.required) {
-                isTextValid = !isEmptyString(response) && isTextValid;
+            if (isValid && input.required) {
+                isValid = !isEmptyString(response) && isValid;
+
+                if (!isValid) {
+                    errorMessage = "Please enter " + inputDisplay
+                }
             }
 
-            if (isTextValid && input.min_length) {
-                isTextValid = input.min_length <= response.length && isTextValid;
-            }
-            
-            if (isTextValid && input.max_length) {
-                isTextValid = input.max_length >= response.length && isTextValid;
+            if (isValid && input.min_length) {
+                isValid = input.min_length <= response.length && isValid;
+
+                if (!isValid) {
+                    errorMessage = "Minimum length required is " + input.min_length + " for " + inputDisplay
+                }
             }
 
-            return isTextValid;
+            if (isValid && input.max_length) {
+                isValid = input.max_length >= response.length && isValid;
+
+                if (!isValid) {
+                    errorMessage = "Max length is " + input.max_length + " for " + inputDisplay
+                }
+            }
+
+            return { isValid, errorMessage };
         case InputTypes.number.key:
-            let isNumberValid = true
             if (input.min) {
-                isNumberValid = input.min <= response && isNumberValid
+                isValid = input.min <= response && isValid
+
+                if (!isValid) {
+                    errorMessage = "Minimum value is " + input.min + " for " + inputDisplay
+                }
             }
-            if (isNumberValid && input.max) {
-                isNumberValid = input.max >= response && isNumberValid
+            if (isValid && input.max) {
+                isValid = input.max >= response && isValid
+
+                if (!isValid) {
+                    errorMessage = "Maximum value is " + input.max + " for " + inputDisplay
+                }
             }
-            return isNumberValid;
+            return { isValid, errorMessage };
         case InputTypes.radio.key:
             if (input.required) {
-                return response != null;
+                isValid = response != null;
             }
-            return true;
+            return { isValid, errorMessage };
         case InputTypes.dropdown.key:
             if (input.required) {
-                return response != null;
+                isValid = response != null;
             }
-            return true;
+            return { isValid, errorMessage };
         case InputTypes.checkbox.key:
             if (input.required) {
-                return Array.isArray(response) && response.length;
+                isValid = Array.isArray(response) && response.length;
             }
-            return true;
+            return { isValid, errorMessage };
         case InputTypes.mobile.key:
             if (input.regex && !isEmptyString(response.number)) {
                 var re = new RegExp(input.regex);
-                return re.test(response.number);
+                isValid = re.test(response.number);
             }
-            if (input.required) {
-                return !isEmptyString(response.number);
+            if (isValid && input.required) {
+                isValid = !isEmptyString(response.number) && isValid;
+
+                if (!isValid) {
+                    errorMessage = "Please enter " + inputDisplay
+                }
             }
-            return true;
+            return { isValid, errorMessage };
         case InputTypes.toggle.key:
-            return true;
+            return { isValid, errorMessage };0
         case InputTypes.object.key:
-            return validateResponsesForInputs(input.inputs, response);
+            isValid = validateResponsesForInputs(input.inputs, response)
+            return { isValid, errorMessage };
         case InputTypes.array.key:
-            let isValid = true
             if (input.min) {
                 isValid = input.min <= response.length && isValid
+
+                if (!isValid) {
+                    errorMessage = "Minimum limit for " + inputDisplay + " is " + input.min; 
+                }
             }
             if (isValid && input.max) {
                 isValid = input.max >= response.length && isValid
+
+                if (!isValid) {
+                    errorMessage = "Maximum limit for " + inputDisplay + " is " + input.max
+                }
             }
-            response.forEach(element => {
-                isValid = validateResponseForInput(input.input, element) && isValid;
-            });
-            return isValid;
+
+            if (isValid) {
+                response.forEach(element => {
+                    isValid = validateResponseForInput(input.input, element).isValid && isValid;
+                });
+
+                if (!isValid) {
+                    errorMessage = "Please check enclosed inputs"
+                }
+            }
+            
+            return { isValid, errorMessage };
         default:
-            return false
+            isValid = false;
+            return { isValid, errorMessage };
     }
 }
 
@@ -145,13 +203,13 @@ function validateResponsesForInputs(inputs, response) {
     let isValid = true;
     inputs.forEach((input) => {
         if (!input.hidden) {
-            isValid = validateResponseForInput(input, response[input.key]) && isValid;
+            isValid = validateResponseForInput(input, response[input.key]).isValid && isValid;
         }
     });
     return isValid;
 }
 
-function validateInput(input, skipKey = false) {
+function validateInput(input) {
     if (!input.type) {
         return false
     }
@@ -185,7 +243,7 @@ function validateInput(input, skipKey = false) {
         case InputTypes.mobile.key:
             return true;
         case InputTypes.toggle.key:
-            return true;
+            return input.default == undefined || input.default == null || input.default == true || input.default == false;
         case InputTypes.object.key:
             if (!input.inputs || input.inputs.length == 0) {
                 return false;

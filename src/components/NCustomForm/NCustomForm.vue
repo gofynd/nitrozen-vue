@@ -13,7 +13,6 @@
   </div>
 </template>
 <script>
-import NitrozenUuid from "./../../utils/NUuid";
 import jsonLogic from "json-logic-js";
 import NitrozenCustomFormInput from "./NCustomFormInput.vue";
 import { defaultResponseForInput, validateResponsesForInputs } from "./util.js";
