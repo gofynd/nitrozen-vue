@@ -107,19 +107,19 @@ export default {
 @import './../../base/base.less';
 
 .nitrozen-chip {
-    height: 40px;
+    height: 39px;
     padding: 0 12px;
     margin: 0 8px 0 0;
     display: inline-block;
     cursor: default;
-    border-radius: 40px;
-    border: 1px solid @ChipBorderColor;
+    border-radius: 39px;
+    border: 1px solid @BorderColor;
     color: @TypographyPrimaryColor;
     // transition: .3s $md-transition-stand-timing;
     // transition-property: background-color, color, opacity, transform, box-shadow;
     // will-change: background-color, color, opacity, transform, box-shadow;
     font-size: @BaseFontSize + 2;
-    line-height: 40px;
+    line-height: 39px;
     vertical-align: middle;
     white-space: nowrap;
     font-family: @PrimaryFont;
