@@ -6,7 +6,7 @@
         :ref="index"
         v-model="value[index]"
         @change="inputChanged(index, $event)"
-        style="margin-bottom: 12px"
+        class="builder-input"
       />
     </template>
     <nitrozen-button
@@ -55,9 +55,12 @@ export default {
 <style lang="less">
 .nitrozen-custom-form-builder {
   display: block;
+
+  .builder-input {
+    margin-bottom: 20px;
+  }
   .add-button {
     width: fit-content;
-    margin-top: 20px;
   }
 }
 </style>
