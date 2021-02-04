@@ -13,7 +13,7 @@
         :placeholder="input.placeholder"
         :required="input.required"
         :tooltipText="input.tooltip"
-        :showTooltip="input.tooltip != undefined"
+        :showTooltip="input.tooltip != undefined && input.tooltip != ''"
         @blur="willMoveToNext"
         :disabled="input.disabled"
         :minlength="input.min_length"

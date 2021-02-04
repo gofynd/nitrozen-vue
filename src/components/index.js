@@ -17,7 +17,10 @@ import NitrozenRadio from './NRadio';
 import NitrozenStepper from './NStepper';
 import NitrozenToggleBtn from './NToggleBtn';
 import NitrozenTooltip from './NTooltip';
-import NitrozenCustomForm from './NCustomForm';
+import {
+    NitrozenCustomForm,
+    NitrozenCustomFormBuilder
+ } from './NCustomForm';
 
 export {
     NitrozenAutocomplete,
@@ -40,4 +43,5 @@ export {
     NitrozenToggleBtn,
     NitrozenTooltip,
     NitrozenCustomForm,
+    NitrozenCustomFormBuilder
 }

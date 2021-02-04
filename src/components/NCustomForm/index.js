@@ -1,3 +1,7 @@
-import NCustomForm from './NCustomForm.vue';
+import NitrozenCustomForm from './NCustomForm.vue';
+import NitrozenCustomFormBuilder from './NCustomFormBuilder.vue';
 
-export default NCustomForm;
+export {
+    NitrozenCustomForm,
+    NitrozenCustomFormBuilder
+}
