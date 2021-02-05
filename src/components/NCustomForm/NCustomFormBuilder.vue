@@ -46,7 +46,8 @@ export default {
         default: "",
         key: "",
         display: "",
-        tooltip: ""
+        tooltip: "",
+        enum: [],
       });
     },
   },

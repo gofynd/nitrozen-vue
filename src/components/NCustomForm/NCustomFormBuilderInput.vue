@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import InputTypes from './InputTypes';
+import InputTypes from "./InputTypes";
 import NitrozenCustomForm from "./NCustomForm";
 import NitrozenCustomFormInput from "./NCustomFormInput";
 
@@ -34,7 +34,7 @@ export default {
           required: true,
           type: "dropdown",
           tooltip: "Select type for your input",
-          enum: Object.values(InputTypes)
+          enum: Object.values(InputTypes),
         },
         {
           display: "Display",
@@ -70,6 +70,68 @@ export default {
           required: false,
           type: "text",
           tooltip: "Enter default value for your input",
+          visible_if: {
+            "!=": [
+              {
+                var: "type",
+              },
+              "mobile",
+            ],
+          },
+        },
+        {
+          display: "Options",
+          key: "enum",
+          required: true,
+          type: "array",
+          tooltip: "Add options for your input",
+          visible_if: {
+            or: [
+              {
+                "==": [
+                  {
+                    var: "type",
+                  },
+                  "radio",
+                ],
+              },
+              {
+                "==": [
+                  {
+                    var: "type",
+                  },
+                  "checkbox",
+                ],
+              },
+              {
+                "==": [
+                  {
+                    var: "type",
+                  },
+                  "dropdown",
+                ],
+              },
+            ],
+          },
+          input: {
+            type: "object",
+            inputs: [
+              {
+                display: "Display",
+                key: "display",
+                required: true,
+                type: "text",
+                tooltip: "Enter display of option",
+              },
+              {
+                display: "Key",
+                key: "key",
+                required: true,
+                type: "text",
+                tooltip: "Enter key of option",
+              },
+            ],
+          },
         },
       ],
     };
