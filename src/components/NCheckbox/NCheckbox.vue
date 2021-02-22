@@ -66,7 +66,7 @@ export default {
       }
     },
     toggleAll: function(items) {
-		this.$emit("input", items);
+		    this.$emit("input", items);
         this.$emit("change", items);
     }
   }

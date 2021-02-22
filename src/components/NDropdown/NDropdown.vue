@@ -44,7 +44,8 @@
         >
 
           <span 
-            v-if="enable_select_all" 
+            v-if="enable_select_all"
+            v-show="!searchInput"
             class="nitrozen-option ripple"
             @click="selectItem('all', all_option)"
           >
@@ -242,7 +243,7 @@ export default {
       dropUp: false,
       viewport: null,
       allSelected: false,
-      all_option: {'text': 'All', 'value': 'all'},
+      all_option: {'text': 'Select All', 'value': 'all'},
     };
   },
   watch: {
@@ -276,9 +277,9 @@ export default {
         }
         return "";
       } else {
-		if (this.allOptionsSelected) {
-			return `All ${this.selectedItems.length} ${this.label}s selected`
-		}
+        if (this.allOptionsSelected) {
+          return `All ${this.selectedItems.length} ${this.label}s selected`
+        }
         let tmp = [];
         let selected = {};
         if (this.value) {
@@ -336,21 +337,21 @@ export default {
         this.$emit("change", item.value);
       } else {
         if (index === 'all') {
-			this.allSelected = !this.allSelected
-			if (this.allSelected) {
-				this.selectedItems = this.items.map(item => item.value)
-			} else {
-				this.selectedItems = []
-			}
-			const multicheckbox = this.$refs[`multicheckbox-${index}`];
+          this.allSelected = !this.allSelected
+          if (this.allSelected) {
+            this.selectedItems = this.items.map(item => item.value)
+          } else {
+            this.selectedItems = []
+          }
+			    const multicheckbox = this.$refs[`multicheckbox-${index}`];
 
-			if (multicheckbox) multicheckbox.toggleAll(this.selectedItems);
-			event.stopPropagation();
+			    if (multicheckbox) multicheckbox.toggleAll(this.selectedItems);
+			    event.stopPropagation();
         } else {
           	const multicheckbox = this.$refs[`multicheckbox-${index}`][0];
           	if (multicheckbox) multicheckbox.toggle();
           	event.stopPropagation();
-			this.allSelected = this.allOptionsSelected
+			      this.allSelected = this.allOptionsSelected
         }
       }
     },
@@ -372,6 +373,9 @@ export default {
         id: this.id,
         text: this.searchInput,
       };
+      if (!this.searchInput) {
+        this.allSelected = this.allOptionsSelected
+      }
       this.eventEmit(obj, "searchInputChange");
       this.calculateViewport();
     },
