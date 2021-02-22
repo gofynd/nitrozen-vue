@@ -23,9 +23,9 @@ export default {
         },
         dataset: {
             type: Array,
-            default: []
+            default: ()=>{ return []; }
         },
-        value: {
+        modelValue: {
             type: String,
             default: ''
         },

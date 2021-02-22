@@ -2,7 +2,7 @@
   <transition>
     <div
       :id="id"
-      v-clickOutside="closeMenu"
+      v-click-outside="closeMenu"
       class="nitrozen-menu-content"
       :class="{'nitrozen-default-menu': !inverted}"
       @click="toggleMenu = !toggleMenu"
@@ -25,13 +25,13 @@
 
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
-import clickOutside from "./../../directives/NClickOutside";
+// import clickOutside from "./../../directives/NClickOutside";
 import NitrozenInline from "../NInline";
 export default {
   name: "nitrozen-menu",
-  directives: {
-    clickOutside,
-  },
+  // directives: {
+  //   clickOutside,
+  // },
   components: {
     "nitrozen-inline": NitrozenInline,
   },

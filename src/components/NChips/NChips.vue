@@ -1,15 +1,17 @@
 <template>
 <transition name="nitrozen-chip">
-    <div :ref="chipId" @click="setBackground" class="nitrozen-chip ripple" :class="[chipClasses]" tabindex="0" v-on="$listeners">
+    <div :ref="chipId" @click="setBackground" class="nitrozen-chip ripple" :class="[chipClasses]" tabindex="0" v-bind="$attrs" >
         <slot class="nitrozen-icon" />
 
         <transition name="nitrozen-input-action">
-            <span :ref="iconId" class="nitrozen-icon" v-on:click="spliceElement(chipId)" v-if="!disable && deletable">
-                <nitrozen-inline :icon="'cross'"></nitrozen-inline>
-            </span>
-            <span :ref="iconId" class="nitrozen-icon" v-if="!disable && inProgress">
-                <nitrozen-tooltip :tooltipText="'Info Text'"></nitrozen-tooltip>
-            </span>
+            <div>
+                 <span :ref="iconId" class="nitrozen-icon" v-on:click="spliceElement(chipId)" v-if="!disable && deletable">
+                    <nitrozen-inline :icon="'cross'"></nitrozen-inline>
+                </span>
+                <span :ref="iconId" class="nitrozen-icon" v-if="!disable && inProgress">
+                    <nitrozen-tooltip :tooltipText="'Info Text'"></nitrozen-tooltip>
+                </span>
+            </div>
         </transition>
     </div>
 </transition>

@@ -1,18 +1,15 @@
-import Vue from 'vue';
-
-const flatBtn = Vue.directive('flat-btn', {
-  bind: function (el, binding, vnode) {
-    el.classList.add('n-flat-button');
-    if(vnode.componentOptions.propsData.theme == 'secondary'){
-      el.classList.add('n-flat-button-secondary');
-    }
-    else{
-      el.classList.add('n-flat-button-primary');
-    }
-
-  }
-})
-Vue.use(flatBtn);
+const flatBtn = (app) => {
+  app.directive('flat-btn', {
+    beforeMount: function(el, binding, vnode) {
+      el.classList.add('n-flat-button');
+      if (vnode.props.theme == 'secondary') {
+        el.classList.add('n-flat-button-secondary');
+      } else {
+        el.classList.add('n-flat-button-primary');
+      }
+    },
+  });
+};
 
 // bind
 // inserted

@@ -1,8 +1,8 @@
 <template>
-    <!-- <span v-on="$listeners">
+    <!-- <span v-bind="$attrs">
         <img src="./../../assets/cross.svg" class="nitrozen-inline-svg" />
     </span> -->
-    <span v-on="$listeners" v-html="getSVG" class="nitrozen-inline-svg"></span>
+    <span v-bind="$attrs" v-html="getSVG" class="nitrozen-inline-svg"></span>
 </template>
 
 <script>

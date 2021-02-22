@@ -1,6 +1,6 @@
 <template>
   <transition name="nitrozen-badge">
-    <div class="nitrozen-badge" :class="[addClass]">
+    <div class="nitrozen-badge" :class="[badgeClass]">
       <slot />
     </div>
   </transition>
@@ -20,7 +20,7 @@ export default {
     }
   },
   computed: {
-    addClass() {
+    badgeClass() {
       let className = "";
       switch (this.state) {
         case "default":

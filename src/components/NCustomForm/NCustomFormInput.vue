@@ -181,7 +181,7 @@ import NitrozenInline from "./../NInline";
 export default {
   name: "nitrozen-custom-form-input",
   props: {
-    value: {},
+    modelValue: {},
     input: {
       type: Object,
     },
@@ -189,7 +189,7 @@ export default {
   data() {
     return {
       errorMessage: null,
-      formInputValue: this.value,
+      formInputValue: this.modelValue,
       InputTypes,
     };
   },
@@ -287,15 +287,15 @@ export default {
       -webkit-box-shadow: none !important;
       box-shadow: none !important;
     }
-    /deep/.dropdown-arrow {
+    ::v-deep(.dropdown-arrow) {
       color: @SecondaryColor;
       margin-left: 3px;
     }
-    /deep/.country-code {
+    ::v-deep(.country-code) {
       color: @TypographyPrimaryColor;
       font-size: @BaseFontSize + 2;
     }
-    /deep/input {
+    ::v-deep(input) {
       color: @TypographyPrimaryColor;
       font-size: @BaseFontSize + 2;
     }

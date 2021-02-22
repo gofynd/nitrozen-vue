@@ -1,14 +1,11 @@
-import Vue from 'vue'
-
-import App from './pages/custom-form-demo.vue'
-// import App from './pages/demo.vue'
+import { createApp } from 'vue';
+// import App from './pages/custom-form-demo.vue';
+import App from './pages/demo.vue';
+import NitrozenDirectives from './directives';
 
 import NitrozenVuePlugin from './setup';
 
-Vue.use(NitrozenVuePlugin);
-
-Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+createApp(App)
+  .use(NitrozenVuePlugin)
+  .use(NitrozenDirectives)
+  .mount('#app');

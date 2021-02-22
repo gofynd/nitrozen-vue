@@ -56,9 +56,9 @@
           This is custom html content tooltip
           <nitrozen-tooltip>
             <div class="tooltip-custom">
-              <I>Custom</I>
+              <i>Custom</i>
               <b>Html</b>
-              <strike>content</strike>
+              <s>content</s>
             </div>
           </nitrozen-tooltip>
         </div>

@@ -194,7 +194,7 @@ export default {
     /**
      * selected value
      */
-    value: {
+    modelValue: {
       required: true,
     },
     /**
@@ -216,13 +216,13 @@ export default {
     };
   },
   watch: {
-    value() {
-      if (Array.isArray(this.value)) {
-        this.selectedItems = [...this.value];
+    modelValue() {
+      if (Array.isArray(this.modelValue)) {
+        this.selectedItems = [...this.modelValue];
       }
       if (!this.multiple && this.searchable) {
-        const selected = this.items.find((i) => i.value == this.value);
-        this.searchInput = selected ? selected.text : this.value;
+        const selected = this.items.find((i) => i.value == this.modelValue);
+        this.searchInput = selected ? selected.text : this.modelValue;
       }
     },
   },
@@ -230,9 +230,9 @@ export default {
     selectedText: function() {
       if (!this.multiple) {
         this.selected = {};
-        if (this.value) {
+        if (this.modelValue) {
           if (this.items.length) {
-            this.selected = this.items.find((i) => i.value == this.value);
+            this.selected = this.items.find((i) => i.value == this.modelValue);
             this.searchInput = this.selected ? this.selected.text: '';
           }
         }
@@ -245,7 +245,7 @@ export default {
       } else {
         let tmp = [];
         let selected = {};
-        if (this.value) {
+        if (this.modelValue) {
           this.searchInput = "";
         }
         if (this.selectedItems.length) {
@@ -273,13 +273,13 @@ export default {
   },
   mounted() {
     if (!this.multiple) {
-      if (this.value) {
-        const selected = this.items.find((i) => i.value == this.value);
+      if (this.modelValue) {
+        const selected = this.items.find((i) => i.value == this.modelValue);
         this.searchInput = selected ? selected.text : "";
       }
     } else {
-      if (this.value) {
-        this.selectedItems = [...this.value];
+      if (this.modelValue) {
+        this.selectedItems = [...this.modelValue];
         this.searchInput = "";
       }
     }
@@ -295,7 +295,7 @@ export default {
         if (item.text) {
           this.searchInput = item.text;
         }
-        this.$emit("input", item.value); // v-model implementation
+        this.$emit("update:modelValue", item.value); // v-model implementation
         this.$emit("change", item.value);
       } else {
         const multicheckbox = this.$refs[`multicheckbox-${index}`][0];
@@ -311,7 +311,7 @@ export default {
         this.calculateViewport();
     },
     setCheckedItem() {
-      this.$emit("input", this.selectedItems); // v-model implementation
+      this.$emit("update:modelValue", this.selectedItems); // v-model implementation
       this.$emit("change", this.selectedItems);
     },
     searchInputChange(e) {
@@ -394,7 +394,7 @@ export default {
       window.addEventListener("scroll", this.calculateViewport);
     }
   },
-  destroyed() {
+  unmounted() {
     document.removeEventListener("click", this.documentClick);
     document.removeEventListener("keydown", this.handleTABKey);
     window.removeEventListener("resize", this.calculateViewport);

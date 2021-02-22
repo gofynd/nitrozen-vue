@@ -2,49 +2,49 @@ import * as NitrozenComponents from './components';
 import NitrozenSnackbar from './components/NSnackbar';
 
 let NitrozenVuePlugin = {
-  install: (Vue) => {
+  install: (app) => {
     Object.values(NitrozenComponents).forEach((NComponent) => {
-      Vue.component(NComponent.name, NComponent)
+      app.component(NComponent.name, NComponent);
     });
 
     // Snackbar
-    Vue.use(NitrozenSnackbar);
-    Vue.snackbar.register(
+    app.use(NitrozenSnackbar);
+    app.config.globalProperties.$snackbar.register(
       'show',
-      message => message,
+      (message) => message,
       {
         position: 'top-center',
-        duration: 2000
+        duration: 2000,
       }
     );
-    Vue.snackbar.register(
+    app.config.globalProperties.$snackbar.register(
       'showSuccess',
-      message => message,
+      (message) => message,
       {
         position: 'top-center',
         duration: 2000,
-        type: 'success'
+        type: 'success',
       }
     );
-    Vue.snackbar.register(
+    app.config.globalProperties.$snackbar.register(
       'showError',
-      message => message,
+      (message) => message,
       {
         position: 'top-center',
         duration: 2000,
-        type: 'error'
+        type: 'error',
       }
     );
-    Vue.snackbar.register(
+    app.config.globalProperties.$snackbar.register(
       'showWarning',
-      message => message,
+      (message) => message,
       {
         position: 'top-center',
         duration: 2000,
-        type: 'warning'
+        type: 'warning',
       }
     );
-  }
-}
+  },
+};
 
 export default NitrozenVuePlugin;

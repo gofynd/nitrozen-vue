@@ -6,7 +6,7 @@
         :ref="input.key"
         :input="input"
         v-if="!input.hidden"
-        v-model="value[input.key]"
+        v-model="modelValue[input.key]"
         @change="inputChanged(input, $event)"
       />
     </template>
@@ -20,7 +20,7 @@ import { defaultResponseForInput, validateResponsesForInputs } from "./util.js";
 export default {
   name: "nitrozen-custom-form",
   props: {
-    value: {
+    modelValue: {
       type: Object,
       default: false,
     },
@@ -35,19 +35,19 @@ export default {
   event: "change",
   beforeMount() {
     this.inputs.forEach((input) => {
-      if (this.value[input.key] == undefined) {
-        this.value[input.key] = defaultResponseForInput(input);
+      if (this.modelValue[input.key] == undefined) {
+        this.modelValue[input.key] = defaultResponseForInput(input);
       }
     });
 
-    this.recaliberateInputs(this.inputs, this.value);
+    this.recaliberateInputs(this.inputs, this.modelValue);
   },
   methods: {
     recaliberateInputs(inputs, response) {
       inputs.forEach((input) => {
         if (input.visible_if) {
           const hidden = !jsonLogic.apply(input.visible_if, response);
-          this.$set(input, "hidden", hidden);
+          input.hidden = hidden;
           if (hidden) {
             delete response[input.key];
           } else if (response[input.key] == undefined) {
@@ -61,12 +61,12 @@ export default {
       });
     },
     inputChanged(input, newValue) {
-      this.value[input.key] = newValue;
-      this.recaliberateInputs(this.inputs, this.value);
-      this.$emit("change", this.value);
+      this.modelValue[input.key] = newValue;
+      this.recaliberateInputs(this.inputs, this.modelValue);
+      this.$emit("change", this.modelValue);
     },
     isResponseValid() {
-      return validateResponsesForInputs(this.inputs, this.value);
+      return validateResponsesForInputs(this.inputs, this.modelValue);
     },
     showValidationErrorsIfAny() {
       this.inputs.forEach((input) => {

@@ -26,8 +26,8 @@ props:
 ```
 name: 'nitrozen-button',
 directives:
-    1. strokeBtn
-    2. flatBtn
+    1. v-stroke-btn
+    2. v-flat-btn
 props:
     href: String
     type: String
@@ -97,7 +97,7 @@ props:
     disabled: Boolean
     label: String
     required: Boolean
-    value: v-model
+    modelValue: v-model
 ​
 ```
 <img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/dropdown.png" alt="Nitrozen Dropdown"><br><br><br><br><hr>
@@ -113,7 +113,7 @@ props:
     label: String
     placeholder: String
     disabled: Boolean
-    value: v-model
+    modelValue: v-model
     search: Boolean
     showSearchIcon: Boolean
     showTooltip: Boolean
@@ -144,7 +144,7 @@ name: 'nitrozen-pagination'
 props:
     name: String
     pageSizeOptions: String or Number
-    value: v-model (PaginationConfig)
+    modelValue: v-model (PaginationConfig)
 
     PaginationConfig : {
          limit: Number,
@@ -164,7 +164,7 @@ props:
     disabled: Boolean
     radioValue: String or Number
     name: String
-    value: v-model
+    modelValue: v-model
 ​
 ```
 <img width=600px src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/demo_images/radio.png" alt="Nitrozen Radio"><br><br><br><br><hr>
