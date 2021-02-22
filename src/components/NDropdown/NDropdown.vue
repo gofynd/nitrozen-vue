@@ -42,6 +42,30 @@
           v-on:scroll.passive="handleScroll"
           :class="{ 'nitrozen-dropup': dropUp }"
         >
+
+          <span 
+            v-if="enable_select_all" 
+            class="nitrozen-option ripple"
+            @click="selectItem('all', all_option)"
+          >
+            <slot :item="all_option" :selected="allSelected" name="option">
+              <div class="nitrozen-option-container">
+                <nitrozen-checkbox
+                  :checkboxValue="allSelected"
+				  :value="allSelected"
+				  @change="setCheckedItem"
+                  :ref="`multicheckbox-all`"
+                >
+                  <span
+                    class="nitrozen-option-image"
+                    :class="{
+                      'nitrozen-dropdown-multicheckbox-selected': allSelected,
+                    }"
+                  >All</span>
+                </nitrozen-checkbox>
+              </div>
+            </slot>
+          </span>
           <span
             v-for="(item, index) in items"
             :key="index"
@@ -203,6 +227,10 @@ export default {
     add_option: {
       type: Boolean,
       default: false
+    },
+    enable_select_all: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => {
@@ -213,6 +241,8 @@ export default {
       showOptions: false,
       dropUp: false,
       viewport: null,
+      allSelected: false,
+      all_option: {'text': 'All', 'value': 'all'},
     };
   },
   watch: {
@@ -227,6 +257,9 @@ export default {
     },
   },
   computed: {
+	allOptionsSelected: function() {
+		return this.selectedItems.length === this.items.map(item => item.value).length && this.enable_select_all
+	},
     selectedText: function() {
       if (!this.multiple) {
         this.selected = {};
@@ -243,6 +276,9 @@ export default {
         }
         return "";
       } else {
+		if (this.allOptionsSelected) {
+			return `All ${this.selectedItems.length} ${this.label}s selected`
+		}
         let tmp = [];
         let selected = {};
         if (this.value) {
@@ -273,6 +309,7 @@ export default {
   },
   mounted() {
     if (!this.multiple) {
+      this.enable_select_all = false;
       if (this.value) {
         const selected = this.items.find((i) => i.value == this.value);
         this.searchInput = selected ? selected.text : "";
@@ -298,9 +335,23 @@ export default {
         this.$emit("input", item.value); // v-model implementation
         this.$emit("change", item.value);
       } else {
-        const multicheckbox = this.$refs[`multicheckbox-${index}`][0];
-        if (multicheckbox) multicheckbox.toggle();
-        event.stopPropagation();
+        if (index === 'all') {
+			this.allSelected = !this.allSelected
+			if (this.allSelected) {
+				this.selectedItems = this.items.map(item => item.value)
+			} else {
+				this.selectedItems = []
+			}
+			const multicheckbox = this.$refs[`multicheckbox-${index}`];
+
+			if (multicheckbox) multicheckbox.toggleAll(this.selectedItems);
+			event.stopPropagation();
+        } else {
+          	const multicheckbox = this.$refs[`multicheckbox-${index}`][0];
+          	if (multicheckbox) multicheckbox.toggle();
+          	event.stopPropagation();
+			this.allSelected = this.allOptionsSelected
+        }
       }
     },
     addOption() {

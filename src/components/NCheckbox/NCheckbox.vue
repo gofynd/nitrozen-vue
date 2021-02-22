@@ -64,6 +64,10 @@ export default {
         this.$emit("change", event); // TODO: need to look into this, why we need?
         this.$emit("input", event.target.checked);
       }
+    },
+    toggleAll: function(items) {
+		this.$emit("input", items);
+        this.$emit("change", items);
     }
   }
 };
