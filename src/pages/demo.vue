@@ -32,7 +32,7 @@
       </div>
 
       <div class="main-div space-between">
-        <nitrozen-menu :inverted="true" :mode="'vertical'" style="background: black;">
+        <nitrozen-menu position="top" :inverted="true" :mode="'vertical'" style="background: black;">
           <nitrozen-menu-item>Item 1</nitrozen-menu-item>
           <nitrozen-menu-item>Item 2</nitrozen-menu-item>
           <nitrozen-menu-item>Item 3</nitrozen-menu-item>
@@ -159,7 +159,15 @@
       <!-- Secondary Flat Button -->
       <div class="main-div space-between">
         <nitrozen-button v-flat-btn :theme="'secondary'"
-          >Primary Flat</nitrozen-button
+          >Primary Small Flat</nitrozen-button
+        >
+        <nitrozen-button v-flat-btn :theme="'secondary'"
+        size="medium"
+          >Primary Medium Flat</nitrozen-button
+        >
+        <nitrozen-button v-flat-btn :theme="'secondary'"
+        size="large"
+          >Primary Large Flat</nitrozen-button
         >
         <div class="hover-new">
           <nitrozen-button v-flat-btn :theme="'secondary'"
@@ -1072,7 +1080,7 @@ export default {
 
 <style lang="less">
 body {
-  font-family: "Poppins";
+  font-family: "Inter";
 }
 .main-div {
   margin-top: 2%;

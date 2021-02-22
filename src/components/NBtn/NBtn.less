@@ -1,23 +1,25 @@
 @import './../../base/base.less';
 
 .n-button {
-    height: 40px;
+    // height: 40px;
+    height: 39px;
     cursor: pointer;
     box-shadow: none;
     font-family: @PrimaryFont;
-    font-size: @BaseFontSize + 2;
-    font-weight: bold;
-    line-height: 25px;
+    font-size: @BaseFontSize + 1;
+    font-weight: 700;
+    line-height: 18px;
     text-align: center;
     outline: none;
     border: 0;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     background: none;
     text-decoration: none;
     box-sizing: border-box;
+    letter-spacing: 0.5px;
 
     &:disabled {
-        opacity: 0.4;
+        // opacity: 0.4;
         cursor: not-allowed;
         pointer-events: none;
     }
@@ -45,8 +47,9 @@
 }
 
 .n-flat-button {
-    padding: 0px 40px;
-    border-radius: 4px;
+    // padding: 0px 40px;
+    padding: 0px 30px;
+    border-radius: 3px;
     color: @WhiteColor;
 
     &:focus {
@@ -74,8 +77,9 @@
 
 
 .n-button-stroke {
-    padding: 0px 40px;
-    border-radius: 4px;
+    // padding: 0px 40px;
+    padding: 0px 30px;
+    border-radius: 3px;
     background: @WhiteColor;
 
     &:focus {
@@ -106,9 +110,11 @@
 .n-button-stroke:disabled,
 .n-flat-button:disabled,
 .n-button-rounded:disabled {
-    opacity: 0.4;
+    // opacity: 0.4;
     cursor: not-allowed;
     pointer-events: none;
+    background-color: @SecondaryDisabledColor;
+    color: @BlackColor;
 }
 
 .n-button-rounded {
@@ -117,13 +123,20 @@
 }
 
 .n-button-large {
-    padding: 0px 64px;
-    height: 64px;
+    // padding: 0px 64px;
+    // height: 64px;
+    padding: 0px 60px;
+    height: 60px;
+    font-size: @BaseFontSize + 6;
+    line-height: 25px;
 }
 
 .n-button-mid {
-    padding: 0px 48px;
+    // padding: 0px 48px;
+    padding: 0px 45px;
     height: 48px;
+    font-size: @BaseFontSize + 3;
+    line-height: 21px;
 }
 
 .n-button-focused {

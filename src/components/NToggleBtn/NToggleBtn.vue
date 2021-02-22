@@ -1,8 +1,8 @@
 <template>
     <div class="nitrozen-toggle-container">
         <label class="nitrozen-switch">
-            <input type="checkbox" @change="change" :checked="value" :value="value" />
-            <span class="nitrozen-slider nitrozen-round"></span>
+            <input type="checkbox" @change="change" :disabled="disabled" :checked="value" :value="value" />
+            <span class="nitrozen-slider nitrozen-round" :class="{ 'nitrozen-disabled': disabled }"></span>
         </label>
     </div>
 </template>
@@ -18,7 +18,16 @@ export default {
     //         type: Boolean
     //     }
     // },
-    props: ['value'],
+    props: {
+        disabled: {
+            type: Boolean,
+            default: false,
+        },
+        value: {
+            type: Boolean,
+            default: false,
+        },
+    },
     data() {
         return {
             selectedState: this.value

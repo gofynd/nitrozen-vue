@@ -14,7 +14,7 @@
       <transition name="fade">
         <ul
           v-if="toggleMenu"
-          :class="{ 'nitrozen-menu-vertical-dropdown': mode == 'vertical' }"
+          :class="{ 'nitrozen-menu-vertical-dropdown': mode == 'vertical','nitrozen-menu-top': position == 'top'  }"
         >
           <slot />
         </ul>
@@ -47,7 +47,11 @@ export default {
     inverted: {
       type: Boolean,
       default: false,
-    }
+    },
+    position: {
+      type: String,
+      default: "bottom"
+    },
   },
   data() {
     return {
@@ -96,6 +100,9 @@ export default {
     border-radius: 2px;
 
     .nitrozen-menu-scrollbar;
+  }
+  .nitrozen-menu-top{
+    bottom: 100%
   }
 }
 .nitrozen-default-menu{
