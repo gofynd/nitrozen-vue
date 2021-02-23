@@ -43,7 +43,7 @@
         v-bind:class="{
           'nitrozen-search-input-padding': showSearchIcon,
           'nitrozen-remove-left-border': showPrefix,
-          'nitrozen-remove-right-border': showSuffix,
+          'nitrozen-remove-right-border': showSuffix
         }"
         v-on:keyup="eventEmit($event, 'keyup')"
         v-on:change="eventEmit($event, 'change')"
@@ -58,7 +58,11 @@
         :type="type"
         :placeholder="placeholder"
         :id="id"
-        :ref="id"
+        :ref="
+          ele => {
+            idRef = el;
+          }
+        "
         :disabled="disabled"
         :value="modelValue"
         @input="valueChange"
@@ -77,7 +81,11 @@
         class="n-input input-text"
         :maxlength="maxlength"
         :disabled="disabled"
-        :ref="id"
+        :ref="
+          ele => {
+            idRef = el;
+          }
+        "
         :placeholder="placeholder"
         :value="modelValue"
         @input="valueChange"
@@ -97,6 +105,7 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import NInputPrefix from "./NInputPrefix";
 import NInputSuffix from "./NInputSuffix";
 import NTooltip from "./../NTooltip";
@@ -105,119 +114,131 @@ import NitrozenUuid from "./../../utils/NUuid";
 
 export default {
   name: "nitrozen-input",
+  setup() {
+    const idRef = ref(null);
+
+    // make sure to reset the refs before each update
+    // onBeforeUpdate(() => {
+    //   idRef.value = [];
+    // });
+
+    return {
+      idRef
+    };
+  },
   components: {
     "nitrozen-input-prefix": NInputPrefix,
     "nitrozen-input-suffix": NInputSuffix,
     "nitrozen-tooltip": NTooltip,
-    "nitrozen-inline": NitrozenInline,
+    "nitrozen-inline": NitrozenInline
   },
   data() {
     return {
-      loaderShow: false,
+      loaderShow: false
     };
   },
   computed: {
     length: function() {
       return this.modelValue.length;
-    },
+    }
   },
   props: {
     type: {
       type: String,
-      default: "text",
+      default: "text"
     },
     label: {
       type: String,
-      default: "",
+      default: ""
     },
     placeholder: {
       type: String,
-      default: "",
+      default: ""
     },
     disabled: {
       type: Boolean,
-      default: false,
+      default: false
     },
     required: {
       type: Boolean,
-      default: false,
+      default: false
     },
     modelValue: {
       type: [Number, String],
-      default: "",
+      default: ""
     },
     showError: {
       type: Boolean,
-      default: false,
+      default: false
     },
     hint: {
       type: String,
-      default: "",
+      default: ""
     },
     search: {
       type: Boolean,
-      default: false,
+      default: false
     },
     showSearchIcon: {
       type: Boolean,
-      default: false,
+      default: false
     },
     showTooltip: {
       type: Boolean,
-      default: false,
+      default: false
     },
     tooltipText: {
       type: String,
-      default: "",
+      default: ""
     },
     id: {
       type: [Number, String],
-      default: () => "nitrozen-input" + NitrozenUuid(),
+      default: () => "nitrozen-input" + NitrozenUuid()
     },
     maxlength: {
-      type: Number,
+      type: Number
     },
     showPrefix: {
       type: Boolean,
-      default: false,
+      default: false
     },
     showSuffix: {
       type: Boolean,
-      default: false,
+      default: false
     },
     prefix: {
-      type: String,
+      type: String
     },
     suffix: {
-      type: String,
+      type: String
     },
     custom: {
       type: Boolean,
-      default: false,
+      default: false
     },
     autofocus: {
       type: Boolean,
-      default: false,
+      default: false
     },
     min: {
       type: Number,
-      default: 0,
+      default: 0
     },
     max: {
       type: Number,
-      default: 0,
-    },
+      default: 0
+    }
   },
   watch: {
     autofocus() {
       if (this.autofocus) {
-        this.$refs[this.id].focus();
+        this.idRef.focus();
       }
-    },
+    }
   },
   mounted() {
     if (this.autofocus) {
-      this.$refs[this.id].focus();
+      this.idRef.focus();
     }
   },
   methods: {
@@ -235,8 +256,8 @@ export default {
     },
     eventEmit: function(event, type) {
       this.$emit(type, event);
-    },
-  },
+    }
+  }
   // render(createElement){
   //     let inputAttrs = {
   //         staticClass= "n-input input-text"

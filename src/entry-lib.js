@@ -1,3 +1,3 @@
-export * from './components';
-import NDirectives from './directives';
-export { NDirectives };
+export * from "./components";
+import NitrozenDirectives from "./directives";
+export { NitrozenDirectives };

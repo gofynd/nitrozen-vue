@@ -1,98 +1,83 @@
 <script>
-import { h } from 'vue';
-import NButtonContent from './NBtnContent';
-// import strokeBtn from './../../directives/NStrokeBtn.js';
-// import flatBtn from './../../directives/NFlatBtn.js';
+import { h } from "vue";
+import NButtonContent from "./NBtnContent";
 
 export default {
-  name: 'nitrozen-button',
+  name: "nitrozen-button",
   components: {
-    NButtonContent,
+    NButtonContent
   },
-//   directives: {
-//     strokeBtn,
-//     flatBtn,
-//   },
   props: {
     href: {
       type: String,
-      default: '',
+      default: ""
     },
     type: {
       type: String,
-      default: 'button',
+      default: "button"
     },
     disabled: Boolean,
     content: String,
     rounded: {
       type: Boolean,
-      default: false,
+      default: false
     },
     theme: {
       type: String,
-      default: 'primary',
+      default: "primary"
     },
     showProgress: {
       type: Boolean,
-      default: false,
+      default: false
     },
     size: {
       type: String,
-      default: 'small',
+      default: "small"
     },
     focused: {
       type: Boolean,
-      default: false,
+      default: false
     },
     icon: {
-      type: String,
-    },
+      type: String
+    }
   },
   render() {
-    const slotElement = h(
-      'n-button-content',
+    const nButtonContent = h(
+      NButtonContent,
       {
-        props: {
-          showProgress: this.showProgress,
-          icon: this.icon,
-        },
+        showProgress: this.showProgress,
+        icon: this.icon
       },
       this.$slots.default
     );
 
     let buttonAttrs = {
-      staticClass: 'n-button ripple',
       class: [
+        "n-button ripple",
         {
-          'n-button-rounded': this.rounded,
-          'n-button-primary': this.theme == 'primary',
-          'n-button-secondary': this.theme == 'secondary',
-          'n-button-large': this.size == 'large',
-          'n-button-mid': this.size == 'medium',
-          'n-button-focused': this.focused,
-        },
+          "n-button-rounded": this.rounded,
+          "n-button-primary": this.theme == "primary",
+          "n-button-secondary": this.theme == "secondary",
+          "n-button-large": this.size == "large",
+          "n-button-mid": this.size == "medium",
+          "n-button-focused": this.focused
+        }
       ],
-      attrs: {
-        href: this.href,
-        disabled: this.disabled,
-        type: !this.href && (this.type || 'button'),
-      },
-    //   on: {
-    //     ...this.$listeners,
-    //   },
+      href: this.href,
+      disabled: this.disabled,
+      type: !this.href && (this.type || "button"),
+      ...this.$attrs
     };
-    let tag = 'button';
+    let tag = "button";
     if (this.href) {
-      tag = 'a';
-      buttonAttrs;
+      tag = "a";
     }
-    // const slotElement = this.content;
-    // const slotElement = h('slot');
-    return h(tag, buttonAttrs, slotElement);
-  },
+    return h(tag, buttonAttrs, [nButtonContent]);
+  }
 };
 </script>
 
 <style lang="less">
-@import './NBtn.less';
+@import "./NBtn.less";
 </style>
