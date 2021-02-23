@@ -1,3 +1,3 @@
-import NTab from './NTab';
+import NTab from "./NTab";
 
-export default NTab
+export default NTab;

@@ -22,19 +22,19 @@ export default {
   props: {
     modelValue: {
       type: Object,
-      default: false,
+      default: false
     },
     inputs: {
       type: Array,
-      default: false,
-    },
+      default: false
+    }
   },
   components: {
-    NitrozenCustomFormInput,
+    NitrozenCustomFormInput
   },
   event: "change",
   beforeMount() {
-    this.inputs.forEach((input) => {
+    this.inputs.forEach(input => {
       if (this.modelValue[input.key] == undefined) {
         this.modelValue[input.key] = defaultResponseForInput(input);
       }
@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     recaliberateInputs(inputs, response) {
-      inputs.forEach((input) => {
+      inputs.forEach(input => {
         if (input.visible_if) {
           const hidden = !jsonLogic.apply(input.visible_if, response);
           input.hidden = hidden;
@@ -69,13 +69,13 @@ export default {
       return validateResponsesForInputs(this.inputs, this.modelValue);
     },
     showValidationErrorsIfAny() {
-      this.inputs.forEach((input) => {
+      this.inputs.forEach(input => {
         if (!input.hidden) {
           this.$refs[input.key][0].showValidationErrorsIfAny();
         }
       });
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="less">

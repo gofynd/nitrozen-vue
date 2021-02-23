@@ -35,6 +35,9 @@
   </div>
 </template>
 <script>
+// TODO: fix this
+/* eslint-disable vue/no-mutating-props */
+/* eslint-disable vue/no-side-effects-in-computed-properties */
 import NitrozenUuid from "./../../utils/NUuid";
 import NitrozenButton from "./../NBtn";
 import NitrozenDropdown from "./../NDropdown";

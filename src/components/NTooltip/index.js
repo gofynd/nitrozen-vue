@@ -1,2 +1,2 @@
-import NTooltip from './NTooltip';
+import NTooltip from "./NTooltip";
 export default NTooltip;

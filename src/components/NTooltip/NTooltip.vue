@@ -2,8 +2,8 @@
   <div class="nitrozen-tooltip">
     <nitrozen-inline :icon="'info'"></nitrozen-inline>
     <span class="nitrozen-tooltiptext" v-bind:class="tooltipPositionClass">
-      <template v-if="tooltipText">{{tooltipText}}</template>
-      <template v-else><slot/></template>
+      <template v-if="tooltipText">{{ tooltipText }}</template>
+      <template v-else><slot /></template>
     </span>
   </div>
 </template>

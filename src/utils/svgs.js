@@ -1,6 +1,8 @@
 "use strict";
 var svgs = {};
-svgs['cross'] = `<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+svgs[
+  "cross"
+] = `<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <desc>Created with sketchtool.</desc>
                 <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Text-fields" transform="translate(-1076.000000, -1612.000000)">
@@ -10,13 +12,17 @@ svgs['cross'] = `<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1"
                         </g>
                     </g>
                 </g>
-                </svg>`
-svgs['cross-filled'] = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                </svg>`;
+svgs[
+  "cross-filled"
+] = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="12" cy="12" r="12" fill="#E0E0E0"/>
                     <path d="M16.6666 8.2735L15.7266 7.3335L11.9999 11.0602L8.27325 7.3335L7.33325 8.2735L11.0599 12.0002L7.33325 15.7268L8.27325 16.6668L11.9999 12.9402L15.7266 16.6668L16.6666 15.7268L12.9399 12.0002L16.6666 8.2735Z" fill="#999999"/>
                 </svg>
-`
-svgs['search'] = `<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+`;
+svgs[
+  "search"
+] = `<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <desc>Created with sketchtool.</desc>
                 <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Text-fields" transform="translate(-167.000000, -1346.000000)" fill="#41434C" fill-rule="nonzero">
@@ -27,8 +33,10 @@ svgs['search'] = `<svg width="14px" height="14px" viewBox="0 0 14 14" version="1
                         </g>
                     </g>
                 </g>
-                </svg>`
-svgs['info'] = `<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                </svg>`;
+svgs[
+  "info"
+] = `<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <desc>Created with sketchtool.</desc>
                     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g id="Text-fields" transform="translate(-312.000000, -1846.000000)" fill="#41434C" fill-rule="nonzero">
@@ -43,8 +51,10 @@ svgs['info'] = `<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1
                             </g>
                         </g>
                     </g>
-                    </svg>`
-svgs['dropdown_arrow_down'] = `<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    </svg>`;
+svgs[
+  "dropdown_arrow_down"
+] = `<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
                                 <title>DropDown Arrow Down</title>
                                 <desc>Created with Sketch.</desc>
@@ -54,8 +64,10 @@ svgs['dropdown_arrow_down'] = `<svg width="24px" height="24px" viewBox="0 0 24 2
                                         <polygon id="Shape" fill="#5C6BDD" points="8 10 12 14 16 10"></polygon>
                                     </g>
                                 </g>
-                            </svg>`
-svgs['dots'] = `<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            </svg>`;
+svgs[
+  "dots"
+] = `<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
                 <desc>Created with Sketch.</desc>
                 <g id="Link-Shortner" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -64,8 +76,10 @@ svgs['dots'] = `<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1
                         <path d="M15,10 C16.375,10 17.5,8.875 17.5,7.5 C17.5,6.125 16.375,5 15,5 C13.625,5 12.5,6.125 12.5,7.5 C12.5,8.875 13.625,10 15,10 L15,10 Z M15,12.5 C13.625,12.5 12.5,13.625 12.5,15 C12.5,16.375 13.625,17.5 15,17.5 C16.375,17.5 17.5,16.375 17.5,15 C17.5,13.625 16.375,12.5 15,12.5 L15,12.5 Z M15,20 C13.625,20 12.5,21.125 12.5,22.5 C12.5,23.875 13.625,25 15,25 C16.375,25 17.5,23.875 17.5,22.5 C17.5,21.125 16.375,20 15,20 L15,20 Z" id="Shape-Copy-2" fill="#41434C" transform="translate(15.000000, 15.000000) rotate(90.000000) translate(-15.000000, -15.000000) "></path>
                     </g>
                 </g>
-            </svg>`
-svgs['arrow-left-black'] = `<svg width="24px" height="24px" transform="rotate(180)" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            </svg>`;
+svgs[
+  "arrow-left-black"
+] = `<svg width="24px" height="24px" transform="rotate(180)" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
                                 <desc>Created with Sketch.</desc>
                                 <g id="arrow-left-black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
@@ -74,8 +88,10 @@ svgs['arrow-left-black'] = `<svg width="24px" height="24px" transform="rotate(18
                                         <path d="M4.5,5.70567867 L8.76315789,1.039012" id="Line-Copy-4" transform="translate(6.631579, 3.372345) scale(-1, 1) translate(-6.631579, -3.372345) "></path>
                                     </g>
                                 </g>
-                            </svg>`
-svgs['arrow-right-black'] = `<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            </svg>`;
+svgs[
+  "arrow-right-black"
+] = `<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
                                 <desc>Created with Sketch.</desc>
                                 <g id="arrow-right-black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
@@ -84,8 +100,10 @@ svgs['arrow-right-black'] = `<svg width="24px" height="24px" viewBox="0 0 24 24"
                                         <path d="M4.5,5.70567867 L8.76315789,1.039012" id="Line-Copy-4" transform="translate(6.631579, 3.372345) scale(-1, 1) translate(-6.631579, -3.372345) "></path>
                                     </g>
                                 </g>
-                            </svg>`
-svgs['white-dots'] = `<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            </svg>`;
+svgs[
+  "white-dots"
+] = `<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
                             <title>Group 9</title>
                             <desc>Created with Sketch.</desc>
@@ -95,12 +113,12 @@ svgs['white-dots'] = `<svg width="30px" height="30px" viewBox="0 0 30 30" versio
                                     <path d="M15,10 C16.375,10 17.5,8.875 17.5,7.5 C17.5,6.125 16.375,5 15,5 C13.625,5 12.5,6.125 12.5,7.5 C12.5,8.875 13.625,10 15,10 L15,10 Z M15,12.5 C13.625,12.5 12.5,13.625 12.5,15 C12.5,16.375 13.625,17.5 15,17.5 C16.375,17.5 17.5,16.375 17.5,15 C17.5,13.625 16.375,12.5 15,12.5 L15,12.5 Z M15,20 C13.625,20 12.5,21.125 12.5,22.5 C12.5,23.875 13.625,25 15,25 C16.375,25 17.5,23.875 17.5,22.5 C17.5,21.125 16.375,20 15,20 L15,20 Z" id="Shape-Copy-2" fill="#ffffff" transform="translate(15.000000, 15.000000) rotate(90.000000) translate(-15.000000, -15.000000) "></path>
                                 </g>
                             </g>
-                        </svg>`
-svgs['plus-btn'] = `<?xml version="1.0" encoding="iso-8859-1"?>
+                        </svg>`;
+svgs["plus-btn"] = `<?xml version="1.0" encoding="iso-8859-1"?>
                             <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                             <svg version="1.1" id="add" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="height: 25px;width: 25px;" xml:space="preserve">
                                 <circle style="fill:#43B05C;" cx="25" cy="25" r="25"></circle>
                                 <line style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="25" y1="13" x2="25" y2="38"></line>
                                 <line style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="37.5" y1="25" x2="12.5" y2="25"></line>
-                            </svg>`
+                            </svg>`;
 module.exports = svgs;

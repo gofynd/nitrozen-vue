@@ -1,3 +1,3 @@
-import NTabItem from './NTabItem';
+import NTabItem from "./NTabItem";
 
-export default NTabItem
+export default NTabItem;

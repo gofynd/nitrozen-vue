@@ -67,7 +67,7 @@ export default {
   name: "nitrozen-dialog",
   components: {
     NitrozenButton,
-    NitrozenInline,
+    NitrozenInline
   },
   // directives: {
   //   flatBtn,
@@ -79,20 +79,20 @@ export default {
      */
     id: {
       type: [Number, String],
-      default: () => "nitrozen-dialog-" + NitrozenUuid(),
+      default: () => "nitrozen-dialog-" + NitrozenUuid()
     },
     /**
      * title of dialog
      */
     title: {
-      type: String,
+      type: String
     },
     /**
      * theme of button
      */
     theme: {
-      type: String,
-    },
+      type: String
+    }
   },
   data: () => {
     return {
@@ -102,7 +102,7 @@ export default {
       negativeButtonLabel: false,
       neutralButtonLabel: "Ok",
       positiveButtonLabel: false,
-      showCloseButton: false,
+      showCloseButton: false
     };
   },
   methods: {
@@ -165,7 +165,7 @@ export default {
         event.stopPropagation();
         this.close("close");
       }
-    },
+    }
   },
   created() {
     if (typeof document !== "undefined") {
@@ -174,7 +174,7 @@ export default {
   },
   unmounted() {
     document.removeEventListener("keydown", this.handleESCKey);
-  },
+  }
 };
 </script>
 <style lang="less">

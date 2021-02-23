@@ -1,4 +1,4 @@
-import NInput from './NInput';
+import NInput from "./NInput";
 // import NInputPrefix from './NInputPrefix.vue';
 // import NInputSuffix from './NInputSuffix.vue';
 

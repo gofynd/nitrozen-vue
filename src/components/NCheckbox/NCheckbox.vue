@@ -1,6 +1,9 @@
 <template>
   <div>
-    <label class="nitrozen-checkbox-container" :class="{'nitrozen-checkbox-container-disabled': disabled}">
+    <label
+      class="nitrozen-checkbox-container"
+      :class="{ 'nitrozen-checkbox-container-disabled': disabled }"
+    >
       <slot />
       <input
         :id="id"

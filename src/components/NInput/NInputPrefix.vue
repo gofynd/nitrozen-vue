@@ -1,15 +1,13 @@
 <template>
-<div>
-    <slot />    
-</div>
+  <div>
+    <slot />
+  </div>
 </template>
 
 <script>
 export default {
-name: 'nitrozen-input-prefix'    
-}
+  name: "nitrozen-input-prefix"
+};
 </script>
 
-<style lang="less">
-
-</style>
+<style lang="less"></style>

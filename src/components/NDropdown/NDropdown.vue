@@ -15,7 +15,7 @@
         ref="n_dropdown"
         v-bind:class="{
           disabled: disabled,
-          'nitrozen-dropdown-open': showOptions,
+          'nitrozen-dropdown-open': showOptions
         }"
       >
         <div class="nitrozen-select__trigger">
@@ -49,7 +49,7 @@
             class="nitrozen-option ripple"
             :class="{
               selected: item == selected,
-              'nitrozen-option-group-label': item.isGroupLabel,
+              'nitrozen-option-group-label': item.isGroupLabel
             }"
             @click="selectItem(index, item)"
           >
@@ -67,7 +67,7 @@
                       :class="{
                         'nitrozen-dropdown-multicheckbox-selected': selectedItems.includes(
                           item.value
-                        ),
+                        )
                       }"
                     >
                       <img
@@ -85,7 +85,7 @@
                     class="nitrozen-option-image"
                     :class="{
                       'nitrozen-option-child-label':
-                        items.find((i) => i.isGroupLabel) && !item.isGroupLabel,
+                        items.find(i => i.isGroupLabel) && !item.isGroupLabel
                     }"
                   >
                     <img
@@ -101,13 +101,16 @@
             </slot>
           </span>
           <span v-if="searchable && items.length == 0" class="nitrozen-option">
-            <div class="nitrozen-option-container" v-if="!add_option">No {{ label }} Found</div>
-            <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length">
-              <div class="nitrozen-dropdown-empty"
-                @click="addOption"
-              >
-                  <nitrozen-inline icon="plus-btn"></nitrozen-inline>
-                  <p>Add {{ searchInput }}</p>
+            <div class="nitrozen-option-container" v-if="!add_option">
+              No {{ label }} Found
+            </div>
+            <div
+              class="nitrozen-option-container"
+              v-else-if="add_option && searchInput.length"
+            >
+              <div class="nitrozen-dropdown-empty" @click="addOption">
+                <nitrozen-inline icon="plus-btn"></nitrozen-inline>
+                <p>Add {{ searchInput }}</p>
               </div>
             </div>
           </span>
@@ -127,7 +130,7 @@ export default {
   components: {
     "nitrozen-inline": NitrozenInline,
     "nitrozen-checkbox": NitrozenCheckbox,
-    "nitrozen-tooltip": NTooltip,
+    "nitrozen-tooltip": NTooltip
   },
   props: {
     /**
@@ -135,7 +138,7 @@ export default {
      */
     id: {
       type: [Number, String],
-      default: () => "nitrozen-dropdown-" + NitrozenUuid(),
+      default: () => "nitrozen-dropdown-" + NitrozenUuid()
     },
     /**
      * array of item in dropdown
@@ -150,52 +153,52 @@ export default {
       type: Array,
       default: () => {
         return [];
-      },
+      }
     },
     /**
      * disabled dropdown
      */
     disabled: {
       type: Boolean,
-      default: false,
+      default: false
     },
     /**
      * dropdown label
      */
     label: {
-      type: String,
+      type: String
     },
     /**
      * multiselect value
      */
     multiple: {
-      default: false,
+      default: false
     },
     placeholder: {
-      type: String,
+      type: String
     },
     /**
      * dropdown selection required
      */
     required: {
       type: Boolean,
-      default: false,
+      default: false
     },
     /**
      * searchable value
      */
     searchable: {
-      default: false,
+      default: false
     },
     tooltip: {
       type: String,
-      default: "",
+      default: ""
     },
     /**
      * selected value
      */
     modelValue: {
-      required: true,
+      required: true
     },
     /**
      * Add if not present
@@ -212,7 +215,7 @@ export default {
       searchInput: "",
       showOptions: false,
       dropUp: false,
-      viewport: null,
+      viewport: null
     };
   },
   watch: {
@@ -221,10 +224,10 @@ export default {
         this.selectedItems = [...this.modelValue];
       }
       if (!this.multiple && this.searchable) {
-        const selected = this.items.find((i) => i.value == this.modelValue);
+        const selected = this.items.find(i => i.value == this.modelValue);
         this.searchInput = selected ? selected.text : this.modelValue;
       }
-    },
+    }
   },
   computed: {
     selectedText: function() {
@@ -232,8 +235,8 @@ export default {
         this.selected = {};
         if (this.modelValue) {
           if (this.items.length) {
-            this.selected = this.items.find((i) => i.value == this.modelValue);
-            this.searchInput = this.selected ? this.selected.text: '';
+            this.selected = this.items.find(i => i.value == this.modelValue);
+            this.searchInput = this.selected ? this.selected.text : "";
           }
         }
         if (this.selected && this.selected.text) {
@@ -249,12 +252,12 @@ export default {
           this.searchInput = "";
         }
         if (this.selectedItems.length) {
-          this.selectedItems.forEach((ele) => {
+          this.selectedItems.forEach(ele => {
             if (!selected[ele]) {
               selected[ele] = true;
             }
           });
-          this.items.forEach((ele) => {
+          this.items.forEach(ele => {
             if (selected[ele.value]) {
               tmp.push(ele.text);
             }
@@ -269,12 +272,12 @@ export default {
     },
     searchInputPlaceholder: function() {
       return this.placeholder || `Search ${this.label}`;
-    },
+    }
   },
   mounted() {
     if (!this.multiple) {
       if (this.modelValue) {
-        const selected = this.items.find((i) => i.value == this.modelValue);
+        const selected = this.items.find(i => i.value == this.modelValue);
         this.searchInput = selected ? selected.text : "";
       }
     } else {
@@ -304,11 +307,11 @@ export default {
       }
     },
     addOption() {
-        let value = this.searchInput;
-        this.searchInput = '';
-        this.$emit("addOption", value);
-        this.eventEmit({}, "searchInputChange");
-        this.calculateViewport();
+      let value = this.searchInput;
+      this.searchInput = "";
+      this.$emit("addOption", value);
+      this.eventEmit({}, "searchInputChange");
+      this.calculateViewport();
     },
     setCheckedItem() {
       this.$emit("update:modelValue", this.selectedItems); // v-model implementation
@@ -319,7 +322,7 @@ export default {
       this.searchInput = e.target.value;
       let obj = {
         id: this.id,
-        text: this.searchInput,
+        text: this.searchInput
       };
       this.eventEmit(obj, "searchInputChange");
       this.calculateViewport();
@@ -381,7 +384,7 @@ export default {
         event.stopPropagation();
         this.showOptions = false;
       }
-    },
+    }
   },
   created() {
     this.calculateViewport();
@@ -399,7 +402,7 @@ export default {
     document.removeEventListener("keydown", this.handleTABKey);
     window.removeEventListener("resize", this.calculateViewport);
     window.removeEventListener("scroll", this.calculateViewport);
-  },
+  }
 };
 </script>
 <style lang="less">

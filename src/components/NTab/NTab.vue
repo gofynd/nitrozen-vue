@@ -6,7 +6,8 @@
         :class="{ 'nitrozen-tab-active': activeTab == index }"
         v-for="(item, index) in tabItem"
         :key="index"
-      >{{ item[label] || item }}</nitrozen-tab-item>
+        >{{ item[label] || item }}</nitrozen-tab-item
+      >
     </ul>
   </div>
 </template>

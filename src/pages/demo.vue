@@ -32,7 +32,12 @@
       </div>
 
       <div class="main-div space-between">
-        <nitrozen-menu position="top" :inverted="true" :mode="'vertical'" style="background: black;">
+        <nitrozen-menu
+          position="top"
+          :inverted="true"
+          :mode="'vertical'"
+          style="background: black;"
+        >
           <nitrozen-menu-item>Item 1</nitrozen-menu-item>
           <nitrozen-menu-item>Item 2</nitrozen-menu-item>
           <nitrozen-menu-item>Item 3</nitrozen-menu-item>
@@ -161,12 +166,10 @@
         <nitrozen-button v-flat-btn :theme="'secondary'"
           >Primary Small Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :theme="'secondary'"
-        size="medium"
+        <nitrozen-button v-flat-btn :theme="'secondary'" size="medium"
           >Primary Medium Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :theme="'secondary'"
-        size="large"
+        <nitrozen-button v-flat-btn :theme="'secondary'" size="large"
           >Primary Large Flat</nitrozen-button
         >
         <div class="hover-new">
@@ -667,7 +670,7 @@
             ...dropdownItems,
             ...dropdownItems,
             ...dropdownItems,
-            ...dropdownItems,
+            ...dropdownItems
           ]"
           @change="changeEvent"
         ></nitrozen-dropdown>
@@ -815,90 +818,90 @@ export default {
           text: "Maharashtra",
           value: 1,
           logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg"
         },
         {
           text: "Andhra Pradesh",
           value: 2,
           logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg"
         },
         {
           text: "West Bengal",
           value: 3,
           logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
-        },
+            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg"
+        }
       ],
       dropdownItemsGroup: [
         {
           text: "Kokan Region",
-          isGroupLabel: true,
+          isGroupLabel: true
         },
         {
           text: "Sindhudurg",
           value: 11,
           logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/apple-7f951c/logo_apple.png",
+            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/apple-7f951c/logo_apple.png"
         },
         {
           text: "Ratnagiri",
           value: 12,
           logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/lyf-4a1902/logo_LYF.png",
+            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/lyf-4a1902/logo_LYF.png"
         },
         {
           text: "Raigad",
           value: 13,
           logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg"
         },
         {
           text: "Thane",
-          value: 14,
+          value: 14
         },
         {
           text: "Mumbai",
-          value: 15,
+          value: 15
         },
         {
           text: "Pune Region",
-          isGroupLabel: true,
+          isGroupLabel: true
         },
         {
           text: "Pune",
-          value: 21,
+          value: 21
         },
         {
           text: "Sangali",
-          value: 22,
+          value: 22
         },
         {
           text: "Kolhapur",
-          value: 23,
+          value: 23
         },
         {
           text: "Satara",
-          value: 24,
+          value: 24
         },
         {
           text: "Solapur",
-          value: 25,
-        },
+          value: 25
+        }
       ],
       dropdownItemsFiltered: [],
       selectedDropdown: "",
       selectedGroupDropdown: [],
       fruits: [
         {
-          name: "Lemon",
+          name: "Lemon"
         },
         {
-          name: "Lime",
+          name: "Lime"
         },
         {
-          name: "Apple",
-        },
+          name: "Apple"
+        }
       ],
       dataItems: [
         "Tess",
@@ -907,7 +910,7 @@ export default {
         "Belt",
         "Tie",
         "Jeans",
-        "Sunglasses",
+        "Sunglasses"
       ],
       selectedItems: [],
       fruitName: "",
@@ -917,49 +920,49 @@ export default {
         maxActiveIndex: 1,
         elements: [
           {
-            text: "Step 1",
+            text: "Step 1"
           },
           {
-            text: "Step 2",
+            text: "Step 2"
           },
           {
-            text: "Step 3",
+            text: "Step 3"
           },
           {
-            text: "Step 4",
+            text: "Step 4"
           },
           {
-            text: "Step 5",
-          },
-        ],
+            text: "Step 5"
+          }
+        ]
       },
       paginationConfig: {
         limit: 10,
         current: 1,
-        total: 45,
+        total: 45
       },
       cursorPaginationConfig: {
         limit: 10,
         total: 45,
         currentTotal: 8,
         prevPage: "sample-prev-page-id",
-        nextPage: "sample-next-page-id",
+        nextPage: "sample-next-page-id"
       },
       dropdownItemsPrefix: [
         {
           text: "%",
-          value: 1,
+          value: 1
         },
         {
           text: "px",
-          value: 2,
+          value: 2
         },
         {
           text: "rem",
-          value: 3,
-        },
+          value: 3
+        }
       ],
-      autofocusSearch: false,
+      autofocusSearch: false
     };
   },
   mounted() {
@@ -973,14 +976,14 @@ export default {
       let next = this.stepper.activeIndex + 1;
       if (this.stepper.maxActiveIndex < next) {
         this.stepper = Object.assign({}, this.stepper, {
-          maxActiveIndex: next,
+          maxActiveIndex: next
         });
       }
       this.stepper = Object.assign({}, this.stepper, { activeIndex: next });
     },
     stepperClicked(event) {
       this.stepper = Object.assign({}, this.stepper, {
-        activeIndex: event.nextIndex,
+        activeIndex: event.nextIndex
       });
     },
     someFunc() {
@@ -1002,7 +1005,7 @@ export default {
     addFruit(event) {
       var value = this.fruitName;
       let obj = {
-        name: value,
+        name: value
       };
       this.fruits.push(obj);
       this.fruitName = "";
@@ -1031,7 +1034,7 @@ export default {
             width: "500px",
             positiveButtonLabel: "Delete",
             negativeButtonLabel: "Cancel",
-            neutralButtonLabel: false,
+            neutralButtonLabel: false
           });
           break;
         case "choose":
@@ -1052,7 +1055,7 @@ export default {
       if (e && e.text) {
         let text = e.text;
         this.dropdownItemsFiltered = this.dropdownItemsGroup.filter(
-          (a) =>
+          a =>
             a.text.toLowerCase().indexOf(text.toLowerCase()) > -1 ||
             a.isGroupLabel
         );
@@ -1073,8 +1076,8 @@ export default {
     },
     tabChange(event) {
       console.log(event);
-    },
-  },
+    }
+  }
 };
 </script>
 

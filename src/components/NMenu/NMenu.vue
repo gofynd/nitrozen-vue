@@ -4,7 +4,7 @@
       :id="id"
       v-click-outside="closeMenu"
       class="nitrozen-menu-content"
-      :class="{'nitrozen-default-menu': !inverted}"
+      :class="{ 'nitrozen-default-menu': !inverted }"
       @click="toggleMenu = !toggleMenu"
     >
       <nitrozen-inline
@@ -14,7 +14,10 @@
       <transition name="fade">
         <ul
           v-if="toggleMenu"
-          :class="{ 'nitrozen-menu-vertical-dropdown': mode == 'vertical','nitrozen-menu-top': position == 'top'  }"
+          :class="{
+            'nitrozen-menu-vertical-dropdown': mode == 'vertical',
+            'nitrozen-menu-top': position == 'top'
+          }"
         >
           <slot />
         </ul>
@@ -33,36 +36,36 @@ export default {
   //   clickOutside,
   // },
   components: {
-    "nitrozen-inline": NitrozenInline,
+    "nitrozen-inline": NitrozenInline
   },
   props: {
     id: {
       type: [Number, String],
-      default: () => "nitrozen-menu" + NitrozenUuid(),
+      default: () => "nitrozen-menu" + NitrozenUuid()
     },
     mode: {
       type: String,
-      default: () => "horizontal",
+      default: () => "horizontal"
     },
     inverted: {
       type: Boolean,
-      default: false,
+      default: false
     },
     position: {
       type: String,
       default: "bottom"
-    },
+    }
   },
   data() {
     return {
-      toggleMenu: false,
+      toggleMenu: false
     };
   },
   methods: {
     closeMenu() {
       this.toggleMenu = false;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -101,11 +104,11 @@ export default {
 
     .nitrozen-menu-scrollbar;
   }
-  .nitrozen-menu-top{
-    bottom: 100%
+  .nitrozen-menu-top {
+    bottom: 100%;
   }
 }
-.nitrozen-default-menu{
+.nitrozen-default-menu {
   &:hover {
     background-color: @HoverColor;
     border-radius: 50%;

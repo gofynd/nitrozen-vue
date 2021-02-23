@@ -1,6 +1,6 @@
-import strokeBtn from './NStrokeBtn';
-import flatBtn from './NFlatBtn';
-import clickOutside from './NClickOutside';
+import strokeBtn from "./NStrokeBtn";
+import flatBtn from "./NFlatBtn";
+import clickOutside from "./NClickOutside";
 
 // import Vue from 'vue';
 
@@ -19,7 +19,7 @@ const NitrozenDirectives = {
     strokeBtn(app);
     flatBtn(app);
     clickOutside(app);
-  },
+  }
 };
 
 export default NitrozenDirectives;

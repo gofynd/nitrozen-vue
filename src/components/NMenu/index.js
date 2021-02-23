@@ -1,3 +1,3 @@
-import NMenu from './NMenu';
+import NMenu from "./NMenu";
 
-export default NMenu
+export default NMenu;

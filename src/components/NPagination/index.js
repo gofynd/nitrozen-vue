@@ -1,3 +1,3 @@
-import NPagination from './NPagination';
-export { NPagination }
+import NPagination from "./NPagination";
+export { NPagination };
 export default NPagination;

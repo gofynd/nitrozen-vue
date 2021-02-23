@@ -52,7 +52,7 @@
     <template
       v-else-if="
         input.type == InputTypes.checkbox.key ||
-        input.type == InputTypes.radio.key
+          input.type == InputTypes.radio.key
       "
     >
       <span class="n-input-label">{{ titleFor(input) }}</span>
@@ -89,7 +89,7 @@
     <template v-else-if="input.type == InputTypes.dropdown.key">
       <nitrozen-dropdown
         :items="
-          input.enum.map((x) => {
+          input.enum.map(x => {
             return { text: x.display, value: x.key };
           })
         "
@@ -163,7 +163,7 @@
 import {
   defaultResponseForInput,
   validateResponseForInput,
-  validateInput,
+  validateInput
 } from "./util.js";
 import InputTypes from "./InputTypes.js";
 
@@ -183,14 +183,14 @@ export default {
   props: {
     modelValue: {},
     input: {
-      type: Object,
-    },
+      type: Object
+    }
   },
   data() {
     return {
       errorMessage: null,
       formInputValue: this.modelValue,
-      InputTypes,
+      InputTypes
     };
   },
   components: {
@@ -203,13 +203,13 @@ export default {
     NitrozenButton,
     NitrozenInline,
     VueTelInput,
-    NitrozenCustomForm: () => import("./NCustomForm.vue"), // Loophole for circular imports issue
+    NitrozenCustomForm: () => import("./NCustomForm.vue") // Loophole for circular imports issue
   },
   event: "change",
   watch: {
     formInputValue() {
       this.inputChanged();
-    },
+    }
   },
   methods: {
     validateInput,
@@ -217,7 +217,7 @@ export default {
       return input.display + (input.required ? " *" : "");
     },
     inputChanged() {
-      this.errorMessage = null
+      this.errorMessage = null;
       this.$emit("change", this.formInputValue);
     },
     addResponse() {
@@ -239,7 +239,7 @@ export default {
     },
     showValidationErrorsIfAny() {
       if (this.input.inputs) {
-        this.input.inputs.forEach((input) => {
+        this.input.inputs.forEach(input => {
           if (!input.hidden) {
             this.$refs[this.input.key || "form"].showValidationErrorsIfAny();
           }
@@ -253,8 +253,8 @@ export default {
       } else {
         this.willMoveToNext();
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -274,7 +274,7 @@ export default {
     margin: -8px -12px -4px -12px;
     z-index: 1;
     cursor: pointer;
-    ::v-deep svg {
+    ::v-deep(svg) {
       height: 24px;
     }
   }

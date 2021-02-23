@@ -1,3 +1,3 @@
-import NBadge from './NBadge.vue';
+import NBadge from "./NBadge.vue";
 
 export default NBadge;

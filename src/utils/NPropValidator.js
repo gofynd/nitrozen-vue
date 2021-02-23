@@ -1,15 +1,20 @@
-import Vue from 'vue'
+import Vue from "vue";
 
 export default (name, options) => {
   return {
     validator: value => {
       if (options.includes(value)) {
-        return true
+        return true;
       }
 
-      Vue.util.warn(`The ${name} prop is invalid. Given value: ${value}. Available options: ${options.join(', ')}.`, this)
+      Vue.util.warn(
+        `The ${name} prop is invalid. Given value: ${value}. Available options: ${options.join(
+          ", "
+        )}.`,
+        this
+      );
 
-      return false
+      return false;
     }
-  }
-}
+  };
+};

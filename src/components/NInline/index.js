@@ -1,3 +1,3 @@
-import NInline from './NInline.vue';
+import NInline from "./NInline.vue";
 
 export default NInline;

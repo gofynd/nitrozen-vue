@@ -1,3 +1,3 @@
-import NChips from './NChips.vue';
+import NChips from "./NChips.vue";
 
 export default NChips;

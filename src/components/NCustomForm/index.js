@@ -1,3 +1,3 @@
-import NCustomForm from './NCustomForm.vue';
+import NCustomForm from "./NCustomForm.vue";
 
 export default NCustomForm;

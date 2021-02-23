@@ -1,50 +1,46 @@
-import * as NitrozenComponents from './components';
-import NitrozenSnackbar from './components/NSnackbar';
+import * as NitrozenComponents from "./components";
+import NitrozenSnackbar from "./components/NSnackbar";
 
 let NitrozenVuePlugin = {
-  install: (app) => {
-    Object.values(NitrozenComponents).forEach((NComponent) => {
+  install: app => {
+    Object.values(NitrozenComponents).forEach(NComponent => {
       app.component(NComponent.name, NComponent);
     });
 
     // Snackbar
     app.use(NitrozenSnackbar);
+    app.config.globalProperties.$snackbar.register("show", message => message, {
+      position: "top-center",
+      duration: 2000
+    });
     app.config.globalProperties.$snackbar.register(
-      'show',
-      (message) => message,
+      "showSuccess",
+      message => message,
       {
-        position: 'top-center',
+        position: "top-center",
         duration: 2000,
+        type: "success"
       }
     );
     app.config.globalProperties.$snackbar.register(
-      'showSuccess',
-      (message) => message,
+      "showError",
+      message => message,
       {
-        position: 'top-center',
+        position: "top-center",
         duration: 2000,
-        type: 'success',
+        type: "error"
       }
     );
     app.config.globalProperties.$snackbar.register(
-      'showError',
-      (message) => message,
+      "showWarning",
+      message => message,
       {
-        position: 'top-center',
+        position: "top-center",
         duration: 2000,
-        type: 'error',
+        type: "warning"
       }
     );
-    app.config.globalProperties.$snackbar.register(
-      'showWarning',
-      (message) => message,
-      {
-        position: 'top-center',
-        duration: 2000,
-        type: 'warning',
-      }
-    );
-  },
+  }
 };
 
 export default NitrozenVuePlugin;

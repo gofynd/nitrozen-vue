@@ -1,3 +1,3 @@
-import NDropdown from './NDropdown';
-export { NDropdown }
+import NDropdown from "./NDropdown";
+export { NDropdown };
 export default NDropdown;

@@ -1,3 +1,3 @@
-import NDialog from './NDialog';
-export { NDialog }
+import NDialog from "./NDialog";
+export { NDialog };
 export default NDialog;

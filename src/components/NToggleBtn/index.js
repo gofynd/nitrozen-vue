@@ -1,2 +1,2 @@
-import NToggleBtn from './NToggleBtn'
+import NToggleBtn from "./NToggleBtn";
 export default NToggleBtn;
