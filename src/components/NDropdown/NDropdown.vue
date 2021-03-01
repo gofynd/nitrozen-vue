@@ -352,7 +352,7 @@ export default {
           	const multicheckbox = this.$refs[`multicheckbox-${index}`][0];
           	if (multicheckbox) multicheckbox.toggle();
           	event.stopPropagation();
-			      this.allSelected = this.allOptionsSelected()
+			      this.allSelected = this.allOptionsSelected();
         }
       }
     },
