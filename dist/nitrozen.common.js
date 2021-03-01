@@ -129,25 +129,27 @@ module.exports =
 
 // UNUSED EXPORTS: NDropdown
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"444111b5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=template&id=c3d96a50&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"444111b5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=template&id=8961d3ca&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-dropdown-container"},[(_vm.label)?_c('label',{staticClass:"nitrozen-dropdown-label"},[_vm._v(" "+_vm._s(_vm.label)+" "+_vm._s(_vm.required ? " *" : "")+" "),(_vm.tooltip != '')?_c('span',{staticClass:"nitrozen-tooltip-icon"},[_c('nitrozen-tooltip',{attrs:{"tooltipText":_vm.tooltip,"position":"top"}})],1):_vm._e()]):_vm._e(),_c('div',{staticClass:"nitrozen-select-wrapper",on:{"click":_vm.toggle}},[_c('div',{ref:"n_dropdown",staticClass:"nitrozen-select",class:{
-        disabled: _vm.disabled,
-        'nitrozen-dropdown-open': _vm.showOptions,
-      }},[_c('div',{staticClass:"nitrozen-select__trigger"},[(_vm.searchable && !_vm.disabled)?_c('span',{staticClass:"nitrozen-searchable-input-container"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.searchInput),expression:"searchInput"}],attrs:{"type":"search","placeholder":_vm.searchInputPlaceholder},domProps:{"value":(_vm.searchInput)},on:{"search":_vm.searchInputChange,"keyup":_vm.searchInputChange,"input":function($event){if($event.target.composing){ return; }_vm.searchInput=$event.target.value}}})]):_c('span',[_vm._v(_vm._s(_vm.selectedText))]),_c('div',{staticClass:"nitrozen-dropdown-arrow"},[_c('nitrozen-inline',{attrs:{"icon":"dropdown_arrow_down"}})],1)]),_c('div',{ref:"nitrozen-select-option",staticClass:"nitrozen-options",class:{ 'nitrozen-dropup': _vm.dropUp },on:{"&scroll":function($event){return _vm.handleScroll($event)}}},[_vm._l((_vm.items),function(item,index){return _c('span',{key:index,staticClass:"nitrozen-option ripple",class:{
-            selected: item == _vm.selected,
-            'nitrozen-option-group-label': item.isGroupLabel,
-          },attrs:{"data-value":item.value},on:{"click":function($event){return _vm.selectItem(index, item)}}},[_vm._t("option",[_c('div',{staticClass:"nitrozen-option-container"},[(_vm.multiple && !item.isGroupLabel)?[_c('nitrozen-checkbox',{ref:("multicheckbox-" + index),refInFor:true,attrs:{"checkboxValue":item.value},on:{"change":_vm.setCheckedItem},model:{value:(_vm.selectedItems),callback:function ($$v) {_vm.selectedItems=$$v},expression:"selectedItems"}},[_c('span',{staticClass:"nitrozen-option-image",class:{
-                      'nitrozen-dropdown-multicheckbox-selected': _vm.selectedItems.includes(
-                        item.value
-                      ),
-                    }},[(item.logo)?_c('img',{staticClass:"nitrozen-option-logo",attrs:{"src":item.logo,"alt":"logo"}}):_vm._e(),_vm._v(" "+_vm._s(item.text))])])]:[_c('span',{staticClass:"nitrozen-option-image",class:{
-                    'nitrozen-option-child-label':
-                      _vm.items.find(function (i) { return i.isGroupLabel; }) && !item.isGroupLabel,
-                  }},[(item.logo)?_c('img',{staticClass:"nitrozen-option-logo",attrs:{"src":item.logo,"alt":"logo"}}):_vm._e(),_vm._v(" "+_vm._s(item.text)+" ")])]],2)],{"item":item,"selected":item == _vm.selected})],2)}),(_vm.searchable && _vm.items.length == 0)?_c('span',{staticClass:"nitrozen-option"},[(!_vm.add_option)?_c('div',{staticClass:"nitrozen-option-container"},[_vm._v("No "+_vm._s(_vm.label)+" Found")]):(_vm.add_option && _vm.searchInput.length)?_c('div',{staticClass:"nitrozen-option-container"},[_c('div',{staticClass:"nitrozen-dropdown-empty",on:{"click":_vm.addOption}},[_c('nitrozen-inline',{attrs:{"icon":"plus-btn"}}),_c('p',[_vm._v("Add "+_vm._s(_vm.searchInput))])],1)]):_vm._e()]):_vm._e()],2)])])])}
+          disabled: _vm.disabled,
+          'nitrozen-dropdown-open': _vm.showOptions,
+        }},[_c('div',{staticClass:"nitrozen-select__trigger"},[(_vm.searchable && !_vm.disabled)?_c('span',{staticClass:"nitrozen-searchable-input-container"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.searchInput),expression:"searchInput"}],attrs:{"type":"search","placeholder":_vm.searchInputPlaceholder},domProps:{"value":(_vm.searchInput)},on:{"search":_vm.searchInputChange,"keyup":_vm.searchInputChange,"input":function($event){if($event.target.composing){ return; }_vm.searchInput=$event.target.value}}})]):_c('span',[_vm._v(_vm._s(_vm.selectedText))]),_c('div',{staticClass:"nitrozen-dropdown-arrow"},[_c('nitrozen-inline',{attrs:{"icon":"dropdown_arrow_down"}})],1)]),_c('div',{ref:"nitrozen-select-option",staticClass:"nitrozen-options",class:{ 'nitrozen-dropup': _vm.dropUp },on:{"&scroll":function($event){return _vm.handleScroll($event)}}},[(_vm.enable_select_all)?_c('span',{directives:[{name:"show",rawName:"v-show",value:(!_vm.searchInput),expression:"!searchInput"}],staticClass:"nitrozen-option ripple",on:{"click":function($event){return _vm.selectItem('all', _vm.all_option)}}},[_vm._t("option",[_c('div',{staticClass:"nitrozen-option-container"},[_c('nitrozen-checkbox',{ref:"multicheckbox-all",attrs:{"checkboxValue":_vm.allSelected,"value":_vm.allSelected},on:{"change":_vm.setCheckedItem}},[_c('span',{staticClass:"nitrozen-option-image",class:{
+                      'nitrozen-dropdown-multicheckbox-selected': _vm.allSelected,
+                    }},[_vm._v("All")])])],1)],{"item":_vm.all_option,"selected":_vm.allSelected})],2):_vm._e(),_vm._l((_vm.items),function(item,index){return _c('span',{key:index,staticClass:"nitrozen-option ripple",class:{
+              selected: item == _vm.selected,
+              'nitrozen-option-group-label': item.isGroupLabel,
+            },attrs:{"data-value":item.value},on:{"click":function($event){return _vm.selectItem(index, item)}}},[_vm._t("option",[_c('div',{staticClass:"nitrozen-option-container"},[(_vm.multiple && !item.isGroupLabel)?[_c('nitrozen-checkbox',{ref:("multicheckbox-" + index),refInFor:true,attrs:{"checkboxValue":item.value},on:{"change":_vm.setCheckedItem},model:{value:(_vm.selectedItems),callback:function ($$v) {_vm.selectedItems=$$v},expression:"selectedItems"}},[_c('span',{staticClass:"nitrozen-option-image",class:{
+                        'nitrozen-dropdown-multicheckbox-selected': _vm.selectedItems.includes(
+                          item.value
+                        ),
+                      }},[(item.logo)?_c('img',{staticClass:"nitrozen-option-logo",attrs:{"src":item.logo,"alt":"logo"}}):_vm._e(),_vm._v(" "+_vm._s(item.text))])])]:[_c('span',{staticClass:"nitrozen-option-image",class:{
+                      'nitrozen-option-child-label':
+                        _vm.items.find(function (i) { return i.isGroupLabel; }) && !item.isGroupLabel,
+                    }},[(item.logo)?_c('img',{staticClass:"nitrozen-option-logo",attrs:{"src":item.logo,"alt":"logo"}}):_vm._e(),_vm._v(" "+_vm._s(item.text)+" ")])]],2)],{"item":item,"selected":item == _vm.selected})],2)}),(_vm.searchable && _vm.items.length == 0)?_c('span',{staticClass:"nitrozen-option"},[(!_vm.add_option)?_c('div',{staticClass:"nitrozen-option-container"},[_vm._v("No "+_vm._s(_vm.label)+" Found")]):(_vm.add_option && _vm.searchInput.length)?_c('div',{staticClass:"nitrozen-option-container"},[_c('div',{staticClass:"nitrozen-dropdown-empty",on:{"click":_vm.addOption}},[_c('nitrozen-inline',{attrs:{"icon":"plus-btn"}}),_c('p',[_vm._v("Add "+_vm._s(_vm.searchInput))])],1)]):_vm._e()]):_vm._e()],2)])])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=template&id=c3d96a50&
+// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=template&id=8961d3ca&
 
 // EXTERNAL MODULE: ./src/utils/NUuid.js
 var NUuid = __webpack_require__("4fe2");
@@ -162,6 +164,31 @@ var NCheckbox = __webpack_require__("2158");
 var NTooltip = __webpack_require__("95b9");
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -373,6 +400,10 @@ var NTooltip = __webpack_require__("95b9");
     add_option: {
       type: Boolean,
       default: false
+    },
+    enable_select_all: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => {
@@ -382,7 +413,12 @@ var NTooltip = __webpack_require__("95b9");
       searchInput: "",
       showOptions: false,
       dropUp: false,
-      viewport: null
+      viewport: null,
+      allSelected: false,
+      all_option: {
+        'text': 'Select All',
+        'value': 'all'
+      }
     };
   },
   watch: {
@@ -399,6 +435,9 @@ var NTooltip = __webpack_require__("95b9");
 
   },
   computed: {
+    allOptionsSelected: function () {
+      return this.selectedItems.length === this.items.map(item => item.value).length && this.enable_select_all;
+    },
     selectedText: function () {
       if (!this.multiple) {
         this.selected = {};
@@ -418,6 +457,10 @@ var NTooltip = __webpack_require__("95b9");
 
         return "";
       } else {
+        if (this.allOptionsSelected) {
+          return `All ${this.selectedItems.length} ${this.label}s selected`;
+        }
+
         let tmp = [];
         let selected = {};
 
@@ -452,6 +495,8 @@ var NTooltip = __webpack_require__("95b9");
 
   mounted() {
     if (!this.multiple) {
+      this.enable_select_all = false;
+
       if (this.value) {
         const selected = this.items.find(i => i.value == this.value);
         this.searchInput = selected ? selected.text : "";
@@ -460,6 +505,7 @@ var NTooltip = __webpack_require__("95b9");
       if (this.value) {
         this.selectedItems = [...this.value];
         this.searchInput = "";
+        this.allSelected = this.allOptionsSelected;
       }
     }
   },
@@ -481,9 +527,24 @@ var NTooltip = __webpack_require__("95b9");
 
         this.$emit("change", item.value);
       } else {
-        const multicheckbox = this.$refs[`multicheckbox-${index}`][0];
-        if (multicheckbox) multicheckbox.toggle();
-        event.stopPropagation();
+        if (index === 'all') {
+          this.allSelected = !this.allSelected;
+
+          if (this.allSelected) {
+            this.selectedItems = this.items.map(item => item.value);
+          } else {
+            this.selectedItems = [];
+          }
+
+          const multicheckbox = this.$refs[`multicheckbox-${index}`];
+          if (multicheckbox) multicheckbox.toggleAll(this.selectedItems);
+          event.stopPropagation();
+        } else {
+          const multicheckbox = this.$refs[`multicheckbox-${index}`][0];
+          if (multicheckbox) multicheckbox.toggle();
+          event.stopPropagation();
+          this.allSelected = this.allOptionsSelected;
+        }
       }
     },
 
@@ -508,6 +569,11 @@ var NTooltip = __webpack_require__("95b9");
         id: this.id,
         text: this.searchInput
       };
+
+      if (!this.searchInput) {
+        this.allSelected = this.allOptionsSelected;
+      }
+
       this.eventEmit(obj, "searchInputChange");
       this.calculateViewport();
     },
@@ -761,12 +827,12 @@ module.exports = svgs;
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"444111b5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=17cc01a6&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"444111b5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=bf396e88&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('label',{staticClass:"nitrozen-checkbox-container",class:{'nitrozen-checkbox-container-disabled': _vm.disabled}},[_vm._t("default"),_c('input',{attrs:{"id":_vm.id,"type":"checkbox","disabled":_vm.disabled},domProps:{"value":_vm.checkboxValue || _vm.value,"checked":_vm.isSelected},on:{"change":_vm.toggle}}),_c('span',{staticClass:"nitrozen-checkbox",attrs:{"for":_vm.id}})],2)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=17cc01a6&
+// CONCATENATED MODULE: ./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=bf396e88&
 
 // EXTERNAL MODULE: ./src/utils/NUuid.js
 var NUuid = __webpack_require__("4fe2");
@@ -841,6 +907,10 @@ var NUuid = __webpack_require__("4fe2");
 
         this.$emit("input", event.target.checked);
       }
+    },
+    toggleAll: function (items) {
+      this.$emit("input", items);
+      this.$emit("change", items);
     }
   }
 });

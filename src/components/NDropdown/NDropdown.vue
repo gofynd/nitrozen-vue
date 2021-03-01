@@ -319,6 +319,7 @@ export default {
       if (this.value) {
         this.selectedItems = [...this.value];
         this.searchInput = "";
+        this.allSelected = this.allOptionsSelected;
       }
     }
   },
