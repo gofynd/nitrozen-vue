@@ -243,6 +243,7 @@ export default {
       dropUp: false,
       viewport: null,
       allSelected: false,
+      allOptionsSelected: false,
       all_option: {'text': 'Select All', 'value': 'all'},
     };
   },
@@ -255,7 +256,19 @@ export default {
         const selected = this.items.find((i) => i.value == this.value);
         this.searchInput = selected ? selected.text : this.value;
       }
+      if (this.multiple && this.enable_select_all) {
+        this.allOptionsSelected = this.selectedItems.length === this.items.map(item => item.value).length && this.enable_select_all;
+        this.allSelected = this.allOptionsSelected;
+      }
     },
+    items: {
+      handler: function() {
+        if (this.multiple && this.enable_select_all) {
+          this.allOptionsSelected = this.selectedItems.length === this.items.map(item => item.value).length && this.enable_select_all;
+          this.allSelected = this.allOptionsSelected;
+        }
+      }
+    }
   },
   computed: {
     selectedText: function() {
@@ -274,7 +287,7 @@ export default {
         }
         return "";
       } else {
-        if (this.allOptionsSelected()) {
+        if (this.allOptionsSelected) {
           return `All ${this.selectedItems.length} ${this.label}s selected`
         }
         let tmp = [];
@@ -316,14 +329,14 @@ export default {
       if (this.value) {
         this.selectedItems = [...this.value];
         this.searchInput = "";
-        this.allSelected = this.allOptionsSelected();
+        if (this.multiple && this.enable_select_all) {
+          this.allOptionsSelected = this.selectedItems.length === this.value.length && this.enable_select_all;
+          this.allSelected = this.allOptionsSelected;
+        } 
       }
     }
   },
   methods: {
-    allOptionsSelected: function() {
-      return this.selectedItems.length === this.items.map(item => item.value).length && this.enable_select_all
-    },
     selectItem(index, item) {
       if (item.isGroupLabel) {
         return;
@@ -352,7 +365,7 @@ export default {
           	const multicheckbox = this.$refs[`multicheckbox-${index}`][0];
           	if (multicheckbox) multicheckbox.toggle();
           	event.stopPropagation();
-			      this.allSelected = this.allOptionsSelected();
+			      this.allSelected = this.allOptionsSelected;
         }
       }
     },
@@ -375,7 +388,7 @@ export default {
         text: this.searchInput,
       };
       if (!this.searchInput) {
-        this.allSelected = this.allOptionsSelected()
+        this.allSelected = this.selectedItems.length === this.items.map(item => item.value).length && this.enable_select_all;
       }
       this.eventEmit(obj, "searchInputChange");
       this.calculateViewport();
