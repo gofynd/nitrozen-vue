@@ -129,7 +129,7 @@ module.exports =
 
 // UNUSED EXPORTS: NDropdown
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"444111b5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=template&id=8961d3ca&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"444111b5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=template&id=0050a197&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-dropdown-container"},[(_vm.label)?_c('label',{staticClass:"nitrozen-dropdown-label"},[_vm._v(" "+_vm._s(_vm.label)+" "+_vm._s(_vm.required ? " *" : "")+" "),(_vm.tooltip != '')?_c('span',{staticClass:"nitrozen-tooltip-icon"},[_c('nitrozen-tooltip',{attrs:{"tooltipText":_vm.tooltip,"position":"top"}})],1):_vm._e()]):_vm._e(),_c('div',{staticClass:"nitrozen-select-wrapper",on:{"click":_vm.toggle}},[_c('div',{ref:"n_dropdown",staticClass:"nitrozen-select",class:{
           disabled: _vm.disabled,
           'nitrozen-dropdown-open': _vm.showOptions,
@@ -149,7 +149,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=template&id=8961d3ca&
+// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=template&id=0050a197&
 
 // EXTERNAL MODULE: ./src/utils/NUuid.js
 var NUuid = __webpack_require__("4fe2");
@@ -435,9 +435,6 @@ var NTooltip = __webpack_require__("95b9");
 
   },
   computed: {
-    allOptionsSelected: function () {
-      return this.selectedItems.length === this.items.map(item => item.value).length && this.enable_select_all;
-    },
     selectedText: function () {
       if (!this.multiple) {
         this.selected = {};
@@ -457,7 +454,7 @@ var NTooltip = __webpack_require__("95b9");
 
         return "";
       } else {
-        if (this.allOptionsSelected) {
+        if (this.allOptionsSelected()) {
           return `All ${this.selectedItems.length} ${this.label}s selected`;
         }
 
@@ -505,12 +502,16 @@ var NTooltip = __webpack_require__("95b9");
       if (this.value) {
         this.selectedItems = [...this.value];
         this.searchInput = "";
-        this.allSelected = this.allOptionsSelected;
+        this.allSelected = this.allOptionsSelected();
       }
     }
   },
 
   methods: {
+    allOptionsSelected: function () {
+      return this.selectedItems.length === this.items.map(item => item.value).length && this.enable_select_all;
+    },
+
     selectItem(index, item) {
       if (item.isGroupLabel) {
         return;
@@ -543,7 +544,7 @@ var NTooltip = __webpack_require__("95b9");
           const multicheckbox = this.$refs[`multicheckbox-${index}`][0];
           if (multicheckbox) multicheckbox.toggle();
           event.stopPropagation();
-          this.allSelected = this.allOptionsSelected;
+          this.allSelected = this.allOptionsSelected();
         }
       }
     },
@@ -571,7 +572,7 @@ var NTooltip = __webpack_require__("95b9");
       };
 
       if (!this.searchInput) {
-        this.allSelected = this.allOptionsSelected;
+        this.allSelected = this.allOptionsSelected();
       }
 
       this.eventEmit(obj, "searchInputChange");

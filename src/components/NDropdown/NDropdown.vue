@@ -258,9 +258,6 @@ export default {
     },
   },
   computed: {
-	allOptionsSelected: function() {
-		return this.selectedItems.length === this.items.map(item => item.value).length && this.enable_select_all
-	},
     selectedText: function() {
       if (!this.multiple) {
         this.selected = {};
@@ -277,7 +274,7 @@ export default {
         }
         return "";
       } else {
-        if (this.allOptionsSelected) {
+        if (this.allOptionsSelected()) {
           return `All ${this.selectedItems.length} ${this.label}s selected`
         }
         let tmp = [];
@@ -319,11 +316,14 @@ export default {
       if (this.value) {
         this.selectedItems = [...this.value];
         this.searchInput = "";
-        this.allSelected = this.allOptionsSelected;
+        this.allSelected = this.allOptionsSelected();
       }
     }
   },
   methods: {
+    allOptionsSelected: function() {
+      return this.selectedItems.length === this.items.map(item => item.value).length && this.enable_select_all
+    },
     selectItem(index, item) {
       if (item.isGroupLabel) {
         return;
@@ -352,7 +352,7 @@ export default {
           	const multicheckbox = this.$refs[`multicheckbox-${index}`][0];
           	if (multicheckbox) multicheckbox.toggle();
           	event.stopPropagation();
-			      this.allSelected = this.allOptionsSelected
+			      this.allSelected = this.allOptionsSelected()
         }
       }
     },
@@ -375,7 +375,7 @@ export default {
         text: this.searchInput,
       };
       if (!this.searchInput) {
-        this.allSelected = this.allOptionsSelected
+        this.allSelected = this.allOptionsSelected()
       }
       this.eventEmit(obj, "searchInputChange");
       this.calculateViewport();
