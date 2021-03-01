@@ -256,17 +256,11 @@ export default {
         const selected = this.items.find((i) => i.value == this.value);
         this.searchInput = selected ? selected.text : this.value;
       }
-      if (this.multiple && this.enable_select_all) {
-        this.allOptionsSelected = this.selectedItems.length === this.items.map(item => item.value).length && this.enable_select_all;
-        this.allSelected = this.allOptionsSelected;
-      }
+      this.setAllOptions()
     },
     items: {
       handler: function() {
-        if (this.multiple && this.enable_select_all) {
-          this.allOptionsSelected = this.selectedItems.length === this.items.map(item => item.value).length && this.enable_select_all;
-          this.allSelected = this.allOptionsSelected;
-        }
+        this.setAllOptions()
       }
     }
   },
@@ -288,7 +282,7 @@ export default {
         return "";
       } else {
         if (this.allOptionsSelected) {
-          return `All ${this.selectedItems.length} ${this.label}s selected`
+          return `All ${this.selectedItems.length} ${this.label} selected`
         }
         let tmp = [];
         let selected = {};
@@ -329,14 +323,24 @@ export default {
       if (this.value) {
         this.selectedItems = [...this.value];
         this.searchInput = "";
-        if (this.multiple && this.enable_select_all) {
-          this.allOptionsSelected = this.selectedItems.length === this.value.length && this.enable_select_all;
-          this.allSelected = this.allOptionsSelected;
-        } 
+        this.setAllOptions(true)
       }
     }
   },
   methods: {
+    getItems(items) {
+      return items.filter(function(item){return !item.isGroupLabel}).map(item => item.value)
+    },
+    setAllOptions(mounted=false) {
+      let items = [...this.items];
+      if(mounted) {
+        items = [...this.value]
+      }
+      if (this.multiple && this.enable_select_all) {
+        this.allOptionsSelected = this.selectedItems.length === this.getItems(items).length && this.enable_select_all;
+        this.allSelected = this.allOptionsSelected;
+      }
+    },
     selectItem(index, item) {
       if (item.isGroupLabel) {
         return;
@@ -353,7 +357,7 @@ export default {
         if (index === 'all') {
           this.allSelected = !this.allSelected
           if (this.allSelected) {
-            this.selectedItems = this.items.map(item => item.value)
+            this.selectedItems = this.getItems(this.items)
           } else {
             this.selectedItems = []
           }
@@ -388,7 +392,7 @@ export default {
         text: this.searchInput,
       };
       if (!this.searchInput) {
-        this.allSelected = this.selectedItems.length === this.items.map(item => item.value).length && this.enable_select_all;
+        this.setAllOptions()
       }
       this.eventEmit(obj, "searchInputChange");
       this.calculateViewport();
