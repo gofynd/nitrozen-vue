@@ -53,8 +53,8 @@
               <div class="nitrozen-option-container">
                 <nitrozen-checkbox
                   :checkboxValue="allSelected"
-				  :value="allSelected"
-				  @change="setCheckedItem"
+                  :value="allSelected"
+                  @change="setCheckedItem"
                   :ref="`multicheckbox-all`"
                 >
                   <span
@@ -67,6 +67,11 @@
               </div>
             </slot>
           </span>
+          <div
+            v-if="enable_select_all"
+            v-show="!searchInput"
+            class="horizantal-divider"
+          />
           <span
             v-for="(item, index) in items"
             :key="index"
@@ -488,5 +493,11 @@ export default {
   textarea:focus {
     outline: none;
   }
+}
+.horizantal-divider {
+    height: 1px;
+    width: 100%;
+    background-color: lightgrey;
+    margin: 5px 0;
 }
 </style>
