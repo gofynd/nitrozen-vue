@@ -694,6 +694,7 @@
           :enable_select_all="true"
           @change="changeEvent"
           v-model="multiSelect"
+          :searchable="true"
         ></nitrozen-dropdown>
       </div>
 
