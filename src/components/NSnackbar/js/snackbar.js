@@ -273,7 +273,7 @@ const register = function (instance, name, callback, options) {
 
     (!instance.options.globalToasts) ? instance.options.globalToasts = {} : null;
 
-    instance.options.globalToasts[name] = function (payload, initiate) {
+    instance.options.globalToasts[name] = function (payload, initiate, options = options) {
 
         // if call back is string we will keep it that way..
         let message = null;
