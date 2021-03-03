@@ -314,6 +314,12 @@ export default {
       }
     },
     searchInputPlaceholder: function() {
+      if (this.enable_select_all && this.selectedItems.length) {
+        if(this.selectedItems.length === this.getItems(this.items).length) {
+          return `All ${this.label}(s) selected`
+        }
+        return `${this.selectedItems.length} ${this.label}(s) selected`
+      }
       return this.placeholder || `Search ${this.label}`;
     },
   },
