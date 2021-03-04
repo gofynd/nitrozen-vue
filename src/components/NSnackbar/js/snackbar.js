@@ -246,11 +246,11 @@ export const initiateCustomToasts = function (instance) {
         Object.keys(customToasts).forEach(key => {
 
             // register the custom toast events to the Toast.custom property
-            instance.global[key] = (payload = {}) => {
+            instance.global[key] = (payload = {}, options={}) => {
 
                 //console.log(payload);
                 // return the it in order to expose the Toast methods
-                return customToasts[key].apply(null, [payload, initiate]);
+                return customToasts[key].apply(null, [payload, options, initiate]);
             };
         });
 
@@ -273,10 +273,11 @@ const register = function (instance, name, callback, options) {
 
     (!instance.options.globalToasts) ? instance.options.globalToasts = {} : null;
 
-    instance.options.globalToasts[name] = function (payload, initiate) {
+    instance.options.globalToasts[name] = function (payload, optionsParams=null, initiate) {
 
         // if call back is string we will keep it that way..
         let message = null;
+        let settings = null
 
         if (typeof callback === 'string') {
             message = callback;
@@ -286,7 +287,13 @@ const register = function (instance, name, callback, options) {
             message = callback(payload);
         }
 
-        return initiate(message, options);
+        if (optionsParams !== null && typeof optionsParams === 'object') {
+            settings = Object.assign(options, optionsParams)
+        } else {
+            settings = options;
+        } 
+
+        return initiate(message, settings);
     };
 
 
