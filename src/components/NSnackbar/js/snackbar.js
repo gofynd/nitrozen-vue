@@ -273,11 +273,11 @@ const register = function (instance, name, callback, options) {
 
     (!instance.options.globalToasts) ? instance.options.globalToasts = {} : null;
 
-    instance.options.globalToasts[name] = function (payload, initiate, options = options) {
+    instance.options.globalToasts[name] = function (payload, initiate) {
 
         // if call back is string we will keep it that way..
         let message = null;
-
+        let settings = null;
         if (typeof callback === 'string') {
             message = callback;
         }
@@ -286,7 +286,15 @@ const register = function (instance, name, callback, options) {
             message = callback(payload);
         }
 
-        return initiate(message, options);
+        if (typeof options === 'function') {
+            settings = options;
+        }
+
+        if (typeof options === 'object') {
+            settings = callback(payload);
+        }
+
+        return initiate(message, settings);
     };
 
 
