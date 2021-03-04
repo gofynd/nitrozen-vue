@@ -291,7 +291,7 @@ const register = function (instance, name, callback, options) {
         }
 
         if (typeof options === 'object') {
-            settings = callback(payload);
+            settings = options();
         }
 
         return initiate(message, settings);
