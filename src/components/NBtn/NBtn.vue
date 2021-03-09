@@ -66,8 +66,8 @@ export default {
       ],
       href: this.href,
       disabled: this.disabled,
-      type: !this.href && (this.type || "button"),
-      ...this.$attrs
+      type: !this.href && (this.type || "button")
+      // ...this.$attrs
     };
     let tag = "button";
     if (this.href) {

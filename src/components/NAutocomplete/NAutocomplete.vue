@@ -14,7 +14,6 @@
 
 <script>
 import NInput from "./../NInput/NInput";
-import NitrozenUuid from "./../../utils/NUuid";
 
 export default {
   name: "nitrozen-autocomplete",
@@ -90,7 +89,7 @@ export default {
             "<input type='hidden' value='" + this.dataset[index] + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
           var vm = this;
-          autocompleteItem.addEventListener("click", function(e) {
+          autocompleteItem.addEventListener("click", function() {
             /*insert the value for the autocomplete text field:*/
             var value = this.getElementsByTagName("input")[0].value;
             vm.autocompleteModal = value;
@@ -133,10 +132,10 @@ export default {
       if (!x) return false;
       /*start by removing the "active" class on all items:*/
       this.removeActive(x);
-      if (currentFocus >= x.length) currentFocus = 0;
-      if (currentFocus < 0) currentFocus = x.length - 1;
+      if (this.currentFocus >= x.length) this.currentFocus = 0;
+      if (this.currentFocus < 0) this.currentFocus = x.length - 1;
       /*add class "autocomplete-active":*/
-      x[currentFocus].classList.add("autocomplete-active");
+      x[this.currentFocus].classList.add("autocomplete-active");
     },
     removeActive: function(x) {
       /*a function to remove the "active" class from all autocomplete items:*/

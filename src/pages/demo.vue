@@ -1002,7 +1002,7 @@ export default {
       console.log(event);
       this.abcd = event.target.checked;
     },
-    addFruit(event) {
+    addFruit() {
       var value = this.fruitName;
       let obj = {
         name: value
