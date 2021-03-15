@@ -17440,10 +17440,10 @@ var flatBtn = function flatBtn(app) {
     beforeMount: function beforeMount(el, binding, vnode) {
       el.classList.add("n-flat-button");
 
-      if (vnode.props.theme == "secondary") {
-        el.classList.add("n-flat-button-secondary");
-      } else {
+      if (vnode.props.theme == "primary") {
         el.classList.add("n-flat-button-primary");
+      } else {
+        el.classList.add("n-flat-button-secondary");
       }
     }
   });
