@@ -352,6 +352,15 @@
         ></nitrozen-input>
       </div>
 
+      <div class="main-div">
+        <nitrozen-input
+          id="4"
+          label="OTP"
+          placeholder="Enter OTP Code"
+          autocomplete="one-time-code"
+        ></nitrozen-input>
+      </div>
+
       <!-- <div class="main-div">
             <nitrozen-input :id="4" :type="'text'" :placeholder="'Enter Name'" :label="'Input with Loader'" :search="true"></nitrozen-input>
       </div>-->

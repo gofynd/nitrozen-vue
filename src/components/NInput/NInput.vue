@@ -3,7 +3,7 @@
     <!-- Label -->
     <div class="n-input-label-container">
       <label class="n-input-label" v-if="label" :for="id">
-        {{ label }} {{ required ? " *" : "" }}
+        {{ label }} {{ required ? ' *' : '' }}
         <span class="nitrozen-tooltip-icon" v-if="showTooltip">
           <nitrozen-tooltip
             :tooltipText="tooltipText"
@@ -57,6 +57,7 @@
         :maxlength="maxlength"
         :type="type"
         :placeholder="placeholder"
+        :autocomplete="autocomplete"
         :id="id"
         :ref="id"
         :disabled="disabled"
@@ -97,19 +98,19 @@
 </template>
 
 <script>
-import NInputPrefix from "./NInputPrefix";
-import NInputSuffix from "./NInputSuffix";
-import NTooltip from "./../NTooltip";
-import NitrozenInline from "./../NInline";
-import NitrozenUuid from "./../../utils/NUuid";
+import NInputPrefix from './NInputPrefix';
+import NInputSuffix from './NInputSuffix';
+import NTooltip from './../NTooltip';
+import NitrozenInline from './../NInline';
+import NitrozenUuid from './../../utils/NUuid';
 
 export default {
-  name: "nitrozen-input",
+  name: 'nitrozen-input',
   components: {
-    "nitrozen-input-prefix": NInputPrefix,
-    "nitrozen-input-suffix": NInputSuffix,
-    "nitrozen-tooltip": NTooltip,
-    "nitrozen-inline": NitrozenInline,
+    'nitrozen-input-prefix': NInputPrefix,
+    'nitrozen-input-suffix': NInputSuffix,
+    'nitrozen-tooltip': NTooltip,
+    'nitrozen-inline': NitrozenInline,
   },
   data() {
     return {
@@ -122,17 +123,21 @@ export default {
     },
   },
   props: {
+    autocomplete: {
+      type: String,
+      default: null,
+    },
     type: {
       type: String,
-      default: "text",
+      default: 'text',
     },
     label: {
       type: String,
-      default: "",
+      default: '',
     },
     placeholder: {
       type: String,
-      default: "",
+      default: '',
     },
     disabled: {
       type: Boolean,
@@ -144,7 +149,7 @@ export default {
     },
     value: {
       type: [Number, String],
-      default: "",
+      default: '',
     },
     showError: {
       type: Boolean,
@@ -152,7 +157,7 @@ export default {
     },
     hint: {
       type: String,
-      default: "",
+      default: '',
     },
     search: {
       type: Boolean,
@@ -168,11 +173,11 @@ export default {
     },
     tooltipText: {
       type: String,
-      default: "",
+      default: '',
     },
     id: {
       type: [Number, String],
-      default: () => "nitrozen-input" + NitrozenUuid(),
+      default: () => 'nitrozen-input' + NitrozenUuid(),
     },
     maxlength: {
       type: Number,
@@ -223,11 +228,11 @@ export default {
   methods: {
     valueChange: function(event) {
       let value = event.target.value;
-      if (this.type === "number") {
+      if (this.type === 'number') {
         value = Number(event.target.value);
       }
 
-      this.$emit("input", value);
+      this.$emit('input', value);
       if (this.search) {
         // Do this with debouncing
         this.loaderShow = true;
@@ -246,7 +251,7 @@ export default {
 </script>
 
 <style lang="less">
-@import "./NInput.less";
+@import './NInput.less';
 
 textarea {
   resize: vertical;
