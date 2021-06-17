@@ -210,7 +210,7 @@ export default {
         this.value.currentPage = this.value.prevPage;
       }
       this.change();
-      this.$emit('previousClick')
+      this.$emit('previousClick');
     },
     next() {
       if (this.value.total) {
@@ -230,7 +230,7 @@ export default {
         this.value.currentPage = this.value.nextPage;
       }
       this.change();
-      this.$emit('nextClick')
+      this.$emit('nextClick');
     },
     pageSizeChange(size) {
       this.value.current = 1;
