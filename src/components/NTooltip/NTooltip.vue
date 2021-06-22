@@ -1,6 +1,6 @@
 <template>
   <div class="nitrozen-tooltip">
-    <nitrozen-inline :icon="'info'"></nitrozen-inline>
+    <nitrozen-inline :icon="icon"></nitrozen-inline>
     <span class="nitrozen-tooltiptext" v-bind:class="tooltipPositionClass">
       <template v-if="tooltipText">{{tooltipText}}</template>
       <template v-else><slot/></template>
@@ -24,6 +24,10 @@ export default {
     tooltipText: {
       type: String,
       default: ""
+    },
+    icon: {
+      type: String,
+      default: "info"
     }
   },
   computed: {

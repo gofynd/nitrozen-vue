@@ -50,7 +50,7 @@
       <div class="main-div space-between">
         <div>
           This is text tooltip
-          <nitrozen-tooltip tooltipText="Text tooltip"></nitrozen-tooltip>
+          <nitrozen-tooltip icon="help" tooltipText="Text tooltip"></nitrozen-tooltip>
         </div>
         <div>
           This is custom html content tooltip
