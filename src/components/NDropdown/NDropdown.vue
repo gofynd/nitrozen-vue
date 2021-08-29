@@ -44,7 +44,7 @@
         >
 
           <span 
-            v-if="enable_select_all"
+            v-if="enableSelectAll"
             v-show="!searchInput"
             class="nitrozen-option ripple"
             @click="selectItem('all', all_option)"
@@ -68,7 +68,7 @@
             </slot>
           </span>
           <div
-            v-if="enable_select_all"
+            v-if="enableSelectAll"
             v-show="!searchInput"
             class="horizantal-divider"
           />
@@ -234,7 +234,7 @@ export default {
       type: Boolean,
       default: false
     },
-    enable_select_all: {
+    enableSelectAll: {
       type: Boolean,
       default: false
     }
@@ -314,7 +314,7 @@ export default {
       }
     },
     searchInputPlaceholder: function() {
-      if (this.enable_select_all && this.selectedItems.length) {
+      if (this.enableSelectAll && this.selectedItems.length) {
         if(this.selectedItems.length === this.getItems(this.items).length) {
           return `All ${this.label}(s) selected`
         }
@@ -325,7 +325,7 @@ export default {
   },
   mounted() {
     if (!this.multiple) {
-      this.enable_select_all = false;
+      this.enableSelectAll = false;
       if (this.value) {
         const selected = this.items.find((i) => i.value == this.value);
         this.searchInput = selected ? selected.text : "";
@@ -334,7 +334,7 @@ export default {
       if (this.value) {
         this.selectedItems = [...this.value];
         this.searchInput = "";
-        this.setAllOptions(true)
+        this.setAllOptions();
       }
     }
   },
@@ -342,13 +342,11 @@ export default {
     getItems(items) {
       return items.filter(function(item){return !item.isGroupLabel}).map(item => item.value)
     },
-    setAllOptions(mounted=false) {
+    setAllOptions() {
+      if (!this.enableSelectAll) return
       let items = [...this.items];
-      if(mounted) {
-        items = [...this.value]
-      }
-      if (this.multiple && this.enable_select_all) {
-        this.allOptionsSelected = this.selectedItems.length === this.getItems(items).length && this.enable_select_all;
+      if (this.multiple && this.enableSelectAll) {
+        this.allOptionsSelected = this.selectedItems.length === this.getItems(items).length;
         this.allSelected = this.allOptionsSelected;
       }
     },
