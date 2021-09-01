@@ -3,7 +3,7 @@
     <!-- Label -->
     <div class="n-input-label-container">
       <label class="n-input-label" v-if="label" :for="id">
-        {{ label }} {{ required ? ' *' : '' }}
+        {{ label }} <span  :style="{color: `${requiredStarColor}`}" >{{ required ? ' *' : '' }}</span>
         <span class="nitrozen-tooltip-icon" v-if="showTooltip">
           <nitrozen-tooltip
             :tooltipText="tooltipText"
@@ -146,6 +146,10 @@ export default {
     required: {
       type: Boolean,
       default: false,
+    },
+    requiredStarColor:{
+      type: String,
+      default: '#9b9b9b',
     },
     value: {
       type: [Number, String],
