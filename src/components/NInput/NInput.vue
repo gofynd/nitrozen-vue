@@ -45,6 +45,7 @@
           'nitrozen-remove-left-border': showPrefix,
           'nitrozen-remove-right-border': showSuffix,
         }"
+        v-on:keydown="eventEmit($event, 'keydown')"
         v-on:keyup="eventEmit($event, 'keyup')"
         v-on:change="eventEmit($event, 'change')"
         v-on:blur="eventEmit($event, 'blur')"
@@ -68,6 +69,7 @@
       <!-- Textarea -->
       <textarea
         v-if="type == 'textarea'"
+        v-on:keydown="eventEmit($event, 'keydown')"
         v-on:keyup="eventEmit($event, 'keyup')"
         v-on:change="eventEmit($event, 'change')"
         v-on:blur="eventEmit($event, 'blur')"
