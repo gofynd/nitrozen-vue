@@ -32,7 +32,12 @@
       </div>
 
       <div class="main-div space-between">
-        <nitrozen-menu position="top" :inverted="true" :mode="'vertical'" style="background: black;">
+        <nitrozen-menu
+          position="top"
+          :inverted="true"
+          :mode="'vertical'"
+          style="background: black"
+        >
           <nitrozen-menu-item>Item 1</nitrozen-menu-item>
           <nitrozen-menu-item>Item 2</nitrozen-menu-item>
           <nitrozen-menu-item>Item 3</nitrozen-menu-item>
@@ -50,7 +55,10 @@
       <div class="main-div space-between">
         <div>
           This is text tooltip
-          <nitrozen-tooltip icon="help" tooltipText="Text tooltip"></nitrozen-tooltip>
+          <nitrozen-tooltip
+            icon="help"
+            tooltipText="Text tooltip"
+          ></nitrozen-tooltip>
         </div>
         <div>
           This is custom html content tooltip
@@ -161,12 +169,10 @@
         <nitrozen-button v-flat-btn :theme="'secondary'"
           >Primary Small Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :theme="'secondary'"
-        size="medium"
+        <nitrozen-button v-flat-btn :theme="'secondary'" size="medium"
           >Primary Medium Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :theme="'secondary'"
-        size="large"
+        <nitrozen-button v-flat-btn :theme="'secondary'" size="large"
           >Primary Large Flat</nitrozen-button
         >
         <div class="hover-new">
@@ -391,9 +397,7 @@
         <nitrozen-input
           :id="7"
           :showTooltip="true"
-          :tooltipText="
-            'Tooltip text Tooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip text'
-          "
+          :tooltipText="'Tooltip text Tooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip text'"
           :type="'text'"
           :placeholder="'Enter Name'"
           :label="'Search Icon Input'"
@@ -725,6 +729,14 @@
           :pageSizeOptions="[5, 10, 20, 50]"
         ></nitrozen-pagination>
       </div>
+      <div class="main-div space-between">
+        <nitrozen-pagination
+          name="Pages"
+          v-model="paginationConfigNoRowSelection"
+          @change="paginationChange"
+          :showRowSelection="false"
+        ></nitrozen-pagination>
+      </div>
 
       <div class="main-div space-between">
         <nitrozen-button v-flat-btn @click="openDialog('alert')"
@@ -789,7 +801,7 @@
             v-model="radioModel"
             @change="changeEvent"
             :radioValue="'4'"
-            style="height:400px"
+            style="height: 400px"
             >Basic Radio 4</nitrozen-radio
           >
           <nitrozen-radio
@@ -812,7 +824,7 @@ export default {
   data() {
     return {
       tabArray: ["Item1", "Item2", "Item3"],
-      multiSelect: [11,12,13,14,15,21,22,23,24,25],
+      multiSelect: [11, 12, 13, 14, 15, 21, 22, 23, 24, 25],
       numberOfClick: 0,
       abcd: true,
       singleCheckboxModel: true,
@@ -825,20 +837,17 @@ export default {
         {
           text: "Maharashtra",
           value: 1,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+          logo: "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
         },
         {
           text: "Andhra Pradesh",
           value: 2,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+          logo: "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
         },
         {
           text: "West Bengal",
           value: 3,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+          logo: "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
         },
       ],
       dropdownItemsGroup: [
@@ -849,20 +858,17 @@ export default {
         {
           text: "Sindhudurg",
           value: 11,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/apple-7f951c/logo_apple.png",
+          logo: "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/apple-7f951c/logo_apple.png",
         },
         {
           text: "Ratnagiri",
           value: 12,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/lyf-4a1902/logo_LYF.png",
+          logo: "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/lyf-4a1902/logo_LYF.png",
         },
         {
           text: "Raigad",
           value: 13,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+          logo: "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
         },
         {
           text: "Thane",
@@ -949,6 +955,11 @@ export default {
         current: 1,
         total: 45,
       },
+      paginationConfigNoRowSelection: {
+        limit: 10,
+        current: 1,
+        total: 45,
+      },
       cursorPaginationConfig: {
         limit: 10,
         total: 45,
@@ -1021,7 +1032,7 @@ export default {
     removeFruit(index) {
       this.fruits.splice(index, 1);
     },
-    setSelectItems: function(item) {
+    setSelectItems: function (item) {
       let index = this.selectedItems.indexOf(item);
       if (index == -1) {
         this.selectedItems.push(item);
@@ -1029,7 +1040,7 @@ export default {
         this.selectedItems.splice(index, 1);
       }
     },
-    changeEvent: function(event) {
+    changeEvent: function (event) {
       console.log(event, "event");
     },
     openDialog(type) {
