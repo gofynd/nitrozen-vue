@@ -14,13 +14,14 @@ export default {
   },
   props: {
     steps: Array,
-    hintType: String
+    hintType: String,
+    dontShowAgain: {
+      type:Boolean,
+      default:false
+    },
   },
   methods: {
     initializeSortHints() {
-      console.log("hhhhh")
-      const hadTour = localStorage.getItem("hadTour");
-      if (!hadTour) {
         this.stepOptions = {
           showStepNumbers: false,
           showProgress: true,
@@ -29,29 +30,17 @@ export default {
           prevLabel: "Previous",
           skipLabel: "X",
           exitOnOverlayClick: false,
+          dontShowAgain: this.dontShowAgain,
           disableInteraction: true,
           buttonClass: "custom-button",
           scrollToElement: false,
-          nextToDone: false,
+          nextToDone: true,
           steps: this.steps,
         };
         this.intro.setOptions(this.stepOptions);
-        this.intro.oncomplete(()=>{
-          if(this.isFinalHint()){
-            this.$emit("isFinalHint");
-          }
-        }).start();
+        this.intro.start();
       }
     },
-    isFinalHint(){
-      let hints = this.steps
-      console.log({hints})
-        if(hints.at(-1).finalHint){
-          return true;
-        }
-      
-    }
-  },
   beforeDestroy() {
     this.intro.exit(true);
   },
