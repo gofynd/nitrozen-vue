@@ -4,7 +4,7 @@
 import introJS from "intro.js";
 
 export default {
-  name: "nitrozen-hints",
+  name: "nitrozen-hint",
   data() {
     return { intro: {} };
   },
