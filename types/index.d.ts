@@ -23,6 +23,7 @@ declare module '@gofynd/nitrozen-vue' {
     const NitrozenToggleBtn: VueConstructor
     const NitrozenTooltip: VueConstructor
     const NitrozenCustomForm: VueConstructor
+    const N
 
     // Directives
     const strokeBtn: DirectiveOptions
