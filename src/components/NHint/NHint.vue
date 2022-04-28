@@ -1,4 +1,6 @@
-<template><div>afsdfsfds</div></template>
+<template>
+  
+</template>
 
 <script>
 import introJS from "intro.js";

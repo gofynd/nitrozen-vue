@@ -2,7 +2,7 @@
   <div id="app">
     <div class="main-div">
       <div class="main-div space-between">
-        <div>Searchable Dropdown</div>
+        <div id="search">Searchable Dropdown</div>
         <nitrozen-dropdown
           label="Data"
           :disabled="false"
@@ -15,7 +15,7 @@
         ></nitrozen-dropdown>
       </div>
       <div>
-  <nitrozen-hint :steps="steps"></nitrozen-hint>
+  <nitrozen-hint :steps="steps" :dontShowAgain="true" ></nitrozen-hint>
 </div>
       <div class="main-div space-between">
         <div>Custom Dropdown</div>
@@ -425,7 +425,7 @@
         ></nitrozen-input>
       </div>
 
-      <div class="main-div space-between">
+      <div class="main-div space-between" id="here">
         <nitrozen-input
           :id="9"
           :type="'text'"
@@ -825,8 +825,12 @@ export default {
       radioModel: "1",
       steps:[
         {
-          intro:"hint here",
-          
+          intro:"<h5>2. Enter the Ajio Location ID in the input field</h5><br><br><p>You can get Location Code from your Ajio seller account</p>",
+          element:"#search"
+        },
+        {
+          intro:"<h5>1. fsd dsfds sd sd d fsd fs s</h5><br><p>sdds fds fdsf sd fsd fds fds f</p>",
+          element:"#here"
         }
       ],
       dropdownItems: [

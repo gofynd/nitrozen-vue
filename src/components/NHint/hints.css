@@ -254,8 +254,8 @@ tr.introjs-showElement>th {
     visibility: visible;
     padding: 10px;
     background-color: white;
-    min-width: 383px !important;
-    min-height: 156px !important;
+    min-width: 283px !important;
+    min-height: 140px !important;
     border-radius: 3px;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
     -webkit-transition: opacity 0.1s ease-out;
@@ -268,15 +268,27 @@ tr.introjs-showElement>th {
 .introjs-tooltipbuttons {
     text-align: right;
     white-space: nowrap;
+    display: flex;
+    float: right;
+    margin-top: 10px;
+    flex-flow: row;
+
 }
 
+br {
+    display: block;
+    margin: 30px 0px;
+}
 
 .introjs-tooltiptext>h5 {
+
     font-weight: 600;
     font-size: 15px;
     font-family: 'Inter', sans-serif;
     color: #41434c;
     margin: 0px;
+    margin-top: -10px;
+    float: left;
 }
 
 .introjs-tooltiptext>p {
@@ -285,9 +297,7 @@ tr.introjs-showElement>th {
     font-weight: normal;
     font-size: 12px;
     margin-top: -5px;
-    padding-bottom: 20px;
-    margin-bottom: 25px;
-    line-height: 21px;
+
 }
 
 .introjs-tooltiptext>p>span {
@@ -354,6 +364,8 @@ tr.introjs-showElement>th {
 }
 
 .introjs-donebutton {
+    order: 2;
+    margin-left: 10px;
     padding: 12px 30px !important;
     border-radius: 3px !important;
     color: #fff !important;
@@ -375,9 +387,7 @@ tr.introjs-showElement>th {
     -webkit-box-sizing: border-box !important;
     box-sizing: border-box !important;
     letter-spacing: 0.5px !important;
-    position: absolute !important;
-    top: 71.2% !important;
-    left: 73% !important;
+    float: right;
 
     /* height: 39px;
     cursor: pointer;
@@ -400,9 +410,11 @@ tr.introjs-showElement>th {
 }
 
 .introjs-prevbutton {
+    order: 1;
+    margin-left: 10px;
     border: 1px solid #2e31be !important;
     color: #2e31be !important;
-    padding: 12px 30px !important;
+    padding: 12px 22px !important;
     border-radius: 3px !important;
     background: #fff !important;
     height: 39px !important;
@@ -421,17 +433,16 @@ tr.introjs-showElement>th {
     -webkit-box-sizing: border-box !important;
     box-sizing: border-box !important;
     letter-spacing: .5px !important;
-    position: absolute !important;
-    bottom: 12px !important;
-    right: 130px !important;
-
-
+    float: right;
+    width: 100px;
 }
 
 .introjs-prevbutton.introjs-fullbutton {}
 
 .introjs-nextbutton {
     /* width: 101px; */
+    order: 2;
+    margin-left: 10px;
     padding: 12px 30px !important;
     border-radius: 3px !important;
     color: #fff !important;
@@ -453,10 +464,8 @@ tr.introjs-showElement>th {
     -webkit-box-sizing: border-box !important;
     box-sizing: border-box !important;
     letter-spacing: 0.5px !important;
-    position: absolute !important;
-    bottom: 12px !important;
-    right: 12px !important;
 
+    float: right;
     -webkit-border-radius: 0 0.2em 0.2em 0;
     -moz-border-radius: 0 0.2em 0.2em 0;
     border-radius: 4px;
@@ -468,6 +477,19 @@ tr.introjs-showElement>th {
     -webkit-border-radius: 0.2em;
     -moz-border-radius: 0.2em;
     border-radius: 0.2em;
+}
+
+.introjs-dontShowAgain {
+    /* position: absolute;
+    left: 14px; */
+    bottom: -17px;
+    position: relative;
+    font-size: 13px;
+    float: left
+}
+
+input#introjs-dontShowAgain {
+    height: 11px;
 }
 
 .introjs-disabled,
