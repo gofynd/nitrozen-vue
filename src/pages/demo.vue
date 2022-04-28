@@ -14,7 +14,9 @@
           @searchInputChange="dropdownInputChange"
         ></nitrozen-dropdown>
       </div>
-
+      <div>
+  <nitrozen-hint :steps="steps"></nitrozen-hint>
+</div>
       <div class="main-div space-between">
         <div>Custom Dropdown</div>
         <nitrozen-dropdown
@@ -821,6 +823,12 @@ export default {
       autoModel: "",
       checkArray: ["Check 1"],
       radioModel: "1",
+      steps:[
+        {
+          intro:"hint here",
+          
+        }
+      ],
       dropdownItems: [
         {
           text: "Maharashtra",

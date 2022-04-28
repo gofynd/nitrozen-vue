@@ -1,3 +1,3 @@
-import NHint from "./NHint";
-export {NHint}
+import NHint from "./NHint.vue";
+
 export default NHint;
