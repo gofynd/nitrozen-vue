@@ -12,7 +12,9 @@ export default {
   },
   mounted() {
     this.intro = introJS();
-    this.initializeSortHints();
+    if(this.isHintActive){
+      this.initializeSortHints();
+    }
   },
   props: {
     steps: {
@@ -71,6 +73,10 @@ export default {
       type:Boolean,
       default:true,
     },
+    isHintActive:{
+      type:Boolean,
+      default:true,
+    }
   },
   methods: {
     initializeSortHints() {
