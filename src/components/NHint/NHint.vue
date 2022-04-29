@@ -69,7 +69,7 @@ export default {
     },
     nextToDone:{
       type:Boolean,
-      default:false,
+      default:true,
     },
   },
   methods: {
