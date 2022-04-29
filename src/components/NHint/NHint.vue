@@ -15,33 +15,90 @@ export default {
     this.initializeSortHints();
   },
   props: {
-    steps: Array,
-    hintType: String,
+    steps: {
+      type:Array,
+      default:[],
+    },
+    hintType: {
+      type:String,
+      default:"introJs-hint",
+    },
     dontShowAgain: {
       type:Boolean,
       default:false
+    },
+    doneToNext: {
+      type:Boolean,
+      default:false,
+    },
+    showStepNumbers:{
+      type:Boolean,
+      default:false,
+    },
+    showProgress:{
+      type:Boolean,
+      default:true,
+    },
+    showBullets:{
+      type:Boolean,
+      default:false,
+    },
+    disableInteraction:{
+      type:Boolean,
+      default:false,
+    },
+    exitOnOverlayClick:{
+      type:Boolean,
+      default:false,
+    },
+    scrollToElement:{
+      type:Boolean,
+      default:false,
+    },
+    nextLabel:{
+      type: String,
+      default:"Next",
+    },
+    prevLabel:{
+      type:String,
+      default:"Previous",
+    },
+    skipLabel:{
+      type:String,
+      default:"x",
+    },
+    nextToDone:{
+      type:Boolean,
+      default:false,
     },
   },
   methods: {
     initializeSortHints() {
         this.stepOptions = {
-          showStepNumbers: false,
-          showProgress: true,
-          showBullets: false,
-          nextLabel: "Next",
-          prevLabel: "Previous",
-          skipLabel: "X",
-          exitOnOverlayClick: false,
+          showStepNumbers: this.showStepNumbers,
+          showProgress: this.showProgress,
+          showBullets: this.showBullets,
+          nextLabel: this.nextLabel,
+          prevLabel: this.prevLabel,
+          skipLabel: this.skipLabel,
+          doneLabel: this.doneToNext? "Next":"Done",
+          exitOnOverlayClick: this.exitOnOverlayClick,
           dontShowAgain: this.dontShowAgain,
-          disableInteraction: true,
+          disableInteraction: this.disableInteraction,
           buttonClass: "custom-button",
-          scrollToElement: false,
-          nextToDone: true,
+          scrollToElement: this.scrollToElement,
+          nextToDone: this.nextToDone,
           steps: this.steps,
         };
         this.intro.setOptions(this.stepOptions);
-        this.intro.start();
-      }
+        this.intro.oncomplete(()=>{this.dontShowAginCheckbox();}).start();
+      },
+      dontShowAginCheckbox(){
+        let value = document.querySelector('input#introjs-dontShowAgain').checked;
+if(value){
+  localStorage.setItem(this.hintType, "shown")
+}      },
+
     },
   beforeDestroy() {
     this.intro.exit(true);

@@ -15,7 +15,7 @@
         ></nitrozen-dropdown>
       </div>
       <div>
-  <nitrozen-hint :steps="steps" :dontShowAgain="true" ></nitrozen-hint>
+  <nitrozen-hint :steps="steps" :dontShowAgain="true" :continueToNextScreen="true" hintType="location" ></nitrozen-hint>
 </div>
       <div class="main-div space-between">
         <div>Custom Dropdown</div>
@@ -826,11 +826,14 @@ export default {
       steps:[
         {
           intro:"<h5>2. Enter the Ajio Location ID in the input field</h5><br><br><p>You can get Location Code from your Ajio seller account</p>",
-          element:"#search"
+          element:"#search",
+          
         },
         {
           intro:"<h5>1. fsd dsfds sd sd d fsd fs s</h5><br><p>sdds fds fdsf sd fsd fds fds f</p>",
-          element:"#here"
+          element:"#here",
+          nextLabel:"next",
+          doneLabel:"next",
         }
       ],
       dropdownItems: [
