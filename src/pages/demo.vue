@@ -15,7 +15,7 @@
         ></nitrozen-dropdown>
       </div>
       <div>
-  <nitrozen-hint :steps="steps" :dontShowAgain="true" :continueToNextScreen="true" hintType="location" ></nitrozen-hint>
+  <nitrozen-hint :steps="steps" :dontShowAgain="false" :continueToNextScreen="true" hintType="location" ></nitrozen-hint>
 </div>
       <div class="main-div space-between">
         <div>Custom Dropdown</div>

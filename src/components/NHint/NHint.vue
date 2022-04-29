@@ -69,7 +69,7 @@ export default {
     },
     nextToDone:{
       type:Boolean,
-      default:false,
+      default:true,
     },
   },
   methods: {
@@ -94,10 +94,15 @@ export default {
         this.intro.oncomplete(()=>{this.dontShowAginCheckbox();}).start();
       },
       dontShowAginCheckbox(){
-        let value = document.querySelector('input#introjs-dontShowAgain').checked;
-if(value){
-  localStorage.setItem(this.hintType, "shown")
-}      },
+        if(document.querySelector('input#introjs-dontShowAgain'))
+        {
+          let value = document.querySelector('input#introjs-dontShowAgain').checked;
+          if(value)
+          {
+          localStorage.setItem(this.hintType, "shown")
+          }   
+        }  
+      },
 
     },
   beforeDestroy() {
