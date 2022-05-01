@@ -16,7 +16,7 @@
     box-sizing: content-box;
     /* z-index: 999999; */
     z-index: 0 !important;
-    background-color: rgb(230, 230, 230);
+    background-color: rgba(0, 0, 0, 0.2);
     opacity: 0;
     background: -moz-radial-gradient(center,
             ellipse farthest-corner,
