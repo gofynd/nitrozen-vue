@@ -97,7 +97,11 @@ export default {
           steps: this.steps,
         };
         this.intro.setOptions(this.stepOptions);
-        this.intro.oncomplete(()=>{this.dontShowAginCheckbox();}).start();
+        this.intro.onexit(()=>{this.makeHintInactive();})
+        this.intro.oncomplete(()=>{
+          this.dontShowAginCheckbox();
+          this.makeHintInactive();
+        }).start();
       },
       dontShowAginCheckbox(){
         if(document.querySelector('input#introjs-dontShowAgain'))
@@ -110,7 +114,9 @@ export default {
           document.cookie = "introjs-dontShowAgain" + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';  
         }  
       },
-
+      makeHintInactive(){
+        this.$emit("hintInactive");
+      }
     },
   beforeDestroy() {
     this.intro.exit(true);
