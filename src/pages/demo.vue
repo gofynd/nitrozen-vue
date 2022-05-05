@@ -825,12 +825,11 @@ export default {
       radioModel: "1",
       steps:[
         {
-          intro:"<h5>2. Enter the Ajio Location ID in the input field</h5><br><br><p>You can get Location Code from your Ajio seller account</p>",
-          element:"#search",
-          
+          intro:"<h5>1. Enter the Ajio Location ID </h5><br><p>You  Code from yo seller account</p>",
+          element:"#auto",
         },
         {
-          intro:"<h5>1. fsd dsfds sd sd d fsd fs s</h5><br><p>sdds fds fdsf sd fsd fds fds f</p>",
+          intro:"<h5>2. fsd dsfds sd sd d fsd fs s</h5><br><p>sdds fds fdsf sd fsd fds fds f</p>",
           element:"#here",
           nextLabel:"next",
           doneLabel:"next",
