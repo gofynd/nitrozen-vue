@@ -112,6 +112,7 @@ export default {
           localStorage.setItem(this.hintType, "shown")
           }
           document.cookie = "introjs-dontShowAgain" + '=; Path=/;expires=Thu, 01 Jan 1970 00:00:01 GMT;';  
+          console.log("dont show again", document.cookie);
         }  
       },
       makeHintInactive(){
