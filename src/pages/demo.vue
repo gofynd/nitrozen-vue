@@ -2,7 +2,17 @@
   <div id="app">
     <div class="main-div">
       <div class="main-div space-between">
+        <nitrozen-hint 
+          v-if="isHintActive"
+          :steps="steps" 
+          :dontShowAgain="true" 
+          :continueToNextScreen="true" 
+          hintType="location" 
+          @hintInactive="setHintInactive"> 
+        </nitrozen-hint>
+       
         <div id="search">Searchable Dropdown</div>
+        
         <nitrozen-dropdown
           label="Data"
           :disabled="false"
@@ -15,8 +25,8 @@
         ></nitrozen-dropdown>
       </div>
       <div>
-  <nitrozen-hint :steps="steps" :dontShowAgain="true" :continueToNextScreen="true" hintType="location" ></nitrozen-hint>
-</div>
+
+      </div>
       <div class="main-div space-between">
         <div>Custom Dropdown</div>
         <nitrozen-dropdown
@@ -424,7 +434,11 @@
           v-bind:maxlength="15"
         ></nitrozen-input>
       </div>
-
+      <div>
+          <nitrozen-button v-flat-btn @click="toggleHint"
+          >ToggleHint</nitrozen-button
+        >
+        </div>
       <div class="main-div space-between" id="here">
         <nitrozen-input
           :id="9"
@@ -821,6 +835,7 @@ export default {
       inputModel: "Some Value",
       numberModel: 1,
       autoModel: "",
+      isHintActive: false,
       checkArray: ["Check 1"],
       radioModel: "1",
       steps:[
@@ -989,6 +1004,10 @@ export default {
   },
   mounted() {
     this.dropdownItemsFiltered = this.dropdownItemsGroup;
+    let hintShown = localStorage.getItem("location");
+    if(!hintShown){
+      this.isHintActive= true;
+    }
     // setTimeout(() => {
     //   this.autofocusSearch = true;
     // }, 5000);
@@ -1003,10 +1022,19 @@ export default {
       }
       this.stepper = Object.assign({}, this.stepper, { activeIndex: next });
     },
+    toggleHint(){
+      if(!this.isHintActive){
+        localStorage.removeItem("location")
+      }
+      this.isHintActive =!this.isHintActive
+    },
     stepperClicked(event) {
       this.stepper = Object.assign({}, this.stepper, {
         activeIndex: event.nextIndex,
       });
+    },
+    setHintInactive(){
+      this.isHintActive = false;
     },
     someFunc() {
       this.numberOfClick += 1;

@@ -125,6 +125,6 @@ export default {
 };
 </script>
 <style scoped>
-@import "./hints.css";
+@import "./hints.less";
 
 </style>
