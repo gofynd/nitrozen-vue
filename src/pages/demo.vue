@@ -2,7 +2,17 @@
   <div id="app">
     <div class="main-div">
       <div class="main-div space-between">
-        <div>Searchable Dropdown</div>
+        <nitrozen-hint 
+          v-if="isHintActive"
+          :steps="steps" 
+          :dontShowAgain="true" 
+          :continueToNextScreen="true" 
+          hintType="location" 
+          @hintInactive="setHintInactive"> 
+        </nitrozen-hint>
+       
+        <div id="search">Searchable Dropdown</div>
+        
         <nitrozen-dropdown
           label="Data"
           :disabled="false"
@@ -14,7 +24,9 @@
           @searchInputChange="dropdownInputChange"
         ></nitrozen-dropdown>
       </div>
+      <div>
 
+      </div>
       <div class="main-div space-between">
         <div>Custom Dropdown</div>
         <nitrozen-dropdown
@@ -422,8 +434,12 @@
           v-bind:maxlength="15"
         ></nitrozen-input>
       </div>
-
-      <div class="main-div space-between">
+      <div>
+          <nitrozen-button v-flat-btn @click="toggleHint"
+          >ToggleHint</nitrozen-button
+        >
+        </div>
+      <div class="main-div space-between" id="here">
         <nitrozen-input
           :id="9"
           :type="'text'"
@@ -819,8 +835,21 @@ export default {
       inputModel: "Some Value",
       numberModel: 1,
       autoModel: "",
+      isHintActive: false,
       checkArray: ["Check 1"],
       radioModel: "1",
+      steps:[
+        {
+          intro:"<h5>1. Enter the Ajio Location ID </h5><br><p>You  Code from yo seller account</p>",
+          element:"#auto",
+        },
+        {
+          intro:"<h5>2. fsd dsfds sd sd d fsd fs s</h5><br><p>sdds fds fdsf sd fsd fds fds f</p>",
+          element:"#here",
+          nextLabel:"next",
+          doneLabel:"next",
+        }
+      ],
       dropdownItems: [
         {
           text: "Maharashtra",
@@ -975,6 +1004,10 @@ export default {
   },
   mounted() {
     this.dropdownItemsFiltered = this.dropdownItemsGroup;
+    let hintShown = localStorage.getItem("location");
+    if(!hintShown){
+      this.isHintActive= true;
+    }
     // setTimeout(() => {
     //   this.autofocusSearch = true;
     // }, 5000);
@@ -989,10 +1022,19 @@ export default {
       }
       this.stepper = Object.assign({}, this.stepper, { activeIndex: next });
     },
+    toggleHint(){
+      if(!this.isHintActive){
+        localStorage.removeItem("location")
+      }
+      this.isHintActive =!this.isHintActive
+    },
     stepperClicked(event) {
       this.stepper = Object.assign({}, this.stepper, {
         activeIndex: event.nextIndex,
       });
+    },
+    setHintInactive(){
+      this.isHintActive = false;
     },
     someFunc() {
       this.numberOfClick += 1;
