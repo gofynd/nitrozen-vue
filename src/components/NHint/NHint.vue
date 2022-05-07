@@ -4,7 +4,7 @@
 
 <script>
 import introJS from "intro.js";
-
+import pick from "lodash/pick";
 export default {
   name: "nitrozen-hint",
   data() {
@@ -80,30 +80,30 @@ export default {
   },
   methods: {
     initializeSortHints() {
-        this.stepOptions = {
-          showStepNumbers: this.showStepNumbers,
-          showProgress: this.showProgress,
-          showBullets: this.showBullets,
-          nextLabel: this.nextLabel,
-          prevLabel: this.prevLabel,
-          skipLabel: this.skipLabel,
-          doneLabel: this.doneToNext? "Next":"Done",
-          exitOnOverlayClick: this.exitOnOverlayClick,
-          dontShowAgain: this.dontShowAgain,
-          disableInteraction: this.disableInteraction,
-          buttonClass: "custom-button",
-          scrollToElement: this.scrollToElement,
-          nextToDone: this.nextToDone,
-          steps: this.steps,
-        };
-        this.intro.setOptions(this.stepOptions);
-        this.intro.onexit(()=>{this.makeHintInactive();})
+        let stepOptions = pick(this.$props,
+        [
+        "showStepNumbers",
+        "showProgress",
+        "showBullets",
+        "nextLabel",
+        "prevLabel",
+        "exitOnOverlayClick",
+        "dontShowAgain",
+        "disableInteraction",
+        "nextToDone",
+        "scrollToElement",
+        "steps"
+        ]);
+        stepOptions["doneLabel"] = this.doneToNext? "Next":"Done";
+        stepOptions["buttonClass"] = "custom-button";
+        this.intro.setOptions(stepOptions);
+        this.intro.onexit(()=>{this.inactiveHint();})
         this.intro.oncomplete(()=>{
-          this.dontShowAginCheckbox();
-          this.makeHintInactive();
+          this.hideCheckbox();
+          this.inactiveHint();
         }).start();
       },
-      dontShowAginCheckbox(){
+      hideCheckbox(){
         if(document.querySelector('input#introjs-dontShowAgain'))
         {
           let value = document.querySelector('input#introjs-dontShowAgain').checked;
@@ -115,7 +115,7 @@ export default {
           console.log("dont show again", document.cookie);
         }  
       },
-      makeHintInactive(){
+      inactiveHint(){
         this.$emit("hintInactive");
       }
     },
