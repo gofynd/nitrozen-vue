@@ -1,6 +1,9 @@
 <template>
   <div>
-    <label class="nitrozen-checkbox-container" :class="{'nitrozen-checkbox-container-disabled': disabled}">
+    <label
+      class="nitrozen-checkbox-container"
+      :class="{ 'nitrozen-checkbox-container-disabled': disabled }"
+    >
       <slot />
       <input
         :id="id"
@@ -9,6 +12,7 @@
         :value="checkboxValue || value"
         :checked="isSelected"
         :disabled="disabled"
+        v-indeterminate="indeterminateValue"
       />
       <span :for="id" class="nitrozen-checkbox"></span>
     </label>
@@ -21,22 +25,36 @@ export default {
   props: {
     value: {
       type: [Array, Boolean],
-      default: false
+      default: false,
     },
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     checkboxValue: {
       type: [Number, Array, Object, Boolean, String],
-      default: true
+      default: true,
     },
     id: {
       type: [Number, String],
-      default: () => "nitrozen-checkbox" + NitrozenUuid()
-    }
+      default: () => "nitrozen-checkbox" + NitrozenUuid(),
+    },
+    indeterminateValue: {
+      type: Boolean,
+      default: false,
+    },
   },
   event: "change",
+  watch: {
+    indeterminateValue() {
+      if (this.indeterminateValue) {
+        this.$forceUpdate();
+      }
+    },
+    value() {
+      console.log(this.value, "value");
+    },
+  },
   computed: {
     isSelected() {
       if (Array.isArray(this.value)) {
@@ -45,10 +63,10 @@ export default {
       return this.checkboxValue
         ? this.checkboxValue === this.value
         : this.value;
-    }
+    },
   },
   methods: {
-    toggle: function(event) {
+    toggle: function (event) {
       let checkboxModel = this.value;
       if (Array.isArray(this.value)) {
         checkboxModel = [...this.value];
@@ -65,11 +83,11 @@ export default {
         this.$emit("input", event.target.checked);
       }
     },
-    toggleAll: function(items) {
-		    this.$emit("input", items);
-        this.$emit("change", items);
-    }
-  }
+    toggleAll: function (items) {
+      this.$emit("input", items);
+      this.$emit("change", items);
+    },
+  },
 };
 </script>
 <style lang="less">

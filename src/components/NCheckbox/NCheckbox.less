@@ -1,4 +1,4 @@
-@import "./../../base/base.less";
+@import './../../base/base.less';
 /* The nitrozen-checkbox-container */
 .nitrozen-checkbox-container {
   position: relative;
@@ -46,7 +46,7 @@
 }
 /* Create the nitrozen-checkbox/indicator (hidden when not checked) */
 .nitrozen-checkbox:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
@@ -68,16 +68,16 @@
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-input[type="checkbox"]:disabled + .nitrozen-checkbox {
+input[type='checkbox']:disabled + .nitrozen-checkbox {
   opacity: 0.5;
   pointer-events: none;
   background: @DisabledColor;
   border: 1px solid @DisabledColor;
-  &::after{
+  &::after {
     border: 1px solid @TypographyPrimaryColor;
     border-width: 0 2px 2px 0;
   }
 }
-.nitrozen-checkbox-container-disabled{
+.nitrozen-checkbox-container-disabled {
   color: #9e9e9e;
 }
