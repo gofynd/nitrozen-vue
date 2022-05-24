@@ -840,11 +840,13 @@ export default {
       radioModel: "1",
       steps:[
         {
-          intro:"<h5>1. Enter the Ajio Location ID </h5><br><p>You  Code from yo seller account</p>",
+          title:"1. Enter the Ajio Location ID ",
+          intro:"You  Code from yo seller account",
           element:"#auto",
         },
         {
-          intro:"<h5>2. fsd dsfds sd sd d fsd fs s</h5><br><p>sdds fds fdsf sd fsd fds fds f</p>",
+          title:"2. fsd dsfds sd sd d fsd fs ",
+          intro:"sdds fds fdsf sd fsd fds fds f",
           element:"#here",
           nextLabel:"next",
           doneLabel:"next",
