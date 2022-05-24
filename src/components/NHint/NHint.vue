@@ -27,7 +27,7 @@ export default {
     },
     dontShowAgain: {
       type:Boolean,
-      default:false
+      default:true,
     },
     doneToNext: {
       type:Boolean,
@@ -102,6 +102,7 @@ export default {
           this.hideCheckbox();
           this.inactiveHint();
         }).start();
+        console.log("disableInteraction ", this.disableInteraction)
       },
       hideCheckbox(){
         if(document.querySelector('input#introjs-dontShowAgain'))
