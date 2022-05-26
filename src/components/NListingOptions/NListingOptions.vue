@@ -1,4 +1,5 @@
 <template>
+  <!-- test -->
   <div class="nitrozen-dropdown-container">
     <label v-if="label" class="nitrozen-dropdown-label">
       {{ label }} {{ required ? " *" : "" }}
@@ -569,7 +570,6 @@ export default {
 };
 </script>
 <style lang="less">
-@import "./NListing.less";
 .nitrozen-searchable-input-container {
   width: 100%;
   input {
@@ -587,11 +587,5 @@ export default {
   width: 100%;
   background-color: lightgrey;
   margin: 5px 0;
-}
-
-::v-deep .nitrozen-checkbox-container .nitrozen-checkbox {
-  position: absolute;
-  /* display: flex; */
-  top: -9px;
 }
 </style>
