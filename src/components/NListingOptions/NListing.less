@@ -162,9 +162,8 @@
   // Arrow
 
   .nitrozen-dropdown-arrow {
-    right: 14px;
-    position: absolute;
-    /* top: -4px; */
+    position: relative;
+    top: -4px;
     height: 15px;
     width: 15px;
     color: @SecondaryColor;
@@ -176,13 +175,10 @@
     height: 100%;
   }
   .nitrozen-dropdown-open .nitrozen-dropdown-arrow {
-    right: 14px;
-    position: absolute;
-    /* top: -4px; */
-    height: 15px;
-    width: 15px;
-    color: @SecondaryColor;
+    left: 9px;
+    right: 0px;
     transform: rotate(180deg);
+    top: 3px;
   }
 }
 
