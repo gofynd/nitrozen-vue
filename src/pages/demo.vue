@@ -367,8 +367,6 @@
         ></nitrozen-input>
       </div>
 
-     
-
       <div class="main-div">
         <nitrozen-input
           :id="5"
@@ -554,14 +552,12 @@
         <nitrozen-checkbox
           :checkboxValue="2"
           v-model="checkArray"
-          :value="dropdownStatus === 11"
           @change="testFunc($event)"
           >Check 2</nitrozen-checkbox
         >
         <nitrozen-checkbox
           v-model="checkArray"
           :checkboxValue="3"
-          :value="dropdownStatus === 12"
           @change="testFunc($event)"
           >Check 3</nitrozen-checkbox
         >
