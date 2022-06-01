@@ -18,7 +18,7 @@
           'nitrozen-dropdown-open': showOptions,
         }"
       >
-        <div class="nitrozen-select__trigger">
+        <div class="nitrozen-select-checkbox">
           <span
             v-if="searchable && !disabled"
             class="nitrozen-searchable-input-container"

@@ -32,7 +32,7 @@
   .nitrozen-select:focus-within {
     border-color: @SecondaryColor;
   }
-  .nitrozen-select__trigger {
+  .nitrozen-select-checkbox {
     color: @TypographyPrimaryColor;
     border-radius: 3px;
     font-size: 14px;
@@ -40,7 +40,7 @@
     min-height: 22px;
     padding: 8px 14px;
     position: relative;
-    display: flex;
+    display: -webkit-inline-box;
     align-items: center;
     justify-content: space-between;
     background: #ffffff;
@@ -150,12 +150,12 @@
   .nitrozen-select.disabled {
     background-color: @BorderColor;
   }
-  .nitrozen-select.disabled .nitrozen-select__trigger {
+  .nitrozen-select.disabled .nitrozen-select-checkbox {
     color: @DisabledColor;
     background-color: @BorderColor;
     cursor: not-allowed;
   }
-  .nitrozen-select.disabled .nitrozen-select__trigger .nitrozen-dropdown-arrow {
+  .nitrozen-select.disabled .nitrozen-select-checkbox .nitrozen-dropdown-arrow {
     color: @DisabledColor;
   }
 
