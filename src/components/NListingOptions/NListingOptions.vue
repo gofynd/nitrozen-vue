@@ -32,7 +32,11 @@
             />
           </span>
 
-          <span v-else-if="defaultCheckbox" class="nitrozen-default-checkbox">
+          <span
+            v-else-if="defaultCheckbox"
+            class="nitrozen-default-checkbox"
+            @click="checkboxHandler"
+          >
             <nitrozen-checkbox
               :value="checboxSelected"
               :indeterminateValue="indeterminate"
@@ -277,6 +281,7 @@ export default {
   },
   data: () => {
     return {
+      checkboxStatus: false,
       selected: null,
       selectedItems: [],
       searchInput: "",
@@ -398,6 +403,10 @@ export default {
     }
   },
   methods: {
+    checkboxHandler() {
+      this.checkboxStatus = !this.checkboxStatus;
+      this.$emit("checkboxMethod", this.checkboxStatus);
+    },
     checkedItems() {
       if (this.itemsChecked === 0) {
         this.checboxSelected = false;
