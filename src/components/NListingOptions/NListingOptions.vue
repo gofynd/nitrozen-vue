@@ -306,7 +306,11 @@ export default {
     },
     selectedStatus() {
       console.log(this.selectedStatus, "this.selectedStatus");
-      this.$emit("checkDropdownStatus", this.selectedStatus);
+      this.$emit(
+        "checkDropdownStatus",
+        this.selectedStatus,
+        this.checkboxStatus
+      );
 
       // let checkStatusObj = this.dropdownOptions.filter(
       //   (item) => item.value === this.selectedStatus
@@ -410,7 +414,7 @@ export default {
     checkboxHandler() {
       this.checkboxStatus = !this.checkboxStatus;
       console.log(this.checkboxStatus, "this.checkboxStatus");
-      this.$emit("checkboxMethod", this.checkboxStatus);
+      // this.$emit("checkboxMethod", this.checkboxStatus);
     },
     checkedItems() {
       if (this.itemsChecked === 0) {
