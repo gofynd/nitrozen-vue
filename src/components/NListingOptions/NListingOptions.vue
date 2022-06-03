@@ -306,7 +306,8 @@ export default {
     },
     selectedStatus() {
       console.log(this.selectedStatus, "this.selectedStatus");
-      this.$emit("checkDropdownStatus", this.selectedStatus ,);
+      this.$emit("checkDropdownStatus", this.selectedStatus);
+
       // let checkStatusObj = this.dropdownOptions.filter(
       //   (item) => item.value === this.selectedStatus
       // );
@@ -316,11 +317,9 @@ export default {
       // if()
       // console.log(this.selectedStatus);
     },
-    checkboxStatus(){
-            this.$emit("checkboxMethod", this.checkboxStatus);
-
-
-    },
+    // checkboxStatus(){
+    //         this.$emit("checkboxMethod", this.checkboxStatus);
+    //         },
     value() {
       if (Array.isArray(this.value)) {
         this.selectedItems = [...this.value];
@@ -411,6 +410,7 @@ export default {
     checkboxHandler() {
       this.checkboxStatus = !this.checkboxStatus;
       console.log(this.checkboxStatus, "this.checkboxStatus");
+      this.$emit("checkboxMethod", this.checkboxStatus);
     },
     checkedItems() {
       if (this.itemsChecked === 0) {
