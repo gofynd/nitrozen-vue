@@ -308,8 +308,8 @@ export default {
       console.log(this.selectedStatus, "this.selectedStatus");
       this.$emit(
         "checkDropdownStatus",
-        this.selectedStatus,
-        this.checkboxStatus
+        this.selectedStatus
+       
       );
 
       // let checkStatusObj = this.dropdownOptions.filter(
