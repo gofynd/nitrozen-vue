@@ -414,7 +414,7 @@ export default {
     checkboxHandler() {
       this.checkboxStatus = !this.checkboxStatus;
       console.log(this.checkboxStatus, "this.checkboxStatus");
-      // this.$emit("checkboxMethod", this.checkboxStatus);
+      this.$emit("checkboxMethod", this.checkboxStatus);
     },
     checkedItems() {
       if (this.itemsChecked === 0) {

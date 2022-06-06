@@ -540,6 +540,7 @@
           :selectedStatus="selectedGroupDropdown"
           :dropdownOptions="dropdownItemsGroup"
           @checkDropdownStatus="setCheckboxStatus($event)"
+          @checkboxMethod="testingfunction($event)"
         ></nitrozen-listing-options>
       </div>
       <div class="main-div space-between">
@@ -995,6 +996,10 @@ export default {
   },
 
   methods: {
+    testingfunction(value) {
+      console.log("testing function");
+      console.log(value, "hhhhh");
+    },
     setCheckboxStatus(state) {
       this.checkArray.push(2);
 
