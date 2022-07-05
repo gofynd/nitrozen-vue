@@ -9,7 +9,7 @@
         :id="id"
         type="checkbox"
         @change="toggle"
-        :value="checkboxValue || value"
+        :value="checkboxValue"
         :checked="isSelected"
         :disabled="disabled"
         v-indeterminate="indeterminateValue"
@@ -19,9 +19,9 @@
   </div>
 </template>
 <script>
-import NitrozenUuid from "./../../utils/NUuid";
+import NitrozenUuid from './../../utils/NUuid';
 export default {
-  name: "nitrozen-checkbox",
+  name: 'nitrozen-checkbox',
   props: {
     value: {
       type: [Array, Boolean],
@@ -37,22 +37,24 @@ export default {
     },
     id: {
       type: [Number, String],
-      default: () => "nitrozen-checkbox" + NitrozenUuid(),
+      default: () => 'nitrozen-checkbox' + NitrozenUuid(),
     },
     indeterminateValue: {
       type: Boolean,
       default: false,
     },
   },
-  event: "change",
+  event: 'change',
   watch: {
     indeterminateValue() {
+      console.log(this.checkboxValue, 'indeterminateValue');
+      console.log(this.indeterminateValue, 'indeterminateValue');
       if (this.indeterminateValue) {
         this.$forceUpdate();
       }
     },
     value() {
-      console.log(this.value, "value");
+      console.log(this.value, 'value');
     },
   },
   computed: {
@@ -66,7 +68,7 @@ export default {
     },
   },
   methods: {
-    toggle: function (event) {
+    toggle: function(event) {
       let checkboxModel = this.value;
       if (Array.isArray(this.value)) {
         checkboxModel = [...this.value];
@@ -76,20 +78,20 @@ export default {
         } else {
           checkboxModel.splice(index, 1);
         }
-        this.$emit("input", checkboxModel);
-        this.$emit("change", checkboxModel);
+        this.$emit('input', checkboxModel);
+        this.$emit('change', checkboxModel);
       } else {
-        this.$emit("change", event); // TODO: need to look into this, why we need?
-        this.$emit("input", event.target.checked);
+        this.$emit('change', event); // TODO: need to look into this, why we need?
+        this.$emit('input', event.target.checked);
       }
     },
-    toggleAll: function (items) {
-      this.$emit("input", items);
-      this.$emit("change", items);
+    toggleAll: function(items) {
+      this.$emit('input', items);
+      this.$emit('change', items);
     },
   },
 };
 </script>
 <style lang="less">
-@import "./NCheckbox.less";
+@import './NCheckbox.less';
 </style>

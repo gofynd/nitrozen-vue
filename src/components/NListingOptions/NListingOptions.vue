@@ -1,7 +1,7 @@
 <template>
   <div class="nitrozen-dropdown-container">
     <label v-if="label" class="nitrozen-dropdown-label">
-      {{ label }} {{ required ? " *" : "" }}
+      {{ label }} {{ required ? ' *' : '' }}
       <span class="nitrozen-tooltip-icon" v-if="tooltip != ''">
         <nitrozen-tooltip
           :tooltipText="tooltip"
@@ -107,8 +107,9 @@
                     <span
                       class="nitrozen-option-image"
                       :class="{
-                        'nitrozen-dropdown-multicheckbox-selected':
-                          selectedItems.includes(item.value),
+                        'nitrozen-dropdown-multicheckbox-selected': selectedItems.includes(
+                          item.value
+                        ),
                       }"
                     >
                       <img
@@ -161,17 +162,17 @@
   </div>
 </template>
 <script>
-import NitrozenUuid from "./../../utils/NUuid";
-import NitrozenInline from "./../NInline";
-import NitrozenCheckbox from "./../NCheckbox";
-import NTooltip from "./../NTooltip";
+import NitrozenUuid from './../../utils/NUuid';
+import NitrozenInline from './../NInline';
+import NitrozenCheckbox from './../NCheckbox';
+import NTooltip from './../NTooltip';
 
 export default {
-  name: "nitrozen-listing-options",
+  name: 'nitrozen-listing-options',
   components: {
-    "nitrozen-inline": NitrozenInline,
-    "nitrozen-checkbox": NitrozenCheckbox,
-    "nitrozen-tooltip": NTooltip,
+    'nitrozen-inline': NitrozenInline,
+    'nitrozen-checkbox': NitrozenCheckbox,
+    'nitrozen-tooltip': NTooltip,
   },
   props: {
     /**
@@ -179,7 +180,7 @@ export default {
      */
     id: {
       type: [Number, String],
-      default: () => "nitrozen-dropdown-" + NitrozenUuid(),
+      default: () => 'nitrozen-dropdown-' + NitrozenUuid(),
     },
     /**
      * array of item in dropdown
@@ -233,7 +234,7 @@ export default {
     },
     tooltip: {
       type: String,
-      default: "",
+      default: '',
     },
     /**
      * selected value
@@ -284,16 +285,16 @@ export default {
       checkboxStatus: false,
       selected: null,
       selectedItems: [],
-      searchInput: "",
+      searchInput: '',
       showOptions: false,
       dropUp: false,
       viewport: null,
       allSelected: false,
       allOptionsSelected: false,
-      all_option: { text: "Select All", value: "all" },
+      all_option: { text: 'Select All', value: 'all' },
       checboxSelected: false,
       indeterminate: false,
-      checkDropdownStatus: "",
+      checkDropdownStatus: '',
     };
   },
   watch: {
@@ -303,14 +304,11 @@ export default {
     },
     itemsChecked() {
       this.checkedItems();
+      console.log(this.checboxSelected, 'this.checboxSelected');
     },
     selectedStatus() {
-      console.log(this.selectedStatus, "this.selectedStatus");
-      this.$emit(
-        "checkDropdownStatus",
-        this.selectedStatus
-       
-      );
+      console.log(this.selectedStatus, 'this.selectedStatus');
+      this.$emit('checkDropdownStatus', this.selectedStatus);
 
       // let checkStatusObj = this.dropdownOptions.filter(
       //   (item) => item.value === this.selectedStatus
@@ -335,19 +333,19 @@ export default {
       this.setAllOptions();
     },
     items: {
-      handler: function () {
+      handler: function() {
         this.setAllOptions();
       },
     },
   },
   computed: {
-    selectedText: function () {
+    selectedText: function() {
       if (!this.multiple) {
         this.selected = {};
         if (this.value) {
           if (this.items.length) {
             this.selected = this.items.find((i) => i.value == this.value);
-            this.searchInput = this.selected ? this.selected.text : "";
+            this.searchInput = this.selected ? this.selected.text : '';
           }
         }
         if (this.selected && this.selected.text) {
@@ -355,7 +353,7 @@ export default {
         } else if (this.label) {
           return this.placeholder || `Choose ${this.label}`;
         }
-        return "";
+        return '';
       } else {
         if (this.allOptionsSelected) {
           return `All ${this.selectedItems.length} ${this.label} selected`;
@@ -363,7 +361,7 @@ export default {
         let tmp = [];
         let selected = {};
         if (this.value) {
-          this.searchInput = "";
+          this.searchInput = '';
         }
         if (this.selectedItems.length) {
           this.selectedItems.forEach((ele) => {
@@ -377,15 +375,15 @@ export default {
             }
           });
           tmp = [...new Set(tmp)];
-          return `${tmp.join(", ")}`;
+          return `${tmp.join(', ')}`;
         } else if (this.label) {
           return this.placeholder || `Choose ${this.label}`;
         }
-        return "";
+        return '';
       }
     },
 
-    searchInputPlaceholder: function () {
+    searchInputPlaceholder: function() {
       if (this.enable_select_all && this.selectedItems.length) {
         if (this.selectedItems.length === this.getItems(this.items).length) {
           return `All ${this.label}(s) selected`;
@@ -400,12 +398,12 @@ export default {
       this.enable_select_all = false;
       if (this.value) {
         const selected = this.items.find((i) => i.value == this.value);
-        this.searchInput = selected ? selected.text : "";
+        this.searchInput = selected ? selected.text : '';
       }
     } else {
       if (this.value) {
         this.selectedItems = [...this.value];
-        this.searchInput = "";
+        this.searchInput = '';
         this.setAllOptions(true);
       }
     }
@@ -413,8 +411,8 @@ export default {
   methods: {
     checkboxHandler() {
       this.checkboxStatus = !this.checkboxStatus;
-      console.log(this.checkboxStatus, "this.checkboxStatus");
-      this.$emit("checkboxMethod", this.checkboxStatus);
+      console.log(this.checkboxStatus, 'this.checkboxStatus');
+      this.$emit('checkboxMethod', this.checkboxStatus);
     },
     checkedItems() {
       if (this.itemsChecked === 0) {
@@ -429,12 +427,13 @@ export default {
         this.indeterminate = true;
       } else {
         this.checboxSelected = true;
+        this.checkboxStatus = this.checboxSelected;
         this.indeterminate = false;
       }
     },
     getItems(items) {
       return items
-        .filter(function (item) {
+        .filter(function(item) {
           return !item.isGroupLabel;
         })
         .map((item) => item.value);
@@ -461,10 +460,10 @@ export default {
         if (item.text) {
           this.searchInput = item.text;
         }
-        this.$emit("input", item.value); // v-model implementation
-        this.$emit("change", item.value);
+        this.$emit('input', item.value); // v-model implementation
+        this.$emit('change', item.value);
       } else {
-        if (index === "all") {
+        if (index === 'all') {
           this.allSelected = !this.allSelected;
           if (this.allSelected) {
             this.selectedItems = this.getItems(this.items);
@@ -485,14 +484,14 @@ export default {
     },
     addOption() {
       let value = this.searchInput;
-      this.searchInput = "";
-      this.$emit("addOption", value);
-      this.eventEmit({}, "searchInputChange");
+      this.searchInput = '';
+      this.$emit('addOption', value);
+      this.eventEmit({}, 'searchInputChange');
       this.calculateViewport();
     },
     setCheckedItem() {
-      this.$emit("input", this.selectedItems); // v-model implementation
-      this.$emit("change", this.selectedItems);
+      this.$emit('input', this.selectedItems); // v-model implementation
+      this.$emit('change', this.selectedItems);
     },
     searchInputChange(e) {
       this.showOptions = true;
@@ -505,7 +504,7 @@ export default {
       if (!this.searchInput) {
         this.setAllOptions();
       }
-      this.eventEmit(obj, "searchInputChange");
+      this.eventEmit(obj, 'searchInputChange');
       this.calculateViewport();
     },
     toggle() {
@@ -519,7 +518,7 @@ export default {
      * @description calclulate position of dropdwon
      */
     calculateDropUpDown() {
-      const dropdown = this.$refs["n_dropdown"];
+      const dropdown = this.$refs['n_dropdown'];
       if (!dropdown) return;
       const dropdownRect = dropdown.getBoundingClientRect();
       const topSpace = dropdownRect.top;
@@ -555,10 +554,10 @@ export default {
       this.$emit(type, event);
     },
     handleScroll(event) {
-      let elem = this.$refs["nitrozen-select-option"];
-      this.$emit("scroll", elem);
+      let elem = this.$refs['nitrozen-select-option'];
+      this.$emit('scroll', elem);
     },
-    handleTABKey: function (event) {
+    handleTABKey: function(event) {
       // TAB key detection
       if (event.keyCode == 9 && this.showOptions) {
         event.preventDefault();
@@ -569,25 +568,25 @@ export default {
   },
   created() {
     this.calculateViewport();
-    if (typeof document !== "undefined") {
-      document.addEventListener("click", this.documentClick);
-      document.addEventListener("keydown", this.handleTABKey);
+    if (typeof document !== 'undefined') {
+      document.addEventListener('click', this.documentClick);
+      document.addEventListener('keydown', this.handleTABKey);
     }
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", this.calculateViewport);
-      window.addEventListener("scroll", this.calculateViewport);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', this.calculateViewport);
+      window.addEventListener('scroll', this.calculateViewport);
     }
   },
   destroyed() {
-    document.removeEventListener("click", this.documentClick);
-    document.removeEventListener("keydown", this.handleTABKey);
-    window.removeEventListener("resize", this.calculateViewport);
-    window.removeEventListener("scroll", this.calculateViewport);
+    document.removeEventListener('click', this.documentClick);
+    document.removeEventListener('keydown', this.handleTABKey);
+    window.removeEventListener('resize', this.calculateViewport);
+    window.removeEventListener('scroll', this.calculateViewport);
   },
 };
 </script>
 <style lang="less">
-@import "./NListing.less";
+@import './NListing.less';
 .nitrozen-searchable-input-container {
   width: 100%;
   input {
