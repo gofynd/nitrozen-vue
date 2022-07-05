@@ -871,12 +871,12 @@ module.exports = svgs;
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b5890a22-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=598e3116&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('label',{staticClass:"nitrozen-checkbox-container",class:{ 'nitrozen-checkbox-container-disabled': _vm.disabled }},[_vm._t("default"),_c('input',{directives:[{name:"indeterminate",rawName:"v-indeterminate",value:(_vm.indeterminateValue),expression:"indeterminateValue"}],attrs:{"id":_vm.id,"type":"checkbox","disabled":_vm.disabled},domProps:{"value":_vm.checkboxValue || _vm.value,"checked":_vm.isSelected},on:{"change":_vm.toggle}}),_c('span',{staticClass:"nitrozen-checkbox",attrs:{"for":_vm.id}})],2)])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b5890a22-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=d7743dd2&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('label',{staticClass:"nitrozen-checkbox-container",class:{ 'nitrozen-checkbox-container-disabled': _vm.disabled }},[_vm._t("default"),_c('input',{directives:[{name:"indeterminate",rawName:"v-indeterminate",value:(_vm.indeterminateValue),expression:"indeterminateValue"}],attrs:{"id":_vm.id,"type":"checkbox","disabled":_vm.disabled},domProps:{"value":_vm.checkboxValue,"checked":_vm.isSelected},on:{"change":_vm.toggle}}),_c('span',{staticClass:"nitrozen-checkbox",attrs:{"for":_vm.id}})],2)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=598e3116&
+// CONCATENATED MODULE: ./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=d7743dd2&
 
 // EXTERNAL MODULE: ./src/utils/NUuid.js
 var NUuid = __webpack_require__("4fe2");
@@ -904,7 +904,7 @@ var NUuid = __webpack_require__("4fe2");
 //
 
 /* harmony default export */ var NCheckboxvue_type_script_lang_js_ = ({
-  name: "nitrozen-checkbox",
+  name: 'nitrozen-checkbox',
   props: {
     value: {
       type: [Array, Boolean],
@@ -920,23 +920,26 @@ var NUuid = __webpack_require__("4fe2");
     },
     id: {
       type: [Number, String],
-      default: () => "nitrozen-checkbox" + Object(NUuid["a" /* default */])()
+      default: () => 'nitrozen-checkbox' + Object(NUuid["a" /* default */])()
     },
     indeterminateValue: {
       type: Boolean,
       default: false
     }
   },
-  event: "change",
+  event: 'change',
   watch: {
     indeterminateValue() {
+      console.log(this.checkboxValue, 'indeterminateValue');
+      console.log(this.indeterminateValue, 'indeterminateValue');
+
       if (this.indeterminateValue) {
         this.$forceUpdate();
       }
     },
 
     value() {
-      console.log(this.value, "value");
+      console.log(this.value, 'value');
     }
 
   },
@@ -964,17 +967,17 @@ var NUuid = __webpack_require__("4fe2");
           checkboxModel.splice(index, 1);
         }
 
-        this.$emit("input", checkboxModel);
-        this.$emit("change", checkboxModel);
+        this.$emit('input', checkboxModel);
+        this.$emit('change', checkboxModel);
       } else {
-        this.$emit("change", event); // TODO: need to look into this, why we need?
+        this.$emit('change', event); // TODO: need to look into this, why we need?
 
-        this.$emit("input", event.target.checked);
+        this.$emit('input', event.target.checked);
       }
     },
     toggleAll: function (items) {
-      this.$emit("input", items);
-      this.$emit("change", items);
+      this.$emit('input', items);
+      this.$emit('change', items);
     }
   }
 });
@@ -12728,8 +12731,8 @@ var NCustomForm = __webpack_require__("c394");
 // CONCATENATED MODULE: ./src/components/NCustomForm/index.js
 
 /* harmony default export */ var components_NCustomForm = (NCustomForm["default"]);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b5890a22-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NListingOptions/NListingOptions.vue?vue&type=template&id=4e647610&
-var NListingOptionsvue_type_template_id_4e647610_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-dropdown-container"},[(_vm.label)?_c('label',{staticClass:"nitrozen-dropdown-label"},[_vm._v(" "+_vm._s(_vm.label)+" "+_vm._s(_vm.required ? " *" : "")+" "),(_vm.tooltip != '')?_c('span',{staticClass:"nitrozen-tooltip-icon"},[_c('nitrozen-tooltip',{attrs:{"tooltipText":_vm.tooltip,"position":"top"}})],1):_vm._e()]):_vm._e(),_c('div',{staticClass:"nitrozen-select-wrapper",on:{"click":_vm.toggle}},[_c('div',{ref:"n_dropdown",staticClass:"nitrozen-select",class:{
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b5890a22-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NListingOptions/NListingOptions.vue?vue&type=template&id=072154a2&
+var NListingOptionsvue_type_template_id_072154a2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"nitrozen-dropdown-container"},[(_vm.label)?_c('label',{staticClass:"nitrozen-dropdown-label"},[_vm._v(" "+_vm._s(_vm.label)+" "+_vm._s(_vm.required ? ' *' : '')+" "),(_vm.tooltip != '')?_c('span',{staticClass:"nitrozen-tooltip-icon"},[_c('nitrozen-tooltip',{attrs:{"tooltipText":_vm.tooltip,"position":"top"}})],1):_vm._e()]):_vm._e(),_c('div',{staticClass:"nitrozen-select-wrapper",on:{"click":_vm.toggle}},[_c('div',{ref:"n_dropdown",staticClass:"nitrozen-select",class:{
         disabled: _vm.disabled,
         'nitrozen-dropdown-open': _vm.showOptions,
       }},[_c('div',{staticClass:"nitrozen-select-checkbox"},[(_vm.searchable && !_vm.disabled)?_c('span',{staticClass:"nitrozen-searchable-input-container"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.searchInput),expression:"searchInput"}],attrs:{"type":"search","placeholder":_vm.searchInputPlaceholder},domProps:{"value":(_vm.searchInput)},on:{"search":_vm.searchInputChange,"keyup":_vm.searchInputChange,"input":function($event){if($event.target.composing){ return; }_vm.searchInput=$event.target.value}}})]):(_vm.defaultCheckbox)?_c('span',{staticClass:"nitrozen-default-checkbox",on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.checkboxHandler.apply(null, arguments)}}},[_c('nitrozen-checkbox',{attrs:{"value":_vm.checkboxStatus,"indeterminateValue":_vm.indeterminate,"defaultCheckbox":true}})],1):_c('span',[_vm._v(_vm._s(_vm.selectedText))]),_c('div',{staticClass:"nitrozen-dropdown-arrow"},[_c('nitrozen-inline',{attrs:{"icon":"dropdown_arrow_down"}})],1)]),_c('div',{ref:"nitrozen-select-option",staticClass:"nitrozen-options",class:{ 'nitrozen-dropup': _vm.dropUp },on:{"&scroll":function($event){return _vm.handleScroll.apply(null, arguments)}}},[(_vm.enable_select_all)?_c('span',{directives:[{name:"show",rawName:"v-show",value:(!_vm.searchInput),expression:"!searchInput"}],staticClass:"nitrozen-option ripple",on:{"click":function($event){return _vm.selectItem('all', _vm.all_option)}}},[_vm._t("option",function(){return [_c('div',{staticClass:"nitrozen-option-container"},[_c('nitrozen-checkbox',{ref:"multicheckbox-all",attrs:{"checkboxValue":_vm.allSelected,"value":_vm.allSelected},on:{"change":_vm.setCheckedItem}},[_c('span',{staticClass:"nitrozen-option-image",class:{
@@ -12738,18 +12741,20 @@ var NListingOptionsvue_type_template_id_4e647610_render = function () {var _vm=t
             selected: item == _vm.selected,
             'nitrozen-option-group-label': item.isGroupLabel,
           },attrs:{"data-value":item.value},on:{"click":function($event){return _vm.selectItem(index, item)}}},[_vm._t("option",function(){return [_c('div',{staticClass:"nitrozen-option-container"},[(_vm.multiple && !item.isGroupLabel)?[_c('nitrozen-checkbox',{ref:("multicheckbox-" + index),refInFor:true,attrs:{"checkboxValue":item.value},on:{"change":_vm.setCheckedItem},model:{value:(_vm.selectedItems),callback:function ($$v) {_vm.selectedItems=$$v},expression:"selectedItems"}},[_c('span',{staticClass:"nitrozen-option-image",class:{
-                      'nitrozen-dropdown-multicheckbox-selected':
-                        _vm.selectedItems.includes(item.value),
+                      'nitrozen-dropdown-multicheckbox-selected': _vm.selectedItems.includes(
+                        item.value
+                      ),
                     }},[(item.logo)?_c('img',{staticClass:"nitrozen-option-logo",attrs:{"src":item.logo,"alt":"logo"}}):_vm._e(),_vm._v(" "+_vm._s(item.text))])])]:[_c('span',{staticClass:"nitrozen-option-image",class:{
                     'nitrozen-option-child-label':
                       _vm.items.find(function (i) { return i.isGroupLabel; }) && !item.isGroupLabel,
                   }},[(item.logo)?_c('img',{staticClass:"nitrozen-option-logo",attrs:{"src":item.logo,"alt":"logo"}}):_vm._e(),_vm._v(" "+_vm._s(item.text)+" ")])]],2)]},{"item":item,"selected":item == _vm.selected})],2)}),(_vm.searchable && _vm.items.length == 0)?_c('span',{staticClass:"nitrozen-option"},[(!_vm.add_option)?_c('div',{staticClass:"nitrozen-option-container"},[_vm._v(" No "+_vm._s(_vm.label)+" Found ")]):(_vm.add_option && _vm.searchInput.length)?_c('div',{staticClass:"nitrozen-option-container"},[_c('div',{staticClass:"nitrozen-dropdown-empty",on:{"click":_vm.addOption}},[_c('nitrozen-inline',{attrs:{"icon":"plus-btn"}}),_c('p',[_vm._v("Add "+_vm._s(_vm.searchInput))])],1)]):_vm._e()]):_vm._e()],2)])])])}
-var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
+var NListingOptionsvue_type_template_id_072154a2_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NListingOptions/NListingOptions.vue?vue&type=template&id=4e647610&
+// CONCATENATED MODULE: ./src/components/NListingOptions/NListingOptions.vue?vue&type=template&id=072154a2&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/NListingOptions/NListingOptions.vue?vue&type=script&lang=js&
+//
 //
 //
 //
@@ -12917,11 +12922,11 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
 
 
 /* harmony default export */ var NListingOptionsvue_type_script_lang_js_ = ({
-  name: "nitrozen-listing-options",
+  name: 'nitrozen-listing-options',
   components: {
-    "nitrozen-inline": NInline["a" /* default */],
-    "nitrozen-checkbox": NCheckbox["a" /* default */],
-    "nitrozen-tooltip": NTooltip["a" /* default */]
+    'nitrozen-inline': NInline["a" /* default */],
+    'nitrozen-checkbox': NCheckbox["a" /* default */],
+    'nitrozen-tooltip': NTooltip["a" /* default */]
   },
   props: {
     /**
@@ -12929,7 +12934,7 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
      */
     id: {
       type: [Number, String],
-      default: () => "nitrozen-dropdown-" + Object(NUuid["a" /* default */])()
+      default: () => 'nitrozen-dropdown-' + Object(NUuid["a" /* default */])()
     },
 
     /**
@@ -12989,7 +12994,7 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
     },
     tooltip: {
       type: String,
-      default: ""
+      default: ''
     },
 
     /**
@@ -13042,19 +13047,19 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
       checkboxStatus: false,
       selected: null,
       selectedItems: [],
-      searchInput: "",
+      searchInput: '',
       showOptions: false,
       dropUp: false,
       viewport: null,
       allSelected: false,
       allOptionsSelected: false,
       all_option: {
-        text: "Select All",
-        value: "all"
+        text: 'Select All',
+        value: 'all'
       },
       checboxSelected: false,
       indeterminate: false,
-      checkDropdownStatus: ""
+      checkDropdownStatus: ''
     };
   },
   watch: {
@@ -13065,11 +13070,12 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
 
     itemsChecked() {
       this.checkedItems();
+      console.log(this.checboxSelected, 'this.checboxSelected');
     },
 
     selectedStatus() {
-      console.log(this.selectedStatus, "this.selectedStatus");
-      this.$emit("checkDropdownStatus", this.selectedStatus); // let checkStatusObj = this.dropdownOptions.filter(
+      console.log(this.selectedStatus, 'this.selectedStatus');
+      this.$emit('checkDropdownStatus', this.selectedStatus); // let checkStatusObj = this.dropdownOptions.filter(
       //   (item) => item.value === this.selectedStatus
       // );
       // console.log(checkStatusObj);
@@ -13109,7 +13115,7 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
         if (this.value) {
           if (this.items.length) {
             this.selected = this.items.find(i => i.value == this.value);
-            this.searchInput = this.selected ? this.selected.text : "";
+            this.searchInput = this.selected ? this.selected.text : '';
           }
         }
 
@@ -13119,7 +13125,7 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
           return this.placeholder || `Choose ${this.label}`;
         }
 
-        return "";
+        return '';
       } else {
         if (this.allOptionsSelected) {
           return `All ${this.selectedItems.length} ${this.label} selected`;
@@ -13129,7 +13135,7 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
         let selected = {};
 
         if (this.value) {
-          this.searchInput = "";
+          this.searchInput = '';
         }
 
         if (this.selectedItems.length) {
@@ -13144,12 +13150,12 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
             }
           });
           tmp = [...new Set(tmp)];
-          return `${tmp.join(", ")}`;
+          return `${tmp.join(', ')}`;
         } else if (this.label) {
           return this.placeholder || `Choose ${this.label}`;
         }
 
-        return "";
+        return '';
       }
     },
     searchInputPlaceholder: function () {
@@ -13171,12 +13177,12 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
 
       if (this.value) {
         const selected = this.items.find(i => i.value == this.value);
-        this.searchInput = selected ? selected.text : "";
+        this.searchInput = selected ? selected.text : '';
       }
     } else {
       if (this.value) {
         this.selectedItems = [...this.value];
-        this.searchInput = "";
+        this.searchInput = '';
         this.setAllOptions(true);
       }
     }
@@ -13185,8 +13191,8 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
   methods: {
     checkboxHandler() {
       this.checkboxStatus = !this.checkboxStatus;
-      console.log(this.checkboxStatus, "this.checkboxStatus");
-      this.$emit("checkboxMethod", this.checkboxStatus);
+      console.log(this.checkboxStatus, 'this.checkboxStatus');
+      this.$emit('checkboxMethod', this.checkboxStatus);
     },
 
     checkedItems() {
@@ -13198,6 +13204,7 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
         this.indeterminate = true;
       } else {
         this.checboxSelected = true;
+        this.checkboxStatus = this.checboxSelected;
         this.indeterminate = false;
       }
     },
@@ -13233,11 +13240,11 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
           this.searchInput = item.text;
         }
 
-        this.$emit("input", item.value); // v-model implementation
+        this.$emit('input', item.value); // v-model implementation
 
-        this.$emit("change", item.value);
+        this.$emit('change', item.value);
       } else {
-        if (index === "all") {
+        if (index === 'all') {
           this.allSelected = !this.allSelected;
 
           if (this.allSelected) {
@@ -13260,16 +13267,16 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
 
     addOption() {
       let value = this.searchInput;
-      this.searchInput = "";
-      this.$emit("addOption", value);
-      this.eventEmit({}, "searchInputChange");
+      this.searchInput = '';
+      this.$emit('addOption', value);
+      this.eventEmit({}, 'searchInputChange');
       this.calculateViewport();
     },
 
     setCheckedItem() {
-      this.$emit("input", this.selectedItems); // v-model implementation
+      this.$emit('input', this.selectedItems); // v-model implementation
 
-      this.$emit("change", this.selectedItems);
+      this.$emit('change', this.selectedItems);
     },
 
     searchInputChange(e) {
@@ -13285,7 +13292,7 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
         this.setAllOptions();
       }
 
-      this.eventEmit(obj, "searchInputChange");
+      this.eventEmit(obj, 'searchInputChange');
       this.calculateViewport();
     },
 
@@ -13302,7 +13309,7 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
      * @description calclulate position of dropdwon
      */
     calculateDropUpDown() {
-      const dropdown = this.$refs["n_dropdown"];
+      const dropdown = this.$refs['n_dropdown'];
       if (!dropdown) return;
       const dropdownRect = dropdown.getBoundingClientRect();
       const topSpace = dropdownRect.top;
@@ -13340,8 +13347,8 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
     },
 
     handleScroll(event) {
-      let elem = this.$refs["nitrozen-select-option"];
-      this.$emit("scroll", elem);
+      let elem = this.$refs['nitrozen-select-option'];
+      this.$emit('scroll', elem);
     },
 
     handleTABKey: function (event) {
@@ -13357,22 +13364,22 @@ var NListingOptionsvue_type_template_id_4e647610_staticRenderFns = []
   created() {
     this.calculateViewport();
 
-    if (typeof document !== "undefined") {
-      document.addEventListener("click", this.documentClick);
-      document.addEventListener("keydown", this.handleTABKey);
+    if (typeof document !== 'undefined') {
+      document.addEventListener('click', this.documentClick);
+      document.addEventListener('keydown', this.handleTABKey);
     }
 
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", this.calculateViewport);
-      window.addEventListener("scroll", this.calculateViewport);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', this.calculateViewport);
+      window.addEventListener('scroll', this.calculateViewport);
     }
   },
 
   destroyed() {
-    document.removeEventListener("click", this.documentClick);
-    document.removeEventListener("keydown", this.handleTABKey);
-    window.removeEventListener("resize", this.calculateViewport);
-    window.removeEventListener("scroll", this.calculateViewport);
+    document.removeEventListener('click', this.documentClick);
+    document.removeEventListener('keydown', this.handleTABKey);
+    window.removeEventListener('resize', this.calculateViewport);
+    window.removeEventListener('scroll', this.calculateViewport);
   }
 
 });
@@ -13392,8 +13399,8 @@ var NListingOptionsvue_type_style_index_0_lang_less_ = __webpack_require__("572c
 
 var NListingOptions_component = Object(componentNormalizer["a" /* default */])(
   NListingOptions_NListingOptionsvue_type_script_lang_js_,
-  NListingOptionsvue_type_template_id_4e647610_render,
-  NListingOptionsvue_type_template_id_4e647610_staticRenderFns,
+  NListingOptionsvue_type_template_id_072154a2_render,
+  NListingOptionsvue_type_template_id_072154a2_staticRenderFns,
   false,
   null,
   null,

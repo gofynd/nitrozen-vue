@@ -274,11 +274,6 @@ export default {
       type: [Array, Number],
       default: [],
     },
-
-    // indeterminate: {
-    //   type: Boolean,
-    //   default: false,
-    // },
   },
   data: () => {
     return {
