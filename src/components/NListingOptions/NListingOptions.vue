@@ -411,18 +411,17 @@ export default {
     },
     checkedItems() {
       if (this.itemsChecked === 0) {
-        this.checboxSelected = false;
+        this.checkboxStatus = false;
         this.indeterminate = false;
       } else if (
         this.itemsChecked < this.totalItems ||
         this.itemsChecked > this.totalItems
       ) {
-        this.checboxSelected = false;
+        this.checkboxStatus = false;
 
         this.indeterminate = true;
       } else {
-        this.checboxSelected = true;
-        this.checkboxStatus = this.checboxSelected;
+        this.checkboxStatus = true;
         this.indeterminate = false;
       }
     },
