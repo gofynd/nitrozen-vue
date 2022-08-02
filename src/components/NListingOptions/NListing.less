@@ -1,0 +1,204 @@
+@import './../../base/base.less';
+@import './../NCheckbox/NCheckbox.less';
+
+.nitrozen-dropdown-container {
+  font-family: @PrimaryFont;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  width: 100%;
+
+  .nitrozen-select-wrapper {
+    position: relative;
+    user-select: none;
+    // width: 100%;
+    // display: flex;
+    align-items: center;
+  }
+  .nitrozen-default-checkbox {
+    position: relative;
+    top: -9px;
+  }
+  .nitrozen-select {
+    box-sizing: border-box;
+    border: 1px solid @BorderColor;
+    border-radius: 3px;
+    background-color: #ffffff;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .nitrozen-select:focus-within {
+    border-color: @SecondaryColor;
+  }
+  .nitrozen-select__trigger {
+    color: @TypographyPrimaryColor;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 22px;
+    min-height: 22px;
+    padding: 8px 14px;
+    position: relative;
+    display: -webkit-inline-box;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    cursor: pointer;
+    span {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    input[type='search']::-webkit-search-cancel-button {
+      position: relative;
+      right: 10px;
+      font-size: @BaseFontSize + 4px;
+      cursor: pointer;
+    }
+  }
+  .nitrozen-options {
+    min-width: 200px;
+    position: absolute;
+    display: block;
+    transform: translate3d(0px, 42px, 0px);
+    left: 0;
+    right: 0;
+    border: 1px solid @BorderColor;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(229, 229, 229, 0.2),
+      0 6px 20px 0 rgba(229, 229, 229, 0.19);
+    background: #fff;
+    transition: all 0.5s;
+    opacity: 0;
+    max-height: 200px; // 48vh
+    overflow-y: auto;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+
+    .nitrozen-menu-scrollbar;
+  }
+  .nitrozen-select.nitrozen-dropdown-open .nitrozen-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    min-width: 200px;
+  }
+  .nitrozen-dropup {
+    transform: translate3d(0px, 0px, 0px);
+    bottom: 42px;
+    z-index: 10;
+  }
+  .nitrozen-option {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    color: @TypographyPrimaryColor;
+    line-height: 22px;
+    cursor: pointer;
+    transition: all 0.5s;
+    .nitrozen-checkbox-container {
+      pointer-events: none;
+      margin-top: 2px;
+      height: 20px;
+      .nitrozen-checkbox {
+        margin-top: 2px;
+      }
+    }
+    &.nitrozen-option-group-label {
+      pointer-events: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nitrozen-option-container {
+      padding: 9px 14px;
+    }
+
+    .nitrozen-option-child-label {
+      padding-left: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nitrozen-option-logo {
+      height: 24px;
+      width: auto;
+      padding-right: 8px;
+    }
+
+    .nitrozen-option-image {
+      display: flex;
+      align-items: center;
+    }
+
+    .nitrozen-dropdown-multicheckbox-selected {
+      color: @SecondaryColor;
+      font-weight: bold;
+    }
+  }
+  .nitrozen-option:hover {
+    cursor: pointer;
+    background-color: @HoverColor;
+  }
+  .nitrozen-option.selected {
+    color: #ffffff;
+    background-color: @SecondaryColor;
+  }
+  // Disabled
+  .nitrozen-select.disabled {
+    background-color: @BorderColor;
+  }
+  .nitrozen-select.disabled .nitrozen-select__trigger {
+    color: @DisabledColor;
+    background-color: @BorderColor;
+    cursor: not-allowed;
+  }
+  .nitrozen-select.disabled .nitrozen-select__trigger .nitrozen-dropdown-arrow {
+    color: @DisabledColor;
+  }
+
+  // Arrow
+
+  .nitrozen-dropdown-arrow {
+    position: relative;
+    top: -4px;
+    height: 15px;
+    width: 15px;
+    color: @SecondaryColor;
+  }
+  .nitrozen-dropdown-arrow::after {
+    // content: '▼';
+    position: absolute;
+    bottom: 0px;
+    height: 100%;
+  }
+  .nitrozen-dropdown-open .nitrozen-dropdown-arrow {
+    left: 9px;
+    right: 0px;
+    transform: rotate(180deg);
+    top: 3px;
+  }
+}
+
+.nitrozen-dropdown-label {
+  color: @LabelColor;
+  font-family: @PrimaryFont;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.nitrozen-dropdown-empty {
+  display: flex;
+  .nitrozen-add-btn {
+    width: 25px;
+    height: 25px;
+  }
+  p {
+    margin: 0 px;
+    margin-left: 10px;
+    margin-top: 3px;
+  }
+}

@@ -32,7 +32,12 @@
       </div>
 
       <div class="main-div space-between">
-        <nitrozen-menu position="top" :inverted="true" :mode="'vertical'" style="background: black;">
+        <nitrozen-menu
+          position="top"
+          :inverted="true"
+          :mode="'vertical'"
+          style="background: black"
+        >
           <nitrozen-menu-item>Item 1</nitrozen-menu-item>
           <nitrozen-menu-item>Item 2</nitrozen-menu-item>
           <nitrozen-menu-item>Item 3</nitrozen-menu-item>
@@ -50,7 +55,10 @@
       <div class="main-div space-between">
         <div>
           This is text tooltip
-          <nitrozen-tooltip icon="help" tooltipText="Text tooltip"></nitrozen-tooltip>
+          <nitrozen-tooltip
+            icon="help"
+            tooltipText="Text tooltip"
+          ></nitrozen-tooltip>
         </div>
         <div>
           This is custom html content tooltip
@@ -161,12 +169,10 @@
         <nitrozen-button v-flat-btn :theme="'secondary'"
           >Primary Small Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :theme="'secondary'"
-        size="medium"
+        <nitrozen-button v-flat-btn :theme="'secondary'" size="medium"
           >Primary Medium Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :theme="'secondary'"
-        size="large"
+        <nitrozen-button v-flat-btn :theme="'secondary'" size="large"
           >Primary Large Flat</nitrozen-button
         >
         <div class="hover-new">
@@ -361,9 +367,7 @@
         ></nitrozen-input>
       </div>
 
-      <!-- <div class="main-div">
-            <nitrozen-input :id="4" :type="'text'" :placeholder="'Enter Name'" :label="'Input with Loader'" :search="true"></nitrozen-input>
-      </div>-->
+     
 
       <div class="main-div">
         <nitrozen-input
@@ -391,9 +395,7 @@
         <nitrozen-input
           :id="7"
           :showTooltip="true"
-          :tooltipText="
-            'Tooltip text Tooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip text'
-          "
+          :tooltipText="'Tooltip text Tooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip textTooltip text'"
           :type="'text'"
           :placeholder="'Enter Name'"
           :label="'Search Icon Input'"
@@ -526,28 +528,47 @@
         <span>Checkbox model value: {{ singleCheckboxModel }}</span>
       </div>
       <div class="main-div space-between">
+        <div>Listing Options</div>
+        <nitrozen-listing-options
+          label="Data"
+          :disabled="false"
+          id="searchable-dropdown-1"
+          tooltip="This is a searchable dropdown"
+          :items="dropdownItemsFiltered"
+          v-model="selectedGroupDropdown"
+          :defaultCheckbox="true"
+          :itemsChecked="checkedItems"
+          :totalItems="totalItems"
+          :selectedStatus="selectedGroupDropdown"
+          :dropdownOptions="dropdownItemsGroup"
+          @checkDropdownStatus="setCheckboxStatus($event)"
+        ></nitrozen-listing-options>
+      </div>
+      <div class="main-div space-between">
         <nitrozen-checkbox
-          v-model="checkArray"
+          :checkboxValue="1"
           @change="testFunc($event)"
-          checkboxValue="Check 1"
+          v-model="checkArray"
           >Check 1</nitrozen-checkbox
         >
         <nitrozen-checkbox
-          checkboxValue="Check 2"
-          @change="testFunc($event)"
+          :checkboxValue="2"
           v-model="checkArray"
+          :value="dropdownStatus === 11"
+          @change="testFunc($event)"
           >Check 2</nitrozen-checkbox
         >
         <nitrozen-checkbox
-          checkboxValue="Check 3"
-          @change="testFunc($event)"
           v-model="checkArray"
+          :checkboxValue="3"
+          :value="dropdownStatus === 12"
+          @change="testFunc($event)"
           >Check 3</nitrozen-checkbox
         >
         <nitrozen-checkbox
-          checkboxValue="Check 4"
-          @change="testFunc($event)"
+          :checkboxValue="4"
           v-model="checkArray"
+          @change="testFunc($event)"
           >Check 4</nitrozen-checkbox
         >
         <span>Checked names: {{ checkArray }}</span>
@@ -789,7 +810,7 @@
             v-model="radioModel"
             @change="changeEvent"
             :radioValue="'4'"
-            style="height:400px"
+            style="height: 400px"
             >Basic Radio 4</nitrozen-radio
           >
           <nitrozen-radio
@@ -811,34 +832,36 @@ export default {
   name: "App",
   data() {
     return {
+      dropdownStatus: "",
+      selectedCheckBox: "",
+      checkedItems: 0,
+      totalItems: 4,
       tabArray: ["Item1", "Item2", "Item3"],
-      multiSelect: [11,12,13,14,15,21,22,23,24,25],
+      multiSelect: [11, 12, 13, 14, 15, 21, 22, 23, 24, 25],
       numberOfClick: 0,
       abcd: true,
       singleCheckboxModel: true,
       inputModel: "Some Value",
       numberModel: 1,
       autoModel: "",
-      checkArray: ["Check 1"],
+      checkArray: [],
       radioModel: "1",
+
       dropdownItems: [
         {
           text: "Maharashtra",
           value: 1,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+          logo: "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
         },
         {
           text: "Andhra Pradesh",
           value: 2,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+          logo: "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
         },
         {
           text: "West Bengal",
           value: 3,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+          logo: "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
         },
       ],
       dropdownItemsGroup: [
@@ -849,20 +872,17 @@ export default {
         {
           text: "Sindhudurg",
           value: 11,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/apple-7f951c/logo_apple.png",
+          logo: "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/apple-7f951c/logo_apple.png",
         },
         {
           text: "Ratnagiri",
           value: 12,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/lyf-4a1902/logo_LYF.png",
+          logo: "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/lyf-4a1902/logo_LYF.png",
         },
         {
           text: "Raigad",
           value: 13,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+          logo: "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
         },
         {
           text: "Thane",
@@ -971,15 +991,27 @@ export default {
         },
       ],
       autofocusSearch: false,
+      selectedStatus: 11,
     };
   },
   mounted() {
     this.dropdownItemsFiltered = this.dropdownItemsGroup;
-    // setTimeout(() => {
-    //   this.autofocusSearch = true;
-    // }, 5000);
   },
+
   methods: {
+    setCheckboxStatus(state) {
+      this.checkArray.push(2);
+
+      this.dropdownStatus = state;
+      if (this.dropdownStatus === 11) {
+        this.checkedItems = 2;
+      } else if (this.dropdownStatus === 12) {
+        this.checkedItems = 1;
+      } else {
+        this.checkedItems = 0;
+      }
+    },
+
     stepperNext() {
       let next = this.stepper.activeIndex + 1;
       if (this.stepper.maxActiveIndex < next) {
@@ -1000,8 +1032,11 @@ export default {
     addOption(value) {
       console.log(value);
     },
+
     testFunc(event) {
-      console.log(event);
+      console.log("test", event);
+      this.checkedItems = event.length;
+      console.log(this.checkedItems);
     },
     getState() {
       console.log(this.inputModel);
@@ -1021,7 +1056,7 @@ export default {
     removeFruit(index) {
       this.fruits.splice(index, 1);
     },
-    setSelectItems: function(item) {
+    setSelectItems: function (item) {
       let index = this.selectedItems.indexOf(item);
       if (index == -1) {
         this.selectedItems.push(item);
@@ -1029,7 +1064,7 @@ export default {
         this.selectedItems.splice(index, 1);
       }
     },
-    changeEvent: function(event) {
+    changeEvent: function (event) {
       console.log(event, "event");
     },
     openDialog(type) {
