@@ -154,7 +154,7 @@ export default {
     backdropClick(e) {
       // close dialog on outside click
       const dialog = this.$refs["dialog"];
-      if (this.dismissible && !dialog.contains(e.target)) {
+      if (this.dismissible && dialog && !dialog.contains(e.target)) {
         this.close(null);
       }
     },
