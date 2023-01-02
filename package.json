@@ -3,7 +3,6 @@
   "version": "0.0.41",
   "description": "Fynd Design Library for Vue",
   "homepage": "https://github.com/gofynd/nitrozen-vue#readme",
-  "author": "Aayush Jain<aayushjain3011@gmail.com>",
   "license": "MIT",
   "private": false,
   "main": "dist/nitrozen.umd.js",
