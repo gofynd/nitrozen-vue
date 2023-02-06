@@ -59,3 +59,237 @@
 @PrefixSuffixBackground: #e4e5e6;
 
 @BlackColor: #000000;
+
+
+
+@import "./fonts.less";
+
+@BaseFontSize: 10px;
+@DefaultColor: #2e31be;
+@PrimaryColor: var(--PrimaryColor, @DefaultColor);
+@PrimaryHoverColor: var(--PrimaryHoverColor, #2e31a1);
+@PrimaryDisabledColor: var(--PrimaryDisabledColor, #b5ffe7);
+@SecondaryColor: var(--SecondaryColor, #2dbaaa);
+@SecondaryHoverColor: var(--SecondaryHoverColor, #2dbaaa);
+@SecondaryDisabledColor: var(--SecondaryDisabledColor, #e0e0e0);
+@TypographyPrimaryColor: var(--TypographyPrimaryColor, rgba(0, 0, 0, 0.65));
+@TypographySecondaryColor: var(--TypographySecondaryColor, #666666);
+@TypographyTertiaryColor: var(--TypographyTertiaryColor, #999999);
+@PrimaryFont: var(--PrimaryFont, "JioType", helvetica, arial, sans-serif);
+@SvgColor: var(--SvgColor, #8f8f8f);
+@ZIndexNe: var(--ZIndexNe, -1);
+@ZIndex1: var(--ZIndex1, 1);
+@ZIndex2: var(--ZIndex2, 99);
+@ZIndex3: var(--ZIndex3, 999);
+
+@BlackColor: #000000;
+@WhiteColor: #ffffff;
+@GreyColor: #f8f8f8;
+@LabelColor: #9b9b9b;
+@BackgroundColor: #f9f9f9;
+@PlaceholderColor: #a4a4a4;
+@HoverColor: #f3f3f3;
+@WarningColor: #f5a300;
+@InfoColor: #605ae0;
+@SuccessColor: #0a5f23;
+@ErrorColor: #cd0909;
+@Shadow: rgba(0, 0, 0, 0.08);
+@EclipseColor: #3d3d3d;
+@Whisper: #ebebeb;
+@ScrollBarThumbColor: #979797;
+@ScrollBarThumbColorWebKit: #6b6b6b;
+@HoverEnabled: #f0f4ff;
+@PrefixSuffixBackground: #e4e5e6;
+@CheckboxDisableColor: #9e9e9e;
+@ToggleBtnShadow: 0 0 0.1rem 0 #0000001f, 0 0.1rem 0.1rem 0 #0000003d;
+@Solitude: #e7eeff;
+@Portage: #8c8ee3;
+@VeryLightGrey: #cccccc;
+@Zambezi: #5c5c5c;
+@BgColor: rgba(0, 0, 0, 0.6);
+@DialogNegativeColor: #fa3f4d;
+@WhiteSmoke: #f2f2f2;
+@LilyWhite: #e9f5ee;
+@SeaGreen: #219653;
+@Eucalyptus: #419266;
+@Bubbles: #e3f2e9;
+@LightGrey: #d6d6d6;
+@Flamingo: #eb5757;
+@WhiteSmoke2: #fdeded;
+@chinaIvory: #fff5d6;
+@StorybookBGColor: #9a9a9a;
+@SantasGrey: #9c9caa;
+@Perano: #a9b1ea;
+@Whisper3: #ededed;
+@Gray: #8f8f8f;
+@PinkSwan: #b8b8b8;
+
+////////////////////////////////////JDS THEME COLOR////////////////////////////////////
+// DEFAULT
+@JDSDefaultColor: #000000a6;
+
+////////////////////////////////////Light Theme////////////////////////////////////
+////////////////////////////////////Color////////////////////////////////////
+@ColorPrimary20: var(--ColorPrimary20, #e8e8fc);
+@ColorPrimary20Dark: var(--ColorPrimary20Dark, #16164b);
+@ColorPrimary30: var(--ColorPrimary30, #9999ff);
+@ColorPrimary40: var(--ColorPrimary40, #6464ff);
+@ColorPrimary50: var(--ColorPrimary50, #3535f3);
+@ColorPrimary60: var(--ColorPrimary60, #000093);
+@ColorPrimary70: var(--ColorPrimary70, #00004c);
+@ColorPrimary80: var(--ColorPrimary80, #010029);
+@ColorPrimaryDisabled: var(--ColorPrimaryDisabled, rgba(0, 0, 0, 0));
+@ColorPrimaryInverse: var(--ColorPrimaryInverse, #ffffff);
+@ColorPrimaryInverse80: var(--ColorPrimaryInverse80, rgba(255, 255, 255, 0.78));
+
+@ColorPrimaryBackground: var(--ColorPrimaryBackground, #ffffff);
+@ColorPrimaryGrey100: var(--ColorPrimaryGrey100, #141414);
+@ColorPrimaryGrey80: var(--ColorPrimaryGrey80, rgba(0, 0, 0, 0.65));
+@ColorPrimaryGrey60: var(--ColorPrimaryGrey60, #b5b5b5);
+@ColorPrimaryGrey40: var(--ColorPrimaryGrey40, #e0e0e0);
+@ColorPrimaryGrey20: var(--ColorPrimaryGrey20, #f5f5f5);
+@ColorSecondary20: var(--ColorSecondary20, #fef7e9);
+@ColorSecondary30: var(--ColorSecondary30, #ffe3ae);
+@ColorSecondary40: var(--ColorSecondary40, #ffd947);
+@ColorSecondary50: var(--ColorSecondary50, #f7ab20);
+@ColorSecondary60: var(--ColorSecondary60, #ac660c);
+@ColorSecondary70: var(--ColorSecondary70, #7f4b10);
+@ColorSecondary80: var(--ColorSecondary80, #401d0c);
+@ColorSecondaryInverse: var(--ColorSecondaryInverse, #401d0c);
+@ColorSecondaryBackground: var(--ColorSecondaryBackground, #ffffff);
+@ColorSecondaryGrey100: var(--ColorSecondaryGrey100, #141414);
+@ColorSecondaryGrey80: var(--ColorSecondaryGrey80, rgba(0, 0, 0, 0.65));
+@ColorSecondaryGrey60: var(--ColorSecondaryGrey60, #b5b5b5);
+@ColorSecondaryGrey40: var(--ColorSecondaryGrey40, #e0e0e0);
+@ColorSecondaryGrey20: var(--ColorSecondaryGrey20, #f5f5f5);
+@ColorSparkle20: var(--ColorSparkle20, #e8faf7);
+@ColorSparkle30: var(--ColorSparkle30, #a7f6e9);
+@ColorSparkle40: var(--ColorSparkle40, #7aebd9);
+@ColorSparkle50: var(--ColorSparkle50, #1eccb0);
+@ColorSparkle60: var(--ColorSparkle60, #1e7b74);
+@ColorSparkle70: var(--ColorSparkle70, #0e5c4f);
+@ColorSparkle80: var(--ColorSparkle80, #08332c);
+@ColorSparkleInverse: var(--ColorSparkleInverse, #08332c);
+@ColorSparkleBackground: var(--ColorSparkleBackground, #ffffff);
+@ColorSparkleGrey100: var(--ColorSparkleGrey100, #141414);
+@ColorSparkleGrey80: var(--ColorSparkleGrey80, rgba(0, 0, 0, 0.65));
+@ColorSparkleGrey60: var(--ColorSparkleGrey60, #b5b5b5);
+@ColorSparkleGrey40: var(--ColorSparkleGrey40, #e0e0e0);
+@ColorSparkleGrey20: var(--ColorSparkleGrey20, #f5f5f5);
+@ColorWhite: var(--ColorWhite, #ffffff);
+@ColorBlack: var(--ColorBlack, #141414);
+@ColorFeedbackError80: var(--ColorFeedbackError80, #660014);
+@ColorFeedbackError50: var(--ColorFeedbackError50, #f50031);
+@ColorFeedbackError20: var(--ColorFeedbackError20, #fee6ea);
+@ColorFeedbackWarning80: var(--ColorFeedbackWarning80, #7d2f08);
+@ColorFeedbackWarning50: var(--ColorFeedbackWarning50, #f06d0f);
+@ColorFeedbackWarning20: var(--ColorFeedbackWarning20, #fef0e7);
+@ColorFeedbackSuccess80: var(--ColorFeedbackSuccess80, #135610);
+@ColorFeedbackSuccess50: var(--ColorFeedbackSuccess50, #25ab21);
+@ColorFeedbackSuccess20: var(--ColorFeedbackSuccess20, #e9f7e9);
+@DarkPrimary60: var(--DarkPrimary60, #7f7ffb);
+
+////////////////////////////////////Shadow////////////////////////////////////
+@ShadowS: var(--ShadowS, 0px 4px 16px rgba(0, 0, 0, 0.08));
+@ShadowM: var(--ShadowM, 0px 4px 16px rgba(0, 0, 0, 0.16));
+@ShadowL: var(--ShadowL, 0px 4px 16px rgba(0, 0, 0, 0.24));
+
+////////////////////////////////////Elevation////////////////////////////////////
+@Elevation10: var(--Elevation10, 10);
+@Elevation20: var(--Elevation20, 20);
+@Elevation30: var(--Elevation30, 30);
+@Elevation40: var(--Elevation40, 40);
+@Elevation50: var(--Elevation50, 50);
+@Elevation60: var(--Elevation60, 60);
+@Elevation70: var(--Elevation70, 70);
+
+////////////////////////////////////Surfaces////////////////////////////////////
+@SurfacesSoftBg: var(--SurfacesSoftBg, rgba(89, 89, 89, 0.5));
+@SurfacesSoftFilter: var(--SurfacesSoftFilter, blur(24px));
+@SurfacesHeavyBg: var(--SurfacesHeavyBg, rgba(89, 89, 89, 0.5));
+@SurfacesHeavyFilter: var(--SurfacesHeavyFilter, blur(64px));
+@SurfacesOverlayBg: var(--SurfacesOverlayBg, rgba(20, 20, 20, 0.4));
+@SurfacesOverlayFilter: var(--SurfacesOverlayFilter, none);
+@SurfacesBlurredBgBg: var(--SurfacesBlurredBgBg, rgba(20, 20, 20, 0.8));
+
+////////////////////////////////////Rransitions////////////////////////////////////
+@SurfacesBlurredBgFilter: var(--SurfacesBlurredBgFilter, blur(24px));
+@TransitionsDurationRapid: var(--TransitionsDurationRapid, 300ms);
+@TransitionsDurationMedium: var(--TransitionsDurationMedium, 500ms);
+@TransitionsDurationSlow: var(--TransitionsDurationSlow, 1000ms);
+@TransitionsEaseRapid: var(
+  --TransitionsEaseRapid,
+  cubic-bezier(0.35, 0, 0.5, 1)
+);
+@TransitionsEaseQuick: var(
+  --TransitionsEaseQuick,
+  cubic-bezier(0.35, 0, 0.25, 1)
+);
+@TransitionsEaseJoyful: var(
+  --TransitionsEaseJoyful,
+  cubic-bezier(0.35, 1.3, 0.3, 1)
+);
+@TransitionsEaseEntrance: var(
+  --TransitionsEaseEntrance,
+  cubic-bezier(0, 0, 0.1, 1)
+);
+@TransitionsEaseExit: var(--TransitionsEaseExit, cubic-bezier(0.35, 0, 0.8, 1));
+@TransitionsEaseJoyfulentrance: var(
+  --TransitionsEaseJoyfulentrance,
+  cubic-bezier(0.15, 1.3, 0.3, 1)
+);
+@TransitionsEaseJoyfulexit: var(
+  --TransitionsEaseJoyfulexit,
+  cubic-bezier(0.7, -0.1, 0.6, 0.1)
+);
+
+//////////////////////////////////// spacing and aspect ratio ////////////////////////////////////
+@SpacingBase: var(--SpacingBase, 1rem);
+@SpacingXxs: var(--SpacingXxs, calc(@SpacingBase * 0.25));
+@SpacingXs: var(--SpacingXs, calc(@SpacingBase * 0.5));
+@SpacingS: var(--SpacingS, calc(@SpacingBase * 0.75));
+@SpacingM: var(--SpacingM, calc(@SpacingBase * 1.5));
+@SpacingL: var(--SpacingL, calc(@SpacingBase * 2));
+@SpacingXl: var(--SpacingXl, calc(@SpacingBase * 2.5));
+@SpacingXxl: var(--SpacingXxl, calc(@SpacingBase * 3));
+@SpacingHuge: var(--SpacingHuge, calc(@SpacingBase * 4));
+@SpacingMassive: var(--SpacingMassive, calc(@SpacingBase * 5));
+@ValMaxWidth: var(--ValMaxWidth, 1184px);
+@ValMaxWidthNarrow: var(--ValMaxWidthNarrow, 784px);
+@OpacityDisabled: var(--OpacityDisabled, 0.4);
+@SpacingLayout: var(--SpacingLayout, @SpacingXxl);
+@SpacingLayoutMaxWidthMargin: var(
+  --SpacingLayoutMaxWidthMargin,
+  @SpacingLayout
+);
+@BackdropFilter: var(--BackdropFilter, blur(5px) contrast(0.8));
+@AspectRatioWide: var(--AspectRatioWide, 16/9);
+@AspectRatioLandscape: var(--AspectRatioLandscape, 4/3);
+@AspectRatioSquare: var(--AspectRatioSquare, 1);
+@AspectRatio-portrait: var(--AspectRatio-portrait, 4/5);
+
+//////////////////////////////////// Radius ////////////////////////////////////
+@RadiusSmall: var(--RadiusSmall, 4px);
+@RadiusMedium: var(--RadiusMedium, 8px);
+@RadiusLarge: var(--RadiusLarge, 16px);
+@RadiusXl: var(--RadiusXl, 24px);
+@RadiusXxl: var(--RadiusXxl, 32px);
+
+//////////////////////////////////// Logo watermark ////////////////////////////////////
+@RadiusPill: var(--RadiusPill, 250px);
+@LogoSize: var(--LogoSize, @SpacingXl);
+@LogoWordmarkSpacing: var(--LogoWordmarkSpacing, 5px);
+@WordmarkSizeConjested: var(--WordmarkSizeConjested, 25px);
+@WordmarkSize: var(--WordmarkSize, calc(1rem * 1.875));
+
+@InactiveFieldBorder: var(--InactiveFieldBorder, rgba(0, 0, 0, 0.65));
+@ActiveFieldBorder: var(--ActiveFieldBorder, #000093);
+@LabelColor: (--LabelColor, rgba(0, 0, 0, 0.65));
+@GrayText: (--GrayText, rgba(0, 0, 0, 0.65));
+
+@PrimaryGrey80: var(--PrimaryGrey80, rgba(0, 0, 0, 0.65));
+
+@DisabledOpacity: var(--disabled-opacity, 50%);
+
+@TableBorderWidth: var(--table-border-width, 1px);
+
