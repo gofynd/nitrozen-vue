@@ -1,5 +1,11 @@
 .DS_Store
 node_modules
+/node_modules
+package-lock.json
+.DS_Store
+coverage
+.vscode
+src/assets/svgs
 
 # local env files
 .env.local
