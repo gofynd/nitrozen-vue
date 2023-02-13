@@ -2,7 +2,7 @@
   <transition name="nitrozen-badge">
     <div class="nitrozen-badge" :class="[addClass]">
       <nitrozen-icon v-if="icon" :name="icon" :class="[addClass]" :size="getIconSize"/>
-      <span>
+      <span class="nitrozen-badge-text">
         <slot />
       </span>
     </div>
@@ -43,6 +43,10 @@ export default {
       type: String,
       default: ''
     },
+    rounded: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     addClass() {
@@ -91,6 +95,9 @@ export default {
       if(this.icon){
         className += ` nitrozen-badge-icon nitrozen-badge-icon-${this.state}`
       }
+      if(this.rounded){
+        className += ` nitrozen-badge-rounded`
+      }
       return className;
     },
     getIconSize(){
@@ -108,6 +115,10 @@ export default {
 <style lang="less">
 @import "./../../base/base.less";
 
+.nitrozen-badge-text{
+  margin: 0 0.5rem;
+}
+
 .nitrozen-border-primary {
   border: 0.1rem solid @PrimaryColor;
 }
@@ -124,7 +135,6 @@ export default {
 }
 
 .nitrozen-badge-icon {
-  margin-right: 0.8rem;
   &-info svg path {
     fill: @PrimaryColor;
     color: @PrimaryColor;
@@ -236,6 +246,9 @@ export default {
     padding: 0.4rem 0.8rem;
     line-height: 2.4rem;
     letter-spacing: -0.005em;
+  }
+  &-rounded {
+    border-radius: 0.8rem;
   }
 }
 </style>
