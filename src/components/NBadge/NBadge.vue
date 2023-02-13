@@ -1,15 +1,36 @@
 <template>
   <transition name="nitrozen-badge">
     <div class="nitrozen-badge" :class="[addClass]">
-      <slot />
+      <nitrozen-icon v-if="icon" :name="icon" :class="[addClass]" :size="getIconSize"/>
+      <span>
+        <slot />
+      </span>
     </div>
   </transition>
 </template>
 
 <script>
+import NIcon from '../NIcon'
 export default {
   name: "nitrozen-badge",
+  components: {
+    'nitrozen-icon': NIcon
+  },
   props: {
+    size: {
+      type: String,
+      default: 'medium',
+      validator(value){
+        return ['small', 'medium', 'large'].includes(value)
+      }
+    },
+    kind: {
+      type: String,
+      default: 'normal',
+      validator(value){
+        return ['normal', 'service'].includes(value)
+      }
+    },
     state: {
       type: String,
       default: "none"
@@ -17,7 +38,11 @@ export default {
     fill: {
       type: Boolean,
       default: false
-    }
+    },
+    icon: {
+      type: String,
+      default: ''
+    },
   },
   computed: {
     addClass() {
@@ -49,7 +74,32 @@ export default {
       if (this.fill) {
         className += "-fill";
       }
+      switch (this.size) {
+        case "small":
+          className += " nitrozen-badge-small";
+          break;
+        case "medium":
+          className += " nitrozen-badge-medium";
+          break;
+        case "large":
+          className += " nitrozen-badge-large";
+          break;
+        default:
+          className += " nitrozen-badge-medium";
+          break;
+      }
+      if(this.icon){
+        className += ` nitrozen-badge-icon nitrozen-badge-icon-${this.state}`
+      }
       return className;
+    },
+    getIconSize(){
+      let iconSize = {
+        'small': 9,
+        'medium': 14,
+        'large': 18
+      }
+      return iconSize[this.size]
     }
   }
 };
@@ -58,82 +108,134 @@ export default {
 <style lang="less">
 @import "./../../base/base.less";
 
+.nitrozen-border-primary {
+  border: 0.1rem solid @PrimaryColor;
+}
+
+.nitrozen-border-secondary-disable {
+  border: 0.1rem solid @SecondaryDisabledColor;
+}
+
+.nitrozen-vertical-horizontal-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.nitrozen-badge-icon {
+  margin-right: 0.8rem;
+  &-info svg path {
+    fill: @PrimaryColor;
+    color: @PrimaryColor;
+  }
+  &-success svg path {
+    color: @SuccessColor;
+    fill: @SuccessColor;
+  }
+  &-error svg path {
+    color: @ErrorColor;
+    fill: @ErrorColor;
+  }
+  &-default svg path {
+    color: @Zambezi;
+    fill: @Zambezi;
+  }
+  &-warn svg path {
+    fill: @WarningColor;
+    color: @WarningColor;
+  }
+  &-disable svg path {
+    fill: @LabelColor;
+    color: @LabelColor;
+  }
+}
+
+
+
 .nitrozen-badge {
-  height: 16px;
-  padding: 4px 8px;
-  display: inline-block;
+  height: 1.6rem;
+  padding: 0.4rem 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
   cursor: default;
-  border-radius: 2px;
-  border: 1px solid @LabelColor;
+  border-radius: 0.4rem;
   color: @WhiteColor;
-  font-size: @BaseFontSize;
+  font-size: @BaseFontSize + 2;
   white-space: nowrap;
   font-family: @PrimaryFont;
-  line-height: 18px;
-  text-transform: uppercase;
+  line-height: 1.8rem;
+  text-align: center;
 
   &:focus {
     outline: none;
   }
 
   &.nitrozen-badge-default {
-    border: 1px solid @LabelColor;
-    color: @LabelColor;
+    border: 0.1rem solid @Zambezi;
+    color: @Zambezi;
   }
 
   &.nitrozen-badge-info {
-    border: 1px solid @SecondaryColor;
-    color: @SecondaryColor;
+    .nitrozen-border-primary();
+    color: @PrimaryColor;
   }
 
   &.nitrozen-badge-success {
-    border: 1px solid @SuccessColor;
+    border: 0.1rem solid @SuccessColor;
     color: @SuccessColor;
   }
-
   &.nitrozen-badge-warn {
-    border: 1px solid @WarningColor;
-    color: @WarningColor;
+    border: 0.1rem solid @ColorFeedbackWarning20;
+    color: @ColorFeedbackWarning80;
   }
-
   &.nitrozen-badge-error {
-    border: 1px solid @ErrorColor;
+    border: 0.1rem solid @ErrorColor;
     color: @ErrorColor;
   }
-
   &.nitrozen-badge-disable {
-    border: 1px solid @DisabledColor;
-    color: @DisabledColor;
+    border: 0.1rem solid @LabelColor;
+    color: @LabelColor;
   }
-
   &.nitrozen-badge-default-fill {
-    background: @LabelColor;
-    border: 1px solid @LabelColor;
+    background: @ColorPrimaryGrey20;
+    color: @JDSDefaultColor;
   }
-
   &.nitrozen-badge-info-fill {
-    background: @SecondaryColor;
-    border: 1px solid @SecondaryColor;
+    background: @PrimaryColor;
+    .nitrozen-border-primary();
   }
-
   &.nitrozen-badge-success-fill {
-    background: @SuccessColor;
-    border: 1px solid @SuccessColor;
+    background: @ColorFeedbackSuccess20;
+    color: @ColorFeedbackSuccess80;
   }
-
   &.nitrozen-badge-warn-fill {
-    background: @WarningColor;
-    border: 1px solid @WarningColor;
+    background: @ColorFeedbackWarning20;
+    color: @ColorFeedbackWarning80;
   }
-
   &.nitrozen-badge-error-fill {
-    background: @ErrorColor;
-    border: 1px solid @ErrorColor;
+    background: @ColorFeedbackError20;
+    color: @ColorFeedbackError50;
   }
-
   &.nitrozen-badge-disable-fill {
-    background: @DisabledColor;
-    border: 1px solid @DisabledColor;
+    background: @ColorPrimaryGrey40;
+    color: @JDSDefaultColor;
+  }
+  &.nitrozen-badge-small {
+    font-size: @BaseFontSize + 2;
+    line-height: 1.6rem;
+    letter-spacing: -0.005em;
+  }
+  &.nitrozen-badge-medium {
+    font-size: @BaseFontSize + 4;
+  }
+  &.nitrozen-badge-large {
+    font-size: @BaseFontSize + 8;
+    padding: 0.4rem 0.8rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.005em;
   }
 }
 </style>
