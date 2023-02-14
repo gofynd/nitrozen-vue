@@ -27,7 +27,6 @@ export default {
     },
     computed: {
         getSVG() {
-            console.log(this.$props)
             return icons[this.$props.name];
         },
         viewBoxSize(){
