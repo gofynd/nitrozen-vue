@@ -66,8 +66,8 @@ const Template = (args, {argTypes}) => ({
     props: Object.keys(argTypes),
     template: `
         <div>
-            <nitrozen-alert v-bind="$props">
-                This is an alert
+            <nitrozen-alert v-bind="$props" classNames="my-alert">
+                This is an informational alert
             </nitrozen-alert> 
         </div>
     `
