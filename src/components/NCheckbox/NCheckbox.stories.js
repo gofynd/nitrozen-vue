@@ -43,6 +43,14 @@ export default {
       control: { type: 'boolean' },
       default: false,
     },
+    inputStyle: {
+      control: { type: 'object' },
+      default: {},
+    },
+    labelStyle: {
+      control: { type: 'object' },
+      default: {},
+    },
   },
 };
 
@@ -87,4 +95,6 @@ CheckBox.args = {
   showIcon: false,
   isIndeterminate: false,
   disabled: false,
+  inputStyle:{},
+  labelStyle:{}
 };

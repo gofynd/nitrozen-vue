@@ -18,7 +18,7 @@
       :disabled="disabled"
       :name="name"
       :class="['n-checkbox-input', className]"
-      :style="style"
+      :style="inputStyle"
     />
     <slot />
     <div v-if="showIcon" class="n-checkbox-icon" :data-testid="`${id}-icon`">
@@ -77,7 +77,7 @@ export default {
     },
     stateMessage: { type: String, default: '' },
     isIndeterminate: { type: Boolean, default: false },
-    style: {},
+    inputStyle: {},
     labelStyle: {},
   },
   data() {
