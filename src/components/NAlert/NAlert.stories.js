@@ -87,8 +87,115 @@ const Template = (args, {argTypes}) => ({
     `
 });
 
+/**
+ * An alert without a button
+ */
 export const ButtonLessAlert = Template.bind({});
 ButtonLessAlert.args = {
     displayButton: false
 };
 ButtonLessAlert.storyName = 'Alert without button';
+
+/**
+ * An alert with a button
+ */
+export const ButtonAlert = Template.bind({});
+ButtonAlert.args = {
+    buttonText: "Accept",
+    buttonType: "default",
+    displayButton: true
+};
+ButtonAlert.storyName = "Alert with button";
+
+/**
+ * An alert with a link button
+ */
+export const ButtonLink = Template.bind({});
+ButtonLink.args = {
+    buttonType: "link",
+    displayButton: true,
+    href: "https://www.google.com",
+    linkText: "Next"
+};
+ButtonLink.storyName = "Alert with link";
+
+/**
+ * An alert with full width and without a button
+ */
+export const AlertFullWidth = Template.bind({});
+AlertFullWidth.args = {
+    displayButton: false,
+    fullWidth: true
+};
+AlertFullWidth.storyName = "Alert without button and with full width";
+
+/**
+ * An alert without a button and without a full width (width set to auto)
+ */
+export const AlertAutoWidth = Template.bind({});
+AlertAutoWidth.args = {
+    displayButton: false,
+    fullWidth: false
+};
+AlertAutoWidth.storyName = "Alert without button and without full width";
+
+/**
+ * An alert with a set width
+ */
+export const AlertSetWidth = Template.bind({});
+AlertSetWidth.args = {
+    alertWidth: "45%",
+    displayButton: false,
+    fullWidth: false
+};
+AlertSetWidth.storyName = "Alert without button and with a set width";
+
+/**
+ * An alert with a button and auto width
+ */
+export const ButtonAlertAutoWidth = Template.bind({});
+ButtonAlertAutoWidth.args = {
+    buttonType: "button",
+    buttonText: "Click",
+    displayButton: true,
+    fullWidth: false
+};
+ButtonAlertAutoWidth.storyName = "Alert with button and without full width";
+
+/**
+ * An extended alert without a button
+ */
+export const ButtonLessExtendedAlert = Template.bind({});
+ButtonLessExtendedAlert.args = {
+    extendedAlert: true
+};
+ButtonLessExtendedAlert.storyName = "Extended Alert without button";
+
+/**
+ * An extended alert with a button
+ */
+export const ButtonExtendedAlert = Template.bind({});
+ButtonExtendedAlert.args = {
+    buttonText: 'Click',
+    displayButton: true,
+    extendedAlert: true
+};
+ButtonExtendedAlert.storyName = "Extended Alert with button";
+
+/**
+ * An alert with a loader
+ */
+export const LoaderAlert = Template.bind({});
+LoaderAlert.args = {
+    loader: true
+};
+LoaderAlert.storyName = "Alert with loader";
+
+/**
+ * An alert with custom class-name
+ */
+export const AlertCustomClass = Template.bind({});
+AlertCustomClass.args = {
+    className: "nitrozen-custom-class",
+};
+AlertCustomClass.storyName = "Alert with a custom classname";

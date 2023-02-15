@@ -13,7 +13,7 @@
                 width: componentWidth,
                 height: extendedAlert ? 'auto' : '48px'
             }">
-            <div class="n-alert-content">
+            <div class="n-alert-content" :class="extendedAlert && 'n-alert-extended'">
                 <div class="n-alert-icon-text-wrapper">
                     <img src="./../../assets/loader.gif" v-if="loader" class="n-alert-loader" />
                     <nitrozen-icon 
@@ -23,6 +23,26 @@
                         :size="26.67" />
                     <div className="n-alert-label-text" v-if="labelText">{{labelText}}</div>
                     <slot></slot>
+                </div>
+
+                <div class="n-alert-button-container" v-if="displayButton && !loader">
+                    <button 
+                        v-if="buttonType === 'default' || buttonType === 'button'"
+                        class="n-alert-button"
+                        :class="[classes.button]"
+                        @click="onButtonClick"
+                    >
+                        {{ buttonText }}
+                    </button>
+                    <a
+                        v-else-if="buttonType === 'link'"
+                        class="n-alert-link"
+                        :class="[classes.buttonLabel]"
+                        @click="onButtonClick"
+                        :href="href"
+                    >
+                        {{ linkText || buttonText || "Click" }}
+                    </a>
                 </div>
             </div>
         </div>
@@ -124,10 +144,24 @@ export default {
     },
     methods: {
         /**
+         * Method to handle click of the button.
+         * The function will simply emit the native event with the
+         * key name 'click'.
+         * 
+         * @author Rushabh Mulraj Shah
+         * @since 0.0.42
+         * @param {Object} event The native event fired by the browser.
+         */
+        onButtonClick(event) {
+            this.$emit('click', event);
+        },
+
+        /**
          * Method to set the classnames based on the state provided in the props
          * 
          * @author Rushabh Mulraj Shah
          * @since 0.0.42
+         * @param {string} state The state property received as a prop
          */
         setClasses(state) {        
             switch(state) {
@@ -174,6 +208,7 @@ export default {
          * 
          * @author Rushabh Mulraj Shah
          * @since 0.0.42
+         * @param {string} state The state property received as a prop
          */
         setIcon(state) {
             if(state !== undefined) {
@@ -226,6 +261,10 @@ export default {
     &.n-alert-info {
         background: @ColorPrimary20;
         border: 0.1rem solid @ColorPrimary50;
+
+        .n-alert-button {
+            background: @ColorPrimary50;
+        }
     }
 
     &.n-alert-success {
@@ -255,6 +294,18 @@ export default {
         column-gap: 8rem;
         width: 100%;
         align-items: center;
+
+        &.n-alert-extended {
+            flex-direction: column;
+            align-items: unset;
+            justify-content: center;
+            row-gap: 1.2rem;
+
+            .n-alert-button-container {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
     }
 
     .n-alert-icon-text-wrapper {
@@ -265,6 +316,59 @@ export default {
 
     .n-alert-loader {
         height: 2.4rem;
+    }
+
+    .n-alert-button-container {
+        .n-alert-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25rem;
+            padding: 0.4rem 1.2rem;
+            color: @WhiteColor;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+
+            &:disabled {
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+
+            &.n-alert-button-success {
+                background-color: @SuccessColor;
+            }
+
+            &.n-alert-button-warn {
+                background-color: @ColorFeedbackWarning50;
+            }
+
+            &.n-alert-button-error {
+                background-color: @ColorFeedbackError50;
+            }
+        }
+
+        .n-alert-link {
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
+
+            &.n-alert-button-link-info {
+                color: @ColorPrimary50;
+            }
+
+            &.n-alert-button-link-success {
+                color: @SeaGreen;
+            }
+
+            &.n-alert-button-link-warn {
+                color: @WarningColor;
+            }
+
+            &.n-alert-button-link-error {
+                color: @ErrorColor;
+            }
+        }
     }
 }
 </style>
