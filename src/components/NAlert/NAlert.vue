@@ -21,6 +21,7 @@
                         :color="iconColor" 
                         :name="alertIcon" 
                         :size="26.67" />
+                    <div className="n-alert-label-text" v-if="labelText">{{labelText}}</div>
                     <slot></slot>
                 </div>
             </div>
