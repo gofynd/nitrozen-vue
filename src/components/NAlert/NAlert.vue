@@ -7,20 +7,24 @@
                 classNames,
                 fullWidth && 'n-alert-full-width',
                 buttonType === 'link' && 'n-alert-link-button-container',
-                loader && 'n-alert-loader-container'
+                loader && 'n-alert-loader-container',
+                alertWidth && 'n-alert-custom-width',
+                isAlertXS && 'n-alert-xs'
             ]"
             :style="{
                 width: componentWidth,
-                height: extendedAlert ? 'auto' : '48px'
+                height: extendedAlert ? 'auto' : 'fit-content'
             }">
             <div class="n-alert-content" :class="extendedAlert && 'n-alert-extended'">
                 <div class="n-alert-icon-text-wrapper">
-                    <img src="./../../assets/loader.gif" v-if="loader" class="n-alert-loader" />
-                    <nitrozen-icon 
-                        v-else
-                        :color="iconColor" 
-                        :name="alertIcon" 
-                        :size="26.67" />
+                    <div class="n-alert-icon">
+                        <img src="./../../assets/loader.gif" v-if="loader" class="n-alert-loader" />
+                        <nitrozen-icon 
+                            v-else
+                            :color="iconColor" 
+                            :name="alertIcon" 
+                            :size="26.67" />
+                    </div>
                     <div className="n-alert-label-text" v-if="labelText">{{labelText}}</div>
                     <slot></slot>
                 </div>
@@ -140,6 +144,17 @@ export default {
         },
         iconColor() {
             return ICON_COLORS[this.state];
+        },
+        isAlertXS() {
+            if(
+                this.alertWidth && 
+                (
+                    this.alertWidth < '25%' || 
+                    this.alertWidth < '200px' ||
+                    this.alertWidth < '20rem'
+                )
+            ) return true;
+            else return false;
         }
     },
     methods: {
@@ -231,6 +246,7 @@ export default {
     align-items: center;
     padding: 1rem;
     gap: 0.8rem;
+    min-height: 4.8rem;
     cursor: default;
     border-radius: 1.6rem;
     border: 0.1rem solid @LabelColor;
@@ -287,6 +303,19 @@ export default {
         border: 0.1rem solid @ColorPrimary50;
     }
 
+    &.n-alert-custom-width {
+        .n-alert-content {
+            column-gap: 0.2rem;
+        }
+    }
+
+    &.n-alert-xs {
+        .n-alert-content {
+            flex-direction: column !important;
+            row-gap: 0.8rem;
+        }
+    }
+
     .n-alert-content {
         display: flex;
         flex-direction: row;
@@ -312,6 +341,11 @@ export default {
         display: flex;
         align-items: center;
         column-gap: 0.4rem;
+
+        .n-alert-icon {
+            height: 26.6px !important;
+            width: 26.6px !important;
+        }
     }
 
     .n-alert-loader {
