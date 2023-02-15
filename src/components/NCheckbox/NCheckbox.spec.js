@@ -10,6 +10,7 @@ describe('Checkbox Component', () => {
     const _input = jest.fn();
 
     const wrapper = mount(NCheckbox, {
+        components:{NIcon},
         slots:{
             default: 'Twitter',
             icon: `<template><NIcon name='twitter' color='#2e2e2e'/></template>`
@@ -29,9 +30,9 @@ describe('Checkbox Component', () => {
       },
     });
 
-    const span = wrapper.find(`span`);
-    const input = wrapper.find(`input`);
-    const icon = wrapper.find(`n-checkbox-icon`);
+    const span = wrapper.findComponent(`span`);
+    const input = wrapper.findComponent(`input`);
+    const icon = wrapper.findComponent(`n-checkbox-icon`);
     expect(wrapper.element.className).toContain('n-checkbox-container');
     expect(wrapper.element.className).not.toContain(
       'n-checkbox-container-disabled'
