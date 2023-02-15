@@ -1,6 +1,6 @@
 /**
- * This file is for storing variables that will be used
- * throughout the alert component.
+ * This file is for storing state variables that will be 
+ * used throughout the alert component.
  * This is to ensure that there are no spelling mistakes
  * or discrepencies while coding the component.
  * Furthermore, any new state or modification to the existing

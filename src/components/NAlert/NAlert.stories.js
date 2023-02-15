@@ -65,9 +65,23 @@ const Template = (args, {argTypes}) => ({
     components: { NitrozenAlert },
     props: Object.keys(argTypes),
     template: `
-        <div>
+        <div 
+            class="main-div space-between"
+            style="display:flex; justify-content:space-evenly; flex-wrap:wrap; gap:0.4em;">
             <nitrozen-alert v-bind="$props" classNames="my-alert">
-                This is an informational alert
+                This is a stateless (default) alert. Any change in the controls below will change this alert.
+            </nitrozen-alert> 
+            <nitrozen-alert v-bind="$props" state="error">
+                This is an error alert.
+            </nitrozen-alert> 
+            <nitrozen-alert v-bind="$props" state="info">
+                This is an informational alert.
+            </nitrozen-alert> 
+            <nitrozen-alert v-bind="$props" state="success">
+                This is a success alert.
+            </nitrozen-alert> 
+            <nitrozen-alert v-bind="$props" state="warn">
+                This is a warning alert.
             </nitrozen-alert> 
         </div>
     `

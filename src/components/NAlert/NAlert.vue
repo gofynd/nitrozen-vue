@@ -8,8 +8,22 @@
                 fullWidth && 'n-alert-full-width',
                 buttonType === 'link' && 'n-alert-link-button-container',
                 loader && 'n-alert-loader-container'
-            ]">
-            <slot></slot>
+            ]"
+            :style="{
+                width: componentWidth,
+                height: extendedAlert ? 'auto' : '48px'
+            }">
+            <div class="n-alert-content">
+                <div class="n-alert-icon-text-wrapper">
+                    <img src="./../../assets/loader.gif" v-if="loader" class="n-alert-loader" />
+                    <nitrozen-icon 
+                        v-else
+                        :color="iconColor" 
+                        :name="alertIcon" 
+                        :size="26.67" />
+                    <slot></slot>
+                </div>
+            </div>
         </div>
     </transition>
 </template>
@@ -17,16 +31,18 @@
 <script>
 /* Variables and constants imports */
 import * as STATES from './states';
+import {  
+    ICON_COLORS, ICON_NAMES
+} from './constants';
 
-const iconTypes = {
-    [STATES.ERROR]: 'alert-error',
-    [STATES.INFO]: 'alert-info',
-    [STATES.SUCCESS]: 'alert-success',
-    [STATES.WARN]: 'alert-warn'
-};
+/* Component imports */
+import NIcon from './../NIcon/NIcon.vue';
 
 export default {
     name: 'nitrozen-alert',
+    components: {
+        'nitrozen-icon': NIcon
+    },
     props: {
         alertWidth: {
             type: String,
@@ -57,7 +73,7 @@ export default {
         },
         fullWidth: {
             type: Boolean,
-            default: false
+            default: true
         },
         href: {
             type: String,
@@ -83,21 +99,27 @@ export default {
             }
         }
     },
-    data() {
-        return {
-            alertIcon: iconTypes[STATES.INFO],
-            classes: {
-                button: '',
-                buttonLabel: '',
-                container: '',
-                icon: ''
-            },
-            componentWidth: 'fit-content',
+    computed: {
+        classes() {
+            return this.setClasses(this.state);
+        },
+        componentWidth() {
+            if(this.alertWidth !== undefined) {
+                return this.alertWidth;
+            } else if(!this.alertWidth && this.fullWidth) {
+                return '100%';
+            } else if(!this.alertWidth && !this.fullWidth) {
+                return 'fit-content';
+            } else {
+                return 'fit-content';
+            }
+        },
+        alertIcon() {
+            return this.setIcon(this.state);
+        },
+        iconColor() {
+            return ICON_COLORS[this.state];
         }
-    },
-    mounted() {
-        this.setClasses();
-        this.setIcon();
     },
     methods: {
         /**
@@ -106,38 +128,43 @@ export default {
          * @author Rushabh Mulraj Shah
          * @since 0.0.42
          */
-        setClasses() {
-            switch(this.state) {
+        setClasses(state) {        
+            switch(state) {
                 case 'error':
-                    this.classes.button = 'n-alert-button-error';
-                    this.classes.buttonLabel = 'n-alert-button-link-error';
-                    this.classes.container = 'n-alert-error';
-                    this.classes.icon = 'n-alert-icon-error';
-                    break;
+                    return {
+                        button: 'n-alert-button-error',
+                        buttonLabel: 'n-alert-button-link-error',
+                        container: 'n-alert-error',
+                        icon: 'n-alert-icon-error'
+                    }
                 case 'info':
-                    this.classes.button = '';
-                    this.classes.buttonLabel = 'n-alert-button-link-info';
-                    this.classes.container = 'n-alert-info';
-                    this.classes.icon = 'n-alert-icon-info';
-                    break;
+                    return {
+                        button: '',
+                        buttonLabel: 'n-alert-button-link-info',
+                        container: 'n-alert-info',
+                        icon: 'n-alert-icon-info'
+                    }
                 case 'success':
-                    this.classes.button = 'n-alert-button-success';
-                    this.classes.buttonLabel = 'n-alert-button-link-success';
-                    this.classes.container = 'n-alert-success';
-                    this.classes.icon = 'n-alert-icon-success';
-                    break;
+                    return {
+                        button: 'n-alert-button-success',
+                        buttonLabel: 'n-alert-button-link-success',
+                        container: 'n-alert-success',
+                        icon: 'n-alert-icon-success'
+                    }
                 case 'warn':
-                    this.classes.button = 'n-alert-button-warn';
-                    this.classes.buttonLabel = 'n-alert-button-link-warn';
-                    this.classes.container = 'n-alert-warn';
-                    this.classes.icon = 'n-alert-icon-warn';
-                    break;
+                    return {
+                        button: 'n-alert-button-warn',
+                        buttonLabel: 'n-alert-button-link-warn',
+                        container: 'n-alert-warn',
+                        icon: 'n-alert-icon-warn'
+                    }
                 default:
-                    this.classes.button = '';
-                    this.classes.buttonLabel = 'n-alert-button-link-info';
-                    this.classes.container = 'n-alert-info';
-                    this.classes.icon = 'n-alert-icon-info';
-                    break;
+                    return {
+                        button: '',
+                        buttonLabel: 'n-alert-button-link-info',
+                        container: 'n-alert-info',
+                        icon: 'n-alert-icon-info'
+                    }
             }
         },
 
@@ -147,9 +174,12 @@ export default {
          * @author Rushabh Mulraj Shah
          * @since 0.0.42
          */
-        setIcon() {
-            if(this.state !== undefined) {
-                this.alertIcon = iconTypes[this.state]; 
+        setIcon(state) {
+            if(state !== undefined) {
+                let selectedState = ICON_NAMES[state];
+                return selectedState !== undefined ? selectedState : ICON_NAMES[STATES.INFO]; 
+            } else {
+                return ICON_NAMES[STATES.INFO];
             }
         }
     }
@@ -162,6 +192,7 @@ export default {
 .n-alert {
     box-sizing: border-box;
     display: flex;
+    align-items: center;
     padding: 1rem;
     gap: 0.8rem;
     cursor: default;
@@ -176,6 +207,8 @@ export default {
     }
 
     &.n-alert-full-width {
+        width: 100%;
+
         .n-alert-label-text,
         .n-alert-text {
             font-size: @BaseFontSize + 6;
@@ -212,6 +245,25 @@ export default {
     &.n-alert-loader-container {
         background: @ColorPrimary20 !important;
         border: 0.1rem solid @ColorPrimary50;
+    }
+
+    .n-alert-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 8rem;
+        width: 100%;
+        align-items: center;
+    }
+
+    .n-alert-icon-text-wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 0.4rem;
+    }
+
+    .n-alert-loader {
+        height: 2.4rem;
     }
 }
 </style>
