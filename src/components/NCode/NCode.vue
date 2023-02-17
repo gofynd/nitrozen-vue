@@ -5,7 +5,7 @@
         {{ label }} {{ required ? '*' : '' }}
         <nitrozen-tooltip
           v-if="tooltip"
-          :tooltipText="tooltipText"
+          :tooltipText="tooltip"
           :icon="toolTipIcon"
           :position="'right'"
         />
@@ -21,7 +21,7 @@
         :type="type"
         @input="(e) => onInputChange(e, index)"
         :placeholder="'0'"
-        :class="`n-code-input-field ${
+        :class="`n-code-input-field code-input-${codeId}-${index} ${
           validationState && !hideValidation
             ? `n-code-input-border-${validationState}`
             : `n-code-input-border`
