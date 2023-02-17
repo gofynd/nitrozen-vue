@@ -1,5 +1,5 @@
-import Vue from 'vue';
 import NitrozenCode from '.';
+import NitrozenUuid from './../../utils/NUuid';
 
 // Create a wrapper component here using NitrozenCodeComponent
 
@@ -14,12 +14,41 @@ export default {
       default: 4,
     },
     label: {
-      control: 'string',
+      control: 'text',
       description: 'Label for the input field',
     },
     codeId: {
-      control: 'string',
+      control: 'text',
       description: 'Unique code id. Important to be sent',
+    },
+    type: {
+      control: 'select',
+      options: ['text', 'password'],
+      description: 'Type of the text fields in the component',
+    },
+    validationState: {
+      control: 'select',
+      options: ['success', 'warning', 'error', 'default'],
+      default: 'default',
+      description: 'validationState for the input fields',
+    },
+    hideValidation: {
+      control: 'boolean',
+    },
+    getCode: {
+      control: 'function',
+    },
+    toolTipIcon: {
+      control: 'text',
+      default: '',
+    },
+    tooltip: {
+      control: 'text',
+      default: '',
+    },
+    id: {
+      control: 'text',
+      default: 'nitrozen-input' + NitrozenUuid(),
     },
   },
 };
@@ -40,4 +69,6 @@ Code.args = {
   required: true,
   getCode: () => {},
   label: 'Enter your OTP',
+  hideValidation: true,
+  id: '',
 };

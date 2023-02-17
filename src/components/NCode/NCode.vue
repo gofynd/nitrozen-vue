@@ -3,6 +3,12 @@
     <div class="n-code-label-container">
       <label class="n-code-label">
         {{ label }} {{ required ? '*' : '' }}
+        <nitrozen-tooltip
+          v-if="tooltip"
+          :tooltipText="tooltipText"
+          :icon="toolTipIcon"
+          :position="'right'"
+        />
       </label>
     </div>
     <div class="n-code-field-container">
@@ -26,6 +32,11 @@
       />
     </div>
     <div class="n-code-underinfo">
+      <nitrozen-validation
+        :isHidden="hideValidation"
+        :validationState="validationState"
+        :label="validationLabel"
+      />
       <span class="n-helper-text" v-if="helperText">{{ helperText }}</span>
     </div>
   </div>
@@ -33,9 +44,15 @@
 
 <script>
 import NitrozenUuid from './../../utils/NUuid';
+import NitrozenValidation from './../NValidation';
+import NitrozenTooltip from './../NTooltip';
 
 export default {
   name: 'nitrozen-code',
+  components: {
+    'nitrozen-validation': NitrozenValidation,
+    'nitrozen-tooltip': NitrozenTooltip,
+  },
   data() {
     return {
       codeArr: [],
@@ -66,12 +83,6 @@ export default {
     },
     validationLabel: {
       type: String,
-    },
-    validationClass: {
-      type: String,
-    },
-    validationStyle: {
-      type: Object,
     },
     helperText: {
       type: String,
