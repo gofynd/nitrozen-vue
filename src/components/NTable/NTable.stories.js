@@ -79,6 +79,9 @@ export default {
         getSingle: {
             action: "selected",
             
+        },
+        rowClick: {
+          action: "Row Clicked"
         }
 
     }
@@ -88,7 +91,7 @@ const Template = (args, {argTypes}) => ({
     components: {NitrozenTable},
     props: Object.keys(argTypes),
     template: `<div> 
-    <nitrozen-table @click="click" @getAllItems="handle" @getSingleChecked="getSingle" v-bind="$props"/>
+    <nitrozen-table @click="click" @onRowClick="rowClick" @getAllItems="handle" @getSingleChecked="getSingle" v-bind="$props"/>
     <div/>`
 })
 

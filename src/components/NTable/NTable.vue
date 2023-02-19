@@ -3,41 +3,24 @@
     <table class="n-table">
       <thead class="n-table-top">
         <tr>
-          <th
-            v-if="checkAble"
-            :style="{ backgroundColor: `${headerBackground}` }"
-            :class="[condensed && 'n-table-condensed']"
-            class="n-table-head-data"
-          >
-            <n-checkbox
-              :value="allChecked"
-              @change="getAllSelectedItems($event, tableRow)"
-              class="table-checkbox"
-            />
+          <th v-if="checkAble" :style="{ backgroundColor: `${headerBackground}` }"
+            :class="[condensed && 'n-table-condensed']" class="n-table-head-data">
+            <n-checkbox :value="allChecked" @change="getAllSelectedItems($event, tableRow)" class="table-checkbox" />
           </th>
-          <th
-            :style="{
-              backgroundColor: `${headerBackground}`,
-              width: headerItem.width ? headerItem.width : 'auto',
-            }"
-            :class="[condensed && 'n-table-condensed']"
-            class="n-table-head-data"
-            v-for="(headerItem, headerIndex) in tableHeader"
-            :key="headerIndex"
-          >
+          <th :style="{
+            backgroundColor: `${headerBackground}`,
+            width: headerItem.width ? headerItem.width : 'auto',
+          }" :class="[condensed && 'n-table-condensed']" class="n-table-head-data"
+            v-for="(headerItem, headerIndex) in tableHeader" :key="headerIndex">
             <div class="n-table-data">
               <div>
                 {{ headerItem.value }}
               </div>
-              <div
-                v-if="headerItem.sortable"
-                @click="sortTableHeader(headerIndex)"
-                :class="[
-                  !clickedHeaderItems.includes(headerIndex)
-                    ? 'n-table-icon-left'
-                    : 'n-table-icon-down',
-                ]"
-              >
+              <div v-if="headerItem.sortable" @click="sortTableHeader(headerIndex)" :class="[
+                !clickedHeaderItems.includes(headerIndex)
+                  ? 'n-table-icon-left'
+                  : 'n-table-icon-down',
+              ]">
                 <slot v-if="customIcons" />
                 <n-icon v-else name="chevron_down" color="#ffff" :size="20" />
               </div>
@@ -46,48 +29,30 @@
         </tr>
       </thead>
       <tbody class="n-body">
-        <tr
-          class="n-table-row"
-          :class="[isZebra && rowIndex % 2 === 1 && 'n-zebra-table']"
-          v-for="(rowItem, rowIndex) in tableRow"
-          :key="rowIndex"
-        >
-          <th
-            v-if="checkAble"
-            class="n-table-body-data"
-            :class="[
-              columnBorder && index !== 0 && 'n-table-left-border',
-              condensed && 'n-table-condensed',
-            ]"
+        <tr class="n-table-row" :class="[isZebra && rowIndex % 2 === 1 && 'n-zebra-table']"
+          v-for="(rowItem, rowIndex) in tableRow" :key="rowIndex"
+          @click="$emit('onRowClick', rowIndex)"
           >
-            <n-checkbox
-              :value="rowItem.isChecked"
-              @change="getCheckedRow($event, rowIndex)"
-              class="table-checkbox"
-            />
+          <th v-if="checkAble" class="n-table-body-data" :class="[
+            columnBorder && index !== 0 && 'n-table-left-border',
+            condensed && 'n-table-condensed',
+          ]" 
+          >
+            <n-checkbox :value="rowItem.isChecked" @change="getCheckedRow($event, rowIndex)" class="table-checkbox" />
           </th>
-          <td
-            @click="$emit('getRowClick', headerIndex)"
-            class="n-table-body-data"
-            :class="[
-              columnBorder && headerIndex !== 0 && 'n-table-left-border',
-              condensed && 'n-table-condensed',
-            ]"
-            v-for="(headerItem, headerIndex) in tableHeader"
-            :key="headerIndex"
-          >
+          <td class="n-table-body-data" :class="[
+            columnBorder && headerIndex !== 0 && 'n-table-left-border',
+            condensed && 'n-table-condensed',
+          ]" v-for="(headerItem, headerIndex) in tableHeader" :key="headerIndex">
             {{ rowItem[headerItem.name] }}
           </td>
         </tr>
       </tbody>
     </table>
-    <footer
-      v-if="isFooter"
-      :class="[!condensed ? 'n-table-footer' : 'n-table-footer-condensed']"
-    >
+    <footer v-if="isFooter" :class="[!condensed ? 'n-table-footer' : 'n-table-footer-condensed']">
       {{ footer }}
     </footer>
-  </div>
+</div>
 </template>
 <script>
 import NIcon from "../NIcon/NIcon.vue";
@@ -228,10 +193,8 @@ export default {
 </script>
 <style scoped lang="less">
 @import "../../base/variable.less";
-@rowfont: 16px;
-
 .n-table-container {
-  border: 1px solid @ColorPrimaryGrey40;
+  border: 0.1rem solid @ColorPrimaryGrey40;
   border-radius: @RadiusMedium;
   overflow: auto;
   font-family: @PrimaryFont;
@@ -245,12 +208,12 @@ export default {
     background-color: @ColorWhite;
 
     .n-table-top {
-      border-radius: 8px;
+      border-radius: 0.8rem;
       color: @WhiteColor;
     }
 
     .n-table-head-data {
-      font-size: @FontMD;
+      font-size: 1.6rem;
       padding: @SpacingM;
       position: relative;
 
@@ -279,7 +242,7 @@ export default {
 
     .n-table-body-data {
       padding: @SpacingM;
-      border-top: 1px solid @ColorPrimaryGrey40;
+      border-top: 0.1rem solid @ColorPrimaryGrey40;
       position: relative;
 
       .table-checkbox {
@@ -290,7 +253,7 @@ export default {
     }
 
     .n-table-left-border {
-      border-left: 1px solid @ColorPrimaryGrey40;
+      border-left: 0.1rem solid @ColorPrimaryGrey40;
     }
 
     .n-zebra-table {
@@ -303,20 +266,20 @@ export default {
   }
 
   .n-table-row {
-    font-size: @rowfont - 2;
+    font-size: 1.4rem;
     overflow: hidden;
   }
 }
 
 .n-table-footer {
   padding: @SpacingM;
-  border-top: 1px solid @ColorPrimaryGrey40;
-  font-size: @rowfont;
+  border-top: 0.1rem solid @ColorPrimaryGrey40;
+  font-size: 1.6rem;
 }
 
 .n-table-footer-condensed {
   padding: @SpacingS;
-  border-top: 1px solid @ColorPrimaryGrey40;
-  font-size: @rowfont - 2;
+  border-top: 0.1rem solid @ColorPrimaryGrey40;
+  font-size: 1.4rem;
 }
 </style>
