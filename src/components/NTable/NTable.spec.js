@@ -116,7 +116,7 @@ describe('Render Table Component', () => {
   it('Should render the checkbox table', () => {
     const wrapper = mount(NTable, {
         propsData:{
-            tabHeader: tabHeader,
+            tableHeader: tabHeader,
             tableRow: tabRow,
             checkAble: true
         }
