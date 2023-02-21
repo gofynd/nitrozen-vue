@@ -1,24 +1,36 @@
 @import "./../../base/base.less";
 .n-input {
-  // margin: 4px 0px 0px 0px;
-  padding: 0 12px;
-  height: 40px;
+  padding: 1.2rem;
   color: @TypographyPrimaryColor;
-  border: 1px solid @BorderColor;
-  border-radius: 3px;
+  border: 0.2rem solid  @ColorSparkleGrey60;
+  border-radius: 1.6rem;
   width: 100%;
   background: @WhiteColor;
   font-family: @PrimaryFont;
   position: relative;
   outline: none;
   box-sizing: border-box;
-  font-size: @BaseFontSize + 2;
+  font-size: 1.6rem;
   -webkit-appearance: none;
   &:focus {
-    border: 1px solid @SecondaryColor;
+    border: 0.2rem solid @ColorPrimary60;
   }
 }
-
+.n-input-underinfo{
+  color: @PrimaryGrey80;
+  margin-left: 1.2rem;
+  margin-top: 0.4rem;
+}
+.n-helper-text{
+    font-weight: 500;
+    text-transform: none;
+    font-size: 1.4rem;
+    letter-spacing: -0.07px;
+    line-height: 1.4285714286;
+    word-wrap: break-word;
+    color: @TypographyPrimaryColor;
+    // margin-top: 0.4rem;
+}
 .n-input-textarea {
   height: 96px;
   line-height: 21px;
@@ -37,6 +49,7 @@
 }
 
 .nitrozen-form-input {
+  font-family: 'JioType';
   outline: none;
   // &:focus {
   //     label{
@@ -49,7 +62,7 @@
 .n-input-label {
   color: @LabelColor;
   font-family: @PrimaryFont;
-  font-size: 12px;
+  font-size: 1.4rem;
   font-weight: 500;
   line-height: 21px;
   display: flex;
@@ -71,27 +84,27 @@
 ::-webkit-input-placeholder {
   /* Edge */
   color: @PlaceholderColor;
-  font-size: 12px;
+  font-size: 1.6rem;
   font-family: @PrimaryFont;
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: @PlaceholderColor;
-  font-size: 12px;
+  font-size: 1.6rem;
   font-family: @PrimaryFont;
 }
 
 ::placeholder {
   color: @PlaceholderColor;
-  font-size: 12px;
+  font-size: 1.6rem;
   font-family: @PrimaryFont;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
   position: relative;
   // right: 10px;
-  font-size: @BaseFontSize + 4px;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
@@ -108,8 +121,8 @@ input[type="search"]::-webkit-search-cancel-button {
 .nitrozen-search-icon {
   z-index: 2;
   position: absolute;
-  left: 9px;
-  top: 12px;
+  left: 1.2rem;
+  top: 1.6rem;
 }
 
 .nitrozen-tooltip-icon {
@@ -127,6 +140,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .n-input-label-container {
   display: flex;
+  margin-left: 1.2rem;
 }
 
 .nitrozen-input-prefix,
