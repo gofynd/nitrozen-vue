@@ -1,13 +1,21 @@
 import NitrozenInput from '.';
-// import * as SVGIcons from '../../assets/svgs';
+import icons from '../../assets/icons.json';
 export default {
   title: 'Components/Input/InputFields',
   component: NitrozenInput,
   argTypes: {
-    // validationState: {
-    //   control: 'select',
-    //   options: ['success', 'error', 'warning', 'default'],
-    // },
+    type: {
+      control: 'select',
+      options: ['text', 'textarea'],
+    },
+    validationState: {
+      control: 'select',
+      options: ['success', 'error', 'warning', 'default'],
+    },
+    validationMessage: {
+      control: 'text',
+      default: '',
+    },
   },
 };
 
@@ -27,11 +35,9 @@ Input.args = {
   type: 'text',
   placeholder: 'Your full name please',
   required: true,
-  showError: true,
   showSearchIcon: false,
   validationState: '',
   validationMessage: '',
-  //   showPrefix: true,
-  //   showSuffix: true,
-  //   prefix: 'abc',
+  showPrefix: true,
+  showSuffix: true,
 };

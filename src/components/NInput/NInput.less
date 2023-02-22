@@ -2,7 +2,7 @@
 .n-input {
   padding: 1.2rem;
   color: @TypographyPrimaryColor;
-  border: 0.2rem solid  @ColorSparkleGrey60;
+ 
   border-radius: 1.6rem;
   width: 100%;
   background: @WhiteColor;
@@ -12,9 +12,21 @@
   box-sizing: border-box;
   font-size: 1.6rem;
   -webkit-appearance: none;
+}
+.n-input-default-border{
+  border: 0.2rem solid  @ColorSparkleGrey60;
   &:focus {
     border: 0.2rem solid @ColorPrimary60;
   }
+}
+.n-success-border{
+  border: 0.2rem solid  @SuccessColor;
+}
+.n-warning-border{
+  border: 0.2rem solid  @WarningColor;
+}
+.n-error-border{
+  border: 0.2rem solid  @ErrorColor;
 }
 .n-input-underinfo{
   color: @PrimaryGrey80;
@@ -32,9 +44,9 @@
     // margin-top: 0.4rem;
 }
 .n-input-textarea {
-  height: 96px;
-  line-height: 21px;
-  padding-top: 6px;
+  height: 9.6rem;
+  line-height: 2.1rem;
+  padding-top: 0.6rem;
 }
 
 .n-input:disabled {
@@ -51,12 +63,6 @@
 .nitrozen-form-input {
   font-family: 'JioType';
   outline: none;
-  // &:focus {
-  //     label{
-  //         color: @SecondaryColor;
-  //         font-weight: 600;
-  //     }
-  // }
 }
 
 .n-input-label {
@@ -64,14 +70,12 @@
   font-family: @PrimaryFont;
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 21px;
+  line-height: 2.1rem;
   display: flex;
   flex: 1;
 }
 
 .n-input-maxlength {
-  // display: block;
-  // float: right;
   display: flex;
   justify-content: flex-end;
   position: relative;
@@ -103,7 +107,6 @@
 
 input[type="search"]::-webkit-search-cancel-button {
   position: relative;
-  // right: 10px;
   font-size: 1.6rem;
   cursor: pointer;
 }
@@ -126,11 +129,14 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .nitrozen-tooltip-icon {
-  margin-left: 5px;
+  margin-left: 0.5rem;
 }
 
 .nitrozen-search-input-padding {
-  padding-left: 35px;
+  padding-left: 3.5rem;
+}
+.nitrozen-search-input-right-padding{
+  padding-right: 3.5rem;
 }
 
 .nitrozen-input-label-div {
@@ -143,14 +149,28 @@ input[type="search"]::-webkit-search-cancel-button {
   margin-left: 1.2rem;
 }
 
-.nitrozen-input-prefix,
+.nitrozen-input-prefix{
+   margin: auto;
+   box-sizing: border-box;
+   color: @TypographyPrimaryColor;
+   z-index: @ZIndex3;
+   left: 1rem;
+   position: absolute;
+}
 .nitrozen-input-suffix {
-  height: 40px;
   margin: auto;
   box-sizing: border-box;
   color: @TypographyPrimaryColor;
-  border-radius: 3px;
-  background-color: @PrefixSuffixBackground;
+  z-index: @ZIndex3;
+  position: absolute;
+  right: 1rem;
+}
+.n-texttype-position{
+  top: 1.6rem;
+  font-size: 1.2rem;
+}
+.n-svg-position{
+  top: 1rem;
 }
 
 .nitrozen-remove-left-border {
@@ -170,11 +190,6 @@ input[type="search"]::-webkit-search-cancel-button {
   position: relative;
 }
 
-.nitrozen-prefix-padding,
-.nitrozen-suffix-padding {
-  padding: 10px;
-  border: 1px solid @BorderColor;
-}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
