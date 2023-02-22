@@ -38,6 +38,4 @@ Input.args = {
   showSearchIcon: false,
   validationState: '',
   validationMessage: '',
-  showPrefix: true,
-  showSuffix: true,
 };
