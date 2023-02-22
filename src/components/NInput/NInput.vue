@@ -30,7 +30,6 @@
       <!-- Prefix -->
       <nitrozen-input-prefix
         v-if="showPrefix"
-        :class="getItemPositionClass('prefix', prefix)"
         v-bind:class="{
           'nitrozen-prefix-padding': !custom,
           'n-texttype-position': typeof prefix === 'string',
