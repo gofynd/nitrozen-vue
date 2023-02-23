@@ -1,6 +1,6 @@
 <template>
     <div v-if="!isHidden" class="n-validation-container" :class="validatorClass">
-        <nitrozen-icon class="n-validator-icon" :color="getValidatorIconColor" :name="validationState" :size="16"/>
+        <nitrozen-icon class="n-validator-icon" :color="getValidatorIconColor" :name="validationState" :size="size"/>
         <span>{{ label }}</span>
     </div>
 </template>
@@ -28,6 +28,10 @@ export default {
         isHidden:{
             type: Boolean,
             default: false
+        },
+        size:{
+            type: Number,
+            default: 16
         }
     },
     computed:{
