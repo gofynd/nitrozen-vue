@@ -1,10 +1,13 @@
 <template>
-  <div v-show="isModalVisible" :id="id">
+  <div  :id="id">
     <transition name="nitrozen-dialog-fade">
       <div class="nitrozen-dialog-backdrop" @click="backdropClick">
+        <!-- :class="{ 'nitrozen-wrapper-width-s': size === 's' }" -->
+        <!-- :class="{ 'nitrozen-dialog-size': size = 's' ? 'nitrozen-wrapper-width-s' : 'nitrozen-wrapper-width-m'}" -->
         <div
-          ref="dialog"
+        ref="dialog"     
           class="nitrozen-dialog"
+          :class="{ 'nitrozen-wrapper-width-s': size === 's' }"
           role="dialog"
           :aria-labelledby="id + '_title'"
           :aria-describedby="id + '_desc'"
@@ -15,13 +18,13 @@
             :id="id + '_title'"
           >
             <slot name="header">
-              {{ title }}
-              <nitrozen-inline
-                v-if="showCloseButton"
-                title="close"
-                @click="close('close')"
-                icon="cross"
-              ></nitrozen-inline>
+             <span class="nitrozen-title"> {{ title }} </span> 
+              <nitrozen-icon v-if="showCloseButton" 
+              class="nitrozen-closebtn"
+              name="close" 
+              color="#000093"
+              @click="close('close')"
+            />
             </slot>
           </header>
           <section class="nitrozen-dialog-body" :id="id + '_desc'">
@@ -30,26 +33,22 @@
           <footer class="nitrozen-dialog-footer">
             <slot name="footer">
               <nitrozen-button
-                v-if="positiveButtonLabel"
+                v-if="kind === 'dialog' || kind === 'acknowledgement'"
                 :theme="`${theme || 'secondary'}`"
-                v-flatBtn
-                class="nitrozen-dialog-footer-button-margin"
-                @click="close(positiveButtonLabel)"
-                >{{ positiveButtonLabel }}</nitrozen-button
-              >
-              <nitrozen-button
-                v-if="neutralButtonLabel"
-                :theme="`${theme || 'secondary'}`"
+                strokeBtn
+                rounded = true
                 class="nitrozen-dialog-footer-button-margin"
                 @click="close(neutralButtonLabel)"
                 >{{ neutralButtonLabel }}</nitrozen-button
               >
               <nitrozen-button
-                v-if="negativeButtonLabel"
+                v-if = "kind === 'dialog'"
                 :theme="`${theme || 'secondary'}`"
-                v-strokeBtn
-                @click="close(negativeButtonLabel)"
-                >{{ negativeButtonLabel }}</nitrozen-button
+                v-flatBtn
+                rounded = true
+                class="nitrozen-dialog-footer-button-margin"
+                @click="close(positiveButtonLabel)"
+                >{{ positiveButtonLabel }}</nitrozen-button
               >
             </slot>
           </footer>
@@ -62,12 +61,14 @@
 import NitrozenUuid from "./../../utils/NUuid";
 import NitrozenButton from "./../NBtn";
 import NitrozenInline from "./../NInline";
+import NIcon from '../NIcon'
 import { flatBtn, strokeBtn } from "./../../directives/index";
 export default {
   name: "nitrozen-dialog",
   components: {
     NitrozenButton,
     NitrozenInline,
+    'nitrozen-icon': NIcon
   },
   directives: {
     flatBtn,
@@ -93,6 +94,20 @@ export default {
     theme: {
       type: String,
     },
+    kind: {
+      type: String,
+      default: 'dialog',
+      validator(value){
+        return ["dialog" , "acknowledgement" , "informational"].includes(value)
+      }
+    },
+    size: {
+      type: String,
+      default: 'm',
+      validator(value){
+        return ['s', 'm'].includes(value)
+      }
+    },
   },
   data: () => {
     return {
@@ -100,9 +115,9 @@ export default {
       dismissible: true,
       isModalVisible: false,
       negativeButtonLabel: false,
-      neutralButtonLabel: "Ok",
-      positiveButtonLabel: false,
-      showCloseButton: false,
+      neutralButtonLabel: "neutral",
+      positiveButtonLabel: "positive",
+      showCloseButton: true,
     };
   },
   methods: {

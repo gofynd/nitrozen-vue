@@ -1,12 +1,12 @@
 "use strict";
 var svgs = {};
-svgs['cross'] = `<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+svgs['cross'] = `<svg width="16px" height="16px" viewBox="0 0 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <desc>Created with sketchtool.</desc>
                 <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Text-fields" transform="translate(-1076.000000, -1612.000000)">
                         <g id="cross-black" transform="translate(1073.000000, 1608.000000)">
                             <rect id="Rectangle" x="0" y="0" width="16" height="16"></rect>
-                            <path d="M4,4 L12,12 M12,4 L4,12" id="Imported-Layers-Copy-6" stroke="#41434C" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4,4 L12,12 M12,4 L4,12" id="Imported-Layers-Copy-6" stroke="#000093" stroke-linecap="round" stroke-linejoin="round"></path>
                         </g>
                     </g>
                 </g>
