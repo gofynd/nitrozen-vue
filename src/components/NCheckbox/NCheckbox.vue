@@ -52,7 +52,7 @@ import NUuid from './../../utils/NUuid';
 export default {
   name: 'n-checkbox',
   props: {
-    id: { type: String, required: true, default: `n-checkbox-${NUuid()}` },
+    id: { type: String, default: `n-checkbox-${NUuid()}` },
     checkboxValue: {
       type: [Number, Array, Object, Boolean, String],
       default: false,

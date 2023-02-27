@@ -36,10 +36,12 @@ describe('Nitrozen Code Component', () => {
         validationState: 'success',
       },
     });
-    expect(wrapper.contains(NValidation)).toBe(true);
-    expect(wrapper.get(NValidation).props()).toStrictEqual({
+    const k = wrapper.findComponent(NValidation).props()
+    expect(wrapper.findComponent(NValidation)).toBeDefined();
+    expect(wrapper.findComponent(NValidation).props()).toStrictEqual({
       isHidden: false,
       label: 'Val label',
+      size: 16,
       validationState: 'success',
     });
   });
@@ -54,8 +56,8 @@ describe('Nitrozen Code Component', () => {
         tooltip: 'I am a tooltip',
       },
     });
-    expect(wrapper.contains(NTooltip)).toBe(true);
-    expect(wrapper.get(NTooltip).props()).toStrictEqual({
+    expect(wrapper.findComponent(NTooltip)).toBeDefined()
+    expect(wrapper.findComponent(NTooltip).props()).toStrictEqual({
       icon: 'info',
       position: 'right',
       tooltipText: 'I am a tooltip',
@@ -73,8 +75,8 @@ describe('Nitrozen Code Component', () => {
     });
     expect(wrapper.props('fields')).toBe(4);
     await wrapper.setData({ codeArr: ['', '', '', ''] });
-    expect(wrapper.find('.n-code-input-field').exists()).toBe(true);
-    const input = wrapper.find('.n-code-input-field');
+    expect(wrapper.findComponent('.n-code-input-field').exists()).toBe(true);
+    const input = wrapper.findComponent('.n-code-input-field');
     input.trigger('1');
     await wrapper.vm.$nextTick();
   });

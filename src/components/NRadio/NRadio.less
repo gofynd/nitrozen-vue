@@ -1,0 +1,164 @@
+@import './../../base/base.less';
+
+.n-radio-group {
+  height: 2.1rem;
+  position: relative;
+
+  input[type='radio']:checked,
+  input[type='radio']:not(:checked) {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  input[type='radio']:checked + label,
+  input[type='radio']:not(:checked) + label {
+    position: relative;
+    padding-left: 3rem;
+    cursor: pointer;
+    line-height: 1.5rem;
+    color: @ColorPrimaryGrey80;
+    font-family: @PrimaryFont;
+    font-size: @BaseFontSize + 5;
+    font-weight: 400;
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  input[type='radio']:not(:checked) + label:hover,
+  input[type='radio']:checked + label {
+    color: @ColorPrimaryGrey100;
+  }
+
+  input[type='radio']:checked + label:before,
+  input[type='radio']:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid @ColorPrimaryGrey80;
+    border-radius: 100%;
+    background: @WhiteColor;
+    transition: @TransitionsEaseQuick @TransitionsDurationRapid;
+  }
+
+  input[type='radio']:not(:checked) + label:hover::before {
+    border-color: @ColorPrimary40;
+  }
+
+  input[type='radio']:checked + label:before {
+    border: 1px solid @ColorPrimary50;
+    box-shadow: inset 0 0 0 0.375em @ColorPrimary50;
+  }
+
+  input[type='radio']:checked + label:hover::before {
+    border-color: @ColorPrimary60;
+    box-shadow: inset 0 0 0 0.375em @ColorPrimary60;
+  }
+
+  input[type='radio']:disabled + label {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  input[type='radio']:not(:checked):disabled + label:before {
+    background-color: @Whisper;
+  }
+}
+
+input[type='radio']:not(:checked) + label.warning-state:hover::before {
+  border-color: @ColorFeedbackWarning50;
+}
+
+input[type='radio']:not(:checked) + label.success-state:hover::before {
+  border-color: @ColorFeedbackSuccess50;
+}
+
+input[type='radio']:not(:checked) + label.error-state:hover::before {
+  border-color: @ColorFeedbackError50;
+}
+
+input[type='radio']:checked + label.warning-state:before {
+  border: 1px solid @ColorFeedbackWarning50;
+  box-shadow: inset 0 0 0 0.375em @ColorFeedbackWarning50;
+}
+
+input[type='radio']:checked + label.success-state:before {
+  border: 1px solid @ColorFeedbackSuccess50;
+  box-shadow: inset 0 0 0 0.375em @ColorFeedbackSuccess50;
+}
+
+input[type='radio']:checked + label.error-state:before {
+  border: 1px solid @ColorFeedbackError50;
+  box-shadow: inset 0 0 0 0.375em @ColorFeedbackError50;
+}
+
+input[type='radio']:checked + label.warning-state:hover::before {
+  border-color: @ColorFeedbackWarning80;
+  box-shadow: inset 0 0 0 0.375em @ColorFeedbackWarning80;
+}
+
+input[type='radio']:checked + label.success-state:hover::before {
+  border-color: @ColorFeedbackSuccess80;
+  box-shadow: inset 0 0 0 0.375em @ColorFeedbackSuccess80;
+}
+
+input[type='radio']:checked + label.error-state:hover::before {
+  border-color: @ColorFeedbackError80;
+  box-shadow: inset 0 0 0 0.375em @ColorFeedbackError80;
+}
+
+.radio-story {
+  box-sizing: border-box;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  gap: 1rem;
+  width: 14.6rem;
+  height: 4rem;
+}
+
+.n-radio-icon > svg {
+  color: @SvgColor;
+  position: absolute;
+  left: -3.5rem;
+  top: -0.15rem;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.6rem;
+  width: 2.6rem;
+
+  @media screen and (max-width: 768px) {
+    height: 1.8rem;
+    width: 1.8rem;
+    left: -2.2rem;
+    top: 0.2rem;
+  }
+}
+
+.n-radio-validation {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: max-content;
+  font-size: @BaseFontSize + 4px;
+
+  span {
+    width: max-content;
+
+    @media screen and (max-width: 768px) {
+      font-size: @BaseFontSize + 2px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    top: 2.5rem;
+    left: 1rem;
+  }
+}
