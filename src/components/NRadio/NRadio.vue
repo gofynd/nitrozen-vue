@@ -15,7 +15,16 @@
       :disabled="disabled"
       :style="inputStyle"
     />
-    <label :for="id" :style="labelStyle" class="n-radio-label">
+    <label
+      :for="id"
+      :style="labelStyle"
+      :class="{
+        'n-radio-label': true,
+        'success-state': state === 'success',
+        'warning-state': state === 'warning',
+        'error-state': state === 'error',
+      }"
+    >
       <slot />
     </label>
     <n-validation
@@ -78,7 +87,7 @@ export default {
     },
   },
   data() {
-    return {}
+    return {};
   },
   methods: {
     changeEvent: function (event, type) {
