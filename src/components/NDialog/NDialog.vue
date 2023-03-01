@@ -115,9 +115,9 @@ export default {
       dismissible: true,
       isModalVisible: false,
       negativeButtonLabel: false,
-      neutralButtonLabel: "neutral",
-      positiveButtonLabel: "positive",
-      showCloseButton: true,
+      neutralButtonLabel: "ok",
+      positiveButtonLabel: "cancel",
+      showCloseButton: false,
     };
   },
   methods: {
