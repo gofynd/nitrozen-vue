@@ -28,14 +28,6 @@ export default {
     computed: {
         getSVG() {
             return icons[this.$props.name];
-        },
-        viewBoxSize(){
-            return `0 0 ${this.$props.size} ${this.$props.size}`
-        },
-        getTransformScale(){
-            // let pathElementBox = this.getPathBoundingBox()
-            let viewBoxSize = this.$props.size
-            return `scale(${viewBoxSize}, ${viewBoxSize})`
         }
     }
 }
