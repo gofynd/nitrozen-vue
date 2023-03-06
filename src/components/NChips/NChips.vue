@@ -1,14 +1,11 @@
 <template>
 <transition name="nitrozen-chip">
     <div :ref="chipId" @click="setBackground" class="nitrozen-chip ripple" :class="[chipClasses]" tabindex="0" v-on="$listeners">
-        <slot class="nitrozen-icon" />
-
+        <slot class="nitrozen-chip-icon" />
+        <nitrozen-icon :class="[chipClasses]" :name="icon" :size="16" v-if="icon !== '' && !deletable"/>
         <transition name="nitrozen-input-action">
-            <span :ref="iconId" class="nitrozen-icon" v-on:click="spliceElement(chipId)" v-if="!disable && deletable">
-                <nitrozen-inline :icon="'cross'"></nitrozen-inline>
-            </span>
-            <span :ref="iconId" class="nitrozen-icon" v-if="!disable && inProgress">
-                <nitrozen-tooltip :tooltipText="'Info Text'"></nitrozen-tooltip>
+            <span :ref="iconId" v-on:click="spliceElement(chipId)" v-if="!disable && deletable">
+                <nitrozen-icon :name="icon || 'close'" :size="16"/>
             </span>
         </transition>
     </div>
@@ -16,14 +13,16 @@
 </template>
 
 <script>
-import NitrozenInline from './../NInline/index';
+// import NitrozenInline from './../NInline/index';
+import NIcon from '../NIcon'
 import NitrozenUuid from './../../utils/NUuid';
 import NitrozenTooltip from './../NTooltip/index';
 
 export default {
     name: 'nitrozen-chips',
     components: {
-        'nitrozen-inline':NitrozenInline,
+        'nitrozen-icon': NIcon,
+        // 'nitrozen-inline':NitrozenInline,
         'nitrozen-tooltip':NitrozenTooltip
     },
     props: {
@@ -42,6 +41,14 @@ export default {
         inProgress: {
             type: Boolean,
             default: false
+        },
+        isRounded: {
+            type: Boolean,
+            default: false
+        },
+        icon: {
+            type: String,
+            default: ''
         },
         error: {
             type: Boolean,
@@ -67,13 +74,16 @@ export default {
     computed: {
         chipClasses() {
             return {
-                'nitrozen-disabled': this.disable,
-                'nitrozen-inprogress': this.inProgress,
-                'nitrozen-error': this.error,
-                'nitrozen-chip-error': this.state == 'error',
+                'nitrozen-chip-primary': this.theme === 'primary',
+                'nitrozen-chip-secondary': this.theme === 'secondary',
+                'nitrozen-chip-disabled': this.disable,
+                'nitrozen-chip-inprogress': this.inProgress,
+                'nitrozen-chip-error': this.error || this.state == 'error',
                 'nitrozen-chip-success': this.state == 'success',
                 'nitrozen-chip-progress': this.state == 'progress',
-                'nitrozen-chip-selected': this.state == 'selected'
+                'nitrozen-chip-selected': this.state == 'selected',
+                'nitrozen-chip-rounded': this.isRounded,
+                ...(this.icon !=='' && { 'nitrozen-icon': true })
             }
         }
     },
@@ -84,18 +94,18 @@ export default {
         },
         setBackground: function(){
             if(this.multiSelect){
-                let flag = this.$refs[this.chipId].classList.contains('nitrozen-primary-active-chip') || this.$refs[this.chipId].classList.contains('nitrozen-secondary-active-chip')            
+                let flag = this.$refs[this.chipId].classList.contains('nitrozen-chip-primary-active') || this.$refs[this.chipId].classList.contains('nitrozen-chip-secondary-active')            
                 if(!flag){
                     if(this.theme == 'primary'){
-                        this.$refs[this.chipId].classList.add('nitrozen-primary-active-chip'); 
+                        this.$refs[this.chipId].classList.add('nitrozen-chip-primary-active'); 
                     }
                     else{
-                        this.$refs[this.chipId].classList.add('nitrozen-secondary-active-chip');                        
+                        this.$refs[this.chipId].classList.add('nitrozen-chip-secondary-active');                        
                     }
                 }
                 else{
-                    this.$refs[this.chipId].classList.remove('nitrozen-primary-active-chip');                    
-                    this.$refs[this.chipId].classList.remove('nitrozen-secondary-active-chip');                    
+                    this.$refs[this.chipId].classList.remove('nitrozen-chip-primary-active');                    
+                    this.$refs[this.chipId].classList.remove('nitrozen-chip-secondary-active');                    
                 }
             }
         }
@@ -106,89 +116,168 @@ export default {
 <style lang="less">
 @import './../../base/base.less';
 
+.primary{
+    color: @ColorPrimaryGrey80 !important;
+    background-color: @WhiteColor !important;
+    border: 0.1rem solid @ColorPrimaryGrey60 !important;
+    :hover{
+        color: @WhiteColor !important;
+        background-color: @ColorPrimaryGrey80 !important;
+    }
+}
+.secondary {
+    color: @PrimaryColor !important;
+    background-color: @WhiteColor !important;
+    border:0.1rem solid @PrimaryColor !important;
+    font-weight: 700 !important;
+    :hover{
+        color: @WhiteColor !important;
+        background-color: @PrimaryColor !important;
+        font-weight: 700 !important;
+    }
+}
+.disabled {
+    background: @WhiteColor !important;
+    color: @ColorSecondaryGrey60 !important;
+    opacity: @DisabledOpacity !important;
+    &:hover {
+        box-shadow: none;
+    }
+    svg {
+        filter: saturate(10%);
+    }
+}
+.error {
+    background-color: @ErrorColor !important;
+    color: @WhiteColor !important;
+    border: 0.1rem solid @ErrorColor !important;
+    :hover {
+        background-color: @WhiteColor !important;
+        color: @ErrorColor !important;
+    }
+}
+.success {
+    background-color: @SuccessColor !important;
+    color: @WhiteColor !important;
+    border: 0.1rem solid @SuccessColor !important;
+    :hover {
+        background-color: @WhiteColor !important;
+        color: @SuccessColor !important;
+    }
+}
+.progress {
+    background-color: @ProgressColor !important;
+    color: @WhiteColor !important;
+    border: 0.1rem solid @ProgressColor !important;
+    :hover {
+        background-color: @WhiteColor !important;
+        color: @ProgressColor !important;
+    }
+}
 .nitrozen-chip {
-    height: 39px;
-    padding: 0 12px;
-    margin: 0 8px 0 0;
     display: inline-block;
-    cursor: default;
-    border-radius: 39px;
-    border: 1px solid @BorderColor;
-    color: @TypographyPrimaryColor;
-    // transition: .3s $md-transition-stand-timing;
-    // transition-property: background-color, color, opacity, transform, box-shadow;
-    // will-change: background-color, color, opacity, transform, box-shadow;
-    font-size: @BaseFontSize + 2;
-    line-height: 39px;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
     vertical-align: middle;
     white-space: nowrap;
     font-family: @PrimaryFont;
     cursor: pointer;
     box-sizing: border-box;
+    user-select: none;
     &:focus {
         outline: none;
+        border: 0.2rem solid @ColorPrimary60;
+        color: @ColorPrimary60;
         //   text-decoration: underline;
     }
 
     &:hover {
-        box-shadow: 0 0 16px @BoxShadow;
-        background: @HoverColor;
+        // box-shadow: 0 0 16px @BoxShadow;
+        // background: @HoverColor;
+        color: @ColorBlack;
     }
 
-    &.nitrozen-chip-enter-active,
-    &.nitrozen-chip-leave-active {
-        opacity: 0;
-        transform: transformZ(0) scale(.8);
-    }
+    // &.nitrozen-chip-enter-active,
+    // &.nitrozen-chip-leave-active {
+    //     opacity: 0;
+    //     transform: transformZ(0) scale(.8);
+    // }
 
-    &.nitrozen-chip-enter-to {
-        opacity: 1;
-        transform: transformZ(0) scale(1);
-    }
-    &.nitrozen-disabled {
+    // &.nitrozen-chip-enter-to {
+    //     opacity: 1;
+    //     transform: transformZ(0) scale(1);
+    // }
+    &-disabled {
         cursor: default;
-        opacity: 0.4;
+        background: @WhiteColor;
+        color: @ColorSecondaryGrey60;
+        opacity: @DisabledOpacity;
         pointer-events: none;
+        &:hover {
+            box-shadow: none;
+        }
+        svg {
+            filter: saturate(10%);
+        }
     }
-
-    &.nitrozen-inprogress {
+    &-primary {
+        .primary()
+    }
+    &-secondary {
+        .secondary()
+    }
+    &-inprogress {
         border: 1px dashed @ProcessingColor;
     }
-    &.nitrozen-error{
+    &-error{
         border: 1px solid @ErrorColor;
+        background: @ErrorColor;
+        color: @WhiteColor;
     }
-    &.nitrozen-primary-active-chip{
+    &-primary-active{
         background: @PrimaryColor;
         color: @WhiteColor;
         border-color: @PrimaryColor;
     }
-    &.nitrozen-secondary-active-chip{
+    &-primary-active:hover {
+        background: @WhiteColor;
+        color: @PrimaryColor;
+        border-color: @PrimaryColor;
+    }
+    &-secondary-active{
         background: @SecondaryColor;
         color: @WhiteColor;
         border-color: @SecondaryColor;
     }
-    &.nitrozen-chip-error{
-        background: @ErrorColor;
-        color: @WhiteColor;
-        border: 1px solid @ErrorColor;
+    &-secondary-active:hover{
+        background: @WhiteColor;
+        color: @SecondaryColor;
+        border-color: @SecondaryColor;
     }
-    &.nitrozen-chip-success{
+    &-success{
         background: @SuccessColor;
         color: @WhiteColor;
         border-color: @SuccessColor;
     }
-    &.nitrozen-chip-progress{
+    &-progress{
         background: @ProgressColor;
         color: @WhiteColor;
         border-color: @ProgressColor;
     }
-    &.nitrozen-chip-selected{
+    &-selected{
         background: @SecondaryColor;
         color: @WhiteColor;
         border-color: @SecondaryColor;
     }
-    .nitrozen-icon {
-        padding-left: 12px;
+    &-rounded {
+        border-radius: 3.9rem;
+    }
+    &-icon {
+        margin-left: 0.4rem;
+        &-primary {
+            color: @PrimaryColor !important
+        }
     }
 }
 </style>
