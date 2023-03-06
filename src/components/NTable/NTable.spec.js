@@ -52,6 +52,7 @@ describe('Render Table Component', () => {
       propsData: {
         tableHeader: tabHeader,
         tableRow: tabRow,
+        id: 'test',
       },
     });
     expect(wrapper.props('tableHeader')).toBe(tabHeader);
@@ -64,6 +65,7 @@ describe('Render Table Component', () => {
         tableHeader: tabHeader,
         tableRow: tabRow,
         isZebra: true,
+        id: 'test',
       },
     });
     const rows = wrapper.findAll('.n-zebra-table');
@@ -77,6 +79,7 @@ describe('Render Table Component', () => {
         tableHeader: tabHeader,
         tableRow: tabRow,
         columnBorder: true,
+        id: 'test',
       },
     });
 
@@ -92,6 +95,7 @@ describe('Render Table Component', () => {
         tableRow: tabRow,
         condensed: false,
         isFooter: true,
+        id: 'test',
       },
     });
     expect(wrapper.find('footer').exists()).toBe(true);
@@ -106,6 +110,7 @@ describe('Render Table Component', () => {
         tableRow: tabRow,
         condensed: true,
         isFooter: false,
+        id: 'test',
       },
     });
     expect(wrapper.find('footer').exists()).toBe(false);
@@ -115,49 +120,52 @@ describe('Render Table Component', () => {
 
   it('Should render the checkbox table', () => {
     const wrapper = mount(NTable, {
-        propsData:{
-            tableHeader: tabHeader,
-            tableRow: tabRow,
-            checkAble: true
-        }
-    })
-    const checkbox = wrapper.findAll('.table-checkbox')
+      propsData: {
+        tableHeader: tabHeader,
+        tableRow: tabRow,
+        checkAble: true,
+        id: 'test',
+      },
+    });
+    const checkbox = wrapper.findAll('.table-checkbox');
     expect(checkbox).toHaveLength(tabRow.length + 1);
-  })
+  });
 
   it('Should render the normal table', () => {
     const wrapper = mount(NTable, {
-        propsData:{
-            tableHeader: tabHeader,
-            tableRow: tabRow,
-            checkAble: false
-        }
-    })
-    const checkbox = wrapper.findAll('.table-checkbox')
+      propsData: {
+        tableHeader: tabHeader,
+        tableRow: tabRow,
+        checkAble: false,
+        id: 'test',
+      },
+    });
+    const checkbox = wrapper.findAll('.table-checkbox');
     expect(checkbox).toHaveLength(0);
-  })
+  });
 
-  it('Should render the unsorted icon',  () => {
+  it('Should render the unsorted icon', () => {
     const wrapper = mount(NTable, {
-        propsData: {
-            tableHeader: tabHeader,
-            tableRow: tabRow,
-        }
-    })
-    const sortIcons = wrapper.findAll('.n-table-icon-left')
-    expect(sortIcons).toHaveLength(2)
-  })
+      propsData: {
+        tableHeader: tabHeader,
+        tableRow: tabRow,
+        id: 'test',
+      },
+    });
+    const sortIcons = wrapper.findAll('.n-table-icon-left');
+    expect(sortIcons).toHaveLength(2);
+  });
 
-  it('Should render the sorted icon',  () => {
+  it('Should render the sorted icon', () => {
     const wrapper = mount(NTable, {
-        propsData: {
-            tableHeader: tabHeader,
-            tableRow: tabRow,
-        }
-    })
-    const sortIcons = wrapper.findAll('.n-table-icon-down')
-    expect(sortIcons).toHaveLength(0)
-  })
+      propsData: {
+        tableHeader: tabHeader,
+        tableRow: tabRow,
+      },
+    });
+    const sortIcons = wrapper.findAll('.n-table-icon-down');
+    expect(sortIcons).toHaveLength(0);
+  });
 
   it('Emit the onlclick even', async () => {
     const wrapper = mount(NTable, {
@@ -165,7 +173,7 @@ describe('Render Table Component', () => {
         tableHeader: tabHeader,
         tableRow: tabRow,
       },
-    })
+    });
     wrapper.vm.$emit('click', 1);
     wrapper.vm.$emit('getAllItems', tabRow);
     wrapper.vm.$emit('getSingleChecked', tabRow[0]);
