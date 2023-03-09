@@ -1,8 +1,8 @@
 <template>
   <div class="nitrozen-tooltip">
-    <nitrozen-inline :icon="icon"></nitrozen-inline>
+    <nitrozen-icon v-if="icon" :name="icon" :size="iconSize" class="nitrozen-tooltip-icon" :color="iconColor"/>
     <span class="nitrozen-tooltiptext" :class="tooltipPositionClass" :style="tooltipStyle">
-      <template v-if="tooltipText" >
+      <template v-if="tooltipText">
         <span>{{tooltipText}}</span>
         </template>
         <template v-if="link" >
@@ -16,10 +16,11 @@
 
 <script>
 import NitrozenInline from "./../NInline";
-
+import NIcon from './../NIcon/NIcon.vue';
 export default {
   name: "nitrozen-tooltip",
   components: {
+    'nitrozen-icon': NIcon,
     "nitrozen-inline": NitrozenInline
   },
   props: {
@@ -48,7 +49,16 @@ export default {
       default: ""
     },
     icon: {
-      type: Element,
+      type: String,
+      default:'twitter'
+    },
+    iconColor: {
+      type: String,
+      default:'#000000'
+    },
+    iconSize: {
+      type: Number,
+      default:26
     }
   },
   computed: {

@@ -29,13 +29,32 @@ export default {
     tooltipText:{
       control:"text",
       value:"hello there i am a tooltip"
+    },
+    icon:{
+      control:'select',
+      options: [
+        "twitter",
+        "info",
+        "404_error",
+        "4g_bar_four",
+        "add_circle"
+      ]
+    },
+    iconColor: {
+      control: "color",
+      description: "Set the icon color of the tooltip",
+      value:"red"
+    },
+    iconSize:{
+      control:"number",
+      value:26
     }
   }
 }
 const Template = (args, { argTypes }) => ({
   components: { NTooltip },
   props: Object.keys(argTypes),
-  template: `<div class="main-div space-between">
+  template: `<div class="tooltip-story-wrapper space-between">
  <n-tooltip  v-bind="$props"/>
   </div>`,
   data: function () {
@@ -49,7 +68,7 @@ TooltipSimple.args = {
   position: "bottom",
   tooltipText:
     "This is a tooltip that shows helpful information when we hover over an icon.",
-  icon:'info'
+  iconSize:50
 };
 
 export const TooltipWithLink = Template.bind({})
@@ -58,6 +77,6 @@ TooltipWithLink.args = {
   tooltipText:"This is a tooltip that shows helpful information when we hover over an icon.",
   tooltipLinkText:"Click here",
   link: "https://www.example.com",
-  icon:'info'
+  iconSize:50
 };
 
