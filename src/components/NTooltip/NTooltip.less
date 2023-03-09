@@ -1,0 +1,205 @@
+.nitrozen-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: @BaseFontSize + 6;
+
+    .nitrozen-tooltiptext {
+        visibility: hidden;
+        width: max-content;
+        min-width: 40px;
+        background-color: @TooltipBackground;
+        line-height: 2.08rem;
+        color: @TypographyPrimaryColor;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        font-family: @PrimaryFont;
+        position: absolute;
+        z-index: @ZIndex3;
+        font-size: @BaseFontSize + 2;
+
+        &::after {
+            content: " ";
+            position: absolute;
+            border-style: solid;
+            border-color: var(--toolTipBgColor) transparent transparent transparent;
+            border-width: 0.7rem;
+        }
+    }
+
+    &:hover {
+        .nitrozen-tooltiptext {
+            visibility: visible;
+        }
+    }
+}
+.nitrozen-tooltip-link {
+    color: @WhiteColor;
+    font-weight: 600;
+}
+
+/* Position the nitrozen-tooltip */
+.nitrozen-tooltip-bottom {
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::after {
+        bottom: 100%;
+        /* At the top of the tooltip */
+        left: 50%;
+        transform: translateX(-50%) rotate(180deg);
+    }
+}
+
+.nitrozen-tooltip-bottom-start {
+    top: 130%;
+    left: 50%;
+    transform: translateX(-5%);
+
+    &::after {
+        bottom: 100%;
+        /* At the top of the tooltip */
+        left: 20%;
+        transform: translateX(-50%) rotate(180deg);
+    }
+}
+
+.nitrozen-tooltip-bottom-end {
+    top: 130%;
+    left: 50%;
+    transform: translateX(-95%);
+
+    &::after {
+        bottom: 100%;
+        /* At the top of the tooltip */
+        left: 82%;
+        transform: translateX(-50%) rotate(180deg);
+    }
+}
+
+.nitrozen-tooltip-top {
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::after {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.nitrozen-tooltip-top-start {
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-5%);
+
+    &::after {
+        top: 100%;
+        left: 20%;
+        transform: translateX(-50%);
+    }
+}
+
+.nitrozen-tooltip-top-end {
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-82%);
+
+    &::after {
+        top: 100%;
+        left: 82%;
+        transform: translateX(-50%);
+    }
+}
+
+.nitrozen-tooltip-left {
+    right: 100%;
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+    margin-right: 0.8rem;
+
+    &::after {
+        top: 50%;
+        left: 100%;
+        /* To the left of the tooltip */
+        margin-top: -0.5rem;
+        transform: rotate(270deg);
+    }
+}
+
+.nitrozen-tooltip-left-start {
+    right: 100%;
+    top: 100%;
+    transform: translateX(0) translateY(-50%);
+    margin-right: 0.8rem;
+
+    &::after {
+        top: 30%;
+        left: 100%;
+        /* To the left of the tooltip */
+        margin-top: -0.5rem;
+        transform: rotate(270deg);
+    }
+}
+
+.nitrozen-tooltip-left-end {
+    right: 100%;
+    top: 0%;
+    transform: translateX(0) translateY(-50%);
+    margin-right: 0.8rem;
+
+    &::after {
+        top: 60%;
+        left: 100%;
+        /* To the left of the tooltip */
+        margin-top: -0.5rem;
+        transform: rotate(270deg);
+    }
+}
+
+.nitrozen-tooltip-right {
+    left: 100%;
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+    margin-left: 0.8rem;
+
+    &::after {
+        top: 50%;
+        right: 100%;
+        /* To the right of the tooltip */
+        margin-top: -0.5rem;
+        transform: rotate(90deg);
+    }
+}
+
+.nitrozen-tooltip-right-start {
+    left: 100%;
+    top: 100%;
+    transform: translateX(0) translateY(-50%);
+    margin-left: 0.8rem;
+
+    &::after {
+        top: 30%;
+        right: 100%;
+        /* To the right of the tooltip */
+        margin-top: -0.5rem;
+        transform: rotate(90deg);
+    }
+}
+
+.nitrozen-tooltip-right-end {
+    left: 100%;
+    top: 0%;
+    transform: translateX(0) translateY(-50%);
+    margin-left: 0.8rem;
+
+    &::after {
+        top: 60%;
+        right: 100%;
+        /* To the right of the tooltip */
+        margin-top: -0.5rem;
+        transform: rotate(90deg);
+    }
+}
