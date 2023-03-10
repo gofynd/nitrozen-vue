@@ -801,6 +801,12 @@
           >
         </template>
       </nitrozen-dialog>
+
+      <nitrozen-tab
+      :tabItem="tabItem"
+      :activeIndex="activeTabItem"
+      @tab-change="changeActiveTab($event)"
+      ></nitrozen-tab>
     </div>
   </div>
 </template>
@@ -971,6 +977,21 @@ export default {
         },
       ],
       autofocusSearch: false,
+      tabItem: [
+        {
+          label: "Lemon",
+          icon:'dots'
+        },
+        {
+          label: "Lime",
+          icon:'cross'
+        },
+        {
+          label: "Apple",
+          icon:'cross-filled'
+        },
+      ],
+      activeTabItem: 0
     };
   },
   mounted() {
@@ -980,6 +1001,9 @@ export default {
     // }, 5000);
   },
   methods: {
+    changeActiveTab(event){
+      this.activeTabItem = event.index
+    },
     stepperNext() {
       let next = this.stepper.activeIndex + 1;
       if (this.stepper.maxActiveIndex < next) {
