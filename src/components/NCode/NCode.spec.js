@@ -36,10 +36,11 @@ describe('Nitrozen Code Component', () => {
         validationState: 'success',
       },
     });
-    expect(wrapper.contains(NValidation)).toBe(true);
+    expect(wrapper.findComponent(NValidation).exists()).toBe(true);
     expect(wrapper.findComponent(NValidation).props()).toStrictEqual({
       isHidden: false,
       label: 'Val label',
+      size: 16,
       validationState: 'success',
     });
   });
@@ -54,7 +55,7 @@ describe('Nitrozen Code Component', () => {
         tooltip: 'I am a tooltip',
       },
     });
-    expect(wrapper.contains(NTooltip)).toBe(true);
+    expect(wrapper.findComponent(NTooltip).exists()).toBe(true);
     expect(wrapper.findComponent(NTooltip).props()).toStrictEqual({
       icon: 'info',
       position: 'right',
