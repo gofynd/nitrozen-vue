@@ -31,6 +31,6 @@ describe('Validation Component', () => {
                 label: 'Error field'
             }
         })
-        expect(wrapper.findComponent(NIcon)).toBeDefined()
+        expect(wrapper.findComponent(NIcon).exists()).toBe(true)
     })
 })

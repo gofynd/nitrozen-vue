@@ -67,12 +67,10 @@ export default {
     className: { type: String, default: '' },
     name: { type: String, default: '' },
     state: {
-      stateMessage: {
-        type: String,
-        default: '',
-        validator(value) {
-          return ['success', 'error', 'warning', 'default'].includes(value);
-        },
+      type: String,
+      default: 'default',
+      validator(value) {
+        return ['success', 'error', 'warning', 'default'].includes(value);
       },
     },
     stateMessage: { type: String, default: '' },

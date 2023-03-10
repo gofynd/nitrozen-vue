@@ -36,8 +36,7 @@ describe('Nitrozen Code Component', () => {
         validationState: 'success',
       },
     });
-    const k = wrapper.findComponent(NValidation).props()
-    expect(wrapper.findComponent(NValidation)).toBeDefined();
+    expect(wrapper.findComponent(NValidation).exists()).toBe(true);
     expect(wrapper.findComponent(NValidation).props()).toStrictEqual({
       isHidden: false,
       label: 'Val label',
@@ -56,7 +55,7 @@ describe('Nitrozen Code Component', () => {
         tooltip: 'I am a tooltip',
       },
     });
-    expect(wrapper.findComponent(NTooltip)).toBeDefined()
+    expect(wrapper.findComponent(NTooltip).exists()).toBe(true);
     expect(wrapper.findComponent(NTooltip).props()).toStrictEqual({
       icon: 'info',
       position: 'right',
