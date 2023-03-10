@@ -74,8 +74,8 @@ describe('Nitrozen Code Component', () => {
     });
     expect(wrapper.props('fields')).toBe(4);
     await wrapper.setData({ codeArr: ['', '', '', ''] });
-    expect(wrapper.find('.n-code-input-field').exists()).toBe(true);
-    const input = wrapper.find('.n-code-input-field');
+    expect(wrapper.findComponent('.n-code-input-field').exists()).toBe(true);
+    const input = wrapper.findComponent('.n-code-input-field');
     input.trigger('1');
     await wrapper.vm.$nextTick();
   });
