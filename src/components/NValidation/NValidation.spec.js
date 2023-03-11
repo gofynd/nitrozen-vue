@@ -21,7 +21,7 @@ describe('Validation Component', () => {
                 label: 'Success field'
             }
         })
-        expect(wrapper.find('div').exists()).toBe(false)
+        expect(wrapper.findComponent('div').exists()).toBe(false)
     })
     it('should contain icon component', () => {
         const wrapper = mount(NValidation, {
@@ -31,6 +31,6 @@ describe('Validation Component', () => {
                 label: 'Error field'
             }
         })
-        expect(wrapper.contains(NIcon)).toBe(true)
+        expect(wrapper.findComponent(NIcon).exists()).toBe(true)
     })
 })

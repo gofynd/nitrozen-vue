@@ -1,13 +1,8 @@
 <template>
-  <div v-if="!isHidden" class="n-validation-container" :class="validatorClass">
-    <nitrozen-icon
-      class="n-validator-icon"
-      :color="getValidatorIconColor"
-      :name="validationState"
-      :size="16"
-    />
-    <span>{{ label }}</span>
-  </div>
+    <div v-if="!isHidden" class="n-validation-container" :class="validatorClass">
+        <nitrozen-icon class="n-validator-icon" :color="getValidatorIconColor" :name="validationState" :size="size"/>
+        <span>{{ label }}</span>
+    </div>
 </template>
 
 <script>
@@ -28,9 +23,27 @@ export default {
         );
       },
     },
-    label: {
-      type: String,
-      default: 'Default Label',
+    props: {
+        validationState: {
+            type: String,
+            default: 'default',
+            validator(value) {
+                // The value must match one of these strings
+                return ['success', 'warning', 'error', 'default','info'].includes(value)
+            }
+        },
+        label: {
+            type: String,
+            default: "Default Label"
+        },
+        isHidden:{
+            type: Boolean,
+            default: false
+        },
+        size:{
+            type: Number,
+            default: 16
+        }
     },
     isHidden: {
       type: Boolean,

@@ -1,83 +1,215 @@
-@import "./../../base/base.less";
-/* The nitrozen-checkbox-container */
-.nitrozen-checkbox-container {
+@import "../../base/base.less";
+
+.n-checkbox-container {
   position: relative;
-  padding-left: 30px;
   cursor: pointer;
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   font-family: @PrimaryFont;
-  color: @TypographyPrimaryColor;
+  color: @ColorPrimaryGrey80;
   font-weight: 400;
-  height: 100%;
   display: flex;
   align-items: center;
+  padding: 0.45rem 0.45rem 0.45rem 3.2rem;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    color: @ColorPrimaryGrey100;
+  }
 }
+
 /* Hide the browser's default checkbox */
-.nitrozen-checkbox-container input {
+.n-checkbox-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
+
 /* Create a custom checkbox */
-.nitrozen-checkbox {
+.n-checkbox {
   position: absolute;
   top: 0;
   left: 0;
-  height: 16px;
-  width: 16px;
+  height: 2.2rem;
+  width: 2.2rem;
   background-color: @WhiteColor;
-  border: 1px solid @TypographyPrimaryColor;
-  border-radius: 3px;
+  border: 1px solid @ColorPrimaryGrey80;
+  border-radius: 0.3rem;
+  transition: @TransitionsEaseQuick @TransitionsDurationRapid;
+
+  &:hover {
+    border-color: @ColorPrimary40;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 1.3rem;
+    width: 1.3rem;
+    top: 0.5rem;
+    left: 1rem;
+  }
 }
-.nitrozen-checkbox-container:hover input ~ .nitrozen-checkbox {
+
+.n-checkbox-container:hover input ~ .n-checkbox {
   background-color: @WhiteColor;
 }
+
 /* When the checkbox is checked, add a blue background */
-.nitrozen-checkbox-container input:checked ~ .nitrozen-checkbox {
-  background-color: @SecondaryColor;
-  border: 2px solid @SecondaryColor;
+.n-checkbox-container input:checked ~ .n-checkbox {
+  border-color: @ColorPrimary50;
+  background-color: @ColorPrimary50;
+
+  &:hover {
+    background-color: @ColorPrimary60;
+  }
 }
+
 /* Create the nitrozen-checkbox/indicator (hidden when not checked) */
-.nitrozen-checkbox:after {
+.n-checkbox:after {
   content: "";
   position: absolute;
   display: none;
 }
+
 /* Show the nitrozen-checkbox when checked */
-.nitrozen-checkbox-container input:checked ~ .nitrozen-checkbox:after {
+.n-checkbox-container input:checked ~ .n-checkbox:after {
   display: block;
 }
+
 /* Style the nitrozen-checkbox/indicator */
-.nitrozen-checkbox-container .nitrozen-checkbox:after {
-  left: 5px;
-  top: 0px;
-  width: 4px;
-  height: 10px;
-  border: 1px solid @WhiteColor;
-  border-width: 0 2px 2px 0;
+.n-checkbox-container .n-checkbox:after {
+  left: 0.8rem;
+  top: 0.35rem;
+  width: 0.4rem;
+  height: 1rem;
+  border: 0.1rem solid @WhiteColor;
+  border-width: 0 0.2rem 0.2rem 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-}
-input[type="checkbox"]:disabled + .nitrozen-checkbox {
-  opacity: 0.5;
-  pointer-events: none;
-  background: @DisabledColor;
-  border: 1px solid @DisabledColor;
-  &::after{
-    border: 1px solid @TypographyPrimaryColor;
-    border-width: 0 2px 2px 0;
+
+  @media screen and (max-width: 768px) {
+    width: 0.2rem;
+    height: 0.5rem;
+    left: 0.43rem;
+    top: 0.25rem;
   }
 }
-.nitrozen-checkbox-container-disabled{
-  color: #9e9e9e;
+.n-checkbox-indeterminate:after {
+  width: unset !important;
+  transform: rotate(90deg) !important;
+  left: 45% !important;
+  top: 25% !important;
+}
+
+input[type="checkbox"]:disabled + .n-checkbox {
+  opacity: 0.5;
+  pointer-events: none;
+
+  &::after {
+    border-width: 0 0.2rem 0.2rem 0;
+  }
+}
+
+.n-checkbox-container-disabled {
+  color: @CheckboxDisableColor;
+
+  &:hover {
+    color: @CheckboxDisableColor;
+  }
+}
+
+.n-checkbox-validation {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: max-content;
+  font-size: @BaseFontSize + 4px;
+  span{
+    width: max-content;
+    @media screen and (max-width: 768px) {
+      font-size:  @BaseFontSize + 2px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    top: 2.5rem;
+    left: 1rem;
+  }
+}
+
+.warning-state {
+  &:hover {
+    border-color: @ColorFeedbackWarning50 !important;
+  }
+}
+
+.success-state {
+  &:hover {
+    border-color: @ColorFeedbackSuccess50 !important;
+  }
+}
+
+.error-state {
+  &:hover {
+    border-color: @ColorFeedbackError50 !important;
+  }
+}
+
+.n-checkbox-container input:checked ~ .warning-state {
+  border-color: @ColorFeedbackWarning50;
+  background-color: @ColorFeedbackWarning50;
+
+  &:hover {
+    background-color: @ColorFeedbackWarning80;
+  }
+}
+
+.n-checkbox-container input:checked ~ .success-state {
+  border-color: @ColorFeedbackSuccess50;
+  background-color: @ColorFeedbackSuccess50;
+
+  &:hover {
+    background-color: @ColorFeedbackSuccess80;
+  }
+}
+
+.n-checkbox-container input:checked ~ .error-state {
+  border-color: @ColorFeedbackError50;
+  background-color: @ColorFeedbackError50;
+
+  &:hover {
+    background-color: @ColorFeedbackError80;
+  }
+}
+
+.n-checkbox-icon > svg{
+  color: @SvgColor;
+  position: absolute;
+  left: -3.5rem;
+  top: -0.15rem;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.6rem;
+  width: 2.6rem;
+  @media screen and (max-width: 768px) {
+    height: 1.6rem;
+    width: 1.6rem;
+    left: -1rem;
+    top: 0.4rem;
+  }
 }

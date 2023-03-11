@@ -1,124 +1,101 @@
 <template>
-  <div class="nitrozen-radio-group">
+  <div class="n-radio-group">
+    <div v-if="showIcon" class="n-radio-icon" :data-testid="`${id}-icon`">
+      <slot name="icon" />
+    </div>
     <input
+      class="n-radio-input"
       :id="id"
       type="radio"
-      @input="changeEvent($event,'input')"
-      @change="changeEvent($event,'change')"
-      :checked="value==radioValue"
+      @input="changeEvent($event, 'input')"
+      @change="changeEvent($event, 'change')"
+      :checked="value === radioValue"
       :value="radioValue"
       :name="name"
       :disabled="disabled"
+      :style="inputStyle"
     />
-    <label :for="id">
+    <label
+      :for="id"
+      :style="labelStyle"
+      :class="{
+        'n-radio-label': true,
+        'success-state': state === 'success',
+        'warning-state': state === 'warning',
+        'error-state': state === 'error',
+      }"
+    >
       <slot />
     </label>
+    <n-validation
+      :data-testid="id"
+      v-if="state !== 'default'"
+      :class="'n-radio-validation'"
+      :validationState="state"
+      :label="stateMessage"
+      :isHidden="state === null"
+    />
   </div>
 </template>
 <script>
+import NValidation from "../NValidation";
 import NitrozenUuid from "./../../utils/NUuid";
 export default {
-  name: "nitrozen-radio",
+  name: "n-radio",
+  components: {
+    "n-validation": NValidation,
+  },
+  event: "change",
   props: {
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
-    selected: {
+    showIcon: {
       type: Boolean,
-      default: false
+      default: true,
     },
     radioValue: {
       type: [String, Number],
-      default: ""
+      default: "",
     },
     id: {
       type: [Number, String],
-      default: () => "nitrozen-radio" + NitrozenUuid()
+      default: () => "n-radio" + NitrozenUuid(),
     },
     name: {
       type: [Number, String],
       required: true,
-      default: () => "nitrozen-radio-name"
+      default: () => "n-radio-name",
     },
-    value: {}
+    value: {},
+    state: {
+      type: String,
+      default: "default",
+    },
+    stateMessage: {
+      type: String,
+      default: "",
+    },
+    labelStyle: {
+      type: Object,
+      default: null,
+    },
+    inputStyle: {
+      type: Object,
+      default: null,
+    },
   },
   data() {
-      return{
-      }
+    return {};
   },
   methods: {
-    changeEvent: function(event,type){
+    changeEvent: function (event, type) {
       this.$emit(type, this.radioValue);
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="less">
-@import "./../../base/base.less";
-.nitrozen-radio-group {
-  height: 21px;
-  input[type="radio"]:checked,
-  input[type="radio"]:not(:checked) {
-    position: absolute;
-    visibility: hidden;
-  }
-  input[type="radio"]:checked + label,
-  input[type="radio"]:not(:checked) + label {
-    position: relative;
-    padding-left: 30px;
-    cursor: pointer;
-    line-height: 15px;
-    // display: inline-block;
-    color: @TypographyPrimaryColor;
-    font-family: @PrimaryFont;
-    font-size: @BaseFontSize + 3;
-    font-weight: 400;
-    display: flex;
-    height: 100%;
-    align-items: center;
-  }
-  input[type="radio"]:checked + label:before,
-  input[type="radio"]:not(:checked) + label:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 16px;
-    height: 16px;
-    border: 2px solid @SecondaryColor;
-    border-radius: 100%;
-    background: @WhiteColor;
-  }
-  input[type="radio"]:checked + label:after,
-  input[type="radio"]:not(:checked) + label:after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    // background: @TypographyPrimaryColor;
-    background: @SecondaryColor;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    border-radius: 100%;
-  }
-  input[type="radio"]:not(:checked) + label:after {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-  // input[type="radio"]:checked + label {
-  //   font-weight: 700;
-  // }
-  input[type="radio"]:checked + label:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  input[type="radio"]:disabled + label {
-    opacity: 0.5;
-    pointer-events: none;
-  }
-}
+@import "./NRadio.less";
 </style>
-
