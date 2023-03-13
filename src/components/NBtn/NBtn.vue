@@ -37,7 +37,7 @@ export default {
         },
         size: {
             type: String,
-            default: 'small'
+            default: 'medium'
         },
         focused: {
             type: Boolean,
@@ -45,13 +45,21 @@ export default {
         },
         icon: {
             type: String
+        },
+        iconColor: {
+            type: String
+        },
+        state:{
+            type:String
         }
     },
     render(createElement) {
         const slotElement = createElement('n-button-content', {
             props: {
                 showProgress: this.showProgress,
-                icon: this.icon
+                icon: this.icon,
+                size:this.size,
+                iconColor:this.iconColor
             }
         }, this.$slots.default)
 
@@ -61,8 +69,10 @@ export default {
                 'n-button-rounded': this.rounded,
                 'n-button-primary': this.theme == 'primary',
                 'n-button-secondary': this.theme == 'secondary',
+                'n-button-destructive': this.theme == 'destructive',
                 'n-button-large': this.size == 'large',
                 'n-button-mid': this.size == 'medium',
+                'n-button-small': this.size == 'small',
                 'n-button-focused': this.focused
             }],
             attrs: {
@@ -79,13 +89,10 @@ export default {
             tag = 'a';
             buttonAttrs
         }
-        // const slotElement = this.content;
-        // const slotElement = createElement('slot');
         return createElement(tag, buttonAttrs, [slotElement])
     }
 }
 </script>
-
 <style lang="less">
 @import './NBtn.less';
 </style>
