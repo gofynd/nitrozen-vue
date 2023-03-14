@@ -1,36 +1,69 @@
 @import './../../base/base.less';
 
 .n-button {
-    // height: 40px;
-    height: 39px;
+    height: 4rem;
     cursor: pointer;
     box-shadow: none;
     font-family: @PrimaryFont;
-    font-size: @BaseFontSize + 1;
+    font-size: @BaseFontSize + 5;
     font-weight: 700;
-    line-height: 18px;
+    line-height: 1.8rem;
     text-align: center;
     outline: none;
     border: 0;
-    letter-spacing: 0px;
+    letter-spacing: 0rem;
     background: none;
     text-decoration: none;
     box-sizing: border-box;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.05rem;
+    padding: 0rem 3rem;
+    border-radius: 0.3rem;
+    color: @WhiteColor;
 
     &:disabled {
-        // opacity: 0.4;
         cursor: not-allowed;
         pointer-events: none;
     }
+
+    &:focus {
+        text-decoration: none;
+        text-underline-position: under;
+    }
+
+    &:active {
+        background-color: @ColorPrimary20;
+    }
+
+    &:after {
+        transition: none !important;
+    }
+
+    &-primary:disabled {
+        border-color: @ColorSecondaryGrey80;
+        color: @WhiteColor;
+    }
+
+    &-secondary:disabled {
+        background-color: @ColorPrimary20;
+        color: @WhiteColor;
+    }
+
+    &-tertiary:disabled {
+        color: @ColorFeedbackError80;
+    }
 }
 
+//button themes[primary, secondary, destructive]
 .n-button-primary {
-    color: @PrimaryColor;
+    color: @ColorPrimary50;
 }
 
 .n-button-secondary {
-    color: @SecondaryColor;
+    color: @ColorFeedbackSuccess50;
+}
+
+.n-button-destructive {
+    color: @ColorFeedbackError50;
 }
 
 .hover-state {
@@ -47,7 +80,6 @@
 }
 
 .n-flat-button {
-    // padding: 0px 40px;
     padding: 0px 30px;
     border-radius: 3px;
     color: @WhiteColor;
@@ -58,26 +90,68 @@
     }
 }
 
-.n-flat-button-primary {
+//filled button states
+.n-flat-button-secondary {
     background-color: @PrimaryColor;
 
     &:hover:not([disabled]) {
         background-color: @PrimaryHoverColor;
     }
+
+    &:active:not([disabled]) {
+        border-color: @ColorPrimary60;
+        background-color: @ColorPrimary60;
+    }
+    &[disabled] {
+        opacity: 0.3;
+        color: @WhiteColor;
+      }
 }
 
-.n-flat-button-secondary {
-    background-color: @SecondaryColor;
+.n-flat-button-primary {
+    background-color: @ColorFeedbackSuccess50;
 
     &:hover:not([disabled]) {
-        background-color: @SecondaryHoverColor;
+        background-color: @ColorFeedbackSuccess20;
+        color: @ColorFeedbackSuccess80;
     }
+
+    &:focus {
+        background-color: @ColorFeedbackSuccess50;
+    }
+
+    &:active:not([disabled]) {
+        color: @ColorWhite;
+        border-color: @ColorFeedbackSuccess80;
+        background-color: @ColorFeedbackSuccess80;
+    }
+    &[disabled] {
+        opacity: 0.3;
+        color: @WhiteColor;
+      }
 }
 
+.n-flat-button-destructive {
+    background-color: @ColorFeedbackError50;
 
+    &:hover:not([disabled]) {
+        background-color: @ColorFeedbackError20;
+        color: @ColorFeedbackError80;
+    }
 
+    &:active:not([disabled]) {
+        color: @ColorWhite;
+        border-color: @ColorFeedbackError80;
+        background-color: @ColorFeedbackError80;
+    }
+    &[disabled] {
+        opacity: 0.3;
+        color: @WhiteColor;
+      }
+}
+
+//outlined stroke states
 .n-button-stroke {
-    // padding: 0px 40px;
     padding: 0px 30px;
     border-radius: 3px;
     background: @WhiteColor;
@@ -89,32 +163,60 @@
 }
 
 .n-button-stroke-primary {
-    border: 1px solid @PrimaryColor;
-    color: @PrimaryColor;
+    border: 1px solid @ColorSecondaryGrey40;
+    color: @ColorFeedbackSuccess80;
 
-    // background-color: #B5FFE7;
     &:hover:not([disabled]) {
-        background-color: #DFEFE9;
+        background-color: @ColorFeedbackSuccess20;
     }
+
+    &:active:not([disabled]) {
+        color: @ColorWhite;
+        border-color: @ColorFeedbackSuccess80;
+        background-color: @ColorFeedbackSuccess80;
+    }
+    &[disabled] {
+        opacity: 0.3;
+        color: @WhiteColor;
+      }
 }
 
 .n-button-stroke-secondary {
-    border: 1px solid @SecondaryColor;
-    color: @SecondaryColor;
+    color: @ColorPrimary50;
+    border: 1px solid @ColorSecondaryGrey40;
 
     &:hover:not([disabled]) {
-        background-color: #E2E4F1;
+        background-color: @ColorPrimary20;
+    }
+
+    &:active:not([disabled]) {
+        color: @ColorWhite;
+        border-color: @ColorPrimary60;
+        background-color: @ColorPrimary60;
+    }
+
+}
+
+.n-button-stroke-destructive {
+    color: @ColorFeedbackError50;
+    border: 1px solid @ColorSecondaryGrey40;
+
+    &:hover:not([disabled]) {
+        background-color: @ColorFeedbackError20;
+    }
+
+    &:active:not([disabled]) {
+        color: @ColorWhite;
+        border-color: @ColorFeedbackError80;
+        background-color: @ColorFeedbackError80;
     }
 }
 
 .n-button-stroke:disabled,
 .n-flat-button:disabled,
 .n-button-rounded:disabled {
-    // opacity: 0.4;
     cursor: not-allowed;
-    pointer-events: none;
-    background-color: @SecondaryDisabledColor;
-    color: @BlackColor;
+
 }
 
 .n-button-rounded {
@@ -123,20 +225,27 @@
 }
 
 .n-button-large {
-    // padding: 0px 64px;
-    // height: 64px;
-    padding: 0px 60px;
-    height: 60px;
+    padding: 1.6rem 2.4rem;
+    height: 5.4rem;
     font-size: @BaseFontSize + 6;
-    line-height: 25px;
+    line-height: 2.5rem;
+    min-width: 5.4rem;
 }
 
 .n-button-mid {
-    // padding: 0px 48px;
-    padding: 0px 45px;
-    height: 48px;
+    padding: 1.2rem 1.6rem;
+    height: 4.8rem;
     font-size: @BaseFontSize + 3;
-    line-height: 21px;
+    line-height: 2.5rem;
+    min-width: 4.8rem;
+}
+
+.n-button-small {
+    padding: 0.4rem 1.6rem;
+    height: 3rem;
+    font-size: @BaseFontSize + 2;
+    line-height: 1.9rem;
+    min-width: 3rem;
 }
 
 .n-button-focused {

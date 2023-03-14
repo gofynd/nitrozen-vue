@@ -1,4 +1,5 @@
 import { mount } from '@vue/test-utils';
+import NitrozenUuid from '../../utils/NUuid';
 import NTable from './NTable.vue';
 
 const tabHeader = [
@@ -52,7 +53,7 @@ describe('Render Table Component', () => {
       propsData: {
         tableHeader: tabHeader,
         tableRow: tabRow,
-        id: 'test',
+        id: NitrozenUuid()
       },
     });
     expect(wrapper.props('tableHeader')).toBe(tabHeader);
@@ -65,12 +66,12 @@ describe('Render Table Component', () => {
         tableHeader: tabHeader,
         tableRow: tabRow,
         isZebra: true,
-        id: 'test',
+        id: NitrozenUuid()
       },
     });
     const rows = wrapper.findAll('.n-zebra-table');
     expect(rows).toHaveLength(tabRow.length / 2);
-    expect(rows.at(0).contains('.n-zebra-table')).toBe(true);
+    expect(rows.at(0).findComponent('.n-zebra-table').exists()).toBe(true);
   });
 
   it('Should Render show columnborder', () => {
@@ -79,13 +80,13 @@ describe('Render Table Component', () => {
         tableHeader: tabHeader,
         tableRow: tabRow,
         columnBorder: true,
-        id: 'test',
+        id: NitrozenUuid()
       },
     });
 
     const rows = wrapper.findAll('.n-table-left-border');
     expect(rows).toHaveLength(tabRow.length * 2);
-    expect(rows.at(0).contains('.n-table-left-border')).toBe(true);
+    expect(rows.at(0).findComponent('.n-table-left-border').exists()).toBe(true);
   });
 
   it('Should Contain Footer', () => {
@@ -95,7 +96,7 @@ describe('Render Table Component', () => {
         tableRow: tabRow,
         condensed: false,
         isFooter: true,
-        id: 'test',
+        id: NitrozenUuid()
       },
     });
     expect(wrapper.find('footer').exists()).toBe(true);
@@ -110,68 +111,70 @@ describe('Render Table Component', () => {
         tableRow: tabRow,
         condensed: true,
         isFooter: false,
-        id: 'test',
+        id: NitrozenUuid()
       },
     });
     expect(wrapper.find('footer').exists()).toBe(false);
     const condensedrows = wrapper.findAll('.n-table-condensed');
-    expect(condensedrows.at(0).contains('.n-table-condensed')).toBe(true);
+    expect(condensedrows.at(0).findComponent('.n-table-condensed').exists()).toBe(true);
   });
 
   it('Should render the checkbox table', () => {
     const wrapper = mount(NTable, {
-      propsData: {
-        tableHeader: tabHeader,
-        tableRow: tabRow,
-        checkAble: true,
-        id: 'test',
-      },
-    });
-    const checkbox = wrapper.findAll('.table-checkbox');
+        propsData:{
+            tableHeader: tabHeader,
+            tableRow: tabRow,
+            checkAble: true,
+            id: NitrozenUuid()
+        }
+    })
+    const checkbox = wrapper.findAll('.table-checkbox')
     expect(checkbox).toHaveLength(tabRow.length + 1);
   });
 
   it('Should render the normal table', () => {
     const wrapper = mount(NTable, {
-      propsData: {
-        tableHeader: tabHeader,
-        tableRow: tabRow,
-        checkAble: false,
-        id: 'test',
-      },
-    });
-    const checkbox = wrapper.findAll('.table-checkbox');
+        propsData:{
+            tableHeader: tabHeader,
+            tableRow: tabRow,
+            checkAble: false,
+            id: NitrozenUuid()
+        }
+    })
+    const checkbox = wrapper.findAll('.table-checkbox')
     expect(checkbox).toHaveLength(0);
   });
 
   it('Should render the unsorted icon', () => {
     const wrapper = mount(NTable, {
-      propsData: {
-        tableHeader: tabHeader,
-        tableRow: tabRow,
-        id: 'test',
-      },
-    });
-    const sortIcons = wrapper.findAll('.n-table-icon-left');
-    expect(sortIcons).toHaveLength(2);
-  });
+        propsData: {
+            tableHeader: tabHeader,
+            tableRow: tabRow,
+            id: NitrozenUuid()
+        }
+    })
+    const sortIcons = wrapper.findAll('.n-table-icon-left')
+    expect(sortIcons).toHaveLength(2)
+  })
 
   it('Should render the sorted icon', () => {
     const wrapper = mount(NTable, {
-      propsData: {
-        tableHeader: tabHeader,
-        tableRow: tabRow,
-      },
-    });
-    const sortIcons = wrapper.findAll('.n-table-icon-down');
-    expect(sortIcons).toHaveLength(0);
-  });
+        propsData: {
+            tableHeader: tabHeader,
+            tableRow: tabRow,
+            id: NitrozenUuid()
+        }
+    })
+    const sortIcons = wrapper.findAll('.n-table-icon-down')
+    expect(sortIcons).toHaveLength(0)
+  })
 
   it('Emit the onlclick even', async () => {
     const wrapper = mount(NTable, {
       propsData: {
         tableHeader: tabHeader,
         tableRow: tabRow,
+        id: NitrozenUuid()
       },
     });
     wrapper.vm.$emit('click', 1);
