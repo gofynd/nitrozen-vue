@@ -39,13 +39,13 @@
     }
 
     &-primary:disabled {
-        background-color: @ColorFeedbackError20;
-        color: @ColorFeedbackError80;
+        border-color: @ColorSecondaryGrey80;
+        color: @WhiteColor;
     }
 
     &-secondary:disabled {
-        border-color: @ColorSecondaryGrey80;
-        color: @ColorFeedbackError80;
+        background-color: @ColorPrimary20;
+        color: @WhiteColor;
     }
 
     &-tertiary:disabled {
@@ -102,6 +102,10 @@
         border-color: @ColorPrimary60;
         background-color: @ColorPrimary60;
     }
+    &[disabled] {
+        opacity: 0.3;
+        color: @WhiteColor;
+      }
 }
 
 .n-flat-button-primary {
@@ -121,6 +125,10 @@
         border-color: @ColorFeedbackSuccess80;
         background-color: @ColorFeedbackSuccess80;
     }
+    &[disabled] {
+        opacity: 0.3;
+        color: @WhiteColor;
+      }
 }
 
 .n-flat-button-destructive {
@@ -136,6 +144,10 @@
         border-color: @ColorFeedbackError80;
         background-color: @ColorFeedbackError80;
     }
+    &[disabled] {
+        opacity: 0.3;
+        color: @WhiteColor;
+      }
 }
 
 //outlined stroke states
@@ -163,6 +175,10 @@
         border-color: @ColorFeedbackSuccess80;
         background-color: @ColorFeedbackSuccess80;
     }
+    &[disabled] {
+        opacity: 0.3;
+        color: @WhiteColor;
+      }
 }
 
 .n-button-stroke-secondary {
@@ -199,11 +215,8 @@
 .n-button-stroke:disabled,
 .n-flat-button:disabled,
 .n-button-rounded:disabled {
-    // opacity: 0.4;
     cursor: not-allowed;
-    pointer-events: none;
-    background-color: @SecondaryDisabledColor;
-    color: @BlackColor;
+
 }
 
 .n-button-rounded {
