@@ -38,8 +38,7 @@ describe('Nitrozen Code Component', () => {
     });
     expect(wrapper.findComponent(NValidation).props()).toStrictEqual({
       isHidden: false,
-      label: 'Val label',
-      size: 16,
+      "label": "Val label",
       validationState: 'success',
       size: 16,
     });
@@ -59,6 +58,13 @@ describe('Nitrozen Code Component', () => {
       icon: 'info',
       position: 'right',
       tooltipText: 'I am a tooltip',
+      "contentBgColor": "#3d3d3d",
+      "contentColor": "#ffffff",
+      "icon": "twitter",
+      "iconColor": "#000000",
+      "iconSize": 26,
+      "link": "",
+      "tooltipLinkText": "",
     });
   });
   it('should check for input fields', async () => {

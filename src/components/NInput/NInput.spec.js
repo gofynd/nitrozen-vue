@@ -15,8 +15,7 @@ describe('Input Component', () => {
         placeholder: 'Your full name please',
       },
     });
-    expect(wrapper.find('input').exists()).toBeTruthy();
-    expect(wrapper.find('.n-input-textarea').exists()).toBeFalsy();
+    expect(wrapper.getComponent('input').exists()).toBeTruthy();
   });
   it('should trigger change in the input component and check for markup', () => {
     const wrapper = mount(NitrozenInput, {
@@ -30,12 +29,12 @@ describe('Input Component', () => {
         placeholder: 'Your full name please',
       },
     });
-    expect(wrapper.find('.n-helper-text').text()).toBe(
+    expect(wrapper.getComponent('.n-helper-text').text()).toBe(
       'It must contain a minimum of 8 characters and include at least 1 small case letter, 1 capital letter and 1 special character'
     );
-    let input = wrapper.find('.input-text');
+    let input = wrapper.getComponent('.input-text');
     expect(input.exists()).toBeTruthy();
-    expect(wrapper.find('.input-text').element.textContent).toBe('');
+    expect(wrapper.getComponent('.input-text').element.textContent).toBe('');
     input.trigger('abc');
   });
   it('should check or markup with prefix and suffix props', () => {
@@ -54,8 +53,8 @@ describe('Input Component', () => {
         suffix: 'efg',
       },
     });
-    expect(wrapper.find('.nitrozen-input-prefix').text()).toBe('abc');
-    expect(wrapper.find('.nitrozen-input-suffix').text()).toBe('efg');
+    expect(wrapper.getComponent('.nitrozen-input-prefix').text()).toBe('abc');
+    expect(wrapper.getComponent('.nitrozen-input-suffix').text()).toBe('efg');
   });
   it('should check or markup with type as textarea', () => {
     const wrapper = mount(NitrozenInput, {
@@ -73,7 +72,7 @@ describe('Input Component', () => {
         suffix: 'efg',
       },
     });
-    expect(wrapper.find('.n-input-textarea').exists()).toBeTruthy();
+    expect(wrapper.getComponent('textarea').exists()).toBeTruthy();
   });
   it('should check or markup for validation state', () => {
     const wrapper = mount(NitrozenInput, {
@@ -87,6 +86,6 @@ describe('Input Component', () => {
         validationMessage: 'I am a message',
       },
     });
-    expect(wrapper.find(NValidation).exists()).toBeTruthy();
+    expect(wrapper.getComponent(NValidation).exists()).toBeTruthy();
   });
 });

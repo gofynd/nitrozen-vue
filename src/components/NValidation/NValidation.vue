@@ -14,17 +14,6 @@ export default {
   },
   props: {
     validationState: {
-      type: String,
-      default: 'default',
-      validator(value) {
-        // The value must match one of these strings
-        return ['success', 'warning', 'error', 'default', 'info'].includes(
-          value
-        );
-      },
-    },
-    props: {
-        validationState: {
             type: String,
             default: 'default',
             validator(value) {
@@ -44,11 +33,6 @@ export default {
             type: Number,
             default: 16
         }
-    },
-    isHidden: {
-      type: Boolean,
-      default: false,
-    },
   },
   computed: {
     validatorClass() {
