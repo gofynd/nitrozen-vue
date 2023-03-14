@@ -1,6 +1,6 @@
-import { mount } from '@vue/test-utils'
-import NValidation from './NValidation.vue'
-import NIcon from '../NIcon'
+import { mount } from '@vue/test-utils';
+import NValidation from './NValidation.vue';
+import NIcon from '../NIcon';
 
 describe('Validation Component', () => {
     it('should render successful validation component', () => {

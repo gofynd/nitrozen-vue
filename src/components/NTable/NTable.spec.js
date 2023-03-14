@@ -130,7 +130,7 @@ describe('Render Table Component', () => {
     })
     const checkbox = wrapper.findAll('.table-checkbox')
     expect(checkbox).toHaveLength(tabRow.length + 1);
-  })
+  });
 
   it('Should render the normal table', () => {
     const wrapper = mount(NTable, {
@@ -143,9 +143,9 @@ describe('Render Table Component', () => {
     })
     const checkbox = wrapper.findAll('.table-checkbox')
     expect(checkbox).toHaveLength(0);
-  })
+  });
 
-  it('Should render the unsorted icon',  () => {
+  it('Should render the unsorted icon', () => {
     const wrapper = mount(NTable, {
         propsData: {
             tableHeader: tabHeader,
@@ -157,7 +157,7 @@ describe('Render Table Component', () => {
     expect(sortIcons).toHaveLength(2)
   })
 
-  it('Should render the sorted icon',  () => {
+  it('Should render the sorted icon', () => {
     const wrapper = mount(NTable, {
         propsData: {
             tableHeader: tabHeader,
@@ -176,7 +176,7 @@ describe('Render Table Component', () => {
         tableRow: tabRow,
         id: NitrozenUuid()
       },
-    })
+    });
     wrapper.vm.$emit('click', 1);
     wrapper.vm.$emit('getAllItems', tabRow);
     wrapper.vm.$emit('getSingleChecked', tabRow[0]);
