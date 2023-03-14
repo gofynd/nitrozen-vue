@@ -6,11 +6,22 @@
 </template>
 
 <script>
-import NIcon from '../NIcon'
+import NIcon from '../NIcon';
 export default {
-    name: 'nitrozen-validation',
-    components: {
-        'nitrozen-icon': NIcon
+  name: 'nitrozen-validation',
+  components: {
+    'nitrozen-icon': NIcon,
+  },
+  props: {
+    validationState: {
+      type: String,
+      default: 'default',
+      validator(value) {
+        // The value must match one of these strings
+        return ['success', 'warning', 'error', 'default', 'info'].includes(
+          value
+        );
+      },
     },
     props: {
         validationState: {
@@ -34,61 +45,69 @@ export default {
             default: 16
         }
     },
-    computed:{
-        validatorClass(){
-            return {
-                'n-validation-success': this.$props.validationState.toLowerCase() === 'success',
-                'n-validation-error': this.$props.validationState.toLowerCase() === 'error',
-                'n-validation-warning': this.$props.validationState.toLowerCase() === 'warning',
-            }
-        },
-        getValidatorIconColor(){
-            let colorMap = {
-                'success': '#0a5f23',
-                'error': '#cd0909',
-                'warning': '#f5a300'
-            }
-            return colorMap[this.$props.validationState]
-        }
-    }
-}
+    isHidden: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  computed: {
+    validatorClass() {
+      return {
+        'n-validation-success':
+          this.$props.validationState.toLowerCase() === 'success',
+        'n-validation-error':
+          this.$props.validationState.toLowerCase() === 'error',
+        'n-validation-warning':
+          this.$props.validationState.toLowerCase() === 'warning',
+      };
+    },
+    getValidatorIconColor() {
+      let colorMap = {
+        success: '#0a5f23',
+        error: '#cd0909',
+        warning: '#f5a300',
+      };
+      return colorMap[this.$props.validationState];
+    },
+  },
+};
 </script>
 
 <style scoped lang="less">
 @import url('../../base/base.less');
 
 .n-validator-icon {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .n-validation-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    height: fit-content;
-    font-family: 'JioType';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  font-family: 'JioType';
+  font-size: 1.2rem;
 }
 .n-validation-success {
-    color: @SuccessColor;
-    svg {
-        fill: @WarningColor;
-    }
+  color: @SuccessColor;
+  svg {
+    fill: @WarningColor;
+  }
 }
 .n-validation-error {
-    color: @ErrorColor;
-    svg {
-        fill: @WarningColor;
-    }
+  color: @ErrorColor;
+  svg {
+    fill: @WarningColor;
+  }
 }
 .n-validation-warning {
-    color: @WarningColor;
-    svg path {
-        fill: @WarningColor;
-    }
+  color: @WarningColor;
+  svg path {
+    fill: @WarningColor;
+  }
 }
 .n-validation-default {
-    color: #141414
+  color: #141414;
 }
-
 </style>
