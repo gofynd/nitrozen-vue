@@ -22,10 +22,9 @@ const Template = (args, { argTypes }) => ({
   <template slot="body"> {{body}}</template>
   </n-dialog>
   </div>
-  `,
-  data: function () {
-    return {
-    };
+  `,  
+  mounted() {
+  this.$refs.dialog.open();
   },
   methods: {
   },
