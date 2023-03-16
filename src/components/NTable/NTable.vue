@@ -1,6 +1,8 @@
 <template>
   <div class="n-table-container">
     <table class="n-table">
+      <!-- table head -->
+
       <thead class="n-table-top">
         <tr>
           <th
@@ -10,7 +12,8 @@
             class="n-table-head-data"
           >
             <n-checkbox
-              :value="allChecked"
+              :id="NitrozenUuid()"
+              :value="allItemsChecked"
               @change="getAllSelectedItems($event, tableRow)"
               class="table-checkbox"
             />
@@ -45,6 +48,8 @@
           </th>
         </tr>
       </thead>
+
+      <!-- table body  -->
       <tbody class="n-body">
         <tr
           class="n-table-row"
@@ -62,10 +67,10 @@
             ]"
           >
             <n-checkbox
+              :id="rowIndex + NitrozenUuid()"
               :value="rowItem.isChecked"
               @change="getCheckedRow($event, rowIndex)"
               class="table-checkbox"
-              :id="rowIndex + 'checkbox'"
             />
           </th>
           <td
@@ -91,14 +96,16 @@
   </div>
 </template>
 <script>
-import NIcon from '../NIcon/NIcon.vue';
-import NCheckbox from '../NCheckbox';
+import NIcon from "../NIcon/NIcon.vue";
+import NCheckbox from "../NCheckbox";
+import NitrozenUuid from "../../utils/NUuid";
 export default {
   components: { NIcon, NCheckbox },
-  name: 'nitrozen-table',
+  name: "nitrozen-table",
 
   data() {
     return {
+      NitrozenUuid,
       clickedHeaderItems: [],
       isSorted: false,
       allChecked: false,
@@ -120,11 +127,11 @@ export default {
     },
     footer: {
       type: String,
-      default: 'Default Footer',
+      default: "Default Footer",
     },
     headerBackground: {
       type: String,
-      default: 'var(--ColorPrimary50, #3535f3)',
+      default: "var(--ColorPrimary50, #3535f3)",
     },
     customIcons: {
       type: Boolean,
@@ -158,43 +165,39 @@ export default {
       const rowItem = this.tableRow[rowIndex];
       rowItem.isChecked = checked;
       if (!checked) {
-        this.checkedItems.splice(rowIndex, 1);
+        this.checkedItems = this.checkedItems.filter(
+          (ele) => JSON.stringify(ele) !== JSON.stringify(rowItem)
+        );
       } else {
         this.checkedItems.push(rowItem);
       }
-      this.checkSingleBox();
-      this.$emit('getSingleChecked', this.checkedItems);
+      if (this.checkAllItems.length === this.checkedItems.length) {
+        this.allChecked = false;
+      }
+      this.$emit("getSingleChecked", this.checkedItems);
     },
     getAllSelectedItems(e, val) {
       const checked = e.target.checked;
       this.checkAllContent(checked, val);
-      this.$emit('getAllItems', this.checkAllItems);
+
+      this.$emit("getAllItems", this.checkAllItems);
     },
 
     checkAllContent(status, row) {
+      this.allChecked = status;
       if (status) {
         this.checkAllItems = [...this.tableRow];
+        this.checkedItems = [...this.checkAllItems];
         row.forEach((element) => {
-          this.$set(element, 'isChecked', status);
+          this.$set(element, "isChecked", status);
         });
       } else {
         this.checkAllItems = [];
+        this.checkedItems = [];
         row.forEach((element) => {
-          this.$set(element, 'isChecked', status);
+          this.$set(element, "isChecked", status);
         });
       }
-    },
-
-    checkSingleBox() {
-      const row = this.tableRow;
-      let count = 0;
-      const size = row.length;
-      row.forEach((element) => {
-        if (element.isChecked) {
-          count++;
-        }
-      });
-      count === size ? (this.allChecked = true) : (this.allChecked = false);
     },
 
     sortTableHeader(headerIndex) {
@@ -203,7 +206,7 @@ export default {
       // if not exists then that means its clicked
       if (!tempClickedIds.includes(headerIndex)) {
         tempClickedIds.push(headerIndex);
-        this.$emit('click', headerIndex);
+        this.$emit("click", headerIndex);
       } else {
         // if exists then find by index and remove that array element
         let indexPos = tempClickedIds.indexOf(headerIndex);
@@ -214,21 +217,22 @@ export default {
       }
 
       this.clickedHeaderItems = [...tempClickedIds];
-      console.log(this.clickedHeaderItems);
     },
   },
-
-  mounted() {
-    if (this.allChecked && this.checkAble) {
-      this.checkAllContent(this.allChecked, this.tableRow);
-    } else {
-      this.checkAllContent(this.allChecked, this.tableRow);
-    }
+  computed: {
+    allItemsChecked() {
+      return (
+        (this.checkAllItems.length === this.tableRow.length &&
+          this.checkAllItems.length === this.checkedItems.length) ||
+        this.checkedItems.length === this.tableRow.length
+      );
+    },
   },
 };
 </script>
 <style scoped lang="less">
-@import '../../base/variable.less';
+@import "../../base/variable.less";
+
 .n-table-container {
   border: 0.1rem solid @ColorPrimaryGrey40;
   border-radius: @RadiusMedium;
