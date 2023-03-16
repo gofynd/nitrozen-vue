@@ -8,8 +8,52 @@ import Plugin from '../assets/plugin.svg';
 import Repo from '../assets/repo.svg';
 import StackAlt from '../assets/stackalt.svg';
 
-
 <Meta title="Introduction/Installation" />
 
 
-<div>Installation Instructions</div>
+# @gofynd/nitrozen-vue
+
+<br />
+
+## 🤔 Getting started
+
+To install `@gofynd/nitrozen-vue` in your project, you will need to run the following
+command using [npm](https://www.npmjs.com/):
+
+```bash
+npm install -S @gofynd/nitrozen-vue
+```
+
+If you prefer [Yarn](https://yarnpkg.com/en/), use the following command
+instead:
+
+```bash
+yarn add @gofynd/nitrozen-vue
+```
+
+_Nitrozen component library can be consumed by all Vue projects._
+
+## Usage
+
+The `@gofynd/nitrozen-vue` package provides components and icons for the Nitrozen Design
+System.
+
+To use a component, you can import it directly from the package:
+
+
+```vue
+<template>
+    <nitrozen-button>Button</nitrozen-button>
+</template>
+
+<script>
+import { NitrozenButton } from '@gofynd/nitrozen-vue'
+
+export default {
+    name: 'Component',
+    components: {
+        NitrozenButton
+    }
+}
+</script>
+```

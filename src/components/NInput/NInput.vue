@@ -30,20 +30,33 @@
       <!-- Prefix -->
       <nitrozen-input-prefix
         v-if="showPrefix"
-        class="nitrozen-input-prefix nitrozen-remove-right-border"
-        v-bind:class="{ 'nitrozen-prefix-padding': !custom }"
+        v-bind:class="{
+          'nitrozen-prefix-padding': !custom,
+          'n-texttype-position': typeof prefix === 'string',
+          'n-svg-position': typeof prefix !== 'string',
+          'nitrozen-input-prefix': true,
+        }"
       >
         <span v-if="custom"><slot /></span>
-        <span v-else>{{ prefix }}</span>
+        <span v-else>
+          {{ prefix }}
+        </span>
       </nitrozen-input-prefix>
 
       <!-- Input -->
       <input
         v-if="type != 'textarea'"
         v-bind:class="{
-          'nitrozen-search-input-padding': showSearchIcon,
-          'nitrozen-remove-left-border': showPrefix,
-          'nitrozen-remove-right-border': showSuffix,
+          'nitrozen-search-input-padding': showSearchIcon || showPrefix,
+          'nitrozen-search-input-right-padding': showSuffix,
+          'n-success-border': this.validationState == 'success',
+          'n-error-border': this.validationState == 'error',
+          'n-warning-border': this.validationState == 'warning',
+          'n-input': true,
+          'input-text': true,
+          'n-input-default-border': !['success', 'error', 'warning'].includes(
+            this.validationState
+          ),
         }"
         v-on:keyup="eventEmit($event, 'keyup')"
         v-on:change="eventEmit($event, 'change')"
@@ -51,7 +64,6 @@
         v-on:focus="eventEmit($event, 'focus')"
         v-on:click="eventEmit($event, 'click')"
         v-on:keypress="eventEmit($event, 'keypress')"
-        class="n-input input-text"
         :min="min"
         :max="max"
         :maxlength="maxlength"
@@ -74,8 +86,17 @@
         v-on:focus="eventEmit($event, 'focus')"
         v-on:click="eventEmit($event, 'click')"
         v-on:keypress="eventEmit($event, 'keypress')"
-        v-bind:class="{ 'n-input-textarea': type == 'textarea' }"
-        class="n-input input-text"
+        v-bind:class="{
+          'n-input-textarea': type == 'textarea',
+          'n-success-border': this.validationState == 'success',
+          'n-error-border': this.validationState == 'error',
+          'n-warning-border': this.validationState == 'warning',
+          'n-input': true,
+          'input-text': true,
+          'n-input-default-border': !['success', 'error', 'warning'].includes(
+            this.validationState
+          ),
+        }"
         :maxlength="maxlength"
         :disabled="disabled"
         :ref="id"
@@ -87,12 +108,25 @@
       <!-- Suffix -->
       <nitrozen-input-suffix
         v-if="showSuffix"
-        class="nitrozen-input-suffix nitrozen-remove-left-border"
-        v-bind:class="{ 'nitrozen-suffix-padding': !custom }"
+        v-bind:class="{
+          'nitrozen-suffix-padding': !custom,
+          'n-texttype-position': typeof suffix === 'string',
+          'n-svg-position': typeof suffix !== 'string',
+          'nitrozen-input-suffix': true,
+        }"
       >
         <span v-if="custom"><slot /></span>
         <span v-else>{{ suffix }}</span>
       </nitrozen-input-suffix>
+    </div>
+    <div v-if="helperText" class="n-input-underinfo">
+      <span class="n-helper-text">{{ helperText }}</span>
+      <nitrozen-validation
+        v-if="validationState"
+        :isHidden="validationState ? false : true"
+        :validationState="validationState"
+        :label="validationMessage"
+      ></nitrozen-validation>
     </div>
   </div>
 </template>
@@ -103,6 +137,7 @@ import NInputSuffix from './NInputSuffix';
 import NTooltip from './../NTooltip';
 import NitrozenInline from './../NInline';
 import NitrozenUuid from './../../utils/NUuid';
+import NitrozenValidation from './../NValidation';
 
 export default {
   name: 'nitrozen-input',
@@ -111,6 +146,7 @@ export default {
     'nitrozen-input-suffix': NInputSuffix,
     'nitrozen-tooltip': NTooltip,
     'nitrozen-inline': NitrozenInline,
+    'nitrozen-validation': NitrozenValidation,
   },
   data() {
     return {
@@ -118,7 +154,7 @@ export default {
     };
   },
   computed: {
-    length: function() {
+    length: function () {
       return this.value.length;
     },
   },
@@ -151,11 +187,15 @@ export default {
       type: [Number, String],
       default: '',
     },
-    showError: {
-      type: Boolean,
-      default: false,
+    validationState: {
+      type: String,
+      default: null,
     },
-    hint: {
+    validationMessage: {
+      type: String,
+      default: null,
+    },
+    helperText: {
       type: String,
       default: '',
     },
@@ -226,7 +266,7 @@ export default {
     }
   },
   methods: {
-    valueChange: function(event) {
+    valueChange: function (event) {
       let value = event.target.value;
       if (this.type === 'number') {
         value = Number(event.target.value);
@@ -238,15 +278,10 @@ export default {
         this.loaderShow = true;
       }
     },
-    eventEmit: function(event, type) {
+    eventEmit: function (event, type) {
       this.$emit(type, event);
     },
   },
-  // render(createElement){
-  //     let inputAttrs = {
-  //         staticClass= "n-input input-text"
-  //     }
-  // }
 };
 </script>
 
