@@ -83,7 +83,7 @@ More coming soon!
 
 If you're looking for `@gofynd/nitrozen-vue` API documentation, check out:
 
-- [Storybook](https://gofynd.io/nitrozen-vue) (Launching soon)
+- [Storybook](https://gofynd.io/nitrozen-vue)
 
 ## 📝 License
 
