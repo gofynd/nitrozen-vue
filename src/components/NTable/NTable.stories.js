@@ -89,10 +89,12 @@ export default {
 
 const Template = (args, {argTypes}) => ({
     components: {NitrozenTable},
+    data() {return {op: false}},
     props: Object.keys(argTypes),
     template: `<div> 
     <nitrozen-table @click="click" @onRowClick="rowClick" @getAllItems="handle" @getSingleChecked="getSingle" v-bind="$props"/>
-    <div/>`
+    </div>`
+
 })
 
 export const Basic = Template.bind({})
@@ -349,12 +351,13 @@ Condensed.args = {
 
 export const Checkable = Template.bind({})
 Checkable.args = {
+
     
     tableHeader: [
         {
           "name": "firstName",
           "value": "First name",
-          "width": "50%",
+          "width": "auto",
           "sortable": true
         },
         {
