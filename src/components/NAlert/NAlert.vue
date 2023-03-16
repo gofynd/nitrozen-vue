@@ -18,7 +18,7 @@
             <div class="n-alert-content" :class="extendedAlert && 'n-alert-extended'">
                 <div class="n-alert-icon-text-wrapper">
                     <div class="n-alert-icon">
-                        <img src="./../../assets/loader.gif" v-if="loader" class="n-alert-loader" />
+                        <img :src="getLoader" v-if="loader" class="n-alert-loader" />
                         <nitrozen-icon 
                             v-else
                             :color="iconColor" 
@@ -56,6 +56,7 @@
 <script>
 /* Variables and constants imports */
 import * as STATES from './states';
+import { LOADER_CDN_URL } from '../../common/constants'
 import {  
     ICON_COLORS, ICON_NAMES
 } from './constants';
@@ -155,6 +156,9 @@ export default {
                 )
             ) return true;
             else return false;
+        },
+        getLoader(){
+            return LOADER_CDN_URL
         }
     },
     methods: {
