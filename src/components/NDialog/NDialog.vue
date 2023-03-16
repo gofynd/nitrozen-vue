@@ -117,7 +117,7 @@ export default {
       negativeButtonLabel: false,
       neutralButtonLabel: 'Ok',
       positiveButtonLabel: false,
-      showCloseButton: true,
+      showCloseButton: false,
     };
   },
   methods: {
