@@ -18,6 +18,6 @@ describe('Badge Component', () => {
                 icon: 'success'
             }
         })
-        expect(wrapper.find(NIcon).exists()).toBeTruthy() 
+        expect(wrapper.findComponent(NIcon).exists()).toBeTruthy()
     })
 })
