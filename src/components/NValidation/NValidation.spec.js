@@ -1,6 +1,6 @@
-import { mount } from '@vue/test-utils'
-import NValidation from './NValidation.vue'
-import NIcon from '../NIcon'
+import { mount } from '@vue/test-utils';
+import NValidation from './NValidation.vue';
+import NIcon from '../NIcon';
 
 describe('Validation Component', () => {
     it('should render successful validation component', () => {
@@ -21,7 +21,7 @@ describe('Validation Component', () => {
                 label: 'Success field'
             }
         })
-        expect(wrapper.find('div').exists()).toBe(false)
+        expect(wrapper.findComponent('div').exists()).toBe(false)
     })
     it('should contain icon component', () => {
         const wrapper = mount(NValidation, {
@@ -31,6 +31,6 @@ describe('Validation Component', () => {
                 label: 'Error field'
             }
         })
-        expect(wrapper.findComponent(NIcon).exists()).toBeTruthy();
+        expect(wrapper.findComponent(NIcon).exists()).toBe(true)
     })
 })
