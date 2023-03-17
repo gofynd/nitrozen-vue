@@ -1,8 +1,7 @@
 <template>
 <div class="n-button-content" :class="{'disable-click':showProgress}">
     <div class="social-icon" v-if="icon">
-        <img v-if="icon == 'facebook'" src="./../../assets/facebook-icon.png">
-        <!-- <img v-if="icon == 'bag'" src="./../../assets/Bag_Icon.svg"> -->
+        <nitrozen-icon v-if="icon" :name="icon" :size="getIconSize" :color="iconColor"/>
     </div>
     <slot v-if="!showProgress" />
     <div v-if="showProgress" class="n-btn-spin">
@@ -12,7 +11,11 @@
 </template>
 
 <script>
+import NIcon from './../NIcon/NIcon.vue';
 export default {
+    components: {
+    'nitrozen-icon': NIcon,
+  },
     name: 'nitrozen-button-content',
     props: {
         showProgress: {
@@ -21,8 +24,25 @@ export default {
         },
         icon: {
             type: String
+        },
+        size: {
+            type: String
+        },
+        iconColor:{
+            type:String,
+            default:"#FFFFFF"
         }
+    },
+    computed: {
+    getIconSize(){
+      let iconSize = {
+        'small': 10,
+        'medium': 14,
+        'large': 18
+      }
+      return iconSize[this.size]
     }
+  }
 }
 </script>
 
@@ -44,7 +64,7 @@ export default {
 .social-icon{
     float: left;
     position: relative;
-    left: -20px;
+    // left: -20px;
     display: flex;
     img{
         background: white;
