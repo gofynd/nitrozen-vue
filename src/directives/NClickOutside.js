@@ -20,7 +20,10 @@ const clickOutside = Vue.directive('click-outside', {
             }
         }
         el.__nitrozenClickOutside__ = handler
-
+        let path = e.composedPath ? e.composedPath() : e.path;
+        if (bubble || path && -1 == path.indexOf(el)) {
+            binding.value(e)
+        }
         // add Event Listeners
         document.addEventListener('click', handler)
     },
