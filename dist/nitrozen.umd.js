@@ -13347,12 +13347,12 @@ const clickOutside = external_commonjs_vue_commonjs2_vue_root_Vue_default().dire
     // Define Handler and cache it on the element
     const bubble = binding.modifiers.bubble;
     const handler = e => {
-      if (bubble || -1 == e && e.path && e.path.indexOf(el)) {
+      let path = e.composedPath ? e.composedPath() : e.path;
+      if (bubble || path && -1 == path.indexOf(el)) {
         binding.value(e);
       }
     };
     el.__nitrozenClickOutside__ = handler;
-
     // add Event Listeners
     document.addEventListener('click', handler);
   },
