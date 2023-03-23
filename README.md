@@ -2,7 +2,7 @@
 
 > Vue component library inspired from Nitrozen design system
 
-## 🤔 Getting started
+## Getting started
 
 To install `@gofynd/nitrozen-vue` in your project, you will need to run the following
 command using [npm](https://www.npmjs.com/):

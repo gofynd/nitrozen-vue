@@ -13939,7 +13939,6 @@ var clickOutside = external_commonjs_vue_commonjs2_vue_root_Vue_default().direct
       }
     };
     el.__nitrozenClickOutside__ = handler;
-
     // add Event Listeners
     document.addEventListener('click', handler);
   },

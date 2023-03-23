@@ -1,6 +1,6 @@
 {
   "name": "@gofynd/nitrozen-vue",
-  "version": "0.0.41",
+  "version": "1.0.0",
   "private": false,
   "description": "Fynd Design Library for Vue",
   "scripts": {
