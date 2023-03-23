@@ -3,9 +3,9 @@
     <div class="social-icon" v-if="icon">
         <nitrozen-icon v-if="icon" :name="icon" :size="getIconSize" :color="iconColor"/>
     </div>
-    <slot v-if="!showProgress" />
+    <slot/>
     <div v-if="showProgress" class="n-btn-spin">
-        <img class="n-btn-spinner" style="width: 50px;" src="https://raw.githubusercontent.com/gofynd/nitrozen-vue/master/src/assets/loader-white.gif">
+        <img class="n-btn-spinner" src="https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyprod/wrkr/misc/general/free/original/loader.gif">
     </div>
 </div>
 </template>
@@ -52,6 +52,7 @@ export default {
     align-items: center;
     height: 100%;
     justify-content: center;
+    gap: 10px;
 }
 .n-btn-spinner{
   text-align:center;
