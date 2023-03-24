@@ -37,7 +37,7 @@ export default {
     iconColor: {
       control: "color",
       description: "Set the icon color within the button",
-      value:"white"
+      value:""
     },
   }
 }
@@ -46,34 +46,35 @@ export default {
 const Template = (args, { argTypes }) => ({
   components: { NitrozenBtn },
   props: Object.keys(argTypes),
-  template: ' <nitrozen-btn v-flat-btn v-bind="$props">Cancel</nitrozen-btn>',
+  template: ' <nitrozen-btn v-flat-btn v-bind="$props">Flat</nitrozen-btn>',
 });
 
-export const DefaultButtonThemes = Template.bind({})
-DefaultButtonThemes.args = {
-  rounded:false,
-  theme:'primary'
+export const Flat = Template.bind({})
+Flat.args = {
+  rounded:true,
+  theme:'secondary',
+  icon: 'basketball'
 };
 
-const StrokedButtonTemplate = (args, { argTypes }) => ({
+const StrokedButton = (args, { argTypes }) => ({
   components: { NitrozenBtn },
   props: Object.keys(argTypes),
-  template: '<nitrozen-btn v-bind="$props" v-stroke-btn>Cancel</nitrozen-btn>',
+  template: '<nitrozen-btn v-bind="$props" v-stroke-btn>Stroked</nitrozen-btn>',
 });
 
-export const StrokedButtonThemes = StrokedButtonTemplate.bind({})
-StrokedButtonThemes.args = {
+export const Stroked = StrokedButton.bind({})
+Stroked.args = {
     rounded:true,
+    theme:'primary'
   };
+const Simple = (args, { argTypes }) => ({
+  components: { NitrozenBtn },
+  props: Object.keys(argTypes),
+  template: '<nitrozen-btn v-bind="$props">Cancel</nitrozen-btn>',
+});
 
-const IconFilledButtonTemplate = (args, { argTypes }) => ({
-    components: { NitrozenBtn },
-    props: Object.keys(argTypes),
-    template: '<nitrozen-btn v-bind="$props" v-stroke-btn>Cancel</nitrozen-btn>',
-  });
-
-export const IconFilledButtonThemes = IconFilledButtonTemplate.bind({})
-IconFilledButtonThemes.args = {
-  rounded:true,
-  icon:'twitter'
+export const simpleBtn = Simple.bind({})
+simpleBtn.args = {
+    rounded:true,
+    theme:'destructive'
   };
