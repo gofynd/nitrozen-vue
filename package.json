@@ -14,8 +14,8 @@
     "build-website": "rm -rf public && vue-cli-service build --dest public src/main.js",
     "export:icons": "node NIconGenerator.js",
     "prepare": "npx husky install",
-    "postpack": "pinst --enable",
-    "prepack": "pinst --disable",
+    "postpack": "npx pinst --enable",
+    "prepack": "npx pinst --disable",
     "start": "node server.js",
     "storybook": "start-storybook -p 6006",
     "test": "jest"
