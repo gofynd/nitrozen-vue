@@ -35,7 +35,7 @@ export default {
     supportText: String,
     duration: {
       type: Number,
-      default: 7000, // miliseconds
+      default: 3000, // miliseconds
     },
     position: {
       type: String,
@@ -69,9 +69,9 @@ export default {
       setTimeout(() => {
         this.nudgeList[this.nudgeList.length - 1].active = true;
       },100)
-      // setTimeout(() => {
-      //   this.close();
-      // }, this.duration);
+      setTimeout(() => {
+        this.close();
+      }, this.duration);
     },
     close() {
       if (this.nudgeList.length > 0) {
