@@ -1,0 +1,102 @@
+@import './../../base/base.less';
+
+.nudge-outer {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  .nudge-container {
+    font-family: @PrimaryFont;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 24px;
+    padding: 16px;
+    color: @WhiteColor;
+    min-width: 384px;
+    margin-top: 25px;
+    margin-right: 25px;
+
+    &.active {
+      transform: translate(0, 0) !important;
+    }
+
+    .nudge-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 100%;
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        .heading {
+          font-weight: 600;
+          font-size: 16px;
+        }
+
+        .support-text {
+          margin-top: 4px;
+          font-size: 14px;
+        }
+      }
+
+      &.nudge-top-right {
+        top: 5rem;
+        right: 5rem;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: nudge-in-right 0.7s;
+      }
+    }
+
+    .cta {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      margin-top: 20px;
+
+      .cta2 {
+        font-size: 16px;
+        border-radius: 24px;
+        border: none;
+        background: transparent;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .cta1 {
+        font-size: 16px;
+        border-radius: 24px;
+        border: 1px solid #e8e8fc;
+        background: transparent;
+        color: #fff;
+        padding: 14px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &.top-right {
+    .nudge-container {
+      transform: translate(calc(100% + 25px), 0);
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    }
+  }
+
+  &.top-bottom {
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    .nudge-container {
+      transform: translate(0, calc(-50px));
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+      margin-right: 0;
+
+    }
+  }
+}

@@ -801,6 +801,32 @@
           >
         </template>
       </nitrozen-dialog>
+
+       <nitrozen-nudge
+        :leftImg="require('../assets/nitrozen.png')"
+        :rightImg="require('../assets/nitrozen.png')"
+        class="nudge-compo"
+        cta1="Recharge now"
+        cta2="View plans"
+        heading="Subscription is expiring"
+        supportText="on 30th july 2023"
+        ref="nudge"
+        position="top-bottom"
+      >
+      <template v-slot:left>
+        <div class="left-icon"><img src="../assets/nitrozen.png" alt="Left-imgae"></div>
+      </template>
+      <template v-slot:right>
+        <div class="right-icon"><img src="../assets/nitrozen.png" alt="Right-imgae"></div>
+      </template>
+      </nitrozen-nudge>
+      <nitrozen-button
+        v-flat-btn
+        @click="openNudge"
+        :icon="'bag'"
+        :theme="'secondary'"
+        >Open Nudge</nitrozen-button
+      >
     </div>
   </div>
 </template>
@@ -980,6 +1006,9 @@ export default {
     // }, 5000);
   },
   methods: {
+    openNudge(){
+      this.$refs.nudge.open();
+    },
     stepperNext() {
       let next = this.stepper.activeIndex + 1;
       if (this.stepper.maxActiveIndex < next) {
@@ -1147,6 +1176,15 @@ body {
   &.selected {
     color: white;
     background-color: green;
+  }
+}
+.nudge-compo {
+  .left-icon {
+    width: 32px;
+    margin-right: 12px;
+  }
+  .right-icon {
+    width: 32px;
   }
 }
 </style>
