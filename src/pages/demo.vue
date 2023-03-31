@@ -329,6 +329,7 @@
           @input="getState"
           :required="true"
           :label="'Input with Error Message'"
+          :requiredStarColor="'red'"
         ></nitrozen-input>
         <nitrozen-error v-if="inputModel == ''"
           >Field is required</nitrozen-error
