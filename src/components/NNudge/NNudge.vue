@@ -27,8 +27,6 @@ export default {
     NitrozenButton,
   },
   props: {
-    leftImg: String,
-    rightImg: String,
     cta1: String,
     cta2: String,
     heading: String,
