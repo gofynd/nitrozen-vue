@@ -2,11 +2,15 @@
   <div :id="id" class="nitrozen-tab-container">
     <ul class="nitrozen-tab">
       <nitrozen-tab-item
-        @click="selectTab(index, item)"
-        :class="{ 'nitrozen-tab-active': activeTab == index }"
         v-for="(item, index) in tabItem"
+        :class="{ 'nitrozen-tab-active': activeTab == index }"
         :key="index"
-      >{{ item[label] || item }}</nitrozen-tab-item>
+        :icon="item.icon"
+        @click="selectTab(index, item)"
+      >
+        {{ item.label }}
+      </nitrozen-tab-item
+      >
     </ul>
   </div>
 </template>
@@ -27,8 +31,15 @@
     -ms-overflow-style: none;
     padding: 0;
     margin: 0;
+    justify-content: space-around;
     &::-webkit-scrollbar {
       display: none;
+    }
+  }
+  .nitrozen-tab-active{
+
+    /deep/ .nitrozen-icon{
+      opacity: 1 !important;
     }
   }
 }
