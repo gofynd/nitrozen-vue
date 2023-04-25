@@ -100,6 +100,7 @@
         :maxlength="maxlength"
         :disabled="disabled"
         :ref="id"
+        :id="id"
         :placeholder="placeholder"
         :value="value"
         @input="valueChange"
