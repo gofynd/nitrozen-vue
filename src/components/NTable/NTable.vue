@@ -89,6 +89,7 @@
     </table>
     <footer
       v-if="isFooter"
+      class="n-common-footer"
       :class="[!condensed ? 'n-table-footer' : 'n-table-footer-condensed']"
     >
       {{ footer }}
@@ -311,15 +312,17 @@ export default {
   }
 }
 
+.n-common-footer {
+  background-color: @WhiteColor;
+  border-top: 0.1rem solid @ColorPrimaryGrey40;
+}
 .n-table-footer {
   padding: @SpacingM;
-  border-top: 0.1rem solid @ColorPrimaryGrey40;
   font-size: 1.6rem;
 }
 
 .n-table-footer-condensed {
   padding: @SpacingS;
-  border-top: 0.1rem solid @ColorPrimaryGrey40;
   font-size: 1.4rem;
 }
 </style>
