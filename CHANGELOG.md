@@ -7,5 +7,5 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 - added components with revamped design system
-- complete list of revamped components available on the library [Storybook](https://gofynd.io/nitrozen-vue).
+- complete list of revamped components available on the library [Storybook](https://opensource.gofynd.io/nitrozen-vue).
 - added tests
