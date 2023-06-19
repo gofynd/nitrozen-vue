@@ -49,24 +49,24 @@ export default {
 
 ## 🔥 Components revamped:
 
-- [Alert](https://gofynd.io/nitrozen-vue/?path=/story/components-alert--button-less-alert)
-- [Badge](https://gofynd.io/nitrozen-vue/?path=/story/components-badges--success-badge)
-- [Button](https://gofynd.io/nitrozen-vue/?path=/story/components-button--default-button-themes)
-- [Checkbox](https://gofynd.io/nitrozen-vue/?path=/story/components-input-checkbox--check-box)
-- [Chips](https://gofynd.io/nitrozen-vue/?path=/story/components-chips--default-chip)
-- [Code](https://gofynd.io/nitrozen-vue/?path=/story/components-input-code--code)
-- [Icon](https://gofynd.io/nitrozen-vue/?path=/story/assets-icon--icon)
-- [Input](https://gofynd.io/nitrozen-vue/?path=/story/components-input-inputfields--input)
-- [Radio](https://gofynd.io/nitrozen-vue/?path=/story/components-input-radio--radio)
-- [Table](https://gofynd.io/nitrozen-vue/?path=/story/components-table--basic) 🆕
-- [Tooltip](https://gofynd.io/nitrozen-vue/?path=/story/components-tooltip--tooltip-simple)
-- [Toggle](https://gofynd.io/nitrozen-vue/?path=/story/components-button-toggle--toggle)
-- [ValidationText](https://gofynd.io/nitrozen-vue/?path=/story/components-validation--success) 🆕
+- [Alert](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-alert--button-less-alert)
+- [Badge](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-badges--success-badge)
+- [Button](https://opensource.gofynd.io/nitrozen-vue/?path=/docs/components-button--flat)
+- [Checkbox](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-input-checkbox--check-box)
+- [Chips](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-chips--default-chip)
+- [Code](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-input-code--code)
+- [Icon](https://opensource.gofynd.io/nitrozen-vue/?path=/story/assets-icon--icon)
+- [Input](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-input-inputfields--input)
+- [Radio](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-input-radio--radio)
+- [Table](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-table--basic) 🆕
+- [Tooltip](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-tooltip--tooltip-simple)
+- [Toggle](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-button-toggle--toggle)
+- [ValidationText](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-validation--success) 🆕
 
 More coming soon!
 
 > For a full list of components available & it's detailed documentation, checkout our
-> [Storybook](https://gofynd.io/nitrozen-vue).
+> [Storybook](https://opensource.gofynd.io/nitrozen-vue).
 
 ## 🏆 Contributors
 
@@ -83,7 +83,7 @@ More coming soon!
 
 If you're looking for `@gofynd/nitrozen-vue` API documentation, check out:
 
-- [Storybook](https://gofynd.io/nitrozen-vue)
+- [Storybook](https://opensource.gofynd.io/nitrozen-vue)
 
 ## 📝 License
 
