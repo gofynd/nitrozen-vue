@@ -51,7 +51,7 @@ export default {
 
 - [Alert](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-alert--button-less-alert)
 - [Badge](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-badges--success-badge)
-- [Button](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-button--default-button-themes)
+- [Button](https://opensource.gofynd.io/nitrozen-vue/?path=/docs/components-button--flat)
 - [Checkbox](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-input-checkbox--check-box)
 - [Chips](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-chips--default-chip)
 - [Code](https://opensource.gofynd.io/nitrozen-vue/?path=/story/components-input-code--code)
