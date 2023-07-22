@@ -1,16 +1,10 @@
 <script>
 import NButtonContent from './NBtnContent';
-import strokeBtn from './../../directives/NStrokeBtn.js'
-import flatBtn from './../../directives/NFlatBtn.js'
 
 export default {
     name: 'nitrozen-button',
     components: {
         NButtonContent
-    },
-    directives: {
-        strokeBtn,
-        flatBtn
     },
     props: {
         href: {
