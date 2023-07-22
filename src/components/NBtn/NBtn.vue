@@ -1,16 +1,10 @@
 <script>
 import NButtonContent from './NBtnContent';
-import strokeBtn from './../../directives/NStrokeBtn.js'
-import flatBtn from './../../directives/NFlatBtn.js'
 
 export default {
     name: 'nitrozen-button',
     components: {
         NButtonContent
-    },
-    directives: {
-        strokeBtn,
-        flatBtn
     },
     props: {
         href: {
@@ -45,13 +39,24 @@ export default {
         },
         icon: {
             type: String
+        },
+        flat: {
+            type: Boolean,
+            default: false
+        },
+        stroke: {
+            type: Boolean,
+            default: false
         }
     },
     render(createElement) {
         const slotElement = createElement('n-button-content', {
             props: {
                 showProgress: this.showProgress,
-                icon: this.icon
+                icon: this.icon,
+                flat: this.flat,
+                stroke: this.stroke,
+                theme: this.theme
             }
         }, this.$slots.default)
 
