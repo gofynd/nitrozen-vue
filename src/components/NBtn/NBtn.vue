@@ -53,7 +53,10 @@ export default {
         const slotElement = createElement('n-button-content', {
             props: {
                 showProgress: this.showProgress,
-                icon: this.icon
+                icon: this.icon,
+                flat: this.flat,
+                stroke: this.stroke,
+                theme: this.theme
             }
         }, this.$slots.default)
 
@@ -65,13 +68,7 @@ export default {
                 'n-button-secondary': this.theme == 'secondary',
                 'n-button-large': this.size == 'large',
                 'n-button-mid': this.size == 'medium',
-                'n-button-focused': this.focused,
-                'n-flat-button': this.flat == true,
-                'n-flat-button-primary': this.flat == true && this.theme == 'primary',
-                'n-flat-button-secondary': this.flat == true && this.theme == 'secondary',
-                'n-button-stroke': this.stroke == true,
-                'n-button-stroke-primary': this.stroke == true && this.theme == 'primary',
-                'n-button-stroke-secondary': this.stroke == true && this.theme == 'secondary',
+                'n-button-focused': this.focused
             }],
             attrs: {
                 href: this.href,

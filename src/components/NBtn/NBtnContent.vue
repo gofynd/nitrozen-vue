@@ -1,5 +1,5 @@
 <template>
-<div class="n-button-content" :class="{'disable-click':showProgress}">
+<div class="n-button-content" :class="nitrozenButtonClass">
     <div class="social-icon" v-if="icon">
         <img v-if="icon == 'facebook'" src="./../../assets/facebook-icon.png">
         <!-- <img v-if="icon == 'bag'" src="./../../assets/Bag_Icon.svg"> -->
@@ -21,6 +21,28 @@ export default {
         },
         icon: {
             type: String
+        },
+        flat: {
+            type: Boolean
+        },
+        stroke: {
+            type: Boolean
+        },
+        theme: {
+            type: String
+        }
+    },
+    computed: {
+        nitrozenButtonClass() {
+            return {
+                'disable-click':this.showProgress,
+                'n-flat-button': this.flat == true,
+                'n-flat-button-primary': this.flat == true && this.theme == 'primary',
+                'n-flat-button-secondary': this.flat == true && this.theme == 'secondary',
+                'n-button-stroke': this.stroke == true,
+                'n-button-stroke-primary': this.stroke == true && this.theme == 'primary',
+                'n-button-stroke-secondary': this.stroke == true && this.theme == 'secondary',
+            }
         }
     }
 }

@@ -682,7 +682,7 @@ var NInput = __webpack_require__(5778);
 // EXTERNAL MODULE: ./src/components/NError/index.js + 6 modules
 var NError = __webpack_require__(9669);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 12 modules
-var NBtn = __webpack_require__(4722);
+var NBtn = __webpack_require__(697);
 // EXTERNAL MODULE: ./src/components/NInline/index.js + 6 modules
 var NInline = __webpack_require__(4880);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=script&lang=js&
@@ -1402,7 +1402,7 @@ function normalizeComponent(
 
 /***/ }),
 
-/***/ 4722:
+/***/ 697:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1412,15 +1412,13 @@ __webpack_require__.d(__webpack_exports__, {
   "Z": function() { return /* binding */ components_NBtn; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=template&id=c3c0d46a&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=template&id=13e33bb8&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "n-button-content",
-    class: {
-      'disable-click': _vm.showProgress
-    }
+    class: _vm.nitrozenButtonClass
   }, [_vm.icon ? _c('div', {
     staticClass: "social-icon"
   }, [_vm.icon == 'facebook' ? _c('img', {
@@ -1441,7 +1439,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue?vue&type=template&id=c3c0d46a&
+;// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue?vue&type=template&id=13e33bb8&
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=script&lang=js&
 /* harmony default export */ var NBtnContentvue_type_script_lang_js_ = ({
@@ -1453,15 +1451,37 @@ var staticRenderFns = [];
     },
     icon: {
       type: String
+    },
+    flat: {
+      type: Boolean
+    },
+    stroke: {
+      type: Boolean
+    },
+    theme: {
+      type: String
+    }
+  },
+  computed: {
+    nitrozenButtonClass() {
+      return {
+        'disable-click': this.showProgress,
+        'n-flat-button': this.flat == true,
+        'n-flat-button-primary': this.flat == true && this.theme == 'primary',
+        'n-flat-button-secondary': this.flat == true && this.theme == 'secondary',
+        'n-button-stroke': this.stroke == true,
+        'n-button-stroke-primary': this.stroke == true && this.theme == 'primary',
+        'n-button-stroke-secondary': this.stroke == true && this.theme == 'secondary'
+      };
     }
   }
 });
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue?vue&type=script&lang=js&
  /* harmony default export */ var NBtn_NBtnContentvue_type_script_lang_js_ = (NBtnContentvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=style&index=0&id=c3c0d46a&prod&lang=less&
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=style&index=0&id=13e33bb8&prod&lang=less&
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue?vue&type=style&index=0&id=c3c0d46a&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue?vue&type=style&index=0&id=13e33bb8&prod&lang=less&
 
 // EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(1001);
@@ -1540,7 +1560,10 @@ var component = (0,componentNormalizer/* default */.Z)(
     const slotElement = createElement('n-button-content', {
       props: {
         showProgress: this.showProgress,
-        icon: this.icon
+        icon: this.icon,
+        flat: this.flat,
+        stroke: this.stroke,
+        theme: this.theme
       }
     }, this.$slots.default);
     let buttonAttrs = {
@@ -1551,13 +1574,7 @@ var component = (0,componentNormalizer/* default */.Z)(
         'n-button-secondary': this.theme == 'secondary',
         'n-button-large': this.size == 'large',
         'n-button-mid': this.size == 'medium',
-        'n-button-focused': this.focused,
-        'n-flat-button': this.flat == true,
-        'n-flat-button-primary': this.flat == true && this.theme == 'primary',
-        'n-flat-button-secondary': this.flat == true && this.theme == 'secondary',
-        'n-button-stroke': this.stroke == true,
-        'n-button-stroke-primary': this.stroke == true && this.theme == 'primary',
-        'n-button-stroke-secondary': this.stroke == true && this.theme == 'secondary'
+        'n-button-focused': this.focused
       }],
       attrs: {
         href: this.href,
@@ -1580,10 +1597,10 @@ var component = (0,componentNormalizer/* default */.Z)(
 });
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=script&lang=js&
  /* harmony default export */ var NBtn_NBtnvue_type_script_lang_js_ = (NBtnvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=117d6796&prod&lang=less&
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=6a2bf080&prod&lang=less&
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=117d6796&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=6a2bf080&prod&lang=less&
 
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue
 var NBtn_render, NBtn_staticRenderFns
@@ -12969,7 +12986,7 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /* harmony default export */ var components_NAutocomplete = (NAutocomplete);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 12 modules
-var NBtn = __webpack_require__(4722);
+var NBtn = __webpack_require__(697);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBadge/NBadge.vue?vue&type=template&id=2234aa39&
 var NBadgevue_type_template_id_2234aa39_render = function render() {
   var _vm = this,
