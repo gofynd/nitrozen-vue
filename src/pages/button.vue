@@ -12,11 +12,11 @@
 
     <!-- Flat Stroke Button -->
     <div class="rounded">
-        <nitrozen-button v-stroke-btn :content="'Primary Stroke'"></nitrozen-button>
+        <nitrozen-button :content="'Primary Stroke'"></nitrozen-button>
         <div class="hover-new">
-            <nitrozen-button v-stroke-btn :content="'Hover Stroke'"></nitrozen-button>
+            <nitrozen-button :content="'Hover Stroke'"></nitrozen-button>
         </div>
-        <nitrozen-button v-stroke-btn :content="'Disabled Stroke'" :disabled="true"></nitrozen-button>
+        <nitrozen-button :content="'Disabled Stroke'" :disabled="true"></nitrozen-button>
     </div>
 
     <!-- Rounded Button -->
@@ -30,11 +30,11 @@
 
     <!-- Rounded Stroke Button -->
     <div class="rounded">
-        <nitrozen-button v-stroke-btn :content="'Rounded'" :rounded="true"></nitrozen-button>
+        <nitrozen-button :content="'Rounded'" :rounded="true"></nitrozen-button>
         <div class="hover-new">
-            <nitrozen-button v-stroke-btn :content="'Hover'" :rounded="true"></nitrozen-button>
+            <nitrozen-button :content="'Hover'" :rounded="true"></nitrozen-button>
         </div>
-        <nitrozen-button v-stroke-btn :content="'Disabled'" :rounded="true" :disabled="true"></nitrozen-button>
+        <nitrozen-button :content="'Disabled'" :rounded="true" :disabled="true"></nitrozen-button>
     </div>
 
     <!-- <div class="rounded">
@@ -53,11 +53,11 @@
 
     <!-- Secondary Stroke Button -->
     <!-- <div class="rounded">
-       <nitrozen-button v-stroke-btn :content="'Primary'" :theme="'secondary'"></nitrozen-button>
+       <nitrozen-button :content="'Primary'" :theme="'secondary'"></nitrozen-button>
        <div class="hover-new">
-          <nitrozen-button v-stroke-btn :content="'Hover'" :theme="'secondary'"></nitrozen-button>         
+          <nitrozen-button :content="'Hover'" :theme="'secondary'"></nitrozen-button>         
        </div>
-       <nitrozen-button v-stroke-btn :content="'Disabled'" :disabled="true" :theme="'secondary'"></nitrozen-button>
+       <nitrozen-button :content="'Disabled'" :disabled="true" :theme="'secondary'"></nitrozen-button>
     </div> -->
 
     <!-- Secondary Rounded Button -->
@@ -71,11 +71,11 @@
 
     <!-- Secondary Rounded Stroke Button -->
     <!-- <div class="rounded">
-       <nitrozen-button v-stroke-btn :content="'Primary'" :rounded="true" :theme="'secondary'"></nitrozen-button>
+       <nitrozen-button :content="'Primary'" :rounded="true" :theme="'secondary'"></nitrozen-button>
        <div class="hover-new">
-          <nitrozen-button v-stroke-btn :content="'Hover'" :rounded="true" :theme="'secondary'"></nitrozen-button>         
+          <nitrozen-button :content="'Hover'" :rounded="true" :theme="'secondary'"></nitrozen-button>         
        </div>
-       <nitrozen-button v-stroke-btn :content="'Disabled'" :rounded="true" :disabled="true" :theme="'secondary'"></nitrozen-button>
+       <nitrozen-button :content="'Disabled'" :rounded="true" :disabled="true" :theme="'secondary'"></nitrozen-button>
     </div> -->
 
     <div class="rounded">
@@ -86,8 +86,11 @@
 </template>
 
 <script>
+import NitrozenButton from "./../components/NBtn";
+
 export default {
     name: 'button',
+    components:{'nitrozen-toggle-btn' : NitrozenButton},
     methods: {
         someFunc() {
             // console.log('in function')

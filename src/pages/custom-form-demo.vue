@@ -7,7 +7,7 @@
       v-model="emptyResponse"
       @change="formResponseChanged"
     />
-    <nitrozen-button v-flat-btn @click="sendResponse">Submit</nitrozen-button>
+    <nitrozen-button @click="sendResponse">Submit</nitrozen-button>
   </div>
 </template>
 <script>

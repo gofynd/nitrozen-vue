@@ -2,7 +2,6 @@
   <transition>
     <div
       :id="id"
-      v-clickOutside="closeMenu"
       class="nitrozen-menu-content"
       :class="{'nitrozen-default-menu': !inverted}"
       @click="toggleMenu = !toggleMenu"
