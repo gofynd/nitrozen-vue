@@ -77,7 +77,8 @@ export default {
                 'n-button-large': this.size == 'large',
                 'n-button-mid': this.size == 'medium',
                 'n-button-small': this.size == 'small',
-                'n-button-focused': this.focused
+                'n-button-focused': this.focused,
+                'n-button-netmeds' : this.theme == "netmeds"
             }],
             attrs: {
                 href: this.href,

@@ -78,3 +78,14 @@ simpleBtn.args = {
     rounded:true,
     theme:'destructive'
   };
+
+  const NetmedBtnTest = (args, { argTypes }) => ({
+    components: { NitrozenBtn },
+    props: Object.keys(argTypes),
+    template: '<nitrozen-btn v-bind="$props">NETMEDS</nitrozen-btn>',
+  });
+export const NetmedsBtn = NetmedBtnTest.bind({})
+NetmedsBtn.args = {
+    rounded:true,
+    theme:'netmeds'
+  };
