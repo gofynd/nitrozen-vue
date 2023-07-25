@@ -1,5 +1,5 @@
 <template>
-<div class="n-button-content abcd" :class="{'disable-click':showProgress}">
+<div class="n-button-content" :class="'nitrozenButtonClass'">
     <div class="social-icon" v-if="icon">
         <nitrozen-icon v-if="icon" :name="icon" :size="getIconSize" :color="iconColor"/>
     </div>
@@ -31,6 +31,15 @@ export default {
         iconColor:{
             type:String,
             default:"#FFFFFF"
+        },
+        flat: {
+            type: Boolean
+        },
+        stroke: {
+            type: Boolean
+        },
+        theme: {
+            type: String
         }
     },
     computed: {
@@ -41,6 +50,17 @@ export default {
         'large': 18
       }
       return iconSize[this.size]
+    },
+    nitrozenButtonClass() {
+            return {
+                'disable-click':this.showProgress,
+                'n-flat-button': this.flat == true,
+                'n-flat-button-primary': this.flat == true && this.theme == 'primary',
+                'n-flat-button-secondary': this.flat == true && this.theme == 'secondary',
+                'n-button-stroke': this.stroke == true,
+                'n-button-stroke-primary': this.stroke == true && this.theme == 'primary',
+                'n-button-stroke-secondary': this.stroke == true && this.theme == 'secondary',
+        }
     }
   }
 }
