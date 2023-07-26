@@ -813,18 +813,26 @@
         >
       </div>
       <div class="main-div space-between">
-        <nitrozen-button  :theme="'delete'"></nitrozen-button>
+       <!-- <nitrozen-button  :theme="'delete'"></nitrozen-button>-->
+        <nitrozen-inline
+              :icon="'delete'"
+              class="nitrozen-icon"
+            ></nitrozen-inline>
       </div>
       <div class="main-div space-between">
         <nitrozen-dropdown
-            label="State Advanced"
+            label="Please Select"
             :items="dropdownItems"
             v-model="selectedDropdown"
             :required="true"
           ></nitrozen-dropdown>
       </div>    
+
+      <div class="main-div">
+        <nitrozen-code></nitrozen-code>
+      </div>
     </div> 
-  </div>
+   
 </template>
 
 <script>
@@ -844,23 +852,20 @@ export default {
       checkArray: ["Check 1"],
       radioModel: "1",
       dropdownItems: [
+       
         {
           text: "Maharashtra",
           value: 1,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
         },
         {
           text: "Andhra Pradesh",
           value: 2,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+           
         },
         {
           text: "West Bengal",
           value: 3,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+          
         },
       ],
       dropdownItemsGroup: [

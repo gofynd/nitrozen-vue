@@ -61,7 +61,7 @@ export default {
   props: {
     fields: {
       type: Number,
-      default: 4,
+      default: 6,
     },
     label: {
       type: String,
