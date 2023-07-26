@@ -138,17 +138,34 @@
     </FlexBox>
     <br />
     <Heading level="h5" >List Block</Heading>
-    <ListBlock type="ol" :color="'green'" :font-size="'18px'" listStyleType="none">
-      <li>Item A</li>
-      <li>Item B</li>
-      <li>Item C</li>
-    </ListBlock>
+    <Listblock
+      title="JioSaavn"
+      prefix="visible"
+      suffix="close"
+      verticalAlignment="middle"
+      spacing="m"
+      :items="['Item 1', 'Item 2', 'Item 3']"
+    />
 <br />
 <Heading level="h5" >Divider</Heading>
-<Divider width="80%" height="2px" color="blue" />
-<br />
-    <Divider width="50%" height="1px" color="red">
-    </Divider>
+<Grid gap="30px" template="1fr 1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
+<div>
+  <Divider />
+</div>
+<div>
+  <Divider>
+  Horizontal - With Label
+</Divider>
+</div>
+<div>
+  <Divider direction="vertical" />
+</div>
+<div>
+  <Divider direction="vertical">
+  Vertical - With Label Text
+</Divider>
+</div>
+</Grid>
 </div>
 <br />
 <Heading level="h5" >Spacing</Heading>

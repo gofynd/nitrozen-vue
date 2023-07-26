@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <div :style="dividerStyle"></div>
+  <div :style="containerStyle">
+    <div v-if="isHorizontal" :style="horizontalDividerStyle"></div>
+    <div v-else :style="verticalDividerStyle"></div>
     <slot></slot>
   </div>
 </template>
@@ -9,13 +10,14 @@
 export default {
   name: "Divider",
   props: {
-    width: {
+    direction: {
       type: String,
-      default: "100%",
+      default: "horizontal",
+      validator: (value) => ["horizontal", "vertical"].includes(value),
     },
-    height: {
+    gap: {
       type: String,
-      default: "1px",
+      default: "8px",
     },
     color: {
       type: String,
@@ -23,11 +25,29 @@ export default {
     },
   },
   computed: {
-    dividerStyle() {
+    isHorizontal() {
+      return this.direction === "horizontal";
+    },
+    horizontalDividerStyle() {
       return {
-        width: this.width,
-        height: this.height,
+        width: "100%",
+        height: "1px",
         backgroundColor: this.color,
+      };
+    },
+    verticalDividerStyle() {
+      return {
+        width: "1px",
+        height: "312px",
+        backgroundColor: this.color,
+      };
+    },
+    containerStyle() {
+      return {
+        position: "relative",
+        display: "flex",
+        flexDirection: this.direction === "horizontal" ? "row" : "column",
+        alignItems: "center",
       };
     },
   },
@@ -36,4 +56,14 @@ export default {
 
 <style>
 
+.container {
+  position: relative;
+}
+
+.vertical-divider {
+  position: absolute;
+  top: 20px;
+  left: 907px;
+  gap: 8px;
+}
 </style>
