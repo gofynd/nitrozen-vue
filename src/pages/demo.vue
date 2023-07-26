@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="main-div">
+     
       <div class="main-div space-between">
         <div>Searchable Dropdown</div>
         <nitrozen-dropdown
@@ -84,13 +85,175 @@
         </div>
       </div>
       <div class="main-div">
+        
         <h1>Nitrozen Demo H1</h1>
         <h2>Nitrozen Demo H2</h2>
         <h3>Nitrozen Demo H3</h3>
         <h4>Nitrozen Demo H4</h4>
         <h5>Nitrozen Demo H5</h5>
         <h6>Nitrozen Demo H6</h6>
+   
       </div>
+      
+     <!-- venkatesh -->
+<div>
+  <Heading level="h1" >JioMart Component</Heading>
+  <Heading level="h5" >Heading</Heading>
+  <Heading level="h1" color="red">JioMart Main Heading</Heading>
+  <br />
+  <Heading level="h5" >Text</Heading>
+  <text-component level="p" color="#666666" font-size="32px !important">JioMart Paragraph text</text-component>
+  <br />
+  <Heading level="h5" >Grid View</Heading>
+  <Grid gap="30px" template="1fr 1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
+      <div class="story-box">
+        <div>Eu proident velit cupidatat proident eiusmod ex consequat.</div>
+      </div>
+
+      <div class="story-box">
+        <div>Nostrud sunt aliqua fugiat pariatur in.</div>
+      </div>
+
+      <div class="story-box">
+        <div>Cupidatat et ea nostrud ea.</div>
+      </div>
+
+      <div class="story-box">
+        <div>Irure magna deserunt ullamco occaecat reprehenderit ad enim excepteur sint non cillum elit eiusmod eiusmod.</div>
+      </div>
+    </Grid>
+    <br />
+    <Heading level="h5" >Flex Block</Heading>
+    <FlexBox direction="row" justify-content="space-evenly">
+      <div class="card">
+        <div class="story-box">
+        <div>Irure magna deserunt ullamco occaecat reprehenderit ad enim excepteur sint non cillum elit eiusmod eiusmod.</div>
+      </div>
+      </div>
+      <div class="card">
+        <div class="story-box">
+        <div>Irure magna deserunt ullamco occaecat reprehenderit ad enim excepteur sint non cillum elit eiusmod eiusmod.</div>
+      </div>
+      </div>
+    </FlexBox>
+    <br />
+    <Heading level="h5" >List Block</Heading>
+    <ListBlock type="ol" :color="'green'" :font-size="'18px'" listStyleType="none">
+      <li>Item A</li>
+      <li>Item B</li>
+      <li>Item C</li>
+    </ListBlock>
+<br />
+<Heading level="h5" >Divider</Heading>
+<Divider width="80%" height="2px" color="blue" />
+<br />
+    <Divider width="50%" height="1px" color="red">
+    </Divider>
+</div>
+<br />
+<Heading level="h5" >Spacing</Heading>
+<div>
+    <SpacingUtility :all="'16px'">
+      <p>This element has padding on all sides.</p>
+    </SpacingUtility>
+
+    <SpacingUtility :horizontal="'12px'" >
+      <p>This element has horizontal padding.</p>
+    </SpacingUtility>
+    <SpacingUtility  :vertical="'24px'">
+      <p>This element has  vertical padding.</p>
+    </SpacingUtility>
+    <SpacingUtility :top="'10px'" :bottom="'20px'" :left="'5px'" :right="'5px'">
+      <p>This element has different padding values for each side.</p>
+    </SpacingUtility>
+   </div>
+   <br/>
+   <Heading level="h5" >Toast</Heading>
+   <div>
+
+    <nitrozen-button v-flat-btn @click="showToastNotification">Show Toast Notification</nitrozen-button>
+    <!-- <nitrozen-button v-flat-btn @click="showToastNotificationTwo">Show Toast Notification Two</nitrozen-button> -->
+
+      <Toaster
+      :showToast="showToast"
+      :title="notificationMessage"
+      :description="description"
+      icon="home"
+       @onClose="onCloseToast"
+
+    />
+    
+    <br/>
+    <!-- primary and secondary -->
+    <!-- <Toaster
+    :showToast="showToasttwo"
+    title="jiomart two"
+    description="description"
+    icon="home"
+    @onClose="onClose"
+    :showPrimaryButton="true"
+    :primaryButtonLabel="primaryButtonLabel"
+    :showSecondaryButton="true"
+    :secondaryButtonLabel="secondaryButtonLabel"
+    @onClickPrimary="handlePrimaryAction"
+    @onClickSecondary="handleSecondaryAction"
+    /> -->
+
+<div>
+  <Heading level="h5" >Nudge</Heading>
+  <nitrozen-button v-flat-btn @click="showNudgeNotification">Show Nudge Notification</nitrozen-button>
+      <Nudge
+      :showNudge="showNudge"
+      :title="notificationMessage"
+      :description="description"
+      icon="home"
+       @onClose="onCloseNudge"
+
+    />
+</div>
+
+    <div>
+    <Heading level="h5" >SidePanel</Heading>
+    
+      <button @click="showPanel">Show Side Panel</button>
+    <!-- Use the SidePanel component with its props -->
+    <SidePanel
+      header="panelHeader"
+      :showClose="true"
+      :isOpen="isPanelOpen"
+      direction="left"
+      :disableTransition="false"
+      :maxWidth="true"
+      className="test-class"
+      @onClose="closePanel"
+      @headerPrefixClickEvent="handleHeaderPrefixClick"
+    >
+    <p>helo</p>
+    </SidePanel>
+  </div>
+  <div>
+    <Heading level="h5" >Custom Scrollbar</Heading>
+    <Scrollbar>
+      <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It
+        has roots in a piece of classical Latin literature from 45 BC, making
+        it over 2000 years old. Richard McClintock, a Latin professor at
+        Hampden-Sydney College in Virginia, looked up one of the more obscure
+        Latin words, consectetur, from a Lorem Ipsum passage, and going through
+        the cites of the word in classical literature, discovered the
+        undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+        1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+        Evil) by Cicero, written in 45 BC. This book is a treatise on the
+        theory of ethics, very popular during the Renaissance. The first line
+        of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+        section 1.10.32.
+      </p>
+    </Scrollbar>
+  </div>
+  </div>
+ 
+ <!-- venkatesh -->
+
 
       <!-- Flat Button -->
       <div class="main-div space-between">
@@ -971,6 +1134,17 @@ export default {
         },
       ],
       autofocusSearch: false,
+      currentToast: null,
+      showToast: false,
+      showNudge: false,
+      notificationMessage: 'JioMart',
+      notificationType: 'info', // 'info', 'success', 'warning', 'error', etc.
+      showPrimaryButton: false,
+      primaryButtonLabel: 'Primary',
+      showSecondaryButton: false,
+      secondaryButtonLabel: 'Secondary',
+      description:"This is a notification message",
+      isPanelOpen: false,
     };
   },
   mounted() {
@@ -1085,6 +1259,34 @@ export default {
     tabChange(event) {
       console.log(event);
     },
+
+    showToastNotification() {
+      this.showToast = true;
+    },
+    showNudgeNotification() {
+      this.showNudge = true;
+    },
+    onCloseToast() {
+      this.showToast = false;
+    },
+    onCloseNudge() {
+      this.showNudge = false;
+    },
+    onClickPrimary() {
+      console.log('Primary button clicked.');
+    },
+    onClickSecondary() {
+      console.log('Secondary button clicked.');
+    },
+    showPanel() {
+      this.isPanelOpen = true; 
+    },
+    closePanel() {
+      this.isPanelOpen = false;
+    },
+    handleHeaderPrefixClick() {
+      // Handle the header prefix click event here
+    },
   },
 };
 </script>
@@ -1149,4 +1351,5 @@ body {
     background-color: green;
   }
 }
+
 </style>
