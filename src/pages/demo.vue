@@ -98,11 +98,13 @@
      <!-- venkatesh -->
 <div>
   <Heading level="h1" >JioMart Component</Heading>
-  <Heading level="h5" >Heading</Heading>
-  <Heading level="h1" color="red">JioMart Main Heading</Heading>
+  <Heading level="h5" size="m">Heading</Heading>
+  <Heading level="h1" color="red" size="l">JioMart Main Heading</Heading>
   <br />
   <Heading level="h5" >Text</Heading>
-  <text-component level="p" color="#666666" font-size="32px !important">JioMart Paragraph text</text-component>
+  <text-component level="p" color="#666666" size="body-xs">JioMart Paragraph text</text-component>
+  <text-component level="p" color="#666666" size="body-xxs">JioMart Paragraph text</text-component>
+  <text-component level="p" color="#666666" size="body-strong">JioMart Paragraph text</text-component>
   <br />
   <Heading level="h5" >Grid View</Heading>
   <Grid gap="30px" template="1fr 1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
@@ -277,6 +279,34 @@
         section 1.10.32.
       </p>
     </Scrollbar>
+  </div>
+  <div>
+    <Heading level="h5" >BottomSheet</Heading>
+   <!-- Button to open the BottomSheet -->
+   <button @click="openBottomSheet">Open Bottom Sheet</button>
+
+<!-- Use the BottomSheet component -->
+<BottomSheet
+  title="Your Jio Account"
+  description="Text"
+  :close="true"
+  ref="bottomSheet"
+>
+<p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It
+        has roots in a piece of classical Latin literature from 45 BC, making
+        it over 2000 years old. Richard McClintock, a Latin professor at
+        Hampden-Sydney College in Virginia, looked up one of the more obscure
+        Latin words, consectetur, from a Lorem Ipsum passage, and going through
+        the cites of the word in classical literature, discovered the
+        undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+        1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+        Evil) by Cicero, written in 45 BC. This book is a treatise on the
+        theory of ethics, very popular during the Renaissance. The first line
+        of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+        section 1.10.32.
+      </p>
+</BottomSheet>
   </div>
   </div>
  
@@ -1314,6 +1344,9 @@ export default {
     },
     handleHeaderPrefixClick() {
       // Handle the header prefix click event here
+    },
+    openBottomSheet() {
+      this.$refs.bottomSheet.open();
     },
   },
 };
