@@ -49,14 +49,14 @@
         v-bind:class="{
           'nitrozen-search-input-padding': showSearchIcon || showPrefix,
           'nitrozen-search-input-right-padding': showSuffix,
-          'n-success-border': this.validationState == 'success',
-          'n-error-border': this.validationState == 'error',
-          'n-warning-border': this.validationState == 'warning',
           'n-input': true,
           'input-text': true,
-          'n-input-default-border': !['success', 'error', 'warning'].includes(
+           'n-success': this.validationState == 'success',
+         // 'n-error-border': this.validationState == 'error',
+         // 'n-warning-border': this.validationState == 'warning',
+         /* 'n-input-default-border': !['success', 'error', 'warning'].includes(
             this.validationState
-          ),
+          ), */
         }"
         v-on:keyup="eventEmit($event, 'keyup')"
         v-on:change="eventEmit($event, 'change')"
@@ -88,14 +88,14 @@
         v-on:keypress="eventEmit($event, 'keypress')"
         v-bind:class="{
           'n-input-textarea': type == 'textarea',
-          'n-success-border': this.validationState == 'success',
+         /*  'n-success-border': this.validationState == 'success',
           'n-error-border': this.validationState == 'error',
           'n-warning-border': this.validationState == 'warning',
           'n-input': true,
           'input-text': true,
           'n-input-default-border': !['success', 'error', 'warning'].includes(
             this.validationState
-          ),
+          ), */
         }"
         :maxlength="maxlength"
         :disabled="disabled"
