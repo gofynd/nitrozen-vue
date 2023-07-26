@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <nitrozen-footer></nitrozen-footer>
     <div class="main-div">
       <div class="main-div space-between">
         <div>Searchable Dropdown</div>
