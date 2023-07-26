@@ -139,9 +139,15 @@
     <br />
     <Heading level="h5" >List Block</Heading>
     <Listblock
-      title="JioSaavn"
+      title="JioSaavn with Icon"
       prefix="visible"
       suffix="close"
+      verticalAlignment="middle"
+      spacing="m"
+      :items="['Item 1', 'Item 2', 'Item 3']"
+    />
+    <Listblock
+      title="JioSaavn"
       verticalAlignment="middle"
       spacing="m"
       :items="['Item 1', 'Item 2', 'Item 3']"
