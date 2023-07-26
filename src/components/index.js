@@ -30,6 +30,7 @@ import NToaster from './NToaster';
 import NSidepanel from './NSidepanel';
 import NNudge from './NNudge';
 import NScrollbar from './NScrollbar';
+import NBottomsheet from './NBottomsheet';
 
 export {
     NitrozenAutocomplete,
@@ -63,6 +64,7 @@ export {
     NToaster,
     NSidepanel,
     NNudge,
-    NScrollbar
+    NScrollbar,
+    NBottomsheet
     
 }

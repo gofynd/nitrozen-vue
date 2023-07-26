@@ -1,8 +1,9 @@
 <template>
-  <component :is="tag" :style="customStyle" v-bind="$attrs" v-on="$listeners">
+  <component :is="tag" :style="customStyle" :class="sizeClass" v-bind="$attrs" v-on="$listeners">
     <slot></slot>
   </component>
 </template>
+
   
 <script>
 export default {
@@ -21,6 +22,10 @@ export default {
       type: String,
       default: "",
     },
+    size: {
+      type: String,
+      default: "", 
+    },
   },
   computed: {
     tag() {
@@ -32,124 +37,53 @@ export default {
         fontSize: this.fontSize,
       };
     },
+    sizeClass() {
+      // Compute the size class based on the "size" prop
+      return this.size ? `size-${this.size.toLowerCase()}` : '';
+    },
   },
 };
 </script>
 
+
+
 <style lang="less">
-@HeadingXXS: 16px;
 
-@HeadingBase: 20px;
+.size-l{
+  font-size: 40px;
+  letter-spacing: -1.44px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+  @media (min-width: 992px) {
 
-@HeadingXS: 24px;
+    font-size: 64px;
 
-@HeadingS: 32px;
-
-@HeadingM: 40px;
-
-@HeadingL: 64px;
-
-@HeadingXL: 88px;
-
-
-
-h1, .h1 {
-
-    font-weight: 900 !important;
-
-    font-size: @HeadingM !important;
-
-    letter-spacing: -1.44px !important;
-
-    line-height: 1 !important;
-
-
-
-
-    @media (min-width: 992px) {
-
-        font-size: @HeadingL !important;
-
-        letter-spacing: -1.92px !important;
-
-    }
+letter-spacing: -1.92px !important;
 
 }
-
-
-
-
-h2, .h2 {
-
-    font-weight: 900 !important;
-
-    font-size: @HeadingM !important;
-
-    letter-spacing: -1.2px !important;
-
-    line-height: 1 !important;  
-
 }
-
-
-
-
-h3, .h3 {
-
-    font-weight: 900 !important;
-
-    font-size: @HeadingS !important;
-
-    letter-spacing: -0.96px !important;
-
-    line-height: 1 !important;
-
+.size-m{
+  font-size: 40px;
+  letter-spacing: -1.44px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
 }
-
-
-
-
-h4, .h4 {
-
-    font-weight: 900 !important;
-
-    font-size: @HeadingXS !important;
-
-    letter-spacing: -0.72px !important;
-
-    line-height: 1 !important;
-
+.size-s{
+  font-size: 32px;
+  letter-spacing: -0.72px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
 }
-
-
-
-
-h5, .h5 {
-
-    font-weight: 900 !important;
-
-    font-size: @HeadingBase !important;
-
-    letter-spacing: -0.62px !important;
-
-    line-height: 1 !important;
-
+.size-xs{
+  font-size: 24px;
+  letter-spacing: -0.72px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
 }
-
-
-
-
-h6, .h6 {
-
-    font-weight: 900 !important;
-
-    font-size: @HeadingXXS !important;
-
-    letter-spacing: -0.48px !important;
-
-    line-height: 1 !important;
-
+.size-base{
+  font-size: 20px;
+  letter-spacing: -0.72px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
 }
-
-
 </style>

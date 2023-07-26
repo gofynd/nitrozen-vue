@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" :style="customStyle" v-bind="$attrs" v-on="$listeners">
+  <component :is="tag" :style="customStyle" :class="sizeClass" v-bind="$attrs" v-on="$listeners">
     <slot></slot>
   </component>
 </template>
@@ -21,6 +21,10 @@ export default {
       type: String,
       default: "",
     },
+    size: {
+      type: String,
+      default: "", 
+    },
   },
   computed: {
     tag() {
@@ -32,43 +36,45 @@ export default {
         fontSize: this.fontSize,
       };
     },
+    sizeClass() {
+      // Compute the size class based on the "size" prop
+      return this.size ? `size-${this.size.toLowerCase()}` : '';
+    },
   },
 };
 </script>
   
 <style lang="less">
-@TextBodyXXS: 12px;
+.size-body-xs, .size-span
+{
+  font-weight: 500 ;
 
-p {
+  font-size:14px;
 
-  font-weight: 500 !important;
+  letter-spacing: -0.06px ;
 
-  font-size: @TextBodyXXS !important;
-
-  letter-spacing: -0.06px !important;
-
-  line-height: 1.3333333333333333 !important;
-
+  line-height: 1.3333333333333333 ;
 }
 
+.size-body-xxs, .size-span
+{
+  font-weight: 500 ;
 
-b,
-strong {
+  font-size:12px;
 
-  font-weight: 700 !important;
+  letter-spacing: -0.06px ;
 
-  font-size: @TextBodyXXS !important;
-
-  letter-spacing: -0.06px !important;
-
-  line-height: 1.3333333333333333 !important;
-
+  line-height: 1.3333333333333333 ;
 }
 
-span {
-  font-weight: 500;
-  font-size: @TextBodyXXS;
-  letter-spacing: -0.06px;
-  line-height: 1.3333333333333333;
+.size-strong {
+  font-weight: 700 ;
+
+font-size: 12px;
+
+letter-spacing: -0.06px ;
+
+line-height: 1.3333333333333333 ;
 }
+
 </style>
