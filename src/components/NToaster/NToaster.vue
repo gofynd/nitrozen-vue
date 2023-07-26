@@ -17,10 +17,9 @@
       <button><nitrozen-icon name="close" color="#fff" @click="handleCancelClick"></nitrozen-icon></button>
 
 
+      <nitrozen-button rounded  v-if="showPrimaryButton" @click="handlePrimaryClick">{{ primaryButtonLabel }}</nitrozen-button>
 
-      <button v-if="showPrimaryButton" @click="handlePrimaryClick">{{ primaryButtonLabel }}</button>
-
-      <button v-if="showSecondaryButton" @click="handleSecondaryClick">{{ secondaryButtonLabel }}</button>
+<nitrozen-button rounded v-if="showSecondaryButton" @click="handleSecondaryClick">{{ secondaryButtonLabel }}</nitrozen-button>
 
     </div>
 

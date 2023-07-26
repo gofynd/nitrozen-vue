@@ -180,7 +180,12 @@
       :description="description"
       icon="home"
        @onClose="onCloseToast"
-
+       :showPrimaryButton="true"
+    primaryButtonLabel="CTA 1"
+    :showSecondaryButton="true"
+    secondaryButtonLabel="CTA 2"
+    @onClickPrimary="handlePrimaryAction"
+    @onClickSecondary="handleSecondaryAction"
     />
     
     <br/>
