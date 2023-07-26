@@ -2,7 +2,7 @@
   <div class="n-code-main">
     <div class="n-code-label-container">
       <label class="n-code-label">
-        {{ label }} {{ required ? '*' : '' }}
+        OTP
         <nitrozen-tooltip
           v-if="tooltip"
           :tooltipText="tooltip"
@@ -96,9 +96,7 @@ export default {
     toolTipIcon: {
       type: String,
     },
-    getCode: {
-      type: Function,
-    },
+    
     id: {
       type: [Number, String],
       default: () => 'nitrozen-input' + NitrozenUuid(),
@@ -107,8 +105,12 @@ export default {
   mounted() {
     let codeArrEnum = Array(this.fields).fill('');
     this.codeArr = [...codeArrEnum];
+    
   },
   methods: {
+    getCode: function () {
+
+    },
     onInputChange: function (event, index) {
       // if the target event is empty then delete and go back
       // Replace the user input to allow only numbers

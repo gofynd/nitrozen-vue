@@ -17,15 +17,18 @@
   display: block;
   -webkit-tap-highlight-color: transparent;
   outline: none;
+  border: none;
   text-align: center;
- 
-  
-  display: flex;
-    flex-direction: column;
-    height: 2px;
-    width: 100%;
-    background-color: #000;
-    border-radius: 2px;
+  //border-radius: 1.6rem;
+  height: 4.8rem;
+  width: 4.8rem;
+  border-bottom: 2px solid @ColorPrimary80;
+  padding-bottom: @SpacingXs;
+  color:@ColorPrimaryGrey100;
+  border-radius: 0;
+  margin-bottom: 1px;  
+  font-size: 16px;
+  font-weight: bold;  
   &:focus,
   &:hover {
     border-color: @ColorPrimary60;
@@ -34,8 +37,12 @@
     @media screen and (max-width: 425px) {
       height: 3rem;
       width: 3rem;
-      border-radius: 1rem;
+      //border-radius: 1rem;
     }
+}
+
+.bounce {
+  animation: pulse .3s ease-in-out alternate;
 }
 
 .n-code-input-field:hover::placeholder {
