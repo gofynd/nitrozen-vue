@@ -829,7 +829,21 @@
       </div>    
 
       <div class="main-div">
-        <nitrozen-code></nitrozen-code>
+        <nitrozen-progressbar 
+          :progress="'60'" 
+          :inital_value="'0'" 
+          :fixed_value="'600'" 
+          :final_value="'1000'">
+        </nitrozen-progressbar>
+      </div>
+
+      <div class="main-div ">
+        Small: <nitrozen-spinner size="small"
+          ></nitrozen-spinner>
+        Medium: <nitrozen-spinner size="medium"
+          ></nitrozen-spinner>
+        Large: <nitrozen-spinner size="large"
+        ></nitrozen-spinner>    
       </div>
     </div> 
    

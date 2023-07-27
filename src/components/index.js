@@ -18,6 +18,8 @@ import NitrozenStepper from './NStepper';
 import NitrozenToggleBtn from './NToggleBtn';
 import NitrozenTooltip from './NTooltip';
 import NitrozenCustomForm from './NCustomForm';
+import NProgressBar from './NProgressBar';
+import NSpinner from './NSpinner';
 
 export {
     NitrozenAutocomplete,
@@ -40,4 +42,6 @@ export {
     NitrozenToggleBtn,
     NitrozenTooltip,
     NitrozenCustomForm,
+    NProgressBar,
+    NSpinner,
 }
