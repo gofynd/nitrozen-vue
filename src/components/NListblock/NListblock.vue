@@ -14,7 +14,7 @@
 <script>
 import NIcon from '../NIcon/NIcon.vue';
 export default {
-  name: "Listblock",
+  name: "nitrozen-listblock",
   components: {
     'nitrozen-icon': NIcon,
   },

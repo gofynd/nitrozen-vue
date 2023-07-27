@@ -97,19 +97,19 @@
       
      <!-- venkatesh -->
 <div>
-  <Heading level="h1" >JioMart Component</Heading>
-  <Heading level="h5" size="m">Heading</Heading>
-  <Heading level="h1"  color="gray" size="l">JioMart Main Heading</Heading>
-  <Heading level="h1" color="blue" size="s">JioMart Main Heading</Heading>
-  <Heading level="h5" color="green" size="body-l-link">JioMart Main Heading</Heading>
+  <nitrozen-heading level="h1" >JioMart Component</nitrozen-heading>
+  <nitrozen-heading level="h5" size="m">Heading</nitrozen-heading>
+  <nitrozen-heading level="h1"  color="gray" size="l">JioMart Main Heading</nitrozen-heading>
+  <nitrozen-heading level="h1" color="blue" size="s">JioMart Main Heading</nitrozen-heading>
+  <nitrozen-heading level="h5" color="green" size="body-l-link">JioMart Main Heading</nitrozen-heading>
   <br />
-  <Heading level="h5" >Text</Heading>
-  <text-component level="p" color="#666666" size="body-xs">JioMart Paragraph text</text-component>
-  <text-component level="p" color="#666666" size="body-xxs-link">JioMart Paragraph text</text-component>
+  <nitrozen-heading level="h5" >Text</nitrozen-heading>
+  <nitrozen-text level="p" color="#666666" size="body-xs">JioMart Paragraph text</nitrozen-text>
+  <nitrozen-text level="p" color="#666666" size="body-l">JioMart Paragraph text</nitrozen-text>
   <br />
-  <Heading level="h5" >Grid View</Heading>
-  <Heading level="h5" size='s'>Grid View - 4 column</Heading>
-  <Grid gap="30px" template="1fr 1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
+  <nitrozen-heading level="h5" >Grid View</nitrozen-heading>
+  <nitrozen-heading level="h5" size='s'>Grid View - 4 column</nitrozen-heading>
+  <nitrozen-grid gap="30px" template="1fr 1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
       <div class="story-box">
         <div>Eu proident velit cupidatat proident eiusmod ex consequat.</div>
       </div>
@@ -125,9 +125,9 @@
       <div class="story-box">
         <div>Irure magna deserunt ullamco occaecat reprehenderit ad enim excepteur sint non cillum elit eiusmod eiusmod.</div>
       </div>
-    </Grid>
-    <Heading level="h5" size='s'>Grid View - 3 column</Heading>
-    <Grid gap="30px" template="1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
+    </nitrozen-grid>
+    <nitrozen-heading level="h5" size='s'>Grid View - 3 column</nitrozen-heading>
+    <nitrozen-grid gap="30px" template="1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
       <div class="story-box">
         <div>Eu proident velit cupidatat proident eiusmod ex consequat.</div>
       </div>
@@ -143,10 +143,10 @@
       <div class="story-box">
         <div>Irure magna deserunt ullamco occaecat reprehenderit ad enim excepteur sint non cillum elit eiusmod eiusmod.</div>
       </div>
-    </Grid>
+    </nitrozen-grid>
     <br />
-    <Heading level="h5" >Flex Block</Heading>
-    <FlexBox direction="row" justify-content="space-evenly">
+    <nitrozen-heading level="h5" >Flex Block</nitrozen-heading>
+    <nitrozen-flexbox direction="row" justify-content="space-evenly">
       <div class="card">
         <div class="story-box">
         <div>Irure magna deserunt ullamco occaecat reprehenderit ad enim excepteur sint non cillum elit eiusmod eiusmod.</div>
@@ -157,10 +157,10 @@
         <div>Irure magna deserunt ullamco occaecat reprehenderit ad enim excepteur sint non cillum elit eiusmod eiusmod.</div>
       </div>
       </div>
-    </FlexBox>
+    </nitrozen-flexbox>
     <br />
-    <Heading level="h5" >List Block</Heading>
-    <Listblock
+    <nitrozen-heading level="h5" >List Block</nitrozen-heading>
+    <nitrozen-listblock
       title="JioSaavn with Icon"
       prefix="visible"
       suffix="close"
@@ -168,55 +168,55 @@
       spacing="m"
       :items="['Item 1', 'Item 2', 'Item 3']"
     />
-    <Listblock
+    <nitrozen-listblock
       title="JioSaavn"
       verticalAlignment="center"
       spacing="m"
       :items="['Item 1', 'Item 2', 'Item 3']"
     />
 <br />
-<Heading level="h5" >Divider</Heading>
-<Grid gap="30px" template="1fr 1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
+<nitrozen-heading level="h5" >Divider</nitrozen-heading>
+<nitrozen-grid gap="30px" template="1fr 1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
 <div>
-  <Divider />
+  <nitrozen-divider />
 </div>
 <div>
-  <Divider direction="horizontal">
+  <nitrozen-divider direction="horizontal">
       Horizontal - With Label
-    </Divider>
+    </nitrozen-divider>
 
 </div>
 <div>
-  <Divider direction="vertical" />
+  <nitrozen-divider direction="vertical" />
 </div>
 <div>
-  <Divider direction="vertical">
+  <nitrozen-divider direction="vertical">
   Vertical - With Label Text
-</Divider>
+</nitrozen-divider>
 </div>
-</Grid>
+</nitrozen-grid>
 </div>
 <br />
-<Heading level="h5" >Spacing</Heading>
+<nitrozen-heading level="h5" >Spacing</nitrozen-heading>
 <div>
-    <SpacingUtility position="horizontal" size="xl">
+    <nitrozen-space position="horizontal" size="xl">
       <p>This element has padding on all sides.</p>
-    </SpacingUtility>
+    </nitrozen-space>
 
-    <SpacingUtility position="bottom" size="m">
+    <nitrozen-space position="bottom" size="m">
       <p>This element has horizontal padding.</p>
-    </SpacingUtility>
-    <SpacingUtility size="s" position="vertical">
+    </nitrozen-space>
+    <nitrozen-space size="s" position="vertical">
       <p>This element has  vertical padding.</p>
-    </SpacingUtility>
+    </nitrozen-space>
    </div>
    <br/>
-   <Heading level="h5" >Toast</Heading>
+   <nitrozen-heading level="h5" >Toast</nitrozen-heading>
    <div>
 
     <nitrozen-button v-flat-btn @click="showToastNotification">Show Toast Notification</nitrozen-button>
 
-      <Toaster
+      <nitrozen-toaster
       :showToast="showToast"
       :title="notificationMessage"
       :description="description"
@@ -233,9 +233,9 @@
     <br/>
 
 <div>
-  <Heading level="h5" >Nudge</Heading>
+  <nitrozen-heading level="h5" >Nudge</nitrozen-heading>
   <nitrozen-button v-flat-btn @click="showNudgeNotification">Show Nudge Notification</nitrozen-button>
-      <Nudge
+      <nitrozen-nudge
       :showNudge="showNudge"
       :title="notificationMessage"
       :description="description"
@@ -251,12 +251,12 @@
 </div>
 
     <div>
-    <Heading level="h5" >SidePanel</Heading>
+    <nitrozen-heading level="h5" >SidePanel</nitrozen-heading>
     <div class="hover-new">
     <nitrozen-button v-flat-btn @click="showPanel">Show Side Panel</nitrozen-button>
         </div>
     <!-- Use the SidePanel component with its props -->
-    <SidePanel
+    <nitrozen-sidepanel
       header="panelHeader"
       :showClose="true"
       :isOpen="isPanelOpen"
@@ -268,11 +268,11 @@
       @headerPrefixClickEvent="handleHeaderPrefixClick"
     >
     <p>helo</p>
-    </SidePanel>
+    </nitrozen-sidepanel>
   </div>
   <div>
-    <Heading level="h5" >Custom Scrollbar</Heading>
-    <Scrollbar :hover="true">
+    <nitrozen-heading level="h5" >Custom Scrollbar</nitrozen-heading>
+    <nitrozen-scrollbar :hover="true">
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
         has roots in a piece of classical Latin literature from 45 BC, making
@@ -287,9 +287,9 @@
         of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
         section 1.10.32.
       </p>
-    </Scrollbar>
+    </nitrozen-scrollbar>
     <br />
-    <Scrollbar :hover="false">
+    <nitrozen-scrollbar :hover="false">
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
         has roots in a piece of classical Latin literature from 45 BC, making
@@ -304,17 +304,17 @@
         of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
         section 1.10.32.
       </p>
-    </Scrollbar>
+    </nitrozen-scrollbar>
   </div>
   <div>
-    <Heading level="h5" >BottomSheet</Heading>
+    <nitrozen-heading level="h5" >BottomSheet</nitrozen-heading>
    <!-- Button to open the BottomSheet -->
    <div class="hover-new">
     <nitrozen-button v-flat-btn @click="openBottomSheet">Open Bottom Sheet</nitrozen-button>
         </div>
 
 <!-- Use the BottomSheet component -->
-<BottomSheet
+<nitrozen-bottomsheet
   title="Your Jio Account"
   description="Text"
   :close="true"
@@ -334,7 +334,7 @@
         of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
         section 1.10.32.
       </p>
-</BottomSheet>
+</nitrozen-bottomsheet>
   </div>
   </div>
  

@@ -6,7 +6,7 @@
   
 <script>
 export default {
-  name: "TextComponent",
+  name: "nitrozen-text",
   props: {
     level: {
       type: String,

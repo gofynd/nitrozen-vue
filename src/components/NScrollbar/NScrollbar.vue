@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "Scrollbar",
+  name: "nitrozen-scrollbar",
   props: {
     hover: {
       type: Boolean,

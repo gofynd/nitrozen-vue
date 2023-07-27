@@ -18,7 +18,7 @@
   <script>
  import NIcon from '../NIcon/NIcon.vue';
  export default {
-    name: 'BottomSheet',
+    name: 'nitrozen-bottomsheet',
     components: {
     'nitrozen-icon': NIcon,
   },

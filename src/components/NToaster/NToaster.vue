@@ -32,7 +32,7 @@ import NText from '../NText';
 import NIcon from '../NIcon/NIcon.vue';
 
 export default {
-  name: 'Toaster',
+  name: 'nitrozen-toaster',
   components: {
     NHeader,
     NText,

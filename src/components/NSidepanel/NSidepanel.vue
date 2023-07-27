@@ -18,7 +18,7 @@
   <script>
   import NIcon from '../NIcon/NIcon.vue';
   export default {
-    name: 'SidePanel',
+    name: 'nitrozen-sidepanel',
     components:{
       'nitrozen-icon': NIcon,
     },

@@ -7,7 +7,7 @@
   
 <script>
 export default {
-  name: "Heading",
+  name: "nitrozen-heading",
   props: {
     level: {
       type: String,

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'Grid',
+  name: 'nitrozen-grid',
   props: {
     gap: {
       type: String,

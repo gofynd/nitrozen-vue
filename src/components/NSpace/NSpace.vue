@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "SpacingUtility",
+  name: "nitrozen-space",
   props: {
     size: {
       type: String,

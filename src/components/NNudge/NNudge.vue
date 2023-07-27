@@ -48,7 +48,7 @@ import NText from "../NText";
 import NIcon from "../NIcon/NIcon.vue";
 
 export default {
-  name: "Nudge",
+  name: "nitrozen-nudge",
   components: {
     NHeader,
     NText,

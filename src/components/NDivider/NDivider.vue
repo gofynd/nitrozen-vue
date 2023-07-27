@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "Divider",
+  name: "nitrozen-divider",
   props: {
     direction: {
       type: String,
