@@ -2,6 +2,12 @@
 
 .n-button {
     height: 4rem;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    color: @BlackColor;
+    background-color: @PrimaryTextColor!important;
+    border-radius: 4px;
+    font-size: 14px;
     cursor: pointer;
     box-shadow: none;
     font-family: @PrimaryFont;
@@ -19,6 +25,12 @@
     padding: 0rem 2rem;
     border-radius: 0.3rem;
     color: @WhiteColor;
+    height: 32px; 
+    border-radius: 1000px; 
+    justify-content: center; 
+    align-items: center;
+    font-weight: 700; 
+    line-height: 13px; 
 
     &:disabled {
         cursor: not-allowed;
@@ -71,6 +83,36 @@
         background-color: @ColorFeedbackError20;
     }
 }
+
+.n-button-add {
+    background-image: url("../../assets/ic_add.png");
+    background-repeat: no-repeat;
+    background-color: @PrimaryTextColor;
+    color: @BlackColor;
+    cursor: pointer;
+    border-radius: 3250px;
+    padding: 10px 21px 7px 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    background-position: calc(100% - 3px) center;
+    width: 70px;
+  }
+  .n-button-delete {
+    position: absolute;
+    background-image: url("../../assets/ic_remove.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    align-items: center;
+    background-position: calc(100% - 3px) center;
+    background-size: 15px;
+    padding: 10px 21px 7px 10px;
+    font-size: 12px;
+  }
 
 .hover-state {
     pointer-events: none;
@@ -217,7 +259,7 @@
 }
 
 .n-button-rounded {
-    border-radius: 40px;
+    border-radius: 1000px;
 }
 
 .n-button-large {
@@ -232,7 +274,7 @@
 }
 
 .n-button-mid {
-    height: 4.8rem;
+   // height: 4.8rem;
     font-size: @BaseFontSize + 3;
     line-height: 2.5rem;
     min-width: 4.8rem;

@@ -78,7 +78,7 @@
           @stepperClicked="stepperClicked"
         ></nitrozen-stepper>
         <div class="stepper-btn-container">
-          <nitrozen-button v-flat-btn @click="stepperNext"
+          <nitrozen-button @click="stepperNext"
             >Next</nitrozen-button
           >
         </div>
@@ -94,17 +94,17 @@
 
       <!-- Flat Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn @click="someFunc"
+        <nitrozen-button  @click="someFunc"
           >Primary Flat {{ numberOfClick }}</nitrozen-button
         >
         <div class="hover-new">
-          <nitrozen-button v-flat-btn>Hover Flat</nitrozen-button>
+          <nitrozen-button >Hover Flat</nitrozen-button>
         </div>
-        <nitrozen-button v-flat-btn :showProgress="true"></nitrozen-button>
-        <nitrozen-button v-flat-btn :focused="true"
+        <nitrozen-button  :showProgress="true"></nitrozen-button>
+        <nitrozen-button  :focused="true"
           >Focused Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :disabled="true"
+        <nitrozen-button  :disabled="true"
           >Disabled Flat</nitrozen-button
         >
       </div>
@@ -125,19 +125,19 @@
 
       <!-- Rounded Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :rounded="true">Rounded</nitrozen-button>
+        <nitrozen-button  :rounded="true">Rounded</nitrozen-button>
         <div class="hover-new">
-          <nitrozen-button v-flat-btn :rounded="true">Hover</nitrozen-button>
+          <nitrozen-button  :rounded="true">Hover</nitrozen-button>
         </div>
         <nitrozen-button
-          v-flat-btn
+          
           :rounded="true"
           :showProgress="true"
         ></nitrozen-button>
-        <nitrozen-button v-flat-btn :rounded="true" :focused="true"
+        <nitrozen-button  :rounded="true" :focused="true"
           >Focused</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :rounded="true" :disabled="true"
+        <nitrozen-button  :rounded="true" :disabled="true"
           >Disabled</nitrozen-button
         >
       </div>
@@ -158,31 +158,31 @@
 
       <!-- Secondary Flat Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :theme="'secondary'"
+        <nitrozen-button  :theme="'secondary'"
           >Primary Small Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :theme="'secondary'"
+        <nitrozen-button  :theme="'secondary'"
         size="medium"
           >Primary Medium Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :theme="'secondary'"
+        <nitrozen-button  :theme="'secondary'"
         size="large"
           >Primary Large Flat</nitrozen-button
         >
         <div class="hover-new">
-          <nitrozen-button v-flat-btn :theme="'secondary'"
+          <nitrozen-button  :theme="'secondary'"
             >Hover Flat</nitrozen-button
           >
         </div>
         <nitrozen-button
-          v-flat-btn
+          
           :showProgress="true"
           :theme="'secondary'"
         ></nitrozen-button>
-        <nitrozen-button v-flat-btn :focused="true" :theme="'secondary'"
+        <nitrozen-button  :focused="true" :theme="'secondary'"
           >Focused Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :disabled="true" :theme="'secondary'"
+        <nitrozen-button  :disabled="true" :theme="'secondary'"
           >Disabled Flat</nitrozen-button
         >
       </div>
@@ -207,29 +207,29 @@
 
       <!-- Secondary Rounded Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :theme="'secondary'" :rounded="true"
+        <nitrozen-button  :theme="'secondary'" :rounded="true"
           >Rounded</nitrozen-button
         >
         <div class="hover-new">
-          <nitrozen-button v-flat-btn :theme="'secondary'" :rounded="true"
+          <nitrozen-button  :theme="'secondary'" :rounded="true"
             >Hover</nitrozen-button
           >
         </div>
         <nitrozen-button
-          v-flat-btn
+          
           :showProgress="true"
           :theme="'secondary'"
           :rounded="true"
         ></nitrozen-button>
         <nitrozen-button
-          v-flat-btn
+          
           :focused="true"
           :rounded="true"
           :theme="'secondary'"
           >Disabled</nitrozen-button
         >
         <nitrozen-button
-          v-flat-btn
+          
           :disabled="true"
           :rounded="true"
           :theme="'secondary'"
@@ -267,12 +267,12 @@
       <div class="main-div">
         <div class="grouping">
           <div class="width-50">
-            <nitrozen-button v-flat-btn>Save</nitrozen-button>
+            <nitrozen-button >Save</nitrozen-button>
             <nitrozen-button v-stroke-btn>Cancel</nitrozen-button>
           </div>
 
           <div class="width-50">
-            <nitrozen-button v-flat-btn>Save</nitrozen-button>
+            <nitrozen-button >Save</nitrozen-button>
             <nitrozen-button>Cancel</nitrozen-button>
           </div>
         </div>
@@ -280,10 +280,10 @@
 
       <!-- Large Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :size="'large'"
+        <nitrozen-button  :size="'large'"
           >Large Button</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :size="'large'" :theme="'secondary'"
+        <nitrozen-button  :size="'large'" :theme="'secondary'"
           >Large Button</nitrozen-button
         >
       </div>
@@ -297,16 +297,16 @@
         <nitrozen-button :href="'https://google.com'" :focused="true"
           >Focused</nitrozen-button
         >
-        <!-- <nitrozen-button v-flat-btn :large="true" :theme="'secondary'">Large Button</nitrozen-button>       -->
+        <!-- <nitrozen-button  :large="true" :theme="'secondary'">Large Button</nitrozen-button>       -->
       </div>
 
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :icon="'facebook'" :theme="'secondary'"
+        <nitrozen-button  :icon="'facebook'" :theme="'secondary'"
           >Facebook</nitrozen-button
         >
         <nitrozen-button
           @click="autofocusSearch = !autofocusSearch"
-          v-flat-btn
+          
           :icon="'bag'"
           :theme="'secondary'"
           >Bag</nitrozen-button
@@ -727,16 +727,16 @@
       </div>
 
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn @click="openDialog('alert')"
+        <nitrozen-button  @click="openDialog('alert')"
           >Alert Dialog</nitrozen-button
         >
-        <nitrozen-button v-flat-btn @click="openDialog('confirm')"
+        <nitrozen-button  @click="openDialog('confirm')"
           >Confirmation Dialog</nitrozen-button
         >
-        <nitrozen-button v-flat-btn @click="openDialog"
+        <nitrozen-button  @click="openDialog"
           >Select Dialog</nitrozen-button
         >
-        <nitrozen-button v-flat-btn @click="openDialog('choose')"
+        <nitrozen-button  @click="openDialog('choose')"
           >Choose Dialog</nitrozen-button
         >
       </div>
@@ -802,7 +802,51 @@
         </template>
       </nitrozen-dialog>
     </div>
-  </div>
+    <div>====================================================================</div>
+      <div>NMS Buttons</div>
+      <!-- AddCart Button -->
+      <div class="main-div space-between">
+        <nitrozen-button  :rounded="true" :theme="'add'">Add</nitrozen-button>
+        <nitrozen-button  :theme="'primary'"
+        size="medium"
+          >Renew</nitrozen-button
+        >
+      </div>
+      <div class="main-div space-between">
+       <!-- <nitrozen-button  :theme="'delete'"></nitrozen-button>-->
+        <nitrozen-inline
+              :icon="'delete'"
+              class="nitrozen-icon"
+            ></nitrozen-inline>
+      </div>
+      <div class="main-div space-between">
+        <nitrozen-dropdown
+            label="Please Select"
+            :items="dropdownItems"
+            v-model="selectedDropdown"
+            :required="true"
+          ></nitrozen-dropdown>
+      </div>    
+
+      <div class="main-div">
+        <nitrozen-progressbar 
+          :progress="'60'" 
+          :inital_value="'0'" 
+          :fixed_value="'600'" 
+          :final_value="'1000'">
+        </nitrozen-progressbar>
+      </div>
+
+      <div class="main-div ">
+        Small: <nitrozen-spinner size="small"
+          ></nitrozen-spinner>
+        Medium: <nitrozen-spinner size="medium"
+          ></nitrozen-spinner>
+        Large: <nitrozen-spinner size="large"
+        ></nitrozen-spinner>    
+      </div>
+    </div> 
+   
 </template>
 
 <script>
@@ -822,23 +866,20 @@ export default {
       checkArray: ["Check 1"],
       radioModel: "1",
       dropdownItems: [
+       
         {
           text: "Maharashtra",
           value: 1,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
         },
         {
           text: "Andhra Pradesh",
           value: 2,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+           
         },
         {
           text: "West Bengal",
           value: 3,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+          
         },
       ],
       dropdownItemsGroup: [

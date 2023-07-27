@@ -282,7 +282,7 @@ export default {
         if (this.selected && this.selected.text) {
           return this.selected.text;
         } else if (this.label) {
-          return this.placeholder || `Choose ${this.label}`;
+          return this.placeholder || `${this.label}`;
         }
         return "";
       } else {
