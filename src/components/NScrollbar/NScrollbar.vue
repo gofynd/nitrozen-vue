@@ -36,7 +36,8 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
+@import '../../../src/base/variable.less';
 .scrollbar-container {
   height: 300px;
   width: 100px;
@@ -55,11 +56,11 @@ export default {
 }
 
 .hover-scroll .content-wrapper::-webkit-scrollbar-thumb {
-  background: #b5b5b5;
+  background: @ColorPrimaryGrey60;
   border-radius: 4px;
 }
 
 .hover-scroll .content-wrapper::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.65);
+  background: @ColorPrimaryGrey80;
 }
 </style>

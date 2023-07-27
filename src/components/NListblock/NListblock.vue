@@ -48,20 +48,20 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
 
-.jds-listblock ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.jds-listblock li {
+.jds-listblock{
+     ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+     li {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
-
-.jds-listblock-default {
+    }
 
 }
 
@@ -77,25 +77,28 @@ export default {
    margin-left: 16px;
 }
 
-.listblock-prefix{
-display: flex;
+.listblock{
+  &-prefix{
+    display: flex;
     align-content: center;
     align-items: center;
     flex: 0 0 auto;
-}
-.listblock-content{
-  font-size: 18px;
+  }
+
+  &-content{
+    font-size: 18px;
     display: flex;
     flex-grow: 0.1;
     flex-direction: column;
-}
-.listblock-suffix{
-      display: flex;
+  }
+
+  &-suffix{
+    display: flex;
     align-content: center;
     align-items: center;
     flex: 0 0 auto;
+  }
+
 }
-
-
 
 </style>

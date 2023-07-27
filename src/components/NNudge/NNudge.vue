@@ -140,42 +140,108 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
+@import '../../../src/base/variable.less';
 .nudge {
   visibility: visible;
-
   min-width: 360px;
-
   margin-right: 24px;
-
   margin-top: 24px;
-
-  background-color: rgba(0, 0, 0, 0.65);
-
-  color: #fff;
-
+  background-color: @ColorPrimaryGrey80;
+  color: @WhiteColor;
   text-align: center;
-
   border-radius: 16px;
-
   padding: 16px;
-
   position: fixed;
-
   z-index: 70;
-
   font-size: 12px;
-
   letter-spacing: -0.06px;
   top: 0;
   right: 5%;
-  animation: nfadein 0.5s, nfadeout 0.5s 3s;
+  animation: nfadein 0.5s, nfadeout 0.5s 2.5s;
 
   @media only screen and (max-width: 767px) {
     left: 50%;
-
     margin-left: -180px;
   }
+
+  .info {
+    background-color: #007bff;
+  }
+
+  .success {
+  background-color: @ColorFeedbackSuccess50;
+  }
+
+  .warning {
+  background-color: @ColorFeedbackWarning50;
+  }
+
+  .error {
+  background-color: @ColorFeedbackError50;
+  }
+
+
+  .action {
+  background-color: #17a2b8;
+  }
+
+  &-message {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+   .content {
+      text-align: left;
+      font-size: 14px;
+      margin: 0px 12px;
+
+      .toast-title {
+          font-size: 16px;
+          font-weight: 600;
+          padding-bottom: 4px;
+        }
+
+      .nudge-description {
+          max-width: 320px;
+
+           i{
+                margin-right: 8px;
+              }
+        }
+    }
+
+    button {
+      background-color: transparent;
+      color: @WhiteColor;
+      position: absolute;
+      right: 0;
+      margin-right: 12px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  }
+
+  &-cta {
+      display:flex;
+      justify-content: flex-end;
+      max-width: 360px;
+
+      button {
+        background-color: transparent;
+        color: @WhiteColor;
+        border: 1px solid @WhiteColor;
+        border-radius: 24px;
+        border-width: 1px;
+        max-height: 2.5em;
+        padding: 4px 16px;
+        margin: 12px 8px 0px 8px;
+      }
+    }
+
 }
 
 @keyframes nfadein {
@@ -202,95 +268,4 @@ export default {
   }
 }
 
-.nudge.info {
-  background-color: #007bff;
-}
-
-.nudge.success {
-  background-color: #28a745;
-}
-
-.nudge.warning {
-  background-color: #ffc107;
-}
-
-.nudge.error {
-  background-color: #dc3545;
-}
-
-.nudge.action {
-  background-color: #17a2b8;
-}
-
-.nudge .nudge-message {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: flex-start;
-}
-
-.nudge .nudge-message .content {
-  text-align: left;
-
-  font-size: 14px;
-
-  margin: 0px 12px;
-}
-
-.nudge .nudge-message .content .toast-title {
-  font-size: 16px;
-
-  font-weight: 600;
-
-  padding-bottom: 4px;
-}
-
-.nudge .nudge-message .content .nudge-description {
-  max-width: 320px;
-}
-
-.nudge .nudge-message i {
-  margin-right: 8px;
-}
-
-.nudge .nudge-message button {
-  background-color: transparent;
-
-  color: #fff;
-
-  position: absolute;
-
-  right: 0;
-
-  margin-right: 12px;
-
-  padding: 6px 12px;
-
-  border-radius: 4px;
-
-  border: none;
-
-  cursor: pointer;
-
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nudge-cta {
-  display:flex;
-  justify-content: flex-end;
-  max-width: 360px;
-}
-
-.nudge-cta button {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 24px;
-  border-width: 1px;
-  max-height: 2.5em;
-  padding: 4px 16px;
-  margin: 12px 8px 0px 8px;
-
-}
 </style>

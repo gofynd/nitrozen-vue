@@ -2,7 +2,7 @@
 <template>
   <div v-if="showToast" class="toaster" :class="toastType" :key="toastKey" @click="handleClick">
 
-    <div class="toast-message">
+    <div class="toaster-message">
 
       <nitrozen-icon v-if="icon" :name="icon" color="#fff"></nitrozen-icon>
 
@@ -18,7 +18,7 @@
 
     </div>
 
-    <div class="toast-cta">
+    <div class="toaster-cta">
     <nitrozen-button rounded  v-if="showPrimaryButton" @click="handlePrimaryClick">{{ primaryButtonLabel }}</nitrozen-button>
     <nitrozen-button rounded v-if="showSecondaryButton" @click="handleSecondaryClick">{{ secondaryButtonLabel }}</nitrozen-button>
     </div>
@@ -116,7 +116,7 @@ export default {
         if (newVal && this.toastType !== 'action') {
           setTimeout(() => {
             this.$emit('onClose');
-          }, 5000);
+          }, 3000);
         }
       },
     },
@@ -124,220 +124,119 @@ export default {
 };
 </script>
   
-<style>
-.toaster{
+<style lang="less">
+@import '../../../src/base/variable.less';
+.toaster {
+  visibility: visible;
+  min-width: 360px;
+  margin-left: 24px;
+  margin-bottom: 24px;
+  background-color: @ColorPrimaryGrey80;
+  color: @WhiteColor;
+  text-align: center;
+  border-radius: 16px;
+  padding: 16px;
+  position: fixed;
+  z-index: 70;
+  font-size: 12px;
+  letter-spacing: -0.06px;
+  bottom: 0;
+  left: 5%;
+  animation: tfadein 0.5s, tfadeout 0.5s 2.5s;
 
-visibility: visible;
+  @media only screen and (max-width: 767px) {
+    left: 50%;
+    margin-left: -180px;
+  }
 
-min-width: 360px;
+  .info {
+    background-color: #007bff;
+  }
 
-margin-left: 24px;
+  .success {
+  background-color: @ColorFeedbackSuccess50;
+  }
 
-margin-bottom: 24px;
+  .warning {
+  background-color: @ColorFeedbackWarning50;
+  }
 
-background-color: rgba(0, 0, 0, .65);
-
-color: #fff;
-
-text-align: center;
-
-border-radius: 16px;
-
-padding: 16px;
-
-position: fixed;
-
-z-index: 70;
-
-font-size: 12px;
-
-letter-spacing: -0.06px;
-
-left: 5%;
-
-bottom: 0;
-
-animation: tfadein 0.5s, tfadeout 0.5s 3s;
+  .error {
+  background-color: @ColorFeedbackError50;
+  }
 
 
-@media only screen and (max-width: 767px)  {
+  .action {
+  background-color: #17a2b8;
+  }
 
-left:50%;
+  &-message {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-margin-left:-180px;
+   .content {
+      text-align: left;
+      font-size: 14px;
+      margin: 0px 12px;
+
+      .toast-title {
+          font-size: 16px;
+          font-weight: 600;
+          padding-bottom: 4px;
+        }
+
+      .toast-description {
+          max-width: 320px;
+
+           i{
+              margin-right: 8px;
+            }
+        }
+    }
+
+    button {
+      background-color: transparent;
+      color: @WhiteColor;
+      position: absolute;
+      right: 0;
+      margin-right: 12px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  }
+
+  &-cta {
+      display:flex;
+      justify-content: flex-end;
+      max-width: 360px;
+
+      button {
+        background-color: transparent;
+        color: @WhiteColor;
+        border: 1px solid @WhiteColor;
+        border-radius: 24px;
+        border-width: 1px;
+        max-height: 2.5em;
+        padding: 4px 16px;
+        margin: 12px 8px 0px 8px;
+      }
+    }
 
 }
-
-
-
-
-}
-
-
 
 
 @keyframes tfadein {
-
 from {left: 0; opacity: 0;}
-
 to {left: 5%; opacity: 1;}
-
 }
-
-
-
 
 @keyframes tfadeout {
-
 from {left: 5%; opacity: 1;}
-
 to {left: 0; opacity: 0;}
-
-}
-
-
-
-
-.toaster.info {
-
-  background-color: #007bff;
-
-}
-
-
-
-
-.toaster.success {
-
-  background-color: #28a745;
-
-}
-
-
-
-
-.toaster.warning {
-
-  background-color: #ffc107;
-
-}
-
-
-
-
-.toaster.error {
-
-  background-color: #dc3545;
-
-}
-
-
-
-
-.toaster.action {
-
-  background-color: #17a2b8;
-
-}
-
-
-
-
-.toaster .toast-message {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: flex-start;
-
-}
-
-
-
-
-.toaster .toast-message .content{
-
-    text-align: left;
-
-    font-size: 14px;
-
-    margin: 0px 12px;
-
-}
-
-
-
-
-.toaster .toast-message .content .toast-title{
-
-    font-size: 16px ;
-
-    font-weight: 600;
-
-    padding-bottom: 4px;
-
-}
-
-
-
-
-.toaster .toast-message .content .toast-description{
-
-    max-width: 320px;
-
-}
-
-
-
-
-.toaster .toast-message i {
-
-  margin-right: 8px;
-
-}
-
-
-
-
-.toaster .toast-message button {
-
-  background-color: transparent;
-
-  color: #fff;
-
-    position: absolute;
-
-    right: 0;
-
-    margin-right: 12px;
-
-  padding: 6px 12px;
-
-  border-radius: 4px;
-
-  border: none;
-
-  cursor: pointer;
-
-  transition: background-color 0.3s ease, color 0.3s ease;
-
-}
-
-.toast-cta{
-  display:flex;
-  justify-content: flex-end;
-  max-width: 360px;
-}
-.toast-cta button{
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 24px;
-  border-width: 1px;
-  max-height: 2.5em;
-  padding: 4px 16px;
-  margin: 12px 8px 0px 8px;
 }
 
 </style>
