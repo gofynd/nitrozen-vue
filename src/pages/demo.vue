@@ -71,6 +71,33 @@
           :label="'name'"
         ></nitrozen-tab>
       </div>
+      <div>
+        <nitrozen-avatar
+        :isClickable="true"
+        :size="'large'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :size="'xlarge'"
+        :kind="'initials'"
+        :isClickable="true"
+        :initials="'anand'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :isClickable="true"
+        :size="'xxlarge'"
+        :kind="'image'"
+        :image="'https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyndnp/wrkr/x5/products/pictures/item/free/original/bY8N9S67n-Test.png'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :size="'small'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :size="'medium'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :size="'xsmall'">
+        </nitrozen-avatar>
+      </div>
       <div class="main-div">
         <nitrozen-stepper
           :elements="stepper.elements"
