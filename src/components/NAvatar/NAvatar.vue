@@ -74,11 +74,9 @@
     },
     userInitials() {
       const names = this.initials.trim().split(" ");
-      console.log("names :"+names);
       if (names.length >= 2) {
         return names[0][0].toUpperCase() + names[1][0].toUpperCase();
       } else {
-        console.log(names[0])
         return names[0][0].toUpperCase() + names[0][1].toUpperCase();
       }
     },
@@ -97,19 +95,15 @@
     background-color: @ColorSparkle20;
   }
   
-/* Hover style for image with isClickable */
 div[aria-label="Avatar"].hover-bg:hover img{
-  // color: @WarningColor;
   filter: brightness(110%);
 }
 
-/* Hover style for default (SVG) */
 div[aria-label="Avatar"].hover-svg:hover,
 div[aria-label="Avatar"].hover-svg:hover svg path {
   fill: @ColorPrimary60;
 }
 
-/* Hover style for initials */
 div[aria-label="Avatar"].hover-initials:hover {
   background: @ColorSparkle40;
 }
@@ -122,7 +116,7 @@ div[aria-label="Avatar"].hover-initials:hover {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: -0.08px;
+    letter-spacing: -0.0044rem;
     text-transform: none;
     color: @ColorSparkle60;
   }
