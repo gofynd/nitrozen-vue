@@ -321,6 +321,13 @@
         ></nitrozen-toggle-btn>
       </div>
 
+      
+     <!--  Selectors -->
+    <div class="main-div">
+      <nitrozen-selector :buttons="buttons"/>
+    </div>
+
+
       <!-- Input -->
       <div class="main-div">
         <nitrozen-input
@@ -346,7 +353,7 @@
         <nitrozen-input
           :id="2"
           :placeholder="'Enter Name'"
-          :label="'Input with Placeholderrrr'"
+          :label="'Input with Placeholder'"
         ></nitrozen-input>
       </div>
 
@@ -820,6 +827,13 @@ export default {
   name: "App",
   data() {
     return {
+      buttons: [
+      { text: 'Postpaid' },
+      { text: 'Prepaid' },
+      { text: 'JIOFiber' },
+      { text: '5G' },
+      { text: 'Plans' },
+    ],
       tabArray: ["Item1", "Item2", "Item3"],
       multiSelect: [11,12,13,14,15,21,22,23,24,25],
       numberOfClick: 0,

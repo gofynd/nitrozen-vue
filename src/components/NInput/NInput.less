@@ -2,33 +2,33 @@
 .n-input {
   padding: 1.2rem;
   color: @TypographyPrimaryColor;
- 
- // border-radius: 1.6rem;
   width: 312px;
-  //background: @WhiteColor;
   font-family: @PrimaryFont;
   position: relative;
- // box-sizing: border-box;
   font-size: 1.6rem;
- // -webkit-appearance: none;
   border:none ;
-  outline:none !important;
-  border-radius: 0% !important;
-  border-bottom: 1.5px solid #141414  !important;
+  outline:none ;
+  border-radius: 0% ;
+  border-bottom: 1.5px solid #141414 ;
 }
 .n-input-default-border{
   border-bottom: 0.2rem solid  @ColorSparkleGrey60;
+  border-radius: 0% ;
   &:focus {
     border-bottom: 0.2rem solid @ColorPrimary60;
+    border-radius: 0% ;
   }
 }
 .n-success-border{
+  border-radius: 0% ;
   border-bottom: 0.2rem solid  @SuccessColor;
 }
 .n-warning-border{
+  border-radius: 0%;
   border-bottom: 0.2rem solid  @WarningColor;
 }
 .n-error-border{
+  border-radius: 0%;
   border-bottom: 0.2rem solid  @ErrorColor;
 }
 .n-input-underinfo{
@@ -176,18 +176,6 @@ input[type="search"]::-webkit-search-cancel-button {
   top: 1rem;
 }
 
-/* .nitrozen-remove-left-border {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left-color: @WhiteColor;
-}
-
-.nitrozen-remove-right-border {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right-color: @WhiteColor;
-} */
-
 .nitrozen-input-grp {
   display: flex;
   position: relative;
@@ -204,3 +192,15 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+/* .nitrozen-remove-left-border {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-color: @WhiteColor;
+}
+
+.nitrozen-remove-right-border {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-color: @WhiteColor;
+} */
