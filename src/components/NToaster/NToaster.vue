@@ -14,13 +14,13 @@
 
       </div>
 
-      <button><nitrozen-icon name="close" color="#fff" @click="handleCancelClick"></nitrozen-icon></button>
+      <button><nitrozen-icon name="close" color="#fff" size="16" @click="handleCancelClick"></nitrozen-icon></button>
 
+    </div>
 
-      <nitrozen-button rounded  v-if="showPrimaryButton" @click="handlePrimaryClick">{{ primaryButtonLabel }}</nitrozen-button>
-
-<nitrozen-button rounded v-if="showSecondaryButton" @click="handleSecondaryClick">{{ secondaryButtonLabel }}</nitrozen-button>
-
+    <div class="toast-cta">
+    <nitrozen-button rounded  v-if="showPrimaryButton" @click="handlePrimaryClick">{{ primaryButtonLabel }}</nitrozen-button>
+    <nitrozen-button rounded v-if="showSecondaryButton" @click="handleSecondaryClick">{{ secondaryButtonLabel }}</nitrozen-button>
     </div>
 
   </div>
@@ -153,13 +153,11 @@ font-size: 12px;
 
 letter-spacing: -0.06px;
 
-left: 0;
+left: 5%;
 
 bottom: 0;
 
-animation: tfadein 0.5s, tfadeout 0.5s 5s;
-
-
+animation: tfadein 0.5s, tfadeout 0.5s 3s;
 
 
 @media only screen and (max-width: 767px)  {
@@ -182,7 +180,7 @@ margin-left:-180px;
 
 from {left: 0; opacity: 0;}
 
-to {left: 10; opacity: 1;}
+to {left: 5%; opacity: 1;}
 
 }
 
@@ -191,7 +189,7 @@ to {left: 10; opacity: 1;}
 
 @keyframes tfadeout {
 
-from {left: 10%; opacity: 1;}
+from {left: 5%; opacity: 1;}
 
 to {left: 0; opacity: 0;}
 
@@ -325,5 +323,22 @@ to {left: 0; opacity: 0;}
   transition: background-color 0.3s ease, color 0.3s ease;
 
 }
+
+.toast-cta{
+  display:flex;
+  justify-content: flex-end;
+  max-width: 360px;
+}
+.toast-cta button{
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 24px;
+  border-width: 1px;
+  max-height: 2.5em;
+  padding: 4px 16px;
+  margin: 12px 8px 0px 8px;
+}
+
 </style>
   

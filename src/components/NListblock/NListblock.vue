@@ -3,9 +3,9 @@
     <h2 v-if="title">{{ title }}</h2>
     <ul :class="`jds-listblock-${spacing}`" :style="{ alignItems: verticalAlignment }">
       <li v-for="(item, index) in items" :key="index">
-        <nitrozen-icon v-if="prefix" :name="prefix" ></nitrozen-icon>
-        {{ item }}
-        <nitrozen-icon v-if="suffix" :name="suffix" ></nitrozen-icon>
+        <span class="listblock-prefix"><nitrozen-icon v-if="prefix" :name="prefix" size="24"></nitrozen-icon></span>
+        <span class="listblock-content">{{ item }}</span>
+        <span class="listblock-suffix"><nitrozen-icon v-if="suffix" :name="suffix" size="24" ></nitrozen-icon></span>
       </li>
     </ul>
   </div>
@@ -33,7 +33,7 @@ export default {
     },
     verticalAlignment: {
       type: String,
-      default: "baseline",
+      default: "center",
     },
     spacing: {
       type: String,
@@ -50,24 +50,54 @@ export default {
 
 <style>
 
-.jds-listblock {
+.jds-listblock ul {
   /* Your styles for the container of the list block */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.jds-listblock li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .jds-listblock-default {
-  /* Your styles for default spacing between items */
+
 }
 
-.jds-listblock-s {
-  /* Your styles for small spacing between items */
+.jds-listblock-s .listblock-content {
+  margin-left: 8px;
 }
 
-.jds-listblock-m {
-  /* Your styles for medium spacing between items */
+.jds-listblock-m .listblock-content{
+  margin-left: 12px;
 }
 
-.jds-listblock-l {
+.jds-listblock-l .listblock-content{
   /* Your styles for large spacing between items */
+   margin-left: 16px;
 }
+
+.listblock-prefix{
+display: flex;
+    align-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+.listblock-content{
+  font-size: 18px;
+    display: flex;
+    flex-grow: 0.1;
+    flex-direction: column;
+}
+.listblock-suffix{
+      display: flex;
+    align-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+
 
 </style>

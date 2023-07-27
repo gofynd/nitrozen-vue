@@ -2,13 +2,12 @@
     <transition name="bottom-sheet">
       <div v-if="show" class="bottom-sheet-overlay" @click="onClose">
         <div class="bottom-sheet-content" @click.stop>
-            <button @click="onClose"><nitrozen-icon  name="close" ></nitrozen-icon></button>
+            <button class="bottom-sheet-close" @click="onClose"><nitrozen-icon  name="close" ></nitrozen-icon></button>
           <div class="bottom-sheet-header">
             <h3 v-if="title">{{ title }}</h3>
           <p v-if="description">{{ description }}</p>
           </div>
           <div class="bottom-sheet-inner-content">
-            <!-- Slot to insert dynamic content -->
             <slot></slot>
           </div>
         </div>
@@ -60,10 +59,20 @@
   
   .bottom-sheet-content {
     background-color: #fff;
-    border-radius: 8px 8px 0 0;
-    padding: 20px;
+    border-radius: 24px 24px 0 0;
+    padding: 60px 24px 24px 24px;
     width: 100%;
-    max-width: 600px;
+    position: absolute;
+    max-width: 360px;
+    right: 0;
+    bottom: 0;
+    margin-right: 60px;
+
+    @media only screen and (max-width: 767px)  {
+      max-width:100%;
+      width:100%;
+      margin-right: 0px;
+    }
   }
   
   .bottom-sheet-header {
@@ -87,6 +96,16 @@
   .bottom-sheet-enter, .bottom-sheet-leave-to {
     opacity: 0;
     transform: translateY(100%);
+  }
+
+  .bottom-sheet-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right:24px;
+    margin-top: 24px;
+    border: none;
+    background: transparent;
   }
   </style>
   

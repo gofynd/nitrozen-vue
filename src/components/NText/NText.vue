@@ -23,7 +23,7 @@ export default {
     },
     size: {
       type: String,
-      default: "", 
+      default: "",
     },
   },
   computed: {
@@ -37,7 +37,6 @@ export default {
       };
     },
     sizeClass() {
-      // Compute the size class based on the "size" prop
       return this.size ? `size-${this.size.toLowerCase()}` : '';
     },
   },
@@ -45,36 +44,101 @@ export default {
 </script>
   
 <style lang="less">
-.size-body-xs, .size-span
-{
-  font-weight: 500 ;
+.size-body {
 
-  font-size:14px;
+  &-l {
+    font-weight: 500 !important;
+    font-size: 24px !important;
+    letter-spacing: -0.12px !important;
+    line-height: 1.3333333333333333 !important;
 
-  letter-spacing: -0.06px ;
+    &-light {
+      font-weight: 300 !important;
+    }
 
-  line-height: 1.3333333333333333 ;
+    &-bold {
+      font-weight: 700 !important;
+    }
+
+    &-link {
+      font-weight: 700 !important;
+    }
+  }
+
+  &-m {
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    letter-spacing: -0.09px !important;
+    line-height: 1.3333333333333333 !important;
+
+    &-light {
+      font-weight: 300 !important;
+    }
+
+    &-bold {
+      font-weight: 700 !important;
+    }
+
+    &-link {
+      font-weight: 700 !important;
+    }
+  }
+
+  &-s {
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    letter-spacing: -0.08px !important;
+    line-height: 1.5 !important;
+
+    &-light {
+      font-weight: 300 !important;
+    }
+
+    &-bold {
+      font-weight: 700 !important;
+    }
+
+    &-link {
+      font-weight: 700 !important;
+    }
+  }
+
+  &-xs {
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    letter-spacing: -0.07px !important;
+    line-height: 1.4285714285714286 !important;
+
+    &-light {
+      font-weight: 300 !important;
+    }
+
+    &-bold {
+      font-weight: 700 !important;
+    }
+
+    &-link {
+      font-weight: 700 !important;
+    }
+  }
+
+  &-xxs {
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    letter-spacing: -0.06px !important;
+    line-height: 1.3333333333333333 !important;
+
+    &-light {
+      font-weight: 300 !important;
+    }
+
+    &-bold {
+      font-weight: 700 !important;
+    }
+
+    &-link {
+      font-weight: 700 !important;
+    }
+  }
 }
-
-.size-body-xxs, .size-span
-{
-  font-weight: 500 ;
-
-  font-size:12px;
-
-  letter-spacing: -0.06px ;
-
-  line-height: 1.3333333333333333 ;
-}
-
-.size-strong {
-  font-weight: 700 ;
-
-font-size: 12px;
-
-letter-spacing: -0.06px ;
-
-line-height: 1.3333333333333333 ;
-}
-
 </style>

@@ -99,15 +99,35 @@
 <div>
   <Heading level="h1" >JioMart Component</Heading>
   <Heading level="h5" size="m">Heading</Heading>
-  <Heading level="h1" color="red" size="l">JioMart Main Heading</Heading>
+  <Heading level="h1"  color="gray" size="l">JioMart Main Heading</Heading>
+  <Heading level="h1" color="blue" size="s">JioMart Main Heading</Heading>
+  <Heading level="h5" color="green" size="body-l-link">JioMart Main Heading</Heading>
   <br />
   <Heading level="h5" >Text</Heading>
   <text-component level="p" color="#666666" size="body-xs">JioMart Paragraph text</text-component>
-  <text-component level="p" color="#666666" size="body-xxs">JioMart Paragraph text</text-component>
-  <text-component level="p" color="#666666" size="body-strong">JioMart Paragraph text</text-component>
+  <text-component level="p" color="#666666" size="body-xxs-link">JioMart Paragraph text</text-component>
   <br />
   <Heading level="h5" >Grid View</Heading>
+  <Heading level="h5" size='s'>Grid View - 4 column</Heading>
   <Grid gap="30px" template="1fr 1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
+      <div class="story-box">
+        <div>Eu proident velit cupidatat proident eiusmod ex consequat.</div>
+      </div>
+
+      <div class="story-box">
+        <div>Nostrud sunt aliqua fugiat pariatur in.</div>
+      </div>
+
+      <div class="story-box">
+        <div>Cupidatat et ea nostrud ea.</div>
+      </div>
+
+      <div class="story-box">
+        <div>Irure magna deserunt ullamco occaecat reprehenderit ad enim excepteur sint non cillum elit eiusmod eiusmod.</div>
+      </div>
+    </Grid>
+    <Heading level="h5" size='s'>Grid View - 3 column</Heading>
+    <Grid gap="30px" template="1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
       <div class="story-box">
         <div>Eu proident velit cupidatat proident eiusmod ex consequat.</div>
       </div>
@@ -144,13 +164,13 @@
       title="JioSaavn with Icon"
       prefix="visible"
       suffix="close"
-      verticalAlignment="middle"
+      verticalAlignment="center"
       spacing="m"
       :items="['Item 1', 'Item 2', 'Item 3']"
     />
     <Listblock
       title="JioSaavn"
-      verticalAlignment="middle"
+      verticalAlignment="center"
       spacing="m"
       :items="['Item 1', 'Item 2', 'Item 3']"
     />
@@ -161,9 +181,10 @@
   <Divider />
 </div>
 <div>
-  <Divider>
-  Horizontal - With Label
-</Divider>
+  <Divider direction="horizontal">
+      Horizontal - With Label
+    </Divider>
+
 </div>
 <div>
   <Divider direction="vertical" />
@@ -178,18 +199,15 @@
 <br />
 <Heading level="h5" >Spacing</Heading>
 <div>
-    <SpacingUtility :all="'16px'">
+    <SpacingUtility position="horizontal" size="xl">
       <p>This element has padding on all sides.</p>
     </SpacingUtility>
 
-    <SpacingUtility :horizontal="'12px'" >
+    <SpacingUtility position="bottom" size="m">
       <p>This element has horizontal padding.</p>
     </SpacingUtility>
-    <SpacingUtility  :vertical="'24px'">
+    <SpacingUtility size="s" position="vertical">
       <p>This element has  vertical padding.</p>
-    </SpacingUtility>
-    <SpacingUtility :top="'10px'" :bottom="'20px'" :left="'5px'" :right="'5px'">
-      <p>This element has different padding values for each side.</p>
     </SpacingUtility>
    </div>
    <br/>
@@ -197,7 +215,6 @@
    <div>
 
     <nitrozen-button v-flat-btn @click="showToastNotification">Show Toast Notification</nitrozen-button>
-    <!-- <nitrozen-button v-flat-btn @click="showToastNotificationTwo">Show Toast Notification Two</nitrozen-button> -->
 
       <Toaster
       :showToast="showToast"
@@ -214,20 +231,6 @@
     />
     
     <br/>
-    <!-- primary and secondary -->
-    <!-- <Toaster
-    :showToast="showToasttwo"
-    title="jiomart two"
-    description="description"
-    icon="home"
-    @onClose="onClose"
-    :showPrimaryButton="true"
-    :primaryButtonLabel="primaryButtonLabel"
-    :showSecondaryButton="true"
-    :secondaryButtonLabel="secondaryButtonLabel"
-    @onClickPrimary="handlePrimaryAction"
-    @onClickSecondary="handleSecondaryAction"
-    /> -->
 
 <div>
   <Heading level="h5" >Nudge</Heading>
@@ -238,14 +241,20 @@
       :description="description"
       icon="home"
        @onClose="onCloseNudge"
-
+       :showPrimaryButton="true"
+    primaryButtonLabel="CTA 1"
+    :showSecondaryButton="true"
+    secondaryButtonLabel="CTA 2"
+    @onClickPrimary="handlePrimaryAction"
+    @onClickSecondary="handleSecondaryAction"
     />
 </div>
 
     <div>
     <Heading level="h5" >SidePanel</Heading>
-    
-      <button @click="showPanel">Show Side Panel</button>
+    <div class="hover-new">
+    <nitrozen-button v-flat-btn @click="showPanel">Show Side Panel</nitrozen-button>
+        </div>
     <!-- Use the SidePanel component with its props -->
     <SidePanel
       header="panelHeader"
@@ -263,7 +272,24 @@
   </div>
   <div>
     <Heading level="h5" >Custom Scrollbar</Heading>
-    <Scrollbar>
+    <Scrollbar :hover="true">
+      <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It
+        has roots in a piece of classical Latin literature from 45 BC, making
+        it over 2000 years old. Richard McClintock, a Latin professor at
+        Hampden-Sydney College in Virginia, looked up one of the more obscure
+        Latin words, consectetur, from a Lorem Ipsum passage, and going through
+        the cites of the word in classical literature, discovered the
+        undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+        1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+        Evil) by Cicero, written in 45 BC. This book is a treatise on the
+        theory of ethics, very popular during the Renaissance. The first line
+        of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+        section 1.10.32.
+      </p>
+    </Scrollbar>
+    <br />
+    <Scrollbar :hover="false">
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
         has roots in a piece of classical Latin literature from 45 BC, making
@@ -283,7 +309,9 @@
   <div>
     <Heading level="h5" >BottomSheet</Heading>
    <!-- Button to open the BottomSheet -->
-   <button @click="openBottomSheet">Open Bottom Sheet</button>
+   <div class="hover-new">
+    <nitrozen-button v-flat-btn @click="openBottomSheet">Open Bottom Sheet</nitrozen-button>
+        </div>
 
 <!-- Use the BottomSheet component -->
 <BottomSheet
