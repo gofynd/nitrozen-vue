@@ -1,0 +1,63 @@
+@import "./../../base/base.less";
+
+/* Your CSS styles for the component */
+.button-group-container {
+   // background-color: #d8dde1;
+    display: flex;
+    border-radius: 20px;
+    padding: 5px; /* Add padding to create space between radio inputs */
+  }
+  
+  /* Apply styles to the radio-group container */
+  .radio-group {
+    display: flex; /* Arrange radio inputs horizontally */
+    flex-wrap: wrap;
+  }
+  
+  /* Apply styles to the radio inputs (hidden) */
+  .radio-group input[type="radio"] {
+    display: none;
+  }
+  
+  /* Apply styles to the label elements as custom radio buttons (big buttons) */
+  .radio-button {
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #cfd6dd; /* Set the background color for unselected buttons */
+    color: #220afb; /* Set the text color for unselected buttons */
+    cursor: pointer; /* Show a pointer cursor on hover */
+    font-size: 16px; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin to avoid spacing issues */
+    font-family: "JioType", helvetica, arial, sans-serif;
+    font-weight: 500;
+    text-transform: none;
+    font-size: 1rem;
+    letter-spacing: -0.08px;
+    line-height: 1.5;
+    border-radius: 17px;
+    border: 2px solid #e0e0e0;
+  }
+  
+
+  .radio-group .selected {
+    background-color: @selecterSelect; /* Blue color for the selected radio button */
+    color: #e1e3e6; /* Text color for selected radio button */
+    font-family: "JioType",helvetica,arial,sans-serif;
+    font-weight: 500;
+    text-transform: none;
+    font-size: 1rem;
+    letter-spacing: -0.08px;
+    line-height: 1.5;
+  }
+  
+  
+  /* Add margin between radio buttons */
+  .radio-group .radio-button:not(:last-child) {
+    margin-right: 5px;
+  }
+  
+    /* Style for the selected radio input (radio button style) */
+  
+  /* .radio-group input[type="radio"]:checked + label {
+    background-color: #0a2885; 
+    color: #e1e3e6; 
+  } */
