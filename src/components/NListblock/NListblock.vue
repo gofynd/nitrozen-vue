@@ -51,7 +51,6 @@ export default {
 <style>
 
 .jds-listblock ul {
-  /* Your styles for the container of the list block */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -75,7 +74,6 @@ export default {
 }
 
 .jds-listblock-l .listblock-content{
-  /* Your styles for large spacing between items */
    margin-left: 16px;
 }
 
