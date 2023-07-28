@@ -336,6 +336,11 @@
       </p>
 </nitrozen-bottomsheet>
   </div>
+  <div>
+    <nitrozen-heading level="h5" >Bottom navigation</nitrozen-heading>
+    <BottomNav :items="staticNavItems" />
+
+  </div>
   </div>
  
  <!-- venkatesh -->
@@ -1061,6 +1066,36 @@ export default {
   data() {
     return {
       tabArray: ["Item1", "Item2", "Item3"],
+      staticNavItems: [
+        {
+          'aria-label': 'Home',
+          href: '#',
+          icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',
+          onClick: function noRefCheck() {},
+          title: 'Home'
+        },
+        {
+          'aria-label': 'Categories',
+          href: '#',
+          icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',          onClick: function noRefCheck() {},
+          title: 'Categories'
+        },
+        {
+        'aria-label': 'Favourite',
+        href: '#',
+        icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',          onClick: function noRefCheck() {},
+        onClick: function noRefCheck(){},
+        title: 'Favourite'
+      },
+        {
+        'aria-label': 'Menu',
+        href: '#',
+        icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',          onClick: function noRefCheck() {},
+        onClick: function noRefCheck(){},
+        title: 'Menu'
+      },
+
+      ],
       multiSelect: [11,12,13,14,15,21,22,23,24,25],
       numberOfClick: 0,
       abcd: true,
