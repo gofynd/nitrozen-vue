@@ -12,7 +12,7 @@
   
 <script>
 export default {
-    name: 'BottomNav',
+    name: 'niotrozen-bottom-nav',
     props: {
         items: {
             type: Array,

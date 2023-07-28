@@ -338,7 +338,7 @@
   </div>
   <div>
     <nitrozen-heading level="h5" >Bottom navigation</nitrozen-heading>
-    <BottomNav :items="staticNavItems" />
+    <niotrozen-bottom-nav :items="staticNavItems" />
 
   </div>
   </div>
