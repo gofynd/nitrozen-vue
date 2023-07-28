@@ -71,6 +71,11 @@
           :label="'name'"
         ></nitrozen-tab>
       </div>
+      <div class="main-div space-between">
+        <nitrozen-search-box
+        :icon="'https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyndnp/wrkr/x5/products/pictures/item/free/original/bY8N9S67n-Test.png'">
+        </nitrozen-search-box>
+      </div>
       <div>
         <nitrozen-avatar
         :isClickable="true"
