@@ -67,8 +67,49 @@
         <nitrozen-tab
           @tab-change="tabChange"
           :tabItem="fruits"
+          :tabIcon="fruitsIcon"
           :label="'name'"
         ></nitrozen-tab>
+      </div>
+      <div class="main-div space-between">
+        <nitrozen-search-box
+        :icon="'https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyndnp/wrkr/x5/products/pictures/item/free/original/bY8N9S67n-Test.png'">
+        </nitrozen-search-box>
+      </div>
+      <div class="main-div space-between">
+        <nitrozen-tag
+        :kind="'filter'"
+        :label="'Test tag'"
+        :active.sync="isActive">
+
+        </nitrozen-tag>
+      </div>
+      <div>
+        <nitrozen-avatar
+        :isClickable="true"
+        :size="'large'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :size="'xlarge'"
+        :kind="'initials'"
+        :isClickable="true"
+        :initials="'anand'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :isClickable="true"
+        :size="'xxlarge'"
+        :kind="'image'"
+        :image="'https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyndnp/wrkr/x5/products/pictures/item/free/original/bY8N9S67n-Test.png'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :size="'small'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :size="'medium'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :size="'xsmall'">
+        </nitrozen-avatar>
       </div>
       <div class="main-div">
         <nitrozen-stepper
@@ -819,6 +860,7 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
       multiSelect: [11,12,13,14,15,21,22,23,24,25],
       numberOfClick: 0,
       abcd: true,
+      isActive: false,
       singleCheckboxModel: true,
       inputModel: "Some Value",
       numberModel: 1,
@@ -909,11 +951,16 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
           name: "Lemon",
         },
         {
-          name: "Lime",
+          name: "Discover",
         },
         {
           name: "Apple",
         },
+      ],
+      fruitsIcon:[
+      "https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyndnp/wrkr/x5/products/pictures/item/free/original/bY8N9S67n-Test.png",
+      "https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyndnp/wrkr/x5/products/pictures/item/free/original/bY8N9S67n-Test.png",
+      "https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyndnp/wrkr/x5/products/pictures/item/free/original/bY8N9S67n-Test.png"
       ],
       dataItems: [
         "Tess",
