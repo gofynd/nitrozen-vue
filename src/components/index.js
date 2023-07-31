@@ -18,6 +18,10 @@ import NitrozenStepper from './NStepper';
 import NitrozenToggleBtn from './NToggleBtn';
 import NitrozenTooltip from './NTooltip';
 import NitrozenCustomForm from './NCustomForm';
+import NitrozenBreadcrumbs from './NBreadcrumbs';
+import NitrozenImage from './NImage'
+import NitrozenLink from './NLink'
+import NitrozenStepitem from './NStepitem'
 
 export {
     NitrozenAutocomplete,
@@ -40,4 +44,8 @@ export {
     NitrozenToggleBtn,
     NitrozenTooltip,
     NitrozenCustomForm,
+    NitrozenBreadcrumbs,
+    NitrozenImage,
+    NitrozenLink,
+    NitrozenStepitem
 }

@@ -71,6 +71,12 @@
         ></nitrozen-tab>
       </div>
       <div class="main-div">
+        <nitrozen-stepitem stepNumber="1" title="Step 1">
+          </nitrozen-stepitem>
+          <nitrozen-stepitem stepNumber="2" title="Step 2">
+        </nitrozen-stepitem>
+      </div>
+      <div class="main-div">
         <nitrozen-stepper
           :elements="stepper.elements"
           :activeIndex="stepper.activeIndex"
@@ -374,6 +380,50 @@
           :label="'Disabled Input'"
           v-model="inputModel"
         ></nitrozen-input>
+      </div>
+      <div class="main-div">
+        <!-- Use the custom nitrozen-link component with different props -->
+        <nitrozen-link
+          :title="linkTitle"
+          :href="externalLink"
+          :newTab="true"
+          kind="rich-text"
+          :textAppearance="linkAppearance"
+          :button="null"
+          :provider="null"
+        >
+        {{ linkText }}
+        </nitrozen-link>
+      </div>
+      <div class="main-div">
+        <!-- Another nitrozen-link with internal link (using Vue Router) -->
+        <!-- Note: Since we have router-link, set href to an empty string -->
+        <nitrozen-link
+            :title="routerLinkTitle"
+            :newTab="false"
+            :href="''" 
+            kind="default"
+            :textAppearance="linkAppearance"
+            :button="null"
+            :provider="routerProvider"
+          >
+          {{ routerLinkText }}
+        </nitrozen-link>  
+      </div>
+      <div class="main-div">
+        <nitrozen-breadcrumbs :breadcrumbs="breadcrumbsData" separator=">" :labelStyle="customLabelStyle" />
+      </div>
+      <div class="main-div">
+        <nitrozen-image
+          :src="imageSrc"
+          alt="Sample Image"
+          aspectRatio="16:9"
+          roundedCorner
+          imageFocus="center"
+          @load="handleImageLoad"
+          @error="handleImageError"
+          @click="handleImageClick"
+        />
       </div>
 
       <div class="main-div">
@@ -975,6 +1025,26 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
         },
       ],
       autofocusSearch: false,
+      linkTitle: 'External Link',
+      externalLink: 'https://www.example.com', // Replace with your desired external link
+      linkText: 'Click me to open in a new tab!',
+      routerLinkTitle: 'Internal Link',
+      routerLinkText: 'Click me for an internal link!',
+      linkAppearance: 'body-md', // Replace with your desired text appearance class
+      routerProvider: {
+        to: '/some-internal-route', // Replace with the internal route you want to navigate to
+      },
+      breadcrumbsData: [
+        { label: 'Home', to: '/' },
+        { label: 'Category', to: '/category' },
+        { label: 'Subcategory', to: '/category/subcategory' },
+      ],
+      customLabelStyle: {
+        color: 'blue',
+        fontWeight: 'bold',
+        // Add more styles as needed
+      },
+      imageSrc: 'https://www.w3schools.com/html/pic_trulli.jpg',
     };
   },
   mounted() {
@@ -1088,6 +1158,18 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
     },
     tabChange(event) {
       console.log(event);
+    },
+    handleImageLoad(event) {
+      // Handle image load event
+      console.log("Image Loding....")
+    },
+    handleImageError(event) {
+      // Handle image error event
+      console.log("Image handle Error....");
+    },
+    handleImageClick(event) {
+      // Handle image click event
+      console.log("Image Click.....");
     },
   },
 };
