@@ -35,6 +35,9 @@ import NBnb from './NBnb';
 import NSlector from './NSelector';
 import NProgressBar from './NProgressBar';
 import NSpinner from './NSpinner';
+import NitrozenAvatar from './NAvatar';
+import NitrozenSearchBox from './NSearchBox'
+import NitrozenTag from './NTag';
 
 export {
     NitrozenAutocomplete,
@@ -74,4 +77,7 @@ export {
     NSlector,
     NProgressBar,
     NSpinner,
+    NitrozenAvatar,
+    NitrozenSearchBox,
+    NitrozenTag,
 }
