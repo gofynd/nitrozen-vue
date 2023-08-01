@@ -33,6 +33,8 @@ import NScrollbar from './NScrollbar';
 import NBottomsheet from './NBottomsheet';
 import NBnb from './NBnb';
 import NSlector from './NSelector';
+import NProgressBar from './NProgressBar';
+import NSpinner from './NSpinner';
 
 export {
     NitrozenAutocomplete,
@@ -69,5 +71,7 @@ export {
     NScrollbar,
     NBottomsheet,
     NBnb,
-    NSlector
+    NSlector,
+    NProgressBar,
+    NSpinner,
 }
