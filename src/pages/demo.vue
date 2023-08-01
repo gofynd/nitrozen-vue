@@ -575,6 +575,13 @@
         ></nitrozen-toggle-btn>
       </div>
 
+      
+     <!--  Selectors -->
+    <div class="main-div">
+      <nitrozen-selector :buttons="buttons"/>
+    </div>
+
+
       <!-- Input -->
       <div class="main-div">
         <nitrozen-input
@@ -587,6 +594,16 @@
         <nitrozen-error v-if="inputModel == ''"
           >Field is required</nitrozen-error
         >
+      </div>
+     
+
+
+      <div class="main-div">
+        <nitrozen-input
+          :id="2"
+          :placeholder="'Enter Name'"
+          :label="'Input with Placeholder'"
+        ></nitrozen-input>
       </div>
 
       <div class="main-div">
@@ -629,6 +646,8 @@
           v-model="inputModel"
         ></nitrozen-input>
       </div>
+
+     
 
       <div class="main-div">
         <nitrozen-input
@@ -1069,6 +1088,13 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
   },
   data() {
     return {
+      buttons: [
+      { text: 'Postpaid' },
+      { text: 'Prepaid' },
+      { text: 'JIOFiber' },
+      { text: '5G' },
+      { text: 'Plans' },
+    ],
       tabArray: ["Item1", "Item2", "Item3"],
       staticNavItems: [
         {
