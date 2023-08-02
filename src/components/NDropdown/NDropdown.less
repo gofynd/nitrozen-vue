@@ -12,6 +12,8 @@
     position: relative;
     user-select: none;
     width: 100%;
+    border: none;
+    outline: none;
   }
   .nitrozen-select {
     box-sizing: border-box;
@@ -22,14 +24,16 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    border:none;
+    outline:none;
   }
+  
   .nitrozen-select:focus-within {
     border-color: @SecondaryColor;
   }
   .nitrozen-select__trigger {
     color: @TypographyPrimaryColor;
-    border-radius: 3px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     min-height: 22px;
     padding: 8px 14px;
@@ -39,6 +43,10 @@
     justify-content: space-between;
     background: #ffffff;
     cursor: pointer;
+    border-bottom: 2px solid @ColorPrimary80;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.08px;
     span {
       overflow: hidden;
       white-space: nowrap;
@@ -46,7 +54,6 @@
     }
     input[type="search"]::-webkit-search-cancel-button {
       position: relative;
-      // right: 10px;
       font-size: @BaseFontSize + 4px;
       cursor: pointer;
     }
@@ -85,7 +92,7 @@
   .nitrozen-option {
     position: relative;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     color: @TypographyPrimaryColor;
     line-height: 22px;
     cursor: pointer;

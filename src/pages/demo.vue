@@ -78,7 +78,7 @@
           @stepperClicked="stepperClicked"
         ></nitrozen-stepper>
         <div class="stepper-btn-container">
-          <nitrozen-button  @click="stepperNext"
+          <nitrozen-button @click="stepperNext"
             >Next</nitrozen-button
           >
         </div>
@@ -802,7 +802,51 @@
         </template>
       </nitrozen-dialog>
     </div>
-  </div>
+    <div>====================================================================</div>
+      <div>NMS Buttons</div>
+      <!-- AddCart Button -->
+      <div class="main-div space-between">
+        <nitrozen-button  :rounded="true" :theme="'add'">Add</nitrozen-button>
+        <nitrozen-button  :theme="'primary'"
+        size="medium"
+          >Renew</nitrozen-button
+        >
+      </div>
+      <div class="main-div space-between">
+       <!-- <nitrozen-button  :theme="'delete'"></nitrozen-button>-->
+        <nitrozen-inline
+              :icon="'delete'"
+              class="nitrozen-icon"
+            ></nitrozen-inline>
+      </div>
+      <div class="main-div space-between">
+        <nitrozen-dropdown
+            label="Please Select"
+            :items="dropdownItems"
+            v-model="selectedDropdown"
+            :required="true"
+          ></nitrozen-dropdown>
+      </div>    
+
+      <div class="main-div">
+        <nitrozen-progressbar 
+          :progress="'60'" 
+          :inital_value="'0'" 
+          :fixed_value="'600'" 
+          :final_value="'1000'">
+        </nitrozen-progressbar>
+      </div>
+
+      <div class="main-div ">
+        Small: <nitrozen-spinner size="small"
+          ></nitrozen-spinner>
+        Medium: <nitrozen-spinner size="medium"
+          ></nitrozen-spinner>
+        Large: <nitrozen-spinner size="large"
+        ></nitrozen-spinner>    
+      </div>
+    </div> 
+   
 </template>
 
 <script>
@@ -826,23 +870,20 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
       checkArray: ["Check 1"],
       radioModel: "1",
       dropdownItems: [
+       
         {
           text: "Maharashtra",
           value: 1,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
         },
         {
           text: "Andhra Pradesh",
           value: 2,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+           
         },
         {
           text: "West Bengal",
           value: 3,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+          
         },
       ],
       dropdownItemsGroup: [
