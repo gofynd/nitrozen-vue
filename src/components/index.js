@@ -20,6 +20,9 @@ import NitrozenTooltip from './NTooltip';
 import NitrozenCustomForm from './NCustomForm';
 import NitrozenProgressBar from './NProgressBar';
 import NitrozenSpinner from './NSpinner';
+import NitrozenAvatar from './NAvatar';
+import NitrozenSearchBox from './NSearchBox'
+import NitrozenTag from './NTag';
 
 export {
     NitrozenAutocomplete,
@@ -44,4 +47,7 @@ export {
     NitrozenCustomForm,
     NitrozenProgressBar,
     NitrozenSpinner,
+    NitrozenAvatar,
+    NitrozenSearchBox,
+    NitrozenTag,
 }
