@@ -261,7 +261,7 @@
    <nitrozen-heading level="h5" >Toast</nitrozen-heading>
    <div>
 
-    <nitrozen-button v-flat-btn @click="showToastNotification">Show Toast Notification</nitrozen-button>
+    <nitrozen-button @click="showToastNotification">Show Toast Notification</nitrozen-button>
 
       <nitrozen-toaster
       :showToast="showToast"
@@ -281,7 +281,7 @@
 
 <div>
   <nitrozen-heading level="h5" >Nudge</nitrozen-heading>
-  <nitrozen-button v-flat-btn @click="showNudgeNotification">Show Nudge Notification</nitrozen-button>
+  <nitrozen-button @click="showNudgeNotification">Show Nudge Notification</nitrozen-button>
       <nitrozen-nudge
       :showNudge="showNudge"
       :title="notificationMessage"
@@ -300,7 +300,7 @@
     <div>
     <nitrozen-heading level="h5" >SidePanel</nitrozen-heading>
     <div class="hover-new">
-    <nitrozen-button v-flat-btn @click="showPanel">Show Side Panel</nitrozen-button>
+    <nitrozen-button @click="showPanel">Show Side Panel</nitrozen-button>
         </div>
     <!-- Use the SidePanel component with its props -->
     <nitrozen-sidepanel
@@ -357,7 +357,7 @@
     <nitrozen-heading level="h5" >BottomSheet</nitrozen-heading>
    <!-- Button to open the BottomSheet -->
    <div class="hover-new">
-    <nitrozen-button v-flat-btn @click="openBottomSheet">Open Bottom Sheet</nitrozen-button>
+    <nitrozen-button @click="openBottomSheet">Open Bottom Sheet</nitrozen-button>
         </div>
 
 <!-- Use the BottomSheet component -->
