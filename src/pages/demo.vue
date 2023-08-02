@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <div class="main-div">
-     
       <div class="main-div space-between">
         <div>Searchable Dropdown</div>
         <nitrozen-dropdown
@@ -338,7 +337,7 @@
   </div>
   <div>
     <nitrozen-heading level="h5" >Bottom navigation</nitrozen-heading>
-    <niotrozen-bottom-nav :items="staticNavItems" />
+    <nitrozen-bottom-nav :items="staticNavItems" />
 
   </div>
   </div>
@@ -1479,5 +1478,4 @@ body {
     background-color: green;
   }
 }
-
 </style>
