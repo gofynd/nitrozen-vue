@@ -3,9 +3,9 @@
     <h2 v-if="title">{{ title }}</h2>
     <ul :class="`jds-listblock-${spacing}`" :style="{ alignItems: verticalAlignment }">
       <li v-for="(item, index) in items" :key="index">
-        <span class="listblock-prefix"><nitrozen-icon v-if="prefix" :name="prefix" size="24"></nitrozen-icon></span>
+        <span class="listblock-prefix"><nitrozen-icon v-if="prefix" :name="prefix" ></nitrozen-icon></span>
         <span class="listblock-content">{{ item }}</span>
-        <span class="listblock-suffix"><nitrozen-icon v-if="suffix" :name="suffix" size="24" ></nitrozen-icon></span>
+        <span class="listblock-suffix"><nitrozen-icon v-if="suffix" :name="suffix" ></nitrozen-icon></span>
       </li>
     </ul>
   </div>

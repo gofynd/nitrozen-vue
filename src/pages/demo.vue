@@ -226,8 +226,8 @@
     primaryButtonLabel="CTA 1"
     :showSecondaryButton="true"
     secondaryButtonLabel="CTA 2"
-    @onClickPrimary="handlePrimaryAction"
-    @onClickSecondary="handleSecondaryAction"
+    @onClickPrimary="onClickPrimary"
+    @onClickSecondary="onClickSecondary"
     />
     
     <br/>
@@ -245,8 +245,8 @@
     primaryButtonLabel="CTA 1"
     :showSecondaryButton="true"
     secondaryButtonLabel="CTA 2"
-    @onClickPrimary="handlePrimaryAction"
-    @onClickSecondary="handleSecondaryAction"
+    @onClickPrimary="onClickPrimary"
+    @onClickSecondary="onClickSecondary"
     />
 </div>
 
