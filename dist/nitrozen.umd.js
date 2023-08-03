@@ -1003,7 +1003,7 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /***/ }),
 
-/***/ 9651:
+/***/ 6997:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1017,7 +1017,7 @@ __webpack_require__.d(__webpack_exports__, {
 var constants_namespaceObject = {};
 __webpack_require__.r(constants_namespaceObject);
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=template&id=20cacc4d&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=template&id=250f1db0&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1065,12 +1065,14 @@ var render = function render() {
     class: {
       'nitrozen-search-input-padding': _vm.showSearchIcon || _vm.showPrefix,
       'nitrozen-search-input-right-padding': _vm.showSuffix,
-      'n-success-border': this.validationState == 'success',
-      'n-error-border': this.validationState == 'error',
-      'n-warning-border': this.validationState == 'warning',
       'n-input': true,
       'input-text': true,
-      'n-input-default-border': !['success', 'error', 'warning'].includes(this.validationState)
+      'n-success': this.validationState == 'success',
+      'n-error-border': this.validationState == 'error',
+      'n-warning-border': this.validationState == 'warning'
+      /*  'n-input-default-border': !['success', 'error', 'warning'].includes(
+          this.validationState
+        ), */
     },
     attrs: {
       "min": _vm.min,
@@ -1114,8 +1116,10 @@ var render = function render() {
       'n-error-border': this.validationState == 'error',
       'n-warning-border': this.validationState == 'warning',
       'n-input': true,
-      'input-text': true,
-      'n-input-default-border': !['success', 'error', 'warning'].includes(this.validationState)
+      'input-text': true
+      /*   'n-input-default-border': !['success', 'error', 'warning'].includes(
+          this.validationState
+        ), */
     },
     attrs: {
       "maxlength": _vm.maxlength,
@@ -1408,10 +1412,10 @@ var constants = {
 });
 ;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=script&lang=js&
  /* harmony default export */ var NInput_NInputvue_type_script_lang_js_ = (NInputvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=style&index=0&id=20cacc4d&prod&lang=less&
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=style&index=0&id=250f1db0&prod&lang=less&
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=style&index=0&id=20cacc4d&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=style&index=0&id=250f1db0&prod&lang=less&
 
 ;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue
 
@@ -2755,7 +2759,7 @@ var component = (0,componentNormalizer/* default */.Z)(
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _NInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9651);
+/* harmony import */ var _NInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6997);
 
 // import NInputPrefix from './NInputPrefix.vue';
 // import NInputSuffix from './NInputSuffix.vue';
@@ -13164,6 +13168,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
+  "NSlector": function() { return /* reexport */ components_NSelector; },
   "NitrozenAutocomplete": function() { return /* reexport */ components_NAutocomplete; },
   "NitrozenAvatar": function() { return /* reexport */ components_NAvatar; },
   "NitrozenBadge": function() { return /* reexport */ components_NBadge; },
@@ -13252,7 +13257,7 @@ var render = function render() {
 var staticRenderFns = [];
 
 // EXTERNAL MODULE: ./src/components/NInput/NInput.vue + 14 modules
-var NInput = __webpack_require__(9651);
+var NInput = __webpack_require__(6997);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NAutocomplete/NAutocomplete.vue?vue&type=script&lang=js&
 
 
@@ -15435,7 +15440,96 @@ var NTag_component = (0,componentNormalizer/* default */.Z)(
 ;// CONCATENATED MODULE: ./src/components/NTag/index.js
 
 /* harmony default export */ var components_NTag = (NTag);
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NSelector/NSelector.vue?vue&type=template&id=057d31fa&
+var NSelectorvue_type_template_id_057d31fa_render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', {
+    staticClass: "button-group-container"
+  }, [_c('div', {
+    staticClass: "radio-group"
+  }, _vm._l(_vm.buttons, function (button, index) {
+    return _c('label', {
+      key: index,
+      class: {
+        'radio-button': true,
+        'selected': _vm.selectedIndex === index
+      },
+      attrs: {
+        "for": 'radio-' + index
+      }
+    }, [_c('input', {
+      attrs: {
+        "type": "radio",
+        "id": 'radio-' + index
+      },
+      domProps: {
+        "value": index
+      },
+      on: {
+        "change": function change($event) {
+          return _vm.selectButton(index);
+        }
+      }
+    }), _vm._v(" " + _vm._s(button.text) + " ")]);
+  }), 0)]);
+};
+var NSelectorvue_type_template_id_057d31fa_staticRenderFns = [];
+
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NSelector/NSelector.vue?vue&type=script&lang=js&
+/* harmony default export */ var NSelectorvue_type_script_lang_js_ = ({
+  name: 'nitrozen-selector',
+  props: ['buttons'],
+  components: {},
+  data: function data() {
+    return {
+      //Default selector
+      selectedIndex: 1
+    };
+  },
+  methods: {
+    selectButton: function selectButton(index) {
+      if (this.selectedIndex === index) {
+        this.selectedIndex = null; // Deselect the button if it's already selected
+      } else {
+        this.selectedIndex = index; // Otherwise, set the selected button index
+      }
+    }
+  }
+});
+;// CONCATENATED MODULE: ./src/components/NSelector/NSelector.vue?vue&type=script&lang=js&
+ /* harmony default export */ var NSelector_NSelectorvue_type_script_lang_js_ = (NSelectorvue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NSelector/NSelector.vue?vue&type=style&index=0&id=057d31fa&prod&lang=less&
+// extracted by mini-css-extract-plugin
+
+;// CONCATENATED MODULE: ./src/components/NSelector/NSelector.vue?vue&type=style&index=0&id=057d31fa&prod&lang=less&
+
+;// CONCATENATED MODULE: ./src/components/NSelector/NSelector.vue
+
+
+
+;
+
+
+/* normalize component */
+
+var NSelector_component = (0,componentNormalizer/* default */.Z)(
+  NSelector_NSelectorvue_type_script_lang_js_,
+  NSelectorvue_type_template_id_057d31fa_render,
+  NSelectorvue_type_template_id_057d31fa_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var NSelector = (NSelector_component.exports);
+;// CONCATENATED MODULE: ./src/components/NSelector/index.js
+
+/* harmony default export */ var components_NSelector = (NSelector);
 ;// CONCATENATED MODULE: ./src/components/index.js
+
 
 
 
