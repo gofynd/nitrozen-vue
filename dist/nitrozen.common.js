@@ -674,7 +674,7 @@ var NToggleBtn = __webpack_require__(3641);
 // EXTERNAL MODULE: ./src/components/NCheckbox/index.js + 6 modules
 var NCheckbox = __webpack_require__(5277);
 // EXTERNAL MODULE: ./src/components/NRadio/index.js + 6 modules
-var NRadio = __webpack_require__(1897);
+var NRadio = __webpack_require__(5348);
 // EXTERNAL MODULE: ./src/components/NDropdown/index.js + 6 modules
 var NDropdown = __webpack_require__(9765);
 // EXTERNAL MODULE: ./src/components/NInput/index.js
@@ -2764,7 +2764,7 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /***/ }),
 
-/***/ 1897:
+/***/ 5348:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2774,7 +2774,7 @@ __webpack_require__.d(__webpack_exports__, {
   "Z": function() { return /* binding */ components_NRadio; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=template&id=7f2f21c5&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=template&id=35a5d2a9&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -2799,9 +2799,6 @@ var render = function render() {
       "value": _vm.radioValue
     },
     on: {
-      "input": function input($event) {
-        return _vm.changeEvent($event, 'input');
-      },
       "change": function change($event) {
         return _vm.changeEvent($event, 'change');
       }
@@ -2897,10 +2894,10 @@ var NUuid = __webpack_require__(3934);
 });
 ;// CONCATENATED MODULE: ./src/components/NRadio/NRadio.vue?vue&type=script&lang=js&
  /* harmony default export */ var NRadio_NRadiovue_type_script_lang_js_ = (NRadiovue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=style&index=0&id=7f2f21c5&prod&lang=less&
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=style&index=0&id=35a5d2a9&prod&lang=less&
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NRadio/NRadio.vue?vue&type=style&index=0&id=7f2f21c5&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NRadio/NRadio.vue?vue&type=style&index=0&id=35a5d2a9&prod&lang=less&
 
 // EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(1001);
@@ -14713,7 +14710,7 @@ var NPagination_component = (0,componentNormalizer/* default */.Z)(
 
 /* harmony default export */ var components_NPagination = (NPagination);
 // EXTERNAL MODULE: ./src/components/NRadio/index.js + 6 modules
-var NRadio = __webpack_require__(1897);
+var NRadio = __webpack_require__(5348);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NStepper/NStepper.vue?vue&type=template&id=2023bb58&
 var NSteppervue_type_template_id_2023bb58_render = function render() {
   var _vm = this,
