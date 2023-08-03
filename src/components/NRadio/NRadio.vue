@@ -7,7 +7,6 @@
       class="n-radio-input"
       :id="id"
       type="radio"
-      @input="changeEvent($event, 'input')"
       @change="changeEvent($event, 'change')"
       :checked="value === radioValue"
       :value="radioValue"
