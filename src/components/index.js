@@ -24,6 +24,10 @@ import NitrozenAvatar from './NAvatar';
 import NitrozenSearchBox from './NSearchBox'
 import NitrozenTag from './NTag';
 import NSlector from './NSelector';
+import NitrozenBreadcrumbs from './NBreadcrumbs';
+import NitrozenImage from './NImage'
+import NitrozenLink from './NLink'
+import NitrozenStepitem from './NStepitem'
 
 export {
     NitrozenAutocomplete,
@@ -52,4 +56,8 @@ export {
     NitrozenSearchBox,
     NitrozenTag,
     NSlector,
+    NitrozenBreadcrumbs,
+    NitrozenImage,
+    NitrozenLink,
+    NitrozenStepitem
 }
