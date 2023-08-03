@@ -23,6 +23,7 @@ import NitrozenSpinner from './NSpinner';
 import NitrozenAvatar from './NAvatar';
 import NitrozenSearchBox from './NSearchBox'
 import NitrozenTag from './NTag';
+import NSlector from './NSelector';
 
 export {
     NitrozenAutocomplete,
@@ -50,4 +51,5 @@ export {
     NitrozenAvatar,
     NitrozenSearchBox,
     NitrozenTag,
+    NSlector,
 }
