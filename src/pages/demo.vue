@@ -321,7 +321,6 @@
   </nitrozen-bottomsheet>
     </div>
     <div>
-      <nitrozen-heading level="h5" >Bottom navigation</nitrozen-heading>
       <niotrozen-bottom-nav :items="staticNavItems" />
 
     </div>
@@ -1536,6 +1535,9 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
     },
     openBottomSheet() {
       this.$refs.bottomSheet.open();
+    },
+    handleHeaderPrefixClick() {
+      // Handle the header prefix click event here
     },
   },
 };
