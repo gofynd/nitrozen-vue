@@ -9,9 +9,9 @@
   
       <template v-else>
         <!-- Internal link using Vue Router's router-link component or a regular anchor tag based on provider prop -->
-        <router-link v-if="provider" :to="provider.to" :title="title" :class="kindClass">
+        <a v-if="provider" :href="href" :to="provider.to" :title="title" :class="kindClass">
           <slot></slot>
-        </router-link>
+        </a>
         <a v-else :href="href" @click="handleClick" :title="title" :class="kindClass">
           <slot></slot>
         </a>
