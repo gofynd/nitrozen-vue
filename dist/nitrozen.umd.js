@@ -3914,6 +3914,22 @@ module.exports=function(e){function t(i){if(n[i])return n[i].exports;var a=n[i]=
 
 /***/ }),
 
+/***/ 7485:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/arrow-left.9244b393.svg";
+
+/***/ }),
+
+/***/ 6191:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/arrow-right.2b61a551.svg";
+
+/***/ }),
+
 /***/ 3995:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
@@ -13182,12 +13198,14 @@ __webpack_require__.d(__webpack_exports__, {
   "NitrozenAutocomplete": function() { return /* reexport */ components_NAutocomplete; },
   "NitrozenBadge": function() { return /* reexport */ components_NBadge; },
   "NitrozenButton": function() { return /* reexport */ NBtn/* default */.Z; },
+  "NitrozenCarousel": function() { return /* reexport */ components_NCarousel; },
   "NitrozenCheckBox": function() { return /* reexport */ NCheckbox/* default */.Z; },
   "NitrozenChips": function() { return /* reexport */ components_NChips; },
   "NitrozenCustomForm": function() { return /* reexport */ components_NCustomForm; },
   "NitrozenDialog": function() { return /* reexport */ components_NDialog; },
   "NitrozenDropdown": function() { return /* reexport */ NDropdown/* default */.Z; },
   "NitrozenError": function() { return /* reexport */ NError/* default */.Z; },
+  "NitrozenFooter": function() { return /* reexport */ components_NFooter; },
   "NitrozenInline": function() { return /* reexport */ NInline/* default */.Z; },
   "NitrozenInput": function() { return /* reexport */ components_NInput/* default */.Z; },
   "NitrozenMenu": function() { return /* reexport */ components_NMenu; },
@@ -14830,7 +14848,343 @@ var NCustomForm = __webpack_require__(3036);
 ;// CONCATENATED MODULE: ./src/components/NCustomForm/index.js
 
 /* harmony default export */ var components_NCustomForm = (NCustomForm["default"]);
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NFooter/NFooter.vue?vue&type=template&id=7030070e&scoped=true&
+var NFootervue_type_template_id_7030070e_scoped_true_render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', [_c('div', {
+    staticClass: "d-footer jm-mt-huge"
+  }, [_c('div', {
+    staticClass: "row d-footer-container"
+  }, [_c('div', {
+    staticClass: "col-lg-8"
+  }, [_c('div', {
+    staticClass: "row"
+  }, _vm._l(_vm.getDesktopFooterNav, function (navItem, index) {
+    return _c('div', {
+      key: index,
+      staticClass: "col-lg-4 jm-pa-xs jm-body-s jm-fc-primary-gray-80 d-footer-nav-links",
+      on: {
+        "click": function click($event) {
+          return _vm.emitFooterEvent(navItem.display);
+        }
+      }
+    }, [_c('a', {
+      attrs: {
+        "href": "navItem.link"
+      }
+    }, [_vm._v(" " + _vm._s(navItem.display) + " ")])]);
+  }), 0)]), _c('div', {
+    staticClass: "col-lg-4"
+  }, [_c('div', {
+    staticClass: "jm-heading-xxs jm-pb-base"
+  }, [_vm._v("Connect with us")]), _c('div', _vm._l(_vm.getSocialLinks, function (socialItem, index) {
+    return _c('a', {
+      key: index,
+      staticClass: "jm-mr-base",
+      attrs: {
+        "href": "socialItem.link"
+      }
+    }, [_c('img', {
+      staticClass: "three-p-logo",
+      attrs: {
+        "src": socialItem.icon,
+        "alt": socialItem.title
+      }
+    })]);
+  }), 0), _c('div', {
+    staticClass: "jm-heading-xxs jm-pb-base jm-mt-l"
+  }, [_vm._v("Download the app")]), _vm._m(0)])])])]);
+};
+var NFootervue_type_template_id_7030070e_scoped_true_staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', [_c('a', {
+    staticClass: "jm-mr-base",
+    attrs: {
+      "link": "https://play.google.com/store/apps"
+    }
+  }, [_c('img', {
+    staticClass: "three-p-logo",
+    attrs: {
+      "src": "https://hdn-1.jiox0.de/jiox2/company/2/applications/61c050db47047572f4a55559/theme/pictures/free/original/theme-image-1641989250072.png",
+      "alt": ""
+    }
+  })]), _c('a', {
+    staticClass: "jm-mr-base",
+    attrs: {
+      "link": "https://www.apple.com/app-store/"
+    }
+  }, [_c('img', {
+    staticClass: "three-p-logo",
+    attrs: {
+      "src": "https://hdn-1.jiox0.de/jiox2/company/2/applications/61c050db47047572f4a55559/theme/pictures/free/original/theme-image-1641989250075.png",
+      "alt": ""
+    }
+  })])]);
+}];
+
+;// CONCATENATED MODULE: ./src/components/NFooter/NFooter.vue?vue&type=template&id=7030070e&scoped=true&
+
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NFooter/NFooter.vue?vue&type=script&lang=js&
+/* harmony default export */ var NFootervue_type_script_lang_js_ = ({
+  name: "nitrozen-footer",
+  data: function data() {
+    return {
+      marketplace: {
+        stores: [{
+          ariaLabel: 'Google Play Store',
+          //   badgeAsset: <img alt="Alt Text" src="images/play-store.png"/>,
+          href: '#',
+          newTab: true,
+          title: 'play-store'
+        }, {
+          ariaLabel: 'Apple App Store',
+          //   badgeAsset: <img alt="Alt Text" src="images/app-store.png"/>,
+          href: '#',
+          newTab: true,
+          title: 'app-store'
+        }],
+        title: 'Download Our App'
+      },
+      getDesktopFooterNav: [{
+        display: "Hello",
+        link: "yes"
+      }, {
+        display: "Hi",
+        link: ""
+      }, {
+        display: "Bye",
+        link: ""
+      }],
+      getSocialLinks: [{
+        href: '#',
+        icon: "https://cdn-icons-png.flaticon.com/128/2111/2111463.png",
+        newTab: true,
+        title: 'IcFavorite'
+      }, {
+        href: '#',
+        icon: "https://cdn-icons-png.flaticon.com/128/4494/4494475.png",
+        newTab: true,
+        title: 'IcFilter'
+      }, {
+        href: '#',
+        icon: "https://cdn-icons-png.flaticon.com/128/4494/4494477.png",
+        newTab: true,
+        title: 'IcCamera'
+      }]
+    };
+  },
+  methods: {
+    // click event callback to emitevents
+    emitFooterEvent: function emitFooterEvent(footerLink) {
+      var eventData = {
+        value: footerLink
+      };
+      //   emitFooterClick(eventData);
+    }
+  }
+});
+;// CONCATENATED MODULE: ./src/components/NFooter/NFooter.vue?vue&type=script&lang=js&
+ /* harmony default export */ var NFooter_NFootervue_type_script_lang_js_ = (NFootervue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NFooter/NFooter.vue?vue&type=style&index=0&id=7030070e&prod&lang=less&scoped=true&
+// extracted by mini-css-extract-plugin
+
+;// CONCATENATED MODULE: ./src/components/NFooter/NFooter.vue?vue&type=style&index=0&id=7030070e&prod&lang=less&scoped=true&
+
+;// CONCATENATED MODULE: ./src/components/NFooter/NFooter.vue
+
+
+
+;
+
+
+/* normalize component */
+
+var NFooter_component = (0,componentNormalizer/* default */.Z)(
+  NFooter_NFootervue_type_script_lang_js_,
+  NFootervue_type_template_id_7030070e_scoped_true_render,
+  NFootervue_type_template_id_7030070e_scoped_true_staticRenderFns,
+  false,
+  null,
+  "7030070e",
+  null
+  
+)
+
+/* harmony default export */ var NFooter = (NFooter_component.exports);
+;// CONCATENATED MODULE: ./src/components/NFooter/index.js
+
+/* harmony default export */ var components_NFooter = (NFooter);
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCarousel/NCarousel.vue?vue&type=template&id=2675e634&scoped=true&
+var NCarouselvue_type_template_id_2675e634_scoped_true_render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', {
+    staticClass: "carousel"
+  }, [_vm.items.length > 4 ? _c('div', {
+    staticClass: "prev-btn btn",
+    on: {
+      "click": _vm.previousClicked
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": __webpack_require__(7485),
+      "alt": "Previous"
+    }
+  })]) : _vm._e(), _c('div', {
+    ref: "itemwrapper",
+    staticClass: "item-wrapper"
+  }, [_vm._t("default")], 2), _vm.items.length > 4 ? _c('div', {
+    staticClass: "next-btn btn",
+    on: {
+      "click": _vm.nextClicked
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": __webpack_require__(6191),
+      "alt": "Next"
+    }
+  })]) : _vm._e()]);
+};
+var NCarouselvue_type_template_id_2675e634_scoped_true_staticRenderFns = [];
+
+;// CONCATENATED MODULE: ./src/components/NCarousel/NCarousel.vue?vue&type=template&id=2675e634&scoped=true&
+
+;// CONCATENATED MODULE: ./src/animate.js
+/**
+ * @param callbackObj Object An object with callbacks in .start, .progress, and .done
+ * @param duration Integer Total duration in seconds
+ */
+var animate = function animate(callbackObj, duration) {
+  var requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame;
+  var startTime = 0,
+    percentage = 0,
+    animationTime = 0;
+  duration = duration * 1000 || 1000;
+  var animation = function animation(timestamp) {
+    if (startTime === 0) {
+      startTime = timestamp;
+    } else {
+      animationTime = timestamp - startTime;
+    }
+    if (typeof callbackObj.start === 'function' && startTime === timestamp) {
+      callbackObj.start();
+      requestAnimationFrame(animation);
+    } else if (animationTime < duration) {
+      if (typeof callbackObj.progress === 'function') {
+        percentage = animationTime / duration;
+        callbackObj.progress(percentage);
+      }
+      requestAnimationFrame(animation);
+    } else if (typeof callbackObj.done === 'function') {
+      callbackObj.done();
+    }
+  };
+  return requestAnimationFrame(animation);
+};
+var easeInOutQuad = function easeInOutQuad(t) {
+  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+};
+var scrollToTop = function scrollToTop(scrollDuration) {
+  var scrollStep = -window.scrollY / (scrollDuration / 15),
+    scrollInterval = setInterval(function () {
+      if (window.scrollY !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else clearInterval(scrollInterval);
+    }, 15);
+};
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCarousel/NCarousel.vue?vue&type=script&lang=js&
+
+/* harmony default export */ var NCarouselvue_type_script_lang_js_ = ({
+  name: "nitrozen-carousel",
+  components: {},
+  props: {
+    items: {
+      type: Array
+    }
+  },
+  methods: {
+    previousClicked: function previousClicked(event) {
+      this.moveCarousel("LEFT");
+    },
+    nextClicked: function nextClicked(event) {
+      this.moveCarousel("RIGHT");
+    },
+    moveCarousel: function moveCarousel(direction) {
+      var itemsLength = this.items.length;
+      var totalWidth = this.$refs["itemwrapper"].scrollWidth;
+      var singleItemScroll = totalWidth / itemsLength;
+      var currentLeft = this.$refs["itemwrapper"].scrollLeft;
+      var tobeScroll = singleItemScroll;
+      switch (direction) {
+        case "LEFT":
+          {
+            if (currentLeft - singleItemScroll < 0) {
+              tobeScroll = currentLeft;
+            }
+            this.sideScroll(-tobeScroll);
+            break;
+          }
+        case "RIGHT":
+          {
+            if (currentLeft + singleItemScroll > totalWidth) {
+              tobeScroll = totalWidth - currentLeft;
+            }
+            this.sideScroll(tobeScroll);
+            break;
+          }
+      }
+    },
+    sideScroll: function sideScroll(rangeInPixels) {
+      var element = this.$refs["itemwrapper"];
+      if (element) {
+        var sequenceObj = {};
+        var seconds = 0.8;
+        var startingScrollPosition = element.scrollLeft;
+        sequenceObj.progress = function (percentage) {
+          element.scroll(startingScrollPosition + easeInOutQuad(percentage) * rangeInPixels, 0);
+        };
+        animate(sequenceObj, seconds);
+      }
+    }
+  },
+  mounted: function mounted() {}
+});
+;// CONCATENATED MODULE: ./src/components/NCarousel/NCarousel.vue?vue&type=script&lang=js&
+ /* harmony default export */ var NCarousel_NCarouselvue_type_script_lang_js_ = (NCarouselvue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCarousel/NCarousel.vue?vue&type=style&index=0&id=2675e634&prod&lang=less&scoped=true&
+// extracted by mini-css-extract-plugin
+
+;// CONCATENATED MODULE: ./src/components/NCarousel/NCarousel.vue?vue&type=style&index=0&id=2675e634&prod&lang=less&scoped=true&
+
+;// CONCATENATED MODULE: ./src/components/NCarousel/NCarousel.vue
+
+
+
+;
+
+
+/* normalize component */
+
+var NCarousel_component = (0,componentNormalizer/* default */.Z)(
+  NCarousel_NCarouselvue_type_script_lang_js_,
+  NCarouselvue_type_template_id_2675e634_scoped_true_render,
+  NCarouselvue_type_template_id_2675e634_scoped_true_staticRenderFns,
+  false,
+  null,
+  "2675e634",
+  null
+  
+)
+
+/* harmony default export */ var NCarousel = (NCarousel_component.exports);
+;// CONCATENATED MODULE: ./src/components/NCarousel/index.js
+
+/* harmony default export */ var components_NCarousel = (NCarousel);
 ;// CONCATENATED MODULE: ./src/components/index.js
+
+
 
 
 
