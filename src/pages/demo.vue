@@ -67,8 +67,55 @@
         <nitrozen-tab
           @tab-change="tabChange"
           :tabItem="fruits"
+          :tabIcon="fruitsIcon"
           :label="'name'"
         ></nitrozen-tab>
+      </div>
+      <div class="main-div space-between">
+        <nitrozen-search-box
+        :icon="'https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyndnp/wrkr/x5/products/pictures/item/free/original/bY8N9S67n-Test.png'">
+        </nitrozen-search-box>
+      </div>
+      <div class="main-div space-between">
+        <nitrozen-tag
+        :kind="'filter'"
+        :label="'Test tag'"
+        :active.sync="isActive">
+
+        </nitrozen-tag>
+      </div>
+      <div>
+        <nitrozen-avatar
+        :isClickable="true"
+        :size="'large'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :size="'xlarge'"
+        :kind="'initials'"
+        :isClickable="true"
+        :initials="'anand'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :isClickable="true"
+        :size="'xxlarge'"
+        :kind="'image'"
+        :image="'https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyndnp/wrkr/x5/products/pictures/item/free/original/bY8N9S67n-Test.png'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :size="'small'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :size="'medium'">
+        </nitrozen-avatar>
+        <nitrozen-avatar
+        :size="'xsmall'">
+        </nitrozen-avatar>
+      </div>
+      <div class="main-div">
+        <nitrozen-stepitem stepNumber="1" title="Step 1">
+          </nitrozen-stepitem>
+          <nitrozen-stepitem stepNumber="2" title="Step 2">
+        </nitrozen-stepitem>
       </div>
       <div class="main-div">
         <nitrozen-stepper
@@ -321,6 +368,13 @@
         ></nitrozen-toggle-btn>
       </div>
 
+      
+     <!--  Selectors -->
+    <div class="main-div">
+      <nitrozen-selector :buttons="buttons"/>
+    </div>
+
+
       <!-- Input -->
       <div class="main-div">
         <nitrozen-input
@@ -330,9 +384,16 @@
           :required="true"
           :label="'Input with Error Message'"
         ></nitrozen-input>
-        <nitrozen-error v-if="inputModel == ''"
-          >Field is required</nitrozen-error
-        >
+      </div>
+     
+
+
+      <div class="main-div">
+        <nitrozen-input
+          :id="2"
+          :placeholder="'Enter Name'"
+          :label="'Input with Placeholder'"
+        ></nitrozen-input>
       </div>
 
       <div class="main-div">
@@ -375,6 +436,52 @@
           v-model="inputModel"
         ></nitrozen-input>
       </div>
+      <div class="main-div">
+        <!-- Use the custom nitrozen-link component with different props -->
+        <nitrozen-link
+          :title="linkTitle"
+          :href="externalLink"
+          :newTab="true"
+          kind="rich-text"
+          :textAppearance="linkAppearance"
+          :button="null"
+          :provider="null"
+        >
+        {{ linkText }}
+        </nitrozen-link>
+      </div>
+      <div class="main-div">
+        <!-- Another nitrozen-link with internal link (using Vue Router) -->
+        <!-- Note: Since we have router-link, set href to an empty string -->
+        <nitrozen-link
+            :title="routerLinkTitle"
+            :newTab="false"
+            :href="''" 
+            kind="default"
+            :textAppearance="linkAppearance"
+            :button="null"
+            :provider="routerProvider"
+          >
+          {{ routerLinkText }}
+        </nitrozen-link>  
+      </div>
+      <div class="main-div">
+        <nitrozen-breadcrumbs :breadcrumbs="breadcrumbsData" separator=">" :labelStyle="customLabelStyle" />
+      </div>
+      <div class="main-div">
+        <nitrozen-image
+          :src="imageSrc"
+          alt="Sample Image"
+          aspectRatio="16:9"
+          roundedCorner
+          imageFocus="center"
+          @load="handleImageLoad"
+          @error="handleImageError"
+          @click="handleImageClick"
+        />
+      </div>
+
+     
 
       <div class="main-div">
         <nitrozen-input
@@ -802,7 +909,51 @@
         </template>
       </nitrozen-dialog>
     </div>
-  </div>
+    <div>====================================================================</div>
+      <div>NMS Buttons</div>
+      <!-- AddCart Button -->
+      <div class="main-div space-between">
+        <nitrozen-button  :rounded="true" :theme="'add'">Add</nitrozen-button>
+        <nitrozen-button  :theme="'primary'"
+        size="medium"
+          >Renew</nitrozen-button
+        >
+      </div>
+      <div class="main-div space-between">
+       <!-- <nitrozen-button  :theme="'delete'"></nitrozen-button>-->
+        <nitrozen-inline
+              :icon="'delete'"
+              class="nitrozen-icon"
+            ></nitrozen-inline>
+      </div>
+      <div class="main-div space-between">
+        <nitrozen-dropdown
+            label="Please Select"
+            :items="dropdownItems"
+            v-model="selectedDropdown"
+            :required="true"
+          ></nitrozen-dropdown>
+      </div>    
+
+      <div class="main-div">
+        <nitrozen-progressbar 
+          :progress="'60'" 
+          :inital_value="'0'" 
+          :fixed_value="'600'" 
+          :final_value="'1000'">
+        </nitrozen-progressbar>
+      </div>
+
+      <div class="main-div ">
+        Small: <nitrozen-spinner size="small"
+          ></nitrozen-spinner>
+        Medium: <nitrozen-spinner size="medium"
+          ></nitrozen-spinner>
+        Large: <nitrozen-spinner size="large"
+        ></nitrozen-spinner>    
+      </div>
+    </div> 
+   
 </template>
 
 <script>
@@ -815,10 +966,18 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
   },
   data() {
     return {
+      buttons: [
+      { text: 'Postpaid' },
+      { text: 'Prepaid' },
+      { text: 'JIOFiber' },
+      { text: '5G' },
+      { text: 'Plans' },
+    ],
       tabArray: ["Item1", "Item2", "Item3"],
       multiSelect: [11,12,13,14,15,21,22,23,24,25],
       numberOfClick: 0,
       abcd: true,
+      isActive: false,
       singleCheckboxModel: true,
       inputModel: "Some Value",
       numberModel: 1,
@@ -826,23 +985,20 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
       checkArray: ["Check 1"],
       radioModel: "1",
       dropdownItems: [
+       
         {
           text: "Maharashtra",
           value: 1,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
         },
         {
           text: "Andhra Pradesh",
           value: 2,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+           
         },
         {
           text: "West Bengal",
           value: 3,
-          logo:
-            "https://hdn-1.jiox0.de/jioecomm/seller/pictures/logo/original/gionee-56405d/Gionee_Logo_20190919.jpg",
+          
         },
       ],
       dropdownItemsGroup: [
@@ -909,11 +1065,16 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
           name: "Lemon",
         },
         {
-          name: "Lime",
+          name: "Discover",
         },
         {
           name: "Apple",
         },
+      ],
+      fruitsIcon:[
+      "https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyndnp/wrkr/x5/products/pictures/item/free/original/bY8N9S67n-Test.png",
+      "https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyndnp/wrkr/x5/products/pictures/item/free/original/bY8N9S67n-Test.png",
+      "https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyndnp/wrkr/x5/products/pictures/item/free/original/bY8N9S67n-Test.png"
       ],
       dataItems: [
         "Tess",
@@ -975,6 +1136,26 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
         },
       ],
       autofocusSearch: false,
+      linkTitle: 'External Link',
+      externalLink: 'https://www.example.com', // Replace with your desired external link
+      linkText: 'Click me to open in a new tab!',
+      routerLinkTitle: 'Internal Link',
+      routerLinkText: 'Click me for an internal link!',
+      linkAppearance: 'body-md', // Replace with your desired text appearance class
+      routerProvider: {
+        to: '/some-internal-route', // Replace with the internal route you want to navigate to
+      },
+      breadcrumbsData: [
+        { label: 'Home', to: '/' },
+        { label: 'Category', to: '/category' },
+        { label: 'Subcategory', to: '/category/subcategory' },
+      ],
+      customLabelStyle: {
+        color: 'blue',
+        fontWeight: 'bold',
+        // Add more styles as needed
+      },
+      imageSrc: 'https://www.w3schools.com/html/pic_trulli.jpg',
     };
   },
   mounted() {
@@ -1088,6 +1269,18 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
     },
     tabChange(event) {
       console.log(event);
+    },
+    handleImageLoad(event) {
+      // Handle image load event
+      console.log("Image Loding....")
+    },
+    handleImageError(event) {
+      // Handle image error event
+      console.log("Image handle Error....");
+    },
+    handleImageClick(event) {
+      // Handle image click event
+      console.log("Image Click.....");
     },
   },
 };
