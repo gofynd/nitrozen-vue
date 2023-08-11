@@ -14,13 +14,13 @@
 
       </div>
 
-      <button><nitrozen-icon name="close" color="#fff" size="16" @click="handleCancelClick"></nitrozen-icon></button>
+      <button><nitrozen-icon name="close" color="#fff" :size="16" @click="handleCancelClick"></nitrozen-icon></button>
 
     </div>
 
     <div class="toaster-cta">
-    <nitrozen-button rounded  v-if="showPrimaryButton" @click="handlePrimaryClick">{{ primaryButtonLabel }}</nitrozen-button>
-    <nitrozen-button rounded v-if="showSecondaryButton" @click="handleSecondaryClick">{{ secondaryButtonLabel }}</nitrozen-button>
+    <nitrozen-button rounded  v-if="showPrimaryButton" @click="onClickPrimary">{{ primaryButtonLabel }}</nitrozen-button>
+    <nitrozen-button rounded v-if="showSecondaryButton" @click="onClickSecondary">{{ secondaryButtonLabel }}</nitrozen-button>
     </div>
 
   </div>
@@ -102,10 +102,10 @@ export default {
     handleClick() {
       this.$emit('onClose');
     },
-    handlePrimaryClick() {
+    onClickPrimary() {
       this.$emit('onClickPrimary');
     },
-    handleSecondaryClick() {
+    onClickSecondary() {
       this.$emit('onClickSecondary');
     },
   },

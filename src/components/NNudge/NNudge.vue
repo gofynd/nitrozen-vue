@@ -19,7 +19,7 @@
         <nitrozen-icon
           name="close"
           color="#fff"
-          size="16"
+          :size="16"
           @click="handleCancelClick"
         ></nitrozen-icon>
       </button>

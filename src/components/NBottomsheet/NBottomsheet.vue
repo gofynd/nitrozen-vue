@@ -3,7 +3,7 @@
   <div v-if="show" class="bottom-sheet-overlay" @click="onClose">
     <transition name="bottom-sheet">
     <div class="bottom-sheet-content" @click.stop>
-        <button class="bottom-sheet-close" @click="onClose"><nitrozen-icon  name="close" size="24"></nitrozen-icon></button>
+        <button class="bottom-sheet-close" @click="onClose"><nitrozen-icon  name="close" :size="24"></nitrozen-icon></button>
       <div class="bottom-sheet-header">
         <h3 v-if="title">{{ title }}</h3>
       <p v-if="description">{{ description }}</p>

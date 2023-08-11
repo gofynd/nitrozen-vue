@@ -4,7 +4,7 @@
       <div class="side-panel-container" :class="['side-panel', className, {'side-panel-right': direction === 'right'}]">
       <div class="side-panel-header">
         <div class="side-panel-header-content">
-          <nitrozen-icon :name="profile" color="#fff" size="32"></nitrozen-icon>
+          <nitrozen-icon name="profile" color="#fff" size="32"></nitrozen-icon>
           <div class="side-panel-header-text">{{ header }}</div>
         </div>
         <div v-if="showClose" class="side-panel-close" @click="emitCloseEvent">

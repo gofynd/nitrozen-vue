@@ -393,6 +393,193 @@
  <!-- venkatesh -->
 
 
+
+   <!-- venkat -->
+<div>
+    <nitrozen-heading level="h5" size="m">Heading</nitrozen-heading>
+    <nitrozen-heading level="h1"  color="gray" size="l">JioMart Main Heading</nitrozen-heading>
+    <br />
+    <nitrozen-heading level="h5" >Text</nitrozen-heading>
+    <nitrozen-text level="p" color="#666666" size="body-xs">JioMart Paragraph text</nitrozen-text>
+    <br />
+    <nitrozen-heading level="h5" >Grid View</nitrozen-heading>
+    <nitrozen-heading level="h5" size='s'>Grid View - 4 column</nitrozen-heading>
+    <nitrozen-grid gap="30px" template="1fr 1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
+        <div class="story-box">
+          <div>Eu proident velit cupidatat proident eiusmod ex consequat.</div>
+        </div>
+
+        <div class="story-box">
+          <div>Nostrud sunt aliqua fugiat pariatur in.</div>
+        </div>
+
+        <div class="story-box">
+          <div>Cupidatat et ea nostrud ea.</div>
+        </div>
+
+        <div class="story-box">
+          <div>Irure magna deserunt ullamco occaecat reprehenderit ad enim excepteur sint non cillum elit eiusmod eiusmod.</div>
+        </div>
+      </nitrozen-grid>
+      <nitrozen-heading level="h5" size='s'>Grid View - 3 column</nitrozen-heading>
+      <nitrozen-grid gap="30px" template="1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
+        <div class="story-box">
+          <div>Eu proident velit cupidatat proident eiusmod ex consequat.</div>
+        </div>
+
+        <div class="story-box">
+          <div>Nostrud sunt aliqua fugiat pariatur in.</div>
+        </div>
+
+        <div class="story-box">
+          <div>Cupidatat et ea nostrud ea.</div>
+        </div>
+
+        <div class="story-box">
+          <div>Irure magna deserunt ullamco occaecat reprehenderit ad enim excepteur sint non cillum elit eiusmod eiusmod.</div>
+        </div>
+      </nitrozen-grid>
+      <br />
+      <nitrozen-heading level="h5" >Flex Block</nitrozen-heading>
+      <nitrozen-flexbox direction="row" justify-content="space-evenly">
+        <div class="card">
+          <div class="story-box">
+          <div>Irure magna deserunt ullamco occaecat reprehenderit ad enim excepteur sint non cillum elit eiusmod eiusmod.</div>
+        </div>
+        </div>
+        <div class="card">
+          <div class="story-box">
+          <div>Irure magna deserunt ullamco occaecat reprehenderit ad enim excepteur sint non cillum elit eiusmod eiusmod.</div>
+        </div>
+        </div>
+      </nitrozen-flexbox>
+      <br />
+      <nitrozen-heading level="h5" >List Block</nitrozen-heading>
+      <nitrozen-listblock
+        title="JioSaavn with Icon"
+        prefix="visible"
+        suffix="close"
+        verticalAlignment="center"
+        spacing="m"
+        :items="['Item 1', 'Item 2', 'Item 3']"
+      />
+      <nitrozen-listblock
+        title="JioSaavn"
+        verticalAlignment="center"
+        spacing="m"
+        :items="['Item 1', 'Item 2', 'Item 3']"
+      />
+  <br />
+  <nitrozen-heading level="h5" >Divider</nitrozen-heading>
+  <nitrozen-grid gap="30px" template="1fr 1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
+  <div>
+    <nitrozen-divider />
+  </div>
+  <div>
+    <nitrozen-divider direction="horizontal">
+        Horizontal - With Label
+      </nitrozen-divider>
+
+  </div>
+  <div>
+    <nitrozen-divider direction="vertical" />
+  </div>
+  <div>
+    <nitrozen-divider direction="vertical">
+    Vertical - With Label Text
+  </nitrozen-divider>
+  </div>
+  </nitrozen-grid>
+
+
+  <nitrozen-button  @click="showToastNotification()">Show Toast Notification</nitrozen-button>
+
+  <nitrozen-toaster
+  :showToast="showToast"
+  :title="notificationMessage"
+  :description="description"
+  icon="home"
+   @onClose="onCloseToast"
+   :showPrimaryButton="true"
+  primaryButtonLabel="CTA 1"
+  :showSecondaryButton="true"
+  secondaryButtonLabel="CTA 2"
+  @onClickPrimary="onClickPrimary"
+  @onClickSecondary="onClickSecondary"
+  />
+
+  <br/>
+  <nitrozen-button  @click="showNudgeNotification()">Show Nudge Notification</nitrozen-button>
+        <nitrozen-nudge
+        :showNudge="showNudge"
+        :title="notificationMessage"
+        :description="description"
+        icon="home"
+         @onClose="onCloseNudge"
+         :showPrimaryButton="true"
+      primaryButtonLabel="CTA 1"
+      :showSecondaryButton="true"
+      secondaryButtonLabel="CTA 2"
+      @onClickPrimary="onClickPrimary"
+      @onClickSecondary="onClickSecondary"
+      />
+
+      <div>
+      <nitrozen-heading level="h5" >SidePanel</nitrozen-heading>
+      <div class="hover-new">
+      <nitrozen-button  @click="showPanel()">Show Side Panel</nitrozen-button>
+          </div>
+      <!-- Use the SidePanel component with its props -->
+      <nitrozen-sidepanel
+        header="panelHeader"
+        :showClose="true"
+        :isOpen="isPanelOpen"
+        direction="left"
+        :disableTransition="false"
+        :maxWidth="true"
+        className="test-class"
+        @onClose="closePanel"
+        @headerPrefixClickEvent="handleHeaderPrefixClick"
+      >
+      <p>helo</p>
+      </nitrozen-sidepanel>
+    </div>
+    <div>
+      <nitrozen-heading level="h5" >BottomSheet</nitrozen-heading>
+     <!-- Button to open the BottomSheet -->
+     <div class="hover-new">
+      <nitrozen-button @click="openBottomSheet()">Open Bottom Sheet</nitrozen-button>
+          </div>
+
+  <!-- Use the BottomSheet component -->
+  <nitrozen-bottomsheet
+    title="Your Jio Account"
+    description="Text"
+    :close="true"
+    ref="bottomSheet"
+  >
+  <p>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It
+          has roots in a piece of classical Latin literature from 45 BC, making
+          it over 2000 years old. Richard McClintock, a Latin professor at
+          Hampden-Sydney College in Virginia, looked up one of the more obscure
+          Latin words, consectetur, from a Lorem Ipsum passage, and going through
+          the cites of the word in classical literature, discovered the
+          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+          Evil) by Cicero, written in 45 BC. This book is a treatise on the
+          theory of ethics, very popular during the Renaissance. The first line
+          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+          section 1.10.32.
+        </p>
+  </nitrozen-bottomsheet>
+    </div>
+    <div>
+      <niotrozen-bottom-nav :items="staticNavItems" />
+
+    </div>
+  </div>
+
       <!-- Flat Button -->
       <div class="main-div space-between">
         <nitrozen-button  @click="someFunc"
@@ -1271,6 +1458,36 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
       autoModel: "",
       checkArray: ["Check 1"],
       radioModel: "1",
+      staticNavItems: [
+        {
+          'aria-label': 'Home',
+          href: '#',
+          icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',
+          onClick: function noRefCheck() {},
+          title: 'Home'
+        },
+        {
+          'aria-label': 'Categories',
+          href: '#',
+          icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',          onClick: function noRefCheck() {},
+          title: 'Categories'
+        },
+        {
+        'aria-label': 'Favourite',
+        href: '#',
+        icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',          onClick: function noRefCheck() {},
+        onClick: function noRefCheck(){},
+        title: 'Favourite'
+      },
+        {
+        'aria-label': 'Menu',
+        href: '#',
+        icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',          onClick: function noRefCheck() {},
+        onClick: function noRefCheck(){},
+        title: 'Menu'
+      },
+
+      ],
       dropdownItems: [
        
         {
@@ -1454,6 +1671,16 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
         // Add more styles as needed
       },
       imageSrc: 'https://www.w3schools.com/html/pic_trulli.jpg',
+      showToast: false,
+      showNudge: false,
+      notificationMessage: 'JioMart',
+      notificationType: 'info', // 'info', 'success', 'warning', 'error', etc.
+      showPrimaryButton: false,
+      primaryButtonLabel: 'Primary',
+      showSecondaryButton: false,
+      secondaryButtonLabel: 'Secondary',
+      description:"This is a notification message",
+      isPanelOpen: false,
     };
   },
   mounted() {
@@ -1610,6 +1837,36 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
     handleImageClick(event) {
       // Handle image click event
       console.log("Image Click.....");
+    },
+    showToastNotification() {
+      this.showToast = true;
+    },
+    showNudgeNotification() {
+      this.showNudge = true;
+    },
+    onCloseToast() {
+      this.showToast = false;
+    },
+    onCloseNudge() {
+      this.showNudge = false;
+    },
+    onClickPrimary() {
+      console.log('Primary button clicked.');
+    },
+    onClickSecondary() {
+      console.log('Secondary button clicked.');
+    },
+    showPanel() {
+      this.isPanelOpen = true; 
+    },
+    closePanel() {
+      this.isPanelOpen = false;
+    },
+    openBottomSheet() {
+      this.$refs.bottomSheet.open();
+    },
+    handleHeaderPrefixClick() {
+      // Handle the header prefix click event here
     },
   },
 };
