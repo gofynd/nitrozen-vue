@@ -43,15 +43,13 @@
 </template>
 
 <script>
-import NHeader from "../NHeading/index";
-import NText from "../NText";
-import NIcon from "../NIcon/NIcon.vue";
 
+import NIcon from "../NIcon/NIcon.vue";
+import  NBtn  from '../NBtn/NBtn.vue';
 export default {
   name: "nitrozen-nudge",
   components: {
-    NHeader,
-    NText,
+    'nitrozen-button':NBtn,
     "nitrozen-icon": NIcon,
   },
   props: {

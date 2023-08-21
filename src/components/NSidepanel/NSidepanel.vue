@@ -4,12 +4,10 @@
       <div class="side-panel-container" :class="['side-panel', className, {'side-panel-right': direction === 'right'}]">
       <div class="side-panel-header">
         <div class="side-panel-header-content">
-          <nitrozen-icon name="profile" color="#fff" size="32"></nitrozen-icon>
+          <nitrozen-icon name="profile" color="#000000" size="32"></nitrozen-icon>
           <div class="side-panel-header-text">{{ header }}</div>
         </div>
-        <div v-if="showClose" class="side-panel-close" @click="emitCloseEvent">
-          <nitrozen-icon name="close"  size="24"></nitrozen-icon>
-        </div>
+        <button class="side-panel-close" @click="emitCloseEvent"><nitrozen-icon  name="close" :size="24"></nitrozen-icon></button>
       </div>
       <div class="side-panel-content">
         <slot></slot>
@@ -78,8 +76,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: @ColorPrimary50;
-        color: @ColorPrimaryGrey20;
+        background-color: @WhiteColor;
+        color: @ColorPrimary50;
         padding: 12px 24px;
         height: 4em;
 
@@ -106,9 +104,15 @@
       }
 
       &-close{
-        padding: 8px;
-        cursor: pointer;
-        border-radius: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 48px;
+    margin-top: 8px;
+    margin-right: 16px;
+    padding: 12px;
+    border: none;
+    background: transparent;
 
         &:hover{
             background-color: @ColorPrimaryGrey20;
