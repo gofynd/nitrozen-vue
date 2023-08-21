@@ -58,6 +58,22 @@
           </div>
         </div>
       </div>
+      <div class="footer-divider"></div>
+      <div class="footer-wrapper">
+        <div class="footer-bottom">
+          <div class="footer-bottom-brand">
+            <img
+              class="jm-mr-s"
+              :src="logo"
+            />© All rights reserved. Reliance
+            Retail Ltd.
+          </div>
+          <div>
+            Best viewed on Microsoft Edge 81+, Mozilla Firefox 75+, Safari
+            5.1.5+, Google Chrome 80+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -68,6 +84,7 @@ export default{
 name : "nitrozen-footer",
 data () {
   return {
+    logo : "../../assets/jds-icons/jiomart-logo-icon.svg",
     marketplace:{
       stores: [
         {
@@ -123,7 +140,65 @@ methods: {
 
 
 <style lang="less" scoped>
+.footer-divider{
+  align-self:normal;
+  border-top:1px solid #e0e0e0;
+}
+.jm-mr-s{margin-right:12px !important}
+.footer-wrapper {
+  margin: 0 auto;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  max-width: 1230px;
+    width: 100%;
+}
+.footer-bottom {
+  padding: 16px !important;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-family: "JioType",helvetica,arial,sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: -0.06px;
+    line-height: 1.3333333333;
+    color: rgba(0,0,0,.65);
 
+  &-brand{
+    display:flex;
+    align-items:center
+  }
+}
+
+.jm-mt-l{margin-top:32px !important}
+.jm-pb-base{padding-bottom:16px !important}
+.jm-heading-xxs{font-family:"JioType",helvetica,arial,sans-serif;font-weight:900 !important;font-size:16px !important;letter-spacing:-0.48px !important;line-height:1 !important}
+.jm-fc-primary-gray-80{color:rgba(0,0,0,.65) !important}
+.jm-body-s{font-family:"JioType",helvetica,arial,sans-serif;font-weight:500 !important;font-size:16px !important;letter-spacing:-0.08px !important;line-height:1.5 !important}
+.jm-pa-xs{padding:8px !important}
+.col-lg-8 {
+  flex: 0 0 auto;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+  flex-basis: 66.66666667%;
+  max-width: 66.66666667%;
+}
+
+.col-lg-4 {
+  flex: 0 0 auto;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+  flex-basis: 33.33333333%;
+  max-width: 33.33333333%;
+}
+.row{
+display: flex;
+  flex: 0 1 auto;
+  // flex-wrap: wrap;
+}
+.jm-mt-huge{margin-top:64px !important}
 .router-link-exact-active .m-footer-items-text {
   color: #130028;
 }
