@@ -9,7 +9,7 @@
     <div class="nudge-message">
       <nitrozen-icon v-if="icon" :name="icon" color="#fff"></nitrozen-icon>
 
-      <div class="content">
+      <div class="content-nudge">
         <div class="nudge-title">{{ title }}</div>
 
         <div class="nudge-description">{{ description }}</div>
@@ -191,7 +191,7 @@ export default {
   align-items: center;
   justify-content: flex-start;
 
-   .content {
+   .content-nudge {
       text-align: left;
       font-size: 14px;
       margin: 0px 12px;

@@ -6,7 +6,7 @@
 
       <nitrozen-icon v-if="icon" :name="icon" color="#fff"></nitrozen-icon>
 
-      <div class="content">
+      <div class="content-toaster">
 
         <div class="toast-title">{{ title }}</div>
 
@@ -175,7 +175,7 @@ export default {
   align-items: center;
   justify-content: flex-start;
 
-   .content {
+   .content-toaster {
       text-align: left;
       font-size: 14px;
       margin: 0px 12px;
