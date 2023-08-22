@@ -138,7 +138,10 @@
   </script>
   
   <style lang="less" scoped>
-  .jm-logo {
+.logo{
+  width: inherit;
+}
+.jm-logo {
     height: 1.8rem;
     width: 10.3rem;
   }
