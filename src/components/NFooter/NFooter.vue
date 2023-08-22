@@ -5,57 +5,28 @@
         <div class="col-lg-8">
           <div class="row">
             <div
-              v-for="(navItem, index) in getDesktopFooterNav"
-              :key="index"
-              class="col-lg-4 jm-pa-xs jm-body-s jm-fc-primary-gray-80 d-footer-nav-links"
-              @click="emitFooterEvent(navItem.display)"
+            v-for="(footerItem,index) in links"
+            :key="index"
+            class="d-footer-row"
             >
-              <a href="navItem.link">
-                {{ navItem.display }}
+            <div class="footerRowHeader">
+              {{ footerItem.title }}
+            </div>
+            <div
+              v-for="(navItem, index) in footerItem.subLinks"
+              :key="index"
+              class="d-footer-nav-links"
+              @click="emitFooterEvent(navItem.title)"
+            >
+              <a href="navItem.href" class="d-footer-display-link">
+                {{ navItem.title }}
               </a>
+            </div>
             </div>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="jm-heading-xxs jm-pb-base">Connect with us</div>
-          <div>
-            <a
-              v-for="(socialItem, index) in getSocialLinks"
-              :key="index"
-              href="socialItem.link"
-              class="jm-mr-base"
-            >
-              <img
-                :src="socialItem.icon"
-                :alt="socialItem.title"
-                class="three-p-logo"
-              />
-            </a>
-          </div>
-
-          <div class="jm-heading-xxs jm-pb-base jm-mt-l">Download the app</div>
-          <div>
-            <a
-              link="https://play.google.com/store/apps"
-              class="jm-mr-base"
-            >
-              <img
-                src="https://hdn-1.jiox0.de/jiox2/company/2/applications/61c050db47047572f4a55559/theme/pictures/free/original/theme-image-1641989250072.png"
-                alt=""
-                class="three-p-logo"
-              />
-            </a>
-            <a
-              link="https://www.apple.com/app-store/"
-              class="jm-mr-base"
-            >
-              <img
-                src="https://hdn-1.jiox0.de/jiox2/company/2/applications/61c050db47047572f4a55559/theme/pictures/free/original/theme-image-1641989250075.png"
-                alt=""
-                class="three-p-logo"
-              />
-            </a>
-          </div>
+         <slot name ="marketplace"></slot>
         </div>
       </div>
       <div class="footer-divider"></div>
@@ -65,13 +36,12 @@
             <img
               class="jm-mr-s"
               :src="logo"
-            />© All rights reserved. Reliance
-            Retail Ltd.
+            />
+          {{ copyright }}
           </div>
-          <div>
-            Best viewed on Microsoft Edge 81+, Mozilla Firefox 75+, Safari
-            5.1.5+, Google Chrome 80+
-          </div>
+       <slot name="footerBRight">
+
+       </slot>
         </div>
       </div>
     </div>
@@ -82,50 +52,24 @@
 <script>
 export default{
 name : "nitrozen-footer",
-data () {
-  return {
-    logo : "../../assets/jds-icons/jiomart-logo-icon.svg",
-    marketplace:{
-      stores: [
-        {
-          ariaLabel: 'Google Play Store',
-        //   badgeAsset: <img alt="Alt Text" src="images/play-store.png"/>,
-          href: '#',
-          newTab: true,
-          title: 'play-store'
-        },
-        {
-          ariaLabel: 'Apple App Store',
-        //   badgeAsset: <img alt="Alt Text" src="images/app-store.png"/>,
-          href: '#',
-          newTab: true,
-          title: 'app-store'
-        }
-      ],
-      title: 'Download Our App'
-    },
-    getDesktopFooterNav : [{display:"Hello",link:"yes"},{display:"Hi",link:""},{display:"Bye",link:""}],
-    getSocialLinks : [
-        {
-          href: '#',
-          icon: "https://cdn-icons-png.flaticon.com/128/2111/2111463.png",
-          newTab: true,
-          title: 'IcFavorite'
-        },
-        {
-          href: '#',
-icon : "https://cdn-icons-png.flaticon.com/128/4494/4494475.png",
-          newTab: true,
-          title: 'IcFilter'
-        },
-        {
-          href: '#',
-icon : "https://cdn-icons-png.flaticon.com/128/4494/4494477.png",
-          newTab: true,
-          title: 'IcCamera'
-        },
-      ],
-}},
+props : {
+logo:{
+  type : String,
+  default : ""
+},
+links:{
+type : Array,
+default : [],
+sublinks:{
+type : Array,
+default :[]
+}
+},
+copyright:{
+  type:String,
+  default : ""
+}
+},
 methods: {
     // click event callback to emitevents
     emitFooterEvent(footerLink) {
@@ -140,11 +84,27 @@ methods: {
 
 
 <style lang="less" scoped>
+
+.footerRowHeader{
+  color: var(--light-primary-grey-100, #141414);
+font-family: JioType;
+font-size: 16px;
+font-style: normal;
+font-weight: 900;
+line-height: 20px; 
+letter-spacing: -0.48px;
+padding-bottom: 16px;
+}
+
 .footer-divider{
   align-self:normal;
   border-top:1px solid #e0e0e0;
 }
-.jm-mr-s{margin-right:12px !important}
+.jm-mr-s{
+margin-right:16px;
+width :32px;
+height: 32px
+}
 .footer-wrapper {
   margin: 0 auto;
   padding-left: 16px !important;
@@ -175,9 +135,6 @@ methods: {
 .jm-mt-l{margin-top:32px !important}
 .jm-pb-base{padding-bottom:16px !important}
 .jm-heading-xxs{font-family:"JioType",helvetica,arial,sans-serif;font-weight:900 !important;font-size:16px !important;letter-spacing:-0.48px !important;line-height:1 !important}
-.jm-fc-primary-gray-80{color:rgba(0,0,0,.65) !important}
-.jm-body-s{font-family:"JioType",helvetica,arial,sans-serif;font-weight:500 !important;font-size:16px !important;letter-spacing:-0.08px !important;line-height:1.5 !important}
-.jm-pa-xs{padding:8px !important}
 .col-lg-8 {
   flex: 0 0 auto;
   padding-right: 0.8rem;
@@ -195,8 +152,9 @@ methods: {
 }
 .row{
 display: flex;
-  flex: 0 1 auto;
-  // flex-wrap: wrap;
+flex: 0 1 auto;
+gap:16px;
+align-items: flex-start;
 }
 .jm-mt-huge{margin-top:64px !important}
 .router-link-exact-active .m-footer-items-text {
@@ -217,17 +175,43 @@ display: flex;
 
   &-container {
     max-width: 120rem;
-    padding: 4rem 0;
     margin: 0 auto;
+    display: flex;
+    padding: 40px 0px 16px 0px;
+    gap: 40px;
+    align-self: stretch;
+    align-items: flex-start;
   }
 
   &-nav-links {
-    word-break: break-word;
+    font-family: "JioType",helvetica,arial,sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.08px;
+    color: rgba(0,0,0,.65);
+    padding: 8px;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: -0.08px;
+    width: 100%;
   }
+
   &-nav-links:hover {
     background-color: #E0E0E0;
   }
 
+  &-display-link{
+    text-decoration: none;
+    color: var(--light-primary-grey-80, rgba(0, 0, 0, 0.65));
+  }
+
+  &-row{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex: 1 0 0;
+    justify-content: center;
+  }
 }
 
 .m-footer {
@@ -239,6 +223,10 @@ display: flex;
   padding: 1.6rem;
   background-color: #FFFFFF;
 
+  &-container {
+    justify-content: space-between;
+    text-align: center;
+  }
 
   &-items {
     display: flex;
@@ -253,11 +241,12 @@ display: flex;
       color: rgba(0, 0, 0, 0.65);
     }
   }
+}
 
 
-  .m-footer-container {
-    justify-content: space-between;
-    text-align: center;
+@media only screen and (max-width:768px){
+  .d-footer-container{
+    flex-direction: column;
   }
 }
 </style>
