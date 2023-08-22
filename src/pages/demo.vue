@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="main-div">
+<nitrozen-header logo="https://cdn-icons-png.flaticon.com/128/4494/4494477.png" SearchPlaceholder="Search in Jiomart"></nitrozen-header>
       <div class="main-div space-between">
         <div>Searchable Dropdown</div>
         <nitrozen-dropdown
@@ -807,11 +808,12 @@
 
 <script>
 import { countries } from "./countries";
-import {NitrozenRadio,NitrozenCheckBox,NitrozenButton} from "../components";
+import {NitrozenRadio,NitrozenCheckBox,NitrozenButton,NitrozenHeader} from "../components";
 export default {
   name: "App",
   components : {
-NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":NitrozenButton
+NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":NitrozenButton,
+NitrozenHeader
   },
   data() {
     return {
