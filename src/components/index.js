@@ -20,6 +20,7 @@ import NitrozenTooltip from './NTooltip';
 import NitrozenCustomForm from './NCustomForm';
 import NitrozenFooter from "./NFooter"
 import NitrozenCarousel from "./NCarousel"
+import NitrozenHeader from './NHeader';
 
 export {
     NitrozenAutocomplete,
@@ -43,5 +44,6 @@ export {
     NitrozenTooltip,
     NitrozenCustomForm,
     NitrozenFooter,
-    NitrozenCarousel
+    NitrozenCarousel,
+    NitrozenHeader
 }
