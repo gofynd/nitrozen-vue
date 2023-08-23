@@ -16596,8 +16596,8 @@ var NToaster_component = (0,componentNormalizer/* default */.Z)(
 ;// CONCATENATED MODULE: ./src/components/NToaster/index.js
 
 /* harmony default export */ var components_NToaster = (NToaster);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NSidepanel/NSidepanel.vue?vue&type=template&id=189baa62&
-var NSidepanelvue_type_template_id_189baa62_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NSidepanel/NSidepanel.vue?vue&type=template&id=12887016&
+var NSidepanelvue_type_template_id_12887016_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _vm.isOpen ? _c('div', [_c('div', {
@@ -16614,13 +16614,13 @@ var NSidepanelvue_type_template_id_189baa62_render = function render() {
     staticClass: "side-panel-header"
   }, [_c('div', {
     staticClass: "side-panel-header-content"
-  }, [_c('nitrozen-icon', {
+  }, [_vm.icon ? _c('nitrozen-icon', {
     attrs: {
-      "name": "profile",
+      "name": _vm.icon,
       "color": "#000000",
       "size": "32"
     }
-  }), _c('div', {
+  }) : _vm._e(), _c('div', {
     staticClass: "side-panel-header-text"
   }, [_vm._v(_vm._s(_vm.header))])], 1), _c('button', {
     staticClass: "side-panel-close",
@@ -16636,7 +16636,7 @@ var NSidepanelvue_type_template_id_189baa62_render = function render() {
     staticClass: "side-panel-content"
   }, [_vm._t("default")], 2)])]) : _vm._e();
 };
-var NSidepanelvue_type_template_id_189baa62_staticRenderFns = [];
+var NSidepanelvue_type_template_id_12887016_staticRenderFns = [];
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NSidepanel/NSidepanel.vue?vue&type=script&lang=js&
 
@@ -16652,7 +16652,11 @@ var NSidepanelvue_type_template_id_189baa62_staticRenderFns = [];
     direction: String,
     disableTransition: Boolean,
     maxWidth: Boolean,
-    className: String
+    className: String,
+    icon: {
+      type: String,
+      default: ""
+    }
   },
   data: function data() {
     return {};
@@ -16668,10 +16672,10 @@ var NSidepanelvue_type_template_id_189baa62_staticRenderFns = [];
 });
 ;// CONCATENATED MODULE: ./src/components/NSidepanel/NSidepanel.vue?vue&type=script&lang=js&
  /* harmony default export */ var NSidepanel_NSidepanelvue_type_script_lang_js_ = (NSidepanelvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NSidepanel/NSidepanel.vue?vue&type=style&index=0&id=189baa62&prod&lang=less&
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NSidepanel/NSidepanel.vue?vue&type=style&index=0&id=12887016&prod&lang=less&
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NSidepanel/NSidepanel.vue?vue&type=style&index=0&id=189baa62&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NSidepanel/NSidepanel.vue?vue&type=style&index=0&id=12887016&prod&lang=less&
 
 ;// CONCATENATED MODULE: ./src/components/NSidepanel/NSidepanel.vue
 
@@ -16684,8 +16688,8 @@ var NSidepanelvue_type_template_id_189baa62_staticRenderFns = [];
 
 var NSidepanel_component = (0,componentNormalizer/* default */.Z)(
   NSidepanel_NSidepanelvue_type_script_lang_js_,
-  NSidepanelvue_type_template_id_189baa62_render,
-  NSidepanelvue_type_template_id_189baa62_staticRenderFns,
+  NSidepanelvue_type_template_id_12887016_render,
+  NSidepanelvue_type_template_id_12887016_staticRenderFns,
   false,
   null,
   null,

@@ -283,6 +283,7 @@
         direction="left"
         :disableTransition="false"
         :maxWidth="true"
+        icon="profile"
         className="test-class"
         @onClose="closePanel"
         @headerPrefixClickEvent="handleHeaderPrefixClick"

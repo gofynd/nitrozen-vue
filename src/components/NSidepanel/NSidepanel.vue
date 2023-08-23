@@ -4,7 +4,7 @@
       <div class="side-panel-container" :class="['side-panel', className, {'side-panel-right': direction === 'right'}]">
       <div class="side-panel-header">
         <div class="side-panel-header-content">
-          <nitrozen-icon name="profile" color="#000000" size="32"></nitrozen-icon>
+          <nitrozen-icon v-if="icon" :name="icon" color="#000000" size="32"></nitrozen-icon>
           <div class="side-panel-header-text">{{ header }}</div>
         </div>
         <button class="side-panel-close" @click="emitCloseEvent"><nitrozen-icon  name="close" :size="24"></nitrozen-icon></button>
@@ -31,6 +31,10 @@
       disableTransition: Boolean,
       maxWidth: Boolean,
       className: String,
+      icon: {
+      type: String,
+      default: "",
+    },
     },
     data() {
       return {
