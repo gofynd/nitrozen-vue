@@ -1,7 +1,14 @@
 <template>
   <div id="app">
     <div class="main-div">
-<nitrozen-header logo="https://cdn-icons-png.flaticon.com/128/4494/4494477.png" SearchPlaceholder="Search in Jiomart"></nitrozen-header>
+<nitrozen-header avatar="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACCCAMAAAC93eDPAAAAMFBMVEXh4eGjo6OgoKDk5OS+vr6tra3T09PFxcXe3t7Pz8/b29u7u7vX19eoqKi4uLixsbHKbNcEAAACuklEQVR4nO2ay9brIAiFVbxEE+P7v+0xSZt1+jcXq2A7YE/amV9ABEEhWCwWi8VisVjEAgAxDOvPd9YXXie5Kmkv+lPApKNSakPIf6Ke+kKAGOVj+aeUHHtaAvxfgA3Cd2OA8QBghRh7MZwRLAxdAECfEmQG3cEOlwR9GOwVwCJLTQDmDsEQmwH8pRtWV1CHZrwjkDIOlAAFRqA2A8wlCDMlwlDgB2JP3EbkJsK4BFfgh+wJR+eJX0A4T1AvCIQJsyggaEPiFxCus+SOQJgtf2A7/sC58AunI6QShESapr6fKYs8QVsvlIQlfQF7bwVigPvdQF463h7StCXTU+nqNpU6AFwy9CI4Z+hHIIRWR/0FpfsRCJjMXwilTO9Wj0//d1qUTP1aLDuDCC49juuYXPhCy22hyBiTtVMQ32o8slgsFutYsOs7i4tgvXM6yzlvQ88JVV4qWDfHdR60K6fL2dnQgSN/u9dmWf2oapLSaE+atvPnu3S4+gtHLh6IbJHXf6vWzjBMpkBfX9h0NBI7pZDJIjvEfwTwgPB46x/Uy0UQaDU1hKsb3A1FwtgT4D51wQuDROi+lfV8LyBaR5eDaSTIDKap8TPEZoLM0NR8arfBymCqAQpbzgUM1R0wi0SQGSpbwlB/HrwhVDZkAxbAolBlhLLOf5nq5gNom3FFqNuQeLuxej8imqE6KhFO5wdB/RmNFhNV8bAKcLaDsg0JGyUwGwd2CAzNI8NmBoShZSMDyti0iQFpcAuFM9ojtcTCC0OoO6OUQbzWDTV1tBpRB5bZGR9f6LCcsDPA4STmFCAnJvwLPkxzqSWUnIkmNFB2wV8u9oTPOCat7rosivo5Mgg/xzMKpeLc41E2iMGPa8dLvXy8lGb0Q68R1db30yk+x2Mx6T4dvzeO9VX+9i6fB2QsFovFYrFYxPoH9ScZU9maJOIAAAAASUVORK5CYII=" logo="https://cdn-icons-png.flaticon.com/128/4494/4494477.png" SearchPlaceholder="Search in Jiomart">
+<template #links>
+  <div class="links">
+   <div v-for="(link,index) in Hlinks" :key="index">{{ link }}</div> 
+  </div>
+  
+</template>
+</nitrozen-header>
       <div class="main-div space-between">
         <div>Searchable Dropdown</div>
         <nitrozen-dropdown
@@ -903,6 +910,7 @@ NitrozenHeader
           value: 25,
         },
       ],
+      Hlinks:['Link1','Link2'],
       dropdownItemsFiltered: [],
       selectedDropdown: "",
       selectedGroupDropdown: [],
@@ -1155,4 +1163,18 @@ body {
     background-color: green;
   }
 }
+
+.links{
+    display: flex;
+    padding-left: 0px;
+    align-items: flex-start;
+    gap: 32px;
+    color: var(--light-primary-inverse, #FFF);
+    font-family: JioType;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+    letter-spacing: -0.08px;
+  }
 </style>

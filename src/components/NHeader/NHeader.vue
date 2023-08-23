@@ -1,28 +1,39 @@
 <template>
-    <div>
       <div class="d-header">
         <div class="d-header-main">
-          <div class="d-header-container">
+          <div class="d-header-container-main">
+              <div class="d-header-hamburger" @click="changeMobileNavVisibility">
+              <img
+                src="../../assets/jds-icons/hamburger-icon.svg"
+                alt="main navigation icon"
+              />
+            </div>
             <div class="d-header-logo">
                 <img
                   class="logo"
                   :src="logo"
                 />
             </div>
+            
+            
+<slot name="links" class="links"></slot>
           </div>
-  
-          <div class="d-header-container">
+          <div class="d-header-container-tool">
             <div class="d-header-search" @click="changeSearchContainerVisibility">
-              <span class="d-header-search-icon">
-                <img src="../../assets/jds-icons/search-icon.svg" alt="" />
-              </span>
-              <input
-                :placeholder="SearchPlaceholder"
-                class="d-header-search-input"
-                @focus="changeSearchContainerVisibility"
-              />
+              <div class="d-header-icon-input">
+                <span class="d-header-search-icon">
+                  <img src="../../assets/jds-icons/search-icon-brown.svg" alt="" />
+                </span>
+                <input
+                  :placeholder="SearchPlaceholder"
+                  class="d-header-search-input"
+                  @focus="changeSearchContainerVisibility"
+                />
+              </div>
+                
             </div>
             <div class="d-header-user-icons">
+              <img src="../../assets/jds-icons/search-icon-brown.svg" alt="" class="d-header-search-mob"/>
                       <div>
                         <img
                           title="Wishlist"
@@ -37,70 +48,21 @@
               </div>
   
 
-
-                      <div class="position-relative">
-                        <img
-                          title="Profile"
-                          :src="avatar"
-                        />
-                      </div>
+              
             </div>
-          </div>
-        </div>
-      </div>
-  
-      <div class="m-header">
-        <div class="m-header-main">
-          <div  class="m-header-container">
-            <div class="m-header-hamburger" @click="changeMobileNavVisibility">
+            <div class="position-relative">
               <img
-                src="../../assets/jds-icons/hamburger-icon.svg"
-                alt="main navigation icon"
+                title="Profile"
+                :src="avatar"
+                placeholder="./../assets/jds-icons/profileicon.svg"
+                class="d-header-avatar"
               />
             </div>
-          </div>
-  
-          <div class="m-header-container" style="min-width: 0">
-            <div class="m-header-back" @click="handleMobileHeaderBack()">
-              <img src="../../assets/jds-icons/back-arrow-icon.svg" alt="" />
-            </div>
-  
-          </div>
-  
-          <div
-            class="m-header-container"
-          >
-            <div
-            >
-              <span class="m-header-search-icon">
-              </span>
-              <input
-                :placeholder="SearchPlaceholder"
-                class="m-header-search-input"
-              />
-            </div>
-  
-            <div
-
-            >
-              <img src="../../assets/jds-icons/search-icon-brown.svg" alt="" />
-            </div>
-  
-            <div class="m-header-cart" v-if="mobileHeaderItems.cartIcon">
-              <div
-                class="position-relative jm-d-block"
-              >
-                <div>
-                  <img title="Cart" src="../../assets/jds-icons/cart-icon.svg" />
-                </div>
-              </div>
-            </div>
-  
-
           </div>
         </div>
+        <slot name="tabs">
+        </slot>
       </div>
-    </div>
   </template>
   
   <script>
@@ -121,8 +83,8 @@
       default : "search"
     },
     },
-    // data() {
-    // },
+    data() {
+    },
     methods :{
       changeSearchContainerVisibility(){
 
@@ -138,6 +100,7 @@
   </script>
   
   <style lang="less" scoped>
+
 .logo{
   width: inherit;
 }
@@ -170,30 +133,48 @@
     justify-content: center;
   }
   
-  @media only screen and (min-width:992px) {
-    .m-header {
-      display: none;
-    }
-  
     .d-header {
+
+      &-avatar{
+        height: 40px;
+        width: 40px;
+        border-radius: 200px;
+      }
+
+      &-icon-input{
+        position: relative;
+      }
       &-main {
+        background-color: #0078ad;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 7.2rem;
         width: 100%;
-        padding: 16px 48px;
-        background-color: #0078ad;
+        padding: 16px;
+        max-width: 1230px;
+        margin: 0 auto;
       }
   
-      &-container {
+      &-container-main {
         display: flex;
         align-items: center;
+        position: relative;
       }
-
+      &-container-tool{
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          flex: 1 0 0;
+}
       &-logo{
-        height: 45px;
-        width: 45px;
+        display: flex;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        padding-right: 12px;
+        align-items: flex-start;
+        gap: 10px;
       }
   
       &-menu {
@@ -216,20 +197,25 @@
       }
   
       &-search {
-        position: relative;
+        
         width: 31.2rem;
         margin-right: 24px;
         display: flex;
+        justify-content: flex-end;
         align-items: center;
   
         &-input {
           outline: 0;
           border: none;
-          border-radius: 250px;
           color: #FFFFFF;
           background-color: #0c5273;
           width: 100%;
           padding: 12px 16px 12px 48px;
+          border-radius: 24px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+
   
           &::placeholder {
             color: #FFFFFF;
@@ -244,7 +230,13 @@
           border-radius: 4px;
           width: 2.4rem;
           z-index: auto;
+          position: absolute;
+        top: 10px;
         }
+      }
+
+      &-hamburger{
+        display: none;
       }
   
       &-user-icons {
@@ -265,110 +257,24 @@
         padding-right: 48px;
       }
     }
-  }
   
-  @media only screen and (max-width:991px){
+  
+  @media only screen and (max-width:768px){
     .d-header {
-      display: none;
-    }
-  
-    .m-header {
-      &-container {
-        display: flex;
-        align-items: center;
+
+
+      &-search{
+        display: none;
       }
-  
-      &-main {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 6.4rem;
-        width: 100%;
-        padding: 8px 16px;
-        padding-right: 24px;
-        background-color: #0078ad;
-      }
-  
-      &-search-container {
-        flex: 1;
-      }
-  
       &-hamburger {
+        display: block;
         padding: 16px;
         padding-left: 0;
       }
-  
-      &-back {
-        padding: 16px;
-        padding-left: 0;
-        img {
-          display: block;
-        }
-      }
-  
-      &-title {
-        flex: 1;
-        min-width: 0;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        color: #FFFFFF;
-      }
-  
-      &-search {
-        position: relative;
-        margin-right: 12px;
-        flex: 1 1 auto;
-  
-        &-input {
-          font-family: JioType, helvetica, arial, sans-serif;
-          font-weight: 500;
-          text-transform: none;
-          font-size: 1.6rem;
-          letter-spacing: -0.08px;
-          line-height: 2.4rem;
-  
-          outline: 0;
-          border: none;
-          border-radius: 250px;
-          color: #FFFFFF;
-          background-color: #0c5273;
-          width: 100%;
-          padding: 8px 16px;
-          padding-left: 48px;
-  
-          &::placeholder {
-            color: #FFFFFF;
-          }
-        }
-  
-        &-icon {
-          position: absolute;
-          top: 12px;
-          left: 12px;
-          color: #FFFFFF;
-          line-height: 0;
-          border-radius: 4px;
-          width: 2rem;
-          transform: none;
-          z-index: auto;
-        }
-  
-        &-button {
-          padding: 16px;
-        }
-      }
-  
-      &-pincode {
-        height: 3.2rem;
-        background-color: #e5f1f7;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-      }
-      &-search-button {
-        padding: 16px 1.4rem;
-      }
+    }
+
+    .links{
+      display: none;
     }
   }
   </style>
