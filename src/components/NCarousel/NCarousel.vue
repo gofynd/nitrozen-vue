@@ -1,106 +1,111 @@
 <template>
+  <div class="carousel-container">
     <div class="carousel">
-      <div v-if="items.length > 4" class="prev-btn btn" @click="previousClicked">
-        <img src="./../../assets/arrow-left.svg" alt="Previous" />
-      </div>
-      <div class="item-wrapper" ref="itemwrapper">
-        <slot />
-      </div>
-      <div v-if="items.length > 4" class="next-btn btn" @click="nextClicked">
-        <img src="./../../assets/arrow-right.svg" alt="Next" />
-      </div>
+      <transition name="slide-fade" mode="out-in">
+        <div :key="currentIndex" class="carousel-inner" :style="carouselStyle">
+          <carousel-slide
+            v-for="(item, index) in items"
+            :key="index"
+            :image="item"
+            :alt="item.alt"
+          />
+        </div>
+      </transition>
     </div>
-  </template>
-  
-  <style lang="less" scoped>
-  .carousel {
-    width: 100%;
-    position: relative;
-  
-    .btn {
-      position: absolute;
-      top: 50%;
-      width: auto;
-      z-index: 10;
-      transform: translate(0%, -50%);
-      background-color: transparent;
-      padding: unset;
-      cursor: pointer;
-      @media only screen and (max-width: 991px) {
-        display: none;
-      }
-    }
-    .next-btn {
-      right: 1.6rem;
-    }
-    .prev-btn {
-      left: 1.6rem;
-    }
-    .item-wrapper {
-      padding-left: 0;
-    }
-  }
-  </style>
-  
-  <script>
-  import { animate, easeInOutQuad } from "../../animate.js";
-  export default {
-    name: "nitrozen-carousel",
-    components: {},
-    props: {
-      items: {
-        type: Array,
-      },
+    <carousel-controls
+      :prev-text="prevButtonText"
+      :next-text="nextButtonText"
+      :prev-slide="prevSlide"
+      :next-slide="nextSlide"
+    />
+    <div class="pagination">
+      <carousel-pagination
+        v-for="(item, index) in items"
+        :key="index"
+        :is-active="index === currentIndex"
+        :index="index"
+        :go-to-slide="goToSlide"
+      />
+  </div>
+  </div>
+</template>
+
+<script>
+import CarouselSlide from './CarouselSlide.vue';
+import CarouselControls from './CarouselControls.vue';
+import CarouselPagination from './CarouselPagination.vue';
+
+export default {
+  name: "nitrozen-carousel",
+  components: {
+    CarouselSlide,
+    CarouselControls,
+    CarouselPagination
+  },
+  props: {
+    items: Array,
+    prevButtonText: String,
+    nextButtonText: String,
+  },
+  data() {
+    return {
+      currentIndex: 0,
+      slideWidth: 100,
+    };
+  },
+  computed: {
+    carouselStyle() {
+      return {
+        width: `${this.slideWidth}%`,
+        transform: `translateX(-${this.currentIndex * this.slideWidth}%)`,
+      };
     },
-    methods: {
-      previousClicked(event) {
-        this.moveCarousel("LEFT");
-      },
-      nextClicked(event) {
-        this.moveCarousel("RIGHT");
-      },
-      moveCarousel(direction) {
-        let itemsLength = this.items.length;
-        let totalWidth = this.$refs["itemwrapper"].scrollWidth;
-  
-        let singleItemScroll = totalWidth / itemsLength;
-        let currentLeft = this.$refs["itemwrapper"].scrollLeft;
-        let tobeScroll = singleItemScroll;
-        switch (direction) {
-          case "LEFT": {
-            if (currentLeft - singleItemScroll < 0) {
-              tobeScroll = currentLeft;
-            }
-            this.sideScroll(-tobeScroll);
-            break;
-          }
-          case "RIGHT": {
-            if (currentLeft + singleItemScroll > totalWidth) {
-              tobeScroll = totalWidth - currentLeft;
-            }
-            this.sideScroll(tobeScroll);
-            break;
-          }
-        }
-      },
-      sideScroll(rangeInPixels) {
-        let element = this.$refs["itemwrapper"];
-  
-        if (element) {
-          var sequenceObj = {};
-          var seconds = 0.8;
-          var startingScrollPosition = element.scrollLeft;
-          sequenceObj.progress = (percentage) => {
-            element.scroll(
-              startingScrollPosition + easeInOutQuad(percentage) * rangeInPixels,
-              0
-            );
-          };
-          animate(sequenceObj, seconds);
-        }
-      },
+  },
+  methods: {
+    prevSlide() {
+      this.currentIndex = (this.currentIndex - 1 + this.items.length) % this.items.length;
     },
-    mounted() {},
-  };
-  </script>
-  
+    nextSlide() {
+      this.currentIndex = (this.currentIndex + 1) % this.items.length;
+    },
+  },
+};
+</script>
+
+<style scoped lang="less">
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  opacity: 0;
+}
+.pagination{
+display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  position: absolute;
+  bottom: 10px;
+  left: 70rem;
+  z-index: 100;
+}
+</style>
