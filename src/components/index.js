@@ -18,6 +18,11 @@ import NitrozenStepper from './NStepper';
 import NitrozenToggleBtn from './NToggleBtn';
 import NitrozenTooltip from './NTooltip';
 import NitrozenCustomForm from './NCustomForm';
+import NitrozenFooter from "./NFooter"
+import NitrozenCarousel from "./NCarousel"
+import NitrozenHeader from './NHeader';
+import NitrozenAccordion from './NAccordion'
+import NitrozenAccordionPanel from './NAccordionPanel';
 
 export {
     NitrozenAutocomplete,
@@ -40,4 +45,9 @@ export {
     NitrozenToggleBtn,
     NitrozenTooltip,
     NitrozenCustomForm,
+    NitrozenFooter,
+    NitrozenCarousel,
+    NitrozenHeader,
+    NitrozenAccordion,
+    NitrozenAccordionPanel
 }

@@ -1,6 +1,27 @@
 <template>
   <div id="app">
     <div class="main-div">
+<nitrozen-header avatar="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACCCAMAAAC93eDPAAAAMFBMVEXh4eGjo6OgoKDk5OS+vr6tra3T09PFxcXe3t7Pz8/b29u7u7vX19eoqKi4uLixsbHKbNcEAAACuklEQVR4nO2ay9brIAiFVbxEE+P7v+0xSZt1+jcXq2A7YE/amV9ABEEhWCwWi8VisVjEAgAxDOvPd9YXXie5Kmkv+lPApKNSakPIf6Ke+kKAGOVj+aeUHHtaAvxfgA3Cd2OA8QBghRh7MZwRLAxdAECfEmQG3cEOlwR9GOwVwCJLTQDmDsEQmwH8pRtWV1CHZrwjkDIOlAAFRqA2A8wlCDMlwlDgB2JP3EbkJsK4BFfgh+wJR+eJX0A4T1AvCIQJsyggaEPiFxCus+SOQJgtf2A7/sC58AunI6QShESapr6fKYs8QVsvlIQlfQF7bwVigPvdQF463h7StCXTU+nqNpU6AFwy9CI4Z+hHIIRWR/0FpfsRCJjMXwilTO9Wj0//d1qUTP1aLDuDCC49juuYXPhCy22hyBiTtVMQ32o8slgsFutYsOs7i4tgvXM6yzlvQ88JVV4qWDfHdR60K6fL2dnQgSN/u9dmWf2oapLSaE+atvPnu3S4+gtHLh6IbJHXf6vWzjBMpkBfX9h0NBI7pZDJIjvEfwTwgPB46x/Uy0UQaDU1hKsb3A1FwtgT4D51wQuDROi+lfV8LyBaR5eDaSTIDKap8TPEZoLM0NR8arfBymCqAQpbzgUM1R0wi0SQGSpbwlB/HrwhVDZkAxbAolBlhLLOf5nq5gNom3FFqNuQeLuxej8imqE6KhFO5wdB/RmNFhNV8bAKcLaDsg0JGyUwGwd2CAzNI8NmBoShZSMDyti0iQFpcAuFM9ojtcTCC0OoO6OUQbzWDTV1tBpRB5bZGR9f6LCcsDPA4STmFCAnJvwLPkxzqSWUnIkmNFB2wV8u9oTPOCat7rosivo5Mgg/xzMKpeLc41E2iMGPa8dLvXy8lGb0Q68R1db30yk+x2Mx6T4dvzeO9VX+9i6fB2QsFovFYrFYxPoH9ScZU9maJOIAAAAASUVORK5CYII=" logo="https://cdn-icons-png.flaticon.com/128/4494/4494477.png" SearchPlaceholder="Search in Jiomart">
+<template #links>
+  <div class="links">
+   <div v-for="(link,index) in Hlinks" :key="index">{{ link }}</div> 
+  </div>
+  
+</template>
+</nitrozen-header>
+
+<nitrozen-accordion-panel title="UMBRELLA150" class="accordian-pdp">
+<nitrozen-accordion></nitrozen-accordion>
+                    <div
+                      class="product-offer-panel-item-information-inner jm-body-xxs accordian-inner jm-pb-base text-break collapse"
+                      id="coupon_offer_desc_0"
+                    >
+                      Shop for Rs. 499 and get a Rs. 299 Umbrella Just for Rs.
+                      149 To redeem this offer Kindly add Opp Umbrella in the
+                      cart .*T&amp;C Apply
+                    </div>
+                  </nitrozen-accordion-panel>
+                  
       <div class="main-div space-between">
         <div>Searchable Dropdown</div>
         <nitrozen-dropdown
@@ -801,20 +822,225 @@
           >
         </template>
       </nitrozen-dialog>
+      <nitrozen-footer
+      logo="https://www.jiomart.com/assets/ds2web/jds-icons/jiomart-logo-icon.svg"
+      :links="footerLinks"
+      copyright=" © All rights reserved. Reliance
+            Retail Ltd."
+      >
+      <template #marketplace>
+        <div class="jm-heading-xxs jm-pb-base">Connect with us</div>
+          <div>
+            <a
+              v-for="(socialItem, index) in getSocialLinks"
+              :key="index"
+              href="socialItem.link"
+              class="jm-mr-base"
+            >
+              <img
+                :src="socialItem.icon"
+                :alt="socialItem.title"
+                class="three-p-logo"
+              />
+            </a>
+          </div>
+
+          <div class="jm-heading-xxs jm-pb-base jm-mt-l">Download the app</div>
+          <div>
+            <a
+              link="https://play.google.com/store/apps"
+              class="jm-mr-base"
+            >
+              <img
+                src="https://hdn-1.jiox0.de/jiox2/company/2/applications/61c050db47047572f4a55559/theme/pictures/free/original/theme-image-1641989250072.png"
+                alt=""
+                class="three-p-logo"
+              />
+            </a>
+            <a
+              link="https://www.apple.com/app-store/"
+              class="jm-mr-base"
+            >
+              <img
+                src="https://hdn-1.jiox0.de/jiox2/company/2/applications/61c050db47047572f4a55559/theme/pictures/free/original/theme-image-1641989250075.png"
+                alt=""
+                class="three-p-logo"
+              />
+            </a>
+          </div>
+
+      </template>
+      <template #footerBRight>
+            Best viewed on Microsoft Edge 81+, Mozilla Firefox 75+, Safari
+            5.1.5+, Google Chrome 80+
+      </template>
+    </nitrozen-footer>
+        <nitrozen-carousel :items="Products" prevButtonText="Previous" nextButtonText="Next" />
+      <!-- <div
+        class="item divider-v-md"
+        v-for="(item, index) in Products"
+        :key="index"
+      >
+      <img :src=item alt="images">
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
 import { countries } from "./countries";
-import {NitrozenRadio,NitrozenCheckBox,NitrozenButton} from "../components";
+import {NitrozenRadio,NitrozenCheckBox,NitrozenButton,NitrozenCarousel,NitrozenHeader} from "../components";
 export default {
   name: "App",
   components : {
-NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":NitrozenButton
+NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":NitrozenButton,"nitrozen-carousel":NitrozenCarousel,NitrozenHeader
   },
   data() {
     return {
+      footerLinks:[
+      {
+        subLinks: [
+          {
+            href: '#Mobile',
+            newTab: false,
+            title: 'Mobile'
+          },
+          {
+            href: '#Fiber',
+            newTab: false,
+            title: 'Fiber'
+          },
+          {
+            href: '#Business',
+            newTab: false,
+            title: 'Business'
+          },
+          {
+            href: '#Apps',
+            newTab: false,
+            title: 'Apps'
+          },
+          {
+            href: '#Shop',
+            newTab: false,
+            title: 'Shop'
+          }
+        ],
+        title: 'Our offerings'
+      },
+      {
+        subLinks: [
+          {
+            href: '#Explore-Support',
+            newTab: false,
+            title: 'Explore Support'
+          },
+          {
+            href: '#Locate-us',
+            newTab: false,
+            title: 'Locate us'
+          },
+          {
+            href: '#FAQ',
+            newTab: false,
+            title: 'FAQ'
+          },
+          {
+            href: '#Track-order',
+            newTab: false,
+            title: 'Track order'
+          },
+          {
+            href: '#Contact-us',
+            newTab: false,
+            title: 'Contact us'
+          }
+        ],
+        title: 'Support'
+      },
+      {
+        subLinks: [
+          {
+            href: '#Reliance-Industries',
+            newTab: false,
+            title: 'Reliance Industries'
+          },
+          {
+            href: '#Reliance-Foundation',
+            newTab: false,
+            title: 'Reliance Foundation'
+          },
+          {
+            href: '#JioLife',
+            newTab: false,
+            title: 'JioLife'
+          },
+          {
+            href: '#Careers',
+            newTab: false,
+            title: 'Careers'
+          },
+          {
+            href: '#Investor-relations',
+            newTab: false,
+            title: 'Investor relations'
+          }
+        ],
+        title: 'Our company'
+      },
+      {
+        subLinks: [
+          {
+            href: '#Get-Jio-SIM',
+            newTab: false,
+            title: 'Get Jio SIM'
+          },
+          {
+            href: '#Get-JioFiber',
+            newTab: false,
+            title: 'Get JioFiber'
+          },
+          {
+            href: '#Recharge',
+            newTab: false,
+            title: 'Recharge'
+          },
+          {
+            href: '#Pay-Bills',
+            newTab: false,
+            title: 'Pay Bills'
+          },
+          {
+            href: '#Login',
+            newTab: false,
+            title: 'Login'
+          }
+        ],
+        title: 'Useful links'
+      }
+    ]
+  ,
+      getSocialLinks : [
+        {
+          href: '#',
+          icon: "https://cdn-icons-png.flaticon.com/128/2111/2111463.png",
+          newTab: true,
+          title: 'IcFavorite'
+        },
+        {
+          href: '#',
+icon : "https://cdn-icons-png.flaticon.com/128/4494/4494475.png",
+          newTab: true,
+          title: 'IcFilter'
+        },
+        {
+          href: '#',
+icon : "https://cdn-icons-png.flaticon.com/128/4494/4494477.png",
+          newTab: true,
+          title: 'IcCamera'
+        },
+      ],
+      Products : ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1691612739_Aaj_Ki_Deals_Desktop.jpg?im=Resize=(1680,320)","https://www.jiomart.com/images/cms/aw_rbslider/slides/1692303288_1691645793_MAIN_BANNER_-_REVISED_.jpg?im=Resize=(1680,320)","https://www.jiomart.com/images/cms/aw_rbslider/slides/1692265739_Max_Discounts_On_Daily_Essentials_Desktop.jpg?im=Resize=(1680,320)","https://www.jiomart.com/images/cms/aw_rbslider/slides/1692775898_Accessories_Your_Devices_Mobile_.jpg?im=Resize=(1680,320)","https://www.jiomart.com/images/cms/aw_rbslider/slides/1692726084_Footwear_BestSellers_Desktop.jpg?im=Resize=(1680,320)"],
       tabArray: ["Item1", "Item2", "Item3"],
       multiSelect: [11,12,13,14,15,21,22,23,24,25],
       numberOfClick: 0,
@@ -901,6 +1127,7 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
           value: 25,
         },
       ],
+      Hlinks:['Link1','Link2'],
       dropdownItemsFiltered: [],
       selectedDropdown: "",
       selectedGroupDropdown: [],
@@ -1153,4 +1380,18 @@ body {
     background-color: green;
   }
 }
+
+.links{
+    display: flex;
+    padding-left: 0px;
+    align-items: flex-start;
+    gap: 32px;
+    color: var(--light-primary-inverse, #FFF);
+    font-family: JioType;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+    letter-spacing: -0.08px;
+  }
 </style>
