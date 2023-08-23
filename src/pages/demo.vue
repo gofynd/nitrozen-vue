@@ -9,6 +9,19 @@
   
 </template>
 </nitrozen-header>
+
+<nitrozen-accordion-panel title="UMBRELLA150" class="accordian-pdp">
+<nitrozen-accordion></nitrozen-accordion>
+                    <div
+                      class="product-offer-panel-item-information-inner jm-body-xxs accordian-inner jm-pb-base text-break collapse"
+                      id="coupon_offer_desc_0"
+                    >
+                      Shop for Rs. 499 and get a Rs. 299 Umbrella Just for Rs.
+                      149 To redeem this offer Kindly add Opp Umbrella in the
+                      cart .*T&amp;C Apply
+                    </div>
+                  </nitrozen-accordion-panel>
+                  
       <div class="main-div space-between">
         <div>Searchable Dropdown</div>
         <nitrozen-dropdown
