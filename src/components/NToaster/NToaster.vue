@@ -8,9 +8,9 @@
 
       <div class="content-toaster">
 
-        <div class="toast-title">{{ title }}</div>
+        <div v-if="title" class="toast-title">{{ title }}</div>
 
-        <div class="toast-description">{{ description }}</div>
+        <div v-if="description" class="toast-description">{{ description }}</div>
 
       </div>
 
@@ -88,7 +88,7 @@ export default {
         if (this.toastType !== 'action') {
           setTimeout(() => {
             this.hideToast();
-          }, 5000);
+          }, 10000);
         }
       }
     },

@@ -10,9 +10,9 @@
       <nitrozen-icon v-if="icon" :name="icon" color="#fff"></nitrozen-icon>
 
       <div class="content-nudge">
-        <div class="nudge-title">{{ title }}</div>
+        <div v-if="title" class="nudge-title">{{ title }}</div>
 
-        <div class="nudge-description">{{ description }}</div>
+        <div v-if="description" class="nudge-description">{{ description }}</div>
       </div>
 
       <button>
@@ -103,7 +103,7 @@ export default {
         if (this.nudgeType !== "action") {
           setTimeout(() => {
             this.hideToast();
-          }, 5000);
+          }, 10000);
         }
       }
     },

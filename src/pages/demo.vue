@@ -289,6 +289,10 @@
         @headerPrefixClickEvent="handleHeaderPrefixClick"
       >
       <p>helo</p>
+      <template v-slot:additionalContent>
+        <p>welcome</p>
+      </template>
+      
       </nitrozen-sidepanel>
     </div>
     <div>
