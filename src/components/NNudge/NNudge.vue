@@ -7,7 +7,7 @@
     @click="handleClick"
   >
     <div class="nudge-message">
-      <nitrozen-icon v-if="icon" :name="icon" color="#fff"></nitrozen-icon>
+       <nitrozen-icon v-if="icon" :name="icon" color="#3535F3" :size="24"></nitrozen-icon>
 
       <div class="content-nudge">
         <div v-if="title" class="nudge-title">{{ title }}</div>
@@ -16,10 +16,10 @@
       </div>
 
       <button>
-        <nitrozen-icon
+       <nitrozen-icon
           name="close"
-          color="#fff"
-          :size="16"
+          color="#3535F3"
+          :size="24"
           @click="handleCancelClick"
         ></nitrozen-icon>
       </button>
@@ -142,11 +142,11 @@ export default {
 @import '../../../src/base/variable.less';
 .nudge {
   visibility: visible;
-  min-width: 360px;
-  margin-right: 24px;
-  margin-top: 24px;
-  background-color: @ColorPrimaryGrey80;
-  color: @WhiteColor;
+  min-width: 312px;
+  max-width: 484px;
+  background-color: @WhiteColor;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+  color: @BlackColor;
   text-align: center;
   border-radius: 16px;
   padding: 16px;
@@ -154,7 +154,7 @@ export default {
   z-index: 70;
   font-size: 12px;
   letter-spacing: -0.06px;
-  top: 0;
+  top: 5%;
   right: 5%;
   animation: nfadein 0.5s, nfadeout 0.5s 2.5s;
 
@@ -188,19 +188,27 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding-bottom: 16px;
 
    .content-nudge {
       text-align: left;
-      font-size: 14px;
       margin: 0px 12px;
 
-      .toast-title {
+      .nudge-title {
           font-size: 16px;
-          font-weight: 600;
-          padding-bottom: 4px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: -0.08px;
+        padding-bottom: 4px;
         }
 
       .nudge-description {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.07px;
           max-width: 320px;
 
            i{
@@ -228,16 +236,9 @@ export default {
       justify-content: flex-end;
       max-width: 360px;
 
-      button {
-        background-color: transparent;
-        color: @WhiteColor;
-        border: 1px solid @WhiteColor;
-        border-radius: 24px;
-        border-width: 1px;
-        max-height: 2.5em;
-        padding: 4px 16px;
-        margin: 12px 8px 0px 8px;
-      }
+     button{
+      margin: 0px 4px;
+    }
     }
 
 }
