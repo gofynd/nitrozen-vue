@@ -39,6 +39,9 @@ import NitrozenSidepanel from './NSidepanel';
 import NitrozenNudge from './NNudge';
 import NitrozenBottomsheet from './NBottomsheet';
 import NitrozenBnb from './NBnb';
+import NitrozenScrollbar from './NScrollbar';
+import NitrozenSpace from './NSpace';
+
 
 export {
     NitrozenAutocomplete,
@@ -81,5 +84,7 @@ export {
     NitrozenSidepanel,
     NitrozenNudge,
     NitrozenBottomsheet,
-    NitrozenBnb
+    NitrozenBnb,
+    NitrozenScrollbar,
+    NitrozenSpace
 }
