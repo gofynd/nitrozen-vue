@@ -188,7 +188,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-bottom: 16px;
 
    .content-nudge {
       text-align: left;
@@ -235,6 +234,7 @@ export default {
       display:flex;
       justify-content: flex-end;
       max-width: 360px;
+      padding-top: 16px;
 
      button{
       margin: 0px 4px;

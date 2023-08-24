@@ -310,7 +310,7 @@
     ref="bottomSheet"
     controlType="normal"
   >
-  <p>
+  <div>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Latin literature from 45 BC, making
           it over 2000 years old. Richard McClintock, a Latin professor at
@@ -323,7 +323,7 @@
           theory of ethics, very popular during the Renaissance. The first line
           of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
           section 1.10.32.
-        </p>
+        </div>
   </nitrozen-bottomsheet>
   <div class="hover-new">
       <nitrozen-button @click="openBottomSheetStepper()">Open Bottom Sheet Stepper</nitrozen-button>
@@ -337,8 +337,8 @@
       controlType="stepper"
     >
     <template v-slot:dynamicContent="props">
-      <p v-if="props.currentStep === 0">Step 1 content</p>
-    <p v-if="props.currentStep === 1">Step 2 content</p>
+      <div v-if="props.currentStep === 0">Step 1 content</div>
+    <div v-if="props.currentStep === 1">Step 2 content</div>
   </template>
     </nitrozen-bottomsheet>
     </div>
