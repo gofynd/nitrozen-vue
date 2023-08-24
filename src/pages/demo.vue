@@ -1246,6 +1246,13 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
         title: 'Favourite'
       },
         {
+        'aria-label': 'Orders',
+        href: '#',
+        icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',          onClick: function noRefCheck() {},
+        onClick: function noRefCheck(){},
+        title: 'Orders'
+      },
+      {
         'aria-label': 'Menu',
         href: '#',
         icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',          onClick: function noRefCheck() {},
