@@ -1019,6 +1019,13 @@
       </div>
 
       <div class="main-div space-between">
+        <nitrozen-badge :fill="true">Normal</nitrozen-badge>
+        <nitrozen-badge :fill="true" state="info"  size="small">Small</nitrozen-badge>
+        <nitrozen-badge :fill="true" state="info" size="medium">Medium</nitrozen-badge>
+        <nitrozen-badge :fill="true" state="info" size="large" >Large</nitrozen-badge>
+      </div>
+
+      <div class="main-div space-between">
         <nitrozen-dropdown
           label="Custom Dropdown"
           :items="dropdownItems"
