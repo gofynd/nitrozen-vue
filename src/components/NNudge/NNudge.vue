@@ -27,13 +27,14 @@
 
     <div class="nudge-cta">
       <nitrozen-button
-        rounded
+      rounded 
+      theme="primary"
         v-if="showPrimaryButton"
         @click="handlePrimaryClick"
         >{{ primaryButtonLabel }}</nitrozen-button
       >
       <nitrozen-button
-        rounded
+      rounded
         v-if="showSecondaryButton"
         @click="handleSecondaryClick"
         >{{ secondaryButtonLabel }}</nitrozen-button
@@ -130,7 +131,7 @@ export default {
         if (newVal && this.nudgeType !== 'action') {
           setTimeout(() => {
             this.$emit('onClose');
-          }, 3000);
+          }, 10000);
         }
       },
     },

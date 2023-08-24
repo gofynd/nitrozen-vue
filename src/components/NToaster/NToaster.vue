@@ -19,7 +19,7 @@
     </div>
 
     <div class="toaster-cta">
-    <nitrozen-button rounded  v-if="showPrimaryButton" @click="onClickPrimary">{{ primaryButtonLabel }}</nitrozen-button>
+    <nitrozen-button rounded theme="primary"  v-if="showPrimaryButton" @click="onClickPrimary">{{ primaryButtonLabel }}</nitrozen-button>
     <nitrozen-button rounded v-if="showSecondaryButton" @click="onClickSecondary">{{ secondaryButtonLabel }}</nitrozen-button>
     </div>
 
