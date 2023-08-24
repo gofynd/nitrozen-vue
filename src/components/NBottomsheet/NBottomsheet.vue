@@ -2,13 +2,11 @@
   <div v-if="show" class="bottom-sheet-overlay" @click="onClose">
     <transition name="bottom-sheet">
       <div class="bottom-sheet-content" @click.stop>
-        <button
-          v-if="shouldShowCloseButton"
-          class="bottom-sheet-close"
-          @click="onClose"
-        >
-          <nitrozen-icon name="close" :size="24"></nitrozen-icon>
-        </button>
+        <div v-if="shouldShowCloseButton" class="bottom-sheet-close">
+          <button @click="onClose">
+            <nitrozen-icon name="close" :size="24"></nitrozen-icon>
+          </button>
+        </div>
         <div v-else-if="controlType === 'stepper'" class="bottom-sheet-stepper">
           <button
             class="bottom-sheet-back"
@@ -29,8 +27,8 @@
           </button>
         </div>
         <div class="bottom-sheet-header">
-          <h3 v-if="title">{{ title }}</h3>
-          <p v-if="description">{{ description }}</p>
+          <div v-if="title" class="title">{{ title }}</div>
+          <div v-if="description" class="description">{{ description }}</div>
         </div>
         <div class="bottom-sheet-inner-content">
           <slot></slot>
@@ -41,35 +39,33 @@
   </div>
 </template>
 
-
-
 <script>
 import NIcon from '../NIcon/NIcon.vue';
 export default {
-name: 'nitrozen-bottomsheet',
-components: {
-'nitrozen-icon': NIcon,
-},
-props: {
-  title: String,
-  description: String,
-  close: Boolean,
-  controlType: String,
-  stepperConfig: Object, // Add stepperConfig prop
-},
-data() {
-  return {
-    show: false,
-    currentStep: 0,
-  };
-},
-computed: {
+  name: 'nitrozen-bottomsheet',
+  components: {
+    'nitrozen-icon': NIcon,
+  },
+  props: {
+    title: String,
+    description: String,
+    close: Boolean,
+    controlType: String,
+    stepperConfig: Object, // Add stepperConfig prop
+  },
+  data() {
+    return {
+      show: false,
+      currentStep: 0,
+    };
+  },
+  computed: {
     shouldShowCloseButton() {
       return this.controlType === 'normal' && this.close;
     },
   },
-methods: {
-  open() {
+  methods: {
+    open() {
       this.show = true;
     },
     onClose() {
@@ -85,7 +81,7 @@ methods: {
         this.currentStep++;
       }
     },
-},
+  },
 };
 </script>
 
@@ -170,14 +166,9 @@ methods: {
 .bottom-sheet {
   /* ... Your existing styles ... */
 
-  &-back {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 48px;
-    margin-top: 24px;
-    margin-left: 16px;
-    padding: 12px;
+  &-back,
+  &-next {
+    padding: 4px;
     border: none;
     background: transparent;
 
@@ -185,86 +176,121 @@ methods: {
       border-radius: 24px;
       background-color: @ColorPrimaryGrey20;
       cursor: pointer;
-      padding: 12px;
+      padding: 4px;
     }
   }
 
   &-step-indicator {
-    margin: 0 auto;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.07px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.65);
   }
+  &-stepper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+  }
+
   &-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: @ColorPrimaryGrey80;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  z-index: 9999;
-}
-
-&-content {
-  background-color: @WhiteColor;
-  border-radius: 24px 24px 0 0;
-  padding: 40px 24px 24px 24px;
-  width: 100%;
-  position: absolute;
-  max-width: 360px;
-  right: 0;
-  bottom: 0;
-  margin-right: 60px;
-
-  @media only screen and (max-width: 767px)  {
-    max-width:100%;
-    width:100%;
-    margin-right: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: @ColorPrimaryGrey80;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 9999;
   }
-}
 
-&-header {
-  text-align: left;
-  margin-bottom: 10px;
-}
+  &-content {
+    background-color: @WhiteColor;
+    border-radius: 24px 24px 0 0;
+    padding: 24px;
+    width: 100%;
+    position: absolute;
+    max-width: 360px;
+    right: 0;
+    bottom: 0;
+    margin-right: 60px;
 
-&-inner-content{
-  margin-bottom: 20px;
-}
+    @media only screen and (max-width: 767px) {
+      max-width: 100%;
+      width: 100%;
+      margin-right: 0px;
+    }
+  }
 
-&-actions {
-  display: flex;
-  justify-content: flex-end;
-}
+  &-header {
+    text-align: left;
 
-&-enter-active, &-leave-active {
-  transition: opacity 0.3s, transform 0.3s;
-}
+    .title {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 28px;
+      letter-spacing: -0.72px;
+    }
 
-&-close{
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 48px;
-  margin-top: 24px;
-  margin-right: 16px;
-  padding: 12px;
-  border: none;
-  background: transparent;
+    .description {
+      color: rgba(0, 0, 0, 0.65);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.07px;
+    }
+  }
 
-  &:hover{
-      border-radius: 24px;
-      background-color: @ColorPrimaryGrey20;
-      cursor: pointer;
+  &-inner-content {
+    padding: 24px 0px;
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.08px;
+  }
+
+  &-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  &-close {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    button {
+      border: none;
+      background: transparent;
       padding: 12px;
-  }
-}
 
-&-enter, &-leave-to {
-  opacity: 0;
-  transform: translateY(100%);
-}
+      &:hover {
+        border-radius: 24px;
+        background-color: @ColorPrimaryGrey20;
+        cursor: pointer;
+        padding: 12px;
+      }
+    }
+  }
+
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
 }
 </style>

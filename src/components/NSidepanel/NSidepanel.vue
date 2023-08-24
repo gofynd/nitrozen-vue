@@ -157,8 +157,8 @@ export default {
     background: transparent;
 
     &:hover {
-      background-color: @ColorPrimaryGrey20;
-      border-radius: 24px;
+      //background-color: @ColorPrimaryGrey20;
+      //border-radius: 24px;
       cursor: pointer;
     }
   }
