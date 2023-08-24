@@ -6,6 +6,7 @@
       :href="item.href"
       :aria-label="item['aria-label']"
       @click="handleItemClick(item)"
+      :class="{ active: item.isActive }"
     >
       <div class="icon-wrapper">
         <div v-html="item.icon"></div>
@@ -26,10 +27,14 @@ export default {
   },
   methods: {
     handleItemClick(item) {
-      if (!item.disabled && item.onClick) {
-        item.onClick();
-      }
-    },
+  this.items.forEach(navItem => {
+    navItem.isActive = navItem === item;
+  });
+  
+  if (!item.disabled && item.onClick) {
+    item.onClick();
+  }
+},
   },
 };
 </script>
@@ -56,7 +61,14 @@ export default {
     align-items: center;
     text-decoration: none;
     color: @TypographySecondaryColor;
-
+    &.active {
+    .icon-wrapper {
+      color: @DialogNegativeColor; 
+    }
+    .title {
+      color: @BlackColor; 
+    }
+  }
     .icon-wrapper {
       width: 24px;
       height: 24px;
