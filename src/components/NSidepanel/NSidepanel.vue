@@ -62,6 +62,18 @@ export default {
       this.$emit("headerPrefixClickEvent");
     },
   },
+  watch: {
+    isOpen(newValue) {
+      if (newValue) {
+        document.body.style.overflow = "hidden"; 
+      } else {
+        document.body.style.overflow = "auto"; 
+      }
+    },
+  },
+  beforeDestroy() {
+    document.body.style.overflow = "auto"; 
+  },
 };
 </script>
 

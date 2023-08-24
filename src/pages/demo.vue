@@ -236,7 +236,8 @@
   </nitrozen-divider>
   </div>
   </nitrozen-grid>
-
+<div>
+  <nitrozen-heading level="h5" >Notification</nitrozen-heading>
 
   <nitrozen-button  @click="showToastNotification()">Show Toast Notification</nitrozen-button>
 
@@ -254,7 +255,9 @@
   @onClickSecondary="onClickSecondary"
   />
 
-  <br/>
+</div>
+<br />
+<div>
   <nitrozen-button  @click="showNudgeNotification()">Show Nudge Notification</nitrozen-button>
         <nitrozen-nudge
         :showNudge="showNudge"
@@ -269,6 +272,8 @@
       @onClickPrimary="onClickPrimary"
       @onClickSecondary="onClickSecondary"
       />
+</div>
+
 
       <div>
       <nitrozen-heading level="h5" >SidePanel</nitrozen-heading>
@@ -325,6 +330,7 @@
           section 1.10.32.
         </p>
   </nitrozen-bottomsheet>
+  <br />
   <div class="hover-new">
       <nitrozen-button @click="openBottomSheetStepper()">Open Bottom Sheet Stepper</nitrozen-button>
     </div>
