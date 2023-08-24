@@ -113,9 +113,9 @@
         </nitrozen-avatar>
       </div>
       <div class="main-div">
-        <nitrozen-stepitem stepNumber="1" title="Step 1">
+        <nitrozen-stepitem :stepNumber="1" title="Step 1">
           </nitrozen-stepitem>
-          <nitrozen-stepitem stepNumber="2" title="Step 2">
+          <nitrozen-stepitem :stepNumber="2" title="Step 2">
         </nitrozen-stepitem>
       </div>
       <div class="main-div">
@@ -1808,10 +1808,10 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
     onCloseNudge() {
       this.showNudge = false;
     },
-    onClickPrimary() {
+    handlePrimaryAction() {
       console.log('Primary button clicked.');
     },
-    onClickSecondary() {
+    handleSecondaryAction() {
       console.log('Secondary button clicked.');
     },
     showPanel() {

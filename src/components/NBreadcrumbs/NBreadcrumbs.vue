@@ -1,7 +1,7 @@
 <template>
     <nav class="breadcrumbs" aria-label="breadcrumb">
       <div class="breadcrumb-item" v-for="(crumb, index) in breadcrumbs" :key="index">
-        <router-link :to="crumb.to" :style="getLabelStyle(crumb)">{{ crumb.label }}</router-link>
+        <a :to="crumb.to" :style="getLabelStyle(crumb)">{{ crumb.label }}</a>
         <span v-if="index < breadcrumbs.length - 1" class="separator">{{ separator }}</span>
       </div>
     </nav>
