@@ -1,40 +1,57 @@
-
 <template>
-  <div v-if="showToast" class="toaster" :class="toastType" :key="toastKey" @click="handleClick">
-
+  <div
+    v-if="showToast"
+    class="toaster"
+    :class="toastType"
+    :key="toastKey"
+    @click="handleClick"
+  >
     <div class="toaster-message">
-
-      <nitrozen-icon v-if="icon" :name="icon" color="#fff"></nitrozen-icon>
+      <nitrozen-icon v-if="icon" :name="icon" color="#3535F3" :size="24"></nitrozen-icon>
 
       <div class="content-toaster">
-
         <div v-if="title" class="toast-title">{{ title }}</div>
 
-        <div v-if="description" class="toast-description">{{ description }}</div>
-
+        <div v-if="description" class="toast-description">
+          {{ description }}
+        </div>
       </div>
 
-      <button><nitrozen-icon name="close" color="#fff" :size="16" @click="handleCancelClick"></nitrozen-icon></button>
-
+      <button>
+        <nitrozen-icon
+          name="close"
+          color="#3535F3"
+          :size="24"
+          @click="handleCancelClick"
+        ></nitrozen-icon>
+      </button>
     </div>
 
     <div class="toaster-cta">
-    <nitrozen-button rounded theme="primary"  v-if="showPrimaryButton" @click="onClickPrimary">{{ primaryButtonLabel }}</nitrozen-button>
-    <nitrozen-button rounded v-if="showSecondaryButton" @click="onClickSecondary">{{ secondaryButtonLabel }}</nitrozen-button>
+      <nitrozen-button
+        rounded
+        v-if="showPrimaryButton"
+        @click="onClickPrimary"
+        >{{ secondaryButtonLabel }}</nitrozen-button
+      >
+      <nitrozen-button
+        rounded
+        v-if="showSecondaryButton"
+        @click="onClickSecondary"
+        >{{ primaryButtonLabel }}</nitrozen-button
+      >
     </div>
-
   </div>
 </template>
-  
-<script>
 
+<script>
 import NIcon from '../NIcon/NIcon.vue';
-import  NBtn  from '../NBtn/NBtn.vue';
+import NBtn from '../NBtn/NBtn.vue';
 
 export default {
   name: 'nitrozen-toaster',
   components: {
-    'nitrozen-button':NBtn,
+    'nitrozen-button': NBtn,
     'nitrozen-icon': NIcon,
   },
   props: {
@@ -115,23 +132,23 @@ export default {
         if (newVal && this.toastType !== 'action') {
           setTimeout(() => {
             this.$emit('onClose');
-          }, 3000);
+          }, 33000);
         }
       },
     },
   },
 };
 </script>
-  
+
 <style lang="less">
 @import '../../../src/base/variable.less';
 .toaster {
   visibility: visible;
-  min-width: 360px;
-  margin-left: 24px;
-  margin-bottom: 24px;
-  background-color: @ColorPrimaryGrey80;
-  color: @WhiteColor;
+  min-width: 312px;
+  max-width: 484px;
+  background-color: @WhiteColor;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+  color: @BlackColor;
   text-align: center;
   border-radius: 16px;
   padding: 16px;
@@ -139,7 +156,7 @@ export default {
   z-index: 70;
   font-size: 12px;
   letter-spacing: -0.06px;
-  bottom: 0;
+  bottom: 8%;
   left: 5%;
   animation: tfadein 0.5s, tfadeout 0.5s 2.5s;
 
@@ -153,45 +170,52 @@ export default {
   }
 
   .success {
-  background-color: @ColorFeedbackSuccess50;
+    background-color: @ColorFeedbackSuccess50;
   }
 
   .warning {
-  background-color: @ColorFeedbackWarning50;
+    background-color: @ColorFeedbackWarning50;
   }
 
   .error {
-  background-color: @ColorFeedbackError50;
+    background-color: @ColorFeedbackError50;
   }
 
-
   .action {
-  background-color: #17a2b8;
+    background-color: #17a2b8;
   }
 
   &-message {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 16px;
 
-   .content-toaster {
+    .content-toaster {
       text-align: left;
-      font-size: 14px;
       margin: 0px 12px;
 
       .toast-title {
-          font-size: 16px;
-          font-weight: 600;
-          padding-bottom: 4px;
-        }
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: -0.08px;
+        padding-bottom: 4px;
+      }
 
       .toast-description {
-          max-width: 320px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.07px;
+        max-width: 320px;
 
-           i{
-              margin-right: 8px;
-            }
+        i {
+          margin-right: 8px;
         }
+      }
     }
 
     button {
@@ -199,7 +223,7 @@ export default {
       color: @WhiteColor;
       position: absolute;
       right: 0;
-      margin-right: 12px;
+      margin-right: 8px;
       padding: 6px 12px;
       border-radius: 4px;
       border: none;
@@ -209,34 +233,35 @@ export default {
   }
 
   &-cta {
-      display:flex;
-      justify-content: flex-end;
-      max-width: 360px;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 360px;
 
-      button {
-        background-color: transparent;
-        color: @WhiteColor;
-        border: 1px solid @WhiteColor;
-        border-radius: 24px;
-        border-width: 1px;
-        max-height: 2.5em;
-        padding: 4px 16px;
-        margin: 12px 8px 0px 8px;
-      }
+    button{
+      margin: 0px 4px;
     }
-
+  }
 }
 
-
 @keyframes tfadein {
-from {left: 0; opacity: 0;}
-to {left: 5%; opacity: 1;}
+  from {
+    left: 0;
+    opacity: 0;
+  }
+  to {
+    left: 5%;
+    opacity: 1;
+  }
 }
 
 @keyframes tfadeout {
-from {left: 5%; opacity: 1;}
-to {left: 0; opacity: 0;}
+  from {
+    left: 5%;
+    opacity: 1;
+  }
+  to {
+    left: 0;
+    opacity: 0;
+  }
 }
-
 </style>
-  
