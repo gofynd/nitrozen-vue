@@ -277,7 +277,7 @@
           </div>
       <!-- Use the SidePanel component with its props -->
       <nitrozen-sidepanel
-        header="panelHeader"
+        header="Side Panel"
         :showClose="true"
         :isOpen="isPanelOpen"
         direction="left"

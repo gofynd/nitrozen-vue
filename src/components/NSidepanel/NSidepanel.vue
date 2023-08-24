@@ -14,7 +14,7 @@
           <nitrozen-icon
             v-if="icon"
             :name="icon"
-            color="white"
+            color="#ffffff"
             :size="24"
           ></nitrozen-icon>
           <div class="side-panel-header-text">{{ header }}</div>
