@@ -14,13 +14,13 @@
           <nitrozen-icon
             v-if="icon"
             :name="icon"
-            color="white"
+            color="#fff"
             :size="24"
           ></nitrozen-icon>
           <div class="side-panel-header-text">{{ header }}</div>
         </div>
         <button class="side-panel-close" @click="emitCloseEvent">
-          <nitrozen-icon name="close" :size="24"></nitrozen-icon>
+          <nitrozen-icon name="close" color="#fff" :size="24"></nitrozen-icon>
         </button>
       </div>
       <div class="side-panel-content">

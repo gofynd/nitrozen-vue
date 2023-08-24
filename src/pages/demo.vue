@@ -308,6 +308,7 @@
     description="Text"
     :close="true"
     ref="bottomSheet"
+    controlType="normal"
   >
   <p>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
@@ -324,6 +325,22 @@
           section 1.10.32.
         </p>
   </nitrozen-bottomsheet>
+  <div class="hover-new">
+      <nitrozen-button @click="openBottomSheetStepper()">Open Bottom Sheet Stepper</nitrozen-button>
+    </div>
+    <nitrozen-bottomsheet
+      title="Your Jio Account"
+      description="Text"
+      :close="true"
+      ref="bottomSheetStepper"
+      :stepperConfig="stepperConfig"
+      controlType="stepper"
+    >
+    <template v-slot:dynamicContent="props">
+      <p v-if="props.currentStep === 0">Step 1 content</p>
+    <p v-if="props.currentStep === 1">Step 2 content</p>
+  </template>
+    </nitrozen-bottomsheet>
     </div>
     <nitrozen-heading level="h5" >Custom Scrollbar</nitrozen-heading>
     
@@ -1443,6 +1460,15 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
       secondaryButtonLabel: 'Secondary',
       description:"This is a notification message",
       isPanelOpen: false,
+      sheetContent: [
+        "Dynamic Content 1",
+        "Dynamic Content 2",
+      ],
+      stepperConfig: {
+        activeStep: 0,
+        onBack: this.onBackMethod, 
+        totalStep: 2
+      }
     };
   },
   mounted() {
@@ -1594,11 +1620,23 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
       this.isPanelOpen = false;
     },
     openBottomSheet() {
-      this.$refs.bottomSheet.open();
+      if (this.$refs.bottomSheet) {
+        this.$refs.bottomSheet.open(); // Call the open method
+      }
+    },
+    openBottomSheetStepper() {
+      if (this.$refs.bottomSheetStepper) {
+        this.$refs.bottomSheetStepper.open(); // Call the open method
+      }
     },
     handleHeaderPrefixClick() {
       // Handle the header prefix click event here
     },
+    onBackMethod() {
+      if (this.stepperConfig.activeStep > 0) {
+        this.stepperConfig.activeStep--;
+      }
+    }
   },
 };
 </script>
