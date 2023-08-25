@@ -315,4 +315,13 @@ export default {
     transform: translateY(100%);
   }
 }
+.bottom-sheet-buttons{
+
+display: flex;
+
+flex-direction: column;
+
+gap:16px;
+
+}
 </style>
