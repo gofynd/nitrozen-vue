@@ -35,6 +35,7 @@
       >
       <nitrozen-button
       rounded
+       theme="primary"
         v-if="showSecondaryButton"
         @click="handleSecondaryClick"
         >{{ secondaryButtonLabel }}</nitrozen-button

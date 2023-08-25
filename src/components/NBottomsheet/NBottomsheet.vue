@@ -8,21 +8,13 @@
           </button>
         </div>
         <div v-else-if="controlType === 'stepper'" class="bottom-sheet-stepper">
-          <button
-            class="bottom-sheet-back"
-            @click="goToPreviousStep"
-            v-if="currentStep > 0"
-          >
+          <button class="bottom-sheet-back" @click="goToPreviousStep" v-if="currentStep > 0">
             <nitrozen-icon name="arrow_back" :size="24"></nitrozen-icon>
           </button>
           <div class="bottom-sheet-step-indicator">
             {{ currentStep + 1 }}/{{ stepperConfig.totalStep }}
           </div>
-          <button
-            class="bottom-sheet-next"
-            @click="goToNextStep"
-            v-if="currentStep < stepperConfig.totalStep - 1"
-          >
+          <button class="bottom-sheet-next" @click="goToNextStep" v-if="currentStep < stepperConfig.totalStep - 1">
             <nitrozen-icon name="arrow_next" :size="24"></nitrozen-icon>
           </button>
         </div>
@@ -34,6 +26,23 @@
           <slot></slot>
           <slot name="dynamicContent" :currentStep="currentStep"></slot>
         </div>
+        <div class="bottom-sheet-buttons">
+          <nitrozen-button
+      rounded 
+      theme="primary"
+      size="large"
+        v-if="showPrimaryButton"
+        @click="onPrimaryButtonClick"
+        >{{ primaryButtonLabel }}</nitrozen-button
+      >
+      <nitrozen-button
+      rounded
+      size="large"
+        v-if="showSecondaryButton"
+        @click="onSecondaryButtonClick"
+        >{{ secondaryButtonLabel }}</nitrozen-button
+      >
+        </div>
       </div>
     </transition>
   </div>
@@ -41,17 +50,23 @@
 
 <script>
 import NIcon from '../NIcon/NIcon.vue';
+import  NBtn  from '../NBtn/NBtn.vue';
 export default {
   name: 'nitrozen-bottomsheet',
   components: {
     'nitrozen-icon': NIcon,
+    'nitrozen-button':NBtn,
   },
   props: {
     title: String,
     description: String,
     close: Boolean,
     controlType: String,
-    stepperConfig: Object, // Add stepperConfig prop
+    stepperConfig: Object,
+    showPrimaryButton: Boolean,
+    primaryButtonLabel: String,
+    showSecondaryButton: Boolean,
+    secondaryButtonLabel: String,
   },
   data() {
     return {
@@ -80,6 +95,12 @@ export default {
       if (this.currentStep < this.stepperConfig.totalStep - 1) {
         this.currentStep++;
       }
+    },
+    onPrimaryButtonClick() {
+      this.$emit('primaryButtonClick');
+    },
+    onSecondaryButtonClick() {
+      this.$emit('secondaryButtonClick');
     },
   },
 };
@@ -190,6 +211,7 @@ export default {
     align-items: center;
     color: rgba(0, 0, 0, 0.65);
   }
+
   &-stepper {
     display: flex;
     justify-content: space-between;
