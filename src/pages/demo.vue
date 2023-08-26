@@ -142,14 +142,14 @@
 
    <!-- venkat -->
 <div>
-    <nitrozen-heading level="h5" size="m">Heading</nitrozen-heading>
-    <nitrozen-heading level="h1"  color="gray" size="l">JioMart Main Heading</nitrozen-heading>
+    <nitrozen-heading level="h5" color="light-feedback-error-80" size="m">Heading</nitrozen-heading>
+    <nitrozen-heading level="h1"  color="secondary-50" size="l">JioMart Main Heading</nitrozen-heading>
     <br />
-    <nitrozen-heading level="h5" >Text</nitrozen-heading>
-    <nitrozen-text level="p" color="#666666" size="body-xs">JioMart Paragraph text</nitrozen-text>
+    <nitrozen-heading level="h5" color="primary-60">Text</nitrozen-heading>
+    <nitrozen-text level="p" color="primary-60" size="body-xs">JioMart Paragraph text</nitrozen-text>
     <br />
-    <nitrozen-heading level="h5" >Grid View</nitrozen-heading>
-    <nitrozen-heading level="h5" size='s'>Grid View - 4 column</nitrozen-heading>
+    <nitrozen-heading level="h5" color="secondary-50">Grid View</nitrozen-heading>
+    <nitrozen-heading level="h5" color="secondary-50" size='s'>Grid View - 4 column</nitrozen-heading>
     <nitrozen-grid gap="30px" template="1fr 1fr 1fr 1fr" templateMobile="1fr" templateTablet="1fr 1fr">
         <div class="story-box">
           <div>Eu proident velit cupidatat proident eiusmod ex consequat.</div>
@@ -236,9 +236,10 @@
   </nitrozen-divider>
   </div>
   </nitrozen-grid>
+<div>
+  <nitrozen-heading level="h5" >Notification</nitrozen-heading>
 
-
-  <nitrozen-button  @click="showToastNotification()">Show Toast Notification</nitrozen-button>
+  <nitrozen-button rounded theme="primary" @click="showToastNotification()">Show Toast Notification</nitrozen-button>
 
   <nitrozen-toaster
   :showToast="showToast"
@@ -254,8 +255,10 @@
   @onClickSecondary="onClickSecondary"
   />
 
-  <br/>
-  <nitrozen-button  @click="showNudgeNotification()">Show Nudge Notification</nitrozen-button>
+</div>
+<br />
+<div>
+  <nitrozen-button rounded theme="primary"  @click="showNudgeNotification()">Show Nudge Notification</nitrozen-button>
         <nitrozen-nudge
         :showNudge="showNudge"
         :title="notificationMessage"
@@ -269,6 +272,8 @@
       @onClickPrimary="onClickPrimary"
       @onClickSecondary="onClickSecondary"
       />
+</div>
+
 
       <div>
       <nitrozen-heading level="h5" >SidePanel</nitrozen-heading>
@@ -277,17 +282,22 @@
           </div>
       <!-- Use the SidePanel component with its props -->
       <nitrozen-sidepanel
-        header="panelHeader"
+        header="Side Panel"
         :showClose="true"
         :isOpen="isPanelOpen"
         direction="left"
         :disableTransition="false"
         :maxWidth="true"
+        icon="profile"
         className="test-class"
         @onClose="closePanel"
         @headerPrefixClickEvent="handleHeaderPrefixClick"
       >
       <p>helo</p>
+      <template v-slot:additionalContent>
+        <p>welcome</p>
+      </template>
+      
       </nitrozen-sidepanel>
     </div>
     <div>
@@ -303,23 +313,89 @@
     description="Text"
     :close="true"
     ref="bottomSheet"
+    controlType="normal"
+    :showPrimaryButton="true"
+    primaryButtonLabel="Primary !"
+    :showSecondaryButton="true"
+    secondaryButtonLabel="Secondary !"
+    @primaryButtonClick="onClickPrimary"
+    @secondaryButtonClick="onClickSecondary"
   >
-  <p>
+  <div>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Latin literature from 45 BC, making
           it over 2000 years old. Richard McClintock, a Latin professor at
           Hampden-Sydney College in Virginia, looked up one of the more obscure
           Latin words, consectetur, from a Lorem Ipsum passage, and going through
-          the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32.
-        </p>
+          the cites of the word in classical literature
+        </div>
   </nitrozen-bottomsheet>
+  <br />
+  <div class="hover-new">
+      <nitrozen-button @click="openBottomSheetStepper()">Open Bottom Sheet Stepper</nitrozen-button>
     </div>
+    <nitrozen-bottomsheet
+      title="Your Jio Account"
+      description="Text"
+      :close="true"
+      ref="bottomSheetStepper"
+      :stepperConfig="stepperConfig"
+      controlType="stepper"
+    >
+    <template v-slot:dynamicContent="props">
+      <div v-if="props.currentStep === 0">Step 1 content</div>
+    <div v-if="props.currentStep === 1">Step 2 content</div>
+  </template>
+    </nitrozen-bottomsheet>
+    </div>
+    <nitrozen-heading level="h5" >Custom Scrollbar</nitrozen-heading>
+    
+    <nitrozen-scrollbar :hover="true">
+      <p >
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It
+        has roots in a piece of classical Latin literature from 45 BC, making
+        it over 2000 years old. Richard McClintock, a Latin professor at
+        Hampden-Sydney College in Virginia, looked up one of the more obscure
+        Latin words, consectetur, from a Lorem Ipsum passage, and going through
+        the cites of the word in classical literature, discovered the
+        undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+        1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+        Evil) by Cicero, written in 45 BC. This book is a treatise on the
+        theory of ethics, very popular during the Renaissance. The first line
+        of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+        section 1.10.32.
+      </p>
+    </nitrozen-scrollbar>
+    <nitrozen-scrollbar :hover="false">
+      <p >
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It
+        has roots in a piece of classical Latin literature from 45 BC, making
+        it over 2000 years old. Richard McClintock, a Latin professor at
+        Hampden-Sydney College in Virginia, looked up one of the more obscure
+        Latin words, consectetur, from a Lorem Ipsum passage, and going through
+        the cites of the word in classical literature, discovered the
+        undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+        1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+        Evil) by Cicero, written in 45 BC. This book is a treatise on the
+        theory of ethics, very popular during the Renaissance. The first line
+        of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+        section 1.10.32.
+      </p>
+    </nitrozen-scrollbar>
+
+    <nitrozen-heading level="h5" >Spacing</nitrozen-heading>
+<div>
+    <nitrozen-space position="horizontal" size="xl">
+      <p>This element has padding on all sides.</p>
+    </nitrozen-space>
+
+    <nitrozen-space position="bottom" size="m">
+      <p>This element has horizontal padding.</p>
+    </nitrozen-space>
+    <nitrozen-space size="s" position="vertical">
+      <p>This element has  vertical padding.</p>
+    </nitrozen-space>
+   </div>
     <div>
       <niotrozen-bottom-nav :items="staticNavItems" />
 
@@ -943,6 +1019,13 @@
       </div>
 
       <div class="main-div space-between">
+        <nitrozen-badge :fill="true">Normal</nitrozen-badge>
+        <nitrozen-badge :fill="true" state="info"  size="small">Small</nitrozen-badge>
+        <nitrozen-badge :fill="true" state="info" size="medium">Medium</nitrozen-badge>
+        <nitrozen-badge :fill="true" state="info" size="large" >Large</nitrozen-badge>
+      </div>
+
+      <div class="main-div space-between">
         <nitrozen-dropdown
           label="Custom Dropdown"
           :items="dropdownItems"
@@ -1177,27 +1260,39 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
           href: '#',
           icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',
           onClick: function noRefCheck() {},
-          title: 'Home'
+          title: 'Home',
+          isActive: false,
         },
         {
           'aria-label': 'Categories',
           href: '#',
           icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',          onClick: function noRefCheck() {},
-          title: 'Categories'
+          title: 'Categories',
+          isActive: false,
         },
         {
         'aria-label': 'Favourite',
         href: '#',
         icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',          onClick: function noRefCheck() {},
         onClick: function noRefCheck(){},
-        title: 'Favourite'
+        title: 'Favourite',
+        isActive: false,
       },
         {
+        'aria-label': 'Orders',
+        href: '#',
+        icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',          onClick: function noRefCheck() {},
+        onClick: function noRefCheck(){},
+        title: 'Orders',
+        isActive: false,
+      },
+      {
         'aria-label': 'Menu',
         href: '#',
         icon: '<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.47 9.31L13.85 2.7a2.8 2.8 0 00-3.7 0L2.53 9.31A1.53 1.53 0 003.45 12H4v7a3 3 0 003 3h3v-6h4v6h3a3 3 0 003-3v-7h.55a1.53 1.53 0 00.92-2.69z" fill="currentColor"/></svg>',          onClick: function noRefCheck() {},
         onClick: function noRefCheck(){},
-        title: 'Menu'
+        title: 'Menu',
+        isActive: false,
       },
 
       ],
@@ -1383,6 +1478,15 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
       secondaryButtonLabel: 'Secondary',
       description:"This is a notification message",
       isPanelOpen: false,
+      sheetContent: [
+        "Dynamic Content 1",
+        "Dynamic Content 2",
+      ],
+      stepperConfig: {
+        activeStep: 0,
+        onBack: this.onBackMethod, 
+        totalStep: 2
+      }
     };
   },
   mounted() {
@@ -1534,11 +1638,23 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
       this.isPanelOpen = false;
     },
     openBottomSheet() {
-      this.$refs.bottomSheet.open();
+      if (this.$refs.bottomSheet) {
+        this.$refs.bottomSheet.open(); // Call the open method
+      }
+    },
+    openBottomSheetStepper() {
+      if (this.$refs.bottomSheetStepper) {
+        this.$refs.bottomSheetStepper.open(); // Call the open method
+      }
     },
     handleHeaderPrefixClick() {
       // Handle the header prefix click event here
     },
+    onBackMethod() {
+      if (this.stepperConfig.activeStep > 0) {
+        this.stepperConfig.activeStep--;
+      }
+    }
   },
 };
 </script>

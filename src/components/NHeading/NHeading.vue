@@ -1,12 +1,11 @@
 <template>
-  <component :is="tag" :style="customStyle" :class="sizeClass" v-bind="$attrs" v-on="$listeners">
+  <component :is="tag" :class="[sizeClass, colorClass]" v-bind="$attrs" v-on="$listeners">
     <slot></slot>
   </component>
 </template>
 
   
 <script>
-
 export default {
   name: "nitrozen-heading",
   props: {
@@ -15,16 +14,12 @@ export default {
       default: "h2",
       validator: (value) => ["h1", "h2", "h3", "h4", "h5", "h6"].includes(value),
     },
-    color: {
-      type: String,
-      default: "#222",
-    },
-    fontSize: {
+    size: {
       type: String,
       default: "",
     },
-    size: {
-      type: String,
+    color: {
+      type: String, // Add the color prop
       default: "",
     },
   },
@@ -32,14 +27,11 @@ export default {
     tag() {
       return this.level;
     },
-    customStyle() {
-      return {
-        color: this.color,
-        fontSize: this.fontSize,
-      };
-    },
     sizeClass() {
       return this.size ? `size-${this.size.toLowerCase()}` : '';
+    },
+    colorClass() {
+      return this.color ? `jm-fc-${this.color}` : '';
     },
   },
 };
@@ -48,6 +40,7 @@ export default {
 
 
 <style lang="less">
+@import '../../base/jds.less';
 .size-l {
   font-size: 40px;
   letter-spacing: -1.44px;

@@ -115,10 +115,6 @@ export default {
 <style lang="less">
 @import "./../../base/base.less";
 
-.nitrozen-badge-text{
-  margin: 0 0.5rem;
-}
-
 .nitrozen-border-primary {
   border: 0.1rem solid @PrimaryColor;
 }
@@ -165,7 +161,7 @@ export default {
 
 .nitrozen-badge {
   height: 1.6rem;
-  padding: 0.4rem 0.8rem;
+  padding: 8px 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,11 +235,11 @@ export default {
     letter-spacing: -0.005em;
   }
   &.nitrozen-badge-medium {
-    font-size: @BaseFontSize + 4;
+    font-size: @BaseFontSize + 6;
   }
   &.nitrozen-badge-large {
-    font-size: @BaseFontSize + 8;
-    padding: 0.4rem 0.8rem;
+    font-size: @BaseFontSize + 14;
+    padding: 8px 24px;
     line-height: 2.4rem;
     letter-spacing: -0.005em;
   }
