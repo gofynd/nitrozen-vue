@@ -30,15 +30,17 @@
     <div class="toaster-cta">
       <nitrozen-button
         rounded
-        v-if="showPrimaryButton"
-        @click="onClickPrimary"
-        >{{ secondaryButtonLabel }}</nitrozen-button
-      >
-      <nitrozen-button
-        rounded
+        theme="secondary"
         v-if="showSecondaryButton"
         @click="onClickSecondary"
         >{{ primaryButtonLabel }}</nitrozen-button
+      >
+      <nitrozen-button
+        rounded
+        theme="primary"
+        v-if="showPrimaryButton"
+        @click="onClickPrimary"
+        >{{ secondaryButtonLabel }}</nitrozen-button
       >
     </div>
   </div>
