@@ -38,7 +38,7 @@
         class="n-input mobile-input"
         disabledFormatting
         enabledCountryCode
-        :onlyCountries="['IN']"
+        :onlyCountries="input.onlyCountries"
         :required="input.required"
         autocomplete="off"
         mode="international"
