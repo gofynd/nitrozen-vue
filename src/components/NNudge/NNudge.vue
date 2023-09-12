@@ -27,18 +27,18 @@
 
     <div class="nudge-cta">
       <nitrozen-button
+      rounded
+       theme="secondary"
+        v-if="showSecondaryButton"
+        @click="handleSecondaryClick"
+        >{{ secondaryButtonLabel }}</nitrozen-button
+      >
+      <nitrozen-button
       rounded 
       theme="primary"
         v-if="showPrimaryButton"
         @click="handlePrimaryClick"
         >{{ primaryButtonLabel }}</nitrozen-button
-      >
-      <nitrozen-button
-      rounded
-       theme="primary"
-        v-if="showSecondaryButton"
-        @click="handleSecondaryClick"
-        >{{ secondaryButtonLabel }}</nitrozen-button
       >
     </div>
   </div>
