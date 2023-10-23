@@ -437,7 +437,7 @@ function defaultResponseForInput(input) {
         return input.default;
       }
       return {
-        code: 91,
+        code: '',
         number: ""
       };
     case NCustomForm_InputTypes.toggle.key:
