@@ -415,6 +415,7 @@ Object.keys(InputTypes).forEach(function (key) {
 ;// CONCATENATED MODULE: ./src/components/NCustomForm/util.js
 
 function defaultResponseForInput(input) {
+  console.log('input', input);
   switch (input.type) {
     case NCustomForm_InputTypes.text.key:
     case NCustomForm_InputTypes.textarea.key:
