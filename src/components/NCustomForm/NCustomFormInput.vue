@@ -218,6 +218,7 @@ export default {
     },
     mobileInputChange(value){
       console.log(value)
+      console.log(this.formInputValue)
       this.inputChanged();
     },
     inputChanged() {
