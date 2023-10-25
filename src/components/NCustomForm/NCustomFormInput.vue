@@ -43,8 +43,8 @@
         autocomplete="off"
         mode="international"
         :placeholder="input.placeholder"
-        v-model="formInputValue.number"
-        @input="inputChanged"
+        v-model="formInputValue"
+        @input="mobileInputChange"
         @blur="willMoveToNext"
         :disabled="input.disabled"
       ></vue-tel-input>
@@ -216,11 +216,16 @@ export default {
     titleFor(input) {
       return input.display + (input.required ? " *" : "");
     },
+    mobileInputChange(value){
+      console.log(value)
+      this.inputChanged();
+    },
     inputChanged() {
       this.errorMessage = null
       this.$emit("change", this.formInputValue);
     },
     addResponse() {
+      console.log('this.input.input',this.input.input)
       this.formInputValue.push(defaultResponseForInput(this.input.input));
     },
     deleteResponseAt(deletionIndex) {
