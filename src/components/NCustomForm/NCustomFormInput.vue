@@ -44,7 +44,7 @@
         mode="international"
         :placeholder="input.placeholder"
         v-model="formInputValue.number"
-        @input="mobileInputChange"
+        @input="inputChanged"
         @country-changed="countryCodeChange"
         @blur="willMoveToNext"
         :disabled="input.disabled"
@@ -217,14 +217,13 @@ export default {
     titleFor(input) {
       return input.display + (input.required ? " *" : "");
     },
-    mobileInputChange(value){
-      console.log(value)
-      console.log(this.formInputValue)
-      this.inputChanged();
-    },
+    // mobileInputChange(value){
+    //   console.log(value)
+    //   console.log(this.formInputValue)
+    //   this.inputChanged();
+    // },
     countryCodeChange(value){
-       console.log('code',value)
-       this.formInputValue.code=value
+       this.formInputValue.code=value.dialCode
     },
     inputChanged() {
       this.errorMessage = null
