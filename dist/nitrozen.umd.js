@@ -96,7 +96,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 1749:
+/***/ 2108:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -142,8 +142,8 @@ var staticRenderFns = [];
 // EXTERNAL MODULE: ./node_modules/json-logic-js/logic.js
 var logic = __webpack_require__(962);
 var logic_default = /*#__PURE__*/__webpack_require__.n(logic);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=template&id=3106fd1e&scoped=true&
-var NCustomFormInputvue_type_template_id_3106fd1e_scoped_true_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=template&id=2cff712a&scoped=true&
+var NCustomFormInputvue_type_template_id_2cff712a_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -211,11 +211,11 @@ var NCustomFormInputvue_type_template_id_3106fd1e_scoped_true_render = function 
       "blur": _vm.willMoveToNext
     },
     model: {
-      value: _vm.formInputValue,
+      value: _vm.formInputValue.number,
       callback: function callback($$v) {
-        _vm.formInputValue = $$v;
+        _vm.$set(_vm.formInputValue, "number", $$v);
       },
-      expression: "formInputValue"
+      expression: "formInputValue.number"
     }
   })] : _vm.input.type == _vm.InputTypes.checkbox.key || _vm.input.type == _vm.InputTypes.radio.key ? [_c('span', {
     staticClass: "n-input-label"
@@ -359,7 +359,7 @@ var NCustomFormInputvue_type_template_id_3106fd1e_scoped_true_render = function 
     }
   }, [_vm._v(" Add ")])], 2)] : _vm._e(), _vm.errorMessage ? _c('nitrozen-error', [_vm._v(_vm._s(_vm.errorMessage))]) : _vm._e()], 2);
 };
-var NCustomFormInputvue_type_template_id_3106fd1e_scoped_true_staticRenderFns = [];
+var NCustomFormInputvue_type_template_id_2cff712a_scoped_true_staticRenderFns = [];
 
 ;// CONCATENATED MODULE: ./src/components/NCustomForm/InputTypes.js
 var InputTypes = {
@@ -734,7 +734,7 @@ var NInline = __webpack_require__(2246);
     NitrozenInline: NInline/* default */.Z,
     VueTelInput: (vue_tel_input_default()),
     NitrozenCustomForm: function NitrozenCustomForm() {
-      return Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 1749));
+      return Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 2108));
     } // Loophole for circular imports issue
   },
 
@@ -797,10 +797,10 @@ var NInline = __webpack_require__(2246);
 });
 ;// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomFormInput.vue?vue&type=script&lang=js&
  /* harmony default export */ var NCustomForm_NCustomFormInputvue_type_script_lang_js_ = (NCustomFormInputvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=style&index=0&id=3106fd1e&prod&lang=less&scoped=true&
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=style&index=0&id=2cff712a&prod&lang=less&scoped=true&
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomFormInput.vue?vue&type=style&index=0&id=3106fd1e&prod&lang=less&scoped=true&
+;// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomFormInput.vue?vue&type=style&index=0&id=2cff712a&prod&lang=less&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(3736);
@@ -815,11 +815,11 @@ var componentNormalizer = __webpack_require__(3736);
 
 var component = (0,componentNormalizer/* default */.Z)(
   NCustomForm_NCustomFormInputvue_type_script_lang_js_,
-  NCustomFormInputvue_type_template_id_3106fd1e_scoped_true_render,
-  NCustomFormInputvue_type_template_id_3106fd1e_scoped_true_staticRenderFns,
+  NCustomFormInputvue_type_template_id_2cff712a_scoped_true_render,
+  NCustomFormInputvue_type_template_id_2cff712a_scoped_true_staticRenderFns,
   false,
   null,
-  "3106fd1e",
+  "2cff712a",
   null
   
 )
@@ -14956,7 +14956,7 @@ var NStepper_component = (0,componentNormalizer/* default */.Z)(
 // EXTERNAL MODULE: ./src/components/NToggleBtn/index.js + 6 modules
 var NToggleBtn = __webpack_require__(3674);
 // EXTERNAL MODULE: ./src/components/NCustomForm/NCustomForm.vue + 13 modules
-var NCustomForm = __webpack_require__(1749);
+var NCustomForm = __webpack_require__(2108);
 ;// CONCATENATED MODULE: ./src/components/NCustomForm/index.js
 
 /* harmony default export */ var components_NCustomForm = (NCustomForm["default"]);

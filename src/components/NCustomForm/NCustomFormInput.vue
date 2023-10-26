@@ -43,7 +43,7 @@
         autocomplete="off"
         mode="international"
         :placeholder="input.placeholder"
-        v-model="formInputValue"
+        v-model="formInputValue.number"
         @input="mobileInputChange"
         @blur="willMoveToNext"
         :disabled="input.disabled"
