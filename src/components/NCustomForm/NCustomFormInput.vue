@@ -45,6 +45,7 @@
         :placeholder="input.placeholder"
         v-model="formInputValue.number"
         @input="mobileInputChange"
+        @country-changed="countryCodeChange"
         @blur="willMoveToNext"
         :disabled="input.disabled"
       ></vue-tel-input>
@@ -220,6 +221,10 @@ export default {
       console.log(value)
       console.log(this.formInputValue)
       this.inputChanged();
+    },
+    countryCodeChange(value){
+       console.log('code',value)
+       this.formInputValue.code=value
     },
     inputChanged() {
       this.errorMessage = null
