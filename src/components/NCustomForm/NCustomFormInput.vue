@@ -217,11 +217,6 @@ export default {
     titleFor(input) {
       return input.display + (input.required ? " *" : "");
     },
-    // mobileInputChange(value){
-    //   console.log(value)
-    //   console.log(this.formInputValue)
-    //   this.inputChanged();
-    // },
     countryCodeChange(value){
        this.formInputValue.code=value.dialCode
     },
@@ -230,7 +225,6 @@ export default {
       this.$emit("change", this.formInputValue);
     },
     addResponse() {
-      console.log('this.input.input',this.input.input)
       this.formInputValue.push(defaultResponseForInput(this.input.input));
     },
     deleteResponseAt(deletionIndex) {

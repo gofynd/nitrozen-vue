@@ -1,7 +1,6 @@
 import InputTypes from "./InputTypes.js";
 
 function defaultResponseForInput(input) {
-    console.log('input',input)
     switch (input.type) {
         case InputTypes.text.key:
         case InputTypes.textarea.key:
