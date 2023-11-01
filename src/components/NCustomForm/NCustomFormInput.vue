@@ -215,8 +215,7 @@ export default {
   },
   methods: {
     validateMobileInput(phoneObj){
-      console.log('this.formInputValue',this.formInputValue)
-      console.log('phoneObj',phoneObj)
+      this.formInputValue.valid=phoneObj.valid
     },
     validateInput,
     titleFor(input) {
