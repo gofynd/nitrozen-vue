@@ -49,7 +49,6 @@
         @blur="willMoveToNext"
         :disabled="input.disabled"
         @validate="validateMobileInput"
-        :customValidate="/^[0-9]*$/"
       ></vue-tel-input>
     </template>
     <template
