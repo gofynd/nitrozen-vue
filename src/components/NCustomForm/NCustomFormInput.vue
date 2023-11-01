@@ -48,6 +48,7 @@
         @country-changed="countryCodeChange"
         @blur="willMoveToNext"
         :disabled="input.disabled"
+        @validate="validateMobileInput"
       ></vue-tel-input>
     </template>
     <template
@@ -213,6 +214,10 @@ export default {
     },
   },
   methods: {
+    validateMobileInput(phoneObj){
+      console.log('this.formInputValue',this.this.formInputValue)
+      console.log('phoneObj',phoneObj)
+    },
     validateInput,
     titleFor(input) {
       return input.display + (input.required ? " *" : "");
