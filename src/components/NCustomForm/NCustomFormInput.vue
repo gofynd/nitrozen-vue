@@ -38,15 +38,17 @@
         class="n-input mobile-input"
         disabledFormatting
         enabledCountryCode
-        :onlyCountries="['IN']"
+        :onlyCountries="input.onlyCountries || []"
         :required="input.required"
         autocomplete="off"
         mode="international"
         :placeholder="input.placeholder"
         v-model="formInputValue.number"
         @input="inputChanged"
+        @country-changed="countryCodeChange"
         @blur="willMoveToNext"
         :disabled="input.disabled"
+        @validate="validateMobileInput"
       ></vue-tel-input>
     </template>
     <template
@@ -212,9 +214,15 @@ export default {
     },
   },
   methods: {
+    validateMobileInput(phoneObj){
+      this.formInputValue.valid=phoneObj.isValid
+    },
     validateInput,
     titleFor(input) {
       return input.display + (input.required ? " *" : "");
+    },
+    countryCodeChange(value){
+       this.formInputValue.code=value.dialCode
     },
     inputChanged() {
       this.errorMessage = null
