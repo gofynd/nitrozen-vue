@@ -215,7 +215,7 @@ export default {
   },
   methods: {
     validateMobileInput(phoneObj){
-      this.formInputValue.valid=phoneObj.valid
+      this.formInputValue.valid=phoneObj
     },
     validateInput,
     titleFor(input) {
