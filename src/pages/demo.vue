@@ -1660,8 +1660,11 @@ NitrozenRadio,"nitrozen-checkbox":NitrozenCheckBox,"nitrozen-toggle-btn":Nitroze
 </script>
 
 <style lang="less">
+@import '../base/mixin.less';
+
 body {
   font-family: "Inter";
+  .color-palette(jiomart);
 }
 .main-div {
   margin-top: 2%;

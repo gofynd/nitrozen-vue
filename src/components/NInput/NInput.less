@@ -1,7 +1,8 @@
 @import "./../../base/base.less";
 .n-input {
   padding: 1.2rem;
-  color: @TypographyPrimaryColor;
+  // color: @TypographyPrimaryColor;
+  color: @ColorPrimaryGrey100;
   width: 312px;
   font-family: @PrimaryFont;
   position: relative;
@@ -9,10 +10,12 @@
   border:none ;
   outline:none ;
   border-radius: 0% ;
-  border-bottom: 1.5px solid #141414 ;
+  // border-bottom: 1.5px solid #141414;
+  border-bottom: 1.5px solid @ColorPrimaryGrey80;
 }
 .n-input-default-border{
-  border-bottom: 0.2rem solid  @ColorSparkleGrey60;
+  // border-bottom: 0.2rem solid  @ColorSparkleGrey60;
+  border-bottom: 0.2rem solid  @ColorPrimaryGrey80;
   border-radius: 0% ;
   &:focus {
     border-bottom: 0.2rem solid @ColorPrimary60;
@@ -21,18 +24,22 @@
 }
 .n-success-border{
   border-radius: 0% ;
-  border-bottom: 0.2rem solid  @SuccessColor;
+  // border-bottom: 0.2rem solid  @SuccessColor;
+  border-bottom: 0.2rem solid @ColorFeedbackSuccess50;
 }
 .n-warning-border{
   border-radius: 0%;
-  border-bottom: 0.2rem solid  @WarningColor;
+  // border-bottom: 0.2rem solid  @WarningColor;
+  border-bottom: 0.2rem solid  @ColorFeedbackWarning50;
 }
 .n-error-border{
   border-radius: 0%;
-  border-bottom: 0.2rem solid  @ErrorColor;
+  // border-bottom: 0.2rem solid  @ErrorColor;
+  border-bottom: 0.2rem solid  @ColorFeedbackError50;
 }
 .n-input-underinfo{
-  color: @PrimaryGrey80;
+  // color: @PrimaryGrey80;
+  color: @ColorPrimaryGrey80;
   margin-left: 1.2rem;
   margin-top: 0.4rem;
 }
@@ -43,7 +50,8 @@
     letter-spacing: -0.07px;
     line-height: 1.4285714286;
     word-wrap: break-word;
-    color: @TypographyPrimaryColor;
+    color: @ColorPrimaryGrey80;
+    // color: @TypographyPrimaryColor;
     // margin-top: 0.4rem;
 }
 .n-input-textarea {
@@ -53,14 +61,17 @@
 }
 
 .n-input:disabled {
-  background: @HoverColor;
+  background-color: transparent;
+  // background: @HoverColor;
   pointer-events: none;
   cursor: not-allowed;
-  opacity: 0.5;
+  // opacity: 0.5;
+  opacity: 0.3;
 }
 
 .n-input:disabled + .n-input-label {
-  opacity: 0.5;
+  // opacity: 0.5;
+  opacity: 0.3;
 }
 
 .nitrozen-form-input {
@@ -69,7 +80,8 @@
 }
 
 .n-input-label {
-  color: @LabelColor;
+  // color: @LabelColor;
+  color: @ColorPrimaryGrey80;
   font-family: @PrimaryFont;
   font-size: 1.4rem;
   font-weight: 500;
@@ -90,20 +102,23 @@
 
 ::-webkit-input-placeholder {
   /* Edge */
-  color: @PlaceholderColor;
+  // color: @PlaceholderColor;
+  color: @ColorPrimaryGrey60;
   font-size: 1.6rem;
   font-family: @PrimaryFont;
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: @PlaceholderColor;
+  // color: @PlaceholderColor;
+  color: @ColorPrimaryGrey60;
   font-size: 1.6rem;
   font-family: @PrimaryFont;
 }
 
 ::placeholder {
-  color: @PlaceholderColor;
+  // color: @PlaceholderColor;
+  color: @ColorPrimaryGrey60;
   font-size: 1.6rem;
   font-family: @PrimaryFont;
 }
@@ -155,7 +170,8 @@ input[type="search"]::-webkit-search-cancel-button {
 .nitrozen-input-prefix{
    margin: auto;
    //box-sizing: border-box;
-   color: @TypographyPrimaryColor;
+  //  color: @TypographyPrimaryColor;
+  color: @ColorPrimaryGrey80;
    z-index: @ZIndex3;
    left: 1rem;
    position: absolute;
@@ -163,7 +179,8 @@ input[type="search"]::-webkit-search-cancel-button {
 .nitrozen-input-suffix {
   margin: auto;
  // box-sizing: border-box;
-  color: @TypographyPrimaryColor;
+  // color: @TypographyPrimaryColor;
+  color: @ColorPrimaryGrey80;
   z-index: @ZIndex3;
   position: absolute;
   right: 1rem;
