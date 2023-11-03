@@ -1,36 +1,26 @@
 @import './../../base/base.less';
 
 .n-button {
-    height: 4rem;
-    padding: 10px 20px;
-    border: 1px solid #ddd;
-    color: @BlackColor;
-    background-color: @PrimaryTextColor !important;
-    border-radius: 4px;
-    font-size: 14px;
+    padding: 12px 16px;
+    border: 1px solid #5a5a5a;
+    color: @WhiteColor;
+    background: @ColorPrimary50;
+    font-size: 16px;
     cursor: pointer;
     box-shadow: none;
     font-family: @PrimaryFont;
-    font-size: @BaseFontSize + 5;
+    font-size: @BaseFontSize;
     font-weight: 700;
-    line-height: 1.8rem;
+    line-height:1.5;
     text-align: center;
     outline: none;
-    border: 0;
-    letter-spacing: 0rem;
-    background: none;
-    // text-decoration: none;
+    letter-spacing: 0;
+    text-decoration: none;
     box-sizing: border-box;
-    letter-spacing: 0.05rem;
-    padding: 0rem 2rem;
-    border-radius: 0.3rem;
-    color: @WhiteColor;
-    height: 32px; 
-    border-radius: 1000px; 
-    justify-content: center; 
+    border-radius: 250px; 
+    display: inline-flex;
     align-items: center;
-    font-weight: 700; 
-    line-height: 13px; 
+    justify-content: space-evenly;
 
     &:disabled {
         cursor: not-allowed;

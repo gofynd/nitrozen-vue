@@ -68,7 +68,7 @@ export default {
         }, this.$slots.default)
 
         let buttonAttrs = {
-            staticClass: 'n-button ripple',
+            staticClass: 'n-button',
             class: [{
                 'n-button-rounded': this.rounded,
                 'n-button-primary': this.theme == 'primary',
