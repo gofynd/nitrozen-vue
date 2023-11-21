@@ -25,6 +25,14 @@ export default {
             type: String,
             default: 'primary'
         },
+        fullwidth: {
+            type: String,
+            default: ''
+        },
+        state: {
+            type: String,
+            default: 'normal'
+        },
         showProgress: {
             type: Boolean,
             default: false
@@ -40,12 +48,13 @@ export default {
         icon: {
             type: String
         },
+        iconRight: {
+            type: String
+        },
         iconColor: {
             type: String
         },
-        state:{
-            type:String
-        },
+        
         flat: {
             type: Boolean,
             default: false
@@ -60,6 +69,7 @@ export default {
             props: {
                 showProgress: this.showProgress,
                 icon: this.icon,
+                iconRight: this.iconRight,
                 size:this.size,
                 iconColor:this.iconColor,
                 //flat: this.flat,
@@ -73,13 +83,17 @@ export default {
                 'n-button-rounded': this.rounded,
                 'n-button-primary': this.theme == 'primary',
                 'n-button-secondary': this.theme == 'secondary',
-                'n-button-destructive': this.theme == 'destructive',
+                'n-button-tertiary': this.theme == 'tertiary',
+                'n-button-normal': this.state == 'normal',
+                'n-button-destructive': this.state == 'destructive',
+                'n-button-positive': this.state == 'positive',
                 'n-button-large': this.size == 'large',
                 'n-button-mid': this.size == 'medium',
                 'n-button-small': this.size == 'small',
                 'n-button-focused': this.focused,
                 'n-button-add': this.theme == 'add',
-                'n-button-delete': this.theme == 'delete'
+                'n-button-delete': this.theme == 'delete',
+                'n-button-fullwidth': this.fullwidth == 'fullwidth'
             }],
             attrs: {
                 href: this.href,
