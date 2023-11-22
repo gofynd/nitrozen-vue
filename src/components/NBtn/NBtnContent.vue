@@ -1,9 +1,12 @@
 <template>
     <div class="n-button-content abcd" :class="{'disable-click':showProgress}">
-        <div class="social-icon" v-if="icon">
+        <div class="social-icon" v-if="icon">   
             <nitrozen-icon v-if="icon" :name="icon" :size="getIconSize" :color="iconColor"/>
         </div>
         <slot/>
+        <div class="social-icon" v-if="iconRight ">   
+            <nitrozen-icon v-if="iconRight" :name="iconRight" :size="getIconSize" :color="iconColor"/>
+        </div>
         <div v-if="showProgress" class="n-btn-spin">
             <img class="n-btn-spinner" src="https://cdn.pixelbin.io/v2/falling-surf-7c8bb8/fyprod/wrkr/misc/general/free/original/loader.gif">
         </div>
@@ -25,12 +28,16 @@
             icon: {
                 type: String
             },
+            iconRight: {
+                type: String
+            },
             size: {
                 type: String
             },
             iconColor:{
                 type:String,
-                default:"#FFFFFF"
+                default:"#FFFFFF",
+                blue:"#0f3cc9"
             }
         },
         computed: {

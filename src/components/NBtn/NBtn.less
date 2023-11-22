@@ -1,40 +1,36 @@
 @import './../../base/base.less';
 
 .n-button {
-    height: 4rem;
-    padding: 10px 20px;
-    border: 1px solid #ddd;
-    color: @BlackColor;
-    background-color: @PrimaryTextColor !important;
-    border-radius: 4px;
-    font-size: 14px;
+    height: auto;
+    padding: 12px 16px;
+    border: 1px solid transparent;
+    color: @WhiteColor;
+    background: @ColorPrimary50;
+    font-size: 16px;
     cursor: pointer;
     box-shadow: none;
     font-family: @PrimaryFont;
-    font-size: @BaseFontSize + 5;
-    font-weight: 700;
-    line-height: 1.8rem;
+    font-size: @BaseFontSize;
+    font-weight: 100;
+    line-height:1.5;
     text-align: center;
     outline: none;
-    border: 0;
-    letter-spacing: 0rem;
-    background: none;
-    // text-decoration: none;
+    letter-spacing: 0;
+    text-decoration: none;
     box-sizing: border-box;
-    letter-spacing: 0.05rem;
-    padding: 0rem 2rem;
-    border-radius: 0.3rem;
-    color: @WhiteColor;
-    height: 32px; 
-    border-radius: 1000px; 
-    justify-content: center; 
+    border-radius: 250px; 
+    display: inline-flex;
     align-items: center;
-    font-weight: 700; 
-    line-height: 13px; 
+    justify-content: space-evenly;
+
+    &.n-button-fullwidth {
+        width: 100%;
+    }
 
     &:disabled {
         cursor: not-allowed;
         pointer-events: none;
+        opacity: .3;
     }
 
     &:focus {
@@ -51,8 +47,9 @@
     }
 
     &-primary:disabled {
-        border-color: @ColorSecondaryGrey80;
-        color: @WhiteColor;
+        border-color: transparent;
+        background: @ColorPrimary60;
+        opacity: .3;
     }
 
     &-secondary:disabled {
@@ -65,22 +62,216 @@
     }
 }
 
-//button themes[primary, secondary, destructive]
+//button themes[primary, secondary, tertiary,  destructive]
 .n-button-primary {
-    color: @ColorPrimary50;
-}
-
-.n-button-secondary {
-    color: @ColorFeedbackSuccess50;
-    &:active{
-        background-color: @ColorFeedbackSuccess20;
+    color: @WhiteColor;
+    &:hover {
+        background: @ColorPrimary60;
     }
 }
 
-.n-button-destructive {
-    color: @ColorFeedbackError50;
+.n-button-secondary {
+    color: @ColorPrimary60;
+    background: none;
+    border: 1px solid @ColorPrimaryGrey40;
+
+    .social-icon {
+        svg {
+            path {
+                fill: @ColorPrimary60;
+            }
+        }
+    }
+
+    &:hover,
     &:active{
-        background-color: @ColorFeedbackError20;
+       background: none;
+       border-color: @ColorPrimary60;
+    }
+    &:disabled {
+        border-color: @ColorPrimaryGrey80;
+        background: none;
+        color: @ColorPrimary60;
+    }
+
+    &.n-button-destructive {
+        background: none;
+        
+        &:hover,
+        &:active {
+            border-color: @ColorFeedbackError50;
+            color: @ColorFeedbackError80;
+            background: none;
+            .social-icon {
+                svg {
+                    path {
+                        fill: @ColorFeedbackError80;
+                    }
+                }
+            }
+        }
+
+        &:disabled {
+            border-color: @ColorPrimaryGrey80;
+            background: none;
+            color: @ColorFeedbackError80;
+        }
+    }
+    &.n-button-positive {
+        background: none;
+        color: @ColorFeedbackSuccess80;
+        
+        
+        &:hover,
+        &:active {
+            border-color: @ColorFeedbackSuccess50;
+            color: @ColorFeedbackSuccess80;
+            background: none;
+
+            .social-icon {
+                svg {
+                    path {
+                        fill: @ColorFeedbackSuccess80;
+                    }
+                }
+            }
+        }
+
+        &:disabled {
+            border-color: @ColorPrimaryGrey80;
+            background: none;
+            color: @ColorFeedbackSuccess80;
+        }
+    }
+}
+
+.n-button-tertiary {
+    color: @ColorPrimary60;
+    background: none;
+    border: 1px solid transparent;
+
+    .social-icon {
+        svg {
+            path {
+                fill: @ColorPrimary60;
+            }
+        }
+    }
+
+    &:hover,
+    &:active{
+        background: #e7ebf8;
+    }
+
+    &:disabled {
+        color: @ColorPrimary60;
+        background: none;
+    }
+
+    &.n-button-destructive {
+        color: @ColorFeedbackError80;
+        background: none;
+    
+        &:hover {
+            color: @ColorFeedbackError80;
+            background: @ColorFeedbackError20;
+            
+            .social-icon {
+                svg {
+                    path {
+                        fill: @ColorFeedbackError80;
+                    }
+                }
+            }
+        }
+
+        &:disabled {
+            background: none;
+        }
+    }
+
+    &.n-button-positive {
+        color: @ColorFeedbackSuccess80;
+        background: none;
+    
+        &:hover {
+            color: @ColorFeedbackSuccess80;
+            background: @ColorFeedbackSuccess20;
+            .social-icon {
+                svg {
+                    path {
+                        fill: @ColorFeedbackSuccess80;
+                    }
+                }
+            }
+        }
+
+        &:disabled {
+            background: none;
+        }
+    }
+    
+}
+
+.n-button-destructive {
+    color: @ColorFeedbackError80;
+    background: @ColorFeedbackError20;
+    .social-icon {
+        svg {
+            path {
+                fill: @ColorFeedbackError80;
+            }
+        }
+    }
+
+    &:hover {
+        color: @WhiteColor;
+        background: @ColorFeedbackError50;
+        .social-icon {
+            svg {
+                path {
+                    fill: @WhiteColor;
+                }
+            }
+        }
+    }
+
+    &:disabled {
+        border-color: transparent;
+        background: @ColorFeedbackError20;
+        color: @ColorFeedbackError80;
+    }
+
+}
+
+.n-button-positive {
+    color: @ColorFeedbackSuccess80;
+    background: @ColorFeedbackSuccess20;
+
+    .social-icon {
+        svg {
+            path {
+                fill: @ColorFeedbackSuccess80;
+            }
+        }
+    }
+
+    &:hover {
+        color: @WhiteColor;
+        background: @ColorFeedbackSuccess50;
+        .social-icon {
+            svg {
+                path {
+                    fill: @WhiteColor;
+                }
+            }
+        }
+    }
+
+    &:disabled {
+        border-color: transparent;
+        background: @ColorFeedbackSuccess20;
+        color: @ColorFeedbackSuccess80;
     }
 }
 
@@ -263,32 +454,27 @@
 }
 
 .n-button-large {
-    padding: 1.6rem 2.4rem;
-    height: 5.4rem;
+    padding: 16px 24px;
     font-size: @BaseFontSize + 6;
-    line-height: 2.5rem;
-    min-width: 5.4rem;
+
     .n-btn-spin > img{
         width: @BaseFontSize + 14px;
     }
 }
 
 .n-button-mid {
-   // height: 4.8rem;
-    font-size: @BaseFontSize + 3;
-    line-height: 2.5rem;
-    min-width: 4.8rem;
+    font-size: @BaseFontSize + 6;
+    line-height: 1.5;
+
     .n-btn-spin > img{
         width: @BaseFontSize + 14px;
     }
 }
 
 .n-button-small {
-    padding: 0.4rem 1.6rem;
-    height: 3rem;
-    font-size: @BaseFontSize + 2;
-    line-height: 1.9rem;
-    min-width: 3rem;
+    padding: 4px 16px;
+    font-size: @BaseFontSize + 6;
+
     svg{
         width: @BaseFontSize + 5px;
         height: @BaseFontSize + 5px;
