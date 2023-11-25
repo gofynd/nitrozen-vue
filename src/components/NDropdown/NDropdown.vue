@@ -130,7 +130,7 @@
               </div>
             </slot>
           </span>
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">
+          <span v-if="searchable && (items.length == 0 || addOptionRequired)" class="nitrozen-option">
             <div class="nitrozen-option-container" v-if="!add_option">No {{ label }} Found</div>
             <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length">
               <div class="nitrozen-dropdown-empty"
@@ -235,6 +235,10 @@ export default {
       default: false
     },
     enable_select_all: {
+      type: Boolean,
+      default: false
+    },
+    addOptionRequired: {
       type: Boolean,
       default: false
     }
