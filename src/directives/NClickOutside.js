@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-const clickOutside = {
+const clickOutside = Vue.directive('click-outside', {
     bind: function (el, binding, vNode) {
         // Provided expression must evaluate to a function.
         if (typeof binding.value !== 'function') {
@@ -9,7 +9,6 @@ const clickOutside = {
             if (compName) {
                 warn += ` Found in component '${compName}'`
             }
-
             console.warn(warn)
         }
         // Define Handler and cache it on the element
@@ -24,15 +23,15 @@ const clickOutside = {
         // add Event Listeners
         document.addEventListener('click', handler)
     },
-
     unbind: function (el, binding) {
         // Remove Event Listeners
         document.removeEventListener('click', el.__nitrozenClickOutside__)
         el.__nitrozenClickOutside__ = null
 
     }
-}
+});
 
 Vue.use(clickOutside);
 
 export default clickOutside;
+

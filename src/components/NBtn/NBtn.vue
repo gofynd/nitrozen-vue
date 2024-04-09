@@ -2,7 +2,7 @@
 import { h } from 'vue';
 import NButtonContent from './NBtnContent.vue';
 import strokeBtn from './../../directives/NStrokeBtn.js';
-import flatBtn from './../../directives/NFlatBtn.vue';
+import flatBtn from './../../directives/NFlatBtn.js';
 
 export default {
     name: 'nitrozen-button',
