@@ -6,7 +6,7 @@
         </label>
     </div>
 </template>
-<style lang="less" scoped>
+<style lang="less" >
 @import './NToggleBtn.less';
 </style>
 <script>
