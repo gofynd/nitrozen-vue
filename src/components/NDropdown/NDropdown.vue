@@ -325,7 +325,6 @@ export default {
   },
   mounted() {
     if (!this.multiple) {
-      this.enable_select_all = false;
       if (this.value) {
         const selected = this.items.find((i) => i.value == this.value);
         this.searchInput = selected ? selected.text : "";

@@ -1,38 +1,27 @@
-import Vue from 'vue';
-
-const clickOutside = Vue.directive('click-outside', {
-    bind: function (el, binding, vNode) {
-        // Provided expression must evaluate to a function.
+const clickOutside = {
+    beforeMount(el, binding, vnode) {
         if (typeof binding.value !== 'function') {
-            const compName = vNode.context.name
-            let warn = `[Nitrozen-click-outside:] provided expression '${binding.expression}' is not a function, but has to be`
+            const compName = vnode.component?.name;
+            let warn = `[Nitrozen-click-outside:] provided expression '${binding.expression}' is not a function, but has to be`;
             if (compName) {
-                warn += ` Found in component '${compName}'`
+                warn += ` Found in component '${compName}'`;
             }
+            console.warn(warn);
+        }
 
-            console.warn(warn)
-        }
-        // Define Handler and cache it on the element
-        const bubble = binding.modifiers.bubble
+        const bubble = binding.modifiers?.bubble;
         const handler = (e) => {
-            let path = e.composedPath ? e.composedPath() : e.path;
-            if (bubble || path && -1 == path.indexOf(el)) {
-                binding.value(e)
+            let path = e.composedPath ? e.composedPath() : (e.path || []);
+            if (bubble || path && !path.includes(el)) {
+                binding.value(e);
             }
-        }
-        el.__nitrozenClickOutside__ = handler
-        // add Event Listeners
-        document.addEventListener('click', handler)
+        };
+        el.__nitrozenClickOutside__ = handler;
+        document.addEventListener('click', handler);
     },
 
-    unbind: function (el, binding) {
-        // Remove Event Listeners
-        document.removeEventListener('click', el.__nitrozenClickOutside__)
-        el.__nitrozenClickOutside__ = null
-
+    unmounted(el) {
+        document.removeEventListener('click', el.__nitrozenClickOutside__);
+        el.__nitrozenClickOutside__ = null;
     }
-});
-
-Vue.use(clickOutside);
-
-export default clickOutside;
+};

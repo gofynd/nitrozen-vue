@@ -195,7 +195,8 @@ export default {
   methods: {
     setDefaults() {
       if (!this.value.current) {
-        this.$set(this.value, "current", 1);
+        // this.$set(this.value, "current", 1);
+        this.value.current = 1;
       }
     },
     previous() {
