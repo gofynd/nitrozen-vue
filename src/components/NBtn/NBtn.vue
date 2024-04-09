@@ -1,10 +1,10 @@
 <script>
-import { defineComponent ,h} from 'vue';
+import { h} from 'vue';
 import NButtonContent from './NBtnContent.vue';
 import strokeBtn from './../../directives/NStrokeBtn.js';
 import flatBtn from './../../directives/NFlatBtn.js';
 
-export default defineComponent({
+export default {
     name: 'nitrozen-button',
     components: {
         NButtonContent
@@ -77,11 +77,14 @@ export default defineComponent({
                     'n-button-focused': this.focused
                 }
             ],
-            href: this.href,
-            disabled: this.disabled,
-            type: !this.href && (this.type || 'button'),
-            ...this.$attrs,
-            ...this.$listeners
+            attrs: {
+                href: this.href,
+                disabled: this.disabled,
+                type: !this.href && (this.type || 'button')
+            },
+            on: {
+                ...this.$listeners,
+            }
         };
 
         let tag = 'button';
@@ -91,7 +94,7 @@ export default defineComponent({
 
         return h(tag, buttonAttrs, slotElement);
     }
-});
+};
 </script>
 
 <style lang="less">
