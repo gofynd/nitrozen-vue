@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-const clickOutside = Vue.directive('click-outside', {
+const clickOutside = {
     bind: function (el, binding, vNode) {
         // Provided expression must evaluate to a function.
         if (typeof binding.value !== 'function') {
@@ -31,7 +31,7 @@ const clickOutside = Vue.directive('click-outside', {
         el.__nitrozenClickOutside__ = null
 
     }
-});
+}
 
 Vue.use(clickOutside);
 

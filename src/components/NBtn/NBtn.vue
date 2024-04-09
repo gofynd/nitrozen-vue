@@ -89,6 +89,7 @@ export default {
         let tag = 'button';
         if (this.href) {
             tag = 'a';
+            buttonAttrs
         }
 
         return h(tag, buttonAttrs, slotElement);
