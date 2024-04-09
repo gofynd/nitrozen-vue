@@ -24,6 +24,7 @@
 
 // export default flatBtn;
 
+
 const flatBtn = {
   beforeMount(el, binding, vnode) {
     el.classList.add('n-flat-button');
