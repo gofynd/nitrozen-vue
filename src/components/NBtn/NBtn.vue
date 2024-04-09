@@ -1,5 +1,5 @@
 <script>
-import { h} from 'vue';
+import { h } from 'vue';
 import NButtonContent from './NBtnContent.vue';
 import strokeBtn from './../../directives/NStrokeBtn.js';
 import flatBtn from './../../directives/NFlatBtn.js';
@@ -50,32 +50,31 @@ export default {
         iconColor: {
             type: String
         },
-        state:{
-            type:String
+        state: {
+            type: String
         }
     },
     render() {
         const slotElement = h(NButtonContent, {
-            showProgress: this.showProgress,
-            icon: this.icon,
-            size: this.size,
-            iconColor: this.iconColor
+            props: {
+                showProgress: this.showProgress,
+                icon: this.icon,
+                size: this.size,
+                iconColor: this.iconColor
+            }
         }, this.$slots.default);
 
         let buttonAttrs = {
-            class: [
-                'n-button',
-                'ripple',
-                {
-                    'n-button-rounded': this.rounded,
-                    'n-button-primary': this.theme == 'primary',
-                    'n-button-secondary': this.theme == 'secondary',
-                    'n-button-destructive': this.theme == 'destructive',
-                    'n-button-large': this.size == 'large',
-                    'n-button-mid': this.size == 'medium',
-                    'n-button-small': this.size == 'small',
-                    'n-button-focused': this.focused
-                }
+            class: [{
+                'n-button-rounded': this.rounded,
+                'n-button-primary': this.theme == 'primary',
+                'n-button-secondary': this.theme == 'secondary',
+                'n-button-destructive': this.theme == 'destructive',
+                'n-button-large': this.size == 'large',
+                'n-button-mid': this.size == 'medium',
+                'n-button-small': this.size == 'small',
+                'n-button-focused': this.focused
+            }
             ],
             attrs: {
                 href: this.href,
