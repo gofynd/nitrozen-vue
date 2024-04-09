@@ -713,7 +713,7 @@ var NInput = __webpack_require__(8561);
 // EXTERNAL MODULE: ./src/components/NError/index.js + 7 modules
 var NError = __webpack_require__(2960);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 12 modules
-var NBtn = __webpack_require__(2545);
+var NBtn = __webpack_require__(7843);
 // EXTERNAL MODULE: ./src/components/NInline/index.js + 7 modules
 var NInline = __webpack_require__(9021);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=script&lang=js
@@ -1908,7 +1908,7 @@ http://ricostacruz.com/cheatsheets/umdjs.html
 
 /***/ }),
 
-/***/ 2545:
+/***/ 7843:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2072,7 +2072,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     }
   },
   render: function render() {
-    var slotElement = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.h)(NBtnContent, {
+    var slotElement = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.h)('n-button-content', {
       props: {
         showProgress: this.showProgress,
         icon: this.icon,
@@ -2107,10 +2107,10 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 });
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=e0e0ffe4&lang=less
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=211f11b8&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=e0e0ffe4&lang=less
+;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=211f11b8&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue
 
@@ -13588,14 +13588,10 @@ __webpack_require__.d(__webpack_exports__, {
   NitrozenTabItem: function() { return /* reexport */ components_NTabItem; },
   NitrozenToggleBtn: function() { return /* reexport */ NToggleBtn/* default */.A; },
   NitrozenTooltip: function() { return /* reexport */ NTooltip/* default */.A; },
-  clickOutside: function() { return /* reexport */ NClickOutside_namespaceObject["default"]; },
+  clickOutside: function() { return /* reexport */ NClickOutside; },
   flatBtn: function() { return /* reexport */ NFlatBtn/* default */.A; },
   strokeBtn: function() { return /* reexport */ NStrokeBtn/* default */.A; }
 });
-
-// NAMESPACE OBJECT: ./src/directives/NClickOutside.js
-var NClickOutside_namespaceObject = {};
-__webpack_require__.r(NClickOutside_namespaceObject);
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 /* eslint-disable no-var */
@@ -13810,7 +13806,7 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(NAutocompletevu
 
 /* harmony default export */ var components_NAutocomplete = (NAutocomplete);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 12 modules
-var NBtn = __webpack_require__(2545);
+var NBtn = __webpack_require__(7843);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBadge/NBadge.vue?vue&type=template&id=de1bfb68
 
 var NBadgevue_type_template_id_de1bfb68_hoisted_1 = {
@@ -14271,6 +14267,7 @@ var clickOutside = external_commonjs_vue_commonjs2_vue_root_Vue_default().direct
   }
 });
 external_commonjs_vue_commonjs2_vue_root_Vue_default().use(clickOutside);
+/* harmony default export */ var NClickOutside = (clickOutside);
 ;// CONCATENATED MODULE: ./src/directives/index.js
 
 
@@ -14467,7 +14464,7 @@ function NMenuvue_type_template_id_308a10e0_render(_ctx, _cache, $props, $setup,
 /* harmony default export */ var NMenuvue_type_script_lang_js = ({
   name: "nitrozen-menu",
   directives: {
-    clickOutside: NClickOutside_namespaceObject["default"]
+    clickOutside: NClickOutside
   },
   components: {
     "nitrozen-inline": NInline/* default */.A

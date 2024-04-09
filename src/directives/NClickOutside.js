@@ -34,3 +34,5 @@ const clickOutside = Vue.directive('click-outside', {
 });
 
 Vue.use(clickOutside);
+
+export default clickOutside;

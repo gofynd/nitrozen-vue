@@ -55,7 +55,7 @@ export default {
         }
     },
     render() {
-        const slotElement = h(NButtonContent, {
+        const slotElement = h('n-button-content', {
             props: {
                 showProgress: this.showProgress,
                 icon: this.icon,
