@@ -713,7 +713,7 @@ var NInput = __webpack_require__(8561);
 // EXTERNAL MODULE: ./src/components/NError/index.js + 7 modules
 var NError = __webpack_require__(2960);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 12 modules
-var NBtn = __webpack_require__(1332);
+var NBtn = __webpack_require__(6223);
 // EXTERNAL MODULE: ./src/components/NInline/index.js + 7 modules
 var NInline = __webpack_require__(9021);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=script&lang=js
@@ -1426,6 +1426,55 @@ const NInput_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(NInputvue_t
 
 /***/ }),
 
+/***/ 9639:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  A: function() { return /* binding */ NFlatBtn; }
+});
+
+// EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
+var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(9274);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/directives/NFlatBtn.vue?vue&type=script&setup=true&lang=js
+
+
+/* harmony default export */ var NFlatBtnvue_type_script_setup_true_lang_js = ({
+  __name: 'NFlatBtn',
+  props: {
+    theme: {
+      type: String,
+      default: 'primary' // Set default theme
+    }
+  },
+  setup: function setup(__props) {
+    var themeProp = __props;
+    var theme = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(themeProp.theme); // Use ref for reactive data
+
+    var classes = computed(function () {
+      return ['n-flat-button', theme.value === 'secondary' ? 'n-flat-button-secondary' : '', theme.value === 'destructive' ? 'n-flat-button-destructive' : ''];
+    });
+    return function (_ctx, _cache) {
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("button", {
+        class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.unref)(classes))
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.renderSlot)(_ctx.$slots, "default")], 2);
+    };
+  }
+});
+;// CONCATENATED MODULE: ./src/directives/NFlatBtn.vue?vue&type=script&setup=true&lang=js
+ 
+;// CONCATENATED MODULE: ./src/directives/NFlatBtn.vue
+
+
+
+const __exports__ = NFlatBtnvue_type_script_setup_true_lang_js;
+
+/* harmony default export */ var NFlatBtn = (__exports__);
+
+/***/ }),
+
 /***/ 8678:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1908,7 +1957,7 @@ http://ricostacruz.com/cheatsheets/umdjs.html
 
 /***/ }),
 
-/***/ 1332:
+/***/ 6223:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2008,8 +2057,8 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(NBtnContentvue_
 /* harmony default export */ var NBtnContent = (__exports__);
 // EXTERNAL MODULE: ./src/directives/NStrokeBtn.js
 var NStrokeBtn = __webpack_require__(1656);
-// EXTERNAL MODULE: ./src/directives/NFlatBtn.js
-var NFlatBtn = __webpack_require__(1501);
+// EXTERNAL MODULE: ./src/directives/NFlatBtn.vue + 2 modules
+var NFlatBtn = __webpack_require__(9639);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBtn/NBtn.vue?vue&type=script&lang=js
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
@@ -2108,10 +2157,10 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 });
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=23d18b32&lang=less
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=487d3ad7&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=23d18b32&lang=less
+;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=487d3ad7&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue
 
@@ -3623,26 +3672,6 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(NValidationvue_
 ;// CONCATENATED MODULE: ./src/components/NValidation/index.js
 
 /* harmony default export */ var components_NValidation = (NValidation);
-
-/***/ }),
-
-/***/ 1501:
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
-
-"use strict";
-var flatBtn = {
-  beforeMount: function beforeMount(el, binding, vnode) {
-    el.classList.add('n-flat-button');
-    if (vnode.props.theme === 'secondary') {
-      el.classList.add('n-flat-button-secondary');
-    } else if (vnode.props.theme === 'destructive') {
-      el.classList.add('n-flat-button-destructive');
-    } else {
-      el.classList.add('n-flat-button-primary');
-    }
-  }
-};
-/* harmony default export */ __webpack_exports__.A = (flatBtn);
 
 /***/ }),
 
@@ -13790,7 +13819,7 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(NAutocompletevu
 
 /* harmony default export */ var components_NAutocomplete = (NAutocomplete);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 12 modules
-var NBtn = __webpack_require__(1332);
+var NBtn = __webpack_require__(6223);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBadge/NBadge.vue?vue&type=template&id=de1bfb68
 
 var NBadgevue_type_template_id_de1bfb68_hoisted_1 = {
@@ -14217,8 +14246,8 @@ function NDialogvue_type_template_id_077af769_render(_ctx, _cache, $props, $setu
 var NInline = __webpack_require__(9021);
 // EXTERNAL MODULE: ./src/directives/NStrokeBtn.js
 var NStrokeBtn = __webpack_require__(1656);
-// EXTERNAL MODULE: ./src/directives/NFlatBtn.js
-var NFlatBtn = __webpack_require__(1501);
+// EXTERNAL MODULE: ./src/directives/NFlatBtn.vue + 2 modules
+var NFlatBtn = __webpack_require__(9639);
 ;// CONCATENATED MODULE: ./src/directives/NClickOutside.js
 
 var clickOutside = {
