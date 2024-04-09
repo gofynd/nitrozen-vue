@@ -713,7 +713,7 @@ var NInput = __webpack_require__(8561);
 // EXTERNAL MODULE: ./src/components/NError/index.js + 7 modules
 var NError = __webpack_require__(2960);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 12 modules
-var NBtn = __webpack_require__(7784);
+var NBtn = __webpack_require__(412);
 // EXTERNAL MODULE: ./src/components/NInline/index.js + 7 modules
 var NInline = __webpack_require__(9021);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=script&lang=js
@@ -1908,7 +1908,7 @@ http://ricostacruz.com/cheatsheets/umdjs.html
 
 /***/ }),
 
-/***/ 7784:
+/***/ 412:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2021,7 +2021,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 
 
 
-/* harmony default export */ var NBtnvue_type_script_lang_js = ({
+/* harmony default export */ var NBtnvue_type_script_lang_js = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.defineComponent)({
   name: 'nitrozen-button',
   components: {
     NButtonContent: NBtnContent
@@ -2072,17 +2072,14 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     }
   },
   render: function render() {
-    var slotElement = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.h)('n-button-content', {
-      props: {
-        showProgress: this.showProgress,
-        icon: this.icon,
-        size: this.size,
-        iconColor: this.iconColor
-      }
+    var slotElement = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.h)(NBtnContent, {
+      showProgress: this.showProgress,
+      icon: this.icon,
+      size: this.size,
+      iconColor: this.iconColor
     }, this.$slots.default);
-    var buttonAttrs = {
-      staticClass: 'n-button ripple',
-      class: [{
+    var buttonAttrs = _objectSpread(_objectSpread({
+      class: ['n-button', 'ripple', {
         'n-button-rounded': this.rounded,
         'n-button-primary': this.theme == 'primary',
         'n-button-secondary': this.theme == 'secondary',
@@ -2092,27 +2089,23 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         'n-button-small': this.size == 'small',
         'n-button-focused': this.focused
       }],
-      attrs: {
-        href: this.href,
-        disabled: this.disabled,
-        type: !this.href && (this.type || 'button')
-      },
-      on: _objectSpread({}, this.$listeners)
-    };
+      href: this.href,
+      disabled: this.disabled,
+      type: !this.href && (this.type || 'button')
+    }, this.$attrs), this.$listeners);
     var tag = 'button';
     if (this.href) {
       tag = 'a';
-      buttonAttrs;
     }
-    return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.h)(tag, buttonAttrs, [slotElement]);
+    return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.h)(tag, buttonAttrs, slotElement);
   }
-});
+}));
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=d8807790&lang=less
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=a2c782aa&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=d8807790&lang=less
+;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=a2c782aa&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue
 
@@ -3661,39 +3654,56 @@ var clickOutside = {
 /***/ }),
 
 /***/ 1501:
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var flatBtn = {
-  beforeMount: function beforeMount(el, binding, vnode) {
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9274);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+
+var flatBtn = vue__WEBPACK_IMPORTED_MODULE_0___default().directive('flat-btn', {
+  bind: function bind(el, binding, vnode) {
     el.classList.add('n-flat-button');
-    if (vnode.props.theme === 'secondary') {
+    if (vnode.componentOptions.propsData.theme == 'secondary') {
       el.classList.add('n-flat-button-secondary');
-    } else if (vnode.props.theme === 'destructive') {
+    } else if (vnode.componentOptions.propsData.theme == 'destructive') {
       el.classList.add('n-flat-button-destructive');
     } else {
       el.classList.add('n-flat-button-primary');
     }
   }
-};
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default().use(flatBtn);
+
+// bind
+// inserted
+// update
+// componentUpdated
+// unbind
+
 /* harmony default export */ __webpack_exports__.A = (flatBtn);
 
 /***/ }),
 
 /***/ 1656:
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var strokeBtn = function strokeBtn(el, binding, vnode) {
-  el.classList.add('n-button-stroke');
-  if (vnode.componentOptions.propsData.theme == 'secondary') {
-    el.classList.add('n-button-stroke-secondary');
-  } else if (vnode.componentOptions.propsData.theme == 'destructive') {
-    el.classList.add('n-button-stroke-destructive');
-  } else {
-    el.classList.add('n-button-stroke-primary');
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9274);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+
+var strokeBtn = vue__WEBPACK_IMPORTED_MODULE_0___default().directive('stroke-btn', {
+  bind: function bind(el, binding, vnode) {
+    el.classList.add('n-button-stroke');
+    if (vnode.componentOptions.propsData.theme == 'secondary') {
+      el.classList.add('n-button-stroke-secondary');
+    } else if (vnode.componentOptions.propsData.theme == 'destructive') {
+      el.classList.add('n-button-stroke-destructive');
+    } else {
+      el.classList.add('n-button-stroke-primary');
+    }
   }
-};
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default().use(strokeBtn);
 
 // bind
 // inserted
@@ -13823,7 +13833,7 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(NAutocompletevu
 
 /* harmony default export */ var components_NAutocomplete = (NAutocomplete);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 12 modules
-var NBtn = __webpack_require__(7784);
+var NBtn = __webpack_require__(412);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBadge/NBadge.vue?vue&type=template&id=de1bfb68
 
 var NBadgevue_type_template_id_de1bfb68_hoisted_1 = {
