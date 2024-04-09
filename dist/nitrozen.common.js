@@ -691,7 +691,7 @@ function validateInput(input) {
 var vue_tel_input = __webpack_require__(3954);
 var vue_tel_input_default = /*#__PURE__*/__webpack_require__.n(vue_tel_input);
 // EXTERNAL MODULE: ./src/components/NToggleBtn/index.js + 7 modules
-var NToggleBtn = __webpack_require__(8783);
+var NToggleBtn = __webpack_require__(1877);
 // EXTERNAL MODULE: ./src/components/NCheckbox/index.js + 7 modules
 var NCheckbox = __webpack_require__(3015);
 // EXTERNAL MODULE: ./src/components/NRadio/index.js + 7 modules
@@ -3203,7 +3203,7 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(NRadiovue_type_
 
 /***/ }),
 
-/***/ 8783:
+/***/ 1877:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3215,154 +3215,73 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(4100);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=template&id=2c4ce654&scoped=true
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=template&id=7ebd237e&scoped=true
 
 var _withScopeId = function _withScopeId(n) {
-  return _pushScopeId("data-v-2c4ce654"), n = n(), _popScopeId(), n;
+  return _pushScopeId("data-v-7ebd237e"), n = n(), _popScopeId(), n;
 };
-var _hoisted_1 = ["data-testid"];
-var _hoisted_2 = ["for"];
-var _hoisted_3 = ["id", "data-testid", "checked", "value", "disabled", "name"];
+var _hoisted_1 = {
+  class: "nitrozen-toggle-container"
+};
+var _hoisted_2 = {
+  class: "nitrozen-switch"
+};
+var _hoisted_3 = ["disabled", "checked", "value"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _component_n_validation = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.resolveComponent)("n-validation");
-  return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", {
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(['n-toggle-container', $props.className])
-  }, [$props.showIcon ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", {
-    key: 0,
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(['n-toggle-icon', "social-icon-".concat($props.size)]),
-    "data-testid": "".concat($props.id, "-icon")
-  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.renderSlot)(_ctx.$slots, "icon", {}, undefined, true)], 10, _hoisted_1)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("label", {
-    for: $props.id,
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(_defineProperty({
-      'n-switch': true
-    }, $props.size, true))
-  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("input", {
-    id: $props.id,
-    "data-testid": "".concat($props.id, "-input"),
+  return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", _hoisted_1, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("label", _hoisted_2, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("input", {
     type: "checkbox",
     onChange: _cache[0] || (_cache[0] = function () {
-      return $options.onChange && $options.onChange.apply($options, arguments);
+      return $options.change && $options.change.apply($options, arguments);
     }),
-    checked: $data.toggleValue,
-    value: $data.toggleValue,
     disabled: $props.disabled,
-    name: $props.name,
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(['n-toggle-input', $props.className]),
-    style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)($props.inputStyle)
-  }, null, 46, _hoisted_3), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("span", {
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)({
-      'n-slider n-round': true,
-      'n-disabled': $props.disabled,
-      'success-state': $props.state == 'success',
-      'warning-state': $props.state == 'warning',
-      'error-state': $props.state == 'error',
-      checked: $data.toggleValue
-    })
-  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", {
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)({
-      'slider-ball': true,
-      checked: $data.toggleValue
-    })
-  }, null, 2)], 2), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("span", {
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)({
-      'label-text': true,
-      'n-disabled': $props.disabled,
-      checked: $data.toggleValue
-    })
-  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.renderSlot)(_ctx.$slots, "default", {}, undefined, true)], 2), $props.state !== 'default' ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createBlock)(_component_n_validation, {
-    key: 0,
-    "data-testid": $props.id,
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)('n-toggle-validation'),
-    validationState: $props.state,
-    label: $props.stateMessage,
-    isHidden: $props.state === null
-  }, null, 8, ["data-testid", "validationState", "label", "isHidden"])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true)], 10, _hoisted_2)], 2);
+    checked: $props.value,
+    value: $props.value
+  }, null, 40, _hoisted_3), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("span", {
+    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(["nitrozen-slider nitrozen-round", {
+      'nitrozen-disabled': $props.disabled
+    }])
+  }, null, 2)])]);
 }
-;// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=template&id=2c4ce654&scoped=true
+;// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=template&id=7ebd237e&scoped=true
 
-// EXTERNAL MODULE: ./src/components/NValidation/index.js + 7 modules
-var NValidation = __webpack_require__(7609);
-// EXTERNAL MODULE: ./src/utils/NUuid.js
-var NUuid = __webpack_require__(760);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=script&lang=js
-
-
 /* harmony default export */ var NToggleBtnvue_type_script_lang_js = ({
-  name: "n-toggle-button",
+  name: 'nitrozen-toggle-btn',
+  // props: {
+  //     curstate: {
+  //         default: false,
+  //         type: Boolean
+  //     }
+  // },
   props: {
-    id: {
-      type: String,
-      required: true,
-      default: "n-toggle-".concat((0,NUuid/* default */.A)())
-    },
-    showIcon: {
+    disabled: {
       type: Boolean,
       default: false
     },
     value: {
       type: Boolean,
       default: false
-    },
-    size: {
-      type: String,
-      default: "medium",
-      validator: function validator(value) {
-        return ["small", "medium", "large"].includes(value);
-      }
-    },
-    disabled: {
-      type: Boolean,
-      default: false
-    },
-    className: {
-      type: String,
-      default: ""
-    },
-    name: {
-      type: String,
-      default: ""
-    },
-    state: {
-      type: String,
-      default: "",
-      validator: function validator(value) {
-        return ["success", "error", "warning", "default"].includes(value);
-      }
-    },
-    stateMessage: {
-      type: String,
-      default: ""
-    },
-    inputStyle: {},
-    labelStyle: {}
-  },
-  components: {
-    "n-validation": NValidation/* default */.A
-  },
-  event: "change",
-  methods: {
-    onChange: function onChange(event) {
-      this.toggleValue = !this.toggleValue;
-      this.$emit("input", event.target.checked);
-      this.$emit("change", event);
     }
   },
   data: function data() {
     return {
-      toggleValue: this.value
+      selectedState: this.value
     };
+  },
+  methods: {
+    change: function change(event) {
+      // console.log(this.value,'selectedState',this.selectedState)
+      this.$emit("input", event.target.checked);
+      this.$emit('change', event);
+    }
   }
 });
 ;// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=style&index=0&id=2c4ce654&lang=less&scoped=true
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=style&index=0&id=7ebd237e&lang=less&scoped=true
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=style&index=0&id=2c4ce654&lang=less&scoped=true
+;// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=style&index=0&id=7ebd237e&lang=less&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(4621);
@@ -3374,7 +3293,7 @@ var exportHelper = __webpack_require__(4621);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(NToggleBtnvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-2c4ce654"]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(NToggleBtnvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-7ebd237e"]])
 
 /* harmony default export */ var NToggleBtn = (__exports__);
 ;// CONCATENATED MODULE: ./src/components/NToggleBtn/index.js
@@ -15194,7 +15113,7 @@ const NStepper_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(NStepperv
 
 /* harmony default export */ var components_NStepper = (NStepper);
 // EXTERNAL MODULE: ./src/components/NToggleBtn/index.js + 7 modules
-var NToggleBtn = __webpack_require__(8783);
+var NToggleBtn = __webpack_require__(1877);
 // EXTERNAL MODULE: ./src/components/NCustomForm/NCustomForm.vue + 15 modules
 var NCustomForm = __webpack_require__(8541);
 ;// CONCATENATED MODULE: ./src/components/NCustomForm/index.js
