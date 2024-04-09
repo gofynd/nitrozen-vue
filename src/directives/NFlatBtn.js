@@ -30,7 +30,7 @@ const flatBtn = {
     if (vnode.props.theme == 'secondary') {
       el.classList.add('n-flat-button-secondary');
     }
-    else if (vnode.propsData.theme == 'destructive') {
+    else if (vnode.props.theme == 'destructive') {
       el.classList.add('n-flat-button-destructive');
     }
     else {
