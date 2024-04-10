@@ -92,11 +92,11 @@ export default {
             buttonAttrs
         }
 
-        return h(tag, buttonAttrs, slotElement);
+        return h(tag, buttonAttrs, [slotElement]);
     }
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @import './NBtn.less';
 </style>
