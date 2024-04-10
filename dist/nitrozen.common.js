@@ -703,7 +703,7 @@ var NInput = __webpack_require__(7335);
 // EXTERNAL MODULE: ./src/components/NError/index.js + 7 modules
 var NError = __webpack_require__(2526);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 12 modules
-var NBtn = __webpack_require__(7913);
+var NBtn = __webpack_require__(9575);
 // EXTERNAL MODULE: ./src/components/NInline/index.js + 7 modules
 var NInline = __webpack_require__(5469);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=script&lang=js
@@ -1898,7 +1898,7 @@ http://ricostacruz.com/cheatsheets/umdjs.html
 
 /***/ }),
 
-/***/ 7913:
+/***/ 9575:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2061,47 +2061,48 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       type: String
     }
   },
-  render: function render() {
+  setup: function setup(props, _ref) {
+    var slots = _ref.slots,
+      listeners = _ref.listeners;
     var slotElement = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.h)('n-button-content', {
-      props: {
-        showProgress: this.showProgress,
-        icon: this.icon,
-        size: this.size,
-        iconColor: this.iconColor
-      }
-    }, this.$slots.default);
+      showProgress: props.showProgress,
+      icon: props.icon
+    }, slots.default && slots.default());
     var buttonAttrs = {
-      class: [{
-        'n-button-rounded': this.rounded,
-        'n-button-primary': this.theme == 'primary',
-        'n-button-secondary': this.theme == 'secondary',
-        'n-button-destructive': this.theme == 'destructive',
-        'n-button-large': this.size == 'large',
-        'n-button-mid': this.size == 'medium',
-        'n-button-small': this.size == 'small',
-        'n-button-focused': this.focused
+      class: ['n-button', 'ripple', {
+        'n-button-rounded': props.rounded,
+        'n-button-primary': props.theme == 'primary',
+        'n-button-secondary': props.theme == 'secondary',
+        'n-button-large': props.size == 'large',
+        'n-button-mid': props.size == 'medium',
+        'n-button-focused': props.focused
       }],
-      attrs: {
-        href: this.href,
-        disabled: this.disabled,
-        type: !this.href && (this.type || 'button')
-      },
-      on: _objectSpread({}, this.$listeners)
+      // attrs: {
+      href: props.href,
+      disabled: props.disabled,
+      type: !props.href && (props.type || 'button'),
+      // },
+      on: listeners
     };
     var tag = 'button';
-    if (this.href) {
+    if (props.href) {
       tag = 'a';
-      buttonAttrs;
+      // Properly assign buttonAttrs when setting the tag to 'a'
+      buttonAttrs = _objectSpread(_objectSpread({}, buttonAttrs), {}, {
+        href: props.href
+      });
     }
-    return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.h)(tag, buttonAttrs, [slotElement]);
+    return function () {
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.h)(tag, buttonAttrs, slotElement);
+    };
   }
 });
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=7c0e67f6&lang=less
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=5377841b&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=7c0e67f6&lang=less
+;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=5377841b&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue
 
@@ -3532,6 +3533,43 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(NValidationvue_
 ;// CONCATENATED MODULE: ./src/components/NValidation/index.js
 
 /* harmony default export */ var components_NValidation = (NValidation);
+
+/***/ }),
+
+/***/ 9139:
+/***/ (function() {
+
+// const clickOutside = {
+//   beforeMount(el, binding) {
+//     // Provided expression must evaluate to a function.
+//     if (typeof binding.value !== 'function') {
+//       const compName = binding.instance && binding.instance.proxy?._uid
+//       let warn = `[Nitrozen-click-outside:] provided expression '${binding.expression}' is not a function, but has to be`
+//       if (compName) {
+//         warn += ` Found in component '${compName}'`
+//       }
+//       console.warn(warn)
+//     }
+//     // Define Handler and cache it on the element
+//     const bubble = binding.modifiers.bubble
+//     const handler = (e) => {
+//       let path = e.composedPath ? e.composedPath() : e.path;
+//       if (bubble || path && -1 == path.indexOf(el)) {
+//         binding.value(e)
+//       }
+//     }
+//     el.__nitrozenClickOutside__ = handler
+//     // add Event Listeners
+//     document.addEventListener('click', handler)
+//   },
+//   unmounted(el, binding) {
+//     // Remove Event Listeners
+//     document.removeEventListener('click', el.__nitrozenClickOutside__)
+//     el.__nitrozenClickOutside__ = null
+//   }
+// };
+
+// export default clickOutside
 
 /***/ }),
 
@@ -13507,7 +13545,7 @@ __webpack_require__.d(__webpack_exports__, {
   NitrozenTabItem: function() { return /* reexport */ components_NTabItem; },
   NitrozenToggleBtn: function() { return /* reexport */ NToggleBtn/* default */.A; },
   NitrozenTooltip: function() { return /* reexport */ NTooltip/* default */.A; },
-  clickOutside: function() { return /* reexport */ NClickOutside; },
+  clickOutside: function() { return /* reexport */ (NClickOutside_default()); },
   flatBtn: function() { return /* reexport */ NFlatBtn/* default */.A; },
   strokeBtn: function() { return /* reexport */ NStrokeBtn/* default */.A; }
 });
@@ -13539,7 +13577,6 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(4100);
-var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NAutocomplete/NAutocomplete.vue?vue&type=template&id=91f50dce
 
 var _hoisted_1 = {
@@ -13725,7 +13762,7 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(NAutocompletevu
 
 /* harmony default export */ var components_NAutocomplete = (NAutocomplete);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 12 modules
-var NBtn = __webpack_require__(7913);
+var NBtn = __webpack_require__(9575);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBadge/NBadge.vue?vue&type=template&id=de1bfb68
 
 var NBadgevue_type_template_id_de1bfb68_hoisted_1 = {
@@ -14154,39 +14191,9 @@ var NInline = __webpack_require__(5469);
 var NStrokeBtn = __webpack_require__(7962);
 // EXTERNAL MODULE: ./src/directives/NFlatBtn.js
 var NFlatBtn = __webpack_require__(9811);
-;// CONCATENATED MODULE: ./src/directives/NClickOutside.js
-
-var clickOutside = external_commonjs_vue_commonjs2_vue_root_Vue_default().directive('click-outside', {
-  bind: function bind(el, binding, vNode) {
-    // Provided expression must evaluate to a function.
-    if (typeof binding.value !== 'function') {
-      var compName = vNode.context.name;
-      var warn = "[Nitrozen-click-outside:] provided expression '".concat(binding.expression, "' is not a function, but has to be");
-      if (compName) {
-        warn += " Found in component '".concat(compName, "'");
-      }
-      console.warn(warn);
-    }
-    // Define Handler and cache it on the element
-    var bubble = binding.modifiers.bubble;
-    var handler = function handler(e) {
-      var path = e.composedPath ? e.composedPath() : e.path;
-      if (bubble || path && -1 == path.indexOf(el)) {
-        binding.value(e);
-      }
-    };
-    el.__nitrozenClickOutside__ = handler;
-    // add Event Listeners
-    document.addEventListener('click', handler);
-  },
-  unbind: function unbind(el, binding) {
-    // Remove Event Listeners
-    document.removeEventListener('click', el.__nitrozenClickOutside__);
-    el.__nitrozenClickOutside__ = null;
-  }
-});
-external_commonjs_vue_commonjs2_vue_root_Vue_default().use(clickOutside);
-/* harmony default export */ var NClickOutside = (clickOutside);
+// EXTERNAL MODULE: ./src/directives/NClickOutside.js
+var NClickOutside = __webpack_require__(9139);
+var NClickOutside_default = /*#__PURE__*/__webpack_require__.n(NClickOutside);
 ;// CONCATENATED MODULE: ./src/directives/index.js
 
 
@@ -14383,7 +14390,7 @@ function NMenuvue_type_template_id_308a10e0_render(_ctx, _cache, $props, $setup,
 /* harmony default export */ var NMenuvue_type_script_lang_js = ({
   name: "nitrozen-menu",
   directives: {
-    clickOutside: NClickOutside
+    clickOutside: (NClickOutside_default())
   },
   components: {
     "nitrozen-inline": NInline/* default */.A

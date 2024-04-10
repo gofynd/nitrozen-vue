@@ -10,5 +10,6 @@ const app = createApp(App);
 app.use(NitrozenVuePlugin);
 
 app.use('flat-btn',flatBtn);
+app.use(flatBtn);
 
 app.mount('#app')
