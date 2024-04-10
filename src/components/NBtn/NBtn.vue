@@ -78,7 +78,8 @@ export default {
             disabled: props.disabled,
             type: !props.href && (props.type || 'button'),
             // },
-            on: listeners
+            on: listeners,
+            theme: props.theme
         };
 
         let tag = 'button';

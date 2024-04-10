@@ -69,13 +69,13 @@
 
       <!-- Flat Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn @click="someFunc">Primary Flat {{ numberOfClick
+        <nitrozen-button :theme="'secondary'" v-flat-btn @click="someFunc">Primary Flat {{ numberOfClick
         }}</nitrozen-button>
         <div class="hover-new">
           <nitrozen-button v-flat-btn>Hover Flat</nitrozen-button>
         </div>
-        <nitrozen-button v-flat-btn :showProgress="true"></nitrozen-button>
-        <nitrozen-button v-flat-btn :focused="true">Focused Flat</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'" :showProgress="true"></nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'" :focused="true">Focused Flat</nitrozen-button>
         <nitrozen-button v-flat-btn :disabled="true">Disabled Flat</nitrozen-button>
       </div>
 

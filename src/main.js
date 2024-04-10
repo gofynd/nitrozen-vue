@@ -5,11 +5,13 @@ import App from './pages/demo.vue'
 
 import NitrozenVuePlugin from './setup';
 import flatBtn from './directives/NFlatBtn';
+import { clickOutside, strokeBtn } from './directives';
 
 const app = createApp(App);
 app.use(NitrozenVuePlugin);
 
-app.use('flat-btn',flatBtn);
-app.use(flatBtn);
+app.directive('flat-btn',flatBtn);
+app.directive('stroke-btn', strokeBtn);
+app.directive('click-outside', clickOutside);
 
 app.mount('#app')

@@ -703,7 +703,7 @@ var NInput = __webpack_require__(7335);
 // EXTERNAL MODULE: ./src/components/NError/index.js + 7 modules
 var NError = __webpack_require__(2526);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 12 modules
-var NBtn = __webpack_require__(9575);
+var NBtn = __webpack_require__(382);
 // EXTERNAL MODULE: ./src/components/NInline/index.js + 7 modules
 var NInline = __webpack_require__(5469);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=script&lang=js
@@ -1898,7 +1898,7 @@ http://ricostacruz.com/cheatsheets/umdjs.html
 
 /***/ }),
 
-/***/ 9575:
+/***/ 382:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2082,7 +2082,8 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       disabled: props.disabled,
       type: !props.href && (props.type || 'button'),
       // },
-      on: listeners
+      on: listeners,
+      theme: props.theme
     };
     var tag = 'button';
     if (props.href) {
@@ -2099,10 +2100,10 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 });
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=5377841b&lang=less
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=021bacb5&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=5377841b&lang=less
+;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=021bacb5&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue
 
@@ -3536,43 +3537,6 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(NValidationvue_
 
 /***/ }),
 
-/***/ 9139:
-/***/ (function() {
-
-// const clickOutside = {
-//   beforeMount(el, binding) {
-//     // Provided expression must evaluate to a function.
-//     if (typeof binding.value !== 'function') {
-//       const compName = binding.instance && binding.instance.proxy?._uid
-//       let warn = `[Nitrozen-click-outside:] provided expression '${binding.expression}' is not a function, but has to be`
-//       if (compName) {
-//         warn += ` Found in component '${compName}'`
-//       }
-//       console.warn(warn)
-//     }
-//     // Define Handler and cache it on the element
-//     const bubble = binding.modifiers.bubble
-//     const handler = (e) => {
-//       let path = e.composedPath ? e.composedPath() : e.path;
-//       if (bubble || path && -1 == path.indexOf(el)) {
-//         binding.value(e)
-//       }
-//     }
-//     el.__nitrozenClickOutside__ = handler
-//     // add Event Listeners
-//     document.addEventListener('click', handler)
-//   },
-//   unmounted(el, binding) {
-//     // Remove Event Listeners
-//     document.removeEventListener('click', el.__nitrozenClickOutside__)
-//     el.__nitrozenClickOutside__ = null
-//   }
-// };
-
-// export default clickOutside
-
-/***/ }),
-
 /***/ 9811:
 /***/ (function(__unused_webpack_module, __webpack_exports__) {
 
@@ -3606,9 +3570,9 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(NValidationvue_
 var flatBtn = {
   beforeMount: function beforeMount(el, binding, vnode) {
     el.classList.add('n-flat-button');
-    if (vnode.componentOptions.propsData.theme == 'secondary') {
+    if (vnode.props.theme == 'secondary') {
       el.classList.add('n-flat-button-secondary');
-    } else if (vnode.componentOptions.propsData.theme == 'destructive') {
+    } else if (vnode.props.theme == 'destructive') {
       el.classList.add('n-flat-button-destructive');
     } else {
       el.classList.add('n-flat-button-primary');
@@ -3625,9 +3589,9 @@ var flatBtn = {
 "use strict";
 var strokeBtn = function strokeBtn(el, binding, vnode) {
   el.classList.add('n-button-stroke');
-  if (vnode.componentOptions.propsData.theme == 'secondary') {
+  if (vnode.props.theme == 'secondary') {
     el.classList.add('n-button-stroke-secondary');
-  } else if (vnode.componentOptions.propsData.theme == 'destructive') {
+  } else if (vnode.props.theme == 'destructive') {
     el.classList.add('n-button-stroke-destructive');
   } else {
     el.classList.add('n-button-stroke-primary');
@@ -13545,7 +13509,7 @@ __webpack_require__.d(__webpack_exports__, {
   NitrozenTabItem: function() { return /* reexport */ components_NTabItem; },
   NitrozenToggleBtn: function() { return /* reexport */ NToggleBtn/* default */.A; },
   NitrozenTooltip: function() { return /* reexport */ NTooltip/* default */.A; },
-  clickOutside: function() { return /* reexport */ (NClickOutside_default()); },
+  clickOutside: function() { return /* reexport */ NClickOutside; },
   flatBtn: function() { return /* reexport */ NFlatBtn/* default */.A; },
   strokeBtn: function() { return /* reexport */ NStrokeBtn/* default */.A; }
 });
@@ -13762,7 +13726,7 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(NAutocompletevu
 
 /* harmony default export */ var components_NAutocomplete = (NAutocomplete);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 12 modules
-var NBtn = __webpack_require__(9575);
+var NBtn = __webpack_require__(382);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/NBadge/NBadge.vue?vue&type=template&id=de1bfb68
 
 var NBadgevue_type_template_id_de1bfb68_hoisted_1 = {
@@ -14191,9 +14155,38 @@ var NInline = __webpack_require__(5469);
 var NStrokeBtn = __webpack_require__(7962);
 // EXTERNAL MODULE: ./src/directives/NFlatBtn.js
 var NFlatBtn = __webpack_require__(9811);
-// EXTERNAL MODULE: ./src/directives/NClickOutside.js
-var NClickOutside = __webpack_require__(9139);
-var NClickOutside_default = /*#__PURE__*/__webpack_require__.n(NClickOutside);
+;// CONCATENATED MODULE: ./src/directives/NClickOutside.js
+var clickOutside = {
+  beforeMount: function beforeMount(el, binding) {
+    // Provided expression must evaluate to a function.
+    if (typeof binding.value !== 'function') {
+      var _binding$instance$pro;
+      var compName = binding.instance && ((_binding$instance$pro = binding.instance.proxy) === null || _binding$instance$pro === void 0 ? void 0 : _binding$instance$pro._uid);
+      var warn = "[Nitrozen-click-outside:] provided expression '".concat(binding.expression, "' is not a function, but has to be");
+      if (compName) {
+        warn += " Found in component '".concat(compName, "'");
+      }
+      console.warn(warn);
+    }
+    // Define Handler and cache it on the element
+    var bubble = binding.modifiers.bubble;
+    var handler = function handler(e) {
+      var path = e.composedPath ? e.composedPath() : e.path;
+      if (bubble || path && -1 == path.indexOf(el)) {
+        binding.value(e);
+      }
+    };
+    el.__nitrozenClickOutside__ = handler;
+    // add Event Listeners
+    document.addEventListener('click', handler);
+  },
+  unmounted: function unmounted(el, binding) {
+    // Remove Event Listeners
+    document.removeEventListener('click', el.__nitrozenClickOutside__);
+    el.__nitrozenClickOutside__ = null;
+  }
+};
+/* harmony default export */ var NClickOutside = (clickOutside);
 ;// CONCATENATED MODULE: ./src/directives/index.js
 
 
@@ -14390,7 +14383,7 @@ function NMenuvue_type_template_id_308a10e0_render(_ctx, _cache, $props, $setup,
 /* harmony default export */ var NMenuvue_type_script_lang_js = ({
   name: "nitrozen-menu",
   directives: {
-    clickOutside: (NClickOutside_default())
+    clickOutside: NClickOutside
   },
   components: {
     "nitrozen-inline": NInline/* default */.A
