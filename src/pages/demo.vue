@@ -1022,7 +1022,7 @@ export default {
       this.fruits.splice(index, 1);
     },
     setSelectItems: function(item) {
-      let index = this.selectedItems.indexOf(item);
+      let index = this.selectedItems?.indexOf(item);
       if (index == -1) {
         this.selectedItems.push(item);
       } else {
@@ -1064,7 +1064,7 @@ export default {
         let text = e.text;
         this.dropdownItemsFiltered = this.dropdownItemsGroup.filter(
           (a) =>
-            a.text.toLowerCase().indexOf(text.toLowerCase()) > -1 ||
+            a.text.toLowerCase()?.indexOf(text.toLowerCase()) > -1 ||
             a.isGroupLabel
         );
         this.dropdownItemsFiltered = this.dropdownItemsFiltered.filter(

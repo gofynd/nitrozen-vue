@@ -28,10 +28,10 @@
 const flatBtn = {
   beforeMount(el, binding, vnode) {
     el.classList.add('n-flat-button');
-    if (vnode.props.theme == 'secondary') {
+    if (vnode.componentOptions.propsData.theme == 'secondary') {
       el.classList.add('n-flat-button-secondary');
     }
-    else if (vnode.props.theme == 'destructive') {
+    else if (vnode.componentOptions.propsData.theme == 'destructive') {
       el.classList.add('n-flat-button-destructive');
     }
     else {
