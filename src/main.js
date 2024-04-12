@@ -1,14 +1,17 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 
 // import App from './pages/custom-form-demo.vue'
 import App from './pages/demo.vue'
 
 import NitrozenVuePlugin from './setup';
+import flatBtn from './directives/NFlatBtn';
+import { clickOutside, strokeBtn } from './directives';
 
-Vue.use(NitrozenVuePlugin);
+const app = createApp(App);
+app.use(NitrozenVuePlugin);
 
-Vue.config.productionTip = false
+app.directive('flat-btn',flatBtn);
+app.directive('stroke-btn', strokeBtn);
+app.directive('click-outside', clickOutside);
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+app.mount('#app')

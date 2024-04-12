@@ -47,7 +47,8 @@ export default {
       inputs.forEach((input) => {
         if (input.visible_if) {
           const hidden = !jsonLogic.apply(input.visible_if, response);
-          this.$set(input, "hidden", hidden);
+          // this.$set(input, "hidden", hidden);
+          input.hidden = hidden;
           if (hidden) {
             delete response[input.key];
           } else if (response[input.key] == undefined) {
