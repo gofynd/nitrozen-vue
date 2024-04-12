@@ -6,7 +6,7 @@
       class="nitrozen-chip ripple"
       :class="[chipClasses]"
       tabindex="0"
-      v-on="$listeners"
+      v-on="$attrs"
     >
       <span :class="icon ? 'chip-slot' : 'chip-slot-default'">
         <slot class="nitrozen-chip-icon"

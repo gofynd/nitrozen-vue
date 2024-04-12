@@ -54,7 +54,7 @@ export default {
             type: String
         }
     },
-    setup(props, { slots, listeners }) {
+    setup(props, { slots, attrs }) {
         const slotElement = h('n-button-content', {
             showProgress: props.showProgress,
             icon: props.icon
@@ -78,7 +78,7 @@ export default {
             disabled: props.disabled,
             type: !props.href && (props.type || 'button'),
             // },
-            on: listeners,
+            on: attrs,
             theme: props.theme
         };
 

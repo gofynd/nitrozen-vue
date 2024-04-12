@@ -124,7 +124,9 @@ export default {
     this.setDefaults();
   },
   data: () => {
-    return {};
+    return {
+      selectedPageSize : null
+    };
   },
   computed: {
     pages: function() {

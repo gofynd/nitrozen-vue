@@ -2,7 +2,7 @@
     <!-- <span v-on="$listeners">
         <img src="./../../assets/cross.svg" class="nitrozen-inline-svg" />
     </span> -->
-    <span v-on="$listeners" v-html="getSVG" class="nitrozen-inline-svg"></span>
+    <span v-on="$attrs" v-html="getSVG" class="nitrozen-inline-svg"></span>
 </template>
 
 <script>
