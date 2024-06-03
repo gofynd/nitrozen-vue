@@ -20,6 +20,7 @@
         :maxlength="input.max_length"
         :min="input.min"
         :max="input.max"
+        @input="inputChanged"
       />
     </template>
     <template v-else-if="input.type == InputTypes.toggle.key">
