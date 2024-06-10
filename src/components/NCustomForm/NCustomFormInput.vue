@@ -226,10 +226,12 @@ export default {
        this.formInputValue.code=value.dialCode
     },
     inputChanged(event) {
+      console.log(event)
       this.errorMessage = null
       const value = event.target.value;
       if (value === '+' || value === '-') {
-        this.inputValue = '';
+        this.formInputValue = '';
+        console.log(value)
       } else {
         this.$emit("change", this.formInputValue);
       }
