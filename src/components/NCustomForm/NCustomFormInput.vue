@@ -7,7 +7,7 @@
       v-else-if="['text', 'textarea', 'email', 'number'].includes(input.type)"
     >
       <nitrozen-input
-        :type="input.type"
+        :type="text"
         v-model="formInputValue"
         :label="input.display"
         :placeholder="input.placeholder"
@@ -20,6 +20,7 @@
         :maxlength="input.max_length"
         :min="input.min"
         :max="input.max"
+        @change="inputChanged"
       />
     </template>
     <template v-else-if="input.type == InputTypes.toggle.key">
@@ -213,7 +214,11 @@ export default {
       this.inputChanged();
     },
   },
+
   methods: {
+    handleInput(event){
+console.log(event)
+  },
     validateMobileInput(phoneObj){
       this.formInputValue.valid=phoneObj.isValid
     },
@@ -224,9 +229,18 @@ export default {
     countryCodeChange(value){
        this.formInputValue.code=value.dialCode
     },
-    inputChanged() {
+    inputChanged(event) {
+      console.log('dghflksdg',event)
       this.errorMessage = null
-      this.$emit("change", this.formInputValue);
+      this.$emit("change", this.formInputValue)
+      // const value = event.target.value;
+      // if (value === '+' || value === '-') {
+      //   this.formInputValue = '';
+  
+      // } else {
+      //   this.$emit("change", this.formInputValue);
+      // }
+     
     },
     addResponse() {
       this.formInputValue.push(defaultResponseForInput(this.input.input));
