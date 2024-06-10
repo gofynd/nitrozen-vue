@@ -20,7 +20,7 @@
         :maxlength="input.max_length"
         :min="input.min"
         :max="input.max"
-        @input="inputChanged"
+        @input="handleInput"
       />
     </template>
     <template v-else-if="input.type == InputTypes.toggle.key">
@@ -214,6 +214,9 @@ export default {
       this.inputChanged();
     },
   },
+  handleInput(event){
+console.log(event)
+  },
   methods: {
     validateMobileInput(phoneObj){
       this.formInputValue.valid=phoneObj.isValid
@@ -226,15 +229,16 @@ export default {
        this.formInputValue.code=value.dialCode
     },
     inputChanged(event) {
-      console.log(event)
+      console.log('dghflksdg',event)
       this.errorMessage = null
-      const value = event.target.value;
-      if (value === '+' || value === '-') {
-        this.formInputValue = '';
-        console.log(value)
-      } else {
-        this.$emit("change", this.formInputValue);
-      }
+      this.$emit("change", this.formInputValue)
+      // const value = event.target.value;
+      // if (value === '+' || value === '-') {
+      //   this.formInputValue = '';
+  
+      // } else {
+      //   this.$emit("change", this.formInputValue);
+      // }
      
     },
     addResponse() {
