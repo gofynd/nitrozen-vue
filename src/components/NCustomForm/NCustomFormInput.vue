@@ -225,9 +225,15 @@ export default {
     countryCodeChange(value){
        this.formInputValue.code=value.dialCode
     },
-    inputChanged() {
+    inputChanged(event) {
       this.errorMessage = null
-      this.$emit("change", this.formInputValue);
+      const value = event.target.value;
+      if (value === '+' || value === '-') {
+        this.inputValue = '';
+      } else {
+        this.$emit("change", this.formInputValue);
+      }
+     
     },
     addResponse() {
       this.formInputValue.push(defaultResponseForInput(this.input.input));
