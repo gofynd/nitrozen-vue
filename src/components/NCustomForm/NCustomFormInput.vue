@@ -7,7 +7,7 @@
       v-else-if="['text', 'textarea', 'email', 'number'].includes(input.type)"
     >
       <nitrozen-input
-        :type="input.type"
+        :type="text"
         v-model="formInputValue"
         :label="input.display"
         :placeholder="input.placeholder"
@@ -20,7 +20,7 @@
         :maxlength="input.max_length"
         :min="input.min"
         :max="input.max"
-        @change="handleInput"
+        @change="inputChanged"
       />
     </template>
     <template v-else-if="input.type == InputTypes.toggle.key">
