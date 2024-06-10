@@ -214,10 +214,11 @@ export default {
       this.inputChanged();
     },
   },
-  handleInput(event){
+
+  methods: {
+    handleInput(event){
 console.log(event)
   },
-  methods: {
     validateMobileInput(phoneObj){
       this.formInputValue.valid=phoneObj.isValid
     },
