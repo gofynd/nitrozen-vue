@@ -131,7 +131,7 @@
             </slot>
           </span>
           <span v-if="searchable && items.length == 0" class="nitrozen-option">
-            <div class="nitrozen-option-container" v-if="!add_option">No {{ label }} Found</div>
+            <div class="nitrozen-option-container" v-if="!add_option">No {{ optionLabel }} found</div>
             <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length">
               <div class="nitrozen-dropdown-empty"
                 @click="addOption"
@@ -194,6 +194,10 @@ export default {
      */
     label: {
       type: String,
+    },
+    optionLabel: {
+      type: String,
+      default: 'option'
     },
     /**
      * multiselect value
@@ -282,7 +286,7 @@ export default {
         if (this.selected && this.selected.text) {
           return this.selected.text;
         } else if (this.label) {
-          return this.placeholder || `Choose ${this.label}`;
+          return this.placeholder || `Select ${this.label}`;
         }
         return "";
       } else {
@@ -308,7 +312,7 @@ export default {
           tmp = [...new Set(tmp)];
           return `${tmp.join(", ")}`;
         } else if (this.label) {
-          return this.placeholder || `Choose ${this.label}`;
+          return this.placeholder || `Select ${this.label}`;
         }
         return "";
       }
