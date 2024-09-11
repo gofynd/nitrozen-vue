@@ -131,7 +131,7 @@
             </slot>
           </span>
           <span v-if="searchable && items.length == 0" class="nitrozen-option">
-            <div class="nitrozen-option-container" v-if="!add_option">{{this.noresults_text}}</div>
+            <div class="nitrozen-option-container" v-if="!add_option">{{noresults_text}}</div>
             <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length">
               <div class="nitrozen-dropdown-empty"
                 @click="addOption"
