@@ -195,10 +195,6 @@ export default {
     label: {
       type: String,
     },
-    optionLabel: {
-      type: String,
-      default: 'option'
-    },
     /**
      * multiselect value
      */
