@@ -131,7 +131,6 @@ export default {
     }
 
     &:hover {
-        box-shadow: 0 0 16px @BoxShadow;
         background: @HoverColor;
     }
 

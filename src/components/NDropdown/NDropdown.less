@@ -140,15 +140,15 @@
   }
   // Disabled
   .nitrozen-select.disabled {
-    background-color: #EDEDED;
+    .disable();
   }
   .nitrozen-select.disabled .nitrozen-select__trigger {
-    background-color: #EDEDED;
-    color: #9C9CAA;
-    cursor: not-allowed;
+    color: @TypographyPrimaryColor;
+    .disable();
+
   }
   .nitrozen-select.disabled .nitrozen-select__trigger .nitrozen-dropdown-arrow {
-    color: @DisabledColor;
+    background: @HoverColor;
   }
 
   // Arrow
