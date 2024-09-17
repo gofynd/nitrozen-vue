@@ -51,11 +51,6 @@
     padding: 0px 30px;
     border-radius: 3px;
     color: @WhiteColor;
-
-    &:focus {
-        text-decoration: underline;
-        text-underline-position: under;
-    }
 }
 
 .n-flat-button-primary {
@@ -82,10 +77,6 @@
     border-radius: 3px;
     background: @WhiteColor;
 
-    &:focus {
-        text-decoration: underline;
-        text-underline-position: under;
-    }
 }
 
 .n-button-stroke-primary {
@@ -115,6 +106,7 @@
     pointer-events: none;
     background-color: @SecondaryDisabledColor;
     color: @BlackColor;
+    border: 1px solid @SecondaryDisabledColor;
 }
 
 .n-button-rounded {
@@ -137,9 +129,4 @@
     height: 48px;
     font-size: @BaseFontSize + 3;
     line-height: 21px;
-}
-
-.n-button-focused {
-    text-decoration: underline;
-    text-underline-position: under;
 }
