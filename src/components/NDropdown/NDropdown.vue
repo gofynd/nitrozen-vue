@@ -131,7 +131,7 @@
             </slot>
           </span>
           <span v-if="searchable && items.length == 0" class="nitrozen-option">
-            <div class="nitrozen-option-container" v-if="!add_option">No {{ label }} Found</div>
+            <div class="nitrozen-option-container" v-if="!add_option">{{noresults_text}}</div>
             <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length">
               <div class="nitrozen-dropdown-empty"
                 @click="addOption"
@@ -237,6 +237,14 @@ export default {
     enable_select_all: {
       type: Boolean,
       default: false
+    },
+    noresults_text: {
+      type: String,
+      default: "No options found"
+    },
+    allseleceted_text: {
+      type: String,
+      default: ""
     }
   },
   data: () => {
@@ -282,12 +290,12 @@ export default {
         if (this.selected && this.selected.text) {
           return this.selected.text;
         } else if (this.label) {
-          return this.placeholder || `Choose ${this.label}`;
+          return this.placeholder || `Select ${this.label}`;
         }
         return "";
       } else {
         if (this.allOptionsSelected) {
-          return `All ${this.selectedItems.length} ${this.label} selected`
+          return `All ${this.selectedItems.length} selected`;
         }
         let tmp = [];
         let selected = {};
@@ -308,7 +316,7 @@ export default {
           tmp = [...new Set(tmp)];
           return `${tmp.join(", ")}`;
         } else if (this.label) {
-          return this.placeholder || `Choose ${this.label}`;
+          return this.placeholder || `Select ${this.label}`;
         }
         return "";
       }
@@ -316,7 +324,7 @@ export default {
     searchInputPlaceholder: function() {
       if (this.enable_select_all && this.selectedItems.length) {
         if(this.selectedItems.length === this.getItems(this.items).length) {
-          return `All ${this.label}(s) selected`
+          return this.allseleceted_text ? this.allseleceted_text : `All ${this.label}(s) selected`;
         }
         return `${this.selectedItems.length} ${this.label}(s) selected`
       }
