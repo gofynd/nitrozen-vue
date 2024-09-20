@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import __SVG from './../../utils/svgs';
+import __SVG from '../../auto_gen/svgs'
 export default {
     name: 'nitrozen-inline',
     props: {

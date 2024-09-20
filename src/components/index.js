@@ -18,6 +18,7 @@ import NitrozenStepper from './NStepper';
 import NitrozenToggleBtn from './NToggleBtn';
 import NitrozenTooltip from './NTooltip';
 import NitrozenCustomForm from './NCustomForm';
+import NitrozenIconButton from './NIconBtn';
 
 export {
     NitrozenAutocomplete,
@@ -40,4 +41,5 @@ export {
     NitrozenToggleBtn,
     NitrozenTooltip,
     NitrozenCustomForm,
+    NitrozenIconButton,
 }

@@ -1,0 +1,245 @@
+@import './../../base/base.less';
+
+.n-icbutton {
+    // height: 40px;
+    height: 24px;
+    width: max-content;
+    cursor: pointer;
+    box-shadow: none;
+    text-align: center;
+    outline: none;
+    border: 0;
+    letter-spacing: 0px;
+    background: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    letter-spacing: 0.5px;
+    .icon-wrapper{
+        height: 16px;
+        width:  16px;
+    }
+
+    &:disabled {
+        .disableBtn();
+    }
+
+    // Primary,Secondary Padding and border radius
+    &.n-icbutton-primary {
+        // padding: 0px 40px;
+        padding: 4px; // padding of m
+        border-radius: 3px;
+    }
+    // Primary,Secondary Padding and border radius
+    &.n-icbutton-secondary {
+        // padding: 0px 40px;
+        padding: 4px;   // padding of 'm'
+        border-radius: 3px;
+
+    }
+
+     // Primary,Secondary Colors
+    &.n-icbutton-primary {
+        background-color: @SecondaryColor;
+        color: @WhiteColor;
+        &:hover:not([disabled]) {
+            background-color: @SecondaryHoverColor;
+        }
+        &:active {
+            background-color: @SecondaryHoverColor;
+            color: @SecondaryLight;
+        }
+    }
+    &.n-icbutton-primary.n-ic-button-success{
+        background: @SemanticSuccess;
+        color:@WhiteColor;
+        &:hover:not([disabled]) {
+           background: @SemanticSuccessHover;
+           color:@WhiteColor;
+        }
+        &:active {
+            background: @SemanticSuccessHover;
+            color: @SemanticSuccessLight !important;
+        }
+    }
+    &.n-icbutton-primary.n-ic-button-error{
+        background: @SemanticError;
+        color:@WhiteColor;
+        &:hover:not([disabled]) {
+            background: @SemanticErrorHover;
+            color:@WhiteColor;
+         }
+         &:active {
+             background: @SemanticErrorHover;
+             color: @SemanticErrorLight !important;
+         }
+    }
+
+       // Primary,Secondary Colors
+    &.n-icbutton-secondary {
+        border: 1px solid @GreyColor;
+        background: @WhiteColor;
+        color: @GreyColor;
+        &:hover:not([disabled]) {
+            border-color: #B8B8B8;
+            color: @GreyColorHover;
+        }
+        &:active {
+            background-color: @SecondaryHoverColor;
+            color: #E7EEFF !important;
+            border: 1px solid @SecondaryHoverColor !important;
+        }
+    }
+    &.n-icbutton-secondary.n-ic-button-success{
+        border-color: @SemanticSuccess;
+        color: @SemanticSuccess;
+        &:hover:not([disabled]) {
+            border-color: @SemanticSuccessHover;
+            color: @SemanticSuccessHover;
+        }
+        &:active {
+           background: @SemanticSuccessHover;
+           color: @SemanticSuccessBG !important;
+           border: 1px solid @SemanticSuccessHover !important;
+        }
+    }
+    &.n-icbutton-secondary.n-ic-button-error{
+        border-color: @SemanticError;
+        color: @SemanticError;
+        &:hover:not([disabled]) {
+            border-color: @SemanticErrorHover;
+            color: @SemanticErrorHover;
+        }
+        &:active {
+           background: @SemanticErrorHover;
+           color: @SemanticErrorBG !important;
+           border: 1px solid @SemanticErrorHover !important;
+        }
+    }
+
+
+    &.n-icbutton-secondary:disabled,
+    &.n-icbutton-primary:disabled,
+    &.n-icbutton-rounded:disabled {
+        .disableBtn();
+    }
+
+    &.n-icbutton-rounded {
+        border-radius: 24px;
+        padding: 0px 32px;
+    }
+    
+    &.n-icbutton-large {
+        padding: 6px;
+        height: 32px;
+        .icon-wrapper{
+            height: 20px;
+            width: 20px;
+        }
+    }
+    
+    &.n-icbutton-small {
+        padding: 4px;
+        height: 20px;
+        .icon-wrapper{
+            height: 12px;
+            width:12px;
+        }
+    }
+    
+    // Tertiary Button difference
+    &.n-icbutton-tertiary {
+        padding: 2px;
+        border-radius: 4px;
+        .icon-wrapper{
+            border-radius: 4px;
+            height: 20px;
+            width:  20px;
+        }
+        &.n-icbutton-large{
+            padding: 4px;
+            .icon-wrapper{
+                height: 24px;
+                width:  24px;
+            }
+        }
+        &.n-icbutton-small{
+            padding: 2px;
+            .icon-wrapper{
+                height: 16px;
+                width:  16px;
+            }
+        }
+    }
+    &.n-icbutton-tertiary{
+        color: @GreyColor;
+        background: none;
+        &:hover:not([disabled]) {
+          color: @GreyColorHover;
+        }
+        &:active {
+           background: #E7EEFF;
+           color: @SecondaryColor !important;
+        }
+    }
+    &.n-icbutton-tertiary.n-ic-button-success{
+        color:@SemanticSuccess;
+        &:hover:not([disabled]) {
+            color: @SemanticSuccessHover;
+        }
+        &:active {
+            color: @SemanticSuccessHover !important;
+            background: @SemanticSuccessBG;
+        }
+    }
+    &.n-icbutton-tertiary.n-ic-button-error{
+        color:@SemanticError;
+        &:hover:not([disabled]) {
+            color: @SemanticErrorHover;
+        }
+        &:active {
+            color: @SemanticErrorHover !important;
+            background: @SemanticErrorBG;
+        }
+    }
+}
+
+
+
+
+
+.hover-state {
+    pointer-events: none;
+}
+
+.btn-notprogress {
+    opacity: 0;
+    transition: opacity .25s ease-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.icon-wrapper{
+    svg {
+      height: 100% !important;
+      width: 100% !important;
+    }
+
+    path,
+    circle,
+    polygon,
+    polyline,
+    rect,
+    text,
+    textPath,
+    tref,
+    tspan {
+      height: 100% !important;
+      width: 100% !important;
+      color: inherit;
+      fill: currentColor;
+    }
+}

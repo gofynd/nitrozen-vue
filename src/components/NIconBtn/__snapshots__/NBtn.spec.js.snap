@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component should render button with secondary theme and rounded 1`] = `
+<button
+  class="n-button ripple n-button-rounded n-button-secondary n-button-mid"
+  href=""
+  type="button"
+>
+  <div
+    class="n-button-content"
+  >
+    <!---->
+      
+    <!---->
+  </div>
+</button>
+`;

@@ -207,6 +207,7 @@
 
       <div class="main-div space-between">
         <nitrozen-button v-flat-btn :icon="'facebook'" :theme="'secondary'">Facebook</nitrozen-button>
+        <nitrozen-button v-flat-btn :icon="'white-dots'" :theme="'secondary'">Facebook</nitrozen-button>
         <nitrozen-button @click="autofocusSearch = !autofocusSearch" v-flat-btn :icon="'bag'"
           :theme="'secondary'">Bag</nitrozen-button>
       </div>
@@ -214,6 +215,20 @@
       <div class="main-div space-between">
         <nitrozen-toggle-btn></nitrozen-toggle-btn>
         <nitrozen-toggle-btn v-model="abcd" @change="checkValue"></nitrozen-toggle-btn>
+      </div>
+
+      <div class="main-div space-between">
+        <nitrozen-icon-button  :kind="'tertiary'" :appearance="'success'" :size="'small'"/>
+        <nitrozen-icon-button  :kind="'tertiary'" :appearance="'error'" :size="'small'"/>
+        <nitrozen-icon-button  :kind="'tertiary'"  :size="'small'"/>
+        
+        <nitrozen-icon-button  :kind="'primary'" :appearance="'success'" :size="'small'"/>
+        <nitrozen-icon-button :showProgress="true"  :kind="'primary'" :appearance="'error'" :size="'small'"/>
+        <nitrozen-icon-button  :kind="'primary'"  :size="'small'"/>
+
+        <nitrozen-icon-button  :kind="'secondary'" :appearance="'success'" :size="'small'"/>
+        <nitrozen-icon-button  :kind="'secondary'" :appearance="'error'" :size="'small'"/>
+        <nitrozen-icon-button  :kind="'secondary'"  :size="'small'"/>
       </div>
 
       <!-- Input -->
