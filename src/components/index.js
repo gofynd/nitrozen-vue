@@ -1,5 +1,6 @@
 import NitrozenAutocomplete from './NAutocomplete';
 import NitrozenButton from './NBtn';
+import NitrozenButtonV2 from './NBtn2';
 import NitrozenBadge from './NBadge';
 import NitrozenCheckBox from './NCheckbox';
 import NitrozenChips from './NChips';
@@ -42,4 +43,5 @@ export {
     NitrozenTooltip,
     NitrozenCustomForm,
     NitrozenIconButton,
+    NitrozenButtonV2
 }

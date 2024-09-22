@@ -30,7 +30,6 @@ export default {
 
 <style lang="less">
 .nitrozen-inline-svg{
-    display: flex;
-    align-items: center;
+    height: 10px;
 }
 </style>

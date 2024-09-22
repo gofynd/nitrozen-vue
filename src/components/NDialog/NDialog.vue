@@ -19,7 +19,7 @@
                 v-if="showCloseButton"
                 title="close"
                 @click="close('close')"
-                icon="cross"
+                icon="cross-large"
               ></nitrozen-inline>
             </slot>
           </header>

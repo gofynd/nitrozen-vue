@@ -1,0 +1,214 @@
+@import './../../base/base.less';
+
+.n-button-v2 {
+    //medium size
+    height: 40px;
+    padding: 10px 24px;
+    cursor: pointer;
+    box-shadow: none;
+    font-family: @PrimaryFont;
+    font-size: @BaseFontSize + 2;
+    font-weight: 600;
+    line-height: 18.2px;
+    text-align: center;
+    outline: none;
+    border: 0;
+    letter-spacing: 0px;
+    background: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: @SecondaryColor;
+    color: @WhiteColor;
+
+    &:disabled {
+        .disable(#BBBCE6);
+    }
+
+    &:hover {
+        background-color: @SecondaryHoverColor;
+    }
+
+    &:active {
+        background-color: @SecondaryHoverColor;
+        color: @SecondaryLight;
+    }
+
+    &.n-button-v2-secondary {
+        background-color: @WhiteColor;
+        border: 1px solid @SecondaryColor;
+        color: @SecondaryColor;
+
+        &:hover:not([disabled]) {
+            background-color: @PrimaryColorHover;
+        }
+
+        &:active:not([disabled]) {
+            color: @PrimaryColorHover;
+            background-color: @SecondaryHoverColor;
+        }
+
+        &:disabled {
+            .disable(@WhiteColor);
+        }
+    }
+}
+
+.hover-state {
+    pointer-events: none;
+}
+
+.n-button-v2-rounded:disabled {
+    .disable(@SecondaryDisabledColor);
+    border: 1px solid @SecondaryDisabledColor;
+}
+
+.n-button-v2-rounded {
+    border-radius: 24px;
+    padding: 0px 32px;
+}
+
+.n-button-v2-extra-small {
+    padding: 4px 12px;
+    height: 24px;
+    font-size: @BaseFontSize;
+    line-height: 15.6px;
+}
+
+.n-button-v2-small {
+    padding: 10px 24px;
+    height: 32px;
+    font-size: @BaseFontSize + 2;
+    line-height: 18.2px;
+}
+
+.n-button-v2-large {
+    padding: 12px 32px;
+    height: 48px;
+    font-size: @BaseFontSize + 6;
+    line-height: 23.4px;
+}
+
+.n-button-v2-extra-large {
+    padding: 16px 40px;
+    height: 64px;
+    font-size: @BaseFontSize * 2;
+    line-height: 28.8px;
+    font-weight: 700;
+}
+
+.n-button-v2-positive {
+    background-color: @SemanticSuccess;
+    color: @WhiteColor;
+
+    &.n-button-v2-secondary {
+        background-color: @WhiteColor;
+        border: 1px solid @SemanticSuccessHover;
+        color: @SemanticSuccessHover;
+
+        &:hover:not([disabled]) {
+            background-color: @SemanticSuccessBG;
+            color: @SemanticSuccess;
+        }
+
+        &:active:not([disabled]) {
+            color: @SemanticSuccessLight;
+            background-color: @SemanticSuccessHover;
+            color: @SemanticSuccessBG;
+        }
+
+        &:disabled {
+            .disable(@WhiteColor);
+        }
+    }
+
+    &:hover:not([disabled]) {
+        background-color: @SemanticSuccessHover;
+    }
+
+    &:active:not([disabled]) {
+        color: @SemanticSuccessLight;
+        background-color: @SemanticSuccessHover;
+    }
+
+    &:disabled {
+        .disable(@SemanticSuccess);
+    }
+}
+
+.n-button-v2-negative {
+    background-color: @SemanticError;
+
+    &.n-button-v2-secondary {
+        background-color: @WhiteColor;
+        border: 1px solid @SemanticErrorHover;
+        color: @SemanticErrorHover;
+
+        &:hover:not([disabled]) {
+            background-color: @SemanticErrorBG;
+            color: @SemanticError;
+        }
+
+        &:active:not([disabled]) {
+            color: @SemanticSuccessLight;
+            background-color: @SemanticErrorHover;
+            color: @SemanticErrorBG;
+        }
+
+        &:disabled {
+            .disable(@WhiteColor);
+        }
+    }
+
+    &:hover:not([disabled]) {
+        background-color: @SemanticErrorHover;
+    }
+
+    &:active:not([disabled]) {
+        color: @SemanticErrorLight;
+        background-color: @SemanticErrorHover;
+    }
+
+    &:disabled {
+        .disable(@SemanticError);
+    }
+}
+
+.n-button-v2-warning {
+    background-color: @SemanticWarning;
+    color: @WhiteColor;
+
+    &.n-button-v2-secondary {
+        background-color: @WhiteColor;
+        border: 1px solid @SemanticWarningHover;
+        color: @SemanticWarningHover;
+
+        &:hover:not([disabled]) {
+            background-color: @SemanticWarningBG;
+            color: @SemanticWarning;
+        }
+
+        &:active:not([disabled]) {
+            color: @SemanticWarningLight;
+            background-color: @SemanticWarningHover;
+            color: @SemanticWarningBG;
+        }
+
+        &:disabled {
+            .disable(@WhiteColor);
+        }
+    }
+
+    &:hover:not([disabled]) {
+        background-color: @SemanticWarningHover;
+    }
+
+    &:active:not([disabled]) {
+        color: @SemanticWarningLight;
+        background-color: @SemanticWarningHover;
+    }
+
+    &:disabled {
+        .disable(@SemanticWarning);
+    }
+}
