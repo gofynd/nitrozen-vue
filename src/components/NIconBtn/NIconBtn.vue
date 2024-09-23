@@ -22,7 +22,7 @@ export default {
         },
         size: {
             type: String,
-            default: 'm'
+            default: 'medium'
         },
         focused: {
             type: Boolean,
@@ -67,8 +67,8 @@ export default {
             staticClass: 'n-icbutton ',
             class: [{
                 'n-icbutton-rounded': this.rounded,
-                'n-icbutton-l': this.size == 'l',
-                'n-icbutton-s': this.size == 's',
+                'n-icbutton-large': this.size == 'large',
+                'n-icbutton-small': this.size == 'small',
                 'n-icbutton-focused': this.focused,
                 'n-icbutton-primary': this.kind == 'primary',
                 'n-icbutton-secondary': this.kind == 'secondary',
