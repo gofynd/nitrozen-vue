@@ -22,7 +22,7 @@ export default {
         },
         size: {
             type: String,
-            default: ''
+            default: 'm'
         },
         focused: {
             type: Boolean,
