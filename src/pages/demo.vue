@@ -217,20 +217,17 @@
         <nitrozen-toggle-btn v-model="abcd" @change="checkValue"></nitrozen-toggle-btn>
       </div>
 
-      <div class="main-div space-between">
-        <nitrozen-icon-button  :kind="'tertiary'" :appearance="'success'" :size="'small'"/>
-        <nitrozen-icon-button  :kind="'tertiary'" :appearance="'error'" :size="'small'"/>
-        <nitrozen-icon-button  :kind="'tertiary'"  :size="'small'"/>
-        
-        <nitrozen-icon-button  :kind="'primary'" :appearance="'success'" :size="'small'"/>
-        <nitrozen-icon-button :showProgress="true"  :kind="'primary'" :appearance="'error'" :size="'small'"/>
-        <nitrozen-icon-button  :kind="'primary'"  :size="'small'"/>
-
-        <nitrozen-icon-button  :kind="'secondary'" :appearance="'success'" :size="'small'"/>
-        <nitrozen-icon-button  :kind="'secondary'" :appearance="'error'" :size="'small'"/>
-        <nitrozen-icon-button  :kind="'secondary'"  :size="'small'"/>
+      <div class="main-div space-between">      
+        <nitrozen-icon-button :icon="'cross'"  :kind="'secondary'" :appearance="'success'" :size="'small'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'secondary'" :appearance="'error'" :size="'small'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'secondary'"  :size="'small'"/>
       </div>
 
+      <div class="main-div space-between">      
+        <nitrozen-icon-button :icon="'cross'"  :kind="'tertiary'" :appearance="'success'" :size="'small'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'tertiary'" :appearance="'error'" :size="'small'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'tertiary'"  :size="'small'"/>
+      </div>
       <!-- Input -->
       <div class="main-div">
         <nitrozen-input :autofocus="autofocusSearch" v-model="inputModel" @input="getState" :required="true"

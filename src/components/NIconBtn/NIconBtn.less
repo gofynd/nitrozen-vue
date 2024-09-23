@@ -76,16 +76,17 @@
 
        // Primary,Secondary Colors
     &.n-icbutton-secondary {
-        border: 1px solid @GreyColor;
+        border: 1px solid @BorderColor;
         background: @WhiteColor;
         color: @GreyColor;
         &:hover:not([disabled]) {
-            border-color: #B8B8B8;
+            border-color: @GreyBorderHover;
+            background: @GreyBGHover;
             color: @GreyColorHover;
         }
         &:active {
-            background-color: @SecondaryHoverColor;
-            color: #E7EEFF !important;
+            background-color: @SecondaryHoverColor !important;
+            color: @SecondaryLight !important;
             border: 1px solid @SecondaryHoverColor !important;
         }
     }
@@ -95,23 +96,25 @@
         &:hover:not([disabled]) {
             border-color: @SemanticSuccessHover;
             color: @SemanticSuccessHover;
+            background: @SemanticSuccessBG;
         }
         &:active {
-           background: @SemanticSuccessHover;
-           color: @SemanticSuccessBG !important;
+           background: @SemanticSuccessHover !important;
+           color: @SemanticSuccessLight !important;
            border: 1px solid @SemanticSuccessHover !important;
         }
     }
     &.n-icbutton-secondary.n-ic-button-error{
-        border-color: @SemanticError;
-        color: @SemanticError;
+        border-color: @SemanticErrorHover;
+        color: @SemanticErrorHover;
         &:hover:not([disabled]) {
             border-color: @SemanticErrorHover;
             color: @SemanticErrorHover;
+            background: @SemanticErrorBG;
         }
         &:active {
-           background: @SemanticErrorHover;
-           color: @SemanticErrorBG !important;
+           background: @SemanticErrorHover !important;
+           color: @SemanticErrorLight !important;
            border: 1px solid @SemanticErrorHover !important;
         }
     }
@@ -178,7 +181,7 @@
         }
         &:active {
            background: #E7EEFF;
-           color: @SecondaryColor !important;
+           color: @SecondaryHoverColor !important;
         }
     }
     &.n-icbutton-tertiary.n-ic-button-success{

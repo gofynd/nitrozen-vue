@@ -29,7 +29,8 @@ export default {
             default: false
         },
         icon: {
-            type: String
+            type: String,
+            default:'white-dots'
         },
         kind: {
             type: String,
@@ -57,7 +58,7 @@ export default {
             }, [createElement('nitrozen-inline', {
                 class: ['white-dots'], // add optionall
                 props: {
-                    icon: 'white-dots'  // take it from prop of icon btn
+                    icon: this.icon // take it from prop of icon btn
                 },
             })]),
         ])
