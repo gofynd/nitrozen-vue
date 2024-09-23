@@ -218,15 +218,15 @@
       </div>
 
       <div class="main-div space-between">      
-        <nitrozen-icon-button :icon="'cross'"  :kind="'secondary'" :appearance="'success'" :size="'small'"/>
-        <nitrozen-icon-button :icon="'cross'"  :kind="'secondary'" :appearance="'error'" :size="'small'"/>
-        <nitrozen-icon-button  :icon="'cross'" :kind="'secondary'"  :size="'small'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'secondary'" :appearance="'positive'" :size="'s'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'secondary'" :appearance="'negative'" :size="'s'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'secondary'"  :size="'s'"/>
       </div>
 
       <div class="main-div space-between">      
-        <nitrozen-icon-button :icon="'cross'"  :kind="'tertiary'" :appearance="'success'" :size="'small'"/>
-        <nitrozen-icon-button :icon="'cross'"  :kind="'tertiary'" :appearance="'error'" :size="'small'"/>
-        <nitrozen-icon-button  :icon="'cross'" :kind="'tertiary'"  :size="'small'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'tertiary'" :appearance="'positive'" :size="'l'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'tertiary'" :appearance="'negative'" :size="'l'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'tertiary'"  :size="'l'"/>
       </div>
       <!-- Input -->
       <div class="main-div">
