@@ -73,8 +73,8 @@ export default {
                 'n-icbutton-primary': this.kind == 'primary',
                 'n-icbutton-secondary': this.kind == 'secondary',
                 'n-icbutton-tertiary': this.kind == 'tertiary',
-                'n-ic-button-success': this.appearance == 'success',
-                'n-ic-button-error': this.appearance == 'error',
+                'n-ic-button-positive': this.appearance == 'positive',
+                'n-ic-button-negative': this.appearance == 'negative',
             }],
             attrs: {
                 href: this.href,
