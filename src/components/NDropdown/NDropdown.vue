@@ -131,20 +131,25 @@
               </div>
             </slot>
           </span>
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">
+          <div v-if="searchable && items.length == 0" class="nitrozen-option">
             <div class="nitrozen-option-container" v-if="!add_option">{{noresults_text}}</div>
             <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length">
               <div class="nitrozen-dropdown-empty"
                 @click="addOption"
               >
-                  <nitrozen-inline icon="plus-btn"></nitrozen-inline>
-                  <p>Add {{ searchInput }}</p>
+                  <nitrozen-inline icon="add_outlined"></nitrozen-inline>
+                  <p>Add "{{ searchInput }}"</p>
               </div>
             </div>
             <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length === 0">
-              {{ noOptionForAddMoreProps }}
+              <span>{{ noOptionForAddMoreProps[0] }}</span>
+              <br>
+              <span>{{ noOptionForAddMoreProps[1] }}</span>
             </div>
-          </span>
+          </div>
+          <div v-else-if="items.length == 0" class="nitrozen-option">
+            <div class="nitrozen-option-container">{{noresults_text}}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -335,8 +340,9 @@ export default {
       return this.placeholder || `Search ${this.label ? this.label.toLowerCase() : ''}`;
     },
     noOptionForAddMoreProps: function() {
-      const differenceMessage =   `${this.label ? this.label.toLowerCase() : 'option' }`;
-      return `No ${differenceMessage} found. Type and press enter to create new.`
+      const message = `No ${this.label ? this.label.toLowerCase() : 'option'} found.`;
+      const additionalMessage = 'Type and press enter to create new.';
+      return [message, additionalMessage];
     },
   },
   mounted() {

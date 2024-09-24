@@ -32,8 +32,8 @@
       <div class="main-div space-between">
         <div>Custom Dropdown</div>
         <nitrozen-dropdown label="Data" :disabled="false" id="searchable-dropdown-1"
-          tooltip="This is a searchable dropdown" :items="dropdownItemsFiltered" v-model="selectedGroupDropdown"
-          :searchable="true" :add_option="true" @addOption="addOption"
+          tooltip="This is a searchable dropdown" :items="[]" v-model="selectedGroupDropdown"
+          :searchable="false" :add_option="false" @addOption="addOption"
           @searchInputChange="dropdownInputChange"></nitrozen-dropdown>
       </div>
 
