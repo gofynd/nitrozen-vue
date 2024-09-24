@@ -253,17 +253,33 @@
         <nitrozen-toggle-btn></nitrozen-toggle-btn>
         <nitrozen-toggle-btn v-model="abcd" @change="checkValue"></nitrozen-toggle-btn>
       </div>
-
+      <div class="main-div space-between">
+        <span>Secondary</span> 
+      </div>
+      <div class="main-div space-between">     
+        <nitrozen-icon-button :icon="'cross'"  :kind="'secondary'" :appearance="'positive'" :size="'large'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'secondary'" :appearance="'negative'" :size="'large'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'secondary'"  :size="'large'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'secondary'" :disabled="true"  :size="'large'"/>
+      </div>
+      <div class="main-div space-between">
+        <span>Tertiary</span> 
+      </div>
       <div class="main-div space-between">      
-        <nitrozen-icon-button :icon="'cross'"  :kind="'secondary'" :appearance="'success'" :size="'small'"/>
-        <nitrozen-icon-button :icon="'cross'"  :kind="'secondary'" :appearance="'error'" :size="'small'"/>
-        <nitrozen-icon-button  :icon="'cross'" :kind="'secondary'"  :size="'small'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'tertiary'" :appearance="'positive'" :size="'large'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'tertiary'" :appearance="'negative'" :size="'large'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'tertiary'"  :size="'large'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'tertiary'" :disabled="true"  :size="'large'"/>
       </div>
 
+      <div class="main-div space-between">
+        <span>Primary</span> 
+      </div>
       <div class="main-div space-between">      
-        <nitrozen-icon-button :icon="'cross'"  :kind="'tertiary'" :appearance="'success'" :size="'small'"/>
-        <nitrozen-icon-button :icon="'cross'"  :kind="'tertiary'" :appearance="'error'" :size="'small'"/>
-        <nitrozen-icon-button  :icon="'cross'" :kind="'tertiary'"  :size="'small'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'primary'" :appearance="'positive'" :size="'large'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'primary'" :appearance="'negative'" :size="'large'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'primary'"  :size="'large'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'primary'" :disabled="true"  :size="'large'"/>
       </div>
       <!-- Input -->
       <div class="main-div">
