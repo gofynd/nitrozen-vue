@@ -328,7 +328,7 @@ export default {
     searchInputPlaceholder: function() {
       if (this.enable_select_all && this.selectedItems.length) {
         if(this.selectedItems.length === this.getItems(this.items).length) {
-          return this.allseleceted_text ? this.allseleceted_text : `All ${this.label ? this.label.toLowerCase() +'s' : ''} selected`;
+          return this.allseleceted_text ? this.allseleceted_text : `All ${this.label ? this.label.toLowerCase() +'(s)' : ''} selected`;
         }
         return `${this.selectedItems.length} ${this.label ? this.label.toLowerCase() + '(s)' : ''} selected`
       }

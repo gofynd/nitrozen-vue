@@ -109,19 +109,37 @@
         <nitrozen-button v-stroke-btn :focused="true">Focused Stroke</nitrozen-button>
         <nitrozen-button v-stroke-btn :disabled="true">Disabled Stroke</nitrozen-button>
       </div>
+      <p>Primary(default)</p>
       <div class="main-div space-between">
-        <nitrozen-button-v2 appearance="negative" disabled="true"  size="extra-small">Negative Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="positive" disabled="true"  size="small">Positive Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2 appearance="positive" disabled="true"    >Positive Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative"   size="extra-small">Negative XS Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive"  size="small">Positive S Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="default"   >Positive M Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="warning" size="large">Warning L Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive"  size="extra-large">Positive XL Stroke</nitrozen-button-v2>
+      </div>
+      <p>Secondary</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="negative" theme="secondary" size="extra-small">Negative Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive" theme="secondary"  size="small">Positive Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="default" theme="secondary" >Positive Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="warning" theme="secondary" size="large">Warning Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive" theme="secondary" size="extra-large">Positive Stroke</nitrozen-button-v2>
+      </div>
+      <p>Primary(default) button with disabled</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="negative"  disabled="true" size="extra-small">Negative Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive"  disabled="true"  size="small">Positive Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="default" disabled="true" >Positive Stroke</nitrozen-button-v2>
         <nitrozen-button-v2  appearance="warning" disabled="true" size="large">Warning Stroke</nitrozen-button-v2>
         <nitrozen-button-v2  appearance="positive" disabled="true" size="extra-large">Positive Stroke</nitrozen-button-v2>
       </div>
+      <p>Secondary button with disabled</p>
       <div class="main-div space-between">
-        <nitrozen-button-v2 appearance="negative" theme="secondary" disabled="true" size="extra-small">Negative Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="positive" theme="secondary" disabled="true" size="small">Positive Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2 appearance="default" theme="secondary" disabled="true" >Positive Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="warning" theme="secondary" disabled="true" size="large">Warning Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="positive" theme="secondary" disabled="true"  size="extra-large">Positive Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" disabled="true" theme="secondary" size="extra-small">Negative Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive" disabled="true" theme="secondary"  size="small">Positive Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="default" disabled="true" theme="secondary" >Positive Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="warning" disabled="true" theme="secondary" size="large">Warning Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive" disabled="true" theme="secondary" size="extra-large">Positive Stroke</nitrozen-button-v2>
       </div>
       <div class="main-div space-between">
         <nitrozen-button v-stroke-btn :theme="'primary'" appearance='positive' size="extra-large" >Primary stoke extra large</nitrozen-button>
