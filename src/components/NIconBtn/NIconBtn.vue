@@ -22,14 +22,15 @@ export default {
         },
         size: {
             type: String,
-            default: ''
+            default: 'medium'
         },
         focused: {
             type: Boolean,
             default: false
         },
         icon: {
-            type: String
+            type: String,
+            default:'white-dots'
         },
         kind: {
             type: String,
@@ -57,7 +58,7 @@ export default {
             }, [createElement('nitrozen-inline', {
                 class: ['white-dots'], // add optionall
                 props: {
-                    icon: 'white-dots'  // take it from prop of icon btn
+                    icon: this.icon // take it from prop of icon btn
                 },
             })]),
         ])
@@ -72,8 +73,8 @@ export default {
                 'n-icbutton-primary': this.kind == 'primary',
                 'n-icbutton-secondary': this.kind == 'secondary',
                 'n-icbutton-tertiary': this.kind == 'tertiary',
-                'n-ic-button-success': this.appearance == 'success',
-                'n-ic-button-error': this.appearance == 'error',
+                'n-ic-button-positive': this.appearance == 'positive',
+                'n-ic-button-negative': this.appearance == 'negative',
             }],
             attrs: {
                 href: this.href,

@@ -14,6 +14,9 @@
     text-decoration: none;
     box-sizing: border-box;
     letter-spacing: 0.5px;
+    border-radius: 4px;
+    transition: all 0.5s;
+    // transition: color 0.5s;
     .icon-wrapper{
         height: 16px;
         width:  16px;
@@ -25,15 +28,13 @@
 
     // Primary,Secondary Padding and border radius
     &.n-icbutton-primary {
-        // padding: 0px 40px;
         padding: 4px; // padding of m
-        border-radius: 3px;
+       
     }
     // Primary,Secondary Padding and border radius
     &.n-icbutton-secondary {
-        // padding: 0px 40px;
         padding: 4px;   // padding of 'm'
-        border-radius: 3px;
+       
 
     }
 
@@ -49,7 +50,7 @@
             color: @SecondaryLight;
         }
     }
-    &.n-icbutton-primary.n-ic-button-success{
+    &.n-icbutton-primary.n-ic-button-positive{
         background: @SemanticSuccess;
         color:@WhiteColor;
         &:hover:not([disabled]) {
@@ -61,7 +62,7 @@
             color: @SemanticSuccessLight !important;
         }
     }
-    &.n-icbutton-primary.n-ic-button-error{
+    &.n-icbutton-primary.n-ic-button-negative{
         background: @SemanticError;
         color:@WhiteColor;
         &:hover:not([disabled]) {
@@ -76,42 +77,45 @@
 
        // Primary,Secondary Colors
     &.n-icbutton-secondary {
-        border: 1px solid @GreyColor;
+        border: 1px solid @BorderColor;
         background: @WhiteColor;
         color: @GreyColor;
         &:hover:not([disabled]) {
-            border-color: #B8B8B8;
+            border-color: @GreyBorderHover;
+            background: @GreyBGHover;
             color: @GreyColorHover;
         }
         &:active {
-            background-color: @SecondaryHoverColor;
-            color: #E7EEFF !important;
+            background-color: @SecondaryHoverColor !important;
+            color: @SecondaryLight !important;
             border: 1px solid @SecondaryHoverColor !important;
         }
     }
-    &.n-icbutton-secondary.n-ic-button-success{
+    &.n-icbutton-secondary.n-ic-button-positive{
         border-color: @SemanticSuccess;
         color: @SemanticSuccess;
         &:hover:not([disabled]) {
             border-color: @SemanticSuccessHover;
             color: @SemanticSuccessHover;
+            background: @SemanticSuccessBG;
         }
         &:active {
-           background: @SemanticSuccessHover;
-           color: @SemanticSuccessBG !important;
+           background: @SemanticSuccessHover !important;
+           color: @SemanticSuccessLight !important;
            border: 1px solid @SemanticSuccessHover !important;
         }
     }
-    &.n-icbutton-secondary.n-ic-button-error{
-        border-color: @SemanticError;
-        color: @SemanticError;
+    &.n-icbutton-secondary.n-ic-button-negative{
+        border-color: @SemanticErrorHover;
+        color: @SemanticErrorHover;
         &:hover:not([disabled]) {
             border-color: @SemanticErrorHover;
             color: @SemanticErrorHover;
+            background: @SemanticErrorBG;
         }
         &:active {
-           background: @SemanticErrorHover;
-           color: @SemanticErrorBG !important;
+           background: @SemanticErrorHover !important;
+           color: @SemanticErrorLight !important;
            border: 1px solid @SemanticErrorHover !important;
         }
     }
@@ -149,20 +153,20 @@
     // Tertiary Button difference
     &.n-icbutton-tertiary {
         padding: 2px;
-        border-radius: 4px;
+       
         .icon-wrapper{
-            border-radius: 4px;
+           
             height: 20px;
             width:  20px;
         }
-        &.n-icbutton-large{
+        &.n-icbutton-l{
             padding: 4px;
             .icon-wrapper{
                 height: 24px;
                 width:  24px;
             }
         }
-        &.n-icbutton-small{
+        &.n-icbutton-s{
             padding: 2px;
             .icon-wrapper{
                 height: 16px;
@@ -178,10 +182,10 @@
         }
         &:active {
            background: #E7EEFF;
-           color: @SecondaryColor !important;
+           color: @SecondaryHoverColor !important;
         }
     }
-    &.n-icbutton-tertiary.n-ic-button-success{
+    &.n-icbutton-tertiary.n-ic-button-positive{
         color:@SemanticSuccess;
         &:hover:not([disabled]) {
             color: @SemanticSuccessHover;
@@ -191,7 +195,7 @@
             background: @SemanticSuccessBG;
         }
     }
-    &.n-icbutton-tertiary.n-ic-button-error{
+    &.n-icbutton-tertiary.n-ic-button-negative{
         color:@SemanticError;
         &:hover:not([disabled]) {
             color: @SemanticErrorHover;
@@ -211,14 +215,7 @@
     pointer-events: none;
 }
 
-.btn-notprogress {
-    opacity: 0;
-    transition: opacity .25s ease-out;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 
 
 
