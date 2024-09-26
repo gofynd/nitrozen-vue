@@ -1,4 +1,3 @@
-=======
 # Nitrozen Design for Vue 
 
 [![npm version](https://badge.fury.io/js/%40gofynd%2Fnitrozen-vue.svg)](https://badge.fury.io/js/%40gofynd%2Fnitrozen-vue)
