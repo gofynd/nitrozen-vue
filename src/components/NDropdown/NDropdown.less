@@ -140,11 +140,11 @@
   }
   // Disabled
   .nitrozen-select.disabled {
-    .disable();
+    .disable(@HoverColor);
   }
   .nitrozen-select.disabled .nitrozen-select__trigger {
     color: @TypographyPrimaryColor;
-    .disable();
+    .disable(@HoverColor);
 
   }
   .nitrozen-select.disabled .nitrozen-select__trigger .nitrozen-dropdown-arrow {
@@ -189,8 +189,12 @@
     height: 25px;
   }
   p {
-    margin: 0 px;
-    margin-left: 10px;
-    margin-top: 3px;
+    margin: 0px;
+    color: @SecondaryColor;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  svg path{
+    fill: @SecondaryColor;
   }
 }

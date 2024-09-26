@@ -28,6 +28,7 @@
               v-model="searchInput"
               @search="searchInputChange"
               v-on:keyup="searchInputChange"
+              v-on:keydown="searchInputChange"
               :placeholder="searchInputPlaceholder"
             />
           </span>
@@ -130,17 +131,25 @@
               </div>
             </slot>
           </span>
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">
+          <div v-if="searchable && items.length == 0" class="nitrozen-option">
             <div class="nitrozen-option-container" v-if="!add_option">{{noresults_text}}</div>
             <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length">
               <div class="nitrozen-dropdown-empty"
                 @click="addOption"
               >
-                  <nitrozen-inline icon="plus-btn"></nitrozen-inline>
-                  <p>Add {{ searchInput }}</p>
+                  <nitrozen-inline icon="add_outlined"></nitrozen-inline>
+                  <p>Add "{{ searchInput }}"</p>
               </div>
             </div>
-          </span>
+            <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length === 0">
+              <span>{{ noOptionForAddMoreProps[0] }}</span>
+              <br>
+              <span>{{ noOptionForAddMoreProps[1] }}</span>
+            </div>
+          </div>
+          <div v-else-if="items.length == 0" class="nitrozen-option">
+            <div class="nitrozen-option-container">{{noresults_text}}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -290,7 +299,7 @@ export default {
         if (this.selected && this.selected.text) {
           return this.selected.text;
         } else if (this.label) {
-          return this.placeholder || `Select ${this.label}`;
+          return this.placeholder || `Select ${this.label.toLowerCase()}`;
         }
         return "";
       } else {
@@ -316,7 +325,7 @@ export default {
           tmp = [...new Set(tmp)];
           return `${tmp.join(", ")}`;
         } else if (this.label) {
-          return this.placeholder || `Select ${this.label}`;
+          return this.placeholder || `Select ${this.label.toLowerCase()}`;
         }
         return "";
       }
@@ -324,11 +333,16 @@ export default {
     searchInputPlaceholder: function() {
       if (this.enable_select_all && this.selectedItems.length) {
         if(this.selectedItems.length === this.getItems(this.items).length) {
-          return this.allseleceted_text ? this.allseleceted_text : `All ${this.label}(s) selected`;
+          return this.allseleceted_text ? this.allseleceted_text : `All ${this.label ? this.label.toLowerCase() +'(s)' : ''} selected`;
         }
-        return `${this.selectedItems.length} ${this.label}(s) selected`
+        return `${this.selectedItems.length} ${this.label ? this.label.toLowerCase() + '(s)' : ''} selected`
       }
-      return this.placeholder || `Search ${this.label}`;
+      return this.placeholder || `Search ${this.label ? this.label.toLowerCase() : ''}`;
+    },
+    noOptionForAddMoreProps: function() {
+      const message = `No ${this.label ? this.label.toLowerCase() : 'option'} found.`;
+      const additionalMessage = 'Type and press enter to create new.';
+      return [message, additionalMessage];
     },
   },
   mounted() {

@@ -14,14 +14,13 @@
           </template>
         </nitrozen-dialog>
         <div>Searchable Dropdown</div>
-        <nitrozen-dropdown label="Data" :disabled="true" id="searchable-dropdown-1"
+        <nitrozen-dropdown  id="searchable-dropdown-1" :disabled="true"
           tooltip="This is a searchable dropdown" :items="dropdownItemsFiltered" v-model="selectedGroupDropdown"
           :searchable="true" @searchInputChange="dropdownInputChange"></nitrozen-dropdown>
       </div>
       <div>
-        <nitrozen-chips v-for="(item, index) in ['tag1','tag2','tag3','tag4']" :key="'chips_' + index">
+        <nitrozen-chips deletable="true" v-for="(item, index) in ['tag1','tag2','tag3','tag4']" :key="'chips_' + index">
           {{ item }}
-          <nitrozen-inline icon="cross" class="nitrozen-icon" v-on:click="removeChip(index, 'title')"></nitrozen-inline>
         </nitrozen-chips>
       </div>
       <div class="main-div space-between">
@@ -33,8 +32,8 @@
       <div class="main-div space-between">
         <div>Custom Dropdown</div>
         <nitrozen-dropdown label="Data" :disabled="false" id="searchable-dropdown-1"
-          tooltip="This is a searchable dropdown" :items="dropdownItemsFiltered" v-model="selectedGroupDropdown"
-          :searchable="true" :add_option="true" @addOption="addOption"
+          tooltip="This is a searchable dropdown" :items="[]" v-model="selectedGroupDropdown"
+          :searchable="false" :add_option="false" @addOption="addOption"
           @searchInputChange="dropdownInputChange"></nitrozen-dropdown>
       </div>
 
@@ -109,6 +108,44 @@
         </div>
         <nitrozen-button v-stroke-btn :focused="true">Focused Stroke</nitrozen-button>
         <nitrozen-button v-stroke-btn :disabled="true">Disabled Stroke</nitrozen-button>
+      </div>
+      <p>Primary(default)</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="negative"   size="extra-small">Negative XS Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive"  size="small">Positive S Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="default"   >Positive M Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="warning" size="large">Warning L Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive"  size="extra-large">Positive XL Stroke</nitrozen-button-v2>
+      </div>
+      <p>Secondary</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="negative" theme="secondary" size="extra-small">Negative Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive" theme="secondary"  size="small">Positive Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="default" theme="secondary" >Positive Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="warning" theme="secondary" size="large">Warning Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive" theme="secondary" size="extra-large">Positive Stroke</nitrozen-button-v2>
+      </div>
+      <p>Primary(default) button with disabled</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="negative"  disabled="true" size="extra-small">Negative Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive"  disabled="true"  size="small">Positive Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="default" disabled="true" >Positive Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="warning" disabled="true" size="large">Warning Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive" disabled="true" size="extra-large">Positive Stroke</nitrozen-button-v2>
+      </div>
+      <p>Secondary button with disabled</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="negative" disabled="true" theme="secondary" size="extra-small">Negative Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive" disabled="true" theme="secondary"  size="small">Positive Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="default" disabled="true" theme="secondary" >Positive Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="warning" disabled="true" theme="secondary" size="large">Warning Stroke</nitrozen-button-v2>
+        <nitrozen-button-v2  appearance="positive" disabled="true" theme="secondary" size="extra-large">Positive Stroke</nitrozen-button-v2>
+      </div>
+      <div class="main-div space-between">
+        <nitrozen-button v-stroke-btn :theme="'primary'" appearance='positive' size="extra-large" >Primary stoke extra large</nitrozen-button>
+          <nitrozen-button v-flat-btn :theme="'primary'" appearance='negative' >Primary flat small</nitrozen-button>
+        <nitrozen-button v-stroke-btn :theme="'secondary'" appearance='warning'  >secondary stoke medium</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'" appearance='warning'   >secondary flat large</nitrozen-button>
       </div>
 
       <!-- Rounded Button -->
@@ -207,6 +244,7 @@
 
       <div class="main-div space-between">
         <nitrozen-button v-flat-btn :icon="'facebook'" :theme="'secondary'">Facebook</nitrozen-button>
+        <nitrozen-button v-flat-btn :icon="'white-dots'" :theme="'secondary'">Facebook</nitrozen-button>
         <nitrozen-button @click="autofocusSearch = !autofocusSearch" v-flat-btn :icon="'bag'"
           :theme="'secondary'">Bag</nitrozen-button>
       </div>
@@ -215,7 +253,34 @@
         <nitrozen-toggle-btn></nitrozen-toggle-btn>
         <nitrozen-toggle-btn v-model="abcd" @change="checkValue"></nitrozen-toggle-btn>
       </div>
+      <div class="main-div space-between">
+        <span>Secondary</span> 
+      </div>
+      <div class="main-div space-between">     
+        <nitrozen-icon-button :icon="'cross'"  :kind="'secondary'" :appearance="'positive'" :size="'large'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'secondary'" :appearance="'negative'" :size="'large'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'secondary'"  :size="'large'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'secondary'" :disabled="true"  :size="'large'"/>
+      </div>
+      <div class="main-div space-between">
+        <span>Tertiary</span> 
+      </div>
+      <div class="main-div space-between">      
+        <nitrozen-icon-button :icon="'cross'"  :kind="'tertiary'" :appearance="'positive'" :size="'large'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'tertiary'" :appearance="'negative'" :size="'large'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'tertiary'"  :size="'large'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'tertiary'" :disabled="true"  :size="'large'"/>
+      </div>
 
+      <div class="main-div space-between">
+        <span>Primary</span> 
+      </div>
+      <div class="main-div space-between">      
+        <nitrozen-icon-button :icon="'cross'"  :kind="'primary'" :appearance="'positive'" :size="'large'"/>
+        <nitrozen-icon-button :icon="'cross'"  :kind="'primary'" :appearance="'negative'" :size="'large'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'primary'"  :size="'large'"/>
+        <nitrozen-icon-button  :icon="'cross'" :kind="'primary'" :disabled="true"  :size="'large'"/>
+      </div>
       <!-- Input -->
       <div class="main-div">
         <nitrozen-input :autofocus="autofocusSearch" v-model="inputModel" @input="getState" :required="true"
