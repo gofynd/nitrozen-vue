@@ -1,0 +1,72 @@
+name: NPM Components Package Publish
+
+on:
+  push:
+    branches:
+      - master-old
+  workflow_dispatch:
+permissions:
+    contents: write
+jobs:
+  build:
+    if: contains(github.event.head_commit.message, 'publish-npm')
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.18.1]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Dependencies
+        run:  rm -rf package-lock.json && rm -rf dist && npm ci
+
+      - name: Update Git Config
+        run: |
+          # Modify git config to add user name and email
+          git config user.name "Paul Lobo (Auto)"
+          git config user.email "paullobo500@gmail.com"
+        shell: bash
+
+      - name: Bump version
+        run: npm version patch
+      
+      - name: Get new version
+        run: |
+          npm_version=$(node -p "require('./package.json').version")
+          echo "NPM_VERSION=$npm_version" >> $GITHUB_ENV
+          echo "New version: $npm_version"  # Add this line to debug
+      
+      - name: DEBUG STEP
+        run: echo "$NPM_VERSION"
+
+      - name: Build Package
+        run: npm run build-bundle
+
+      - name: Login to npm
+        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Get new version
+        run: echo "$NPM_VERSION"
+
+      - name: Publish Package
+        run: npm publish
+
+      - name: Stage changes
+        run: git add .
+
+      - name: Sync changes
+        run: git pull
+
+      - name: Commit changes
+        run: |
+          git add package.json
+          git commit -m "[Auto] Publish changes to NPM ::: bump version to $(npm version patch)"
+
+      - name: Push changes
+        run: git push
