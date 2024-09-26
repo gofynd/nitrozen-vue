@@ -36,12 +36,15 @@ jobs:
           npm_version=$(node -p "require('./package.json').version")
           echo "NPM_VERSION=$npm_version" >> $GITHUB_ENV
           echo "New version: $npm_version"  # Add this line to debug
-      
-      - name: DEBUG STEP
+
+      - name: Get new version
         run: echo "$NPM_VERSION"
 
       - name: Install Dependencies
-        run:  rm -rf package-lock.json && rm -rf dist && npm install
+        run:  rm -rf dist && npm ci 
+
+      - name: List Files
+        run: ls -R
 
       - name: Build Package
         run: npm run build-bundle
@@ -50,9 +53,6 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Get new version
-        run: echo "$NPM_VERSION"
 
       - name: Publish Package
         run: npm publish
