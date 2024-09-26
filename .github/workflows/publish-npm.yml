@@ -22,7 +22,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install Dependencies
-        run:  rm -rf package-lock.json && rm -rf dist && npm ci
+        run:  rm -rf package-lock.json && rm -rf dist && npm install
 
       - name: Update Git Config
         run: |
