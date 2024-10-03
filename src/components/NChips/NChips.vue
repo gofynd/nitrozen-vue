@@ -110,7 +110,8 @@ export default {
     height: 39px;
     padding: 0 12px;
     margin: 0 8px 0 0;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     cursor: default;
     border-radius: 39px;
     border: 1px solid @BorderColor;

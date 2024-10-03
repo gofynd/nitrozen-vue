@@ -28,7 +28,6 @@
               v-model="searchInput"
               @search="searchInputChange"
               v-on:keyup="searchInputChange"
-              v-on:keydown="searchInputChange"
               :placeholder="searchInputPlaceholder"
             />
           </span>
@@ -323,7 +322,7 @@ export default {
             }
           });
           tmp = [...new Set(tmp)];
-          return `${tmp.join(", ")}`;
+          return `${tmp.length}` + ' Selected';
         } else if (this.label) {
           return this.placeholder || `Select ${this.label.toLowerCase()}`;
         }

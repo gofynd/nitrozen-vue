@@ -140,15 +140,23 @@
   }
   // Disabled
   .nitrozen-select.disabled {
-    .disable(@HoverColor);
+    .disable(@disableBG);
+    opacity: 1;
   }
   .nitrozen-select.disabled .nitrozen-select__trigger {
-    color: @TypographyPrimaryColor;
-    .disable(@HoverColor);
+    color: @disableText;
+    .disable(@disableBG);
+    opacity: 1;
 
   }
   .nitrozen-select.disabled .nitrozen-select__trigger .nitrozen-dropdown-arrow {
-    background: @HoverColor;
+    .nitrozen-inline-svg {
+      svg {
+        path {
+          fill: @GreyColor; // or use a specific color value
+        }
+      }
+    }
   }
 
   // Arrow
@@ -178,7 +186,7 @@
   color: @LabelColor;
   font-family: @PrimaryFont;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 21px;
 }
 
