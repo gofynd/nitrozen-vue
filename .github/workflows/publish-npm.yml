@@ -16,14 +16,6 @@ jobs:
         node-version: [16.0.0]
 
     steps:
-      - task: Cache@2
-        inputs:
-          key: 'npm | "$(Agent.OS)" | package-lock.json'
-          restoreKeys: |
-            npm | "$(Agent.OS)"
-          path: $(Pipeline.Workspace)/.npm
-          cacheHitVar: CACHE_RESTORED
-
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
