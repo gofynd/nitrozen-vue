@@ -93,5 +93,5 @@ export default {
 </script>
 
 <style lang="less">
-@import './NBtn2.less';
+@import './../NBtn/NBtn.less';
 </style>
