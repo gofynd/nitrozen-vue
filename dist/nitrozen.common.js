@@ -1,7 +1,7 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 7679:
+/***/ 5003:
 /***/ (function(module, exports) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// addapted from the document.currentScript polyfill by Adam Miller
@@ -86,17 +86,17 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 7084:
+/***/ 7536:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ NBtnContent; }
+  A: function() { return /* binding */ NBtnContent; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=template&id=c3c0d46a&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=template&id=c3c0d46a
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -109,7 +109,7 @@ var render = function render() {
     staticClass: "social-icon"
   }, [_vm.icon == 'facebook' ? _c('img', {
     attrs: {
-      "src": __webpack_require__(6964)
+      "src": __webpack_require__(7744)
     }
   }) : _vm._e()]) : _vm._e(), !_vm.showProgress ? _vm._t("default") : _vm._e(), _vm.showProgress ? _c('div', {
     staticClass: "n-btn-spin"
@@ -125,10 +125,10 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue?vue&type=template&id=c3c0d46a&
+;// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue?vue&type=template&id=c3c0d46a
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=script&lang=js&
-/* harmony default export */ var NBtnContentvue_type_script_lang_js_ = ({
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=script&lang=js
+/* harmony default export */ var NBtnContentvue_type_script_lang_js = ({
   name: 'nitrozen-button-content',
   props: {
     showProgress: {
@@ -140,15 +140,15 @@ var staticRenderFns = [];
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue?vue&type=script&lang=js&
- /* harmony default export */ var NBtn_NBtnContentvue_type_script_lang_js_ = (NBtnContentvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=style&index=0&id=c3c0d46a&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue?vue&type=script&lang=js
+ /* harmony default export */ var NBtn_NBtnContentvue_type_script_lang_js = (NBtnContentvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtnContent.vue?vue&type=style&index=0&id=c3c0d46a&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue?vue&type=style&index=0&id=c3c0d46a&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue?vue&type=style&index=0&id=c3c0d46a&prod&lang=less
 
-// EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(3736);
+// EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(1656);
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtnContent.vue
 
 
@@ -158,8 +158,8 @@ var componentNormalizer = __webpack_require__(3736);
 
 /* normalize component */
 
-var component = (0,componentNormalizer/* default */.Z)(
-  NBtn_NBtnContentvue_type_script_lang_js_,
+var component = (0,componentNormalizer/* default */.A)(
+  NBtn_NBtnContentvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -173,7 +173,7 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /***/ }),
 
-/***/ 905:
+/***/ 9154:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -185,7 +185,7 @@ __webpack_require__.d(__webpack_exports__, {
   "default": function() { return /* binding */ NCustomForm; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomForm.vue?vue&type=template&id=386a6270&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomForm.vue?vue&type=template&id=386a6270
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -217,9 +217,9 @@ var render = function render() {
 var staticRenderFns = [];
 
 // EXTERNAL MODULE: ./node_modules/json-logic-js/logic.js
-var logic = __webpack_require__(962);
+var logic = __webpack_require__(8678);
 var logic_default = /*#__PURE__*/__webpack_require__.n(logic);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=template&id=bbdaa70e&scoped=true&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=template&id=bbdaa70e&scoped=true
 var NCustomFormInputvue_type_template_id_bbdaa70e_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -754,25 +754,25 @@ function validateInput(input) {
 }
 
 // EXTERNAL MODULE: ./node_modules/vue-tel-input/dist/vue-tel-input.js
-var vue_tel_input = __webpack_require__(8442);
+var vue_tel_input = __webpack_require__(3954);
 var vue_tel_input_default = /*#__PURE__*/__webpack_require__.n(vue_tel_input);
 // EXTERNAL MODULE: ./src/components/NToggleBtn/index.js + 6 modules
-var NToggleBtn = __webpack_require__(9831);
+var NToggleBtn = __webpack_require__(1147);
 // EXTERNAL MODULE: ./src/components/NCheckbox/index.js + 6 modules
-var NCheckbox = __webpack_require__(3849);
+var NCheckbox = __webpack_require__(1986);
 // EXTERNAL MODULE: ./src/components/NRadio/index.js + 6 modules
-var NRadio = __webpack_require__(1232);
+var NRadio = __webpack_require__(1478);
 // EXTERNAL MODULE: ./src/components/NDropdown/index.js + 6 modules
-var NDropdown = __webpack_require__(7150);
+var NDropdown = __webpack_require__(5757);
 // EXTERNAL MODULE: ./src/components/NInput/index.js
-var NInput = __webpack_require__(5778);
+var NInput = __webpack_require__(4271);
 // EXTERNAL MODULE: ./src/components/NError/index.js + 6 modules
-var NError = __webpack_require__(9751);
+var NError = __webpack_require__(5700);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 5 modules
-var NBtn = __webpack_require__(9938);
+var NBtn = __webpack_require__(932);
 // EXTERNAL MODULE: ./src/components/NInline/index.js + 6 modules
-var NInline = __webpack_require__(7549);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=script&lang=js&
+var NInline = __webpack_require__(977);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=script&lang=js
 
 
 
@@ -784,7 +784,7 @@ var NInline = __webpack_require__(7549);
 
 
 
-/* harmony default export */ var NCustomFormInputvue_type_script_lang_js_ = ({
+/* harmony default export */ var NCustomFormInputvue_type_script_lang_js = ({
   name: "nitrozen-custom-form-input",
   props: {
     value: {},
@@ -800,18 +800,17 @@ var NInline = __webpack_require__(7549);
     };
   },
   components: {
-    NitrozenInput: NInput/* default */.Z,
-    NitrozenDropdown: NDropdown/* default */.Z,
-    NitrozenCheckbox: NCheckbox/* default */.Z,
-    NitrozenRadio: NRadio/* default */.Z,
-    NitrozenToggle: NToggleBtn/* default */.Z,
-    NitrozenError: NError/* default */.Z,
-    NitrozenButton: NBtn/* default */.Z,
-    NitrozenInline: NInline/* default */.Z,
+    NitrozenInput: NInput/* default */.A,
+    NitrozenDropdown: NDropdown/* default */.A,
+    NitrozenCheckbox: NCheckbox/* default */.A,
+    NitrozenRadio: NRadio/* default */.A,
+    NitrozenToggle: NToggleBtn/* default */.A,
+    NitrozenError: NError/* default */.A,
+    NitrozenButton: NBtn/* default */.A,
+    NitrozenInline: NInline/* default */.A,
     VueTelInput: (vue_tel_input_default()),
-    NitrozenCustomForm: () => Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 905)) // Loophole for circular imports issue
+    NitrozenCustomForm: () => Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 9154)) // Loophole for circular imports issue
   },
-
   event: "change",
   watch: {
     formInputValue() {
@@ -863,15 +862,15 @@ var NInline = __webpack_require__(7549);
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomFormInput.vue?vue&type=script&lang=js&
- /* harmony default export */ var NCustomForm_NCustomFormInputvue_type_script_lang_js_ = (NCustomFormInputvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=style&index=0&id=bbdaa70e&prod&lang=less&scoped=true&
+;// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomFormInput.vue?vue&type=script&lang=js
+ /* harmony default export */ var NCustomForm_NCustomFormInputvue_type_script_lang_js = (NCustomFormInputvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomFormInput.vue?vue&type=style&index=0&id=bbdaa70e&prod&lang=less&scoped=true
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomFormInput.vue?vue&type=style&index=0&id=bbdaa70e&prod&lang=less&scoped=true&
+;// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomFormInput.vue?vue&type=style&index=0&id=bbdaa70e&prod&lang=less&scoped=true
 
-// EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(3736);
+// EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(1656);
 ;// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomFormInput.vue
 
 
@@ -881,8 +880,8 @@ var componentNormalizer = __webpack_require__(3736);
 
 /* normalize component */
 
-var component = (0,componentNormalizer/* default */.Z)(
-  NCustomForm_NCustomFormInputvue_type_script_lang_js_,
+var component = (0,componentNormalizer/* default */.A)(
+  NCustomForm_NCustomFormInputvue_type_script_lang_js,
   NCustomFormInputvue_type_template_id_bbdaa70e_scoped_true_render,
   NCustomFormInputvue_type_template_id_bbdaa70e_scoped_true_staticRenderFns,
   false,
@@ -893,11 +892,11 @@ var component = (0,componentNormalizer/* default */.Z)(
 )
 
 /* harmony default export */ var NCustomFormInput = (component.exports);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomForm.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomForm.vue?vue&type=script&lang=js
 
 
 
-/* harmony default export */ var NCustomFormvue_type_script_lang_js_ = ({
+/* harmony default export */ var NCustomFormvue_type_script_lang_js = ({
   name: "nitrozen-custom-form",
   props: {
     value: {
@@ -955,12 +954,12 @@ var component = (0,componentNormalizer/* default */.Z)(
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomForm.vue?vue&type=script&lang=js&
- /* harmony default export */ var NCustomForm_NCustomFormvue_type_script_lang_js_ = (NCustomFormvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomForm.vue?vue&type=style&index=0&id=386a6270&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomForm.vue?vue&type=script&lang=js
+ /* harmony default export */ var NCustomForm_NCustomFormvue_type_script_lang_js = (NCustomFormvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCustomForm/NCustomForm.vue?vue&type=style&index=0&id=386a6270&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomForm.vue?vue&type=style&index=0&id=386a6270&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomForm.vue?vue&type=style&index=0&id=386a6270&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NCustomForm/NCustomForm.vue
 
@@ -971,8 +970,8 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /* normalize component */
 
-var NCustomForm_component = (0,componentNormalizer/* default */.Z)(
-  NCustomForm_NCustomFormvue_type_script_lang_js_,
+var NCustomForm_component = (0,componentNormalizer/* default */.A)(
+  NCustomForm_NCustomFormvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -986,17 +985,17 @@ var NCustomForm_component = (0,componentNormalizer/* default */.Z)(
 
 /***/ }),
 
-/***/ 1820:
+/***/ 8696:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ NInput; }
+  A: function() { return /* binding */ NInput; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=template&id=f1c1f790&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=template&id=f1c1f790
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1022,7 +1021,7 @@ var render = function render() {
     staticClass: "nitrozen-loader-div"
   }, [_c('img', {
     attrs: {
-      "src": __webpack_require__(6082)
+      "src": __webpack_require__(2102)
     }
   })]) : _vm._e(), _c('div', {
     staticClass: "nitrozen-input-grp"
@@ -1124,9 +1123,9 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=template&id=f1c1f790&
+;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=template&id=f1c1f790
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInputPrefix.vue?vue&type=template&id=0872c97f&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInputPrefix.vue?vue&type=template&id=0872c97f
 var NInputPrefixvue_type_template_id_0872c97f_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1134,14 +1133,14 @@ var NInputPrefixvue_type_template_id_0872c97f_render = function render() {
 };
 var NInputPrefixvue_type_template_id_0872c97f_staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInputPrefix.vue?vue&type=script&lang=js&
-/* harmony default export */ var NInputPrefixvue_type_script_lang_js_ = ({
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInputPrefix.vue?vue&type=script&lang=js
+/* harmony default export */ var NInputPrefixvue_type_script_lang_js = ({
   name: 'nitrozen-input-prefix'
 });
-;// CONCATENATED MODULE: ./src/components/NInput/NInputPrefix.vue?vue&type=script&lang=js&
- /* harmony default export */ var NInput_NInputPrefixvue_type_script_lang_js_ = (NInputPrefixvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(3736);
+;// CONCATENATED MODULE: ./src/components/NInput/NInputPrefix.vue?vue&type=script&lang=js
+ /* harmony default export */ var NInput_NInputPrefixvue_type_script_lang_js = (NInputPrefixvue_type_script_lang_js); 
+// EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(1656);
 ;// CONCATENATED MODULE: ./src/components/NInput/NInputPrefix.vue
 
 
@@ -1150,8 +1149,8 @@ var componentNormalizer = __webpack_require__(3736);
 
 /* normalize component */
 ;
-var component = (0,componentNormalizer/* default */.Z)(
-  NInput_NInputPrefixvue_type_script_lang_js_,
+var component = (0,componentNormalizer/* default */.A)(
+  NInput_NInputPrefixvue_type_script_lang_js,
   NInputPrefixvue_type_template_id_0872c97f_render,
   NInputPrefixvue_type_template_id_0872c97f_staticRenderFns,
   false,
@@ -1162,7 +1161,7 @@ var component = (0,componentNormalizer/* default */.Z)(
 )
 
 /* harmony default export */ var NInputPrefix = (component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInputSuffix.vue?vue&type=template&id=98c548c2&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInputSuffix.vue?vue&type=template&id=98c548c2
 var NInputSuffixvue_type_template_id_98c548c2_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1170,12 +1169,12 @@ var NInputSuffixvue_type_template_id_98c548c2_render = function render() {
 };
 var NInputSuffixvue_type_template_id_98c548c2_staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInputSuffix.vue?vue&type=script&lang=js&
-/* harmony default export */ var NInputSuffixvue_type_script_lang_js_ = ({
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInputSuffix.vue?vue&type=script&lang=js
+/* harmony default export */ var NInputSuffixvue_type_script_lang_js = ({
   name: 'nitrozen-input-suffix'
 });
-;// CONCATENATED MODULE: ./src/components/NInput/NInputSuffix.vue?vue&type=script&lang=js&
- /* harmony default export */ var NInput_NInputSuffixvue_type_script_lang_js_ = (NInputSuffixvue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./src/components/NInput/NInputSuffix.vue?vue&type=script&lang=js
+ /* harmony default export */ var NInput_NInputSuffixvue_type_script_lang_js = (NInputSuffixvue_type_script_lang_js); 
 ;// CONCATENATED MODULE: ./src/components/NInput/NInputSuffix.vue
 
 
@@ -1184,8 +1183,8 @@ var NInputSuffixvue_type_template_id_98c548c2_staticRenderFns = [];
 
 /* normalize component */
 ;
-var NInputSuffix_component = (0,componentNormalizer/* default */.Z)(
-  NInput_NInputSuffixvue_type_script_lang_js_,
+var NInputSuffix_component = (0,componentNormalizer/* default */.A)(
+  NInput_NInputSuffixvue_type_script_lang_js,
   NInputSuffixvue_type_template_id_98c548c2_render,
   NInputSuffixvue_type_template_id_98c548c2_staticRenderFns,
   false,
@@ -1197,24 +1196,24 @@ var NInputSuffix_component = (0,componentNormalizer/* default */.Z)(
 
 /* harmony default export */ var NInputSuffix = (NInputSuffix_component.exports);
 // EXTERNAL MODULE: ./src/components/NTooltip/index.js + 6 modules
-var NTooltip = __webpack_require__(632);
+var NTooltip = __webpack_require__(1649);
 // EXTERNAL MODULE: ./src/components/NInline/index.js + 6 modules
-var NInline = __webpack_require__(7549);
+var NInline = __webpack_require__(977);
 // EXTERNAL MODULE: ./src/utils/NUuid.js
-var NUuid = __webpack_require__(3934);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=script&lang=js&
+var NUuid = __webpack_require__(5472);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=script&lang=js
 
 
 
 
 
-/* harmony default export */ var NInputvue_type_script_lang_js_ = ({
+/* harmony default export */ var NInputvue_type_script_lang_js = ({
   name: 'nitrozen-input',
   components: {
     'nitrozen-input-prefix': NInputPrefix,
     'nitrozen-input-suffix': NInputSuffix,
-    'nitrozen-tooltip': NTooltip/* default */.Z,
-    'nitrozen-inline': NInline/* default */.Z
+    'nitrozen-tooltip': NTooltip/* default */.A,
+    'nitrozen-inline': NInline/* default */.A
   },
   data() {
     return {
@@ -1281,7 +1280,7 @@ var NUuid = __webpack_require__(3934);
     },
     id: {
       type: [Number, String],
-      default: () => 'nitrozen-input' + (0,NUuid/* default */.Z)()
+      default: () => 'nitrozen-input' + (0,NUuid/* default */.A)()
     },
     maxlength: {
       type: Number
@@ -1351,12 +1350,12 @@ var NUuid = __webpack_require__(3934);
   //     }
   // }
 });
-;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=script&lang=js&
- /* harmony default export */ var NInput_NInputvue_type_script_lang_js_ = (NInputvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=style&index=0&id=f1c1f790&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=script&lang=js
+ /* harmony default export */ var NInput_NInputvue_type_script_lang_js = (NInputvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=style&index=0&id=f1c1f790&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=style&index=0&id=f1c1f790&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=style&index=0&id=f1c1f790&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue
 
@@ -1367,8 +1366,8 @@ var NUuid = __webpack_require__(3934);
 
 /* normalize component */
 
-var NInput_component = (0,componentNormalizer/* default */.Z)(
-  NInput_NInputvue_type_script_lang_js_,
+var NInput_component = (0,componentNormalizer/* default */.A)(
+  NInput_NInputvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -1382,12 +1381,12 @@ var NInput_component = (0,componentNormalizer/* default */.Z)(
 
 /***/ }),
 
-/***/ 3736:
+/***/ 1656:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* binding */ normalizeComponent; }
+/* harmony export */   A: function() { return /* binding */ normalizeComponent; }
 /* harmony export */ });
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -1489,7 +1488,7 @@ function normalizeComponent(
 
 /***/ }),
 
-/***/ 1310:
+/***/ 3591:
 /***/ (function(module) {
 
 "use strict";
@@ -1519,34 +1518,34 @@ module.exports = svgs;
 
 /***/ }),
 
-/***/ 9938:
+/***/ 932:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ components_NBtn; }
+  A: function() { return /* binding */ components_NBtn; }
 });
 
 // EXTERNAL MODULE: ./src/components/NBtn/NBtnContent.vue + 6 modules
-var NBtnContent = __webpack_require__(7084);
+var NBtnContent = __webpack_require__(7536);
 // EXTERNAL MODULE: ./src/directives/NStrokeBtn.js
-var NStrokeBtn = __webpack_require__(8545);
+var NStrokeBtn = __webpack_require__(7218);
 // EXTERNAL MODULE: ./src/directives/NFlatBtn.js
-var NFlatBtn = __webpack_require__(3726);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtn.vue?vue&type=script&lang=js&
+var NFlatBtn = __webpack_require__(7515);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtn.vue?vue&type=script&lang=js
 
 
 
-/* harmony default export */ var NBtnvue_type_script_lang_js_ = ({
+/* harmony default export */ var NBtnvue_type_script_lang_js = ({
   name: 'nitrozen-button',
   components: {
-    NButtonContent: NBtnContent/* default */.Z
+    NButtonContent: NBtnContent/* default */.A
   },
   directives: {
-    strokeBtn: NStrokeBtn/* default */.Z,
-    flatBtn: NFlatBtn/* default */.Z
+    strokeBtn: NStrokeBtn/* default */.A,
+    flatBtn: NFlatBtn/* default */.A
   },
   props: {
     href: {
@@ -1619,15 +1618,15 @@ var NFlatBtn = __webpack_require__(3726);
     return createElement(tag, buttonAttrs, [slotElement]);
   }
 });
-;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=script&lang=js&
- /* harmony default export */ var NBtn_NBtnvue_type_script_lang_js_ = (NBtnvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=f74dcfb8&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=script&lang=js
+ /* harmony default export */ var NBtn_NBtnvue_type_script_lang_js = (NBtnvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=f74dcfb8&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=f74dcfb8&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue?vue&type=style&index=0&id=f74dcfb8&prod&lang=less
 
-// EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(3736);
+// EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(1656);
 ;// CONCATENATED MODULE: ./src/components/NBtn/NBtn.vue
 var render, staticRenderFns
 ;
@@ -1637,8 +1636,8 @@ var render, staticRenderFns
 
 /* normalize component */
 
-var component = (0,componentNormalizer/* default */.Z)(
-  NBtn_NBtnvue_type_script_lang_js_,
+var component = (0,componentNormalizer/* default */.A)(
+  NBtn_NBtnvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -1655,17 +1654,17 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /***/ }),
 
-/***/ 3849:
+/***/ 1986:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ components_NCheckbox; }
+  A: function() { return /* binding */ components_NCheckbox; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=bf396e88&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=template&id=bf396e88
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1697,10 +1696,10 @@ var render = function render() {
 var staticRenderFns = [];
 
 // EXTERNAL MODULE: ./src/utils/NUuid.js
-var NUuid = __webpack_require__(3934);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=script&lang=js&
+var NUuid = __webpack_require__(5472);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=script&lang=js
 
-/* harmony default export */ var NCheckboxvue_type_script_lang_js_ = ({
+/* harmony default export */ var NCheckboxvue_type_script_lang_js = ({
   name: "nitrozen-checkbox",
   props: {
     value: {
@@ -1717,7 +1716,7 @@ var NUuid = __webpack_require__(3934);
     },
     id: {
       type: [Number, String],
-      default: () => "nitrozen-checkbox" + (0,NUuid/* default */.Z)()
+      default: () => "nitrozen-checkbox" + (0,NUuid/* default */.A)()
     }
   },
   event: "change",
@@ -1753,15 +1752,15 @@ var NUuid = __webpack_require__(3934);
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NCheckbox/NCheckbox.vue?vue&type=script&lang=js&
- /* harmony default export */ var NCheckbox_NCheckboxvue_type_script_lang_js_ = (NCheckboxvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=style&index=0&id=bf396e88&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NCheckbox/NCheckbox.vue?vue&type=script&lang=js
+ /* harmony default export */ var NCheckbox_NCheckboxvue_type_script_lang_js = (NCheckboxvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NCheckbox/NCheckbox.vue?vue&type=style&index=0&id=bf396e88&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NCheckbox/NCheckbox.vue?vue&type=style&index=0&id=bf396e88&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NCheckbox/NCheckbox.vue?vue&type=style&index=0&id=bf396e88&prod&lang=less
 
-// EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(3736);
+// EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(1656);
 ;// CONCATENATED MODULE: ./src/components/NCheckbox/NCheckbox.vue
 
 
@@ -1771,8 +1770,8 @@ var componentNormalizer = __webpack_require__(3736);
 
 /* normalize component */
 
-var component = (0,componentNormalizer/* default */.Z)(
-  NCheckbox_NCheckboxvue_type_script_lang_js_,
+var component = (0,componentNormalizer/* default */.A)(
+  NCheckbox_NCheckboxvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -1789,19 +1788,19 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /***/ }),
 
-/***/ 7150:
+/***/ 5757:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ components_NDropdown; }
+  A: function() { return /* binding */ components_NDropdown; }
 });
 
 // UNUSED EXPORTS: NDropdown
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=template&id=28e6a876&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=template&id=47af58d9
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1849,7 +1848,6 @@ var render = function render() {
     on: {
       "search": _vm.searchInputChange,
       "keyup": _vm.searchInputChange,
-      "keydown": _vm.searchInputChange,
       "input": function ($event) {
         if ($event.target.composing) return;
         _vm.searchInput = $event.target.value;
@@ -2002,24 +2000,24 @@ var render = function render() {
 var staticRenderFns = [];
 
 // EXTERNAL MODULE: ./src/utils/NUuid.js
-var NUuid = __webpack_require__(3934);
+var NUuid = __webpack_require__(5472);
 // EXTERNAL MODULE: ./src/components/NInline/index.js + 6 modules
-var NInline = __webpack_require__(7549);
+var NInline = __webpack_require__(977);
 // EXTERNAL MODULE: ./src/components/NCheckbox/index.js + 6 modules
-var NCheckbox = __webpack_require__(3849);
+var NCheckbox = __webpack_require__(1986);
 // EXTERNAL MODULE: ./src/components/NTooltip/index.js + 6 modules
-var NTooltip = __webpack_require__(632);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=script&lang=js&
+var NTooltip = __webpack_require__(1649);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=script&lang=js
 
 
 
 
-/* harmony default export */ var NDropdownvue_type_script_lang_js_ = ({
+/* harmony default export */ var NDropdownvue_type_script_lang_js = ({
   name: "nitrozen-dropdown",
   components: {
-    "nitrozen-inline": NInline/* default */.Z,
-    "nitrozen-checkbox": NCheckbox/* default */.Z,
-    "nitrozen-tooltip": NTooltip/* default */.Z
+    "nitrozen-inline": NInline/* default */.A,
+    "nitrozen-checkbox": NCheckbox/* default */.A,
+    "nitrozen-tooltip": NTooltip/* default */.A
   },
   props: {
     /**
@@ -2027,7 +2025,7 @@ var NTooltip = __webpack_require__(632);
      */
     id: {
       type: [Number, String],
-      default: () => "nitrozen-dropdown-" + (0,NUuid/* default */.Z)()
+      default: () => "nitrozen-dropdown-" + (0,NUuid/* default */.A)()
     },
     /**
      * array of item in dropdown
@@ -2179,7 +2177,7 @@ var NTooltip = __webpack_require__(632);
             }
           });
           tmp = [...new Set(tmp)];
-          return `${tmp.join(", ")}`;
+          return `${tmp.length}` + ' Selected';
         } else if (this.label) {
           return this.placeholder || `Select ${this.label.toLowerCase()}`;
         }
@@ -2359,15 +2357,15 @@ var NTooltip = __webpack_require__(632);
     window.removeEventListener("scroll", this.calculateViewport);
   }
 });
-;// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=script&lang=js&
- /* harmony default export */ var NDropdown_NDropdownvue_type_script_lang_js_ = (NDropdownvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=style&index=0&id=28e6a876&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=script&lang=js
+ /* harmony default export */ var NDropdown_NDropdownvue_type_script_lang_js = (NDropdownvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=style&index=0&id=47af58d9&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=style&index=0&id=28e6a876&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=style&index=0&id=47af58d9&prod&lang=less
 
-// EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(3736);
+// EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(1656);
 ;// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue
 
 
@@ -2377,8 +2375,8 @@ var componentNormalizer = __webpack_require__(3736);
 
 /* normalize component */
 
-var component = (0,componentNormalizer/* default */.Z)(
-  NDropdown_NDropdownvue_type_script_lang_js_,
+var component = (0,componentNormalizer/* default */.A)(
+  NDropdown_NDropdownvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -2396,17 +2394,17 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /***/ }),
 
-/***/ 9751:
+/***/ 5700:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ components_NError; }
+  A: function() { return /* binding */ components_NError; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NError/NError.vue?vue&type=template&id=66da709a&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NError/NError.vue?vue&type=template&id=66da709a
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -2416,19 +2414,19 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NError/NError.vue?vue&type=script&lang=js&
-/* harmony default export */ var NErrorvue_type_script_lang_js_ = ({
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NError/NError.vue?vue&type=script&lang=js
+/* harmony default export */ var NErrorvue_type_script_lang_js = ({
   name: 'nitrozen-error'
 });
-;// CONCATENATED MODULE: ./src/components/NError/NError.vue?vue&type=script&lang=js&
- /* harmony default export */ var NError_NErrorvue_type_script_lang_js_ = (NErrorvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NError/NError.vue?vue&type=style&index=0&id=66da709a&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NError/NError.vue?vue&type=script&lang=js
+ /* harmony default export */ var NError_NErrorvue_type_script_lang_js = (NErrorvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NError/NError.vue?vue&type=style&index=0&id=66da709a&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NError/NError.vue?vue&type=style&index=0&id=66da709a&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NError/NError.vue?vue&type=style&index=0&id=66da709a&prod&lang=less
 
-// EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(3736);
+// EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(1656);
 ;// CONCATENATED MODULE: ./src/components/NError/NError.vue
 
 
@@ -2438,8 +2436,8 @@ var componentNormalizer = __webpack_require__(3736);
 
 /* normalize component */
 
-var component = (0,componentNormalizer/* default */.Z)(
-  NError_NErrorvue_type_script_lang_js_,
+var component = (0,componentNormalizer/* default */.A)(
+  NError_NErrorvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -2456,17 +2454,17 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /***/ }),
 
-/***/ 7549:
+/***/ 977:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ components_NInline; }
+  A: function() { return /* binding */ components_NInline; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInline/NInline.vue?vue&type=template&id=71c7429a&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInline/NInline.vue?vue&type=template&id=809c0bd2
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -2480,11 +2478,11 @@ var render = function render() {
 var staticRenderFns = [];
 
 // EXTERNAL MODULE: ./src/auto_gen/svgs.js
-var svgs = __webpack_require__(1310);
+var svgs = __webpack_require__(3591);
 var svgs_default = /*#__PURE__*/__webpack_require__.n(svgs);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInline/NInline.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInline/NInline.vue?vue&type=script&lang=js
 
-/* harmony default export */ var NInlinevue_type_script_lang_js_ = ({
+/* harmony default export */ var NInlinevue_type_script_lang_js = ({
   name: 'nitrozen-inline',
   props: {
     icon: {
@@ -2503,15 +2501,15 @@ var svgs_default = /*#__PURE__*/__webpack_require__.n(svgs);
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NInline/NInline.vue?vue&type=script&lang=js&
- /* harmony default export */ var NInline_NInlinevue_type_script_lang_js_ = (NInlinevue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInline/NInline.vue?vue&type=style&index=0&id=71c7429a&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NInline/NInline.vue?vue&type=script&lang=js
+ /* harmony default export */ var NInline_NInlinevue_type_script_lang_js = (NInlinevue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInline/NInline.vue?vue&type=style&index=0&id=809c0bd2&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NInline/NInline.vue?vue&type=style&index=0&id=71c7429a&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NInline/NInline.vue?vue&type=style&index=0&id=809c0bd2&prod&lang=less
 
-// EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(3736);
+// EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(1656);
 ;// CONCATENATED MODULE: ./src/components/NInline/NInline.vue
 
 
@@ -2521,8 +2519,8 @@ var componentNormalizer = __webpack_require__(3736);
 
 /* normalize component */
 
-var component = (0,componentNormalizer/* default */.Z)(
-  NInline_NInlinevue_type_script_lang_js_,
+var component = (0,componentNormalizer/* default */.A)(
+  NInline_NInlinevue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -2539,11 +2537,11 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /***/ }),
 
-/***/ 5778:
+/***/ 4271:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _NInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1820);
+/* harmony import */ var _NInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8696);
 
 // import NInputPrefix from './NInputPrefix.vue';
 // import NInputSuffix from './NInputSuffix.vue';
@@ -2554,21 +2552,21 @@ var component = (0,componentNormalizer/* default */.Z)(
 //     NInputSuffix
 // };
 
-/* harmony default export */ __webpack_exports__["Z"] = (_NInput__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z);
+/* harmony default export */ __webpack_exports__.A = (_NInput__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A);
 
 /***/ }),
 
-/***/ 1232:
+/***/ 1478:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ components_NRadio; }
+  A: function() { return /* binding */ components_NRadio; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=template&id=56edff8a&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=template&id=56edff8a
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -2602,10 +2600,10 @@ var render = function render() {
 var staticRenderFns = [];
 
 // EXTERNAL MODULE: ./src/utils/NUuid.js
-var NUuid = __webpack_require__(3934);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=script&lang=js&
+var NUuid = __webpack_require__(5472);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=script&lang=js
 
-/* harmony default export */ var NRadiovue_type_script_lang_js_ = ({
+/* harmony default export */ var NRadiovue_type_script_lang_js = ({
   name: "nitrozen-radio",
   props: {
     disabled: {
@@ -2622,7 +2620,7 @@ var NUuid = __webpack_require__(3934);
     },
     id: {
       type: [Number, String],
-      default: () => "nitrozen-radio" + (0,NUuid/* default */.Z)()
+      default: () => "nitrozen-radio" + (0,NUuid/* default */.A)()
     },
     name: {
       type: [Number, String],
@@ -2640,15 +2638,15 @@ var NUuid = __webpack_require__(3934);
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NRadio/NRadio.vue?vue&type=script&lang=js&
- /* harmony default export */ var NRadio_NRadiovue_type_script_lang_js_ = (NRadiovue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=style&index=0&id=56edff8a&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NRadio/NRadio.vue?vue&type=script&lang=js
+ /* harmony default export */ var NRadio_NRadiovue_type_script_lang_js = (NRadiovue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NRadio/NRadio.vue?vue&type=style&index=0&id=56edff8a&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NRadio/NRadio.vue?vue&type=style&index=0&id=56edff8a&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NRadio/NRadio.vue?vue&type=style&index=0&id=56edff8a&prod&lang=less
 
-// EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(3736);
+// EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(1656);
 ;// CONCATENATED MODULE: ./src/components/NRadio/NRadio.vue
 
 
@@ -2658,8 +2656,8 @@ var componentNormalizer = __webpack_require__(3736);
 
 /* normalize component */
 
-var component = (0,componentNormalizer/* default */.Z)(
-  NRadio_NRadiovue_type_script_lang_js_,
+var component = (0,componentNormalizer/* default */.A)(
+  NRadio_NRadiovue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -2676,17 +2674,17 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /***/ }),
 
-/***/ 9831:
+/***/ 1147:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ components_NToggleBtn; }
+  A: function() { return /* binding */ components_NToggleBtn; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=template&id=6e43a86e&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=template&id=6e43a86e
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -2715,8 +2713,8 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=script&lang=js&
-/* harmony default export */ var NToggleBtnvue_type_script_lang_js_ = ({
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=script&lang=js
+/* harmony default export */ var NToggleBtnvue_type_script_lang_js = ({
   name: 'nitrozen-toggle-btn',
   // props: {
   //     curstate: {
@@ -2747,15 +2745,15 @@ var staticRenderFns = [];
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=script&lang=js&
- /* harmony default export */ var NToggleBtn_NToggleBtnvue_type_script_lang_js_ = (NToggleBtnvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=style&index=0&id=6e43a86e&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=script&lang=js
+ /* harmony default export */ var NToggleBtn_NToggleBtnvue_type_script_lang_js = (NToggleBtnvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=style&index=0&id=6e43a86e&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=style&index=0&id=6e43a86e&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=style&index=0&id=6e43a86e&prod&lang=less
 
-// EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(3736);
+// EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(1656);
 ;// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue
 
 
@@ -2765,8 +2763,8 @@ var componentNormalizer = __webpack_require__(3736);
 
 /* normalize component */
 
-var component = (0,componentNormalizer/* default */.Z)(
-  NToggleBtn_NToggleBtnvue_type_script_lang_js_,
+var component = (0,componentNormalizer/* default */.A)(
+  NToggleBtn_NToggleBtnvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -2783,17 +2781,17 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /***/ }),
 
-/***/ 632:
+/***/ 1649:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ components_NTooltip; }
+  A: function() { return /* binding */ components_NTooltip; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTooltip/NTooltip.vue?vue&type=template&id=1d649a4e&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTooltip/NTooltip.vue?vue&type=template&id=1d649a4e
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -2811,13 +2809,13 @@ var render = function render() {
 var staticRenderFns = [];
 
 // EXTERNAL MODULE: ./src/components/NInline/index.js + 6 modules
-var NInline = __webpack_require__(7549);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTooltip/NTooltip.vue?vue&type=script&lang=js&
+var NInline = __webpack_require__(977);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTooltip/NTooltip.vue?vue&type=script&lang=js
 
-/* harmony default export */ var NTooltipvue_type_script_lang_js_ = ({
+/* harmony default export */ var NTooltipvue_type_script_lang_js = ({
   name: "nitrozen-tooltip",
   components: {
-    "nitrozen-inline": NInline/* default */.Z
+    "nitrozen-inline": NInline/* default */.A
   },
   props: {
     position: {
@@ -2844,15 +2842,15 @@ var NInline = __webpack_require__(7549);
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NTooltip/NTooltip.vue?vue&type=script&lang=js&
- /* harmony default export */ var NTooltip_NTooltipvue_type_script_lang_js_ = (NTooltipvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTooltip/NTooltip.vue?vue&type=style&index=0&id=1d649a4e&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NTooltip/NTooltip.vue?vue&type=script&lang=js
+ /* harmony default export */ var NTooltip_NTooltipvue_type_script_lang_js = (NTooltipvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTooltip/NTooltip.vue?vue&type=style&index=0&id=1d649a4e&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NTooltip/NTooltip.vue?vue&type=style&index=0&id=1d649a4e&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NTooltip/NTooltip.vue?vue&type=style&index=0&id=1d649a4e&prod&lang=less
 
-// EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(3736);
+// EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(1656);
 ;// CONCATENATED MODULE: ./src/components/NTooltip/NTooltip.vue
 
 
@@ -2862,8 +2860,8 @@ var componentNormalizer = __webpack_require__(3736);
 
 /* normalize component */
 
-var component = (0,componentNormalizer/* default */.Z)(
-  NTooltip_NTooltipvue_type_script_lang_js_,
+var component = (0,componentNormalizer/* default */.A)(
+  NTooltip_NTooltipvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -2880,11 +2878,11 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /***/ }),
 
-/***/ 3726:
+/***/ 7515:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3797);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4100);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 
 const flatBtn = vue__WEBPACK_IMPORTED_MODULE_0___default().directive('flat-btn', {
@@ -2905,15 +2903,15 @@ vue__WEBPACK_IMPORTED_MODULE_0___default().use(flatBtn);
 // componentUpdated
 // unbind
 
-/* harmony default export */ __webpack_exports__["Z"] = (flatBtn);
+/* harmony default export */ __webpack_exports__.A = (flatBtn);
 
 /***/ }),
 
-/***/ 8545:
+/***/ 7218:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3797);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4100);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 
 const strokeBtn = vue__WEBPACK_IMPORTED_MODULE_0___default().directive('stroke-btn', {
@@ -2934,22 +2932,22 @@ vue__WEBPACK_IMPORTED_MODULE_0___default().use(strokeBtn);
 // componentUpdated
 // unbind
 
-/* harmony default export */ __webpack_exports__["Z"] = (strokeBtn);
+/* harmony default export */ __webpack_exports__.A = (strokeBtn);
 
 /***/ }),
 
-/***/ 3934:
+/***/ 5472:
 /***/ (function(__unused_webpack_module, __webpack_exports__) {
 
 "use strict";
 const NitrozenUuid = () => {
   return Math.random().toString(36).slice(4);
 };
-/* harmony default export */ __webpack_exports__["Z"] = (NitrozenUuid);
+/* harmony default export */ __webpack_exports__.A = (NitrozenUuid);
 
 /***/ }),
 
-/***/ 962:
+/***/ 8678:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* globals define,module */
@@ -3248,7 +3246,7 @@ http://ricostacruz.com/cheatsheets/umdjs.html
     } else if (op === "reduce") {
       scopedData = jsonLogic.apply(values[0], data);
       scopedLogic = values[1];
-      initial = typeof values[2] !== "undefined" ? values[2] : null;
+      initial = typeof values[2] !== "undefined" ? jsonLogic.apply(values[2], data) : null;
 
       if ( ! Array.isArray(scopedData)) {
         return initial;
@@ -3431,14 +3429,14 @@ http://ricostacruz.com/cheatsheets/umdjs.html
 
 /***/ }),
 
-/***/ 8442:
+/***/ 3954:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-module.exports=function(e){function t(i){if(n[i])return n[i].exports;var a=n[i]={i:i,l:!1,exports:{}};return e[i].call(a.exports,a,a.exports,t),a.l=!0,a.exports}var n={};return t.m=e,t.c=n,t.d=function(e,n,i){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:i})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="/",t(t.s=1)}([function(e,t,n){"use strict";function i(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var a=n(6),r=(n.n(a),n(7)),o=n(8);t.a={name:"VueTelInput",directives:{"click-outside":{bind:function(e,t,n){if("function"!=typeof t.value){var i=n.context.name,a="[Vue-click-outside:] provided expression "+t.expression+" is not a function, but has to be";i&&(a+="Found in component "+i),console.warn(a)}var r=t.modifiers.bubble,o=function(n){var i=n.path||n.composedPath&&n.composedPath();(r||i.length&&!e.contains(i[0])&&e!==i[0])&&t.value(n)};e.__vueClickOutside__=o,document.addEventListener("click",o)},unbind:function(e){document.removeEventListener("click",e.__vueClickOutside__),e.__vueClickOutside__=null}}},props:{value:{type:String,default:""},placeholder:{type:String,default:"Enter a phone number"},disabledFetchingCountry:{type:Boolean,default:!1},disabled:{type:Boolean,default:!1},disabledFormatting:{type:Boolean,default:!1},invalidMsg:{default:"",type:String},required:{type:Boolean,default:!1},defaultCountry:{type:String,default:""},enabledCountryCode:{type:Boolean,default:!1},enabledFlags:{type:Boolean,default:!0},preferredCountries:{type:Array,default:function(){return[]}},onlyCountries:{type:Array,default:function(){return[]}},ignoredCountries:{type:Array,default:function(){return[]}},autocomplete:{type:String,default:"on"},name:{type:String,default:"telephone"},wrapperClasses:{type:[String,Array,Object],default:""},inputClasses:{type:[String,Array,Object],default:""},inputId:{type:String,default:""},dropdownOptions:{type:Object,default:function(){return{}}},inputOptions:{type:Object,default:function(){return{}}},maxLen:{type:Number,default:25},validCharactersOnly:{type:Boolean,default:!1}},data:function(){return{phone:"",activeCountry:{iso2:""},open:!1,selectedIndex:null,typeToFindInput:"",typeToFindTimer:null}},computed:{mode:function(){return this.phone?"+"===this.phone[0]?"code":"0"===this.phone[0]?"prefix":"normal":""},filteredCountries:function(){var e=this;return this.onlyCountries.length?this.getCountries(this.onlyCountries):this.ignoredCountries.length?r.a.filter(function(t){var n=t.iso2;return!e.ignoredCountries.includes(n.toUpperCase())&&!e.ignoredCountries.includes(n.toLowerCase())}):r.a},sortedCountries:function(){return[].concat(i(this.getCountries(this.preferredCountries).map(function(e){return Object.assign({},e,{preferred:!0})})),i(this.filteredCountries))},formattedResult:function(){if(!this.mode||!this.filteredCountries)return"";var e=this.phone;if("code"===this.mode){var t=new a.AsYouType;t.input(this.phone),this.activeCountry=this.findCountry(t.country)||this.activeCountry}else"prefix"===this.mode&&(e=this.phone.slice(1));return this.disabledFormatting?this.phone:Object(a.formatNumber)(e,this.activeCountry&&this.activeCountry.iso2,"International")},state:function(){return Object(a.isValidNumber)(this.formattedResult,this.activeCountry&&this.activeCountry.iso2)},response:function(){var e={number:this.state?this.formattedResult:this.phone,isValid:this.state,country:this.activeCountry};return this.disabledFormatting&&Object.assign(e,{formattedNumber:Object(a.formatNumber)(this.phone,this.activeCountry&&this.activeCountry.iso2,"International")}),e}},watch:{state:function(e){e&&"prefix"!==this.mode&&(this.phone=this.formattedResult),this.$emit("onValidate",this.response),this.$emit("validate",this.response)},value:function(){this.phone=this.value},open:function(e){e?this.$emit("open"):this.$emit("close")},phone:function(e,t){var n=this;this.validCharactersOnly&&!this.testCharacters()&&this.$nextTick(function(){n.phone=t})},activeCountry:function(e){e&&e.iso2&&this.$emit("country-changed",e)}},mounted:function(){var e=this;this.initializeCountry().then(function(){!e.phone&&e.inputOptions&&e.inputOptions.showDialCode&&e.activeCountry&&(e.phone="+"+e.activeCountry.dialCode),e.$emit("validate",e.response),e.$emit("onValidate",e.response)}).catch(console.error)},created:function(){this.value&&(this.phone=this.value.trim())},methods:{initializeCountry:function(){var e=this;return new Promise(function(t){if(e.phone&&"+"===e.phone[0]){var n=Object(a.parsePhoneNumberFromString)(e.phone);if(n&&n.country)return e.activeCountry=n.country,void t()}if(e.defaultCountry){var i=e.findCountry(e.defaultCountry);if(i)return e.activeCountry=i,void t()}e.activeCountry=e.findCountry(e.preferredCountries[0])||e.filteredCountries[0],e.disabledFetchingCountry?t():Object(o.a)().then(function(t){e.activeCountry=e.findCountry(t)||e.activeCountry}).finally(t).catch(function(e){console.warn(e)})})},getCountries:function(){var e=this;return(arguments.length>0&&void 0!==arguments[0]?arguments[0]:[]).map(function(t){return e.findCountry(t)}).filter(Boolean)},findCountry:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"";return r.a.find(function(t){return t.iso2===e.toUpperCase()})},getItemClass:function(e,t){return{highlighted:this.selectedIndex===e,"last-preferred":e===this.preferredCountries.length-1,preferred:this.preferredCountries.some(function(e){return e.toUpperCase()===t})}},choose:function(e){this.activeCountry=e,this.inputOptions&&this.inputOptions.showDialCode&&e&&(this.phone="+"+e.dialCode),this.$emit("input",this.response.number,this.response),this.$emit("onInput",this.response)},testCharacters:function(){return/^[()-+0-9\s]*$/.test(this.phone)},onInput:function(){this.validCharactersOnly&&!this.testCharacters()||(this.$refs.input.setCustomValidity(this.response.isValid?"":this.invalidMsg),this.$emit("input",this.response.number,this.response),this.$emit("onInput",this.response))},onBlur:function(){this.$emit("blur"),this.$emit("onBlur")},onEnter:function(){this.$emit("enter"),this.$emit("onEnter")},onSpace:function(){this.$emit("space"),this.$emit("onSpace")},focus:function(){this.$refs.input.focus()},toggleDropdown:function(){this.disabled||(this.open=!this.open)},clickedOutside:function(){this.open=!1},keyboardNav:function(e){var t=this;if(40===e.keyCode){e.preventDefault(),this.open=!0,null===this.selectedIndex?this.selectedIndex=0:this.selectedIndex=Math.min(this.sortedCountries.length-1,this.selectedIndex+1);var n=this.$refs.list.children[this.selectedIndex];n.offsetTop+n.clientHeight>this.$refs.list.scrollTop+this.$refs.list.clientHeight&&(this.$refs.list.scrollTop=n.offsetTop-this.$refs.list.clientHeight+n.clientHeight)}else if(38===e.keyCode){e.preventDefault(),this.open=!0,null===this.selectedIndex?this.selectedIndex=this.sortedCountries.length-1:this.selectedIndex=Math.max(0,this.selectedIndex-1);var i=this.$refs.list.children[this.selectedIndex];i.offsetTop<this.$refs.list.scrollTop&&(this.$refs.list.scrollTop=i.offsetTop)}else if(13===e.keyCode)null!==this.selectedIndex&&this.choose(this.sortedCountries[this.selectedIndex]),this.open=!this.open;else{this.typeToFindInput+=e.key,clearTimeout(this.typeToFindTimer),this.typeToFindTimer=setTimeout(function(){t.typeToFindInput=""},700);var a=this.sortedCountries.slice(this.preferredCountries.length).findIndex(function(e){return e.name.toLowerCase().startsWith(t.typeToFindInput)});if(a>=0){this.selectedIndex=this.preferredCountries.length+a;var r=this.$refs.list.children[this.selectedIndex],o=r.offsetTop<this.$refs.list.scrollTop,s=r.offsetTop+r.clientHeight>this.$refs.list.scrollTop+this.$refs.list.clientHeight;(o||s)&&(this.$refs.list.scrollTop=r.offsetTop-this.$refs.list.clientHeight/2)}}},reset:function(){this.selectedIndex=this.sortedCountries.map(function(e){return e.iso2}).indexOf(this.activeCountry.iso2),this.open=!1}}}},function(e,t,n){e.exports=n(2)},function(e,t,n){"use strict";function i(e){n(3),n(4)}Object.defineProperty(t,"__esModule",{value:!0});var a=n(0),r=n(9),o=n(5),s=i,u=o(a.a,r.a,!1,s,"data-v-9d46625e",null);t.default=u.exports},function(e,t){},function(e,t){},function(e,t){e.exports=function(e,t,n,i,a,r){var o,s=e=e||{},u=typeof e.default;"object"!==u&&"function"!==u||(o=e,s=e.default);var l="function"==typeof s?s.options:s;t&&(l.render=t.render,l.staticRenderFns=t.staticRenderFns,l._compiled=!0),n&&(l.functional=!0),a&&(l._scopeId=a);var d;if(r?(d=function(e){e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,e||"undefined"==typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),i&&i.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(r)},l._ssrRegister=d):i&&(d=i),d){var c=l.functional,p=c?l.render:l.beforeCreate;c?(l._injectStyles=d,l.render=function(e,t){return d.call(t),p(e,t)}):l.beforeCreate=p?[].concat(p,d):[d]}return{esModule:o,exports:s,options:l}}},function(e,t){e.exports=__webpack_require__(1329)},function(e,t,n){"use strict";var i=[["Afghanistan (‫افغانستان‬‎)","af","93"],["Albania (Shqipëri)","al","355"],["Algeria (‫الجزائر‬‎)","dz","213"],["American Samoa","as","1684"],["Andorra","ad","376"],["Angola","ao","244"],["Anguilla","ai","1264"],["Antigua and Barbuda","ag","1268"],["Argentina","ar","54"],["Armenia (Հայաստան)","am","374"],["Aruba","aw","297"],["Australia","au","61",0],["Austria (Österreich)","at","43"],["Azerbaijan (Azərbaycan)","az","994"],["Bahamas","bs","1242"],["Bahrain (‫البحرين‬‎)","bh","973"],["Bangladesh (বাংলাদেশ)","bd","880"],["Barbados","bb","1246"],["Belarus (Беларусь)","by","375"],["Belgium (België)","be","32"],["Belize","bz","501"],["Benin (Bénin)","bj","229"],["Bermuda","bm","1441"],["Bhutan (འབྲུག)","bt","975"],["Bolivia","bo","591"],["Bosnia and Herzegovina (Босна и Херцеговина)","ba","387"],["Botswana","bw","267"],["Brazil (Brasil)","br","55"],["British Indian Ocean Territory","io","246"],["British Virgin Islands","vg","1284"],["Brunei","bn","673"],["Bulgaria (България)","bg","359"],["Burkina Faso","bf","226"],["Burundi (Uburundi)","bi","257"],["Cambodia (កម្ពុជា)","kh","855"],["Cameroon (Cameroun)","cm","237"],["Canada","ca","1",1,["204","226","236","249","250","289","306","343","365","387","403","416","418","431","437","438","450","506","514","519","548","579","581","587","604","613","639","647","672","705","709","742","778","780","782","807","819","825","867","873","902","905"]],["Cape Verde (Kabu Verdi)","cv","238"],["Caribbean Netherlands","bq","599",1],["Cayman Islands","ky","1345"],["Central African Republic (République centrafricaine)","cf","236"],["Chad (Tchad)","td","235"],["Chile","cl","56"],["China (中国)","cn","86"],["Christmas Island","cx","61",2],["Cocos (Keeling) Islands","cc","61",1],["Colombia","co","57"],["Comoros (‫جزر القمر‬‎)","km","269"],["Congo (DRC) (Jamhuri ya Kidemokrasia ya Kongo)","cd","243"],["Congo (Republic) (Congo-Brazzaville)","cg","242"],["Cook Islands","ck","682"],["Costa Rica","cr","506"],["Côte d’Ivoire","ci","225"],["Croatia (Hrvatska)","hr","385"],["Cuba","cu","53"],["Curaçao","cw","599",0],["Cyprus (Κύπρος)","cy","357"],["Czech Republic (Česká republika)","cz","420"],["Denmark (Danmark)","dk","45"],["Djibouti","dj","253"],["Dominica","dm","1767"],["Dominican Republic (República Dominicana)","do","1",2,["809","829","849"]],["Ecuador","ec","593"],["Egypt (‫مصر‬‎)","eg","20"],["El Salvador","sv","503"],["Equatorial Guinea (Guinea Ecuatorial)","gq","240"],["Eritrea","er","291"],["Estonia (Eesti)","ee","372"],["Ethiopia","et","251"],["Falkland Islands (Islas Malvinas)","fk","500"],["Faroe Islands (Føroyar)","fo","298"],["Fiji","fj","679"],["Finland (Suomi)","fi","358",0],["France","fr","33"],["French Guiana (Guyane française)","gf","594"],["French Polynesia (Polynésie française)","pf","689"],["Gabon","ga","241"],["Gambia","gm","220"],["Georgia (საქართველო)","ge","995"],["Germany (Deutschland)","de","49"],["Ghana (Gaana)","gh","233"],["Gibraltar","gi","350"],["Greece (Ελλάδα)","gr","30"],["Greenland (Kalaallit Nunaat)","gl","299"],["Grenada","gd","1473"],["Guadeloupe","gp","590",0],["Guam","gu","1671"],["Guatemala","gt","502"],["Guernsey","gg","44",1],["Guinea (Guinée)","gn","224"],["Guinea-Bissau (Guiné Bissau)","gw","245"],["Guyana","gy","592"],["Haiti","ht","509"],["Honduras","hn","504"],["Hong Kong (香港)","hk","852"],["Hungary (Magyarország)","hu","36"],["Iceland (Ísland)","is","354"],["India (भारत)","in","91"],["Indonesia","id","62"],["Iran (‫ایران‬‎)","ir","98"],["Iraq (‫العراق‬‎)","iq","964"],["Ireland","ie","353"],["Isle of Man","im","44",2],["Israel (‫ישראל‬‎)","il","972"],["Italy (Italia)","it","39",0],["Jamaica","jm","1876"],["Japan (日本)","jp","81"],["Jersey","je","44",3],["Jordan (‫الأردن‬‎)","jo","962"],["Kazakhstan (Казахстан)","kz","7",1],["Kenya","ke","254"],["Kiribati","ki","686"],["Kosovo","xk","383"],["Kuwait (‫الكويت‬‎)","kw","965"],["Kyrgyzstan (Кыргызстан)","kg","996"],["Laos (ລາວ)","la","856"],["Latvia (Latvija)","lv","371"],["Lebanon (‫لبنان‬‎)","lb","961"],["Lesotho","ls","266"],["Liberia","lr","231"],["Libya (‫ليبيا‬‎)","ly","218"],["Liechtenstein","li","423"],["Lithuania (Lietuva)","lt","370"],["Luxembourg","lu","352"],["Macau (澳門)","mo","853"],["Macedonia (FYROM) (Македонија)","mk","389"],["Madagascar (Madagasikara)","mg","261"],["Malawi","mw","265"],["Malaysia","my","60"],["Maldives","mv","960"],["Mali","ml","223"],["Malta","mt","356"],["Marshall Islands","mh","692"],["Martinique","mq","596"],["Mauritania (‫موريتانيا‬‎)","mr","222"],["Mauritius (Moris)","mu","230"],["Mayotte","yt","262",1],["Mexico (México)","mx","52"],["Micronesia","fm","691"],["Moldova (Republica Moldova)","md","373"],["Monaco","mc","377"],["Mongolia (Монгол)","mn","976"],["Montenegro (Crna Gora)","me","382"],["Montserrat","ms","1664"],["Morocco (‫المغرب‬‎)","ma","212",0],["Mozambique (Moçambique)","mz","258"],["Myanmar (Burma) (မြန်မာ)","mm","95"],["Namibia (Namibië)","na","264"],["Nauru","nr","674"],["Nepal (नेपाल)","np","977"],["Netherlands (Nederland)","nl","31"],["New Caledonia (Nouvelle-Calédonie)","nc","687"],["New Zealand","nz","64"],["Nicaragua","ni","505"],["Niger (Nijar)","ne","227"],["Nigeria","ng","234"],["Niue","nu","683"],["Norfolk Island","nf","672"],["North Korea (조선 민주주의 인민 공화국)","kp","850"],["Northern Mariana Islands","mp","1670"],["Norway (Norge)","no","47",0],["Oman (‫عُمان‬‎)","om","968"],["Pakistan (‫پاکستان‬‎)","pk","92"],["Palau","pw","680"],["Palestine (‫فلسطين‬‎)","ps","970"],["Panama (Panamá)","pa","507"],["Papua New Guinea","pg","675"],["Paraguay","py","595"],["Peru (Perú)","pe","51"],["Philippines","ph","63"],["Poland (Polska)","pl","48"],["Portugal","pt","351"],["Puerto Rico","pr","1",3,["787","939"]],["Qatar (‫قطر‬‎)","qa","974"],["Réunion (La Réunion)","re","262",0],["Romania (România)","ro","40"],["Russia (Россия)","ru","7",0],["Rwanda","rw","250"],["Saint Barthélemy","bl","590",1],["Saint Helena","sh","290"],["Saint Kitts and Nevis","kn","1869"],["Saint Lucia","lc","1758"],["Saint Martin (Saint-Martin (partie française))","mf","590",2],["Saint Pierre and Miquelon (Saint-Pierre-et-Miquelon)","pm","508"],["Saint Vincent and the Grenadines","vc","1784"],["Samoa","ws","685"],["San Marino","sm","378"],["São Tomé and Príncipe (São Tomé e Príncipe)","st","239"],["Saudi Arabia (‫المملكة العربية السعودية‬‎)","sa","966"],["Senegal (Sénégal)","sn","221"],["Serbia (Србија)","rs","381"],["Seychelles","sc","248"],["Sierra Leone","sl","232"],["Singapore","sg","65"],["Sint Maarten","sx","1721"],["Slovakia (Slovensko)","sk","421"],["Slovenia (Slovenija)","si","386"],["Solomon Islands","sb","677"],["Somalia (Soomaaliya)","so","252"],["South Africa","za","27"],["South Korea (대한민국)","kr","82"],["South Sudan (‫جنوب السودان‬‎)","ss","211"],["Spain (España)","es","34"],["Sri Lanka (ශ්‍රී ලංකාව)","lk","94"],["Sudan (‫السودان‬‎)","sd","249"],["Suriname","sr","597"],["Svalbard and Jan Mayen","sj","47",1],["Swaziland","sz","268"],["Sweden (Sverige)","se","46"],["Switzerland (Schweiz)","ch","41"],["Syria (‫سوريا‬‎)","sy","963"],["Taiwan (台灣)","tw","886"],["Tajikistan","tj","992"],["Tanzania","tz","255"],["Thailand (ไทย)","th","66"],["Timor-Leste","tl","670"],["Togo","tg","228"],["Tokelau","tk","690"],["Tonga","to","676"],["Trinidad and Tobago","tt","1868"],["Tunisia (‫تونس‬‎)","tn","216"],["Turkey (Türkiye)","tr","90"],["Turkmenistan","tm","993"],["Turks and Caicos Islands","tc","1649"],["Tuvalu","tv","688"],["U.S. Virgin Islands","vi","1340"],["Uganda","ug","256"],["Ukraine (Україна)","ua","380"],["United Arab Emirates (‫الإمارات العربية المتحدة‬‎)","ae","971"],["United Kingdom","gb","44",0],["United States","us","1",0],["Uruguay","uy","598"],["Uzbekistan (Oʻzbekiston)","uz","998"],["Vanuatu","vu","678"],["Vatican City (Città del Vaticano)","va","39",1],["Venezuela","ve","58"],["Vietnam (Việt Nam)","vn","84"],["Wallis and Futuna (Wallis-et-Futuna)","wf","681"],["Western Sahara (‫الصحراء الغربية‬‎)","eh","212",1],["Yemen (‫اليمن‬‎)","ye","967"],["Zambia","zm","260"],["Zimbabwe","zw","263"],["Åland Islands","ax","358",1]];t.a=i.map(function(e){return{name:e[0],iso2:e[1].toUpperCase(),dialCode:e[2],priority:e[3]||0,areaCodes:e[4]||null}})},function(e,t,n){"use strict";function i(){return fetch("https://ip2c.org/s").then(function(e){return e.text()}).then(function(e){var t=(e||"").toString();if(!t||"1"!==t[0])throw new Error("unable to fetch the country");return t.substr(2,2)})}t.a=i},function(e,t,n){"use strict";var i=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{class:["vue-tel-input",e.wrapperClasses,{disabled:e.disabled}]},[n("div",{directives:[{name:"click-outside",rawName:"v-click-outside",value:e.clickedOutside,expression:"clickedOutside"}],staticClass:"dropdown",class:{open:e.open},attrs:{tabindex:e.dropdownOptions&&e.dropdownOptions.tabindex?e.dropdownOptions.tabindex:0},on:{keydown:[e.keyboardNav,function(t){return!t.type.indexOf("key")&&e._k(t.keyCode,"esc",27,t.key,["Esc","Escape"])?null:e.reset(t)}],click:e.toggleDropdown}},[n("span",{staticClass:"selection"},[e.enabledFlags?n("div",{staticClass:"iti-flag",class:e.activeCountry.iso2.toLowerCase()}):e._e(),e._v(" "),e.enabledCountryCode?n("span",{staticClass:"country-code"},[e._v("+"+e._s(e.activeCountry.dialCode))]):e._e(),e._v(" "),e._t("arrow-icon",[n("span",{staticClass:"dropdown-arrow"},[e._v(e._s(e.open?"▲":"▼"))])],{open:e.open})],2),e._v(" "),n("ul",{directives:[{name:"show",rawName:"v-show",value:e.open,expression:"open"}],ref:"list"},e._l(e.sortedCountries,function(t,i){return n("li",{key:t.iso2+(t.preferred?"-preferred":""),staticClass:"dropdown-item",class:e.getItemClass(i,t.iso2),on:{click:function(n){return e.choose(t)},mousemove:function(t){e.selectedIndex=i}}},[e.enabledFlags?n("div",{staticClass:"iti-flag",class:t.iso2.toLowerCase()}):e._e(),e._v(" "),n("strong",[e._v(e._s(t.name))]),e._v(" "),e.dropdownOptions&&!e.dropdownOptions.disabledDialCode?n("span",[e._v("+"+e._s(t.dialCode))]):e._e()])}),0)]),e._v(" "),n("input",{directives:[{name:"model",rawName:"v-model",value:e.phone,expression:"phone"}],ref:"input",class:e.inputClasses,attrs:{placeholder:e.placeholder,disabled:e.disabled,required:e.required,autocomplete:e.autocomplete,name:e.name,id:e.inputId,maxlength:e.maxLen,tabindex:e.inputOptions&&e.inputOptions.tabindex?e.inputOptions.tabindex:0,type:"tel"},domProps:{value:e.phone},on:{blur:e.onBlur,input:[function(t){t.target.composing||(e.phone=t.target.value)},e.onInput],keyup:[function(t){return!t.type.indexOf("key")&&e._k(t.keyCode,"enter",13,t.key,"Enter")?null:e.onEnter(t)},function(t){return!t.type.indexOf("key")&&e._k(t.keyCode,"space",32,t.key,[" ","Spacebar"])?null:e.onSpace(t)}]}})])},a=[],r={render:i,staticRenderFns:a};t.a=r}]);
+module.exports=function(e){function t(i){if(n[i])return n[i].exports;var a=n[i]={i:i,l:!1,exports:{}};return e[i].call(a.exports,a,a.exports,t),a.l=!0,a.exports}var n={};return t.m=e,t.c=n,t.d=function(e,n,i){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:i})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="/",t(t.s=1)}([function(e,t,n){"use strict";function i(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var a=n(6),r=(n.n(a),n(7)),o=n(8);t.a={name:"VueTelInput",directives:{"click-outside":{bind:function(e,t,n){if("function"!=typeof t.value){var i=n.context.name,a="[Vue-click-outside:] provided expression "+t.expression+" is not a function, but has to be";i&&(a+="Found in component "+i),console.warn(a)}var r=t.modifiers.bubble,o=function(n){var i=n.path||n.composedPath&&n.composedPath();(r||i.length&&!e.contains(i[0])&&e!==i[0])&&t.value(n)};e.__vueClickOutside__=o,document.addEventListener("click",o)},unbind:function(e){document.removeEventListener("click",e.__vueClickOutside__),e.__vueClickOutside__=null}}},props:{value:{type:String,default:""},placeholder:{type:String,default:"Enter a phone number"},disabledFetchingCountry:{type:Boolean,default:!1},disabled:{type:Boolean,default:!1},disabledFormatting:{type:Boolean,default:!1},invalidMsg:{default:"",type:String},required:{type:Boolean,default:!1},defaultCountry:{type:String,default:""},enabledCountryCode:{type:Boolean,default:!1},enabledFlags:{type:Boolean,default:!0},preferredCountries:{type:Array,default:function(){return[]}},onlyCountries:{type:Array,default:function(){return[]}},ignoredCountries:{type:Array,default:function(){return[]}},autocomplete:{type:String,default:"on"},name:{type:String,default:"telephone"},wrapperClasses:{type:[String,Array,Object],default:""},inputClasses:{type:[String,Array,Object],default:""},inputId:{type:String,default:""},dropdownOptions:{type:Object,default:function(){return{}}},inputOptions:{type:Object,default:function(){return{}}},maxLen:{type:Number,default:25},validCharactersOnly:{type:Boolean,default:!1}},data:function(){return{phone:"",activeCountry:{iso2:""},open:!1,selectedIndex:null,typeToFindInput:"",typeToFindTimer:null}},computed:{mode:function(){return this.phone?"+"===this.phone[0]?"code":"0"===this.phone[0]?"prefix":"normal":""},filteredCountries:function(){var e=this;return this.onlyCountries.length?this.getCountries(this.onlyCountries):this.ignoredCountries.length?r.a.filter(function(t){var n=t.iso2;return!e.ignoredCountries.includes(n.toUpperCase())&&!e.ignoredCountries.includes(n.toLowerCase())}):r.a},sortedCountries:function(){return[].concat(i(this.getCountries(this.preferredCountries).map(function(e){return Object.assign({},e,{preferred:!0})})),i(this.filteredCountries))},formattedResult:function(){if(!this.mode||!this.filteredCountries)return"";var e=this.phone;if("code"===this.mode){var t=new a.AsYouType;t.input(this.phone),this.activeCountry=this.findCountry(t.country)||this.activeCountry}else"prefix"===this.mode&&(e=this.phone.slice(1));return this.disabledFormatting?this.phone:Object(a.formatNumber)(e,this.activeCountry&&this.activeCountry.iso2,"International")},state:function(){return Object(a.isValidNumber)(this.formattedResult,this.activeCountry&&this.activeCountry.iso2)},response:function(){var e={number:this.state?this.formattedResult:this.phone,isValid:this.state,country:this.activeCountry};return this.disabledFormatting&&Object.assign(e,{formattedNumber:Object(a.formatNumber)(this.phone,this.activeCountry&&this.activeCountry.iso2,"International")}),e}},watch:{state:function(e){e&&"prefix"!==this.mode&&(this.phone=this.formattedResult),this.$emit("onValidate",this.response),this.$emit("validate",this.response)},value:function(){this.phone=this.value},open:function(e){e?this.$emit("open"):this.$emit("close")},phone:function(e,t){var n=this;this.validCharactersOnly&&!this.testCharacters()&&this.$nextTick(function(){n.phone=t})},activeCountry:function(e){e&&e.iso2&&this.$emit("country-changed",e)}},mounted:function(){var e=this;this.initializeCountry().then(function(){!e.phone&&e.inputOptions&&e.inputOptions.showDialCode&&e.activeCountry&&(e.phone="+"+e.activeCountry.dialCode),e.$emit("validate",e.response),e.$emit("onValidate",e.response)}).catch(console.error)},created:function(){this.value&&(this.phone=this.value.trim())},methods:{initializeCountry:function(){var e=this;return new Promise(function(t){if(e.phone&&"+"===e.phone[0]){var n=Object(a.parsePhoneNumberFromString)(e.phone);if(n&&n.country)return e.activeCountry=n.country,void t()}if(e.defaultCountry){var i=e.findCountry(e.defaultCountry);if(i)return e.activeCountry=i,void t()}e.activeCountry=e.findCountry(e.preferredCountries[0])||e.filteredCountries[0],e.disabledFetchingCountry?t():Object(o.a)().then(function(t){e.activeCountry=e.findCountry(t)||e.activeCountry}).finally(t).catch(function(e){console.warn(e)})})},getCountries:function(){var e=this;return(arguments.length>0&&void 0!==arguments[0]?arguments[0]:[]).map(function(t){return e.findCountry(t)}).filter(Boolean)},findCountry:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"";return r.a.find(function(t){return t.iso2===e.toUpperCase()})},getItemClass:function(e,t){return{highlighted:this.selectedIndex===e,"last-preferred":e===this.preferredCountries.length-1,preferred:this.preferredCountries.some(function(e){return e.toUpperCase()===t})}},choose:function(e){this.activeCountry=e,this.inputOptions&&this.inputOptions.showDialCode&&e&&(this.phone="+"+e.dialCode),this.$emit("input",this.response.number,this.response),this.$emit("onInput",this.response)},testCharacters:function(){return/^[()-+0-9\s]*$/.test(this.phone)},onInput:function(){this.validCharactersOnly&&!this.testCharacters()||(this.$refs.input.setCustomValidity(this.response.isValid?"":this.invalidMsg),this.$emit("input",this.response.number,this.response),this.$emit("onInput",this.response))},onBlur:function(){this.$emit("blur"),this.$emit("onBlur")},onEnter:function(){this.$emit("enter"),this.$emit("onEnter")},onSpace:function(){this.$emit("space"),this.$emit("onSpace")},focus:function(){this.$refs.input.focus()},toggleDropdown:function(){this.disabled||(this.open=!this.open)},clickedOutside:function(){this.open=!1},keyboardNav:function(e){var t=this;if(40===e.keyCode){e.preventDefault(),this.open=!0,null===this.selectedIndex?this.selectedIndex=0:this.selectedIndex=Math.min(this.sortedCountries.length-1,this.selectedIndex+1);var n=this.$refs.list.children[this.selectedIndex];n.offsetTop+n.clientHeight>this.$refs.list.scrollTop+this.$refs.list.clientHeight&&(this.$refs.list.scrollTop=n.offsetTop-this.$refs.list.clientHeight+n.clientHeight)}else if(38===e.keyCode){e.preventDefault(),this.open=!0,null===this.selectedIndex?this.selectedIndex=this.sortedCountries.length-1:this.selectedIndex=Math.max(0,this.selectedIndex-1);var i=this.$refs.list.children[this.selectedIndex];i.offsetTop<this.$refs.list.scrollTop&&(this.$refs.list.scrollTop=i.offsetTop)}else if(13===e.keyCode)null!==this.selectedIndex&&this.choose(this.sortedCountries[this.selectedIndex]),this.open=!this.open;else{this.typeToFindInput+=e.key,clearTimeout(this.typeToFindTimer),this.typeToFindTimer=setTimeout(function(){t.typeToFindInput=""},700);var a=this.sortedCountries.slice(this.preferredCountries.length).findIndex(function(e){return e.name.toLowerCase().startsWith(t.typeToFindInput)});if(a>=0){this.selectedIndex=this.preferredCountries.length+a;var r=this.$refs.list.children[this.selectedIndex],o=r.offsetTop<this.$refs.list.scrollTop,s=r.offsetTop+r.clientHeight>this.$refs.list.scrollTop+this.$refs.list.clientHeight;(o||s)&&(this.$refs.list.scrollTop=r.offsetTop-this.$refs.list.clientHeight/2)}}},reset:function(){this.selectedIndex=this.sortedCountries.map(function(e){return e.iso2}).indexOf(this.activeCountry.iso2),this.open=!1}}}},function(e,t,n){e.exports=n(2)},function(e,t,n){"use strict";function i(e){n(3),n(4)}Object.defineProperty(t,"__esModule",{value:!0});var a=n(0),r=n(9),o=n(5),s=i,u=o(a.a,r.a,!1,s,"data-v-9d46625e",null);t.default=u.exports},function(e,t){},function(e,t){},function(e,t){e.exports=function(e,t,n,i,a,r){var o,s=e=e||{},u=typeof e.default;"object"!==u&&"function"!==u||(o=e,s=e.default);var l="function"==typeof s?s.options:s;t&&(l.render=t.render,l.staticRenderFns=t.staticRenderFns,l._compiled=!0),n&&(l.functional=!0),a&&(l._scopeId=a);var d;if(r?(d=function(e){e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,e||"undefined"==typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),i&&i.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(r)},l._ssrRegister=d):i&&(d=i),d){var c=l.functional,p=c?l.render:l.beforeCreate;c?(l._injectStyles=d,l.render=function(e,t){return d.call(t),p(e,t)}):l.beforeCreate=p?[].concat(p,d):[d]}return{esModule:o,exports:s,options:l}}},function(e,t){e.exports=__webpack_require__(7519)},function(e,t,n){"use strict";var i=[["Afghanistan (‫افغانستان‬‎)","af","93"],["Albania (Shqipëri)","al","355"],["Algeria (‫الجزائر‬‎)","dz","213"],["American Samoa","as","1684"],["Andorra","ad","376"],["Angola","ao","244"],["Anguilla","ai","1264"],["Antigua and Barbuda","ag","1268"],["Argentina","ar","54"],["Armenia (Հայաստան)","am","374"],["Aruba","aw","297"],["Australia","au","61",0],["Austria (Österreich)","at","43"],["Azerbaijan (Azərbaycan)","az","994"],["Bahamas","bs","1242"],["Bahrain (‫البحرين‬‎)","bh","973"],["Bangladesh (বাংলাদেশ)","bd","880"],["Barbados","bb","1246"],["Belarus (Беларусь)","by","375"],["Belgium (België)","be","32"],["Belize","bz","501"],["Benin (Bénin)","bj","229"],["Bermuda","bm","1441"],["Bhutan (འབྲུག)","bt","975"],["Bolivia","bo","591"],["Bosnia and Herzegovina (Босна и Херцеговина)","ba","387"],["Botswana","bw","267"],["Brazil (Brasil)","br","55"],["British Indian Ocean Territory","io","246"],["British Virgin Islands","vg","1284"],["Brunei","bn","673"],["Bulgaria (България)","bg","359"],["Burkina Faso","bf","226"],["Burundi (Uburundi)","bi","257"],["Cambodia (កម្ពុជា)","kh","855"],["Cameroon (Cameroun)","cm","237"],["Canada","ca","1",1,["204","226","236","249","250","289","306","343","365","387","403","416","418","431","437","438","450","506","514","519","548","579","581","587","604","613","639","647","672","705","709","742","778","780","782","807","819","825","867","873","902","905"]],["Cape Verde (Kabu Verdi)","cv","238"],["Caribbean Netherlands","bq","599",1],["Cayman Islands","ky","1345"],["Central African Republic (République centrafricaine)","cf","236"],["Chad (Tchad)","td","235"],["Chile","cl","56"],["China (中国)","cn","86"],["Christmas Island","cx","61",2],["Cocos (Keeling) Islands","cc","61",1],["Colombia","co","57"],["Comoros (‫جزر القمر‬‎)","km","269"],["Congo (DRC) (Jamhuri ya Kidemokrasia ya Kongo)","cd","243"],["Congo (Republic) (Congo-Brazzaville)","cg","242"],["Cook Islands","ck","682"],["Costa Rica","cr","506"],["Côte d’Ivoire","ci","225"],["Croatia (Hrvatska)","hr","385"],["Cuba","cu","53"],["Curaçao","cw","599",0],["Cyprus (Κύπρος)","cy","357"],["Czech Republic (Česká republika)","cz","420"],["Denmark (Danmark)","dk","45"],["Djibouti","dj","253"],["Dominica","dm","1767"],["Dominican Republic (República Dominicana)","do","1",2,["809","829","849"]],["Ecuador","ec","593"],["Egypt (‫مصر‬‎)","eg","20"],["El Salvador","sv","503"],["Equatorial Guinea (Guinea Ecuatorial)","gq","240"],["Eritrea","er","291"],["Estonia (Eesti)","ee","372"],["Ethiopia","et","251"],["Falkland Islands (Islas Malvinas)","fk","500"],["Faroe Islands (Føroyar)","fo","298"],["Fiji","fj","679"],["Finland (Suomi)","fi","358",0],["France","fr","33"],["French Guiana (Guyane française)","gf","594"],["French Polynesia (Polynésie française)","pf","689"],["Gabon","ga","241"],["Gambia","gm","220"],["Georgia (საქართველო)","ge","995"],["Germany (Deutschland)","de","49"],["Ghana (Gaana)","gh","233"],["Gibraltar","gi","350"],["Greece (Ελλάδα)","gr","30"],["Greenland (Kalaallit Nunaat)","gl","299"],["Grenada","gd","1473"],["Guadeloupe","gp","590",0],["Guam","gu","1671"],["Guatemala","gt","502"],["Guernsey","gg","44",1],["Guinea (Guinée)","gn","224"],["Guinea-Bissau (Guiné Bissau)","gw","245"],["Guyana","gy","592"],["Haiti","ht","509"],["Honduras","hn","504"],["Hong Kong (香港)","hk","852"],["Hungary (Magyarország)","hu","36"],["Iceland (Ísland)","is","354"],["India (भारत)","in","91"],["Indonesia","id","62"],["Iran (‫ایران‬‎)","ir","98"],["Iraq (‫العراق‬‎)","iq","964"],["Ireland","ie","353"],["Isle of Man","im","44",2],["Israel (‫ישראל‬‎)","il","972"],["Italy (Italia)","it","39",0],["Jamaica","jm","1876"],["Japan (日本)","jp","81"],["Jersey","je","44",3],["Jordan (‫الأردن‬‎)","jo","962"],["Kazakhstan (Казахстан)","kz","7",1],["Kenya","ke","254"],["Kiribati","ki","686"],["Kosovo","xk","383"],["Kuwait (‫الكويت‬‎)","kw","965"],["Kyrgyzstan (Кыргызстан)","kg","996"],["Laos (ລາວ)","la","856"],["Latvia (Latvija)","lv","371"],["Lebanon (‫لبنان‬‎)","lb","961"],["Lesotho","ls","266"],["Liberia","lr","231"],["Libya (‫ليبيا‬‎)","ly","218"],["Liechtenstein","li","423"],["Lithuania (Lietuva)","lt","370"],["Luxembourg","lu","352"],["Macau (澳門)","mo","853"],["Macedonia (FYROM) (Македонија)","mk","389"],["Madagascar (Madagasikara)","mg","261"],["Malawi","mw","265"],["Malaysia","my","60"],["Maldives","mv","960"],["Mali","ml","223"],["Malta","mt","356"],["Marshall Islands","mh","692"],["Martinique","mq","596"],["Mauritania (‫موريتانيا‬‎)","mr","222"],["Mauritius (Moris)","mu","230"],["Mayotte","yt","262",1],["Mexico (México)","mx","52"],["Micronesia","fm","691"],["Moldova (Republica Moldova)","md","373"],["Monaco","mc","377"],["Mongolia (Монгол)","mn","976"],["Montenegro (Crna Gora)","me","382"],["Montserrat","ms","1664"],["Morocco (‫المغرب‬‎)","ma","212",0],["Mozambique (Moçambique)","mz","258"],["Myanmar (Burma) (မြန်မာ)","mm","95"],["Namibia (Namibië)","na","264"],["Nauru","nr","674"],["Nepal (नेपाल)","np","977"],["Netherlands (Nederland)","nl","31"],["New Caledonia (Nouvelle-Calédonie)","nc","687"],["New Zealand","nz","64"],["Nicaragua","ni","505"],["Niger (Nijar)","ne","227"],["Nigeria","ng","234"],["Niue","nu","683"],["Norfolk Island","nf","672"],["North Korea (조선 민주주의 인민 공화국)","kp","850"],["Northern Mariana Islands","mp","1670"],["Norway (Norge)","no","47",0],["Oman (‫عُمان‬‎)","om","968"],["Pakistan (‫پاکستان‬‎)","pk","92"],["Palau","pw","680"],["Palestine (‫فلسطين‬‎)","ps","970"],["Panama (Panamá)","pa","507"],["Papua New Guinea","pg","675"],["Paraguay","py","595"],["Peru (Perú)","pe","51"],["Philippines","ph","63"],["Poland (Polska)","pl","48"],["Portugal","pt","351"],["Puerto Rico","pr","1",3,["787","939"]],["Qatar (‫قطر‬‎)","qa","974"],["Réunion (La Réunion)","re","262",0],["Romania (România)","ro","40"],["Russia (Россия)","ru","7",0],["Rwanda","rw","250"],["Saint Barthélemy","bl","590",1],["Saint Helena","sh","290"],["Saint Kitts and Nevis","kn","1869"],["Saint Lucia","lc","1758"],["Saint Martin (Saint-Martin (partie française))","mf","590",2],["Saint Pierre and Miquelon (Saint-Pierre-et-Miquelon)","pm","508"],["Saint Vincent and the Grenadines","vc","1784"],["Samoa","ws","685"],["San Marino","sm","378"],["São Tomé and Príncipe (São Tomé e Príncipe)","st","239"],["Saudi Arabia (‫المملكة العربية السعودية‬‎)","sa","966"],["Senegal (Sénégal)","sn","221"],["Serbia (Србија)","rs","381"],["Seychelles","sc","248"],["Sierra Leone","sl","232"],["Singapore","sg","65"],["Sint Maarten","sx","1721"],["Slovakia (Slovensko)","sk","421"],["Slovenia (Slovenija)","si","386"],["Solomon Islands","sb","677"],["Somalia (Soomaaliya)","so","252"],["South Africa","za","27"],["South Korea (대한민국)","kr","82"],["South Sudan (‫جنوب السودان‬‎)","ss","211"],["Spain (España)","es","34"],["Sri Lanka (ශ්‍රී ලංකාව)","lk","94"],["Sudan (‫السودان‬‎)","sd","249"],["Suriname","sr","597"],["Svalbard and Jan Mayen","sj","47",1],["Swaziland","sz","268"],["Sweden (Sverige)","se","46"],["Switzerland (Schweiz)","ch","41"],["Syria (‫سوريا‬‎)","sy","963"],["Taiwan (台灣)","tw","886"],["Tajikistan","tj","992"],["Tanzania","tz","255"],["Thailand (ไทย)","th","66"],["Timor-Leste","tl","670"],["Togo","tg","228"],["Tokelau","tk","690"],["Tonga","to","676"],["Trinidad and Tobago","tt","1868"],["Tunisia (‫تونس‬‎)","tn","216"],["Turkey (Türkiye)","tr","90"],["Turkmenistan","tm","993"],["Turks and Caicos Islands","tc","1649"],["Tuvalu","tv","688"],["U.S. Virgin Islands","vi","1340"],["Uganda","ug","256"],["Ukraine (Україна)","ua","380"],["United Arab Emirates (‫الإمارات العربية المتحدة‬‎)","ae","971"],["United Kingdom","gb","44",0],["United States","us","1",0],["Uruguay","uy","598"],["Uzbekistan (Oʻzbekiston)","uz","998"],["Vanuatu","vu","678"],["Vatican City (Città del Vaticano)","va","39",1],["Venezuela","ve","58"],["Vietnam (Việt Nam)","vn","84"],["Wallis and Futuna (Wallis-et-Futuna)","wf","681"],["Western Sahara (‫الصحراء الغربية‬‎)","eh","212",1],["Yemen (‫اليمن‬‎)","ye","967"],["Zambia","zm","260"],["Zimbabwe","zw","263"],["Åland Islands","ax","358",1]];t.a=i.map(function(e){return{name:e[0],iso2:e[1].toUpperCase(),dialCode:e[2],priority:e[3]||0,areaCodes:e[4]||null}})},function(e,t,n){"use strict";function i(){return fetch("https://ip2c.org/s").then(function(e){return e.text()}).then(function(e){var t=(e||"").toString();if(!t||"1"!==t[0])throw new Error("unable to fetch the country");return t.substr(2,2)})}t.a=i},function(e,t,n){"use strict";var i=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{class:["vue-tel-input",e.wrapperClasses,{disabled:e.disabled}]},[n("div",{directives:[{name:"click-outside",rawName:"v-click-outside",value:e.clickedOutside,expression:"clickedOutside"}],staticClass:"dropdown",class:{open:e.open},attrs:{tabindex:e.dropdownOptions&&e.dropdownOptions.tabindex?e.dropdownOptions.tabindex:0},on:{keydown:[e.keyboardNav,function(t){return!t.type.indexOf("key")&&e._k(t.keyCode,"esc",27,t.key,["Esc","Escape"])?null:e.reset(t)}],click:e.toggleDropdown}},[n("span",{staticClass:"selection"},[e.enabledFlags?n("div",{staticClass:"iti-flag",class:e.activeCountry.iso2.toLowerCase()}):e._e(),e._v(" "),e.enabledCountryCode?n("span",{staticClass:"country-code"},[e._v("+"+e._s(e.activeCountry.dialCode))]):e._e(),e._v(" "),e._t("arrow-icon",[n("span",{staticClass:"dropdown-arrow"},[e._v(e._s(e.open?"▲":"▼"))])],{open:e.open})],2),e._v(" "),n("ul",{directives:[{name:"show",rawName:"v-show",value:e.open,expression:"open"}],ref:"list"},e._l(e.sortedCountries,function(t,i){return n("li",{key:t.iso2+(t.preferred?"-preferred":""),staticClass:"dropdown-item",class:e.getItemClass(i,t.iso2),on:{click:function(n){return e.choose(t)},mousemove:function(t){e.selectedIndex=i}}},[e.enabledFlags?n("div",{staticClass:"iti-flag",class:t.iso2.toLowerCase()}):e._e(),e._v(" "),n("strong",[e._v(e._s(t.name))]),e._v(" "),e.dropdownOptions&&!e.dropdownOptions.disabledDialCode?n("span",[e._v("+"+e._s(t.dialCode))]):e._e()])}),0)]),e._v(" "),n("input",{directives:[{name:"model",rawName:"v-model",value:e.phone,expression:"phone"}],ref:"input",class:e.inputClasses,attrs:{placeholder:e.placeholder,disabled:e.disabled,required:e.required,autocomplete:e.autocomplete,name:e.name,id:e.inputId,maxlength:e.maxLen,tabindex:e.inputOptions&&e.inputOptions.tabindex?e.inputOptions.tabindex:0,type:"tel"},domProps:{value:e.phone},on:{blur:e.onBlur,input:[function(t){t.target.composing||(e.phone=t.target.value)},e.onInput],keyup:[function(t){return!t.type.indexOf("key")&&e._k(t.keyCode,"enter",13,t.key,"Enter")?null:e.onEnter(t)},function(t){return!t.type.indexOf("key")&&e._k(t.keyCode,"space",32,t.key,[" ","Spacebar"])?null:e.onSpace(t)}]}})])},a=[],r={render:i,staticRenderFns:a};t.a=r}]);
 
 /***/ }),
 
-/***/ 6964:
+/***/ 7744:
 /***/ (function(module) {
 
 "use strict";
@@ -3446,7 +3444,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABz
 
 /***/ }),
 
-/***/ 6082:
+/***/ 2102:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
@@ -3454,7 +3452,7 @@ module.exports = __webpack_require__.p + "img/loader.dbe8f78b.gif";
 
 /***/ }),
 
-/***/ 3797:
+/***/ 4100:
 /***/ (function(module) {
 
 "use strict";
@@ -3462,36 +3460,40 @@ module.exports = require("vue");
 
 /***/ }),
 
-/***/ 3995:
+/***/ 458:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 exports["default"] = void 0;
 
-var _metadata = _interopRequireDefault(__webpack_require__(7536));
+var _metadata = _interopRequireDefault(__webpack_require__(1084));
 
-var _PhoneNumber = _interopRequireDefault(__webpack_require__(7289));
+var _PhoneNumber = _interopRequireDefault(__webpack_require__(4908));
 
-var _AsYouTypeState = _interopRequireDefault(__webpack_require__(5739));
+var _AsYouTypeState = _interopRequireDefault(__webpack_require__(949));
 
-var _AsYouTypeFormatter = _interopRequireWildcard(__webpack_require__(671));
+var _AsYouTypeFormatter = _interopRequireWildcard(__webpack_require__(8138));
 
-var _AsYouTypeParser = _interopRequireWildcard(__webpack_require__(9));
+var _AsYouTypeParser = _interopRequireWildcard(__webpack_require__(881));
 
-var _getCountryByCallingCode = _interopRequireDefault(__webpack_require__(7194));
+var _getCountryByCallingCode = _interopRequireDefault(__webpack_require__(8719));
+
+var _getCountryByNationalNumber = _interopRequireDefault(__webpack_require__(3799));
+
+var _isObject = _interopRequireDefault(__webpack_require__(4916));
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -3526,7 +3528,10 @@ var AsYouType = /*#__PURE__*/function () {
     var _this$getCountryAndCa = this.getCountryAndCallingCode(optionsOrDefaultCountry),
         _this$getCountryAndCa2 = _slicedToArray(_this$getCountryAndCa, 2),
         defaultCountry = _this$getCountryAndCa2[0],
-        defaultCallingCode = _this$getCountryAndCa2[1];
+        defaultCallingCode = _this$getCountryAndCa2[1]; // `this.defaultCountry` and `this.defaultCallingCode` aren't required to be in sync.
+    // For example, `this.defaultCountry` could be `"AR"` and `this.defaultCallingCode` could be `undefined`.
+    // So `this.defaultCountry` and `this.defaultCallingCode` are totally independent.
+
 
     this.defaultCountry = defaultCountry;
     this.defaultCallingCode = defaultCallingCode;
@@ -3541,7 +3546,7 @@ var AsYouType = /*#__PURE__*/function () {
       var defaultCallingCode; // Turns out `null` also has type "object". Weird.
 
       if (optionsOrDefaultCountry) {
-        if (_typeof(optionsOrDefaultCountry) === 'object') {
+        if ((0, _isObject["default"])(optionsOrDefaultCountry)) {
           defaultCountry = optionsOrDefaultCountry.defaultCountry;
           defaultCallingCode = optionsOrDefaultCountry.defaultCallingCode;
         } else {
@@ -3647,7 +3652,10 @@ var AsYouType = /*#__PURE__*/function () {
           _this.formatter.reset(_this.metadata.numberingPlan, _this.state);
         }
       });
-      this.state.reset(this.defaultCountry, this.defaultCallingCode);
+      this.state.reset({
+        country: this.defaultCountry,
+        callingCode: this.defaultCallingCode
+      });
       this.formattedOutput = '';
       return this;
     }
@@ -3823,7 +3831,11 @@ var AsYouType = /*#__PURE__*/function () {
   }, {
     key: "determineTheCountry",
     value: function determineTheCountry() {
-      this.state.setCountry((0, _getCountryByCallingCode["default"])(this.isInternational() ? this.state.callingCode : this.defaultCallingCode, this.state.nationalSignificantNumber, this.metadata));
+      this.state.setCountry((0, _getCountryByCallingCode["default"])(this.isInternational() ? this.state.callingCode : this.defaultCallingCode, {
+        nationalNumber: this.state.nationalSignificantNumber,
+        defaultCountry: this.defaultCountry,
+        metadata: this.metadata
+      }));
     }
     /**
      * Returns a E.164 phone number value for the user's input.
@@ -3891,10 +3903,52 @@ var AsYouType = /*#__PURE__*/function () {
 
       if (!nationalSignificantNumber) {
         return;
-      }
+      } // `state.country` and `state.callingCode` aren't required to be in sync.
+      // For example, `country` could be `"AR"` and `callingCode` could be `undefined`.
+      // So `country` and `callingCode` are totally independent.
+
 
       if (!country && !callingCode) {
         return;
+      } // By default, if `defaultCountry` parameter was passed when
+      // creating `AsYouType` instance, `state.country` is gonna be
+      // that `defaultCountry`, which doesn't entirely conform with
+      // `parsePhoneNumber()`'s behavior where it attempts to determine
+      // the country more precisely in cases when multiple countries
+      // could correspond to the same `countryCallingCode`.
+      // https://gitlab.com/catamphetamine/libphonenumber-js/-/issues/103#note_1417192969
+      //
+      // Because `AsYouType.getNumber()` method is supposed to be a 1:1
+      // equivalent for `parsePhoneNumber(AsYouType.getNumberValue())`,
+      // then it should also behave accordingly in cases of `country` ambiguity.
+      // That's how users of this library would expect it to behave anyway.
+      //
+
+
+      if (country) {
+        if (country === this.defaultCountry) {
+          // `state.country` and `state.callingCode` aren't required to be in sync.
+          // For example, `state.country` could be `"AR"` and `state.callingCode` could be `undefined`.
+          // So `state.country` and `state.callingCode` are totally independent.
+          var metadata = new _metadata["default"](this.metadata.metadata);
+          metadata.selectNumberingPlan(country);
+
+          var _callingCode = metadata.numberingPlan.callingCode();
+
+          var ambiguousCountries = this.metadata.getCountryCodesForCallingCode(_callingCode);
+
+          if (ambiguousCountries.length > 1) {
+            var exactCountry = (0, _getCountryByNationalNumber["default"])(nationalSignificantNumber, {
+              countries: ambiguousCountries,
+              defaultCountry: this.defaultCountry,
+              metadata: this.metadata.metadata
+            });
+
+            if (exactCountry) {
+              country = exactCountry;
+            }
+          }
+        }
       }
 
       var phoneNumber = new _PhoneNumber["default"](country || callingCode, nationalSignificantNumber, this.metadata.metadata);
@@ -3981,7 +4035,7 @@ exports["default"] = AsYouType;
 
 /***/ }),
 
-/***/ 4708:
+/***/ 502:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -3992,7 +4046,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _AsYouTypeFormatterPatternParser = _interopRequireDefault(__webpack_require__(7240));
+var _AsYouTypeFormatterPatternParser = _interopRequireDefault(__webpack_require__(5865));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -4252,7 +4306,7 @@ function _match(characters, tree, last) {
 
 /***/ }),
 
-/***/ 7240:
+/***/ 5865:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -4500,7 +4554,7 @@ function expandSingleElementArray(array) {
 
 /***/ }),
 
-/***/ 261:
+/***/ 7341:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -4512,11 +4566,11 @@ Object.defineProperty(exports, "__esModule", ({
 exports.canFormatCompleteNumber = canFormatCompleteNumber;
 exports["default"] = formatCompleteNumber;
 
-var _checkNumberLength = _interopRequireDefault(__webpack_require__(7044));
+var _checkNumberLength = _interopRequireDefault(__webpack_require__(6034));
 
-var _parseDigits = _interopRequireDefault(__webpack_require__(5039));
+var _parseDigits = _interopRequireDefault(__webpack_require__(9458));
 
-var _formatNationalNumberUsingFormat = _interopRequireDefault(__webpack_require__(383));
+var _formatNationalNumberUsingFormat = _interopRequireDefault(__webpack_require__(7760));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -4640,7 +4694,7 @@ function isValidFormattedNationalNumber(formattedNationalNumber, state) {
 
 /***/ }),
 
-/***/ 671:
+/***/ 8138:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -4659,19 +4713,19 @@ Object.defineProperty(exports, "DIGIT_PLACEHOLDER", ({
 }));
 exports["default"] = void 0;
 
-var _AsYouTypeFormatterUtil = __webpack_require__(8876);
+var _AsYouTypeFormatterUtil = __webpack_require__(9074);
 
-var _AsYouTypeFormatterComplete = _interopRequireWildcard(__webpack_require__(261));
+var _AsYouTypeFormatterComplete = _interopRequireWildcard(__webpack_require__(7341));
 
-var _AsYouTypeFormatterPatternMatcher = _interopRequireDefault(__webpack_require__(4708));
+var _AsYouTypeFormatterPatternMatcher = _interopRequireDefault(__webpack_require__(502));
 
-var _parseDigits = _interopRequireDefault(__webpack_require__(5039));
+var _parseDigits = _interopRequireDefault(__webpack_require__(9458));
 
-var _formatNationalNumberUsingFormat = __webpack_require__(383);
+var _formatNationalNumberUsingFormat = __webpack_require__(7760);
 
-var _constants = __webpack_require__(6703);
+var _constants = __webpack_require__(2632);
 
-var _applyInternationalSeparatorStyle = _interopRequireDefault(__webpack_require__(9016));
+var _applyInternationalSeparatorStyle = _interopRequireDefault(__webpack_require__(6279));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -5421,7 +5475,7 @@ exports["default"] = AsYouTypeFormatter;
 
 /***/ }),
 
-/***/ 8876:
+/***/ 9074:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -5569,7 +5623,7 @@ function populateTemplateWithDigits(template, position, digits) {
 
 /***/ }),
 
-/***/ 9:
+/***/ 881:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -5581,17 +5635,17 @@ Object.defineProperty(exports, "__esModule", ({
 exports["default"] = void 0;
 exports.extractFormattedDigitsAndPlus = extractFormattedDigitsAndPlus;
 
-var _extractCountryCallingCode2 = _interopRequireDefault(__webpack_require__(2284));
+var _extractCountryCallingCode2 = _interopRequireDefault(__webpack_require__(2793));
 
-var _extractCountryCallingCodeFromInternationalNumberWithoutPlusSign = _interopRequireDefault(__webpack_require__(940));
+var _extractCountryCallingCodeFromInternationalNumberWithoutPlusSign = _interopRequireDefault(__webpack_require__(9443));
 
-var _extractNationalNumberFromPossiblyIncompleteNumber = _interopRequireDefault(__webpack_require__(9034));
+var _extractNationalNumberFromPossiblyIncompleteNumber = _interopRequireDefault(__webpack_require__(8043));
 
-var _stripIddPrefix = _interopRequireDefault(__webpack_require__(9784));
+var _stripIddPrefix = _interopRequireDefault(__webpack_require__(1570));
 
-var _parseDigits = _interopRequireDefault(__webpack_require__(5039));
+var _parseDigits = _interopRequireDefault(__webpack_require__(9458));
 
-var _constants = __webpack_require__(6703);
+var _constants = __webpack_require__(2632);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -6100,7 +6154,7 @@ function extractFormattedDigitsAndPlus(text) {
 
 /***/ }),
 
-/***/ 5739:
+/***/ 949:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -6117,6 +6171,24 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
+// This "state" object simply holds the state of the "AsYouType" parser:
+//
+// * `country?: string`
+// * `callingCode?: string`
+// * `digits: string`
+// * `international: boolean`
+// * `missingPlus: boolean`
+// * `IDDPrefix?: string`
+// * `carrierCode?: string`
+// * `nationalPrefix?: string`
+// * `nationalSignificantNumber?: string`
+// * `nationalSignificantNumberMatchesInput: boolean`
+// * `complexPrefixBeforeNationalSignificantNumber?: string`
+//
+// `state.country` and `state.callingCode` aren't required to be in sync.
+// For example, `state.country` could be `"AR"` and `state.callingCode` could be `undefined`.
+// So `state.country` and `state.callingCode` are totally independent.
+//
 var AsYouTypeState = /*#__PURE__*/function () {
   function AsYouTypeState(_ref) {
     var onCountryChange = _ref.onCountryChange,
@@ -6130,14 +6202,16 @@ var AsYouTypeState = /*#__PURE__*/function () {
 
   _createClass(AsYouTypeState, [{
     key: "reset",
-    value: function reset(defaultCountry, defaultCallingCode) {
+    value: function reset(_ref2) {
+      var country = _ref2.country,
+          callingCode = _ref2.callingCode;
       this.international = false;
+      this.missingPlus = false;
       this.IDDPrefix = undefined;
-      this.missingPlus = undefined;
       this.callingCode = undefined;
       this.digits = '';
       this.resetNationalSignificantNumber();
-      this.initCountryAndCallingCode(defaultCountry, defaultCallingCode);
+      this.initCountryAndCallingCode(country, callingCode);
     }
   }, {
     key: "resetNationalSignificantNumber",
@@ -6232,7 +6306,7 @@ exports["default"] = AsYouTypeState;
 
 /***/ }),
 
-/***/ 3161:
+/***/ 7986:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -6302,7 +6376,7 @@ exports["default"] = ParseError;
 
 /***/ }),
 
-/***/ 7289:
+/***/ 4908:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -6313,17 +6387,17 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _metadata2 = _interopRequireDefault(__webpack_require__(7536));
+var _metadata = _interopRequireDefault(__webpack_require__(1084));
 
-var _isPossibleNumber_ = _interopRequireDefault(__webpack_require__(1765));
+var _isPossible = _interopRequireDefault(__webpack_require__(4574));
 
-var _validate_ = _interopRequireDefault(__webpack_require__(3330));
+var _isValid = _interopRequireDefault(__webpack_require__(3575));
 
-var _isValidNumberForRegion_ = _interopRequireDefault(__webpack_require__(4894));
+var _getNumberType = _interopRequireDefault(__webpack_require__(2646));
 
-var _getNumberType = _interopRequireDefault(__webpack_require__(7065));
+var _getPossibleCountriesForNumber = _interopRequireDefault(__webpack_require__(4704));
 
-var _format_ = _interopRequireDefault(__webpack_require__(1166));
+var _format2 = _interopRequireDefault(__webpack_require__(4538));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -6342,10 +6416,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 var USE_NON_GEOGRAPHIC_COUNTRY_CODE = false;
 
 var PhoneNumber = /*#__PURE__*/function () {
-  function PhoneNumber(countryCallingCode, nationalNumber, metadata) {
+  /**
+   * @param  {string} countryOrCountryCallingCode
+   * @param  {string} nationalNumber
+   * @param  {object} metadata — Metadata JSON
+   * @return {PhoneNumber}
+   */
+  function PhoneNumber(countryOrCountryCallingCode, nationalNumber, metadata) {
     _classCallCheck(this, PhoneNumber);
 
-    if (!countryCallingCode) {
+    if (!countryOrCountryCallingCode) {
       throw new TypeError('`country` or `countryCallingCode` not passed');
     }
 
@@ -6357,29 +6437,21 @@ var PhoneNumber = /*#__PURE__*/function () {
       throw new TypeError('`metadata` not passed');
     }
 
-    var _metadata = new _metadata2["default"](metadata); // If country code is passed then derive `countryCallingCode` from it.
-    // Also store the country code as `.country`.
+    var _getCountryAndCountry = getCountryAndCountryCallingCode(countryOrCountryCallingCode, metadata),
+        country = _getCountryAndCountry.country,
+        countryCallingCode = _getCountryAndCountry.countryCallingCode;
 
-
-    if (isCountryCode(countryCallingCode)) {
-      this.country = countryCallingCode;
-
-      _metadata.country(countryCallingCode);
-
-      countryCallingCode = _metadata.countryCallingCode();
-    } else {
-      /* istanbul ignore if */
-      if (USE_NON_GEOGRAPHIC_COUNTRY_CODE) {
-        if (_metadata.isNonGeographicCallingCode(countryCallingCode)) {
-          this.country = '001';
-        }
-      }
-    }
-
+    this.country = country;
     this.countryCallingCode = countryCallingCode;
     this.nationalNumber = nationalNumber;
-    this.number = '+' + this.countryCallingCode + this.nationalNumber;
-    this.metadata = metadata;
+    this.number = '+' + this.countryCallingCode + this.nationalNumber; // Exclude `metadata` property output from `PhoneNumber.toString()`
+    // so that it doesn't clutter the console output of Node.js.
+    // Previously, when Node.js did `console.log(new PhoneNumber(...))`,
+    // it would output the whole internal structure of the `metadata` object.
+
+    this.getMetadata = function () {
+      return metadata;
+    };
   }
 
   _createClass(PhoneNumber, [{
@@ -6388,33 +6460,51 @@ var PhoneNumber = /*#__PURE__*/function () {
       this.ext = ext;
     }
   }, {
+    key: "getPossibleCountries",
+    value: function getPossibleCountries() {
+      if (this.country) {
+        return [this.country];
+      }
+
+      return (0, _getPossibleCountriesForNumber["default"])(this.countryCallingCode, this.nationalNumber, this.getMetadata());
+    }
+  }, {
     key: "isPossible",
     value: function isPossible() {
-      return (0, _isPossibleNumber_["default"])(this, {
+      return (0, _isPossible["default"])(this, {
         v2: true
-      }, this.metadata);
+      }, this.getMetadata());
     }
   }, {
     key: "isValid",
     value: function isValid() {
-      return (0, _validate_["default"])(this, {
+      return (0, _isValid["default"])(this, {
         v2: true
-      }, this.metadata);
+      }, this.getMetadata());
     }
   }, {
     key: "isNonGeographic",
     value: function isNonGeographic() {
-      var metadata = new _metadata2["default"](this.metadata);
+      var metadata = new _metadata["default"](this.getMetadata());
       return metadata.isNonGeographicCallingCode(this.countryCallingCode);
     }
   }, {
     key: "isEqual",
     value: function isEqual(phoneNumber) {
       return this.number === phoneNumber.number && this.ext === phoneNumber.ext;
-    } // // Is just an alias for `this.isValid() && this.country === country`.
-    // // https://github.com/googlei18n/libphonenumber/blob/master/FAQ.md#when-should-i-use-isvalidnumberforregion
-    // isValidForRegion(country) {
-    // 	return isValidNumberForRegion(this, country, { v2: true }, this.metadata)
+    } // This function was originally meant to be an equivalent for `validatePhoneNumberLength()`,
+    // but later it was found out that it doesn't include the possible `TOO_SHORT` result
+    // returned from `parsePhoneNumberWithError()` in the original `validatePhoneNumberLength()`,
+    // so eventually I simply commented out this method from the `PhoneNumber` class
+    // and just left the `validatePhoneNumberLength()` function, even though that one would require
+    // and additional step to also validate the actual country / calling code of the phone number.
+    // validateLength() {
+    // 	const metadata = new Metadata(this.getMetadata())
+    // 	metadata.selectNumberingPlan(this.countryCallingCode)
+    // 	const result = checkNumberLength(this.nationalNumber, metadata)
+    // 	if (result !== 'IS_POSSIBLE') {
+    // 		return result
+    // 	}
     // }
 
   }, {
@@ -6422,16 +6512,16 @@ var PhoneNumber = /*#__PURE__*/function () {
     value: function getType() {
       return (0, _getNumberType["default"])(this, {
         v2: true
-      }, this.metadata);
+      }, this.getMetadata());
     }
   }, {
     key: "format",
     value: function format(_format, options) {
-      return (0, _format_["default"])(this, _format, options ? _objectSpread(_objectSpread({}, options), {}, {
+      return (0, _format2["default"])(this, _format, options ? _objectSpread(_objectSpread({}, options), {}, {
         v2: true
       }) : {
         v2: true
-      }, this.metadata);
+      }, this.getMetadata());
     }
   }, {
     key: "formatNational",
@@ -6458,11 +6548,38 @@ exports["default"] = PhoneNumber;
 var isCountryCode = function isCountryCode(value) {
   return /^[A-Z]{2}$/.test(value);
 };
+
+function getCountryAndCountryCallingCode(countryOrCountryCallingCode, metadataJson) {
+  var country;
+  var countryCallingCode;
+  var metadata = new _metadata["default"](metadataJson); // If country code is passed then derive `countryCallingCode` from it.
+  // Also store the country code as `.country`.
+
+  if (isCountryCode(countryOrCountryCallingCode)) {
+    country = countryOrCountryCallingCode;
+    metadata.selectNumberingPlan(country);
+    countryCallingCode = metadata.countryCallingCode();
+  } else {
+    countryCallingCode = countryOrCountryCallingCode;
+    /* istanbul ignore if */
+
+    if (USE_NON_GEOGRAPHIC_COUNTRY_CODE) {
+      if (metadata.isNonGeographicCallingCode(countryCallingCode)) {
+        country = '001';
+      }
+    }
+  }
+
+  return {
+    country: country,
+    countryCallingCode: countryCallingCode
+  };
+}
 //# sourceMappingURL=PhoneNumber.js.map
 
 /***/ }),
 
-/***/ 2066:
+/***/ 9420:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -6475,29 +6592,29 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _PhoneNumber = _interopRequireDefault(__webpack_require__(7289));
+var _PhoneNumber = _interopRequireDefault(__webpack_require__(4908));
 
-var _constants = __webpack_require__(6703);
+var _constants = __webpack_require__(2632);
 
-var _createExtensionPattern = _interopRequireDefault(__webpack_require__(3138));
+var _createExtensionPattern = _interopRequireDefault(__webpack_require__(432));
 
-var _RegExpCache = _interopRequireDefault(__webpack_require__(7357));
+var _RegExpCache = _interopRequireDefault(__webpack_require__(4488));
 
-var _util = __webpack_require__(2940);
+var _util = __webpack_require__(649);
 
-var _utf = __webpack_require__(4135);
+var _utf = __webpack_require__(1093);
 
-var _Leniency = _interopRequireDefault(__webpack_require__(5760));
+var _Leniency = _interopRequireDefault(__webpack_require__(648));
 
-var _parsePreCandidate = _interopRequireDefault(__webpack_require__(2515));
+var _parsePreCandidate = _interopRequireDefault(__webpack_require__(5668));
 
-var _isValidPreCandidate = _interopRequireDefault(__webpack_require__(5133));
+var _isValidPreCandidate = _interopRequireDefault(__webpack_require__(8273));
 
-var _isValidCandidate = _interopRequireWildcard(__webpack_require__(1262));
+var _isValidCandidate = _interopRequireWildcard(__webpack_require__(1798));
 
-var _metadata = __webpack_require__(7536);
+var _metadata = __webpack_require__(1084);
 
-var _parse_ = _interopRequireDefault(__webpack_require__(2953));
+var _parsePhoneNumber = _interopRequireDefault(__webpack_require__(5689));
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -6511,18 +6628,13 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
+var USE_NON_GEOGRAPHIC_COUNTRY_CODE = false;
 var EXTN_PATTERNS_FOR_MATCHING = (0, _createExtensionPattern["default"])('matching');
 /**
  * Patterns used to extract phone numbers from a larger phone-number-like pattern. These are
@@ -6605,19 +6717,9 @@ var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
 
 var PhoneNumberMatcher = /*#__PURE__*/function () {
   /**
-   * Creates a new instance. See the factory methods in {@link PhoneNumberUtil} on how to obtain a
-   * new instance.
-   *
-   * @param util  the phone number util to use
-   * @param text  the character sequence that we will search, null for no text
-   * @param country  the country to assume for phone numbers not written in international format
-   *     (with a leading plus, or with the international dialing prefix of the specified region).
-   *     May be null or "ZZ" if only numbers with a leading plus should be
-   *     considered.
-   * @param leniency  the leniency to use when evaluating candidate phone numbers
-   * @param maxTries  the maximum number of invalid numbers to try before giving up on the text.
-   *     This is to cover degenerate cases where the text has a lot of false positives in it. Must
-   *     be {@code >= 0}.
+   * @param {string} text — the character sequence that we will search, null for no text.
+   * @param {'POSSIBLE'|'VALID'|'STRICT_GROUPING'|'EXACT_GROUPING'} [options.leniency] — The leniency to use when evaluating candidate phone numbers. See `source/findNumbers/Leniency.js` for more details.
+   * @param {number} [options.maxTries] — The maximum number of invalid numbers to try before giving up on the text. This is to cover degenerate cases where the text has a lot of false positives in it. Must be >= 0.
    */
   function PhoneNumberMatcher() {
     var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
@@ -6626,30 +6728,35 @@ var PhoneNumberMatcher = /*#__PURE__*/function () {
 
     _classCallCheck(this, PhoneNumberMatcher);
 
-    options = _objectSpread(_objectSpread({}, options), {}, {
+    options = {
+      v2: options.v2,
       defaultCallingCode: options.defaultCallingCode,
       defaultCountry: options.defaultCountry && (0, _metadata.isSupportedCountry)(options.defaultCountry, metadata) ? options.defaultCountry : undefined,
-      leniency: options.leniency || options.extended ? 'POSSIBLE' : 'VALID',
+      leniency: options.leniency || (options.extended ? 'POSSIBLE' : 'VALID'),
       maxTries: options.maxTries || MAX_SAFE_INTEGER
-    });
+    }; // Validate `leniency`.
 
     if (!options.leniency) {
-      throw new TypeError('`Leniency` not supplied');
+      throw new TypeError('`leniency` is required');
     }
 
+    if (options.leniency !== 'POSSIBLE' && options.leniency !== 'VALID') {
+      throw new TypeError("Invalid `leniency`: \"".concat(options.leniency, "\". Supported values: \"POSSIBLE\", \"VALID\"."));
+    } // Validate `maxTries`.
+
+
     if (options.maxTries < 0) {
-      throw new TypeError('`maxTries` not supplied');
+      throw new TypeError('`maxTries` must be `>= 0`');
     }
 
     this.text = text;
     this.options = options;
-    this.metadata = metadata;
-    /** The degree of validation requested. */
+    this.metadata = metadata; // The degree of phone number validation.
 
     this.leniency = _Leniency["default"][options.leniency];
 
     if (!this.leniency) {
-      throw new TypeError("Unknown leniency: ".concat(options.leniency, "."));
+      throw new TypeError("Unknown leniency: \"".concat(options.leniency, "\""));
     }
     /** The maximum number of retries after matching an invalid number. */
 
@@ -6697,20 +6804,36 @@ var PhoneNumberMatcher = /*#__PURE__*/function () {
 
           if (match) {
             if (this.options.v2) {
-              var phoneNumber = new _PhoneNumber["default"](match.country || match.countryCallingCode, match.phone, this.metadata);
-
-              if (match.ext) {
-                phoneNumber.ext = match.ext;
-              }
-
               return {
                 startsAt: match.startsAt,
                 endsAt: match.endsAt,
-                number: phoneNumber
+                number: match.phoneNumber
               };
-            }
+            } else {
+              var phoneNumber = match.phoneNumber;
+              var result = {
+                startsAt: match.startsAt,
+                endsAt: match.endsAt,
+                phone: phoneNumber.nationalNumber
+              };
 
-            return match;
+              if (phoneNumber.country) {
+                /* istanbul ignore if */
+                if (USE_NON_GEOGRAPHIC_COUNTRY_CODE && country === '001') {
+                  result.countryCallingCode = phoneNumber.countryCallingCode;
+                } else {
+                  result.country = phoneNumber.country;
+                }
+              } else {
+                result.countryCallingCode = phoneNumber.countryCallingCode;
+              }
+
+              if (phoneNumber.ext) {
+                result.ext = phoneNumber.ext;
+              }
+
+              return result;
+            }
           }
         }
 
@@ -6764,7 +6887,7 @@ var PhoneNumberMatcher = /*#__PURE__*/function () {
       }
     }
     /**
-     * Parses a phone number from the `candidate` using `parseNumber` and
+     * Parses a phone number from the `candidate` using `parse` and
      * verifies it matches the requested `leniency`. If parsing and verification succeed,
      * a corresponding `PhoneNumberMatch` is returned, otherwise this method returns `null`.
      *
@@ -6780,41 +6903,31 @@ var PhoneNumberMatcher = /*#__PURE__*/function () {
         return;
       }
 
-      var number = (0, _parse_["default"])(candidate, {
+      var phoneNumber = (0, _parsePhoneNumber["default"])(candidate, {
         extended: true,
         defaultCountry: this.options.defaultCountry,
         defaultCallingCode: this.options.defaultCallingCode
       }, this.metadata);
 
-      if (!number.possible) {
+      if (!phoneNumber) {
         return;
       }
 
-      if (this.leniency(number, candidate, this.metadata, this.regExpCache)) {
-        // // We used parseAndKeepRawInput to create this number,
-        // // but for now we don't return the extra values parsed.
-        // // TODO: stop clearing all values here and switch all users over
-        // // to using rawInput() rather than the rawString() of PhoneNumberMatch.
-        // number.clearCountryCodeSource()
-        // number.clearRawInput()
-        // number.clearPreferredDomesticCarrierCode()
-        var result = {
+      if (!phoneNumber.isPossible()) {
+        return;
+      }
+
+      if (this.leniency(phoneNumber, {
+        candidate: candidate,
+        defaultCountry: this.options.defaultCountry,
+        metadata: this.metadata,
+        regExpCache: this.regExpCache
+      })) {
+        return {
           startsAt: offset,
           endsAt: offset + candidate.length,
-          phone: number.phone
+          phoneNumber: phoneNumber
         };
-
-        if (number.country && number.country !== '001') {
-          result.country = number.country;
-        } else {
-          result.countryCallingCode = number.countryCallingCode;
-        }
-
-        if (number.ext) {
-          result.ext = number.ext;
-        }
-
-        return result;
       }
     }
   }, {
@@ -6857,7 +6970,7 @@ exports["default"] = PhoneNumberMatcher;
 
 /***/ }),
 
-/***/ 6703:
+/***/ 2632:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -6903,36 +7016,7 @@ exports.PLUS_CHARS = PLUS_CHARS;
 
 /***/ }),
 
-/***/ 6329:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = findNumbers;
-
-var _findNumbers_ = _interopRequireDefault(__webpack_require__(718));
-
-var _parsePhoneNumber = __webpack_require__(8252);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function findNumbers() {
-  var _normalizeArguments = (0, _parsePhoneNumber.normalizeArguments)(arguments),
-      text = _normalizeArguments.text,
-      options = _normalizeArguments.options,
-      metadata = _normalizeArguments.metadata;
-
-  return (0, _findNumbers_["default"])(text, options, metadata);
-}
-//# sourceMappingURL=findNumbers.js.map
-
-/***/ }),
-
-/***/ 8956:
+/***/ 6248:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -7073,7 +7157,7 @@ exports["default"] = LRUCache;
 
 /***/ }),
 
-/***/ 5760:
+/***/ 648:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -7085,11 +7169,19 @@ Object.defineProperty(exports, "__esModule", ({
 exports.containsMoreThanOneSlashInNationalNumber = containsMoreThanOneSlashInNationalNumber;
 exports["default"] = void 0;
 
-var _validate_ = _interopRequireDefault(__webpack_require__(3330));
+var _isValid = _interopRequireDefault(__webpack_require__(3575));
 
-var _parseDigits = _interopRequireDefault(__webpack_require__(5039));
+var _parseDigits = _interopRequireDefault(__webpack_require__(9458));
 
-var _util = __webpack_require__(2940);
+var _matchPhoneNumberStringAgainstPhoneNumber = _interopRequireDefault(__webpack_require__(4774));
+
+var _metadata2 = _interopRequireDefault(__webpack_require__(1084));
+
+var _getCountryByCallingCode = _interopRequireDefault(__webpack_require__(8719));
+
+var _format = __webpack_require__(4538);
+
+var _util = __webpack_require__(649);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -7107,7 +7199,9 @@ var _default = {
   /**
    * Phone numbers accepted are "possible", but not necessarily "valid".
    */
-  POSSIBLE: function POSSIBLE(number, candidate, metadata) {
+  POSSIBLE: function POSSIBLE(phoneNumber, _ref) {
+    var candidate = _ref.candidate,
+        metadata = _ref.metadata;
     return true;
   },
 
@@ -7116,11 +7210,15 @@ var _default = {
    * Numbers written in national format must have their national-prefix
    * present if it is usually written for a number of this type.
    */
-  VALID: function VALID(number, candidate, metadata) {
-    if (!(0, _validate_["default"])(number, undefined, metadata) || !containsOnlyValidXChars(number, candidate.toString(), metadata)) {
+  VALID: function VALID(phoneNumber, _ref2) {
+    var candidate = _ref2.candidate,
+        defaultCountry = _ref2.defaultCountry,
+        metadata = _ref2.metadata;
+
+    if (!phoneNumber.isValid() || !containsOnlyValidXChars(phoneNumber, candidate, metadata)) {
       return false;
     } // Skipped for simplicity.
-    // return isNationalPrefixPresentIfRequired(number, metadata)
+    // return isNationalPrefixPresentIfRequired(phoneNumber, { defaultCountry, metadata })
 
 
     return true;
@@ -7138,40 +7236,52 @@ var _default = {
    * country code "+1". If you are not sure about which level to use,
    * email the discussion group libphonenumber-discuss@googlegroups.com.
    */
-  STRICT_GROUPING: function STRICT_GROUPING(number, candidate, metadata, regExpCache) {
-    var candidateString = candidate.toString();
+  STRICT_GROUPING: function STRICT_GROUPING(phoneNumber, _ref3) {
+    var candidate = _ref3.candidate,
+        defaultCountry = _ref3.defaultCountry,
+        metadata = _ref3.metadata,
+        regExpCache = _ref3.regExpCache;
 
-    if (!(0, _validate_["default"])(number, undefined, metadata) || !containsOnlyValidXChars(number, candidateString, metadata) || containsMoreThanOneSlashInNationalNumber(number, candidateString) || !isNationalPrefixPresentIfRequired(number, metadata)) {
+    if (!phoneNumber.isValid() || !containsOnlyValidXChars(phoneNumber, candidate, metadata) || containsMoreThanOneSlashInNationalNumber(phoneNumber, candidate) || !isNationalPrefixPresentIfRequired(phoneNumber, {
+      defaultCountry: defaultCountry,
+      metadata: metadata
+    })) {
       return false;
     }
 
-    return checkNumberGroupingIsValid(number, candidate, metadata, allNumberGroupsRemainGrouped, regExpCache);
+    return checkNumberGroupingIsValid(phoneNumber, candidate, metadata, allNumberGroupsRemainGrouped, regExpCache);
   },
 
   /**
-   * Phone numbers accepted are {@linkplain PhoneNumberUtil#isValidNumber(PhoneNumber) valid} and
-   * are grouped in the same way that we would have formatted it, or as a single block. For
-   * example, a US number written as "650 2530000" is not accepted at this leniency level, whereas
-   * "650 253 0000" or "6502530000" are.
+   * Phone numbers accepted are "valid" and are grouped in the same way
+   * that we would have formatted it, or as a single block.
+   * For example, a US number written as "650 2530000" is not accepted
+   * at this leniency level, whereas "650 253 0000" or "6502530000" are.
    * Numbers with more than one '/' symbol are also dropped at this level.
-   * <p>
-   * Warning: This level might result in lower coverage especially for regions outside of country
-   * code "+1". If you are not sure about which level to use, email the discussion group
+   *
+   * Warning: This level might result in lower coverage especially for regions outside of
+   * country code "+1". If you are not sure about which level to use, email the discussion group
    * libphonenumber-discuss@googlegroups.com.
    */
-  EXACT_GROUPING: function EXACT_GROUPING(number, candidate, metadata, regExpCache) {
-    var candidateString = candidate.toString();
+  EXACT_GROUPING: function EXACT_GROUPING(phoneNumber, _ref4) {
+    var candidate = _ref4.candidate,
+        defaultCountry = _ref4.defaultCountry,
+        metadata = _ref4.metadata,
+        regExpCache = _ref4.regExpCache;
 
-    if (!(0, _validate_["default"])(number, undefined, metadata) || !containsOnlyValidXChars(number, candidateString, metadata) || containsMoreThanOneSlashInNationalNumber(number, candidateString) || !isNationalPrefixPresentIfRequired(number, metadata)) {
+    if (!phoneNumber.isValid() || !containsOnlyValidXChars(phoneNumber, candidate, metadata) || containsMoreThanOneSlashInNationalNumber(phoneNumber, candidate) || !isNationalPrefixPresentIfRequired(phoneNumber, {
+      defaultCountry: defaultCountry,
+      metadata: metadata
+    })) {
       return false;
     }
 
-    return checkNumberGroupingIsValid(number, candidate, metadata, allNumberGroupsAreExactlyPresent, regExpCache);
+    return checkNumberGroupingIsValid(phoneNumber, candidate, metadata, allNumberGroupsAreExactlyPresent, regExpCache);
   }
 };
 exports["default"] = _default;
 
-function containsOnlyValidXChars(number, candidate, metadata) {
+function containsOnlyValidXChars(phoneNumber, candidate, metadata) {
   // The characters 'x' and 'X' can be (1) a carrier code, in which case they always precede the
   // national significant number or (2) an extension sign, in which case they always precede the
   // extension number. We assume a carrier code is more than 1 digit, so the first case has to
@@ -7188,13 +7298,23 @@ function containsOnlyValidXChars(number, candidate, metadata) {
         // significant number.
         index++;
 
-        if (util.isNumberMatch(number, candidate.substring(index)) != MatchType.NSN_MATCH) {
+        if ((0, _matchPhoneNumberStringAgainstPhoneNumber["default"])(candidate.substring(index), phoneNumber, metadata) !== 'NSN_MATCH') {
           return false;
         } // This is the extension sign case, in which the 'x' or 'X' should always precede the
         // extension number.
 
-      } else if ((0, _parseDigits["default"])(candidate.substring(index)) !== number.ext) {
-        return false;
+      } else {
+        var ext = (0, _parseDigits["default"])(candidate.substring(index));
+
+        if (ext) {
+          if (phoneNumber.ext !== ext) {
+            return false;
+          }
+        } else {
+          if (phoneNumber.ext) {
+            return false;
+          }
+        }
       }
     }
   }
@@ -7202,48 +7322,46 @@ function containsOnlyValidXChars(number, candidate, metadata) {
   return true;
 }
 
-function isNationalPrefixPresentIfRequired(number, _metadata) {
+function isNationalPrefixPresentIfRequired(phoneNumber, _ref5) {
+  var defaultCountry = _ref5.defaultCountry,
+      _metadata = _ref5.metadata;
+
   // First, check how we deduced the country code. If it was written in international format, then
   // the national prefix is not required.
-  if (number.getCountryCodeSource() != 'FROM_DEFAULT_COUNTRY') {
+  if (phoneNumber.__countryCallingCodeSource !== 'FROM_DEFAULT_COUNTRY') {
     return true;
   }
 
-  var phoneNumberRegion = util.getRegionCodeForCountryCode(number.getCountryCode());
-  var metadata = util.getMetadataForRegion(phoneNumberRegion);
+  var metadata = new _metadata2["default"](_metadata);
+  metadata.selectNumberingPlan(phoneNumber.countryCallingCode);
+  var phoneNumberRegion = phoneNumber.country || (0, _getCountryByCallingCode["default"])(phoneNumber.countryCallingCode, {
+    nationalNumber: phoneNumber.nationalNumber,
+    defaultCountry: defaultCountry,
+    metadata: metadata
+  }); // Check if a national prefix should be present when formatting this number.
 
-  if (metadata == null) {
-    return true;
-  } // Check if a national prefix should be present when formatting this number.
-
-
-  var nationalNumber = util.getNationalSignificantNumber(number);
-  var formatRule = util.chooseFormattingPatternForNumber(metadata.numberFormats(), nationalNumber); // To do this, we check that a national prefix formatting rule was present
+  var nationalNumber = phoneNumber.nationalNumber;
+  var format = (0, _format.chooseFormatForNumber)(metadata.numberingPlan.formats(), nationalNumber); // To do this, we check that a national prefix formatting rule was present
   // and that it wasn't just the first-group symbol ($1) with punctuation.
 
-  if (formatRule && formatRule.getNationalPrefixFormattingRule().length > 0) {
-    if (formatRule.getNationalPrefixOptionalWhenFormatting()) {
-      // The national-prefix is optional in these cases, so we don't need to check if it was
-      // present.
+  if (format.nationalPrefixFormattingRule()) {
+    if (metadata.numberingPlan.nationalPrefixIsOptionalWhenFormattingInNationalFormat()) {
+      // The national-prefix is optional in these cases, so we don't need to check if it was present.
       return true;
     }
 
-    if (PhoneNumberUtil.formattingRuleHasFirstGroupOnly(formatRule.getNationalPrefixFormattingRule())) {
+    if (!format.usesNationalPrefix()) {
       // National Prefix not needed for this number.
       return true;
-    } // Normalize the remainder.
+    }
 
-
-    var rawInputCopy = PhoneNumberUtil.normalizeDigitsOnly(number.getRawInput()); // Check if we found a national prefix and/or carrier code at the start of the raw input, and
-    // return the result.
-
-    return util.maybeStripNationalPrefixAndCarrierCode(rawInputCopy, metadata, null);
+    return Boolean(phoneNumber.nationalPrefix);
   }
 
   return true;
 }
 
-function containsMoreThanOneSlashInNationalNumber(number, candidate) {
+function containsMoreThanOneSlashInNationalNumber(phoneNumber, candidate) {
   var firstSlashInBodyIndex = candidate.indexOf('/');
 
   if (firstSlashInBodyIndex < 0) {
@@ -7260,9 +7378,9 @@ function containsMoreThanOneSlashInNationalNumber(number, candidate) {
   } // If the first slash is after the country calling code, this is permitted.
 
 
-  var candidateHasCountryCode = number.getCountryCodeSource() === CountryCodeSource.FROM_NUMBER_WITH_PLUS_SIGN || number.getCountryCodeSource() === CountryCodeSource.FROM_NUMBER_WITHOUT_PLUS_SIGN;
+  var candidateHasCountryCode = phoneNumber.__countryCallingCodeSource === 'FROM_NUMBER_WITH_PLUS_SIGN' || phoneNumber.__countryCallingCodeSource === 'FROM_NUMBER_WITHOUT_PLUS_SIGN';
 
-  if (candidateHasCountryCode && PhoneNumberUtil.normalizeDigitsOnly(candidate.substring(0, firstSlashInBodyIndex)) === String(number.getCountryCode())) {
+  if (candidateHasCountryCode && (0, _parseDigits["default"])(candidate.substring(0, firstSlashInBodyIndex)) === phoneNumber.countryCallingCode) {
     // Any more slashes and this is illegal.
     return candidate.slice(secondSlashInBodyIndex + 1).indexOf('/') >= 0;
   }
@@ -7271,6 +7389,7 @@ function containsMoreThanOneSlashInNationalNumber(number, candidate) {
 }
 
 function checkNumberGroupingIsValid(number, candidate, metadata, checkGroups, regExpCache) {
+  throw new Error('This part of code hasn\'t been ported');
   var normalizedCandidate = normalizeDigits(candidate, true
   /* keep non-digits */
   );
@@ -7316,6 +7435,8 @@ function checkNumberGroupingIsValid(number, candidate, metadata, checkGroups, re
 
 
 function getNationalNumberGroups(metadata, number, formattingPattern) {
+  throw new Error('This part of code hasn\'t been ported');
+
   if (formattingPattern) {
     // We format the NSN only, and split that according to the separator.
     var nationalSignificantNumber = util.getNationalSignificantNumber(number);
@@ -7338,6 +7459,7 @@ function getNationalNumberGroups(metadata, number, formattingPattern) {
 }
 
 function allNumberGroupsAreExactlyPresent(metadata, number, normalizedCandidate, formattedNumberGroups) {
+  throw new Error('This part of code hasn\'t been ported');
   var candidateGroups = normalizedCandidate.split(NON_DIGITS_PATTERN); // Set this to the last group, skipping it if the number has an extension.
 
   var candidateNumberGroupIndex = number.hasExtension() ? candidateGroups.length - 2 : candidateGroups.length - 1; // First we check if the national significant number is formatted as a block.
@@ -7367,6 +7489,7 @@ function allNumberGroupsAreExactlyPresent(metadata, number, normalizedCandidate,
 }
 
 function allNumberGroupsRemainGrouped(metadata, number, normalizedCandidate, formattedNumberGroups) {
+  throw new Error('This part of code hasn\'t been ported');
   var fromIndex = 0;
 
   if (number.getCountryCodeSource() !== CountryCodeSource.FROM_DEFAULT_COUNTRY) {
@@ -7415,7 +7538,7 @@ function allNumberGroupsRemainGrouped(metadata, number, normalizedCandidate, for
 
 /***/ }),
 
-/***/ 7357:
+/***/ 4488:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -7426,7 +7549,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _LRUCache = _interopRequireDefault(__webpack_require__(8956));
+var _LRUCache = _interopRequireDefault(__webpack_require__(6248));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -7469,7 +7592,7 @@ exports["default"] = RegExpCache;
 
 /***/ }),
 
-/***/ 1262:
+/***/ 1798:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -7481,11 +7604,11 @@ Object.defineProperty(exports, "__esModule", ({
 exports.LEAD_CLASS = void 0;
 exports["default"] = isValidCandidate;
 
-var _constants = __webpack_require__(6703);
+var _constants = __webpack_require__(2632);
 
-var _util = __webpack_require__(2940);
+var _util = __webpack_require__(649);
 
-var _utf = __webpack_require__(4135);
+var _utf = __webpack_require__(1093);
 
 // Copy-pasted from `PhoneNumberMatcher.js`.
 var OPENING_PARENS = "(\\[\uFF08\uFF3B";
@@ -7556,7 +7679,7 @@ function isValidCandidate(candidate, offset, text, leniency) {
 
 /***/ }),
 
-/***/ 5133:
+/***/ 8273:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -7597,7 +7720,89 @@ function isValidPreCandidate(candidate, offset, text) {
 
 /***/ }),
 
-/***/ 2515:
+/***/ 4774:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = matchPhoneNumberStringAgainstPhoneNumber;
+
+var _parsePhoneNumber = _interopRequireDefault(__webpack_require__(5689));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+/**
+ * Matches a phone number object against a phone number string.
+ * @param  {string} phoneNumberString
+ * @param  {PhoneNumber} phoneNumber
+ * @param  {object} metadata — Metadata JSON
+ * @return {'INVALID_NUMBER'|'NO_MATCH'|'SHORT_NSN_MATCH'|'NSN_MATCH'|'EXACT_MATCH'}
+ */
+function matchPhoneNumberStringAgainstPhoneNumber(phoneNumberString, phoneNumber, metadata) {
+  // Parse `phoneNumberString`.
+  var phoneNumberStringContainsCallingCode = true;
+  var parsedPhoneNumber = (0, _parsePhoneNumber["default"])(phoneNumberString, metadata);
+
+  if (!parsedPhoneNumber) {
+    // If `phoneNumberString` didn't contain a country calling code
+    // then substitute it with the `phoneNumber`'s country calling code.
+    phoneNumberStringContainsCallingCode = false;
+    parsedPhoneNumber = (0, _parsePhoneNumber["default"])(phoneNumberString, {
+      defaultCallingCode: phoneNumber.countryCallingCode
+    }, metadata);
+  }
+
+  if (!parsedPhoneNumber) {
+    return 'INVALID_NUMBER';
+  } // Check that the extensions match.
+
+
+  if (phoneNumber.ext) {
+    if (parsedPhoneNumber.ext !== phoneNumber.ext) {
+      return 'NO_MATCH';
+    }
+  } else {
+    if (parsedPhoneNumber.ext) {
+      return 'NO_MATCH';
+    }
+  } // Check that country calling codes match.
+
+
+  if (phoneNumberStringContainsCallingCode) {
+    if (phoneNumber.countryCallingCode !== parsedPhoneNumber.countryCallingCode) {
+      return 'NO_MATCH';
+    }
+  } // Check if the whole numbers match.
+
+
+  if (phoneNumber.number === parsedPhoneNumber.number) {
+    if (phoneNumberStringContainsCallingCode) {
+      return 'EXACT_MATCH';
+    } else {
+      return 'NSN_MATCH';
+    }
+  } // Check if one national number is a "suffix" of the other.
+
+
+  if (phoneNumber.nationalNumber.indexOf(parsedPhoneNumber.nationalNumber) === 0 || parsedPhoneNumber.nationalNumber.indexOf(phoneNumber.nationalNumber) === 0) {
+    // "A SHORT_NSN_MATCH occurs if there is a difference because of the
+    //  presence or absence of an 'Italian leading zero', the presence or
+    //  absence of an extension, or one NSN being a shorter variant of the
+    //  other."
+    return 'SHORT_NSN_MATCH';
+  }
+
+  return 'NO_MATCH';
+}
+//# sourceMappingURL=matchPhoneNumberStringAgainstPhoneNumber.js.map
+
+/***/ }),
+
+/***/ 5668:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -7608,7 +7813,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = parsePreCandidate;
 
-var _util = __webpack_require__(2940);
+var _util = __webpack_require__(649);
 
 // Regular expression of characters typically used to start a second phone number for the purposes
 // of parsing. This allows us to strip off parts of the number that are actually the start of
@@ -7630,7 +7835,7 @@ function parsePreCandidate(candidate) {
 
 /***/ }),
 
-/***/ 4135:
+/***/ 1093:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -7713,7 +7918,7 @@ function isInvalidPunctuationSymbol(character) {
 
 /***/ }),
 
-/***/ 2940:
+/***/ 649:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -7762,7 +7967,325 @@ function endsWith(string, substring) {
 
 /***/ }),
 
-/***/ 718:
+/***/ 144:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports["default"] = findPhoneNumbersInText;
+
+var _PhoneNumberMatcher = _interopRequireDefault(__webpack_require__(9420));
+
+var _normalizeArguments2 = _interopRequireDefault(__webpack_require__(4424));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function findPhoneNumbersInText() {
+  var _normalizeArguments = (0, _normalizeArguments2["default"])(arguments),
+      text = _normalizeArguments.text,
+      options = _normalizeArguments.options,
+      metadata = _normalizeArguments.metadata;
+
+  var matcher = new _PhoneNumberMatcher["default"](text, _objectSpread(_objectSpread({}, options), {}, {
+    v2: true
+  }), metadata);
+  var results = [];
+
+  while (matcher.hasNext()) {
+    results.push(matcher.next());
+  }
+
+  return results;
+}
+//# sourceMappingURL=findPhoneNumbersInText.js.map
+
+/***/ }),
+
+/***/ 4538:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.chooseFormatForNumber = chooseFormatForNumber;
+exports["default"] = formatNumber;
+
+var _matchesEntirely = _interopRequireDefault(__webpack_require__(5648));
+
+var _formatNationalNumberUsingFormat = _interopRequireDefault(__webpack_require__(7760));
+
+var _metadata = _interopRequireWildcard(__webpack_require__(1084));
+
+var _getIddPrefix = _interopRequireDefault(__webpack_require__(9104));
+
+var _RFC = __webpack_require__(6366);
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var DEFAULT_OPTIONS = {
+  formatExtension: function formatExtension(formattedNumber, extension, metadata) {
+    return "".concat(formattedNumber).concat(metadata.ext()).concat(extension);
+  }
+};
+/**
+ * Formats a phone number.
+ *
+ * format(phoneNumberInstance, 'INTERNATIONAL', { ..., v2: true }, metadata)
+ * format(phoneNumberInstance, 'NATIONAL', { ..., v2: true }, metadata)
+ *
+ * format({ phone: '8005553535', country: 'RU' }, 'INTERNATIONAL', { ... }, metadata)
+ * format({ phone: '8005553535', country: 'RU' }, 'NATIONAL', undefined, metadata)
+ *
+ * @param  {object|PhoneNumber} input — If `options.v2: true` flag is passed, the `input` should be a `PhoneNumber` instance. Otherwise, it should be an object of shape `{ phone: '...', country: '...' }`.
+ * @param  {string} format
+ * @param  {object} [options]
+ * @param  {object} metadata
+ * @return {string}
+ */
+
+function formatNumber(input, format, options, metadata) {
+  // Apply default options.
+  if (options) {
+    options = _objectSpread(_objectSpread({}, DEFAULT_OPTIONS), options);
+  } else {
+    options = DEFAULT_OPTIONS;
+  }
+
+  metadata = new _metadata["default"](metadata);
+
+  if (input.country && input.country !== '001') {
+    // Validate `input.country`.
+    if (!metadata.hasCountry(input.country)) {
+      throw new Error("Unknown country: ".concat(input.country));
+    }
+
+    metadata.country(input.country);
+  } else if (input.countryCallingCode) {
+    metadata.selectNumberingPlan(input.countryCallingCode);
+  } else return input.phone || '';
+
+  var countryCallingCode = metadata.countryCallingCode();
+  var nationalNumber = options.v2 ? input.nationalNumber : input.phone; // This variable should have been declared inside `case`s
+  // but Babel has a bug and it says "duplicate variable declaration".
+
+  var number;
+
+  switch (format) {
+    case 'NATIONAL':
+      // Legacy argument support.
+      // (`{ country: ..., phone: '' }`)
+      if (!nationalNumber) {
+        return '';
+      }
+
+      number = formatNationalNumber(nationalNumber, input.carrierCode, 'NATIONAL', metadata, options);
+      return addExtension(number, input.ext, metadata, options.formatExtension);
+
+    case 'INTERNATIONAL':
+      // Legacy argument support.
+      // (`{ country: ..., phone: '' }`)
+      if (!nationalNumber) {
+        return "+".concat(countryCallingCode);
+      }
+
+      number = formatNationalNumber(nationalNumber, null, 'INTERNATIONAL', metadata, options);
+      number = "+".concat(countryCallingCode, " ").concat(number);
+      return addExtension(number, input.ext, metadata, options.formatExtension);
+
+    case 'E.164':
+      // `E.164` doesn't define "phone number extensions".
+      return "+".concat(countryCallingCode).concat(nationalNumber);
+
+    case 'RFC3966':
+      return (0, _RFC.formatRFC3966)({
+        number: "+".concat(countryCallingCode).concat(nationalNumber),
+        ext: input.ext
+      });
+    // For reference, here's Google's IDD formatter:
+    // https://github.com/google/libphonenumber/blob/32719cf74e68796788d1ca45abc85dcdc63ba5b9/java/libphonenumber/src/com/google/i18n/phonenumbers/PhoneNumberUtil.java#L1546
+    // Not saying that this IDD formatter replicates it 1:1, but it seems to work.
+    // Who would even need to format phone numbers in IDD format anyway?
+
+    case 'IDD':
+      if (!options.fromCountry) {
+        return; // throw new Error('`fromCountry` option not passed for IDD-prefixed formatting.')
+      }
+
+      var formattedNumber = formatIDD(nationalNumber, input.carrierCode, countryCallingCode, options.fromCountry, metadata);
+      return addExtension(formattedNumber, input.ext, metadata, options.formatExtension);
+
+    default:
+      throw new Error("Unknown \"format\" argument passed to \"formatNumber()\": \"".concat(format, "\""));
+  }
+}
+
+function formatNationalNumber(number, carrierCode, formatAs, metadata, options) {
+  var format = chooseFormatForNumber(metadata.formats(), number);
+
+  if (!format) {
+    return number;
+  }
+
+  return (0, _formatNationalNumberUsingFormat["default"])(number, format, {
+    useInternationalFormat: formatAs === 'INTERNATIONAL',
+    withNationalPrefix: format.nationalPrefixIsOptionalWhenFormattingInNationalFormat() && options && options.nationalPrefix === false ? false : true,
+    carrierCode: carrierCode,
+    metadata: metadata
+  });
+}
+
+function chooseFormatForNumber(availableFormats, nationalNnumber) {
+  for (var _iterator = _createForOfIteratorHelperLoose(availableFormats), _step; !(_step = _iterator()).done;) {
+    var format = _step.value;
+
+    // Validate leading digits.
+    // The test case for "else path" could be found by searching for
+    // "format.leadingDigitsPatterns().length === 0".
+    if (format.leadingDigitsPatterns().length > 0) {
+      // The last leading_digits_pattern is used here, as it is the most detailed
+      var lastLeadingDigitsPattern = format.leadingDigitsPatterns()[format.leadingDigitsPatterns().length - 1]; // If leading digits don't match then move on to the next phone number format
+
+      if (nationalNnumber.search(lastLeadingDigitsPattern) !== 0) {
+        continue;
+      }
+    } // Check that the national number matches the phone number format regular expression
+
+
+    if ((0, _matchesEntirely["default"])(nationalNnumber, format.pattern())) {
+      return format;
+    }
+  }
+}
+
+function addExtension(formattedNumber, ext, metadata, formatExtension) {
+  return ext ? formatExtension(formattedNumber, ext, metadata) : formattedNumber;
+}
+
+function formatIDD(nationalNumber, carrierCode, countryCallingCode, fromCountry, metadata) {
+  var fromCountryCallingCode = (0, _metadata.getCountryCallingCode)(fromCountry, metadata.metadata); // When calling within the same country calling code.
+
+  if (fromCountryCallingCode === countryCallingCode) {
+    var formattedNumber = formatNationalNumber(nationalNumber, carrierCode, 'NATIONAL', metadata); // For NANPA regions, return the national format for these regions
+    // but prefix it with the country calling code.
+
+    if (countryCallingCode === '1') {
+      return countryCallingCode + ' ' + formattedNumber;
+    } // If regions share a country calling code, the country calling code need
+    // not be dialled. This also applies when dialling within a region, so this
+    // if clause covers both these cases. Technically this is the case for
+    // dialling from La Reunion to other overseas departments of France (French
+    // Guiana, Martinique, Guadeloupe), but not vice versa - so we don't cover
+    // this edge case for now and for those cases return the version including
+    // country calling code. Details here:
+    // http://www.petitfute.com/voyage/225-info-pratiques-reunion
+    //
+
+
+    return formattedNumber;
+  }
+
+  var iddPrefix = (0, _getIddPrefix["default"])(fromCountry, undefined, metadata.metadata);
+
+  if (iddPrefix) {
+    return "".concat(iddPrefix, " ").concat(countryCallingCode, " ").concat(formatNationalNumber(nationalNumber, null, 'INTERNATIONAL', metadata));
+  }
+}
+//# sourceMappingURL=format.js.map
+
+/***/ }),
+
+/***/ 9117:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports["default"] = formatIncompletePhoneNumber;
+
+var _AsYouType = _interopRequireDefault(__webpack_require__(458));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+/**
+ * Formats a (possibly incomplete) phone number.
+ * The phone number can be either in E.164 format
+ * or in a form of national number digits.
+ * @param {string} value - A possibly incomplete phone number. Either in E.164 format or in a form of national number digits.
+ * @param {string|object} [optionsOrDefaultCountry] - A two-letter ("ISO 3166-1 alpha-2") country code, or an object of shape `{ defaultCountry?: string, defaultCallingCode?: string }`.
+ * @return {string} Formatted (possibly incomplete) phone number.
+ */
+function formatIncompletePhoneNumber(value, optionsOrDefaultCountry, metadata) {
+  if (!metadata) {
+    metadata = optionsOrDefaultCountry;
+    optionsOrDefaultCountry = undefined;
+  }
+
+  return new _AsYouType["default"](optionsOrDefaultCountry, metadata).input(value);
+}
+//# sourceMappingURL=formatIncompletePhoneNumber.js.map
+
+/***/ }),
+
+/***/ 503:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports["default"] = getCountries;
+
+var _metadata = _interopRequireDefault(__webpack_require__(1084));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function getCountries(metadata) {
+  return new _metadata["default"](metadata).getCountries();
+}
+//# sourceMappingURL=getCountries.js.map
+
+/***/ }),
+
+/***/ 6138:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -7771,13 +8294,2192 @@ function endsWith(string, substring) {
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = findNumbers;
+Object.defineProperty(exports, "default", ({
+  enumerable: true,
+  get: function get() {
+    return _metadata.getCountryCallingCode;
+  }
+}));
 
-var _PhoneNumberMatcher = _interopRequireDefault(__webpack_require__(2066));
+var _metadata = __webpack_require__(1084);
+//# sourceMappingURL=getCountryCallingCode.js.map
+
+/***/ }),
+
+/***/ 8066:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports["default"] = getExampleNumber;
+
+var _PhoneNumber = _interopRequireDefault(__webpack_require__(4908));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function findNumbers(text, options, metadata) {
+function getExampleNumber(country, examples, metadata) {
+  if (examples[country]) {
+    return new _PhoneNumber["default"](country, examples[country], metadata);
+  }
+}
+//# sourceMappingURL=getExampleNumber.js.map
+
+/***/ }),
+
+/***/ 6366:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.formatRFC3966 = formatRFC3966;
+exports.parseRFC3966 = parseRFC3966;
+
+var _isViablePhoneNumber = _interopRequireDefault(__webpack_require__(333));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+// https://www.ietf.org/rfc/rfc3966.txt
+
+/**
+ * @param  {string} text - Phone URI (RFC 3966).
+ * @return {object} `{ ?number, ?ext }`.
+ */
+function parseRFC3966(text) {
+  var number;
+  var ext; // Replace "tel:" with "tel=" for parsing convenience.
+
+  text = text.replace(/^tel:/, 'tel=');
+
+  for (var _iterator = _createForOfIteratorHelperLoose(text.split(';')), _step; !(_step = _iterator()).done;) {
+    var part = _step.value;
+
+    var _part$split = part.split('='),
+        _part$split2 = _slicedToArray(_part$split, 2),
+        name = _part$split2[0],
+        value = _part$split2[1];
+
+    switch (name) {
+      case 'tel':
+        number = value;
+        break;
+
+      case 'ext':
+        ext = value;
+        break;
+
+      case 'phone-context':
+        // Only "country contexts" are supported.
+        // "Domain contexts" are ignored.
+        if (value[0] === '+') {
+          number = value + number;
+        }
+
+        break;
+    }
+  } // If the phone number is not viable, then abort.
+
+
+  if (!(0, _isViablePhoneNumber["default"])(number)) {
+    return {};
+  }
+
+  var result = {
+    number: number
+  };
+
+  if (ext) {
+    result.ext = ext;
+  }
+
+  return result;
+}
+/**
+ * @param  {object} - `{ ?number, ?extension }`.
+ * @return {string} Phone URI (RFC 3966).
+ */
+
+
+function formatRFC3966(_ref) {
+  var number = _ref.number,
+      ext = _ref.ext;
+
+  if (!number) {
+    return '';
+  }
+
+  if (number[0] !== '+') {
+    throw new Error("\"formatRFC3966()\" expects \"number\" to be in E.164 format.");
+  }
+
+  return "tel:".concat(number).concat(ext ? ';ext=' + ext : '');
+}
+//# sourceMappingURL=RFC3966.js.map
+
+/***/ }),
+
+/***/ 6279:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = applyInternationalSeparatorStyle;
+
+var _constants = __webpack_require__(2632);
+
+// Removes brackets and replaces dashes with spaces.
+//
+// E.g. "(999) 111-22-33" -> "999 111 22 33"
+//
+// For some reason Google's metadata contains `<intlFormat/>`s with brackets and dashes.
+// Meanwhile, there's no single opinion about using punctuation in international phone numbers.
+//
+// For example, Google's `<intlFormat/>` for USA is `+1 213-373-4253`.
+// And here's a quote from WikiPedia's "North American Numbering Plan" page:
+// https://en.wikipedia.org/wiki/North_American_Numbering_Plan
+//
+// "The country calling code for all countries participating in the NANP is 1.
+// In international format, an NANP number should be listed as +1 301 555 01 00,
+// where 301 is an area code (Maryland)."
+//
+// I personally prefer the international format without any punctuation.
+// For example, brackets are remnants of the old age, meaning that the
+// phone number part in brackets (so called "area code") can be omitted
+// if dialing within the same "area".
+// And hyphens were clearly introduced for splitting local numbers into memorizable groups.
+// For example, remembering "5553535" is difficult but "555-35-35" is much simpler.
+// Imagine a man taking a bus from home to work and seeing an ad with a phone number.
+// He has a couple of seconds to memorize that number until it passes by.
+// If it were spaces instead of hyphens the man wouldn't necessarily get it,
+// but with hyphens instead of spaces the grouping is more explicit.
+// I personally think that hyphens introduce visual clutter,
+// so I prefer replacing them with spaces in international numbers.
+// In the modern age all output is done on displays where spaces are clearly distinguishable
+// so hyphens can be safely replaced with spaces without losing any legibility.
+//
+function applyInternationalSeparatorStyle(formattedNumber) {
+  return formattedNumber.replace(new RegExp("[".concat(_constants.VALID_PUNCTUATION, "]+"), 'g'), ' ').trim();
+}
+//# sourceMappingURL=applyInternationalSeparatorStyle.js.map
+
+/***/ }),
+
+/***/ 6034:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.checkNumberLengthForType = checkNumberLengthForType;
+exports["default"] = checkNumberLength;
+
+var _mergeArrays = _interopRequireDefault(__webpack_require__(281));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function checkNumberLength(nationalNumber, metadata) {
+  return checkNumberLengthForType(nationalNumber, undefined, metadata);
+} // Checks whether a number is possible for the country based on its length.
+// Should only be called for the "new" metadata which has "possible lengths".
+
+
+function checkNumberLengthForType(nationalNumber, type, metadata) {
+  var type_info = metadata.type(type); // There should always be "<possiblePengths/>" set for every type element.
+  // This is declared in the XML schema.
+  // For size efficiency, where a sub-description (e.g. fixed-line)
+  // has the same "<possiblePengths/>" as the "general description", this is missing,
+  // so we fall back to the "general description". Where no numbers of the type
+  // exist at all, there is one possible length (-1) which is guaranteed
+  // not to match the length of any real phone number.
+
+  var possible_lengths = type_info && type_info.possibleLengths() || metadata.possibleLengths(); // let local_lengths    = type_info && type.possibleLengthsLocal() || metadata.possibleLengthsLocal()
+  // Metadata before version `1.0.18` didn't contain `possible_lengths`.
+
+  if (!possible_lengths) {
+    return 'IS_POSSIBLE';
+  }
+
+  if (type === 'FIXED_LINE_OR_MOBILE') {
+    // No such country in metadata.
+
+    /* istanbul ignore next */
+    if (!metadata.type('FIXED_LINE')) {
+      // The rare case has been encountered where no fixedLine data is available
+      // (true for some non-geographic entities), so we just check mobile.
+      return checkNumberLengthForType(nationalNumber, 'MOBILE', metadata);
+    }
+
+    var mobile_type = metadata.type('MOBILE');
+
+    if (mobile_type) {
+      // Merge the mobile data in if there was any. "Concat" creates a new
+      // array, it doesn't edit possible_lengths in place, so we don't need a copy.
+      // Note that when adding the possible lengths from mobile, we have
+      // to again check they aren't empty since if they are this indicates
+      // they are the same as the general desc and should be obtained from there.
+      possible_lengths = (0, _mergeArrays["default"])(possible_lengths, mobile_type.possibleLengths()); // The current list is sorted; we need to merge in the new list and
+      // re-sort (duplicates are okay). Sorting isn't so expensive because
+      // the lists are very small.
+      // if (local_lengths) {
+      // 	local_lengths = mergeArrays(local_lengths, mobile_type.possibleLengthsLocal())
+      // } else {
+      // 	local_lengths = mobile_type.possibleLengthsLocal()
+      // }
+    }
+  } // If the type doesn't exist then return 'INVALID_LENGTH'.
+  else if (type && !type_info) {
+    return 'INVALID_LENGTH';
+  }
+
+  var actual_length = nationalNumber.length; // In `libphonenumber-js` all "local-only" formats are dropped for simplicity.
+  // // This is safe because there is never an overlap beween the possible lengths
+  // // and the local-only lengths; this is checked at build time.
+  // if (local_lengths && local_lengths.indexOf(nationalNumber.length) >= 0)
+  // {
+  // 	return 'IS_POSSIBLE_LOCAL_ONLY'
+  // }
+
+  var minimum_length = possible_lengths[0];
+
+  if (minimum_length === actual_length) {
+    return 'IS_POSSIBLE';
+  }
+
+  if (minimum_length > actual_length) {
+    return 'TOO_SHORT';
+  }
+
+  if (possible_lengths[possible_lengths.length - 1] < actual_length) {
+    return 'TOO_LONG';
+  } // We skip the first element since we've already checked it.
+
+
+  return possible_lengths.indexOf(actual_length, 1) >= 0 ? 'IS_POSSIBLE' : 'INVALID_LENGTH';
+}
+//# sourceMappingURL=checkNumberLength.js.map
+
+/***/ }),
+
+/***/ 432:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = createExtensionPattern;
+
+var _constants = __webpack_require__(2632);
+
+// The RFC 3966 format for extensions.
+var RFC3966_EXTN_PREFIX = ';ext=';
+/**
+ * Helper method for constructing regular expressions for parsing. Creates
+ * an expression that captures up to max_length digits.
+ * @return {string} RegEx pattern to capture extension digits.
+ */
+
+var getExtensionDigitsPattern = function getExtensionDigitsPattern(maxLength) {
+  return "([".concat(_constants.VALID_DIGITS, "]{1,").concat(maxLength, "})");
+};
+/**
+ * Helper initialiser method to create the regular-expression pattern to match
+ * extensions.
+ * Copy-pasted from Google's `libphonenumber`:
+ * https://github.com/google/libphonenumber/blob/55b2646ec9393f4d3d6661b9c82ef9e258e8b829/javascript/i18n/phonenumbers/phonenumberutil.js#L759-L766
+ * @return {string} RegEx pattern to capture extensions.
+ */
+
+
+function createExtensionPattern(purpose) {
+  // We cap the maximum length of an extension based on the ambiguity of the way
+  // the extension is prefixed. As per ITU, the officially allowed length for
+  // extensions is actually 40, but we don't support this since we haven't seen real
+  // examples and this introduces many false interpretations as the extension labels
+  // are not standardized.
+
+  /** @type {string} */
+  var extLimitAfterExplicitLabel = '20';
+  /** @type {string} */
+
+  var extLimitAfterLikelyLabel = '15';
+  /** @type {string} */
+
+  var extLimitAfterAmbiguousChar = '9';
+  /** @type {string} */
+
+  var extLimitWhenNotSure = '6';
+  /** @type {string} */
+
+  var possibleSeparatorsBetweenNumberAndExtLabel = "[ \xA0\\t,]*"; // Optional full stop (.) or colon, followed by zero or more spaces/tabs/commas.
+
+  /** @type {string} */
+
+  var possibleCharsAfterExtLabel = "[:\\.\uFF0E]?[ \xA0\\t,-]*";
+  /** @type {string} */
+
+  var optionalExtnSuffix = "#?"; // Here the extension is called out in more explicit way, i.e mentioning it obvious
+  // patterns like "ext.".
+
+  /** @type {string} */
+
+  var explicitExtLabels = "(?:e?xt(?:ensi(?:o\u0301?|\xF3))?n?|\uFF45?\uFF58\uFF54\uFF4E?|\u0434\u043E\u0431|anexo)"; // One-character symbols that can be used to indicate an extension, and less
+  // commonly used or more ambiguous extension labels.
+
+  /** @type {string} */
+
+  var ambiguousExtLabels = "(?:[x\uFF58#\uFF03~\uFF5E]|int|\uFF49\uFF4E\uFF54)"; // When extension is not separated clearly.
+
+  /** @type {string} */
+
+  var ambiguousSeparator = "[- ]+"; // This is the same as possibleSeparatorsBetweenNumberAndExtLabel, but not matching
+  // comma as extension label may have it.
+
+  /** @type {string} */
+
+  var possibleSeparatorsNumberExtLabelNoComma = "[ \xA0\\t]*"; // ",," is commonly used for auto dialling the extension when connected. First
+  // comma is matched through possibleSeparatorsBetweenNumberAndExtLabel, so we do
+  // not repeat it here. Semi-colon works in Iphone and Android also to pop up a
+  // button with the extension number following.
+
+  /** @type {string} */
+
+  var autoDiallingAndExtLabelsFound = "(?:,{2}|;)";
+  /** @type {string} */
+
+  var rfcExtn = RFC3966_EXTN_PREFIX + getExtensionDigitsPattern(extLimitAfterExplicitLabel);
+  /** @type {string} */
+
+  var explicitExtn = possibleSeparatorsBetweenNumberAndExtLabel + explicitExtLabels + possibleCharsAfterExtLabel + getExtensionDigitsPattern(extLimitAfterExplicitLabel) + optionalExtnSuffix;
+  /** @type {string} */
+
+  var ambiguousExtn = possibleSeparatorsBetweenNumberAndExtLabel + ambiguousExtLabels + possibleCharsAfterExtLabel + getExtensionDigitsPattern(extLimitAfterAmbiguousChar) + optionalExtnSuffix;
+  /** @type {string} */
+
+  var americanStyleExtnWithSuffix = ambiguousSeparator + getExtensionDigitsPattern(extLimitWhenNotSure) + "#";
+  /** @type {string} */
+
+  var autoDiallingExtn = possibleSeparatorsNumberExtLabelNoComma + autoDiallingAndExtLabelsFound + possibleCharsAfterExtLabel + getExtensionDigitsPattern(extLimitAfterLikelyLabel) + optionalExtnSuffix;
+  /** @type {string} */
+
+  var onlyCommasExtn = possibleSeparatorsNumberExtLabelNoComma + "(?:,)+" + possibleCharsAfterExtLabel + getExtensionDigitsPattern(extLimitAfterAmbiguousChar) + optionalExtnSuffix; // The first regular expression covers RFC 3966 format, where the extension is added
+  // using ";ext=". The second more generic where extension is mentioned with explicit
+  // labels like "ext:". In both the above cases we allow more numbers in extension than
+  // any other extension labels. The third one captures when single character extension
+  // labels or less commonly used labels are used. In such cases we capture fewer
+  // extension digits in order to reduce the chance of falsely interpreting two
+  // numbers beside each other as a number + extension. The fourth one covers the
+  // special case of American numbers where the extension is written with a hash
+  // at the end, such as "- 503#". The fifth one is exclusively for extension
+  // autodialling formats which are used when dialling and in this case we accept longer
+  // extensions. The last one is more liberal on the number of commas that acts as
+  // extension labels, so we have a strict cap on the number of digits in such extensions.
+
+  return rfcExtn + "|" + explicitExtn + "|" + ambiguousExtn + "|" + americanStyleExtnWithSuffix + "|" + autoDiallingExtn + "|" + onlyCommasExtn;
+}
+//# sourceMappingURL=createExtensionPattern.js.map
+
+/***/ }),
+
+/***/ 9619:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = extractExtension;
+
+var _createExtensionPattern = _interopRequireDefault(__webpack_require__(432));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+// Regexp of all known extension prefixes used by different regions followed by
+// 1 or more valid digits, for use when parsing.
+var EXTN_PATTERN = new RegExp('(?:' + (0, _createExtensionPattern["default"])() + ')$', 'i'); // Strips any extension (as in, the part of the number dialled after the call is
+// connected, usually indicated with extn, ext, x or similar) from the end of
+// the number, and returns it.
+
+function extractExtension(number) {
+  var start = number.search(EXTN_PATTERN);
+
+  if (start < 0) {
+    return {};
+  } // If we find a potential extension, and the number preceding this is a viable
+  // number, we assume it is an extension.
+
+
+  var numberWithoutExtension = number.slice(0, start);
+  var matches = number.match(EXTN_PATTERN);
+  var i = 1;
+
+  while (i < matches.length) {
+    if (matches[i]) {
+      return {
+        number: numberWithoutExtension,
+        ext: matches[i]
+      };
+    }
+
+    i++;
+  }
+}
+//# sourceMappingURL=extractExtension.js.map
+
+/***/ }),
+
+/***/ 2793:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = extractCountryCallingCode;
+
+var _stripIddPrefix = _interopRequireDefault(__webpack_require__(1570));
+
+var _extractCountryCallingCodeFromInternationalNumberWithoutPlusSign = _interopRequireDefault(__webpack_require__(9443));
+
+var _metadata = _interopRequireDefault(__webpack_require__(1084));
+
+var _constants = __webpack_require__(2632);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+/**
+ * Converts a phone number digits (possibly with a `+`)
+ * into a calling code and the rest phone number digits.
+ * The "rest phone number digits" could include
+ * a national prefix, carrier code, and national
+ * (significant) number.
+ * @param  {string} number — Phone number digits (possibly with a `+`).
+ * @param  {string} [country] — Default country.
+ * @param  {string} [callingCode] — Default calling code (some phone numbering plans are non-geographic).
+ * @param  {object} metadata
+ * @return {object} `{ countryCallingCodeSource: string?, countryCallingCode: string?, number: string }`
+ * @example
+ * // Returns `{ countryCallingCode: "1", number: "2133734253" }`.
+ * extractCountryCallingCode('2133734253', 'US', null, metadata)
+ * extractCountryCallingCode('2133734253', null, '1', metadata)
+ * extractCountryCallingCode('+12133734253', null, null, metadata)
+ * extractCountryCallingCode('+12133734253', 'RU', null, metadata)
+ */
+function extractCountryCallingCode(number, country, callingCode, metadata) {
+  if (!number) {
+    return {};
+  }
+
+  var isNumberWithIddPrefix; // If this is not an international phone number,
+  // then either extract an "IDD" prefix, or extract a
+  // country calling code from a number by autocorrecting it
+  // by prepending a leading `+` in cases when it starts
+  // with the country calling code.
+  // https://wikitravel.org/en/International_dialling_prefix
+  // https://github.com/catamphetamine/libphonenumber-js/issues/376
+
+  if (number[0] !== '+') {
+    // Convert an "out-of-country" dialing phone number
+    // to a proper international phone number.
+    var numberWithoutIDD = (0, _stripIddPrefix["default"])(number, country, callingCode, metadata); // If an IDD prefix was stripped then
+    // convert the number to international one
+    // for subsequent parsing.
+
+    if (numberWithoutIDD && numberWithoutIDD !== number) {
+      isNumberWithIddPrefix = true;
+      number = '+' + numberWithoutIDD;
+    } else {
+      // Check to see if the number starts with the country calling code
+      // for the default country. If so, we remove the country calling code,
+      // and do some checks on the validity of the number before and after.
+      // https://github.com/catamphetamine/libphonenumber-js/issues/376
+      if (country || callingCode) {
+        var _extractCountryCallin = (0, _extractCountryCallingCodeFromInternationalNumberWithoutPlusSign["default"])(number, country, callingCode, metadata),
+            countryCallingCode = _extractCountryCallin.countryCallingCode,
+            shorterNumber = _extractCountryCallin.number;
+
+        if (countryCallingCode) {
+          return {
+            countryCallingCodeSource: 'FROM_NUMBER_WITHOUT_PLUS_SIGN',
+            countryCallingCode: countryCallingCode,
+            number: shorterNumber
+          };
+        }
+      }
+
+      return {
+        // No need to set it to `UNSPECIFIED`. It can be just `undefined`.
+        // countryCallingCodeSource: 'UNSPECIFIED',
+        number: number
+      };
+    }
+  } // Fast abortion: country codes do not begin with a '0'
+
+
+  if (number[1] === '0') {
+    return {};
+  }
+
+  metadata = new _metadata["default"](metadata); // The thing with country phone codes
+  // is that they are orthogonal to each other
+  // i.e. there's no such country phone code A
+  // for which country phone code B exists
+  // where B starts with A.
+  // Therefore, while scanning digits,
+  // if a valid country code is found,
+  // that means that it is the country code.
+  //
+
+  var i = 2;
+
+  while (i - 1 <= _constants.MAX_LENGTH_COUNTRY_CODE && i <= number.length) {
+    var _countryCallingCode = number.slice(1, i);
+
+    if (metadata.hasCallingCode(_countryCallingCode)) {
+      metadata.selectNumberingPlan(_countryCallingCode);
+      return {
+        countryCallingCodeSource: isNumberWithIddPrefix ? 'FROM_NUMBER_WITH_IDD' : 'FROM_NUMBER_WITH_PLUS_SIGN',
+        countryCallingCode: _countryCallingCode,
+        number: number.slice(i)
+      };
+    }
+
+    i++;
+  }
+
+  return {};
+} // The possible values for the returned `countryCallingCodeSource` are:
+//
+// Copy-pasted from:
+// https://github.com/google/libphonenumber/blob/master/resources/phonenumber.proto
+//
+// // The source from which the country_code is derived. This is not set in the
+// // general parsing method, but in the method that parses and keeps raw_input.
+// // New fields could be added upon request.
+// enum CountryCodeSource {
+//  // Default value returned if this is not set, because the phone number was
+//  // created using parse, not parseAndKeepRawInput. hasCountryCodeSource will
+//  // return false if this is the case.
+//  UNSPECIFIED = 0;
+//
+//  // The country_code is derived based on a phone number with a leading "+",
+//  // e.g. the French number "+33 1 42 68 53 00".
+//  FROM_NUMBER_WITH_PLUS_SIGN = 1;
+//
+//  // The country_code is derived based on a phone number with a leading IDD,
+//  // e.g. the French number "011 33 1 42 68 53 00", as it is dialled from US.
+//  FROM_NUMBER_WITH_IDD = 5;
+//
+//  // The country_code is derived based on a phone number without a leading
+//  // "+", e.g. the French number "33 1 42 68 53 00" when defaultCountry is
+//  // supplied as France.
+//  FROM_NUMBER_WITHOUT_PLUS_SIGN = 10;
+//
+//  // The country_code is derived NOT based on the phone number itself, but
+//  // from the defaultCountry parameter provided in the parsing function by the
+//  // clients. This happens mostly for numbers written in the national format
+//  // (without country code). For example, this would be set when parsing the
+//  // French number "01 42 68 53 00", when defaultCountry is supplied as
+//  // France.
+//  FROM_DEFAULT_COUNTRY = 20;
+// }
+//# sourceMappingURL=extractCountryCallingCode.js.map
+
+/***/ }),
+
+/***/ 9443:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = extractCountryCallingCodeFromInternationalNumberWithoutPlusSign;
+
+var _metadata = _interopRequireDefault(__webpack_require__(1084));
+
+var _matchesEntirely = _interopRequireDefault(__webpack_require__(5648));
+
+var _extractNationalNumber = _interopRequireDefault(__webpack_require__(1317));
+
+var _checkNumberLength = _interopRequireDefault(__webpack_require__(6034));
+
+var _getCountryCallingCode = _interopRequireDefault(__webpack_require__(6138));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+/**
+ * Sometimes some people incorrectly input international phone numbers
+ * without the leading `+`. This function corrects such input.
+ * @param  {string} number — Phone number digits.
+ * @param  {string?} country
+ * @param  {string?} callingCode
+ * @param  {object} metadata
+ * @return {object} `{ countryCallingCode: string?, number: string }`.
+ */
+function extractCountryCallingCodeFromInternationalNumberWithoutPlusSign(number, country, callingCode, metadata) {
+  var countryCallingCode = country ? (0, _getCountryCallingCode["default"])(country, metadata) : callingCode;
+
+  if (number.indexOf(countryCallingCode) === 0) {
+    metadata = new _metadata["default"](metadata);
+    metadata.selectNumberingPlan(country, callingCode);
+    var possibleShorterNumber = number.slice(countryCallingCode.length);
+
+    var _extractNationalNumbe = (0, _extractNationalNumber["default"])(possibleShorterNumber, metadata),
+        possibleShorterNationalNumber = _extractNationalNumbe.nationalNumber;
+
+    var _extractNationalNumbe2 = (0, _extractNationalNumber["default"])(number, metadata),
+        nationalNumber = _extractNationalNumbe2.nationalNumber; // If the number was not valid before but is valid now,
+    // or if it was too long before, we consider the number
+    // with the country calling code stripped to be a better result
+    // and keep that instead.
+    // For example, in Germany (+49), `49` is a valid area code,
+    // so if a number starts with `49`, it could be both a valid
+    // national German number or an international number without
+    // a leading `+`.
+
+
+    if (!(0, _matchesEntirely["default"])(nationalNumber, metadata.nationalNumberPattern()) && (0, _matchesEntirely["default"])(possibleShorterNationalNumber, metadata.nationalNumberPattern()) || (0, _checkNumberLength["default"])(nationalNumber, metadata) === 'TOO_LONG') {
+      return {
+        countryCallingCode: countryCallingCode,
+        number: possibleShorterNumber
+      };
+    }
+  }
+
+  return {
+    number: number
+  };
+}
+//# sourceMappingURL=extractCountryCallingCodeFromInternationalNumberWithoutPlusSign.js.map
+
+/***/ }),
+
+/***/ 2302:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = extractFormattedPhoneNumberFromPossibleRfc3966NumberUri;
+
+var _extractPhoneContext = _interopRequireWildcard(__webpack_require__(3733));
+
+var _ParseError = _interopRequireDefault(__webpack_require__(7986));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+/**
+ * @param  {string} numberToParse
+ * @param  {string} nationalNumber
+ * @return {}
+ */
+function extractFormattedPhoneNumberFromPossibleRfc3966NumberUri(numberToParse, _ref) {
+  var extractFormattedPhoneNumber = _ref.extractFormattedPhoneNumber;
+  var phoneContext = (0, _extractPhoneContext["default"])(numberToParse);
+
+  if (!(0, _extractPhoneContext.isPhoneContextValid)(phoneContext)) {
+    throw new _ParseError["default"]('NOT_A_NUMBER');
+  }
+
+  var phoneNumberString;
+
+  if (phoneContext === null) {
+    // Extract a possible number from the string passed in.
+    // (this strips leading characters that could not be the start of a phone number)
+    phoneNumberString = extractFormattedPhoneNumber(numberToParse) || '';
+  } else {
+    phoneNumberString = ''; // If the phone context contains a phone number prefix, we need to capture
+    // it, whereas domains will be ignored.
+
+    if (phoneContext.charAt(0) === _extractPhoneContext.PLUS_SIGN) {
+      phoneNumberString += phoneContext;
+    } // Now append everything between the "tel:" prefix and the phone-context.
+    // This should include the national number, an optional extension or
+    // isdn-subaddress component. Note we also handle the case when "tel:" is
+    // missing, as we have seen in some of the phone number inputs.
+    // In that case, we append everything from the beginning.
+
+
+    var indexOfRfc3966Prefix = numberToParse.indexOf(_extractPhoneContext.RFC3966_PREFIX_);
+    var indexOfNationalNumber; // RFC 3966 "tel:" prefix is preset at this stage because
+    // `isPhoneContextValid()` requires it to be present.
+
+    /* istanbul ignore else */
+
+    if (indexOfRfc3966Prefix >= 0) {
+      indexOfNationalNumber = indexOfRfc3966Prefix + _extractPhoneContext.RFC3966_PREFIX_.length;
+    } else {
+      indexOfNationalNumber = 0;
+    }
+
+    var indexOfPhoneContext = numberToParse.indexOf(_extractPhoneContext.RFC3966_PHONE_CONTEXT_);
+    phoneNumberString += numberToParse.substring(indexOfNationalNumber, indexOfPhoneContext);
+  } // Delete the isdn-subaddress and everything after it if it is present.
+  // Note extension won't appear at the same time with isdn-subaddress
+  // according to paragraph 5.3 of the RFC3966 spec.
+
+
+  var indexOfIsdn = phoneNumberString.indexOf(_extractPhoneContext.RFC3966_ISDN_SUBADDRESS_);
+
+  if (indexOfIsdn > 0) {
+    phoneNumberString = phoneNumberString.substring(0, indexOfIsdn);
+  } // If both phone context and isdn-subaddress are absent but other
+  // parameters are present, the parameters are left in nationalNumber.
+  // This is because we are concerned about deleting content from a potential
+  // number string when there is no strong evidence that the number is
+  // actually written in RFC3966.
+
+
+  if (phoneNumberString !== '') {
+    return phoneNumberString;
+  }
+}
+//# sourceMappingURL=extractFormattedPhoneNumberFromPossibleRfc3966NumberUri.js.map
+
+/***/ }),
+
+/***/ 1317:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = extractNationalNumber;
+
+var _extractNationalNumberFromPossiblyIncompleteNumber = _interopRequireDefault(__webpack_require__(8043));
+
+var _matchesEntirely = _interopRequireDefault(__webpack_require__(5648));
+
+var _checkNumberLength = _interopRequireDefault(__webpack_require__(6034));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+/**
+ * Strips national prefix and carrier code from a complete phone number.
+ * The difference from the non-"FromCompleteNumber" function is that
+ * it won't extract national prefix if the resultant number is too short
+ * to be a complete number for the selected phone numbering plan.
+ * @param  {string} number — Complete phone number digits.
+ * @param  {Metadata} metadata — Metadata with a phone numbering plan selected.
+ * @return {object} `{ nationalNumber: string, carrierCode: string? }`.
+ */
+function extractNationalNumber(number, metadata) {
+  // Parsing national prefixes and carrier codes
+  // is only required for local phone numbers
+  // but some people don't understand that
+  // and sometimes write international phone numbers
+  // with national prefixes (or maybe even carrier codes).
+  // http://ucken.blogspot.ru/2016/03/trunk-prefixes-in-skype4b.html
+  // Google's original library forgives such mistakes
+  // and so does this library, because it has been requested:
+  // https://github.com/catamphetamine/libphonenumber-js/issues/127
+  var _extractNationalNumbe = (0, _extractNationalNumberFromPossiblyIncompleteNumber["default"])(number, metadata),
+      carrierCode = _extractNationalNumbe.carrierCode,
+      nationalNumber = _extractNationalNumbe.nationalNumber;
+
+  if (nationalNumber !== number) {
+    if (!shouldHaveExtractedNationalPrefix(number, nationalNumber, metadata)) {
+      // Don't strip the national prefix.
+      return {
+        nationalNumber: number
+      };
+    } // Check the national (significant) number length after extracting national prefix and carrier code.
+    // Legacy generated metadata (before `1.0.18`) didn't support the "possible lengths" feature.
+
+
+    if (metadata.possibleLengths()) {
+      // The number remaining after stripping the national prefix and carrier code
+      // should be long enough to have a possible length for the country.
+      // Otherwise, don't strip the national prefix and carrier code,
+      // since the original number could be a valid number.
+      // This check has been copy-pasted "as is" from Google's original library:
+      // https://github.com/google/libphonenumber/blob/876268eb1ad6cdc1b7b5bef17fc5e43052702d57/java/libphonenumber/src/com/google/i18n/phonenumbers/PhoneNumberUtil.java#L3236-L3250
+      // It doesn't check for the "possibility" of the original `number`.
+      // I guess it's fine not checking that one. It works as is anyway.
+      if (!isPossibleIncompleteNationalNumber(nationalNumber, metadata)) {
+        // Don't strip the national prefix.
+        return {
+          nationalNumber: number
+        };
+      }
+    }
+  }
+
+  return {
+    nationalNumber: nationalNumber,
+    carrierCode: carrierCode
+  };
+} // In some countries, the same digit could be a national prefix
+// or a leading digit of a valid phone number.
+// For example, in Russia, national prefix is `8`,
+// and also `800 555 35 35` is a valid number
+// in which `8` is not a national prefix, but the first digit
+// of a national (significant) number.
+// Same's with Belarus:
+// `82004910060` is a valid national (significant) number,
+// but `2004910060` is not.
+// To support such cases (to prevent the code from always stripping
+// national prefix), a condition is imposed: a national prefix
+// is not extracted when the original number is "viable" and the
+// resultant number is not, a "viable" national number being the one
+// that matches `national_number_pattern`.
+
+
+function shouldHaveExtractedNationalPrefix(nationalNumberBefore, nationalNumberAfter, metadata) {
+  // The equivalent in Google's code is:
+  // https://github.com/google/libphonenumber/blob/e326fa1fc4283bb05eb35cb3c15c18f98a31af33/java/libphonenumber/src/com/google/i18n/phonenumbers/PhoneNumberUtil.java#L2969-L3004
+  if ((0, _matchesEntirely["default"])(nationalNumberBefore, metadata.nationalNumberPattern()) && !(0, _matchesEntirely["default"])(nationalNumberAfter, metadata.nationalNumberPattern())) {
+    return false;
+  } // This "is possible" national number (length) check has been commented out
+  // because it's superceded by the (effectively) same check done in the
+  // `extractNationalNumber()` function after it calls `shouldHaveExtractedNationalPrefix()`.
+  // In other words, why run the same check twice if it could only be run once.
+  // // Check the national (significant) number length after extracting national prefix and carrier code.
+  // // Fixes a minor "weird behavior" bug: https://gitlab.com/catamphetamine/libphonenumber-js/-/issues/57
+  // // (Legacy generated metadata (before `1.0.18`) didn't support the "possible lengths" feature).
+  // if (metadata.possibleLengths()) {
+  // 	if (isPossibleIncompleteNationalNumber(nationalNumberBefore, metadata) &&
+  // 		!isPossibleIncompleteNationalNumber(nationalNumberAfter, metadata)) {
+  // 		return false
+  // 	}
+  // }
+
+
+  return true;
+}
+
+function isPossibleIncompleteNationalNumber(nationalNumber, metadata) {
+  switch ((0, _checkNumberLength["default"])(nationalNumber, metadata)) {
+    case 'TOO_SHORT':
+    case 'INVALID_LENGTH':
+      // This library ignores "local-only" phone numbers (for simplicity).
+      // See the readme for more info on what are "local-only" phone numbers.
+      // case 'IS_POSSIBLE_LOCAL_ONLY':
+      return false;
+
+    default:
+      return true;
+  }
+}
+//# sourceMappingURL=extractNationalNumber.js.map
+
+/***/ }),
+
+/***/ 8043:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = extractNationalNumberFromPossiblyIncompleteNumber;
+
+/**
+ * Strips any national prefix (such as 0, 1) present in a
+ * (possibly incomplete) number provided.
+ * "Carrier codes" are only used  in Colombia and Brazil,
+ * and only when dialing within those countries from a mobile phone to a fixed line number.
+ * Sometimes it won't actually strip national prefix
+ * and will instead prepend some digits to the `number`:
+ * for example, when number `2345678` is passed with `VI` country selected,
+ * it will return `{ number: "3402345678" }`, because `340` area code is prepended.
+ * @param {string} number — National number digits.
+ * @param {object} metadata — Metadata with country selected.
+ * @return {object} `{ nationalNumber: string, nationalPrefix: string? carrierCode: string? }`. Even if a national prefix was extracted, it's not necessarily present in the returned object, so don't rely on its presence in the returned object in order to find out whether a national prefix has been extracted or not.
+ */
+function extractNationalNumberFromPossiblyIncompleteNumber(number, metadata) {
+  if (number && metadata.numberingPlan.nationalPrefixForParsing()) {
+    // See METADATA.md for the description of
+    // `national_prefix_for_parsing` and `national_prefix_transform_rule`.
+    // Attempt to parse the first digits as a national prefix.
+    var prefixPattern = new RegExp('^(?:' + metadata.numberingPlan.nationalPrefixForParsing() + ')');
+    var prefixMatch = prefixPattern.exec(number);
+
+    if (prefixMatch) {
+      var nationalNumber;
+      var carrierCode; // https://gitlab.com/catamphetamine/libphonenumber-js/-/blob/master/METADATA.md#national_prefix_for_parsing--national_prefix_transform_rule
+      // If a `national_prefix_for_parsing` has any "capturing groups"
+      // then it means that the national (significant) number is equal to
+      // those "capturing groups" transformed via `national_prefix_transform_rule`,
+      // and nothing could be said about the actual national prefix:
+      // what is it and was it even there.
+      // If a `national_prefix_for_parsing` doesn't have any "capturing groups",
+      // then everything it matches is a national prefix.
+      // To determine whether `national_prefix_for_parsing` matched any
+      // "capturing groups", the value of the result of calling `.exec()`
+      // is looked at, and if it has non-undefined values where there're
+      // "capturing groups" in the regular expression, then it means
+      // that "capturing groups" have been matched.
+      // It's not possible to tell whether there'll be any "capturing gropus"
+      // before the matching process, because a `national_prefix_for_parsing`
+      // could exhibit both behaviors.
+
+      var capturedGroupsCount = prefixMatch.length - 1;
+      var hasCapturedGroups = capturedGroupsCount > 0 && prefixMatch[capturedGroupsCount];
+
+      if (metadata.nationalPrefixTransformRule() && hasCapturedGroups) {
+        nationalNumber = number.replace(prefixPattern, metadata.nationalPrefixTransformRule()); // If there's more than one captured group,
+        // then carrier code is the second one.
+
+        if (capturedGroupsCount > 1) {
+          carrierCode = prefixMatch[1];
+        }
+      } // If there're no "capturing groups",
+      // or if there're "capturing groups" but no
+      // `national_prefix_transform_rule`,
+      // then just strip the national prefix from the number,
+      // and possibly a carrier code.
+      // Seems like there could be more.
+      else {
+        // `prefixBeforeNationalNumber` is the whole substring matched by
+        // the `national_prefix_for_parsing` regular expression.
+        // There seem to be no guarantees that it's just a national prefix.
+        // For example, if there's a carrier code, it's gonna be a
+        // part of `prefixBeforeNationalNumber` too.
+        var prefixBeforeNationalNumber = prefixMatch[0];
+        nationalNumber = number.slice(prefixBeforeNationalNumber.length); // If there's at least one captured group,
+        // then carrier code is the first one.
+
+        if (hasCapturedGroups) {
+          carrierCode = prefixMatch[1];
+        }
+      } // Tries to guess whether a national prefix was present in the input.
+      // This is not something copy-pasted from Google's library:
+      // they don't seem to have an equivalent for that.
+      // So this isn't an "officially approved" way of doing something like that.
+      // But since there seems no other existing method, this library uses it.
+
+
+      var nationalPrefix;
+
+      if (hasCapturedGroups) {
+        var possiblePositionOfTheFirstCapturedGroup = number.indexOf(prefixMatch[1]);
+        var possibleNationalPrefix = number.slice(0, possiblePositionOfTheFirstCapturedGroup); // Example: an Argentinian (AR) phone number `0111523456789`.
+        // `prefixMatch[0]` is `01115`, and `$1` is `11`,
+        // and the rest of the phone number is `23456789`.
+        // The national number is transformed via `9$1` to `91123456789`.
+        // National prefix `0` is detected being present at the start.
+        // if (possibleNationalPrefix.indexOf(metadata.numberingPlan.nationalPrefix()) === 0) {
+
+        if (possibleNationalPrefix === metadata.numberingPlan.nationalPrefix()) {
+          nationalPrefix = metadata.numberingPlan.nationalPrefix();
+        }
+      } else {
+        nationalPrefix = prefixMatch[0];
+      }
+
+      return {
+        nationalNumber: nationalNumber,
+        nationalPrefix: nationalPrefix,
+        carrierCode: carrierCode
+      };
+    }
+  }
+
+  return {
+    nationalNumber: number
+  };
+}
+//# sourceMappingURL=extractNationalNumberFromPossiblyIncompleteNumber.js.map
+
+/***/ }),
+
+/***/ 3733:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.RFC3966_PREFIX_ = exports.RFC3966_PHONE_CONTEXT_ = exports.RFC3966_ISDN_SUBADDRESS_ = exports.PLUS_SIGN = void 0;
+exports["default"] = extractPhoneContext;
+exports.isPhoneContextValid = isPhoneContextValid;
+
+var _constants = __webpack_require__(2632);
+
+// When phone numbers are written in `RFC3966` format — `"tel:+12133734253"` —
+// they can have their "calling code" part written separately in a `phone-context` parameter.
+// Example: `"tel:12133734253;phone-context=+1"`.
+// This function parses the full phone number from the local number and the `phone-context`
+// when the `phone-context` contains a `+` sign.
+var PLUS_SIGN = '+';
+exports.PLUS_SIGN = PLUS_SIGN;
+var RFC3966_VISUAL_SEPARATOR_ = '[\\-\\.\\(\\)]?';
+var RFC3966_PHONE_DIGIT_ = '(' + '[' + _constants.VALID_DIGITS + ']' + '|' + RFC3966_VISUAL_SEPARATOR_ + ')';
+var RFC3966_GLOBAL_NUMBER_DIGITS_ = '^' + '\\' + PLUS_SIGN + RFC3966_PHONE_DIGIT_ + '*' + '[' + _constants.VALID_DIGITS + ']' + RFC3966_PHONE_DIGIT_ + '*' + '$';
+/**
+ * Regular expression of valid global-number-digits for the phone-context
+ * parameter, following the syntax defined in RFC3966.
+ */
+
+var RFC3966_GLOBAL_NUMBER_DIGITS_PATTERN_ = new RegExp(RFC3966_GLOBAL_NUMBER_DIGITS_, 'g'); // In this port of Google's library, we don't accept alpha characters in phone numbers.
+// const ALPHANUM_ = VALID_ALPHA_ + VALID_DIGITS
+
+var ALPHANUM_ = _constants.VALID_DIGITS;
+var RFC3966_DOMAINLABEL_ = '[' + ALPHANUM_ + ']+((\\-)*[' + ALPHANUM_ + '])*';
+var VALID_ALPHA_ = 'a-zA-Z';
+var RFC3966_TOPLABEL_ = '[' + VALID_ALPHA_ + ']+((\\-)*[' + ALPHANUM_ + '])*';
+var RFC3966_DOMAINNAME_ = '^(' + RFC3966_DOMAINLABEL_ + '\\.)*' + RFC3966_TOPLABEL_ + '\\.?$';
+/**
+ * Regular expression of valid domainname for the phone-context parameter,
+ * following the syntax defined in RFC3966.
+ */
+
+var RFC3966_DOMAINNAME_PATTERN_ = new RegExp(RFC3966_DOMAINNAME_, 'g');
+var RFC3966_PREFIX_ = 'tel:';
+exports.RFC3966_PREFIX_ = RFC3966_PREFIX_;
+var RFC3966_PHONE_CONTEXT_ = ';phone-context=';
+exports.RFC3966_PHONE_CONTEXT_ = RFC3966_PHONE_CONTEXT_;
+var RFC3966_ISDN_SUBADDRESS_ = ';isub=';
+/**
+ * Extracts the value of the phone-context parameter of `numberToExtractFrom`,
+ * following the syntax defined in RFC3966.
+ *
+ * @param {string} numberToExtractFrom
+ * @return {string|null} the extracted string (possibly empty), or `null` if no phone-context parameter is found.
+ */
+
+exports.RFC3966_ISDN_SUBADDRESS_ = RFC3966_ISDN_SUBADDRESS_;
+
+function extractPhoneContext(numberToExtractFrom) {
+  var indexOfPhoneContext = numberToExtractFrom.indexOf(RFC3966_PHONE_CONTEXT_); // If no phone-context parameter is present
+
+  if (indexOfPhoneContext < 0) {
+    return null;
+  }
+
+  var phoneContextStart = indexOfPhoneContext + RFC3966_PHONE_CONTEXT_.length; // If phone-context parameter is empty
+
+  if (phoneContextStart >= numberToExtractFrom.length) {
+    return '';
+  }
+
+  var phoneContextEnd = numberToExtractFrom.indexOf(';', phoneContextStart); // If phone-context is not the last parameter
+
+  if (phoneContextEnd >= 0) {
+    return numberToExtractFrom.substring(phoneContextStart, phoneContextEnd);
+  } else {
+    return numberToExtractFrom.substring(phoneContextStart);
+  }
+}
+/**
+ * Returns whether the value of phoneContext follows the syntax defined in RFC3966.
+ *
+ * @param {string|null} phoneContext
+ * @return {boolean}
+ */
+
+
+function isPhoneContextValid(phoneContext) {
+  if (phoneContext === null) {
+    return true;
+  }
+
+  if (phoneContext.length === 0) {
+    return false;
+  } // Does phone-context value match pattern of global-number-digits or domainname.
+
+
+  return RFC3966_GLOBAL_NUMBER_DIGITS_PATTERN_.test(phoneContext) || RFC3966_DOMAINNAME_PATTERN_.test(phoneContext);
+}
+//# sourceMappingURL=extractPhoneContext.js.map
+
+/***/ }),
+
+/***/ 7760:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.FIRST_GROUP_PATTERN = void 0;
+exports["default"] = formatNationalNumberUsingFormat;
+
+var _applyInternationalSeparatorStyle = _interopRequireDefault(__webpack_require__(6279));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+// This was originally set to $1 but there are some countries for which the
+// first group is not used in the national pattern (e.g. Argentina) so the $1
+// group does not match correctly. Therefore, we use `\d`, so that the first
+// group actually used in the pattern will be matched.
+var FIRST_GROUP_PATTERN = /(\$\d)/;
+exports.FIRST_GROUP_PATTERN = FIRST_GROUP_PATTERN;
+
+function formatNationalNumberUsingFormat(number, format, _ref) {
+  var useInternationalFormat = _ref.useInternationalFormat,
+      withNationalPrefix = _ref.withNationalPrefix,
+      carrierCode = _ref.carrierCode,
+      metadata = _ref.metadata;
+  var formattedNumber = number.replace(new RegExp(format.pattern()), useInternationalFormat ? format.internationalFormat() : // This library doesn't use `domestic_carrier_code_formatting_rule`,
+  // because that one is only used when formatting phone numbers
+  // for dialing from a mobile phone, and this is not a dialing library.
+  // carrierCode && format.domesticCarrierCodeFormattingRule()
+  // 	// First, replace the $CC in the formatting rule with the desired carrier code.
+  // 	// Then, replace the $FG in the formatting rule with the first group
+  // 	// and the carrier code combined in the appropriate way.
+  // 	? format.format().replace(FIRST_GROUP_PATTERN, format.domesticCarrierCodeFormattingRule().replace('$CC', carrierCode))
+  // 	: (
+  // 		withNationalPrefix && format.nationalPrefixFormattingRule()
+  // 			? format.format().replace(FIRST_GROUP_PATTERN, format.nationalPrefixFormattingRule())
+  // 			: format.format()
+  // 	)
+  withNationalPrefix && format.nationalPrefixFormattingRule() ? format.format().replace(FIRST_GROUP_PATTERN, format.nationalPrefixFormattingRule()) : format.format());
+
+  if (useInternationalFormat) {
+    return (0, _applyInternationalSeparatorStyle["default"])(formattedNumber);
+  }
+
+  return formattedNumber;
+}
+//# sourceMappingURL=formatNationalNumberUsingFormat.js.map
+
+/***/ }),
+
+/***/ 8719:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = getCountryByCallingCode;
+
+var _getCountryByNationalNumber = _interopRequireDefault(__webpack_require__(3799));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var USE_NON_GEOGRAPHIC_COUNTRY_CODE = false;
+
+function getCountryByCallingCode(callingCode, _ref) {
+  var nationalPhoneNumber = _ref.nationalNumber,
+      defaultCountry = _ref.defaultCountry,
+      metadata = _ref.metadata;
+
+  /* istanbul ignore if */
+  if (USE_NON_GEOGRAPHIC_COUNTRY_CODE) {
+    if (metadata.isNonGeographicCallingCode(callingCode)) {
+      return '001';
+    }
+  }
+
+  var possibleCountries = metadata.getCountryCodesForCallingCode(callingCode);
+
+  if (!possibleCountries) {
+    return;
+  } // If there's just one country corresponding to the country code,
+  // then just return it, without further phone number digits validation.
+
+
+  if (possibleCountries.length === 1) {
+    return possibleCountries[0];
+  }
+
+  return (0, _getCountryByNationalNumber["default"])(nationalPhoneNumber, {
+    countries: possibleCountries,
+    defaultCountry: defaultCountry,
+    metadata: metadata.metadata
+  });
+}
+//# sourceMappingURL=getCountryByCallingCode.js.map
+
+/***/ }),
+
+/***/ 3799:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = getCountryByNationalNumber;
+
+var _metadata = _interopRequireDefault(__webpack_require__(1084));
+
+var _getNumberType = _interopRequireDefault(__webpack_require__(2646));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function getCountryByNationalNumber(nationalPhoneNumber, _ref) {
+  var countries = _ref.countries,
+      defaultCountry = _ref.defaultCountry,
+      metadata = _ref.metadata;
+  // Re-create `metadata` because it will be selecting a `country`.
+  metadata = new _metadata["default"](metadata);
+  var matchingCountries = [];
+
+  for (var _iterator = _createForOfIteratorHelperLoose(countries), _step; !(_step = _iterator()).done;) {
+    var country = _step.value;
+    metadata.country(country); // "Leading digits" patterns are only defined for about 20% of all countries.
+    // By definition, matching "leading digits" is a sufficient but not a necessary
+    // condition for a phone number to belong to a country.
+    // The point of "leading digits" check is that it's the fastest one to get a match.
+    // https://gitlab.com/catamphetamine/libphonenumber-js/blob/master/METADATA.md#leading_digits
+    // I'd suppose that "leading digits" patterns are mutually exclusive for different countries
+    // because of the intended use of that feature.
+
+    if (metadata.leadingDigits()) {
+      if (nationalPhoneNumber && nationalPhoneNumber.search(metadata.leadingDigits()) === 0) {
+        return country;
+      }
+    } // Else perform full validation with all of those
+    // fixed-line/mobile/etc regular expressions.
+    else if ((0, _getNumberType["default"])({
+      phone: nationalPhoneNumber,
+      country: country
+    }, undefined, metadata.metadata)) {
+      // If the `defaultCountry` is among the `matchingCountries` then return it.
+      if (defaultCountry) {
+        if (country === defaultCountry) {
+          return country;
+        }
+
+        matchingCountries.push(country);
+      } else {
+        return country;
+      }
+    }
+  } // Return the first ("main") one of the `matchingCountries`.
+
+
+  if (matchingCountries.length > 0) {
+    return matchingCountries[0];
+  }
+}
+//# sourceMappingURL=getCountryByNationalNumber.js.map
+
+/***/ }),
+
+/***/ 9104:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = getIddPrefix;
+
+var _metadata = _interopRequireDefault(__webpack_require__(1084));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+/**
+ * Pattern that makes it easy to distinguish whether a region has a single
+ * international dialing prefix or not. If a region has a single international
+ * prefix (e.g. 011 in USA), it will be represented as a string that contains
+ * a sequence of ASCII digits, and possibly a tilde, which signals waiting for
+ * the tone. If there are multiple available international prefixes in a
+ * region, they will be represented as a regex string that always contains one
+ * or more characters that are not ASCII digits or a tilde.
+ */
+var SINGLE_IDD_PREFIX_REG_EXP = /^[\d]+(?:[~\u2053\u223C\uFF5E][\d]+)?$/; // For regions that have multiple IDD prefixes
+// a preferred IDD prefix is returned.
+
+function getIddPrefix(country, callingCode, metadata) {
+  var countryMetadata = new _metadata["default"](metadata);
+  countryMetadata.selectNumberingPlan(country, callingCode);
+
+  if (countryMetadata.defaultIDDPrefix()) {
+    return countryMetadata.defaultIDDPrefix();
+  }
+
+  if (SINGLE_IDD_PREFIX_REG_EXP.test(countryMetadata.IDDPrefix())) {
+    return countryMetadata.IDDPrefix();
+  }
+}
+//# sourceMappingURL=getIddPrefix.js.map
+
+/***/ }),
+
+/***/ 2646:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = getNumberType;
+exports.isNumberTypeEqualTo = isNumberTypeEqualTo;
+
+var _metadata = _interopRequireDefault(__webpack_require__(1084));
+
+var _matchesEntirely = _interopRequireDefault(__webpack_require__(5648));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+var NON_FIXED_LINE_PHONE_TYPES = ['MOBILE', 'PREMIUM_RATE', 'TOLL_FREE', 'SHARED_COST', 'VOIP', 'PERSONAL_NUMBER', 'PAGER', 'UAN', 'VOICEMAIL']; // Finds out national phone number type (fixed line, mobile, etc)
+
+function getNumberType(input, options, metadata) {
+  // If assigning the `{}` default value is moved to the arguments above,
+  // code coverage would decrease for some weird reason.
+  options = options || {}; // When `parse()` returns an empty object — `{}` —
+  // that means that the phone number is malformed,
+  // so it can't possibly be valid.
+
+  if (!input.country && !input.countryCallingCode) {
+    return;
+  }
+
+  metadata = new _metadata["default"](metadata);
+  metadata.selectNumberingPlan(input.country, input.countryCallingCode);
+  var nationalNumber = options.v2 ? input.nationalNumber : input.phone; // The following is copy-pasted from the original function:
+  // https://github.com/googlei18n/libphonenumber/blob/3ea547d4fbaa2d0b67588904dfa5d3f2557c27ff/javascript/i18n/phonenumbers/phonenumberutil.js#L2835
+  // Is this national number even valid for this country
+
+  if (!(0, _matchesEntirely["default"])(nationalNumber, metadata.nationalNumberPattern())) {
+    return;
+  } // Is it fixed line number
+
+
+  if (isNumberTypeEqualTo(nationalNumber, 'FIXED_LINE', metadata)) {
+    // Because duplicate regular expressions are removed
+    // to reduce metadata size, if "mobile" pattern is ""
+    // then it means it was removed due to being a duplicate of the fixed-line pattern.
+    //
+    if (metadata.type('MOBILE') && metadata.type('MOBILE').pattern() === '') {
+      return 'FIXED_LINE_OR_MOBILE';
+    } // `MOBILE` type pattern isn't included if it matched `FIXED_LINE` one.
+    // For example, for "US" country.
+    // Old metadata (< `1.0.18`) had a specific "types" data structure
+    // that happened to be `undefined` for `MOBILE` in that case.
+    // Newer metadata (>= `1.0.18`) has another data structure that is
+    // not `undefined` for `MOBILE` in that case (it's just an empty array).
+    // So this `if` is just for backwards compatibility with old metadata.
+
+
+    if (!metadata.type('MOBILE')) {
+      return 'FIXED_LINE_OR_MOBILE';
+    } // Check if the number happens to qualify as both fixed line and mobile.
+    // (no such country in the minimal metadata set)
+
+    /* istanbul ignore if */
+
+
+    if (isNumberTypeEqualTo(nationalNumber, 'MOBILE', metadata)) {
+      return 'FIXED_LINE_OR_MOBILE';
+    }
+
+    return 'FIXED_LINE';
+  }
+
+  for (var _iterator = _createForOfIteratorHelperLoose(NON_FIXED_LINE_PHONE_TYPES), _step; !(_step = _iterator()).done;) {
+    var type = _step.value;
+
+    if (isNumberTypeEqualTo(nationalNumber, type, metadata)) {
+      return type;
+    }
+  }
+}
+
+function isNumberTypeEqualTo(nationalNumber, type, metadata) {
+  type = metadata.type(type);
+
+  if (!type || !type.pattern()) {
+    return false;
+  } // Check if any possible number lengths are present;
+  // if so, we use them to avoid checking
+  // the validation pattern if they don't match.
+  // If they are absent, this means they match
+  // the general description, which we have
+  // already checked before a specific number type.
+
+
+  if (type.possibleLengths() && type.possibleLengths().indexOf(nationalNumber.length) < 0) {
+    return false;
+  }
+
+  return (0, _matchesEntirely["default"])(nationalNumber, type.pattern());
+}
+//# sourceMappingURL=getNumberType.js.map
+
+/***/ }),
+
+/***/ 4704:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = getPossibleCountriesForNumber;
+
+var _metadata2 = _interopRequireDefault(__webpack_require__(1084));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+/**
+ * Returns a list of countries that the phone number could potentially belong to.
+ * @param  {string} callingCode — Calling code.
+ * @param  {string} nationalNumber — National (significant) number.
+ * @param  {object} metadata — Metadata.
+ * @return {string[]} A list of possible countries.
+ */
+function getPossibleCountriesForNumber(callingCode, nationalNumber, metadata) {
+  var _metadata = new _metadata2["default"](metadata);
+
+  var possibleCountries = _metadata.getCountryCodesForCallingCode(callingCode);
+
+  if (!possibleCountries) {
+    return [];
+  }
+
+  return possibleCountries.filter(function (country) {
+    return couldNationalNumberBelongToCountry(nationalNumber, country, metadata);
+  });
+}
+
+function couldNationalNumberBelongToCountry(nationalNumber, country, metadata) {
+  var _metadata = new _metadata2["default"](metadata);
+
+  _metadata.selectNumberingPlan(country);
+
+  if (_metadata.numberingPlan.possibleLengths().indexOf(nationalNumber.length) >= 0) {
+    return true;
+  }
+
+  return false;
+}
+//# sourceMappingURL=getPossibleCountriesForNumber.js.map
+
+/***/ }),
+
+/***/ 4916:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = isObject;
+var objectConstructor = {}.constructor;
+
+function isObject(object) {
+  return object !== undefined && object !== null && object.constructor === objectConstructor;
+}
+//# sourceMappingURL=isObject.js.map
+
+/***/ }),
+
+/***/ 333:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.VALID_PHONE_NUMBER_WITH_EXTENSION = exports.VALID_PHONE_NUMBER = void 0;
+exports["default"] = isViablePhoneNumber;
+exports.isViablePhoneNumberStart = isViablePhoneNumberStart;
+
+var _constants = __webpack_require__(2632);
+
+var _createExtensionPattern = _interopRequireDefault(__webpack_require__(432));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+//  Regular expression of viable phone numbers. This is location independent.
+//  Checks we have at least three leading digits, and only valid punctuation,
+//  alpha characters and digits in the phone number. Does not include extension
+//  data. The symbol 'x' is allowed here as valid punctuation since it is often
+//  used as a placeholder for carrier codes, for example in Brazilian phone
+//  numbers. We also allow multiple '+' characters at the start.
+//
+//  Corresponds to the following:
+//  [digits]{minLengthNsn}|
+//  plus_sign*
+//  (([punctuation]|[star])*[digits]){3,}([punctuation]|[star]|[digits]|[alpha])*
+//
+//  The first reg-ex is to allow short numbers (two digits long) to be parsed if
+//  they are entered as "15" etc, but only if there is no punctuation in them.
+//  The second expression restricts the number of digits to three or more, but
+//  then allows them to be in international form, and to have alpha-characters
+//  and punctuation. We split up the two reg-exes here and combine them when
+//  creating the reg-ex VALID_PHONE_NUMBER_PATTERN itself so we can prefix it
+//  with ^ and append $ to each branch.
+//
+//  "Note VALID_PUNCTUATION starts with a -,
+//   so must be the first in the range" (c) Google devs.
+//  (wtf did they mean by saying that; probably nothing)
+//
+var MIN_LENGTH_PHONE_NUMBER_PATTERN = '[' + _constants.VALID_DIGITS + ']{' + _constants.MIN_LENGTH_FOR_NSN + '}'; //
+// And this is the second reg-exp:
+// (see MIN_LENGTH_PHONE_NUMBER_PATTERN for a full description of this reg-exp)
+//
+
+var VALID_PHONE_NUMBER = '[' + _constants.PLUS_CHARS + ']{0,1}' + '(?:' + '[' + _constants.VALID_PUNCTUATION + ']*' + '[' + _constants.VALID_DIGITS + ']' + '){3,}' + '[' + _constants.VALID_PUNCTUATION + _constants.VALID_DIGITS + ']*'; // This regular expression isn't present in Google's `libphonenumber`
+// and is only used to determine whether the phone number being input
+// is too short for it to even consider it a "valid" number.
+// This is just a way to differentiate between a really invalid phone
+// number like "abcde" and a valid phone number that a user has just
+// started inputting, like "+1" or "1": both these cases would be
+// considered `NOT_A_NUMBER` by Google's `libphonenumber`, but this
+// library can provide a more detailed error message — whether it's
+// really "not a number", or is it just a start of a valid phone number.
+
+exports.VALID_PHONE_NUMBER = VALID_PHONE_NUMBER;
+var VALID_PHONE_NUMBER_START_REG_EXP = new RegExp('^' + '[' + _constants.PLUS_CHARS + ']{0,1}' + '(?:' + '[' + _constants.VALID_PUNCTUATION + ']*' + '[' + _constants.VALID_DIGITS + ']' + '){1,2}' + '$', 'i');
+var VALID_PHONE_NUMBER_WITH_EXTENSION = VALID_PHONE_NUMBER + // Phone number extensions
+'(?:' + (0, _createExtensionPattern["default"])() + ')?'; // The combined regular expression for valid phone numbers:
+//
+
+exports.VALID_PHONE_NUMBER_WITH_EXTENSION = VALID_PHONE_NUMBER_WITH_EXTENSION;
+var VALID_PHONE_NUMBER_PATTERN = new RegExp( // Either a short two-digit-only phone number
+'^' + MIN_LENGTH_PHONE_NUMBER_PATTERN + '$' + '|' + // Or a longer fully parsed phone number (min 3 characters)
+'^' + VALID_PHONE_NUMBER_WITH_EXTENSION + '$', 'i'); // Checks to see if the string of characters could possibly be a phone number at
+// all. At the moment, checks to see that the string begins with at least 2
+// digits, ignoring any punctuation commonly found in phone numbers. This method
+// does not require the number to be normalized in advance - but does assume
+// that leading non-number symbols have been removed, such as by the method
+// `extract_possible_number`.
+//
+
+function isViablePhoneNumber(number) {
+  return number.length >= _constants.MIN_LENGTH_FOR_NSN && VALID_PHONE_NUMBER_PATTERN.test(number);
+} // This is just a way to differentiate between a really invalid phone
+// number like "abcde" and a valid phone number that a user has just
+// started inputting, like "+1" or "1": both these cases would be
+// considered `NOT_A_NUMBER` by Google's `libphonenumber`, but this
+// library can provide a more detailed error message — whether it's
+// really "not a number", or is it just a start of a valid phone number.
+
+
+function isViablePhoneNumberStart(number) {
+  return VALID_PHONE_NUMBER_START_REG_EXP.test(number);
+}
+//# sourceMappingURL=isViablePhoneNumber.js.map
+
+/***/ }),
+
+/***/ 5648:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = matchesEntirely;
+
+/**
+ * Checks whether the entire input sequence can be matched
+ * against the regular expression.
+ * @return {boolean}
+ */
+function matchesEntirely(text, regular_expression) {
+  // If assigning the `''` default value is moved to the arguments above,
+  // code coverage would decrease for some weird reason.
+  text = text || '';
+  return new RegExp('^(?:' + regular_expression + ')$').test(text);
+}
+//# sourceMappingURL=matchesEntirely.js.map
+
+/***/ }),
+
+/***/ 281:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = mergeArrays;
+
+function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+/**
+ * Merges two arrays.
+ * @param  {*} a
+ * @param  {*} b
+ * @return {*}
+ */
+function mergeArrays(a, b) {
+  var merged = a.slice();
+
+  for (var _iterator = _createForOfIteratorHelperLoose(b), _step; !(_step = _iterator()).done;) {
+    var element = _step.value;
+
+    if (a.indexOf(element) < 0) {
+      merged.push(element);
+    }
+  }
+
+  return merged.sort(function (a, b) {
+    return a - b;
+  }); // ES6 version, requires Set polyfill.
+  // let merged = new Set(a)
+  // for (const element of b) {
+  // 	merged.add(i)
+  // }
+  // return Array.from(merged).sort((a, b) => a - b)
+}
+//# sourceMappingURL=mergeArrays.js.map
+
+/***/ }),
+
+/***/ 9458:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.DIGITS = void 0;
+exports["default"] = parseDigits;
+exports.parseDigit = parseDigit;
+
+function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+// These mappings map a character (key) to a specific digit that should
+// replace it for normalization purposes. Non-European digits that
+// may be used in phone numbers are mapped to a European equivalent.
+//
+// E.g. in Iraq they don't write `+442323234` but rather `+٤٤٢٣٢٣٢٣٤`.
+//
+var DIGITS = {
+  '0': '0',
+  '1': '1',
+  '2': '2',
+  '3': '3',
+  '4': '4',
+  '5': '5',
+  '6': '6',
+  '7': '7',
+  '8': '8',
+  '9': '9',
+  "\uFF10": '0',
+  // Fullwidth digit 0
+  "\uFF11": '1',
+  // Fullwidth digit 1
+  "\uFF12": '2',
+  // Fullwidth digit 2
+  "\uFF13": '3',
+  // Fullwidth digit 3
+  "\uFF14": '4',
+  // Fullwidth digit 4
+  "\uFF15": '5',
+  // Fullwidth digit 5
+  "\uFF16": '6',
+  // Fullwidth digit 6
+  "\uFF17": '7',
+  // Fullwidth digit 7
+  "\uFF18": '8',
+  // Fullwidth digit 8
+  "\uFF19": '9',
+  // Fullwidth digit 9
+  "\u0660": '0',
+  // Arabic-indic digit 0
+  "\u0661": '1',
+  // Arabic-indic digit 1
+  "\u0662": '2',
+  // Arabic-indic digit 2
+  "\u0663": '3',
+  // Arabic-indic digit 3
+  "\u0664": '4',
+  // Arabic-indic digit 4
+  "\u0665": '5',
+  // Arabic-indic digit 5
+  "\u0666": '6',
+  // Arabic-indic digit 6
+  "\u0667": '7',
+  // Arabic-indic digit 7
+  "\u0668": '8',
+  // Arabic-indic digit 8
+  "\u0669": '9',
+  // Arabic-indic digit 9
+  "\u06F0": '0',
+  // Eastern-Arabic digit 0
+  "\u06F1": '1',
+  // Eastern-Arabic digit 1
+  "\u06F2": '2',
+  // Eastern-Arabic digit 2
+  "\u06F3": '3',
+  // Eastern-Arabic digit 3
+  "\u06F4": '4',
+  // Eastern-Arabic digit 4
+  "\u06F5": '5',
+  // Eastern-Arabic digit 5
+  "\u06F6": '6',
+  // Eastern-Arabic digit 6
+  "\u06F7": '7',
+  // Eastern-Arabic digit 7
+  "\u06F8": '8',
+  // Eastern-Arabic digit 8
+  "\u06F9": '9' // Eastern-Arabic digit 9
+
+};
+exports.DIGITS = DIGITS;
+
+function parseDigit(character) {
+  return DIGITS[character];
+}
+/**
+ * Parses phone number digits from a string.
+ * Drops all punctuation leaving only digits.
+ * Also converts wide-ascii and arabic-indic numerals to conventional numerals.
+ * E.g. in Iraq they don't write `+442323234` but rather `+٤٤٢٣٢٣٢٣٤`.
+ * @param  {string} string
+ * @return {string}
+ * @example
+ * ```js
+ * parseDigits('8 (800) 555')
+ * // Outputs '8800555'.
+ * ```
+ */
+
+
+function parseDigits(string) {
+  var result = ''; // Using `.split('')` here instead of normal `for ... of`
+  // because the importing application doesn't neccessarily include an ES6 polyfill.
+  // The `.split('')` approach discards "exotic" UTF-8 characters
+  // (the ones consisting of four bytes) but digits
+  // (including non-European ones) don't fall into that range
+  // so such "exotic" characters would be discarded anyway.
+
+  for (var _iterator = _createForOfIteratorHelperLoose(string.split('')), _step; !(_step = _iterator()).done;) {
+    var character = _step.value;
+    var digit = parseDigit(character);
+
+    if (digit) {
+      result += digit;
+    }
+  }
+
+  return result;
+}
+//# sourceMappingURL=parseDigits.js.map
+
+/***/ }),
+
+/***/ 1570:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = stripIddPrefix;
+
+var _metadata = _interopRequireDefault(__webpack_require__(1084));
+
+var _constants = __webpack_require__(2632);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var CAPTURING_DIGIT_PATTERN = new RegExp('([' + _constants.VALID_DIGITS + '])');
+
+function stripIddPrefix(number, country, callingCode, metadata) {
+  if (!country) {
+    return;
+  } // Check if the number is IDD-prefixed.
+
+
+  var countryMetadata = new _metadata["default"](metadata);
+  countryMetadata.selectNumberingPlan(country, callingCode);
+  var IDDPrefixPattern = new RegExp(countryMetadata.IDDPrefix());
+
+  if (number.search(IDDPrefixPattern) !== 0) {
+    return;
+  } // Strip IDD prefix.
+
+
+  number = number.slice(number.match(IDDPrefixPattern)[0].length); // If there're any digits after an IDD prefix,
+  // then those digits are a country calling code.
+  // Since no country code starts with a `0`,
+  // the code below validates that the next digit (if present) is not `0`.
+
+  var matchedGroups = number.match(CAPTURING_DIGIT_PATTERN);
+
+  if (matchedGroups && matchedGroups[1] != null && matchedGroups[1].length > 0) {
+    if (matchedGroups[1] === '0') {
+      return;
+    }
+  }
+
+  return number;
+}
+//# sourceMappingURL=stripIddPrefix.js.map
+
+/***/ }),
+
+/***/ 4574:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = isPossiblePhoneNumber;
+exports.isPossibleNumber = isPossibleNumber;
+
+var _metadata = _interopRequireDefault(__webpack_require__(1084));
+
+var _checkNumberLength = _interopRequireDefault(__webpack_require__(6034));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+/**
+ * Checks if a phone number is "possible" (basically just checks its length).
+ *
+ * isPossible(phoneNumberInstance, { ..., v2: true }, metadata)
+ *
+ * isPossible({ phone: '8005553535', country: 'RU' }, { ... }, metadata)
+ * isPossible({ phone: '8005553535', country: 'RU' }, undefined, metadata)
+ *
+ * @param  {object|PhoneNumber} input — If `options.v2: true` flag is passed, the `input` should be a `PhoneNumber` instance. Otherwise, it should be an object of shape `{ phone: '...', country: '...' }`.
+ * @param  {object} [options]
+ * @param  {object} metadata
+ * @return {string}
+ */
+function isPossiblePhoneNumber(input, options, metadata) {
+  /* istanbul ignore if */
+  if (options === undefined) {
+    options = {};
+  }
+
+  metadata = new _metadata["default"](metadata);
+
+  if (options.v2) {
+    if (!input.countryCallingCode) {
+      throw new Error('Invalid phone number object passed');
+    }
+
+    metadata.selectNumberingPlan(input.countryCallingCode);
+  } else {
+    if (!input.phone) {
+      return false;
+    }
+
+    if (input.country) {
+      if (!metadata.hasCountry(input.country)) {
+        throw new Error("Unknown country: ".concat(input.country));
+      }
+
+      metadata.country(input.country);
+    } else {
+      if (!input.countryCallingCode) {
+        throw new Error('Invalid phone number object passed');
+      }
+
+      metadata.selectNumberingPlan(input.countryCallingCode);
+    }
+  } // Old metadata (< 1.0.18) had no "possible length" data.
+
+
+  if (metadata.possibleLengths()) {
+    return isPossibleNumber(input.phone || input.nationalNumber, metadata);
+  } else {
+    // There was a bug between `1.7.35` and `1.7.37` where "possible_lengths"
+    // were missing for "non-geographical" numbering plans.
+    // Just assume the number is possible in such cases:
+    // it's unlikely that anyone generated their custom metadata
+    // in that short period of time (one day).
+    // This code can be removed in some future major version update.
+    if (input.countryCallingCode && metadata.isNonGeographicCallingCode(input.countryCallingCode)) {
+      // "Non-geographic entities" did't have `possibleLengths`
+      // due to a bug in metadata generation process.
+      return true;
+    } else {
+      throw new Error('Missing "possibleLengths" in metadata. Perhaps the metadata has been generated before v1.0.18.');
+    }
+  }
+}
+
+function isPossibleNumber(nationalNumber, metadata) {
+  //, isInternational) {
+  switch ((0, _checkNumberLength["default"])(nationalNumber, metadata)) {
+    case 'IS_POSSIBLE':
+      return true;
+    // This library ignores "local-only" phone numbers (for simplicity).
+    // See the readme for more info on what are "local-only" phone numbers.
+    // case 'IS_POSSIBLE_LOCAL_ONLY':
+    // 	return !isInternational
+
+    default:
+      return false;
+  }
+}
+//# sourceMappingURL=isPossible.js.map
+
+/***/ }),
+
+/***/ 6049:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports["default"] = isPossiblePhoneNumber;
+
+var _normalizeArguments2 = _interopRequireDefault(__webpack_require__(4424));
+
+var _parsePhoneNumber_ = _interopRequireDefault(__webpack_require__(7064));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function isPossiblePhoneNumber() {
+  var _normalizeArguments = (0, _normalizeArguments2["default"])(arguments),
+      text = _normalizeArguments.text,
+      options = _normalizeArguments.options,
+      metadata = _normalizeArguments.metadata;
+
+  options = _objectSpread(_objectSpread({}, options), {}, {
+    extract: false
+  });
+  var phoneNumber = (0, _parsePhoneNumber_["default"])(text, options, metadata);
+  return phoneNumber && phoneNumber.isPossible() || false;
+}
+//# sourceMappingURL=isPossiblePhoneNumber.js.map
+
+/***/ }),
+
+/***/ 3575:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = isValidNumber;
+
+var _metadata = _interopRequireDefault(__webpack_require__(1084));
+
+var _matchesEntirely = _interopRequireDefault(__webpack_require__(5648));
+
+var _getNumberType = _interopRequireDefault(__webpack_require__(2646));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+/**
+ * Checks if a given phone number is valid.
+ *
+ * isValid(phoneNumberInstance, { ..., v2: true }, metadata)
+ *
+ * isPossible({ phone: '8005553535', country: 'RU' }, { ... }, metadata)
+ * isPossible({ phone: '8005553535', country: 'RU' }, undefined, metadata)
+ *
+ * If the `number` is a string, it will be parsed to an object,
+ * but only if it contains only valid phone number characters (including punctuation).
+ * If the `number` is an object, it is used as is.
+ *
+ * The optional `defaultCountry` argument is the default country.
+ * I.e. it does not restrict to just that country,
+ * e.g. in those cases where several countries share
+ * the same phone numbering rules (NANPA, Britain, etc).
+ * For example, even though the number `07624 369230`
+ * belongs to the Isle of Man ("IM" country code)
+ * calling `isValidNumber('07624369230', 'GB', metadata)`
+ * still returns `true` because the country is not restricted to `GB`,
+ * it's just that `GB` is the default one for the phone numbering rules.
+ * For restricting the country see `isValidNumberForRegion()`
+ * though restricting a country might not be a good idea.
+ * https://github.com/googlei18n/libphonenumber/blob/master/FAQ.md#when-should-i-use-isvalidnumberforregion
+ *
+ * Examples:
+ *
+ * ```js
+ * isValidNumber('+78005553535', metadata)
+ * isValidNumber('8005553535', 'RU', metadata)
+ * isValidNumber('88005553535', 'RU', metadata)
+ * isValidNumber({ phone: '8005553535', country: 'RU' }, metadata)
+ * ```
+ */
+function isValidNumber(input, options, metadata) {
+  // If assigning the `{}` default value is moved to the arguments above,
+  // code coverage would decrease for some weird reason.
+  options = options || {};
+  metadata = new _metadata["default"](metadata);
+  metadata.selectNumberingPlan(input.country, input.countryCallingCode); // By default, countries only have type regexps when it's required for
+  // distinguishing different countries having the same `countryCallingCode`.
+
+  if (metadata.hasTypes()) {
+    return (0, _getNumberType["default"])(input, options, metadata.metadata) !== undefined;
+  } // If there are no type regexps for this country in metadata then use
+  // `nationalNumberPattern` as a "better than nothing" replacement.
+
+
+  var nationalNumber = options.v2 ? input.nationalNumber : input.phone;
+  return (0, _matchesEntirely["default"])(nationalNumber, metadata.nationalNumberPattern());
+}
+//# sourceMappingURL=isValid.js.map
+
+/***/ }),
+
+/***/ 8102:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports["default"] = isValidPhoneNumber;
+
+var _normalizeArguments2 = _interopRequireDefault(__webpack_require__(4424));
+
+var _parsePhoneNumber_ = _interopRequireDefault(__webpack_require__(7064));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function isValidPhoneNumber() {
+  var _normalizeArguments = (0, _normalizeArguments2["default"])(arguments),
+      text = _normalizeArguments.text,
+      options = _normalizeArguments.options,
+      metadata = _normalizeArguments.metadata;
+
+  options = _objectSpread(_objectSpread({}, options), {}, {
+    extract: false
+  });
+  var phoneNumber = (0, _parsePhoneNumber_["default"])(text, options, metadata);
+  return phoneNumber && phoneNumber.isValid() || false;
+}
+//# sourceMappingURL=isValidPhoneNumber.js.map
+
+/***/ }),
+
+/***/ 3882:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports["default"] = findNumbers;
+
+var _PhoneNumberMatcher = _interopRequireDefault(__webpack_require__(9420));
+
+var _normalizeArguments2 = _interopRequireDefault(__webpack_require__(4424));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function findNumbers() {
+  var _normalizeArguments = (0, _normalizeArguments2["default"])(arguments),
+      text = _normalizeArguments.text,
+      options = _normalizeArguments.options,
+      metadata = _normalizeArguments.metadata;
+
   var matcher = new _PhoneNumberMatcher["default"](text, options, metadata);
   var results = [];
 
@@ -7787,11 +10489,11 @@ function findNumbers(text, options, metadata) {
 
   return results;
 }
-//# sourceMappingURL=findNumbers_.js.map
+//# sourceMappingURL=findNumbers.js.map
 
 /***/ }),
 
-/***/ 8597:
+/***/ 4540:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -7803,12 +10505,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 __webpack_unused_export__ = ({
   value: true
 });
-exports.ZP = findPhoneNumbers;
-exports.Pf = searchPhoneNumbers;
+exports.Ay = findPhoneNumbers;
+exports.PW = searchPhoneNumbers;
 
-var _findPhoneNumbers_ = _interopRequireWildcard(__webpack_require__(6315));
+var _findPhoneNumbersInitialImplementation = _interopRequireWildcard(__webpack_require__(7039));
 
-var _parsePhoneNumber = __webpack_require__(8252);
+var _normalizeArguments3 = _interopRequireDefault(__webpack_require__(4424));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -7817,12 +10521,12 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 // This is a legacy function.
 // Use `findNumbers()` instead.
 function findPhoneNumbers() {
-  var _normalizeArguments = (0, _parsePhoneNumber.normalizeArguments)(arguments),
+  var _normalizeArguments = (0, _normalizeArguments3["default"])(arguments),
       text = _normalizeArguments.text,
       options = _normalizeArguments.options,
       metadata = _normalizeArguments.metadata;
 
-  return (0, _findPhoneNumbers_["default"])(text, options, metadata);
+  return (0, _findPhoneNumbersInitialImplementation["default"])(text, options, metadata);
 }
 /**
  * @return ES6 `for ... of` iterator.
@@ -7830,94 +10534,18 @@ function findPhoneNumbers() {
 
 
 function searchPhoneNumbers() {
-  var _normalizeArguments2 = (0, _parsePhoneNumber.normalizeArguments)(arguments),
+  var _normalizeArguments2 = (0, _normalizeArguments3["default"])(arguments),
       text = _normalizeArguments2.text,
       options = _normalizeArguments2.options,
       metadata = _normalizeArguments2.metadata;
 
-  return (0, _findPhoneNumbers_.searchPhoneNumbers)(text, options, metadata);
+  return (0, _findPhoneNumbersInitialImplementation.searchPhoneNumbers)(text, options, metadata);
 }
 //# sourceMappingURL=findPhoneNumbers.js.map
 
 /***/ }),
 
-/***/ 7228:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = findPhoneNumbersInText;
-exports.getArguments = getArguments;
-
-var _findNumbers = _interopRequireDefault(__webpack_require__(6329));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function findPhoneNumbersInText(text, defaultCountry, options, metadata) {
-  var args = getArguments(defaultCountry, options, metadata);
-  return (0, _findNumbers["default"])(text, args.options, args.metadata);
-}
-
-function getArguments(defaultCountry, options, metadata) {
-  if (metadata) {
-    if (defaultCountry) {
-      options = _objectSpread(_objectSpread({}, options), {}, {
-        defaultCountry: defaultCountry
-      });
-    }
-  } else {
-    if (options) {
-      metadata = options;
-
-      if (defaultCountry) {
-        if (is_object(defaultCountry)) {
-          options = defaultCountry;
-        } else {
-          options = {
-            defaultCountry: defaultCountry
-          };
-        }
-      } else {
-        options = undefined;
-      }
-    } else {
-      metadata = defaultCountry;
-      options = undefined;
-    }
-  }
-
-  return {
-    options: _objectSpread(_objectSpread({}, options), {}, {
-      v2: true
-    }),
-    metadata: metadata
-  };
-} // Babel transforms `typeof` into some "branches"
-// so istanbul will show this as "branch not covered".
-
-/* istanbul ignore next */
-
-
-var is_object = function is_object(_) {
-  return _typeof(_) === 'object';
-};
-//# sourceMappingURL=findPhoneNumbersInText.js.map
-
-/***/ }),
-
-/***/ 6315:
+/***/ 7039:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -7930,19 +10558,19 @@ exports.PhoneNumberSearch = exports.EXTN_PATTERNS_FOR_PARSING = void 0;
 exports["default"] = findPhoneNumbers;
 exports.searchPhoneNumbers = searchPhoneNumbers;
 
-var _constants = __webpack_require__(6703);
+var _constants = __webpack_require__(2632);
 
-var _parse_ = _interopRequireDefault(__webpack_require__(2953));
+var _parse = _interopRequireDefault(__webpack_require__(6214));
 
-var _isViablePhoneNumber = __webpack_require__(9963);
+var _isViablePhoneNumber = __webpack_require__(333);
 
-var _createExtensionPattern = _interopRequireDefault(__webpack_require__(3138));
+var _createExtensionPattern = _interopRequireDefault(__webpack_require__(432));
 
-var _parsePreCandidate = _interopRequireDefault(__webpack_require__(2515));
+var _parsePreCandidate = _interopRequireDefault(__webpack_require__(5668));
 
-var _isValidPreCandidate = _interopRequireDefault(__webpack_require__(5133));
+var _isValidPreCandidate = _interopRequireDefault(__webpack_require__(8273));
 
-var _isValidCandidate = _interopRequireDefault(__webpack_require__(1262));
+var _isValidCandidate = _interopRequireDefault(__webpack_require__(1798));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -8097,7 +10725,7 @@ var PhoneNumberSearch = /*#__PURE__*/function () {
       // this.searching_from = matches.lastIndex
 
 
-      var result = (0, _parse_["default"])(number, this.options, this.metadata);
+      var result = (0, _parse["default"])(number, this.options, this.metadata);
 
       if (!result.phone) {
         return;
@@ -8142,11 +10770,11 @@ var PhoneNumberSearch = /*#__PURE__*/function () {
 }();
 
 exports.PhoneNumberSearch = PhoneNumberSearch;
-//# sourceMappingURL=findPhoneNumbers_.js.map
+//# sourceMappingURL=findPhoneNumbersInitialImplementation.js.map
 
 /***/ }),
 
-/***/ 4777:
+/***/ 6693:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -8156,15 +10784,15 @@ var __webpack_unused_export__;
 __webpack_unused_export__ = ({
   value: true
 });
-exports.Z = formatNumber;
+exports.A = formatNumber;
 
-var _format_ = _interopRequireDefault(__webpack_require__(1166));
+var _format = _interopRequireDefault(__webpack_require__(4538));
 
-var _parse_ = _interopRequireDefault(__webpack_require__(2953));
+var _parse = _interopRequireDefault(__webpack_require__(6214));
+
+var _isObject = _interopRequireDefault(__webpack_require__(4916));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -8185,7 +10813,7 @@ function formatNumber() {
       options = _normalizeArguments.options,
       metadata = _normalizeArguments.metadata;
 
-  return (0, _format_["default"])(input, format, options, metadata);
+  return (0, _format["default"])(input, format, options, metadata);
 } // Sort out arguments
 
 
@@ -8218,7 +10846,7 @@ function normalizeArguments(args) {
         metadata = arg_4;
       }
 
-      input = (0, _parse_["default"])(arg_1, {
+      input = (0, _parse["default"])(arg_1, {
         defaultCountry: arg_2,
         extended: true
       }, metadata);
@@ -8238,13 +10866,13 @@ function normalizeArguments(args) {
         metadata = arg_3;
       }
 
-      input = (0, _parse_["default"])(arg_1, {
+      input = (0, _parse["default"])(arg_1, {
         extended: true
       }, metadata);
     }
   } // If the phone number is passed as a parsed number object.
   // `format({ phone: '8005553535', country: 'RU' }, 'NATIONAL', [options], metadata)`.
-  else if (is_object(arg_1)) {
+  else if ((0, _isObject["default"])(arg_1)) {
     input = arg_1;
     format = arg_2;
 
@@ -8269,335 +10897,12 @@ function normalizeArguments(args) {
     options: options,
     metadata: metadata
   };
-} // Babel transforms `typeof` into some "branches"
-// so istanbul will show this as "branch not covered".
-
-/* istanbul ignore next */
-
-
-var is_object = function is_object(_) {
-  return _typeof(_) === 'object';
-};
+}
 //# sourceMappingURL=format.js.map
 
 /***/ }),
 
-/***/ 6697:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-var __webpack_unused_export__;
-
-
-__webpack_unused_export__ = ({
-  value: true
-});
-exports["default"] = formatIncompletePhoneNumber;
-
-var _AsYouType = _interopRequireDefault(__webpack_require__(3995));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-/**
- * Formats a (possibly incomplete) phone number.
- * The phone number can be either in E.164 format
- * or in a form of national number digits.
- * @param {string} value - A possibly incomplete phone number. Either in E.164 format or in a form of national number digits.
- * @param {string?} country - Two-letter ("ISO 3166-1 alpha-2") country code.
- * @return {string} Formatted (possibly incomplete) phone number.
- */
-function formatIncompletePhoneNumber(value, country, metadata) {
-  if (!metadata) {
-    metadata = country;
-    country = undefined;
-  }
-
-  return new _AsYouType["default"](country, metadata).input(value);
-}
-//# sourceMappingURL=formatIncompletePhoneNumber.js.map
-
-/***/ }),
-
-/***/ 1166:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = formatNumber;
-
-var _matchesEntirely = _interopRequireDefault(__webpack_require__(9423));
-
-var _formatNationalNumberUsingFormat = _interopRequireDefault(__webpack_require__(383));
-
-var _metadata = _interopRequireWildcard(__webpack_require__(7536));
-
-var _getIddPrefix = _interopRequireDefault(__webpack_require__(7250));
-
-var _RFC = __webpack_require__(7274);
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var DEFAULT_OPTIONS = {
-  formatExtension: function formatExtension(formattedNumber, extension, metadata) {
-    return "".concat(formattedNumber).concat(metadata.ext()).concat(extension);
-  }
-}; // Formats a phone number
-//
-// Example use cases:
-//
-// ```js
-// formatNumber('8005553535', 'RU', 'INTERNATIONAL')
-// formatNumber('8005553535', 'RU', 'INTERNATIONAL', metadata)
-// formatNumber({ phone: '8005553535', country: 'RU' }, 'INTERNATIONAL')
-// formatNumber({ phone: '8005553535', country: 'RU' }, 'INTERNATIONAL', metadata)
-// formatNumber('+78005553535', 'NATIONAL')
-// formatNumber('+78005553535', 'NATIONAL', metadata)
-// ```
-//
-
-function formatNumber(input, format, options, metadata) {
-  // Apply default options.
-  if (options) {
-    options = _objectSpread(_objectSpread({}, DEFAULT_OPTIONS), options);
-  } else {
-    options = DEFAULT_OPTIONS;
-  }
-
-  metadata = new _metadata["default"](metadata);
-
-  if (input.country && input.country !== '001') {
-    // Validate `input.country`.
-    if (!metadata.hasCountry(input.country)) {
-      throw new Error("Unknown country: ".concat(input.country));
-    }
-
-    metadata.country(input.country);
-  } else if (input.countryCallingCode) {
-    metadata.selectNumberingPlan(input.countryCallingCode);
-  } else return input.phone || '';
-
-  var countryCallingCode = metadata.countryCallingCode();
-  var nationalNumber = options.v2 ? input.nationalNumber : input.phone; // This variable should have been declared inside `case`s
-  // but Babel has a bug and it says "duplicate variable declaration".
-
-  var number;
-
-  switch (format) {
-    case 'NATIONAL':
-      // Legacy argument support.
-      // (`{ country: ..., phone: '' }`)
-      if (!nationalNumber) {
-        return '';
-      }
-
-      number = formatNationalNumber(nationalNumber, input.carrierCode, 'NATIONAL', metadata, options);
-      return addExtension(number, input.ext, metadata, options.formatExtension);
-
-    case 'INTERNATIONAL':
-      // Legacy argument support.
-      // (`{ country: ..., phone: '' }`)
-      if (!nationalNumber) {
-        return "+".concat(countryCallingCode);
-      }
-
-      number = formatNationalNumber(nationalNumber, null, 'INTERNATIONAL', metadata, options);
-      number = "+".concat(countryCallingCode, " ").concat(number);
-      return addExtension(number, input.ext, metadata, options.formatExtension);
-
-    case 'E.164':
-      // `E.164` doesn't define "phone number extensions".
-      return "+".concat(countryCallingCode).concat(nationalNumber);
-
-    case 'RFC3966':
-      return (0, _RFC.formatRFC3966)({
-        number: "+".concat(countryCallingCode).concat(nationalNumber),
-        ext: input.ext
-      });
-    // For reference, here's Google's IDD formatter:
-    // https://github.com/google/libphonenumber/blob/32719cf74e68796788d1ca45abc85dcdc63ba5b9/java/libphonenumber/src/com/google/i18n/phonenumbers/PhoneNumberUtil.java#L1546
-    // Not saying that this IDD formatter replicates it 1:1, but it seems to work.
-    // Who would even need to format phone numbers in IDD format anyway?
-
-    case 'IDD':
-      if (!options.fromCountry) {
-        return; // throw new Error('`fromCountry` option not passed for IDD-prefixed formatting.')
-      }
-
-      var formattedNumber = formatIDD(nationalNumber, input.carrierCode, countryCallingCode, options.fromCountry, metadata);
-      return addExtension(formattedNumber, input.ext, metadata, options.formatExtension);
-
-    default:
-      throw new Error("Unknown \"format\" argument passed to \"formatNumber()\": \"".concat(format, "\""));
-  }
-}
-
-function formatNationalNumber(number, carrierCode, formatAs, metadata, options) {
-  var format = chooseFormatForNumber(metadata.formats(), number);
-
-  if (!format) {
-    return number;
-  }
-
-  return (0, _formatNationalNumberUsingFormat["default"])(number, format, {
-    useInternationalFormat: formatAs === 'INTERNATIONAL',
-    withNationalPrefix: format.nationalPrefixIsOptionalWhenFormattingInNationalFormat() && options && options.nationalPrefix === false ? false : true,
-    carrierCode: carrierCode,
-    metadata: metadata
-  });
-}
-
-function chooseFormatForNumber(availableFormats, nationalNnumber) {
-  for (var _iterator = _createForOfIteratorHelperLoose(availableFormats), _step; !(_step = _iterator()).done;) {
-    var format = _step.value;
-
-    // Validate leading digits.
-    // The test case for "else path" could be found by searching for
-    // "format.leadingDigitsPatterns().length === 0".
-    if (format.leadingDigitsPatterns().length > 0) {
-      // The last leading_digits_pattern is used here, as it is the most detailed
-      var lastLeadingDigitsPattern = format.leadingDigitsPatterns()[format.leadingDigitsPatterns().length - 1]; // If leading digits don't match then move on to the next phone number format
-
-      if (nationalNnumber.search(lastLeadingDigitsPattern) !== 0) {
-        continue;
-      }
-    } // Check that the national number matches the phone number format regular expression
-
-
-    if ((0, _matchesEntirely["default"])(nationalNnumber, format.pattern())) {
-      return format;
-    }
-  }
-}
-
-function addExtension(formattedNumber, ext, metadata, formatExtension) {
-  return ext ? formatExtension(formattedNumber, ext, metadata) : formattedNumber;
-}
-
-function formatIDD(nationalNumber, carrierCode, countryCallingCode, fromCountry, metadata) {
-  var fromCountryCallingCode = (0, _metadata.getCountryCallingCode)(fromCountry, metadata.metadata); // When calling within the same country calling code.
-
-  if (fromCountryCallingCode === countryCallingCode) {
-    var formattedNumber = formatNationalNumber(nationalNumber, carrierCode, 'NATIONAL', metadata); // For NANPA regions, return the national format for these regions
-    // but prefix it with the country calling code.
-
-    if (countryCallingCode === '1') {
-      return countryCallingCode + ' ' + formattedNumber;
-    } // If regions share a country calling code, the country calling code need
-    // not be dialled. This also applies when dialling within a region, so this
-    // if clause covers both these cases. Technically this is the case for
-    // dialling from La Reunion to other overseas departments of France (French
-    // Guiana, Martinique, Guadeloupe), but not vice versa - so we don't cover
-    // this edge case for now and for those cases return the version including
-    // country calling code. Details here:
-    // http://www.petitfute.com/voyage/225-info-pratiques-reunion
-    //
-
-
-    return formattedNumber;
-  }
-
-  var iddPrefix = (0, _getIddPrefix["default"])(fromCountry, undefined, metadata.metadata);
-
-  if (iddPrefix) {
-    return "".concat(iddPrefix, " ").concat(countryCallingCode, " ").concat(formatNationalNumber(nationalNumber, null, 'INTERNATIONAL', metadata));
-  }
-}
-//# sourceMappingURL=format_.js.map
-
-/***/ }),
-
-/***/ 8600:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-var __webpack_unused_export__;
-
-
-__webpack_unused_export__ = ({
-  value: true
-});
-exports["default"] = getCountries;
-
-var _metadata = _interopRequireDefault(__webpack_require__(7536));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function getCountries(metadata) {
-  return new _metadata["default"](metadata).getCountries();
-}
-//# sourceMappingURL=getCountries.js.map
-
-/***/ }),
-
-/***/ 14:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-Object.defineProperty(exports, "default", ({
-  enumerable: true,
-  get: function get() {
-    return _metadata.getCountryCallingCode;
-  }
-}));
-
-var _metadata = __webpack_require__(7536);
-//# sourceMappingURL=getCountryCallingCode.js.map
-
-/***/ }),
-
-/***/ 568:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-var __webpack_unused_export__;
-
-
-__webpack_unused_export__ = ({
-  value: true
-});
-exports["default"] = getExampleNumber;
-
-var _PhoneNumber = _interopRequireDefault(__webpack_require__(7289));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function getExampleNumber(country, examples, metadata) {
-  if (examples[country]) {
-    return new _PhoneNumber["default"](country, examples[country], metadata);
-  }
-}
-//# sourceMappingURL=getExampleNumber.js.map
-
-/***/ }),
-
-/***/ 454:
+/***/ 8704:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -8609,15 +10914,15 @@ Object.defineProperty(exports, "__esModule", ({
 exports["default"] = getNumberType;
 exports.normalizeArguments = normalizeArguments;
 
-var _isViablePhoneNumber = _interopRequireDefault(__webpack_require__(9963));
+var _isViablePhoneNumber = _interopRequireDefault(__webpack_require__(333));
 
-var _getNumberType2 = _interopRequireDefault(__webpack_require__(7065));
+var _getNumberType2 = _interopRequireDefault(__webpack_require__(2646));
 
-var _parse_ = _interopRequireDefault(__webpack_require__(2953));
+var _isObject = _interopRequireDefault(__webpack_require__(4916));
+
+var _parse = _interopRequireDefault(__webpack_require__(6214));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -8636,7 +10941,12 @@ function getNumberType() {
   var _normalizeArguments = normalizeArguments(arguments),
       input = _normalizeArguments.input,
       options = _normalizeArguments.options,
-      metadata = _normalizeArguments.metadata;
+      metadata = _normalizeArguments.metadata; // `parseNumber()` would return `{}` when no phone number could be parsed from the input.
+
+
+  if (!input.phone) {
+    return;
+  }
 
   return (0, _getNumberType2["default"])(input, options, metadata);
 } // Sort out arguments
@@ -8659,7 +10969,7 @@ function normalizeArguments(args) {
     // If "default country" argument is being passed
     // then convert it to an `options` object.
     // `getNumberType('88005553535', 'RU', metadata)`.
-    if (_typeof(arg_2) !== 'object') {
+    if (!(0, _isObject["default"])(arg_2)) {
       if (arg_4) {
         options = arg_3;
         metadata = arg_4;
@@ -8673,7 +10983,7 @@ function normalizeArguments(args) {
 
 
       if ((0, _isViablePhoneNumber["default"])(arg_1)) {
-        input = (0, _parse_["default"])(arg_1, {
+        input = (0, _parse["default"])(arg_1, {
           defaultCountry: arg_2
         }, metadata);
       } else {
@@ -8696,14 +11006,14 @@ function normalizeArguments(args) {
 
 
       if ((0, _isViablePhoneNumber["default"])(arg_1)) {
-        input = (0, _parse_["default"])(arg_1, undefined, metadata);
+        input = (0, _parse["default"])(arg_1, undefined, metadata);
       } else {
         input = {};
       }
     }
   } // If the phone number is passed as a parsed phone number.
   // `getNumberType({ phone: '88005553535', country: 'RU' }, ...)`.
-  else if (is_object(arg_1)) {
+  else if ((0, _isObject["default"])(arg_1)) {
     input = arg_1;
 
     if (arg_3) {
@@ -8719,1534 +11029,12 @@ function normalizeArguments(args) {
     options: options,
     metadata: metadata
   };
-} // Babel transforms `typeof` into some "branches"
-// so istanbul will show this as "branch not covered".
-
-/* istanbul ignore next */
-
-
-var is_object = function is_object(_) {
-  return _typeof(_) === 'object';
-};
-//# sourceMappingURL=getNumberType.js.map
-
-/***/ }),
-
-/***/ 7274:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.formatRFC3966 = formatRFC3966;
-exports.parseRFC3966 = parseRFC3966;
-
-var _isViablePhoneNumber = _interopRequireDefault(__webpack_require__(9963));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-// https://www.ietf.org/rfc/rfc3966.txt
-
-/**
- * @param  {string} text - Phone URI (RFC 3966).
- * @return {object} `{ ?number, ?ext }`.
- */
-function parseRFC3966(text) {
-  var number;
-  var ext; // Replace "tel:" with "tel=" for parsing convenience.
-
-  text = text.replace(/^tel:/, 'tel=');
-
-  for (var _iterator = _createForOfIteratorHelperLoose(text.split(';')), _step; !(_step = _iterator()).done;) {
-    var part = _step.value;
-
-    var _part$split = part.split('='),
-        _part$split2 = _slicedToArray(_part$split, 2),
-        name = _part$split2[0],
-        value = _part$split2[1];
-
-    switch (name) {
-      case 'tel':
-        number = value;
-        break;
-
-      case 'ext':
-        ext = value;
-        break;
-
-      case 'phone-context':
-        // Only "country contexts" are supported.
-        // "Domain contexts" are ignored.
-        if (value[0] === '+') {
-          number = value + number;
-        }
-
-        break;
-    }
-  } // If the phone number is not viable, then abort.
-
-
-  if (!(0, _isViablePhoneNumber["default"])(number)) {
-    return {};
-  }
-
-  var result = {
-    number: number
-  };
-
-  if (ext) {
-    result.ext = ext;
-  }
-
-  return result;
-}
-/**
- * @param  {object} - `{ ?number, ?extension }`.
- * @return {string} Phone URI (RFC 3966).
- */
-
-
-function formatRFC3966(_ref) {
-  var number = _ref.number,
-      ext = _ref.ext;
-
-  if (!number) {
-    return '';
-  }
-
-  if (number[0] !== '+') {
-    throw new Error("\"formatRFC3966()\" expects \"number\" to be in E.164 format.");
-  }
-
-  return "tel:".concat(number).concat(ext ? ';ext=' + ext : '');
-}
-//# sourceMappingURL=RFC3966.js.map
-
-/***/ }),
-
-/***/ 9016:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = applyInternationalSeparatorStyle;
-
-var _constants = __webpack_require__(6703);
-
-// Removes brackets and replaces dashes with spaces.
-//
-// E.g. "(999) 111-22-33" -> "999 111 22 33"
-//
-// For some reason Google's metadata contains `<intlFormat/>`s with brackets and dashes.
-// Meanwhile, there's no single opinion about using punctuation in international phone numbers.
-//
-// For example, Google's `<intlFormat/>` for USA is `+1 213-373-4253`.
-// And here's a quote from WikiPedia's "North American Numbering Plan" page:
-// https://en.wikipedia.org/wiki/North_American_Numbering_Plan
-//
-// "The country calling code for all countries participating in the NANP is 1.
-// In international format, an NANP number should be listed as +1 301 555 01 00,
-// where 301 is an area code (Maryland)."
-//
-// I personally prefer the international format without any punctuation.
-// For example, brackets are remnants of the old age, meaning that the
-// phone number part in brackets (so called "area code") can be omitted
-// if dialing within the same "area".
-// And hyphens were clearly introduced for splitting local numbers into memorizable groups.
-// For example, remembering "5553535" is difficult but "555-35-35" is much simpler.
-// Imagine a man taking a bus from home to work and seeing an ad with a phone number.
-// He has a couple of seconds to memorize that number until it passes by.
-// If it were spaces instead of hyphens the man wouldn't necessarily get it,
-// but with hyphens instead of spaces the grouping is more explicit.
-// I personally think that hyphens introduce visual clutter,
-// so I prefer replacing them with spaces in international numbers.
-// In the modern age all output is done on displays where spaces are clearly distinguishable
-// so hyphens can be safely replaced with spaces without losing any legibility.
-//
-function applyInternationalSeparatorStyle(formattedNumber) {
-  return formattedNumber.replace(new RegExp("[".concat(_constants.VALID_PUNCTUATION, "]+"), 'g'), ' ').trim();
-}
-//# sourceMappingURL=applyInternationalSeparatorStyle.js.map
-
-/***/ }),
-
-/***/ 7044:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.checkNumberLengthForType = checkNumberLengthForType;
-exports["default"] = checkNumberLength;
-
-var _mergeArrays = _interopRequireDefault(__webpack_require__(8970));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function checkNumberLength(nationalNumber, metadata) {
-  return checkNumberLengthForType(nationalNumber, undefined, metadata);
-} // Checks whether a number is possible for the country based on its length.
-// Should only be called for the "new" metadata which has "possible lengths".
-
-
-function checkNumberLengthForType(nationalNumber, type, metadata) {
-  var type_info = metadata.type(type); // There should always be "<possiblePengths/>" set for every type element.
-  // This is declared in the XML schema.
-  // For size efficiency, where a sub-description (e.g. fixed-line)
-  // has the same "<possiblePengths/>" as the "general description", this is missing,
-  // so we fall back to the "general description". Where no numbers of the type
-  // exist at all, there is one possible length (-1) which is guaranteed
-  // not to match the length of any real phone number.
-
-  var possible_lengths = type_info && type_info.possibleLengths() || metadata.possibleLengths(); // let local_lengths    = type_info && type.possibleLengthsLocal() || metadata.possibleLengthsLocal()
-  // Metadata before version `1.0.18` didn't contain `possible_lengths`.
-
-  if (!possible_lengths) {
-    return 'IS_POSSIBLE';
-  }
-
-  if (type === 'FIXED_LINE_OR_MOBILE') {
-    // No such country in metadata.
-
-    /* istanbul ignore next */
-    if (!metadata.type('FIXED_LINE')) {
-      // The rare case has been encountered where no fixedLine data is available
-      // (true for some non-geographic entities), so we just check mobile.
-      return checkNumberLengthForType(nationalNumber, 'MOBILE', metadata);
-    }
-
-    var mobile_type = metadata.type('MOBILE');
-
-    if (mobile_type) {
-      // Merge the mobile data in if there was any. "Concat" creates a new
-      // array, it doesn't edit possible_lengths in place, so we don't need a copy.
-      // Note that when adding the possible lengths from mobile, we have
-      // to again check they aren't empty since if they are this indicates
-      // they are the same as the general desc and should be obtained from there.
-      possible_lengths = (0, _mergeArrays["default"])(possible_lengths, mobile_type.possibleLengths()); // The current list is sorted; we need to merge in the new list and
-      // re-sort (duplicates are okay). Sorting isn't so expensive because
-      // the lists are very small.
-      // if (local_lengths) {
-      // 	local_lengths = mergeArrays(local_lengths, mobile_type.possibleLengthsLocal())
-      // } else {
-      // 	local_lengths = mobile_type.possibleLengthsLocal()
-      // }
-    }
-  } // If the type doesn't exist then return 'INVALID_LENGTH'.
-  else if (type && !type_info) {
-    return 'INVALID_LENGTH';
-  }
-
-  var actual_length = nationalNumber.length; // In `libphonenumber-js` all "local-only" formats are dropped for simplicity.
-  // // This is safe because there is never an overlap beween the possible lengths
-  // // and the local-only lengths; this is checked at build time.
-  // if (local_lengths && local_lengths.indexOf(nationalNumber.length) >= 0)
-  // {
-  // 	return 'IS_POSSIBLE_LOCAL_ONLY'
-  // }
-
-  var minimum_length = possible_lengths[0];
-
-  if (minimum_length === actual_length) {
-    return 'IS_POSSIBLE';
-  }
-
-  if (minimum_length > actual_length) {
-    return 'TOO_SHORT';
-  }
-
-  if (possible_lengths[possible_lengths.length - 1] < actual_length) {
-    return 'TOO_LONG';
-  } // We skip the first element since we've already checked it.
-
-
-  return possible_lengths.indexOf(actual_length, 1) >= 0 ? 'IS_POSSIBLE' : 'INVALID_LENGTH';
-}
-//# sourceMappingURL=checkNumberLength.js.map
-
-/***/ }),
-
-/***/ 3138:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = createExtensionPattern;
-
-var _constants = __webpack_require__(6703);
-
-// The RFC 3966 format for extensions.
-var RFC3966_EXTN_PREFIX = ';ext=';
-/**
- * Helper method for constructing regular expressions for parsing. Creates
- * an expression that captures up to max_length digits.
- * @return {string} RegEx pattern to capture extension digits.
- */
-
-var getExtensionDigitsPattern = function getExtensionDigitsPattern(maxLength) {
-  return "([".concat(_constants.VALID_DIGITS, "]{1,").concat(maxLength, "})");
-};
-/**
- * Helper initialiser method to create the regular-expression pattern to match
- * extensions.
- * Copy-pasted from Google's `libphonenumber`:
- * https://github.com/google/libphonenumber/blob/55b2646ec9393f4d3d6661b9c82ef9e258e8b829/javascript/i18n/phonenumbers/phonenumberutil.js#L759-L766
- * @return {string} RegEx pattern to capture extensions.
- */
-
-
-function createExtensionPattern(purpose) {
-  // We cap the maximum length of an extension based on the ambiguity of the way
-  // the extension is prefixed. As per ITU, the officially allowed length for
-  // extensions is actually 40, but we don't support this since we haven't seen real
-  // examples and this introduces many false interpretations as the extension labels
-  // are not standardized.
-
-  /** @type {string} */
-  var extLimitAfterExplicitLabel = '20';
-  /** @type {string} */
-
-  var extLimitAfterLikelyLabel = '15';
-  /** @type {string} */
-
-  var extLimitAfterAmbiguousChar = '9';
-  /** @type {string} */
-
-  var extLimitWhenNotSure = '6';
-  /** @type {string} */
-
-  var possibleSeparatorsBetweenNumberAndExtLabel = "[ \xA0\\t,]*"; // Optional full stop (.) or colon, followed by zero or more spaces/tabs/commas.
-
-  /** @type {string} */
-
-  var possibleCharsAfterExtLabel = "[:\\.\uFF0E]?[ \xA0\\t,-]*";
-  /** @type {string} */
-
-  var optionalExtnSuffix = "#?"; // Here the extension is called out in more explicit way, i.e mentioning it obvious
-  // patterns like "ext.".
-
-  /** @type {string} */
-
-  var explicitExtLabels = "(?:e?xt(?:ensi(?:o\u0301?|\xF3))?n?|\uFF45?\uFF58\uFF54\uFF4E?|\u0434\u043E\u0431|anexo)"; // One-character symbols that can be used to indicate an extension, and less
-  // commonly used or more ambiguous extension labels.
-
-  /** @type {string} */
-
-  var ambiguousExtLabels = "(?:[x\uFF58#\uFF03~\uFF5E]|int|\uFF49\uFF4E\uFF54)"; // When extension is not separated clearly.
-
-  /** @type {string} */
-
-  var ambiguousSeparator = "[- ]+"; // This is the same as possibleSeparatorsBetweenNumberAndExtLabel, but not matching
-  // comma as extension label may have it.
-
-  /** @type {string} */
-
-  var possibleSeparatorsNumberExtLabelNoComma = "[ \xA0\\t]*"; // ",," is commonly used for auto dialling the extension when connected. First
-  // comma is matched through possibleSeparatorsBetweenNumberAndExtLabel, so we do
-  // not repeat it here. Semi-colon works in Iphone and Android also to pop up a
-  // button with the extension number following.
-
-  /** @type {string} */
-
-  var autoDiallingAndExtLabelsFound = "(?:,{2}|;)";
-  /** @type {string} */
-
-  var rfcExtn = RFC3966_EXTN_PREFIX + getExtensionDigitsPattern(extLimitAfterExplicitLabel);
-  /** @type {string} */
-
-  var explicitExtn = possibleSeparatorsBetweenNumberAndExtLabel + explicitExtLabels + possibleCharsAfterExtLabel + getExtensionDigitsPattern(extLimitAfterExplicitLabel) + optionalExtnSuffix;
-  /** @type {string} */
-
-  var ambiguousExtn = possibleSeparatorsBetweenNumberAndExtLabel + ambiguousExtLabels + possibleCharsAfterExtLabel + getExtensionDigitsPattern(extLimitAfterAmbiguousChar) + optionalExtnSuffix;
-  /** @type {string} */
-
-  var americanStyleExtnWithSuffix = ambiguousSeparator + getExtensionDigitsPattern(extLimitWhenNotSure) + "#";
-  /** @type {string} */
-
-  var autoDiallingExtn = possibleSeparatorsNumberExtLabelNoComma + autoDiallingAndExtLabelsFound + possibleCharsAfterExtLabel + getExtensionDigitsPattern(extLimitAfterLikelyLabel) + optionalExtnSuffix;
-  /** @type {string} */
-
-  var onlyCommasExtn = possibleSeparatorsNumberExtLabelNoComma + "(?:,)+" + possibleCharsAfterExtLabel + getExtensionDigitsPattern(extLimitAfterAmbiguousChar) + optionalExtnSuffix; // The first regular expression covers RFC 3966 format, where the extension is added
-  // using ";ext=". The second more generic where extension is mentioned with explicit
-  // labels like "ext:". In both the above cases we allow more numbers in extension than
-  // any other extension labels. The third one captures when single character extension
-  // labels or less commonly used labels are used. In such cases we capture fewer
-  // extension digits in order to reduce the chance of falsely interpreting two
-  // numbers beside each other as a number + extension. The fourth one covers the
-  // special case of American numbers where the extension is written with a hash
-  // at the end, such as "- 503#". The fifth one is exclusively for extension
-  // autodialling formats which are used when dialling and in this case we accept longer
-  // extensions. The last one is more liberal on the number of commas that acts as
-  // extension labels, so we have a strict cap on the number of digits in such extensions.
-
-  return rfcExtn + "|" + explicitExtn + "|" + ambiguousExtn + "|" + americanStyleExtnWithSuffix + "|" + autoDiallingExtn + "|" + onlyCommasExtn;
-}
-//# sourceMappingURL=createExtensionPattern.js.map
-
-/***/ }),
-
-/***/ 5370:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = extractExtension;
-
-var _createExtensionPattern = _interopRequireDefault(__webpack_require__(3138));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-// Regexp of all known extension prefixes used by different regions followed by
-// 1 or more valid digits, for use when parsing.
-var EXTN_PATTERN = new RegExp('(?:' + (0, _createExtensionPattern["default"])() + ')$', 'i'); // Strips any extension (as in, the part of the number dialled after the call is
-// connected, usually indicated with extn, ext, x or similar) from the end of
-// the number, and returns it.
-
-function extractExtension(number) {
-  var start = number.search(EXTN_PATTERN);
-
-  if (start < 0) {
-    return {};
-  } // If we find a potential extension, and the number preceding this is a viable
-  // number, we assume it is an extension.
-
-
-  var numberWithoutExtension = number.slice(0, start);
-  var matches = number.match(EXTN_PATTERN);
-  var i = 1;
-
-  while (i < matches.length) {
-    if (matches[i]) {
-      return {
-        number: numberWithoutExtension,
-        ext: matches[i]
-      };
-    }
-
-    i++;
-  }
-}
-//# sourceMappingURL=extractExtension.js.map
-
-/***/ }),
-
-/***/ 2284:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = extractCountryCallingCode;
-
-var _stripIddPrefix = _interopRequireDefault(__webpack_require__(9784));
-
-var _extractCountryCallingCodeFromInternationalNumberWithoutPlusSign = _interopRequireDefault(__webpack_require__(940));
-
-var _metadata = _interopRequireDefault(__webpack_require__(7536));
-
-var _constants = __webpack_require__(6703);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-/**
- * Converts a phone number digits (possibly with a `+`)
- * into a calling code and the rest phone number digits.
- * The "rest phone number digits" could include
- * a national prefix, carrier code, and national
- * (significant) number.
- * @param  {string} number — Phone number digits (possibly with a `+`).
- * @param  {string} [country] — Default country.
- * @param  {string} [callingCode] — Default calling code (some phone numbering plans are non-geographic).
- * @param  {object} metadata
- * @return {object} `{ countryCallingCode: string?, number: string }`
- * @example
- * // Returns `{ countryCallingCode: "1", number: "2133734253" }`.
- * extractCountryCallingCode('2133734253', 'US', null, metadata)
- * extractCountryCallingCode('2133734253', null, '1', metadata)
- * extractCountryCallingCode('+12133734253', null, null, metadata)
- * extractCountryCallingCode('+12133734253', 'RU', null, metadata)
- */
-function extractCountryCallingCode(number, country, callingCode, metadata) {
-  if (!number) {
-    return {};
-  } // If this is not an international phone number,
-  // then either extract an "IDD" prefix, or extract a
-  // country calling code from a number by autocorrecting it
-  // by prepending a leading `+` in cases when it starts
-  // with the country calling code.
-  // https://wikitravel.org/en/International_dialling_prefix
-  // https://github.com/catamphetamine/libphonenumber-js/issues/376
-
-
-  if (number[0] !== '+') {
-    // Convert an "out-of-country" dialing phone number
-    // to a proper international phone number.
-    var numberWithoutIDD = (0, _stripIddPrefix["default"])(number, country, callingCode, metadata); // If an IDD prefix was stripped then
-    // convert the number to international one
-    // for subsequent parsing.
-
-    if (numberWithoutIDD && numberWithoutIDD !== number) {
-      number = '+' + numberWithoutIDD;
-    } else {
-      // Check to see if the number starts with the country calling code
-      // for the default country. If so, we remove the country calling code,
-      // and do some checks on the validity of the number before and after.
-      // https://github.com/catamphetamine/libphonenumber-js/issues/376
-      if (country || callingCode) {
-        var _extractCountryCallin = (0, _extractCountryCallingCodeFromInternationalNumberWithoutPlusSign["default"])(number, country, callingCode, metadata),
-            countryCallingCode = _extractCountryCallin.countryCallingCode,
-            shorterNumber = _extractCountryCallin.number;
-
-        if (countryCallingCode) {
-          return {
-            countryCallingCode: countryCallingCode,
-            number: shorterNumber
-          };
-        }
-      }
-
-      return {
-        number: number
-      };
-    }
-  } // Fast abortion: country codes do not begin with a '0'
-
-
-  if (number[1] === '0') {
-    return {};
-  }
-
-  metadata = new _metadata["default"](metadata); // The thing with country phone codes
-  // is that they are orthogonal to each other
-  // i.e. there's no such country phone code A
-  // for which country phone code B exists
-  // where B starts with A.
-  // Therefore, while scanning digits,
-  // if a valid country code is found,
-  // that means that it is the country code.
-  //
-
-  var i = 2;
-
-  while (i - 1 <= _constants.MAX_LENGTH_COUNTRY_CODE && i <= number.length) {
-    var _countryCallingCode = number.slice(1, i);
-
-    if (metadata.hasCallingCode(_countryCallingCode)) {
-      metadata.selectNumberingPlan(_countryCallingCode);
-      return {
-        countryCallingCode: _countryCallingCode,
-        number: number.slice(i)
-      };
-    }
-
-    i++;
-  }
-
-  return {};
-}
-//# sourceMappingURL=extractCountryCallingCode.js.map
-
-/***/ }),
-
-/***/ 940:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = extractCountryCallingCodeFromInternationalNumberWithoutPlusSign;
-
-var _metadata = _interopRequireDefault(__webpack_require__(7536));
-
-var _matchesEntirely = _interopRequireDefault(__webpack_require__(9423));
-
-var _extractNationalNumber = _interopRequireDefault(__webpack_require__(2988));
-
-var _checkNumberLength = _interopRequireDefault(__webpack_require__(7044));
-
-var _getCountryCallingCode = _interopRequireDefault(__webpack_require__(14));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-/**
- * Sometimes some people incorrectly input international phone numbers
- * without the leading `+`. This function corrects such input.
- * @param  {string} number — Phone number digits.
- * @param  {string?} country
- * @param  {string?} callingCode
- * @param  {object} metadata
- * @return {object} `{ countryCallingCode: string?, number: string }`.
- */
-function extractCountryCallingCodeFromInternationalNumberWithoutPlusSign(number, country, callingCode, metadata) {
-  var countryCallingCode = country ? (0, _getCountryCallingCode["default"])(country, metadata) : callingCode;
-
-  if (number.indexOf(countryCallingCode) === 0) {
-    metadata = new _metadata["default"](metadata);
-    metadata.selectNumberingPlan(country, callingCode);
-    var possibleShorterNumber = number.slice(countryCallingCode.length);
-
-    var _extractNationalNumbe = (0, _extractNationalNumber["default"])(possibleShorterNumber, metadata),
-        possibleShorterNationalNumber = _extractNationalNumbe.nationalNumber;
-
-    var _extractNationalNumbe2 = (0, _extractNationalNumber["default"])(number, metadata),
-        nationalNumber = _extractNationalNumbe2.nationalNumber; // If the number was not valid before but is valid now,
-    // or if it was too long before, we consider the number
-    // with the country calling code stripped to be a better result
-    // and keep that instead.
-    // For example, in Germany (+49), `49` is a valid area code,
-    // so if a number starts with `49`, it could be both a valid
-    // national German number or an international number without
-    // a leading `+`.
-
-
-    if (!(0, _matchesEntirely["default"])(nationalNumber, metadata.nationalNumberPattern()) && (0, _matchesEntirely["default"])(possibleShorterNationalNumber, metadata.nationalNumberPattern()) || (0, _checkNumberLength["default"])(nationalNumber, metadata) === 'TOO_LONG') {
-      return {
-        countryCallingCode: countryCallingCode,
-        number: possibleShorterNumber
-      };
-    }
-  }
-
-  return {
-    number: number
-  };
-}
-//# sourceMappingURL=extractCountryCallingCodeFromInternationalNumberWithoutPlusSign.js.map
-
-/***/ }),
-
-/***/ 2988:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = extractNationalNumber;
-
-var _extractNationalNumberFromPossiblyIncompleteNumber = _interopRequireDefault(__webpack_require__(9034));
-
-var _matchesEntirely = _interopRequireDefault(__webpack_require__(9423));
-
-var _checkNumberLength = _interopRequireDefault(__webpack_require__(7044));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-/**
- * Strips national prefix and carrier code from a complete phone number.
- * The difference from the non-"FromCompleteNumber" function is that
- * it won't extract national prefix if the resultant number is too short
- * to be a complete number for the selected phone numbering plan.
- * @param  {string} number — Complete phone number digits.
- * @param  {Metadata} metadata — Metadata with a phone numbering plan selected.
- * @return {object} `{ nationalNumber: string, carrierCode: string? }`.
- */
-function extractNationalNumber(number, metadata) {
-  // Parsing national prefixes and carrier codes
-  // is only required for local phone numbers
-  // but some people don't understand that
-  // and sometimes write international phone numbers
-  // with national prefixes (or maybe even carrier codes).
-  // http://ucken.blogspot.ru/2016/03/trunk-prefixes-in-skype4b.html
-  // Google's original library forgives such mistakes
-  // and so does this library, because it has been requested:
-  // https://github.com/catamphetamine/libphonenumber-js/issues/127
-  var _extractNationalNumbe = (0, _extractNationalNumberFromPossiblyIncompleteNumber["default"])(number, metadata),
-      carrierCode = _extractNationalNumbe.carrierCode,
-      nationalNumber = _extractNationalNumbe.nationalNumber;
-
-  if (nationalNumber !== number) {
-    if (!shouldHaveExtractedNationalPrefix(number, nationalNumber, metadata)) {
-      // Don't strip the national prefix.
-      return {
-        nationalNumber: number
-      };
-    } // Check the national (significant) number length after extracting national prefix and carrier code.
-    // Legacy generated metadata (before `1.0.18`) didn't support the "possible lengths" feature.
-
-
-    if (metadata.possibleLengths()) {
-      // The number remaining after stripping the national prefix and carrier code
-      // should be long enough to have a possible length for the country.
-      // Otherwise, don't strip the national prefix and carrier code,
-      // since the original number could be a valid number.
-      // This check has been copy-pasted "as is" from Google's original library:
-      // https://github.com/google/libphonenumber/blob/876268eb1ad6cdc1b7b5bef17fc5e43052702d57/java/libphonenumber/src/com/google/i18n/phonenumbers/PhoneNumberUtil.java#L3236-L3250
-      // It doesn't check for the "possibility" of the original `number`.
-      // I guess it's fine not checking that one. It works as is anyway.
-      if (!isPossibleIncompleteNationalNumber(nationalNumber, metadata)) {
-        // Don't strip the national prefix.
-        return {
-          nationalNumber: number
-        };
-      }
-    }
-  }
-
-  return {
-    nationalNumber: nationalNumber,
-    carrierCode: carrierCode
-  };
-} // In some countries, the same digit could be a national prefix
-// or a leading digit of a valid phone number.
-// For example, in Russia, national prefix is `8`,
-// and also `800 555 35 35` is a valid number
-// in which `8` is not a national prefix, but the first digit
-// of a national (significant) number.
-// Same's with Belarus:
-// `82004910060` is a valid national (significant) number,
-// but `2004910060` is not.
-// To support such cases (to prevent the code from always stripping
-// national prefix), a condition is imposed: a national prefix
-// is not extracted when the original number is "viable" and the
-// resultant number is not, a "viable" national number being the one
-// that matches `national_number_pattern`.
-
-
-function shouldHaveExtractedNationalPrefix(nationalNumberBefore, nationalNumberAfter, metadata) {
-  // The equivalent in Google's code is:
-  // https://github.com/google/libphonenumber/blob/e326fa1fc4283bb05eb35cb3c15c18f98a31af33/java/libphonenumber/src/com/google/i18n/phonenumbers/PhoneNumberUtil.java#L2969-L3004
-  if ((0, _matchesEntirely["default"])(nationalNumberBefore, metadata.nationalNumberPattern()) && !(0, _matchesEntirely["default"])(nationalNumberAfter, metadata.nationalNumberPattern())) {
-    return false;
-  } // This "is possible" national number (length) check has been commented out
-  // because it's superceded by the (effectively) same check done in the
-  // `extractNationalNumber()` function after it calls `shouldHaveExtractedNationalPrefix()`.
-  // In other words, why run the same check twice if it could only be run once.
-  // // Check the national (significant) number length after extracting national prefix and carrier code.
-  // // Fixes a minor "weird behavior" bug: https://gitlab.com/catamphetamine/libphonenumber-js/-/issues/57
-  // // (Legacy generated metadata (before `1.0.18`) didn't support the "possible lengths" feature).
-  // if (metadata.possibleLengths()) {
-  // 	if (isPossibleIncompleteNationalNumber(nationalNumberBefore, metadata) &&
-  // 		!isPossibleIncompleteNationalNumber(nationalNumberAfter, metadata)) {
-  // 		return false
-  // 	}
-  // }
-
-
-  return true;
-}
-
-function isPossibleIncompleteNationalNumber(nationalNumber, metadata) {
-  switch ((0, _checkNumberLength["default"])(nationalNumber, metadata)) {
-    case 'TOO_SHORT':
-    case 'INVALID_LENGTH':
-      // This library ignores "local-only" phone numbers (for simplicity).
-      // See the readme for more info on what are "local-only" phone numbers.
-      // case 'IS_POSSIBLE_LOCAL_ONLY':
-      return false;
-
-    default:
-      return true;
-  }
-}
-//# sourceMappingURL=extractNationalNumber.js.map
-
-/***/ }),
-
-/***/ 9034:
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = extractNationalNumberFromPossiblyIncompleteNumber;
-
-/**
- * Strips any national prefix (such as 0, 1) present in a
- * (possibly incomplete) number provided.
- * "Carrier codes" are only used  in Colombia and Brazil,
- * and only when dialing within those countries from a mobile phone to a fixed line number.
- * Sometimes it won't actually strip national prefix
- * and will instead prepend some digits to the `number`:
- * for example, when number `2345678` is passed with `VI` country selected,
- * it will return `{ number: "3402345678" }`, because `340` area code is prepended.
- * @param {string} number — National number digits.
- * @param {object} metadata — Metadata with country selected.
- * @return {object} `{ nationalNumber: string, nationalPrefix: string? carrierCode: string? }`. Even if a national prefix was extracted, it's not necessarily present in the returned object, so don't rely on its presence in the returned object in order to find out whether a national prefix has been extracted or not.
- */
-function extractNationalNumberFromPossiblyIncompleteNumber(number, metadata) {
-  if (number && metadata.numberingPlan.nationalPrefixForParsing()) {
-    // See METADATA.md for the description of
-    // `national_prefix_for_parsing` and `national_prefix_transform_rule`.
-    // Attempt to parse the first digits as a national prefix.
-    var prefixPattern = new RegExp('^(?:' + metadata.numberingPlan.nationalPrefixForParsing() + ')');
-    var prefixMatch = prefixPattern.exec(number);
-
-    if (prefixMatch) {
-      var nationalNumber;
-      var carrierCode; // https://gitlab.com/catamphetamine/libphonenumber-js/-/blob/master/METADATA.md#national_prefix_for_parsing--national_prefix_transform_rule
-      // If a `national_prefix_for_parsing` has any "capturing groups"
-      // then it means that the national (significant) number is equal to
-      // those "capturing groups" transformed via `national_prefix_transform_rule`,
-      // and nothing could be said about the actual national prefix:
-      // what is it and was it even there.
-      // If a `national_prefix_for_parsing` doesn't have any "capturing groups",
-      // then everything it matches is a national prefix.
-      // To determine whether `national_prefix_for_parsing` matched any
-      // "capturing groups", the value of the result of calling `.exec()`
-      // is looked at, and if it has non-undefined values where there're
-      // "capturing groups" in the regular expression, then it means
-      // that "capturing groups" have been matched.
-      // It's not possible to tell whether there'll be any "capturing gropus"
-      // before the matching process, because a `national_prefix_for_parsing`
-      // could exhibit both behaviors.
-
-      var capturedGroupsCount = prefixMatch.length - 1;
-      var hasCapturedGroups = capturedGroupsCount > 0 && prefixMatch[capturedGroupsCount];
-
-      if (metadata.nationalPrefixTransformRule() && hasCapturedGroups) {
-        nationalNumber = number.replace(prefixPattern, metadata.nationalPrefixTransformRule()); // If there's more than one captured group,
-        // then carrier code is the second one.
-
-        if (capturedGroupsCount > 1) {
-          carrierCode = prefixMatch[1];
-        }
-      } // If there're no "capturing groups",
-      // or if there're "capturing groups" but no
-      // `national_prefix_transform_rule`,
-      // then just strip the national prefix from the number,
-      // and possibly a carrier code.
-      // Seems like there could be more.
-      else {
-        // `prefixBeforeNationalNumber` is the whole substring matched by
-        // the `national_prefix_for_parsing` regular expression.
-        // There seem to be no guarantees that it's just a national prefix.
-        // For example, if there's a carrier code, it's gonna be a
-        // part of `prefixBeforeNationalNumber` too.
-        var prefixBeforeNationalNumber = prefixMatch[0];
-        nationalNumber = number.slice(prefixBeforeNationalNumber.length); // If there's at least one captured group,
-        // then carrier code is the first one.
-
-        if (hasCapturedGroups) {
-          carrierCode = prefixMatch[1];
-        }
-      } // Tries to guess whether a national prefix was present in the input.
-      // This is not something copy-pasted from Google's library:
-      // they don't seem to have an equivalent for that.
-      // So this isn't an "officially approved" way of doing something like that.
-      // But since there seems no other existing method, this library uses it.
-
-
-      var nationalPrefix;
-
-      if (hasCapturedGroups) {
-        var possiblePositionOfTheFirstCapturedGroup = number.indexOf(prefixMatch[1]);
-        var possibleNationalPrefix = number.slice(0, possiblePositionOfTheFirstCapturedGroup); // Example: an Argentinian (AR) phone number `0111523456789`.
-        // `prefixMatch[0]` is `01115`, and `$1` is `11`,
-        // and the rest of the phone number is `23456789`.
-        // The national number is transformed via `9$1` to `91123456789`.
-        // National prefix `0` is detected being present at the start.
-        // if (possibleNationalPrefix.indexOf(metadata.numberingPlan.nationalPrefix()) === 0) {
-
-        if (possibleNationalPrefix === metadata.numberingPlan.nationalPrefix()) {
-          nationalPrefix = metadata.numberingPlan.nationalPrefix();
-        }
-      } else {
-        nationalPrefix = prefixMatch[0];
-      }
-
-      return {
-        nationalNumber: nationalNumber,
-        nationalPrefix: nationalPrefix,
-        carrierCode: carrierCode
-      };
-    }
-  }
-
-  return {
-    nationalNumber: number
-  };
-}
-//# sourceMappingURL=extractNationalNumberFromPossiblyIncompleteNumber.js.map
-
-/***/ }),
-
-/***/ 383:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.FIRST_GROUP_PATTERN = void 0;
-exports["default"] = formatNationalNumberUsingFormat;
-
-var _applyInternationalSeparatorStyle = _interopRequireDefault(__webpack_require__(9016));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-// This was originally set to $1 but there are some countries for which the
-// first group is not used in the national pattern (e.g. Argentina) so the $1
-// group does not match correctly. Therefore, we use `\d`, so that the first
-// group actually used in the pattern will be matched.
-var FIRST_GROUP_PATTERN = /(\$\d)/;
-exports.FIRST_GROUP_PATTERN = FIRST_GROUP_PATTERN;
-
-function formatNationalNumberUsingFormat(number, format, _ref) {
-  var useInternationalFormat = _ref.useInternationalFormat,
-      withNationalPrefix = _ref.withNationalPrefix,
-      carrierCode = _ref.carrierCode,
-      metadata = _ref.metadata;
-  var formattedNumber = number.replace(new RegExp(format.pattern()), useInternationalFormat ? format.internationalFormat() : // This library doesn't use `domestic_carrier_code_formatting_rule`,
-  // because that one is only used when formatting phone numbers
-  // for dialing from a mobile phone, and this is not a dialing library.
-  // carrierCode && format.domesticCarrierCodeFormattingRule()
-  // 	// First, replace the $CC in the formatting rule with the desired carrier code.
-  // 	// Then, replace the $FG in the formatting rule with the first group
-  // 	// and the carrier code combined in the appropriate way.
-  // 	? format.format().replace(FIRST_GROUP_PATTERN, format.domesticCarrierCodeFormattingRule().replace('$CC', carrierCode))
-  // 	: (
-  // 		withNationalPrefix && format.nationalPrefixFormattingRule()
-  // 			? format.format().replace(FIRST_GROUP_PATTERN, format.nationalPrefixFormattingRule())
-  // 			: format.format()
-  // 	)
-  withNationalPrefix && format.nationalPrefixFormattingRule() ? format.format().replace(FIRST_GROUP_PATTERN, format.nationalPrefixFormattingRule()) : format.format());
-
-  if (useInternationalFormat) {
-    return (0, _applyInternationalSeparatorStyle["default"])(formattedNumber);
-  }
-
-  return formattedNumber;
-}
-//# sourceMappingURL=formatNationalNumberUsingFormat.js.map
-
-/***/ }),
-
-/***/ 7194:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = getCountryByCallingCode;
-
-var _metadata = _interopRequireDefault(__webpack_require__(7536));
-
-var _getNumberType = _interopRequireDefault(__webpack_require__(7065));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-var USE_NON_GEOGRAPHIC_COUNTRY_CODE = false;
-
-function getCountryByCallingCode(callingCode, nationalPhoneNumber, metadata) {
-  /* istanbul ignore if */
-  if (USE_NON_GEOGRAPHIC_COUNTRY_CODE) {
-    if (metadata.isNonGeographicCallingCode(callingCode)) {
-      return '001';
-    }
-  } // Is always non-empty, because `callingCode` is always valid
-
-
-  var possibleCountries = metadata.getCountryCodesForCallingCode(callingCode);
-
-  if (!possibleCountries) {
-    return;
-  } // If there's just one country corresponding to the country code,
-  // then just return it, without further phone number digits validation.
-
-
-  if (possibleCountries.length === 1) {
-    return possibleCountries[0];
-  }
-
-  return selectCountryFromList(possibleCountries, nationalPhoneNumber, metadata.metadata);
-}
-
-function selectCountryFromList(possibleCountries, nationalPhoneNumber, metadata) {
-  // Re-create `metadata` because it will be selecting a `country`.
-  metadata = new _metadata["default"](metadata);
-
-  for (var _iterator = _createForOfIteratorHelperLoose(possibleCountries), _step; !(_step = _iterator()).done;) {
-    var country = _step.value;
-    metadata.country(country); // Leading digits check would be the simplest and fastest one.
-    // Leading digits patterns are only defined for about 20% of all countries.
-    // https://gitlab.com/catamphetamine/libphonenumber-js/blob/master/METADATA.md#leading_digits
-    // Matching "leading digits" is a sufficient but not necessary condition.
-
-    if (metadata.leadingDigits()) {
-      if (nationalPhoneNumber && nationalPhoneNumber.search(metadata.leadingDigits()) === 0) {
-        return country;
-      }
-    } // Else perform full validation with all of those
-    // fixed-line/mobile/etc regular expressions.
-    else if ((0, _getNumberType["default"])({
-      phone: nationalPhoneNumber,
-      country: country
-    }, undefined, metadata.metadata)) {
-      return country;
-    }
-  }
-}
-//# sourceMappingURL=getCountryByCallingCode.js.map
-
-/***/ }),
-
-/***/ 7250:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = getIddPrefix;
-
-var _metadata = _interopRequireDefault(__webpack_require__(7536));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-/**
- * Pattern that makes it easy to distinguish whether a region has a single
- * international dialing prefix or not. If a region has a single international
- * prefix (e.g. 011 in USA), it will be represented as a string that contains
- * a sequence of ASCII digits, and possibly a tilde, which signals waiting for
- * the tone. If there are multiple available international prefixes in a
- * region, they will be represented as a regex string that always contains one
- * or more characters that are not ASCII digits or a tilde.
- */
-var SINGLE_IDD_PREFIX_REG_EXP = /^[\d]+(?:[~\u2053\u223C\uFF5E][\d]+)?$/; // For regions that have multiple IDD prefixes
-// a preferred IDD prefix is returned.
-
-function getIddPrefix(country, callingCode, metadata) {
-  var countryMetadata = new _metadata["default"](metadata);
-  countryMetadata.selectNumberingPlan(country, callingCode);
-
-  if (countryMetadata.defaultIDDPrefix()) {
-    return countryMetadata.defaultIDDPrefix();
-  }
-
-  if (SINGLE_IDD_PREFIX_REG_EXP.test(countryMetadata.IDDPrefix())) {
-    return countryMetadata.IDDPrefix();
-  }
-}
-//# sourceMappingURL=getIddPrefix.js.map
-
-/***/ }),
-
-/***/ 7065:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = getNumberType;
-exports.isNumberTypeEqualTo = isNumberTypeEqualTo;
-
-var _metadata = _interopRequireDefault(__webpack_require__(7536));
-
-var _matchesEntirely = _interopRequireDefault(__webpack_require__(9423));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-var NON_FIXED_LINE_PHONE_TYPES = ['MOBILE', 'PREMIUM_RATE', 'TOLL_FREE', 'SHARED_COST', 'VOIP', 'PERSONAL_NUMBER', 'PAGER', 'UAN', 'VOICEMAIL']; // Finds out national phone number type (fixed line, mobile, etc)
-
-function getNumberType(input, options, metadata) {
-  // If assigning the `{}` default value is moved to the arguments above,
-  // code coverage would decrease for some weird reason.
-  options = options || {}; // When `parse()` returned `{}`
-  // meaning that the phone number is not a valid one.
-
-  if (!input.country) {
-    return;
-  }
-
-  metadata = new _metadata["default"](metadata);
-  metadata.selectNumberingPlan(input.country, input.countryCallingCode);
-  var nationalNumber = options.v2 ? input.nationalNumber : input.phone; // The following is copy-pasted from the original function:
-  // https://github.com/googlei18n/libphonenumber/blob/3ea547d4fbaa2d0b67588904dfa5d3f2557c27ff/javascript/i18n/phonenumbers/phonenumberutil.js#L2835
-  // Is this national number even valid for this country
-
-  if (!(0, _matchesEntirely["default"])(nationalNumber, metadata.nationalNumberPattern())) {
-    return;
-  } // Is it fixed line number
-
-
-  if (isNumberTypeEqualTo(nationalNumber, 'FIXED_LINE', metadata)) {
-    // Because duplicate regular expressions are removed
-    // to reduce metadata size, if "mobile" pattern is ""
-    // then it means it was removed due to being a duplicate of the fixed-line pattern.
-    //
-    if (metadata.type('MOBILE') && metadata.type('MOBILE').pattern() === '') {
-      return 'FIXED_LINE_OR_MOBILE';
-    } // `MOBILE` type pattern isn't included if it matched `FIXED_LINE` one.
-    // For example, for "US" country.
-    // Old metadata (< `1.0.18`) had a specific "types" data structure
-    // that happened to be `undefined` for `MOBILE` in that case.
-    // Newer metadata (>= `1.0.18`) has another data structure that is
-    // not `undefined` for `MOBILE` in that case (it's just an empty array).
-    // So this `if` is just for backwards compatibility with old metadata.
-
-
-    if (!metadata.type('MOBILE')) {
-      return 'FIXED_LINE_OR_MOBILE';
-    } // Check if the number happens to qualify as both fixed line and mobile.
-    // (no such country in the minimal metadata set)
-
-    /* istanbul ignore if */
-
-
-    if (isNumberTypeEqualTo(nationalNumber, 'MOBILE', metadata)) {
-      return 'FIXED_LINE_OR_MOBILE';
-    }
-
-    return 'FIXED_LINE';
-  }
-
-  for (var _iterator = _createForOfIteratorHelperLoose(NON_FIXED_LINE_PHONE_TYPES), _step; !(_step = _iterator()).done;) {
-    var type = _step.value;
-
-    if (isNumberTypeEqualTo(nationalNumber, type, metadata)) {
-      return type;
-    }
-  }
-}
-
-function isNumberTypeEqualTo(nationalNumber, type, metadata) {
-  type = metadata.type(type);
-
-  if (!type || !type.pattern()) {
-    return false;
-  } // Check if any possible number lengths are present;
-  // if so, we use them to avoid checking
-  // the validation pattern if they don't match.
-  // If they are absent, this means they match
-  // the general description, which we have
-  // already checked before a specific number type.
-
-
-  if (type.possibleLengths() && type.possibleLengths().indexOf(nationalNumber.length) < 0) {
-    return false;
-  }
-
-  return (0, _matchesEntirely["default"])(nationalNumber, type.pattern());
 }
 //# sourceMappingURL=getNumberType.js.map
 
 /***/ }),
 
-/***/ 9963:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.VALID_PHONE_NUMBER_WITH_EXTENSION = exports.VALID_PHONE_NUMBER = void 0;
-exports["default"] = isViablePhoneNumber;
-exports.isViablePhoneNumberStart = isViablePhoneNumberStart;
-
-var _constants = __webpack_require__(6703);
-
-var _createExtensionPattern = _interopRequireDefault(__webpack_require__(3138));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-//  Regular expression of viable phone numbers. This is location independent.
-//  Checks we have at least three leading digits, and only valid punctuation,
-//  alpha characters and digits in the phone number. Does not include extension
-//  data. The symbol 'x' is allowed here as valid punctuation since it is often
-//  used as a placeholder for carrier codes, for example in Brazilian phone
-//  numbers. We also allow multiple '+' characters at the start.
-//
-//  Corresponds to the following:
-//  [digits]{minLengthNsn}|
-//  plus_sign*
-//  (([punctuation]|[star])*[digits]){3,}([punctuation]|[star]|[digits]|[alpha])*
-//
-//  The first reg-ex is to allow short numbers (two digits long) to be parsed if
-//  they are entered as "15" etc, but only if there is no punctuation in them.
-//  The second expression restricts the number of digits to three or more, but
-//  then allows them to be in international form, and to have alpha-characters
-//  and punctuation. We split up the two reg-exes here and combine them when
-//  creating the reg-ex VALID_PHONE_NUMBER_PATTERN itself so we can prefix it
-//  with ^ and append $ to each branch.
-//
-//  "Note VALID_PUNCTUATION starts with a -,
-//   so must be the first in the range" (c) Google devs.
-//  (wtf did they mean by saying that; probably nothing)
-//
-var MIN_LENGTH_PHONE_NUMBER_PATTERN = '[' + _constants.VALID_DIGITS + ']{' + _constants.MIN_LENGTH_FOR_NSN + '}'; //
-// And this is the second reg-exp:
-// (see MIN_LENGTH_PHONE_NUMBER_PATTERN for a full description of this reg-exp)
-//
-
-var VALID_PHONE_NUMBER = '[' + _constants.PLUS_CHARS + ']{0,1}' + '(?:' + '[' + _constants.VALID_PUNCTUATION + ']*' + '[' + _constants.VALID_DIGITS + ']' + '){3,}' + '[' + _constants.VALID_PUNCTUATION + _constants.VALID_DIGITS + ']*'; // This regular expression isn't present in Google's `libphonenumber`
-// and is only used to determine whether the phone number being input
-// is too short for it to even consider it a "valid" number.
-// This is just a way to differentiate between a really invalid phone
-// number like "abcde" and a valid phone number that a user has just
-// started inputting, like "+1" or "1": both these cases would be
-// considered `NOT_A_NUMBER` by Google's `libphonenumber`, but this
-// library can provide a more detailed error message — whether it's
-// really "not a number", or is it just a start of a valid phone number.
-
-exports.VALID_PHONE_NUMBER = VALID_PHONE_NUMBER;
-var VALID_PHONE_NUMBER_START_REG_EXP = new RegExp('^' + '[' + _constants.PLUS_CHARS + ']{0,1}' + '(?:' + '[' + _constants.VALID_PUNCTUATION + ']*' + '[' + _constants.VALID_DIGITS + ']' + '){1,2}' + '$', 'i');
-var VALID_PHONE_NUMBER_WITH_EXTENSION = VALID_PHONE_NUMBER + // Phone number extensions
-'(?:' + (0, _createExtensionPattern["default"])() + ')?'; // The combined regular expression for valid phone numbers:
-//
-
-exports.VALID_PHONE_NUMBER_WITH_EXTENSION = VALID_PHONE_NUMBER_WITH_EXTENSION;
-var VALID_PHONE_NUMBER_PATTERN = new RegExp( // Either a short two-digit-only phone number
-'^' + MIN_LENGTH_PHONE_NUMBER_PATTERN + '$' + '|' + // Or a longer fully parsed phone number (min 3 characters)
-'^' + VALID_PHONE_NUMBER_WITH_EXTENSION + '$', 'i'); // Checks to see if the string of characters could possibly be a phone number at
-// all. At the moment, checks to see that the string begins with at least 2
-// digits, ignoring any punctuation commonly found in phone numbers. This method
-// does not require the number to be normalized in advance - but does assume
-// that leading non-number symbols have been removed, such as by the method
-// `extract_possible_number`.
-//
-
-function isViablePhoneNumber(number) {
-  return number.length >= _constants.MIN_LENGTH_FOR_NSN && VALID_PHONE_NUMBER_PATTERN.test(number);
-} // This is just a way to differentiate between a really invalid phone
-// number like "abcde" and a valid phone number that a user has just
-// started inputting, like "+1" or "1": both these cases would be
-// considered `NOT_A_NUMBER` by Google's `libphonenumber`, but this
-// library can provide a more detailed error message — whether it's
-// really "not a number", or is it just a start of a valid phone number.
-
-
-function isViablePhoneNumberStart(number) {
-  return VALID_PHONE_NUMBER_START_REG_EXP.test(number);
-}
-//# sourceMappingURL=isViablePhoneNumber.js.map
-
-/***/ }),
-
-/***/ 9423:
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = matchesEntirely;
-
-/**
- * Checks whether the entire input sequence can be matched
- * against the regular expression.
- * @return {boolean}
- */
-function matchesEntirely(text, regular_expression) {
-  // If assigning the `''` default value is moved to the arguments above,
-  // code coverage would decrease for some weird reason.
-  text = text || '';
-  return new RegExp('^(?:' + regular_expression + ')$').test(text);
-}
-//# sourceMappingURL=matchesEntirely.js.map
-
-/***/ }),
-
-/***/ 8970:
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = mergeArrays;
-
-function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-/**
- * Merges two arrays.
- * @param  {*} a
- * @param  {*} b
- * @return {*}
- */
-function mergeArrays(a, b) {
-  var merged = a.slice();
-
-  for (var _iterator = _createForOfIteratorHelperLoose(b), _step; !(_step = _iterator()).done;) {
-    var element = _step.value;
-
-    if (a.indexOf(element) < 0) {
-      merged.push(element);
-    }
-  }
-
-  return merged.sort(function (a, b) {
-    return a - b;
-  }); // ES6 version, requires Set polyfill.
-  // let merged = new Set(a)
-  // for (const element of b) {
-  // 	merged.add(i)
-  // }
-  // return Array.from(merged).sort((a, b) => a - b)
-}
-//# sourceMappingURL=mergeArrays.js.map
-
-/***/ }),
-
-/***/ 5039:
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.DIGITS = void 0;
-exports["default"] = parseDigits;
-exports.parseDigit = parseDigit;
-
-function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-// These mappings map a character (key) to a specific digit that should
-// replace it for normalization purposes. Non-European digits that
-// may be used in phone numbers are mapped to a European equivalent.
-//
-// E.g. in Iraq they don't write `+442323234` but rather `+٤٤٢٣٢٣٢٣٤`.
-//
-var DIGITS = {
-  '0': '0',
-  '1': '1',
-  '2': '2',
-  '3': '3',
-  '4': '4',
-  '5': '5',
-  '6': '6',
-  '7': '7',
-  '8': '8',
-  '9': '9',
-  "\uFF10": '0',
-  // Fullwidth digit 0
-  "\uFF11": '1',
-  // Fullwidth digit 1
-  "\uFF12": '2',
-  // Fullwidth digit 2
-  "\uFF13": '3',
-  // Fullwidth digit 3
-  "\uFF14": '4',
-  // Fullwidth digit 4
-  "\uFF15": '5',
-  // Fullwidth digit 5
-  "\uFF16": '6',
-  // Fullwidth digit 6
-  "\uFF17": '7',
-  // Fullwidth digit 7
-  "\uFF18": '8',
-  // Fullwidth digit 8
-  "\uFF19": '9',
-  // Fullwidth digit 9
-  "\u0660": '0',
-  // Arabic-indic digit 0
-  "\u0661": '1',
-  // Arabic-indic digit 1
-  "\u0662": '2',
-  // Arabic-indic digit 2
-  "\u0663": '3',
-  // Arabic-indic digit 3
-  "\u0664": '4',
-  // Arabic-indic digit 4
-  "\u0665": '5',
-  // Arabic-indic digit 5
-  "\u0666": '6',
-  // Arabic-indic digit 6
-  "\u0667": '7',
-  // Arabic-indic digit 7
-  "\u0668": '8',
-  // Arabic-indic digit 8
-  "\u0669": '9',
-  // Arabic-indic digit 9
-  "\u06F0": '0',
-  // Eastern-Arabic digit 0
-  "\u06F1": '1',
-  // Eastern-Arabic digit 1
-  "\u06F2": '2',
-  // Eastern-Arabic digit 2
-  "\u06F3": '3',
-  // Eastern-Arabic digit 3
-  "\u06F4": '4',
-  // Eastern-Arabic digit 4
-  "\u06F5": '5',
-  // Eastern-Arabic digit 5
-  "\u06F6": '6',
-  // Eastern-Arabic digit 6
-  "\u06F7": '7',
-  // Eastern-Arabic digit 7
-  "\u06F8": '8',
-  // Eastern-Arabic digit 8
-  "\u06F9": '9' // Eastern-Arabic digit 9
-
-};
-exports.DIGITS = DIGITS;
-
-function parseDigit(character) {
-  return DIGITS[character];
-}
-/**
- * Parses phone number digits from a string.
- * Drops all punctuation leaving only digits.
- * Also converts wide-ascii and arabic-indic numerals to conventional numerals.
- * E.g. in Iraq they don't write `+442323234` but rather `+٤٤٢٣٢٣٢٣٤`.
- * @param  {string} string
- * @return {string}
- * @example
- * ```js
- * parseDigits('8 (800) 555')
- * // Outputs '8800555'.
- * ```
- */
-
-
-function parseDigits(string) {
-  var result = ''; // Using `.split('')` here instead of normal `for ... of`
-  // because the importing application doesn't neccessarily include an ES6 polyfill.
-  // The `.split('')` approach discards "exotic" UTF-8 characters
-  // (the ones consisting of four bytes) but digits
-  // (including non-European ones) don't fall into that range
-  // so such "exotic" characters would be discarded anyway.
-
-  for (var _iterator = _createForOfIteratorHelperLoose(string.split('')), _step; !(_step = _iterator()).done;) {
-    var character = _step.value;
-    var digit = parseDigit(character);
-
-    if (digit) {
-      result += digit;
-    }
-  }
-
-  return result;
-}
-//# sourceMappingURL=parseDigits.js.map
-
-/***/ }),
-
-/***/ 9784:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = stripIddPrefix;
-
-var _metadata = _interopRequireDefault(__webpack_require__(7536));
-
-var _constants = __webpack_require__(6703);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-var CAPTURING_DIGIT_PATTERN = new RegExp('([' + _constants.VALID_DIGITS + '])');
-
-function stripIddPrefix(number, country, callingCode, metadata) {
-  if (!country) {
-    return;
-  } // Check if the number is IDD-prefixed.
-
-
-  var countryMetadata = new _metadata["default"](metadata);
-  countryMetadata.selectNumberingPlan(country, callingCode);
-  var IDDPrefixPattern = new RegExp(countryMetadata.IDDPrefix());
-
-  if (number.search(IDDPrefixPattern) !== 0) {
-    return;
-  } // Strip IDD prefix.
-
-
-  number = number.slice(number.match(IDDPrefixPattern)[0].length); // If there're any digits after an IDD prefix,
-  // then those digits are a country calling code.
-  // Since no country code starts with a `0`,
-  // the code below validates that the next digit (if present) is not `0`.
-
-  var matchedGroups = number.match(CAPTURING_DIGIT_PATTERN);
-
-  if (matchedGroups && matchedGroups[1] != null && matchedGroups[1].length > 0) {
-    if (matchedGroups[1] === '0') {
-      return;
-    }
-  }
-
-  return number;
-}
-//# sourceMappingURL=stripIddPrefix.js.map
-
-/***/ }),
-
-/***/ 3240:
+/***/ 7743:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -10256,11 +11044,11 @@ var __webpack_unused_export__;
 __webpack_unused_export__ = ({
   value: true
 });
-exports.Z = isPossibleNumber;
+exports.A = isPossibleNumber;
 
-var _getNumberType = __webpack_require__(454);
+var _getNumberType = __webpack_require__(8704);
 
-var _isPossibleNumber_ = _interopRequireDefault(__webpack_require__(1765));
+var _isPossible = _interopRequireDefault(__webpack_require__(4574));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -10282,105 +11070,20 @@ function isPossibleNumber() {
   var _normalizeArguments = (0, _getNumberType.normalizeArguments)(arguments),
       input = _normalizeArguments.input,
       options = _normalizeArguments.options,
-      metadata = _normalizeArguments.metadata;
+      metadata = _normalizeArguments.metadata; // `parseNumber()` would return `{}` when no phone number could be parsed from the input.
 
-  return (0, _isPossibleNumber_["default"])(input, options, metadata);
+
+  if (!input.phone && !(options && options.v2)) {
+    return false;
+  }
+
+  return (0, _isPossible["default"])(input, options, metadata);
 }
 //# sourceMappingURL=isPossibleNumber.js.map
 
 /***/ }),
 
-/***/ 1765:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = isPossiblePhoneNumber;
-exports.isPossibleNumber = isPossibleNumber;
-
-var _metadata = _interopRequireDefault(__webpack_require__(7536));
-
-var _checkNumberLength = _interopRequireDefault(__webpack_require__(7044));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function isPossiblePhoneNumber(input, options, metadata) {
-  /* istanbul ignore if */
-  if (options === undefined) {
-    options = {};
-  }
-
-  metadata = new _metadata["default"](metadata);
-
-  if (options.v2) {
-    if (!input.countryCallingCode) {
-      throw new Error('Invalid phone number object passed');
-    }
-
-    metadata.selectNumberingPlan(input.countryCallingCode);
-  } else {
-    if (!input.phone) {
-      return false;
-    }
-
-    if (input.country) {
-      if (!metadata.hasCountry(input.country)) {
-        throw new Error("Unknown country: ".concat(input.country));
-      }
-
-      metadata.country(input.country);
-    } else {
-      if (!input.countryCallingCode) {
-        throw new Error('Invalid phone number object passed');
-      }
-
-      metadata.selectNumberingPlan(input.countryCallingCode);
-    }
-  } // Old metadata (< 1.0.18) had no "possible length" data.
-
-
-  if (metadata.possibleLengths()) {
-    return isPossibleNumber(input.phone || input.nationalNumber, metadata);
-  } else {
-    // There was a bug between `1.7.35` and `1.7.37` where "possible_lengths"
-    // were missing for "non-geographical" numbering plans.
-    // Just assume the number is possible in such cases:
-    // it's unlikely that anyone generated their custom metadata
-    // in that short period of time (one day).
-    // This code can be removed in some future major version update.
-    if (input.countryCallingCode && metadata.isNonGeographicCallingCode(input.countryCallingCode)) {
-      // "Non-geographic entities" did't have `possibleLengths`
-      // due to a bug in metadata generation process.
-      return true;
-    } else {
-      throw new Error('Missing "possibleLengths" in metadata. Perhaps the metadata has been generated before v1.0.18.');
-    }
-  }
-}
-
-function isPossibleNumber(nationalNumber, metadata) {
-  //, isInternational) {
-  switch ((0, _checkNumberLength["default"])(nationalNumber, metadata)) {
-    case 'IS_POSSIBLE':
-      return true;
-    // This library ignores "local-only" phone numbers (for simplicity).
-    // See the readme for more info on what are "local-only" phone numbers.
-    // case 'IS_POSSIBLE_LOCAL_ONLY':
-    // 	return !isInternational
-
-    default:
-      return false;
-  }
-}
-//# sourceMappingURL=isPossibleNumber_.js.map
-
-/***/ }),
-
-/***/ 5735:
+/***/ 8202:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -10390,37 +11093,33 @@ var __webpack_unused_export__;
 __webpack_unused_export__ = ({
   value: true
 });
-exports["default"] = isPossiblePhoneNumber;
+exports.A = isValidNumber;
 
-var _parsePhoneNumber = __webpack_require__(8252);
+var _isValid = _interopRequireDefault(__webpack_require__(3575));
 
-var _parsePhoneNumberFromString_ = _interopRequireDefault(__webpack_require__(199));
+var _getNumberType = __webpack_require__(8704);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function isPossiblePhoneNumber() {
-  var _normalizeArguments = (0, _parsePhoneNumber.normalizeArguments)(arguments),
-      text = _normalizeArguments.text,
+// Finds out national phone number type (fixed line, mobile, etc)
+function isValidNumber() {
+  var _normalizeArguments = (0, _getNumberType.normalizeArguments)(arguments),
+      input = _normalizeArguments.input,
       options = _normalizeArguments.options,
-      metadata = _normalizeArguments.metadata;
+      metadata = _normalizeArguments.metadata; // `parseNumber()` would return `{}` when no phone number could be parsed from the input.
 
-  options = _objectSpread(_objectSpread({}, options), {}, {
-    extract: false
-  });
-  var phoneNumber = (0, _parsePhoneNumberFromString_["default"])(text, options, metadata);
-  return phoneNumber && phoneNumber.isPossible() || false;
+
+  if (!input.phone) {
+    return false;
+  }
+
+  return (0, _isValid["default"])(input, options, metadata);
 }
-//# sourceMappingURL=isPossiblePhoneNumber.js.map
+//# sourceMappingURL=isValidNumber.js.map
 
 /***/ }),
 
-/***/ 4841:
+/***/ 63:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -10430,16 +11129,53 @@ var __webpack_unused_export__;
 __webpack_unused_export__ = ({
   value: true
 });
-exports.Z = isValidNumberForRegion;
+exports.A = isValidNumberForRegion;
 
-var _isViablePhoneNumber = _interopRequireDefault(__webpack_require__(9963));
+var _isViablePhoneNumber = _interopRequireDefault(__webpack_require__(333));
 
-var _parse_ = _interopRequireDefault(__webpack_require__(2953));
+var _parse = _interopRequireDefault(__webpack_require__(6214));
 
-var _isValidNumberForRegion_ = _interopRequireDefault(__webpack_require__(4894));
+var _isValidNumberForRegion_ = _interopRequireDefault(__webpack_require__(5166));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+// This function has been deprecated and is not exported as
+// `isValidPhoneNumberForCountry()` or `isValidPhoneNumberForRegion()`.
+//
+// The rationale is:
+//
+// * We don't use the "region" word, so "country" would be better.
+//
+// * It could be substituted with:
+//
+// ```js
+// export default function isValidPhoneNumberForCountry(phoneNumberString, country) {
+// 	const phoneNumber = parsePhoneNumber(phoneNumberString, {
+// 		defaultCountry: country,
+// 		// Demand that the entire input string must be a phone number.
+// 		// Otherwise, it would "extract" a phone number from an input string.
+// 		extract: false
+// 	})
+// 	if (!phoneNumber) {
+// 		return false
+// 	}
+// 	if (phoneNumber.country !== country) {
+// 		return false
+// 	}
+// 	return phoneNumber.isValid()
+// }
+// ```
+//
+// * Same function could be used for `isPossiblePhoneNumberForCountry()`
+//   by replacing `isValid()` with `isPossible()`.
+//
+// * The reason why this function is not exported is because its result is ambiguous.
+//   Suppose `false` is returned. It could mean any of:
+//   * Not a phone number.
+//   * The phone number is valid but belongs to another country or another calling code.
+//   * The phone number belongs to the correct country but is not valid digit-wise.
+//   All those three cases should be handled separately from a "User Experience" standpoint.
+//   Simply showing "Invalid phone number" error in all of those cases would be lazy UX.
 function isValidNumberForRegion(number, country, metadata) {
   if (typeof number !== 'string') {
     throw new TypeError('number must be a string');
@@ -10457,7 +11193,7 @@ function isValidNumberForRegion(number, country, metadata) {
   var input;
 
   if ((0, _isViablePhoneNumber["default"])(number)) {
-    input = (0, _parse_["default"])(number, {
+    input = (0, _parse["default"])(number, {
       defaultCountry: country
     }, metadata);
   } else {
@@ -10470,7 +11206,7 @@ function isValidNumberForRegion(number, country, metadata) {
 
 /***/ }),
 
-/***/ 4894:
+/***/ 5166:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -10481,7 +11217,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = isValidNumberForRegion;
 
-var _validate_ = _interopRequireDefault(__webpack_require__(3330));
+var _isValid = _interopRequireDefault(__webpack_require__(3575));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -10494,13 +11230,13 @@ function isValidNumberForRegion(input, country, options, metadata) {
   // If assigning the `{}` default value is moved to the arguments above,
   // code coverage would decrease for some weird reason.
   options = options || {};
-  return input.country === country && (0, _validate_["default"])(input, options, metadata);
+  return input.country === country && (0, _isValid["default"])(input, options, metadata);
 }
 //# sourceMappingURL=isValidNumberForRegion_.js.map
 
 /***/ }),
 
-/***/ 2715:
+/***/ 8766:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -10510,37 +11246,78 @@ var __webpack_unused_export__;
 __webpack_unused_export__ = ({
   value: true
 });
-exports["default"] = isValidPhoneNumber;
+exports.A = parseNumber;
 
-var _parsePhoneNumber = __webpack_require__(8252);
+var _parse = _interopRequireDefault(__webpack_require__(6214));
 
-var _parsePhoneNumberFromString_ = _interopRequireDefault(__webpack_require__(199));
+var _normalizeArguments2 = _interopRequireDefault(__webpack_require__(4424));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function isValidPhoneNumber() {
-  var _normalizeArguments = (0, _parsePhoneNumber.normalizeArguments)(arguments),
+function parseNumber() {
+  var _normalizeArguments = (0, _normalizeArguments2["default"])(arguments),
       text = _normalizeArguments.text,
       options = _normalizeArguments.options,
       metadata = _normalizeArguments.metadata;
 
-  options = _objectSpread(_objectSpread({}, options), {}, {
-    extract: false
-  });
-  var phoneNumber = (0, _parsePhoneNumberFromString_["default"])(text, options, metadata);
-  return phoneNumber && phoneNumber.isValid() || false;
+  return (0, _parse["default"])(text, options, metadata);
 }
-//# sourceMappingURL=isValidPhoneNumber.js.map
+//# sourceMappingURL=parse.js.map
 
 /***/ }),
 
-/***/ 7536:
+/***/ 3259:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports["default"] = searchNumbers;
+
+var _normalizeArguments2 = _interopRequireDefault(__webpack_require__(4424));
+
+var _PhoneNumberMatcher = _interopRequireDefault(__webpack_require__(9420));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/**
+ * @return ES6 `for ... of` iterator.
+ */
+function searchNumbers() {
+  var _normalizeArguments = (0, _normalizeArguments2["default"])(arguments),
+      text = _normalizeArguments.text,
+      options = _normalizeArguments.options,
+      metadata = _normalizeArguments.metadata;
+
+  var matcher = new _PhoneNumberMatcher["default"](text, options, metadata);
+  return _defineProperty({}, Symbol.iterator, function () {
+    return {
+      next: function next() {
+        if (matcher.hasNext()) {
+          return {
+            done: false,
+            value: matcher.next()
+          };
+        }
+
+        return {
+          done: true
+        };
+      }
+    };
+  });
+}
+//# sourceMappingURL=searchNumbers.js.map
+
+/***/ }),
+
+/***/ 1084:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -10555,7 +11332,9 @@ exports.getExtPrefix = getExtPrefix;
 exports.isSupportedCountry = isSupportedCountry;
 exports.validateMetadata = validateMetadata;
 
-var _semverCompare = _interopRequireDefault(__webpack_require__(6880));
+var _semverCompare = _interopRequireDefault(__webpack_require__(4847));
+
+var _isObject = _interopRequireDefault(__webpack_require__(4916));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -11131,8 +11910,8 @@ function validateMetadata(metadata) {
   // `country_calling_codes` in `1.0.18`.
 
 
-  if (!is_object(metadata) || !is_object(metadata.countries)) {
-    throw new Error("[libphonenumber-js] `metadata` argument was passed but it's not a valid metadata. Must be an object having `.countries` child object property. Got ".concat(is_object(metadata) ? 'an object of shape: { ' + Object.keys(metadata).join(', ') + ' }' : 'a ' + type_of(metadata) + ': ' + metadata, "."));
+  if (!(0, _isObject["default"])(metadata) || !(0, _isObject["default"])(metadata.countries)) {
+    throw new Error("[libphonenumber-js] `metadata` argument was passed but it's not a valid metadata. Must be an object having `.countries` child object property. Got ".concat((0, _isObject["default"])(metadata) ? 'an object of shape: { ' + Object.keys(metadata).join(', ') + ' }' : 'a ' + typeOf(metadata) + ': ' + metadata, "."));
   }
 } // Babel transforms `typeof` into some "branches"
 // so istanbul will show this as "branch not covered".
@@ -11140,15 +11919,7 @@ function validateMetadata(metadata) {
 /* istanbul ignore next */
 
 
-var is_object = function is_object(_) {
-  return _typeof(_) === 'object';
-}; // Babel transforms `typeof` into some "branches"
-// so istanbul will show this as "branch not covered".
-
-/* istanbul ignore next */
-
-
-var type_of = function type_of(_) {
+var typeOf = function typeOf(_) {
   return _typeof(_);
 };
 /**
@@ -11196,7 +11967,7 @@ function getCountryCallingCode(country, metadata) {
 function isSupportedCountry(country, metadata) {
   // metadata = new Metadata(metadata)
   // return metadata.hasCountry(country)
-  return metadata.countries[country] !== undefined;
+  return metadata.countries.hasOwnProperty(country);
 }
 
 function setVersion(metadata) {
@@ -11226,63 +11997,7 @@ function setVersion(metadata) {
 
 /***/ }),
 
-/***/ 1398:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-var __webpack_unused_export__;
-
-
-__webpack_unused_export__ = ({
-  value: true
-});
-exports.Z = parseNumber;
-
-var _parse_ = _interopRequireDefault(__webpack_require__(2953));
-
-var _parsePhoneNumber = __webpack_require__(8252);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-// `options`:
-//  {
-//    country:
-//    {
-//      restrict - (a two-letter country code)
-//                 the phone number must be in this country
-//
-//      default - (a two-letter country code)
-//                default country to use for phone number parsing and validation
-//                (if no country code could be derived from the phone number)
-//    }
-//  }
-//
-// Returns `{ country, number }`
-//
-// Example use cases:
-//
-// ```js
-// parse('8 (800) 555-35-35', 'RU')
-// parse('8 (800) 555-35-35', 'RU', metadata)
-// parse('8 (800) 555-35-35', { country: { default: 'RU' } })
-// parse('8 (800) 555-35-35', { country: { default: 'RU' } }, metadata)
-// parse('+7 800 555 35 35')
-// parse('+7 800 555 35 35', metadata)
-// ```
-//
-function parseNumber() {
-  var _normalizeArguments = (0, _parsePhoneNumber.normalizeArguments)(arguments),
-      text = _normalizeArguments.text,
-      options = _normalizeArguments.options,
-      metadata = _normalizeArguments.metadata;
-
-  return (0, _parse_["default"])(text, options, metadata);
-}
-//# sourceMappingURL=parse.js.map
-
-/***/ }),
-
-/***/ 5647:
+/***/ 4424:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -11291,96 +12006,11 @@ function parseNumber() {
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = parseIncompletePhoneNumber;
-exports.parsePhoneNumberCharacter = parsePhoneNumberCharacter;
+exports["default"] = normalizeArguments;
 
-var _parseDigits = __webpack_require__(5039);
-
-function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-/**
- * Parses phone number characters from a string.
- * Drops all punctuation leaving only digits and the leading `+` sign (if any).
- * Also converts wide-ascii and arabic-indic numerals to conventional numerals.
- * E.g. in Iraq they don't write `+442323234` but rather `+٤٤٢٣٢٣٢٣٤`.
- * @param  {string} string
- * @return {string}
- * @example
- * ```js
- * // Outputs '8800555'.
- * parseIncompletePhoneNumber('8 (800) 555')
- * // Outputs '+7800555'.
- * parseIncompletePhoneNumber('+7 800 555')
- * ```
- */
-function parseIncompletePhoneNumber(string) {
-  var result = ''; // Using `.split('')` here instead of normal `for ... of`
-  // because the importing application doesn't neccessarily include an ES6 polyfill.
-  // The `.split('')` approach discards "exotic" UTF-8 characters
-  // (the ones consisting of four bytes) but digits
-  // (including non-European ones) don't fall into that range
-  // so such "exotic" characters would be discarded anyway.
-
-  for (var _iterator = _createForOfIteratorHelperLoose(string.split('')), _step; !(_step = _iterator()).done;) {
-    var character = _step.value;
-    result += parsePhoneNumberCharacter(character, result) || '';
-  }
-
-  return result;
-}
-/**
- * Parses next character while parsing phone number digits (including a `+`)
- * from text: discards everything except `+` and digits, and `+` is only allowed
- * at the start of a phone number.
- * For example, is used in `react-phone-number-input` where it uses
- * [`input-format`](https://gitlab.com/catamphetamine/input-format).
- * @param  {string} character - Yet another character from raw input string.
- * @param  {string?} prevParsedCharacters - Previous parsed characters.
- * @param  {object} meta - Optional custom use-case-specific metadata.
- * @return {string?} The parsed character.
- */
-
-
-function parsePhoneNumberCharacter(character, prevParsedCharacters) {
-  // Only allow a leading `+`.
-  if (character === '+') {
-    // If this `+` is not the first parsed character
-    // then discard it.
-    if (prevParsedCharacters) {
-      return;
-    }
-
-    return '+';
-  } // Allow digits.
-
-
-  return (0, _parseDigits.parseDigit)(character);
-}
-//# sourceMappingURL=parseIncompletePhoneNumber.js.map
-
-/***/ }),
-
-/***/ 8252:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = parsePhoneNumber;
-exports.normalizeArguments = normalizeArguments;
-
-var _parsePhoneNumber_ = _interopRequireDefault(__webpack_require__(8090));
+var _isObject = _interopRequireDefault(__webpack_require__(4916));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
@@ -11400,15 +12030,10 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function parsePhoneNumber() {
-  var _normalizeArguments = normalizeArguments(arguments),
-      text = _normalizeArguments.text,
-      options = _normalizeArguments.options,
-      metadata = _normalizeArguments.metadata;
-
-  return (0, _parsePhoneNumber_["default"])(text, options, metadata);
-}
-
+// Extracts the following properties from function arguments:
+// * input `text`
+// * `options` object
+// * `metadata` JSON
 function normalizeArguments(args) {
   var _Array$prototype$slic = Array.prototype.slice.call(args),
       _Array$prototype$slic2 = _slicedToArray(_Array$prototype$slic, 4),
@@ -11444,7 +12069,7 @@ function normalizeArguments(args) {
     }
   } // `defaultCountry` is not passed.
   // Example: `parsePhoneNumber('+78005553535', [options], metadata)`.
-  else if (isObject(arg_2)) {
+  else if ((0, _isObject["default"])(arg_2)) {
     if (arg_3) {
       options = arg_2;
       metadata = arg_3;
@@ -11458,127 +12083,12 @@ function normalizeArguments(args) {
     options: options,
     metadata: metadata
   };
-} // Otherwise istanbul would show this as "branch not covered".
-
-/* istanbul ignore next */
-
-
-var isObject = function isObject(_) {
-  return _typeof(_) === 'object';
-};
-//# sourceMappingURL=parsePhoneNumber.js.map
-
-/***/ }),
-
-/***/ 9142:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-var __webpack_unused_export__;
-
-
-__webpack_unused_export__ = ({
-  value: true
-});
-exports.Z = parsePhoneNumberFromString;
-
-var _parsePhoneNumber = __webpack_require__(8252);
-
-var _parsePhoneNumberFromString_ = _interopRequireDefault(__webpack_require__(199));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function parsePhoneNumberFromString() {
-  var _normalizeArguments = (0, _parsePhoneNumber.normalizeArguments)(arguments),
-      text = _normalizeArguments.text,
-      options = _normalizeArguments.options,
-      metadata = _normalizeArguments.metadata;
-
-  return (0, _parsePhoneNumberFromString_["default"])(text, options, metadata);
 }
-//# sourceMappingURL=parsePhoneNumberFromString.js.map
+//# sourceMappingURL=normalizeArguments.js.map
 
 /***/ }),
 
-/***/ 199:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = parsePhoneNumberFromString;
-
-var _parsePhoneNumber_ = _interopRequireDefault(__webpack_require__(8090));
-
-var _ParseError = _interopRequireDefault(__webpack_require__(3161));
-
-var _metadata = __webpack_require__(7536);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function parsePhoneNumberFromString(text, options, metadata) {
-  // Validate `defaultCountry`.
-  if (options && options.defaultCountry && !(0, _metadata.isSupportedCountry)(options.defaultCountry, metadata)) {
-    options = _objectSpread(_objectSpread({}, options), {}, {
-      defaultCountry: undefined
-    });
-  } // Parse phone number.
-
-
-  try {
-    return (0, _parsePhoneNumber_["default"])(text, options, metadata);
-  } catch (error) {
-    /* istanbul ignore else */
-    if (error instanceof _ParseError["default"]) {//
-    } else {
-      throw error;
-    }
-  }
-}
-//# sourceMappingURL=parsePhoneNumberFromString_.js.map
-
-/***/ }),
-
-/***/ 8090:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = parsePhoneNumber;
-
-var _parse_ = _interopRequireDefault(__webpack_require__(2953));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function parsePhoneNumber(text, options, metadata) {
-  return (0, _parse_["default"])(text, _objectSpread(_objectSpread({}, options), {}, {
-    v2: true
-  }), metadata);
-}
-//# sourceMappingURL=parsePhoneNumber_.js.map
-
-/***/ }),
-
-/***/ 2953:
+/***/ 6214:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -11591,37 +12101,35 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = parse;
 
-var _constants = __webpack_require__(6703);
+var _constants = __webpack_require__(2632);
 
-var _ParseError = _interopRequireDefault(__webpack_require__(3161));
+var _ParseError = _interopRequireDefault(__webpack_require__(7986));
 
-var _metadata = _interopRequireDefault(__webpack_require__(7536));
+var _metadata = _interopRequireDefault(__webpack_require__(1084));
 
-var _isViablePhoneNumber = _interopRequireWildcard(__webpack_require__(9963));
+var _isViablePhoneNumber = _interopRequireWildcard(__webpack_require__(333));
 
-var _extractExtension = _interopRequireDefault(__webpack_require__(5370));
+var _extractExtension = _interopRequireDefault(__webpack_require__(9619));
 
-var _parseIncompletePhoneNumber = _interopRequireDefault(__webpack_require__(5647));
+var _parseIncompletePhoneNumber = _interopRequireDefault(__webpack_require__(7729));
 
-var _getCountryCallingCode = _interopRequireDefault(__webpack_require__(14));
+var _getCountryCallingCode = _interopRequireDefault(__webpack_require__(6138));
 
-var _isPossibleNumber_ = __webpack_require__(1765);
+var _isPossible = __webpack_require__(4574);
 
-var _RFC = __webpack_require__(7274);
+var _PhoneNumber = _interopRequireDefault(__webpack_require__(4908));
 
-var _PhoneNumber = _interopRequireDefault(__webpack_require__(7289));
+var _matchesEntirely = _interopRequireDefault(__webpack_require__(5648));
 
-var _matchesEntirely = _interopRequireDefault(__webpack_require__(9423));
+var _extractCountryCallingCode = _interopRequireDefault(__webpack_require__(2793));
 
-var _extractCountryCallingCode = _interopRequireDefault(__webpack_require__(2284));
+var _extractNationalNumber = _interopRequireDefault(__webpack_require__(1317));
 
-var _extractCountryCallingCodeFromInternationalNumberWithoutPlusSign = _interopRequireDefault(__webpack_require__(940));
+var _stripIddPrefix = _interopRequireDefault(__webpack_require__(1570));
 
-var _extractNationalNumber = _interopRequireDefault(__webpack_require__(2988));
+var _getCountryByCallingCode = _interopRequireDefault(__webpack_require__(8719));
 
-var _stripIddPrefix = _interopRequireDefault(__webpack_require__(9784));
-
-var _getCountryByCallingCode = _interopRequireDefault(__webpack_require__(7194));
+var _extractFormattedPhoneNumberFromPossibleRfc3966NumberUri = _interopRequireDefault(__webpack_require__(2302));
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -11633,6 +12141,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 // `phonenumberutil.js` of December 31th, 2018.
 //
 // https://github.com/googlei18n/libphonenumber/commits/master/javascript/i18n/phonenumbers/phonenumberutil.js
+// import { parseRFC3966 } from './helpers/RFC3966.js'
 // We don't allow input strings for parsing to be longer than 250 chars.
 // This prevents malicious input from consuming CPU.
 var MAX_INPUT_STRING_LENGTH = 250; // This consists of the plus symbol, digits, and arabic-indic digits.
@@ -11653,6 +12162,19 @@ var USE_NON_GEOGRAPHIC_COUNTRY_CODE = false; // Examples:
 // parse('+7 800 555 35 35', metadata)
 // ```
 //
+
+/**
+ * Parses a phone number.
+ *
+ * parse('123456789', { defaultCountry: 'RU', v2: true }, metadata)
+ * parse('123456789', { defaultCountry: 'RU' }, metadata)
+ * parse('123456789', undefined, metadata)
+ *
+ * @param  {string} input
+ * @param  {object} [options]
+ * @param  {object} metadata
+ * @return {object|PhoneNumber?} If `options.v2: true` flag is passed, it returns a `PhoneNumber?` instance. Otherwise, returns an object of shape `{ phone: '...', country: '...' }` (or just `{}` if no phone number was parsed).
+ */
 
 function parse(text, options, metadata) {
   // If assigning the `{}` default value is moved to the arguments above,
@@ -11691,6 +12213,7 @@ function parse(text, options, metadata) {
       country = _parsePhoneNumber.country,
       nationalNumber = _parsePhoneNumber.nationalNumber,
       countryCallingCode = _parsePhoneNumber.countryCallingCode,
+      countryCallingCodeSource = _parsePhoneNumber.countryCallingCodeSource,
       carrierCode = _parsePhoneNumber.carrierCode;
 
   if (!metadata.hasSelectedNumberingPlan()) {
@@ -11747,6 +12270,7 @@ function parse(text, options, metadata) {
       phoneNumber.ext = ext;
     }
 
+    phoneNumber.__countryCallingCodeSource = countryCallingCodeSource;
     return phoneNumber;
   } // Check if national phone number pattern matches the number.
   // National number pattern is different for each country,
@@ -11765,7 +12289,7 @@ function parse(text, options, metadata) {
     countryCallingCode: countryCallingCode,
     carrierCode: carrierCode,
     valid: valid,
-    possible: valid ? true : options.extended === true && metadata.possibleLengths() && (0, _isPossibleNumber_.isPossibleNumber)(nationalNumber, metadata) ? true : false,
+    possible: valid ? true : options.extended === true && metadata.possibleLengths() && (0, _isPossible.isPossibleNumber)(nationalNumber, metadata) ? true : false,
     phone: nationalNumber,
     ext: ext
   };
@@ -11784,7 +12308,7 @@ function parse(text, options, metadata) {
  */
 
 
-function extractFormattedPhoneNumber(text, extract, throwOnError) {
+function _extractFormattedPhoneNumber(text, extract, throwOnError) {
   if (!text) {
     return;
   }
@@ -11821,12 +12345,16 @@ function extractFormattedPhoneNumber(text, extract, throwOnError) {
 
 
 function parseInput(text, v2, extract) {
-  // Parse RFC 3966 phone number URI.
-  if (text && text.indexOf('tel:') === 0) {
-    return (0, _RFC.parseRFC3966)(text);
-  }
-
-  var number = extractFormattedPhoneNumber(text, extract, v2); // If the phone number is not viable, then abort.
+  // // Parse RFC 3966 phone number URI.
+  // if (text && text.indexOf('tel:') === 0) {
+  // 	return parseRFC3966(text)
+  // }
+  // let number = extractFormattedPhoneNumber(text, extract, v2)
+  var number = (0, _extractFormattedPhoneNumberFromPossibleRfc3966NumberUri["default"])(text, {
+    extractFormattedPhoneNumber: function extractFormattedPhoneNumber(text) {
+      return _extractFormattedPhoneNumber(text, extract, v2);
+    }
+  }); // If the phone number is not viable, then abort.
 
   if (!number) {
     return {};
@@ -11884,6 +12412,7 @@ function result(country, nationalNumber, ext) {
 function parsePhoneNumber(formattedPhoneNumber, defaultCountry, defaultCallingCode, metadata) {
   // Extract calling code from phone number.
   var _extractCountryCallin = (0, _extractCountryCallingCode["default"])((0, _parseIncompletePhoneNumber["default"])(formattedPhoneNumber), defaultCountry, defaultCallingCode, metadata.metadata),
+      countryCallingCodeSource = _extractCountryCallin.countryCallingCodeSource,
       countryCallingCode = _extractCountryCallin.countryCallingCode,
       number = _extractCountryCallin.number; // Choose a country by `countryCallingCode`.
 
@@ -11892,8 +12421,8 @@ function parsePhoneNumber(formattedPhoneNumber, defaultCountry, defaultCallingCo
 
   if (countryCallingCode) {
     metadata.selectNumberingPlan(countryCallingCode);
-  } // If `formattedPhoneNumber` is in "national" format
-  // then `number` is defined and `countryCallingCode` isn't.
+  } // If `formattedPhoneNumber` is passed in "national" format
+  // then `number` is defined and `countryCallingCode` is `undefined`.
   else if (number && (defaultCountry || defaultCallingCode)) {
     metadata.selectNumberingPlan(defaultCountry, defaultCallingCode);
 
@@ -11913,6 +12442,7 @@ function parsePhoneNumber(formattedPhoneNumber, defaultCountry, defaultCallingCo
 
   if (!number) {
     return {
+      countryCallingCodeSource: countryCallingCodeSource,
       countryCallingCode: countryCallingCode
     };
   }
@@ -11931,7 +12461,11 @@ function parsePhoneNumber(formattedPhoneNumber, defaultCountry, defaultCallingCo
   //
 
 
-  var exactCountry = (0, _getCountryByCallingCode["default"])(countryCallingCode, nationalNumber, metadata);
+  var exactCountry = (0, _getCountryByCallingCode["default"])(countryCallingCode, {
+    nationalNumber: nationalNumber,
+    defaultCountry: defaultCountry,
+    metadata: metadata
+  });
 
   if (exactCountry) {
     country = exactCountry;
@@ -11948,15 +12482,16 @@ function parsePhoneNumber(formattedPhoneNumber, defaultCountry, defaultCallingCo
   return {
     country: country,
     countryCallingCode: countryCallingCode,
+    countryCallingCodeSource: countryCallingCodeSource,
     nationalNumber: nationalNumber,
     carrierCode: carrierCode
   };
 }
-//# sourceMappingURL=parse_.js.map
+//# sourceMappingURL=parse.js.map
 
 /***/ }),
 
-/***/ 8524:
+/***/ 7729:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -11965,26 +12500,264 @@ function parsePhoneNumber(formattedPhoneNumber, defaultCountry, defaultCallingCo
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = searchNumbers;
+exports["default"] = parseIncompletePhoneNumber;
+exports.parsePhoneNumberCharacter = parsePhoneNumberCharacter;
 
-var _parsePhoneNumber = __webpack_require__(8252);
+var _parseDigits = __webpack_require__(9458);
 
-var _PhoneNumberMatcher = _interopRequireDefault(__webpack_require__(2066));
+function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+/**
+ * Parses phone number characters from a string.
+ * Drops all punctuation leaving only digits and the leading `+` sign (if any).
+ * Also converts wide-ascii and arabic-indic numerals to conventional numerals.
+ * E.g. in Iraq they don't write `+442323234` but rather `+٤٤٢٣٢٣٢٣٤`.
+ * @param  {string} string
+ * @return {string}
+ * @example
+ * ```js
+ * // Outputs '8800555'.
+ * parseIncompletePhoneNumber('8 (800) 555')
+ * // Outputs '+7800555'.
+ * parseIncompletePhoneNumber('+7 800 555')
+ * ```
+ */
+function parseIncompletePhoneNumber(string) {
+  var result = ''; // Using `.split('')` here instead of normal `for ... of`
+  // because the importing application doesn't neccessarily include an ES6 polyfill.
+  // The `.split('')` approach discards "exotic" UTF-8 characters
+  // (the ones consisting of four bytes) but digits
+  // (including non-European ones) don't fall into that range
+  // so such "exotic" characters would be discarded anyway.
+
+  for (var _iterator = _createForOfIteratorHelperLoose(string.split('')), _step; !(_step = _iterator()).done;) {
+    var character = _step.value;
+    result += parsePhoneNumberCharacter(character, result) || '';
+  }
+
+  return result;
+}
+/**
+ * Parses next character while parsing phone number digits (including a `+`)
+ * from text: discards everything except `+` and digits, and `+` is only allowed
+ * at the start of a phone number.
+ * For example, is used in `react-phone-number-input` where it uses
+ * [`input-format`](https://gitlab.com/catamphetamine/input-format).
+ * @param  {string} character - Yet another character from raw input string.
+ * @param  {string?} prevParsedCharacters - Previous parsed characters.
+ * @param  {function?} emitEvent - An optional "emit event" function.
+ * @return {string?} The parsed character.
+ */
+
+
+function parsePhoneNumberCharacter(character, prevParsedCharacters, emitEvent) {
+  // Only allow a leading `+`.
+  if (character === '+') {
+    // If this `+` is not the first parsed character
+    // then discard it.
+    if (prevParsedCharacters) {
+      // `emitEvent` argument was added to this `export`ed function on Dec 26th, 2023.
+      // Any 3rd-party code that used to `import` and call this function before that
+      // won't be passing any `emitEvent` argument.
+      //
+      // The addition of the `emitEvent` argument was to fix the slightly-weird behavior
+      // of parsing an input string when the user inputs something like `"2+7"
+      // https://github.com/catamphetamine/react-phone-number-input/issues/437
+      //
+      // If the parser encounters an unexpected `+` in a string being parsed
+      // then it simply discards that out-of-place `+` and any following characters.
+      //
+      if (typeof emitEvent === 'function') {
+        emitEvent('end');
+      }
+
+      return;
+    }
+
+    return '+';
+  } // Allow digits.
+
+
+  return (0, _parseDigits.parseDigit)(character);
+}
+//# sourceMappingURL=parseIncompletePhoneNumber.js.map
+
+/***/ }),
+
+/***/ 5689:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = parsePhoneNumber;
+
+var _normalizeArguments2 = _interopRequireDefault(__webpack_require__(4424));
+
+var _parsePhoneNumber_ = _interopRequireDefault(__webpack_require__(7064));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-/**
- * @return ES6 `for ... of` iterator.
- */
-function searchNumbers() {
-  var _normalizeArguments = (0, _parsePhoneNumber.normalizeArguments)(arguments),
+function parsePhoneNumber() {
+  var _normalizeArguments = (0, _normalizeArguments2["default"])(arguments),
       text = _normalizeArguments.text,
       options = _normalizeArguments.options,
       metadata = _normalizeArguments.metadata;
 
-  var matcher = new _PhoneNumberMatcher["default"](text, options, metadata);
+  return (0, _parsePhoneNumber_["default"])(text, options, metadata);
+}
+//# sourceMappingURL=parsePhoneNumber.js.map
+
+/***/ }),
+
+/***/ 1579:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports.A = parsePhoneNumberWithError;
+
+var _parsePhoneNumberWithError_ = _interopRequireDefault(__webpack_require__(7866));
+
+var _normalizeArguments2 = _interopRequireDefault(__webpack_require__(4424));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function parsePhoneNumberWithError() {
+  var _normalizeArguments = (0, _normalizeArguments2["default"])(arguments),
+      text = _normalizeArguments.text,
+      options = _normalizeArguments.options,
+      metadata = _normalizeArguments.metadata;
+
+  return (0, _parsePhoneNumberWithError_["default"])(text, options, metadata);
+}
+//# sourceMappingURL=parsePhoneNumberWithError.js.map
+
+/***/ }),
+
+/***/ 7866:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = parsePhoneNumberWithError;
+
+var _parse = _interopRequireDefault(__webpack_require__(6214));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function parsePhoneNumberWithError(text, options, metadata) {
+  return (0, _parse["default"])(text, _objectSpread(_objectSpread({}, options), {}, {
+    v2: true
+  }), metadata);
+}
+//# sourceMappingURL=parsePhoneNumberWithError_.js.map
+
+/***/ }),
+
+/***/ 7064:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = parsePhoneNumber;
+
+var _parsePhoneNumberWithError_ = _interopRequireDefault(__webpack_require__(7866));
+
+var _ParseError = _interopRequireDefault(__webpack_require__(7986));
+
+var _metadata = __webpack_require__(1084);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function parsePhoneNumber(text, options, metadata) {
+  // Validate `defaultCountry`.
+  if (options && options.defaultCountry && !(0, _metadata.isSupportedCountry)(options.defaultCountry, metadata)) {
+    options = _objectSpread(_objectSpread({}, options), {}, {
+      defaultCountry: undefined
+    });
+  } // Parse phone number.
+
+
+  try {
+    return (0, _parsePhoneNumberWithError_["default"])(text, options, metadata);
+  } catch (error) {
+    /* istanbul ignore else */
+    if (error instanceof _ParseError["default"]) {//
+    } else {
+      throw error;
+    }
+  }
+}
+//# sourceMappingURL=parsePhoneNumber_.js.map
+
+/***/ }),
+
+/***/ 6587:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports["default"] = searchPhoneNumbersInText;
+
+var _PhoneNumberMatcher = _interopRequireDefault(__webpack_require__(9420));
+
+var _normalizeArguments2 = _interopRequireDefault(__webpack_require__(4424));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function searchPhoneNumbersInText() {
+  var _normalizeArguments = (0, _normalizeArguments2["default"])(arguments),
+      text = _normalizeArguments.text,
+      options = _normalizeArguments.options,
+      metadata = _normalizeArguments.metadata;
+
+  var matcher = new _PhoneNumberMatcher["default"](text, _objectSpread(_objectSpread({}, options), {}, {
+    v2: true
+  }), metadata);
   return _defineProperty({}, Symbol.iterator, function () {
     return {
       next: function next() {
@@ -12002,37 +12775,11 @@ function searchNumbers() {
     };
   });
 }
-//# sourceMappingURL=searchNumbers.js.map
-
-/***/ }),
-
-/***/ 8151:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-var __webpack_unused_export__;
-
-
-__webpack_unused_export__ = ({
-  value: true
-});
-exports["default"] = searchPhoneNumbersInText;
-
-var _searchNumbers = _interopRequireDefault(__webpack_require__(8524));
-
-var _findPhoneNumbersInText = __webpack_require__(7228);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function searchPhoneNumbersInText(text, defaultCountry, options, metadata) {
-  var args = (0, _findPhoneNumbersInText.getArguments)(defaultCountry, options, metadata);
-  return (0, _searchNumbers["default"])(text, args.options, args.metadata);
-}
 //# sourceMappingURL=searchPhoneNumbersInText.js.map
 
 /***/ }),
 
-/***/ 6880:
+/***/ 4847:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -12076,38 +12823,7 @@ function _default(a, b) {
 
 /***/ }),
 
-/***/ 5723:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-var __webpack_unused_export__;
-
-
-__webpack_unused_export__ = ({
-  value: true
-});
-exports.Z = isValidNumber;
-
-var _validate_ = _interopRequireDefault(__webpack_require__(3330));
-
-var _getNumberType = __webpack_require__(454);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-// Finds out national phone number type (fixed line, mobile, etc)
-function isValidNumber() {
-  var _normalizeArguments = (0, _getNumberType.normalizeArguments)(arguments),
-      input = _normalizeArguments.input,
-      options = _normalizeArguments.options,
-      metadata = _normalizeArguments.metadata;
-
-  return (0, _validate_["default"])(input, options, metadata);
-}
-//# sourceMappingURL=validate.js.map
-
-/***/ }),
-
-/***/ 6801:
+/***/ 5850:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -12119,15 +12835,15 @@ __webpack_unused_export__ = ({
 });
 exports["default"] = validatePhoneNumberLength;
 
-var _parsePhoneNumber = __webpack_require__(8252);
+var _normalizeArguments2 = _interopRequireDefault(__webpack_require__(4424));
 
-var _parsePhoneNumber_ = _interopRequireDefault(__webpack_require__(8090));
+var _parsePhoneNumberWithError_ = _interopRequireDefault(__webpack_require__(7866));
 
-var _ParseError = _interopRequireDefault(__webpack_require__(3161));
+var _ParseError = _interopRequireDefault(__webpack_require__(7986));
 
-var _metadata = _interopRequireDefault(__webpack_require__(7536));
+var _metadata = _interopRequireDefault(__webpack_require__(1084));
 
-var _checkNumberLength = _interopRequireDefault(__webpack_require__(7044));
+var _checkNumberLength = _interopRequireDefault(__webpack_require__(6034));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -12138,7 +12854,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function validatePhoneNumberLength() {
-  var _normalizeArguments = (0, _parsePhoneNumber.normalizeArguments)(arguments),
+  var _normalizeArguments = (0, _normalizeArguments2["default"])(arguments),
       text = _normalizeArguments.text,
       options = _normalizeArguments.options,
       metadata = _normalizeArguments.metadata;
@@ -12148,7 +12864,7 @@ function validatePhoneNumberLength() {
   }); // Parse phone number.
 
   try {
-    var phoneNumber = (0, _parsePhoneNumber_["default"])(text, options, metadata);
+    var phoneNumber = (0, _parsePhoneNumberWithError_["default"])(text, options, metadata);
     metadata = new _metadata["default"](metadata);
     metadata.selectNumberingPlan(phoneNumber.countryCallingCode);
     var result = (0, _checkNumberLength["default"])(phoneNumber.nationalNumber, metadata);
@@ -12169,88 +12885,13 @@ function validatePhoneNumberLength() {
 
 /***/ }),
 
-/***/ 3330:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = isValidNumber;
-
-var _metadata = _interopRequireDefault(__webpack_require__(7536));
-
-var _matchesEntirely = _interopRequireDefault(__webpack_require__(9423));
-
-var _getNumberType = _interopRequireDefault(__webpack_require__(7065));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-/**
- * Checks if a given phone number is valid.
- *
- * If the `number` is a string, it will be parsed to an object,
- * but only if it contains only valid phone number characters (including punctuation).
- * If the `number` is an object, it is used as is.
- *
- * The optional `defaultCountry` argument is the default country.
- * I.e. it does not restrict to just that country,
- * e.g. in those cases where several countries share
- * the same phone numbering rules (NANPA, Britain, etc).
- * For example, even though the number `07624 369230`
- * belongs to the Isle of Man ("IM" country code)
- * calling `isValidNumber('07624369230', 'GB', metadata)`
- * still returns `true` because the country is not restricted to `GB`,
- * it's just that `GB` is the default one for the phone numbering rules.
- * For restricting the country see `isValidNumberForRegion()`
- * though restricting a country might not be a good idea.
- * https://github.com/googlei18n/libphonenumber/blob/master/FAQ.md#when-should-i-use-isvalidnumberforregion
- *
- * Examples:
- *
- * ```js
- * isValidNumber('+78005553535', metadata)
- * isValidNumber('8005553535', 'RU', metadata)
- * isValidNumber('88005553535', 'RU', metadata)
- * isValidNumber({ phone: '8005553535', country: 'RU' }, metadata)
- * ```
- */
-function isValidNumber(input, options, metadata) {
-  // If assigning the `{}` default value is moved to the arguments above,
-  // code coverage would decrease for some weird reason.
-  options = options || {};
-  metadata = new _metadata["default"](metadata); // This is just to support `isValidNumber({})`
-  // for cases when `parseNumber()` returns `{}`.
-
-  if (!input.country) {
-    return false;
-  }
-
-  metadata.selectNumberingPlan(input.country, input.countryCallingCode); // By default, countries only have type regexps when it's required for
-  // distinguishing different countries having the same `countryCallingCode`.
-
-  if (metadata.hasTypes()) {
-    return (0, _getNumberType["default"])(input, options, metadata.metadata) !== undefined;
-  } // If there are no type regexps for this country in metadata then use
-  // `nationalNumberPattern` as a "better than nothing" replacement.
-
-
-  var national_number = options.v2 ? input.nationalNumber : input.phone;
-  return (0, _matchesEntirely["default"])(national_number, metadata.nationalNumberPattern());
-}
-//# sourceMappingURL=validate_.js.map
-
-/***/ }),
-
-/***/ 8245:
+/***/ 9869:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var parsePhoneNumberFromString = (__webpack_require__(9142)/* ["default"] */ .Z)
+var parsePhoneNumberFromString = (__webpack_require__(5689)["default"])
 
 // ES5 `require()` "default" "interoperability" hack.
 // https://github.com/babel/babel/issues/2212#issuecomment-131827986
@@ -12259,8 +12900,8 @@ var parsePhoneNumberFromString = (__webpack_require__(9142)/* ["default"] */ .Z)
 exports = module.exports = parsePhoneNumberFromString
 exports["default"] = parsePhoneNumberFromString
 
-exports.ParseError = __webpack_require__(3161)["default"]
-var parsePhoneNumberWithError = (__webpack_require__(8252)["default"])
+exports.ParseError = __webpack_require__(7986)["default"]
+var parsePhoneNumberWithError = (__webpack_require__(1579)/* ["default"] */ .A)
 // `parsePhoneNumber()` named export has been renamed to `parsePhoneNumberWithError()`.
 exports.parsePhoneNumberWithError = parsePhoneNumberWithError
 exports.parsePhoneNumber = parsePhoneNumberWithError
@@ -12269,46 +12910,47 @@ exports.parsePhoneNumber = parsePhoneNumberWithError
 // it has been promoted to a default export due to being too verbose.
 exports.parsePhoneNumberFromString = parsePhoneNumberFromString
 
-exports.isValidPhoneNumber = __webpack_require__(2715)["default"]
-exports.isPossiblePhoneNumber = __webpack_require__(5735)["default"]
-exports.validatePhoneNumberLength = __webpack_require__(6801)["default"]
+exports.isValidPhoneNumber = __webpack_require__(8102)["default"]
+exports.isPossiblePhoneNumber = __webpack_require__(6049)["default"]
+exports.validatePhoneNumberLength = __webpack_require__(5850)["default"]
 
-exports.findNumbers = __webpack_require__(6329)["default"]
-exports.searchNumbers = __webpack_require__(8524)["default"]
-exports.findPhoneNumbersInText = __webpack_require__(7228)["default"]
-exports.searchPhoneNumbersInText = __webpack_require__(8151)["default"]
-exports.PhoneNumberMatcher = __webpack_require__(2066)["default"]
+exports.findNumbers = __webpack_require__(3882)["default"]
+exports.searchNumbers = __webpack_require__(3259)["default"]
 
-exports.AsYouType = __webpack_require__(3995)["default"]
+exports.findPhoneNumbersInText = __webpack_require__(144)["default"]
+exports.searchPhoneNumbersInText = __webpack_require__(6587)["default"]
+exports.PhoneNumberMatcher = __webpack_require__(9420)["default"]
 
-exports.Metadata = __webpack_require__(7536)["default"]
-exports.isSupportedCountry = __webpack_require__(7536).isSupportedCountry
-exports.getCountries = __webpack_require__(8600)["default"]
-exports.getCountryCallingCode = __webpack_require__(7536).getCountryCallingCode
-exports.getExtPrefix = __webpack_require__(7536).getExtPrefix
+exports.AsYouType = __webpack_require__(458)["default"]
 
-exports.getExampleNumber = __webpack_require__(568)["default"]
+exports.Metadata = __webpack_require__(1084)["default"]
+exports.isSupportedCountry = __webpack_require__(1084).isSupportedCountry
+exports.getCountries = __webpack_require__(503)["default"]
+exports.getCountryCallingCode = __webpack_require__(1084).getCountryCallingCode
+exports.getExtPrefix = __webpack_require__(1084).getExtPrefix
 
-exports.formatIncompletePhoneNumber = __webpack_require__(6697)["default"]
+exports.getExampleNumber = __webpack_require__(8066)["default"]
 
-exports.parseIncompletePhoneNumber = __webpack_require__(5647)["default"]
-exports.parsePhoneNumberCharacter = __webpack_require__(5647).parsePhoneNumberCharacter
-exports.parseDigits = __webpack_require__(5039)["default"]
-exports.DIGIT_PLACEHOLDER = __webpack_require__(671).DIGIT_PLACEHOLDER
+exports.formatIncompletePhoneNumber = __webpack_require__(9117)["default"]
 
-exports.parseRFC3966 = __webpack_require__(7274).parseRFC3966
-exports.formatRFC3966 = __webpack_require__(7274).formatRFC3966
+exports.parseIncompletePhoneNumber = __webpack_require__(7729)["default"]
+exports.parsePhoneNumberCharacter = __webpack_require__(7729).parsePhoneNumberCharacter
+exports.parseDigits = __webpack_require__(9458)["default"]
+exports.DIGIT_PLACEHOLDER = __webpack_require__(8138).DIGIT_PLACEHOLDER
+
+exports.parseRFC3966 = __webpack_require__(6366).parseRFC3966
+exports.formatRFC3966 = __webpack_require__(6366).formatRFC3966
 
 /***/ }),
 
-/***/ 1329:
+/***/ 7519:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var min = __webpack_require__(1150)
-var metadata = __webpack_require__(5651)
+var min = __webpack_require__(6834)
+var metadata = __webpack_require__(8871)
 
 function withMetadataArgument(func, _arguments) {
 	var args = Array.prototype.slice.call(_arguments)
@@ -12338,39 +12980,39 @@ exports.isPossiblePhoneNumber = min.isPossiblePhoneNumber
 exports.validatePhoneNumberLength = min.validatePhoneNumberLength
 
 // `parse()` and `parseNumber()` functions are deprecated.
-var parse_ = (__webpack_require__(1398)/* ["default"] */ .Z)
+var parse_ = (__webpack_require__(8766)/* ["default"] */ .A)
 exports.parse = function parse() {
 	return withMetadataArgument(parse_, arguments)
 }
 exports.parseNumber = exports.parse
 
 // `format()` and `formatNumber()` functions are deprecated.
-var format_ = (__webpack_require__(4777)/* ["default"] */ .Z)
+var format_ = (__webpack_require__(6693)/* ["default"] */ .A)
 exports.format = function format() {
 	return withMetadataArgument(format_, arguments)
 }
 exports.formatNumber = exports.format
 
 // Deprecated.
-var getNumberType_ = (__webpack_require__(454)["default"])
+var getNumberType_ = (__webpack_require__(8704)["default"])
 exports.getNumberType = function getNumberType() {
 	return withMetadataArgument(getNumberType_, arguments)
 }
 
 // Deprecated.
-var isPossibleNumber_ = (__webpack_require__(3240)/* ["default"] */ .Z)
+var isPossibleNumber_ = (__webpack_require__(7743)/* ["default"] */ .A)
 exports.isPossibleNumber = function isPossibleNumber() {
 	return withMetadataArgument(isPossibleNumber_, arguments)
 }
 
 // Deprecated.
-var isValidNumber_ = (__webpack_require__(5723)/* ["default"] */ .Z)
+var isValidNumber_ = (__webpack_require__(8202)/* ["default"] */ .A)
 exports.isValidNumber = function isValidNumber() {
 	return withMetadataArgument(isValidNumber_, arguments)
 }
 
 // Deprecated.
-var isValidNumberForRegion_ = (__webpack_require__(4841)/* ["default"] */ .Z)
+var isValidNumberForRegion_ = (__webpack_require__(63)/* ["default"] */ .A)
 exports.isValidNumberForRegion = function isValidNumberForRegion() {
 	return withMetadataArgument(isValidNumberForRegion_, arguments)
 }
@@ -12379,19 +13021,19 @@ exports.getExampleNumber = min.getExampleNumber
 exports.Metadata = min.Metadata
 
 // Deprecated.
-var findPhoneNumbers_ = (__webpack_require__(8597)/* ["default"] */ .ZP)
+var findPhoneNumbers_ = (__webpack_require__(4540)/* ["default"] */ .Ay)
 exports.findPhoneNumbers = function findPhoneNumbers() {
 	return withMetadataArgument(findPhoneNumbers_, arguments)
 }
 
 // Deprecated.
-var searchPhoneNumbers_ = (__webpack_require__(8597)/* .searchPhoneNumbers */ .Pf)
+var searchPhoneNumbers_ = (__webpack_require__(4540)/* .searchPhoneNumbers */ .PW)
 exports.searchPhoneNumbers = function searchPhoneNumbers() {
 	return withMetadataArgument(searchPhoneNumbers_, arguments)
 }
 
 // Deprecated.
-var PhoneNumberSearch_ = (__webpack_require__(6315).PhoneNumberSearch)
+var PhoneNumberSearch_ = (__webpack_require__(7039).PhoneNumberSearch)
 exports.PhoneNumberSearch = function PhoneNumberSearch(text, options) {
 	return PhoneNumberSearch_.call(this, text, options, metadata)
 }
@@ -12419,7 +13061,7 @@ exports.formatRFC3966 = min.formatRFC3966
 
 // Deprecated: `DIGITS` were used by `react-phone-number-input`.
 // Replaced by `parseDigits()`.
-exports.DIGITS = __webpack_require__(5039).DIGITS
+exports.DIGITS = __webpack_require__(9458).DIGITS
 exports.DIGIT_PLACEHOLDER = min.DIGIT_PLACEHOLDER
 
 // `getPhoneCode` name is deprecated
@@ -12432,14 +13074,14 @@ exports.parseDigits = min.parseDigits
 
 /***/ }),
 
-/***/ 1150:
+/***/ 6834:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var metadata = __webpack_require__(5651)
-var core = __webpack_require__(8245)
+var metadata = __webpack_require__(8871)
+var core = __webpack_require__(9869)
 
 function call(func, _arguments) {
 	var args = Array.prototype.slice.call(_arguments)
@@ -12552,11 +13194,11 @@ exports.formatRFC3966 = core.formatRFC3966
 
 /***/ }),
 
-/***/ 5651:
+/***/ 8871:
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"version":4,"country_calling_codes":{"1":["US","AG","AI","AS","BB","BM","BS","CA","DM","DO","GD","GU","JM","KN","KY","LC","MP","MS","PR","SX","TC","TT","VC","VG","VI"],"7":["RU","KZ"],"20":["EG"],"27":["ZA"],"30":["GR"],"31":["NL"],"32":["BE"],"33":["FR"],"34":["ES"],"36":["HU"],"39":["IT","VA"],"40":["RO"],"41":["CH"],"43":["AT"],"44":["GB","GG","IM","JE"],"45":["DK"],"46":["SE"],"47":["NO","SJ"],"48":["PL"],"49":["DE"],"51":["PE"],"52":["MX"],"53":["CU"],"54":["AR"],"55":["BR"],"56":["CL"],"57":["CO"],"58":["VE"],"60":["MY"],"61":["AU","CC","CX"],"62":["ID"],"63":["PH"],"64":["NZ"],"65":["SG"],"66":["TH"],"81":["JP"],"82":["KR"],"84":["VN"],"86":["CN"],"90":["TR"],"91":["IN"],"92":["PK"],"93":["AF"],"94":["LK"],"95":["MM"],"98":["IR"],"211":["SS"],"212":["MA","EH"],"213":["DZ"],"216":["TN"],"218":["LY"],"220":["GM"],"221":["SN"],"222":["MR"],"223":["ML"],"224":["GN"],"225":["CI"],"226":["BF"],"227":["NE"],"228":["TG"],"229":["BJ"],"230":["MU"],"231":["LR"],"232":["SL"],"233":["GH"],"234":["NG"],"235":["TD"],"236":["CF"],"237":["CM"],"238":["CV"],"239":["ST"],"240":["GQ"],"241":["GA"],"242":["CG"],"243":["CD"],"244":["AO"],"245":["GW"],"246":["IO"],"247":["AC"],"248":["SC"],"249":["SD"],"250":["RW"],"251":["ET"],"252":["SO"],"253":["DJ"],"254":["KE"],"255":["TZ"],"256":["UG"],"257":["BI"],"258":["MZ"],"260":["ZM"],"261":["MG"],"262":["RE","YT"],"263":["ZW"],"264":["NA"],"265":["MW"],"266":["LS"],"267":["BW"],"268":["SZ"],"269":["KM"],"290":["SH","TA"],"291":["ER"],"297":["AW"],"298":["FO"],"299":["GL"],"350":["GI"],"351":["PT"],"352":["LU"],"353":["IE"],"354":["IS"],"355":["AL"],"356":["MT"],"357":["CY"],"358":["FI","AX"],"359":["BG"],"370":["LT"],"371":["LV"],"372":["EE"],"373":["MD"],"374":["AM"],"375":["BY"],"376":["AD"],"377":["MC"],"378":["SM"],"380":["UA"],"381":["RS"],"382":["ME"],"383":["XK"],"385":["HR"],"386":["SI"],"387":["BA"],"389":["MK"],"420":["CZ"],"421":["SK"],"423":["LI"],"500":["FK"],"501":["BZ"],"502":["GT"],"503":["SV"],"504":["HN"],"505":["NI"],"506":["CR"],"507":["PA"],"508":["PM"],"509":["HT"],"590":["GP","BL","MF"],"591":["BO"],"592":["GY"],"593":["EC"],"594":["GF"],"595":["PY"],"596":["MQ"],"597":["SR"],"598":["UY"],"599":["CW","BQ"],"670":["TL"],"672":["NF"],"673":["BN"],"674":["NR"],"675":["PG"],"676":["TO"],"677":["SB"],"678":["VU"],"679":["FJ"],"680":["PW"],"681":["WF"],"682":["CK"],"683":["NU"],"685":["WS"],"686":["KI"],"687":["NC"],"688":["TV"],"689":["PF"],"690":["TK"],"691":["FM"],"692":["MH"],"850":["KP"],"852":["HK"],"853":["MO"],"855":["KH"],"856":["LA"],"880":["BD"],"886":["TW"],"960":["MV"],"961":["LB"],"962":["JO"],"963":["SY"],"964":["IQ"],"965":["KW"],"966":["SA"],"967":["YE"],"968":["OM"],"970":["PS"],"971":["AE"],"972":["IL"],"973":["BH"],"974":["QA"],"975":["BT"],"976":["MN"],"977":["NP"],"992":["TJ"],"993":["TM"],"994":["AZ"],"995":["GE"],"996":["KG"],"998":["UZ"]},"countries":{"AC":["247","00","(?:[01589]\\\\d|[46])\\\\d{4}",[5,6]],"AD":["376","00","(?:1|6\\\\d)\\\\d{7}|[135-9]\\\\d{5}",[6,8,9],[["(\\\\d{3})(\\\\d{3})","$1 $2",["[135-9]"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["1"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["6"]]]],"AE":["971","00","(?:[4-7]\\\\d|9[0-689])\\\\d{7}|800\\\\d{2,9}|[2-4679]\\\\d{7}",[5,6,7,8,9,10,11,12],[["(\\\\d{3})(\\\\d{2,9})","$1 $2",["60|8"]],["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[236]|[479][2-8]"],"0$1"],["(\\\\d{3})(\\\\d)(\\\\d{5})","$1 $2 $3",["[479]"]],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["5"],"0$1"]],"0"],"AF":["93","00","[2-7]\\\\d{8}",[9],[["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[2-7]"],"0$1"]],"0"],"AG":["1","011","(?:268|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"1|([457]\\\\d{6})$","268$1",0,"268"],"AI":["1","011","(?:264|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"1|([2457]\\\\d{6})$","264$1",0,"264"],"AL":["355","00","(?:700\\\\d\\\\d|900)\\\\d{3}|8\\\\d{5,7}|(?:[2-5]|6\\\\d)\\\\d{7}",[6,7,8,9],[["(\\\\d{3})(\\\\d{3,4})","$1 $2",["80|9"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["4[2-6]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[2358][2-5]|4"],"0$1"],["(\\\\d{3})(\\\\d{5})","$1 $2",["[23578]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["6"],"0$1"]],"0"],"AM":["374","00","(?:[1-489]\\\\d|55|60|77)\\\\d{6}",[8],[["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["[89]0"],"0 $1"],["(\\\\d{3})(\\\\d{5})","$1 $2",["2|3[12]"],"(0$1)"],["(\\\\d{2})(\\\\d{6})","$1 $2",["1|47"],"(0$1)"],["(\\\\d{2})(\\\\d{6})","$1 $2",["[3-9]"],"0$1"]],"0"],"AO":["244","00","[29]\\\\d{8}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[29]"]]]],"AR":["54","00","(?:11|[89]\\\\d\\\\d)\\\\d{8}|[2368]\\\\d{9}",[10,11],[["(\\\\d{4})(\\\\d{2})(\\\\d{4})","$1 $2-$3",["2(?:2[024-9]|3[0-59]|47|6[245]|9[02-8])|3(?:3[28]|4[03-9]|5[2-46-8]|7[1-578]|8[2-9])","2(?:[23]02|6(?:[25]|4[6-8])|9(?:[02356]|4[02568]|72|8[23]))|3(?:3[28]|4(?:[04679]|3[5-8]|5[4-68]|8[2379])|5(?:[2467]|3[237]|8[2-5])|7[1-578]|8(?:[2469]|3[2578]|5[4-8]|7[36-8]|8[5-8]))|2(?:2[24-9]|3[1-59]|47)","2(?:[23]02|6(?:[25]|4(?:64|[78]))|9(?:[02356]|4(?:[0268]|5[2-6])|72|8[23]))|3(?:3[28]|4(?:[04679]|3[78]|5(?:4[46]|8)|8[2379])|5(?:[2467]|3[237]|8[23])|7[1-578]|8(?:[2469]|3[278]|5[56][46]|86[3-6]))|2(?:2[24-9]|3[1-59]|47)|38(?:[58][78]|7[378])|3(?:4[35][56]|58[45]|8(?:[38]5|54|76))[4-6]","2(?:[23]02|6(?:[25]|4(?:64|[78]))|9(?:[02356]|4(?:[0268]|5[2-6])|72|8[23]))|3(?:3[28]|4(?:[04679]|3(?:5(?:4[0-25689]|[56])|[78])|58|8[2379])|5(?:[2467]|3[237]|8(?:[23]|4(?:[45]|60)|5(?:4[0-39]|5|64)))|7[1-578]|8(?:[2469]|3[278]|54(?:4|5[13-7]|6[89])|86[3-6]))|2(?:2[24-9]|3[1-59]|47)|38(?:[58][78]|7[378])|3(?:454|85[56])[46]|3(?:4(?:36|5[56])|8(?:[38]5|76))[4-6]"],"0$1",1],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2-$3",["1"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["[68]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2-$3",["[23]"],"0$1",1],["(\\\\d)(\\\\d{4})(\\\\d{2})(\\\\d{4})","$2 15-$3-$4",["9(?:2[2-469]|3[3-578])","9(?:2(?:2[024-9]|3[0-59]|47|6[245]|9[02-8])|3(?:3[28]|4[03-9]|5[2-46-8]|7[1-578]|8[2-9]))","9(?:2(?:[23]02|6(?:[25]|4[6-8])|9(?:[02356]|4[02568]|72|8[23]))|3(?:3[28]|4(?:[04679]|3[5-8]|5[4-68]|8[2379])|5(?:[2467]|3[237]|8[2-5])|7[1-578]|8(?:[2469]|3[2578]|5[4-8]|7[36-8]|8[5-8])))|92(?:2[24-9]|3[1-59]|47)","9(?:2(?:[23]02|6(?:[25]|4(?:64|[78]))|9(?:[02356]|4(?:[0268]|5[2-6])|72|8[23]))|3(?:3[28]|4(?:[04679]|3[78]|5(?:4[46]|8)|8[2379])|5(?:[2467]|3[237]|8[23])|7[1-578]|8(?:[2469]|3[278]|5(?:[56][46]|[78])|7[378]|8(?:6[3-6]|[78]))))|92(?:2[24-9]|3[1-59]|47)|93(?:4[35][56]|58[45]|8(?:[38]5|54|76))[4-6]","9(?:2(?:[23]02|6(?:[25]|4(?:64|[78]))|9(?:[02356]|4(?:[0268]|5[2-6])|72|8[23]))|3(?:3[28]|4(?:[04679]|3(?:5(?:4[0-25689]|[56])|[78])|5(?:4[46]|8)|8[2379])|5(?:[2467]|3[237]|8(?:[23]|4(?:[45]|60)|5(?:4[0-39]|5|64)))|7[1-578]|8(?:[2469]|3[278]|5(?:4(?:4|5[13-7]|6[89])|[56][46]|[78])|7[378]|8(?:6[3-6]|[78]))))|92(?:2[24-9]|3[1-59]|47)|93(?:4(?:36|5[56])|8(?:[38]5|76))[4-6]"],"0$1",0,"$1 $2 $3-$4"],["(\\\\d)(\\\\d{2})(\\\\d{4})(\\\\d{4})","$2 15-$3-$4",["91"],"0$1",0,"$1 $2 $3-$4"],["(\\\\d{3})(\\\\d{3})(\\\\d{5})","$1-$2-$3",["8"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{3})(\\\\d{4})","$2 15-$3-$4",["9"],"0$1",0,"$1 $2 $3-$4"]],"0",0,"0?(?:(11|2(?:2(?:02?|[13]|2[13-79]|4[1-6]|5[2457]|6[124-8]|7[1-4]|8[13-6]|9[1267])|3(?:02?|1[467]|2[03-6]|3[13-8]|[49][2-6]|5[2-8]|[67])|4(?:7[3-578]|9)|6(?:[0136]|2[24-6]|4[6-8]?|5[15-8])|80|9(?:0[1-3]|[19]|2\\\\d|3[1-6]|4[02568]?|5[2-4]|6[2-46]|72?|8[23]?))|3(?:3(?:2[79]|6|8[2578])|4(?:0[0-24-9]|[12]|3[5-8]?|4[24-7]|5[4-68]?|6[02-9]|7[126]|8[2379]?|9[1-36-8])|5(?:1|2[1245]|3[237]?|4[1-46-9]|6[2-4]|7[1-6]|8[2-5]?)|6[24]|7(?:[069]|1[1568]|2[15]|3[145]|4[13]|5[14-8]|7[2-57]|8[126])|8(?:[01]|2[15-7]|3[2578]?|4[13-6]|5[4-8]?|6[1-357-9]|7[36-8]?|8[5-8]?|9[124])))15)?","9$1"],"AS":["1","011","(?:[58]\\\\d\\\\d|684|900)\\\\d{7}",[10],0,"1",0,"1|([267]\\\\d{6})$","684$1",0,"684"],"AT":["43","00","1\\\\d{3,12}|2\\\\d{6,12}|43(?:(?:0\\\\d|5[02-9])\\\\d{3,9}|2\\\\d{4,5}|[3467]\\\\d{4}|8\\\\d{4,6}|9\\\\d{4,7})|5\\\\d{4,12}|8\\\\d{7,12}|9\\\\d{8,12}|(?:[367]\\\\d|4[0-24-9])\\\\d{4,11}",[4,5,6,7,8,9,10,11,12,13],[["(\\\\d)(\\\\d{3,12})","$1 $2",["1(?:11|[2-9])"],"0$1"],["(\\\\d{3})(\\\\d{2})","$1 $2",["517"],"0$1"],["(\\\\d{2})(\\\\d{3,5})","$1 $2",["5[079]"],"0$1"],["(\\\\d{3})(\\\\d{3,10})","$1 $2",["(?:31|4)6|51|6(?:5[0-3579]|[6-9])|7(?:20|32|8)|[89]"],"0$1"],["(\\\\d{4})(\\\\d{3,9})","$1 $2",["[2-467]|5[2-6]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["5"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4,7})","$1 $2 $3",["5"],"0$1"]],"0"],"AU":["61","001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011","1(?:[0-79]\\\\d{7}(?:\\\\d(?:\\\\d{2})?)?|8[0-24-9]\\\\d{7})|[2-478]\\\\d{8}|1\\\\d{4,7}",[5,6,7,8,9,10,12],[["(\\\\d{2})(\\\\d{3,4})","$1 $2",["16"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2,4})","$1 $2 $3",["16"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["14|4"],"0$1"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["[2378]"],"(0$1)"],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1(?:30|[89])"]]],"0",0,"0|(183[12])",0,0,0,[["(?:(?:2(?:[0-26-9]\\\\d|3[0-8]|4[02-9]|5[0135-9])|3(?:[0-3589]\\\\d|4[0-578]|6[1-9]|7[0-35-9])|7(?:[013-57-9]\\\\d|2[0-8]))\\\\d{3}|8(?:51(?:0(?:0[03-9]|[12479]\\\\d|3[2-9]|5[0-8]|6[1-9]|8[0-7])|1(?:[0235689]\\\\d|1[0-69]|4[0-589]|7[0-47-9])|2(?:0[0-79]|[18][13579]|2[14-9]|3[0-46-9]|[4-6]\\\\d|7[89]|9[0-4]))|(?:6[0-8]|[78]\\\\d)\\\\d{3}|9(?:[02-9]\\\\d{3}|1(?:(?:[0-58]\\\\d|6[0135-9])\\\\d|7(?:0[0-24-9]|[1-9]\\\\d)|9(?:[0-46-9]\\\\d|5[0-79])))))\\\\d{3}",[9]],["4(?:83[0-38]|93[0-6])\\\\d{5}|4(?:[0-3]\\\\d|4[047-9]|5[0-25-9]|6[016-9]|7[02-9]|8[0-24-9]|9[0-27-9])\\\\d{6}",[9]],["180(?:0\\\\d{3}|2)\\\\d{3}",[7,10]],["190[0-26]\\\\d{6}",[10]],0,0,0,["163\\\\d{2,6}",[5,6,7,8,9]],["14(?:5(?:1[0458]|[23][458])|71\\\\d)\\\\d{4}",[9]],["13(?:00\\\\d{6}(?:\\\\d{2})?|45[0-4]\\\\d{3})|13\\\\d{4}",[6,8,10,12]]],"0011"],"AW":["297","00","(?:[25-79]\\\\d\\\\d|800)\\\\d{4}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[25-9]"]]]],"AX":["358","00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))","2\\\\d{4,9}|35\\\\d{4,5}|(?:60\\\\d\\\\d|800)\\\\d{4,6}|7\\\\d{5,11}|(?:[14]\\\\d|3[0-46-9]|50)\\\\d{4,8}",[5,6,7,8,9,10,11,12],0,"0",0,0,0,0,"18",0,"00"],"AZ":["994","00","365\\\\d{6}|(?:[124579]\\\\d|60|88)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["90"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["1[28]|2|365|46","1[28]|2|365[45]|46","1[28]|2|365(?:4|5[02])|46"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[13-9]"],"0$1"]],"0"],"BA":["387","00","6\\\\d{8}|(?:[35689]\\\\d|49|70)\\\\d{6}",[8,9],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["6[1-3]|[7-9]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2-$3",["[3-5]|6[56]"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3 $4",["6"],"0$1"]],"0"],"BB":["1","011","(?:246|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"1|([2-9]\\\\d{6})$","246$1",0,"246"],"BD":["880","00","[1-469]\\\\d{9}|8[0-79]\\\\d{7,8}|[2-79]\\\\d{8}|[2-9]\\\\d{7}|[3-9]\\\\d{6}|[57-9]\\\\d{5}",[6,7,8,9,10],[["(\\\\d{2})(\\\\d{4,6})","$1-$2",["31[5-8]|[459]1"],"0$1"],["(\\\\d{3})(\\\\d{3,7})","$1-$2",["3(?:[67]|8[013-9])|4(?:6[168]|7|[89][18])|5(?:6[128]|9)|6(?:28|4[14]|5)|7[2-589]|8(?:0[014-9]|[12])|9[358]|(?:3[2-5]|4[235]|5[2-578]|6[0389]|76|8[3-7]|9[24])1|(?:44|66)[01346-9]"],"0$1"],["(\\\\d{4})(\\\\d{3,6})","$1-$2",["[13-9]|22"],"0$1"],["(\\\\d)(\\\\d{7,8})","$1-$2",["2"],"0$1"]],"0"],"BE":["32","00","4\\\\d{8}|[1-9]\\\\d{7}",[8,9],[["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["(?:80|9)0"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[239]|4[23]"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[15-8]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["4"],"0$1"]],"0"],"BF":["226","00","[025-7]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[025-7]"]]]],"BG":["359","00","[2-7]\\\\d{6,7}|[89]\\\\d{6,8}|2\\\\d{5}",[6,7,8,9],[["(\\\\d)(\\\\d)(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["2"],"0$1"],["(\\\\d{3})(\\\\d{4})","$1 $2",["43[1-6]|70[1-9]"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["2"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2,3})","$1 $2 $3",["[356]|4[124-7]|7[1-9]|8[1-6]|9[1-7]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["(?:70|8)0"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{2})","$1 $2 $3",["43[1-7]|7"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[48]|9[08]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["9"],"0$1"]],"0"],"BH":["973","00","[136-9]\\\\d{7}",[8],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[13679]|8[047]"]]]],"BI":["257","00","(?:[267]\\\\d|31)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2367]"]]]],"BJ":["229","00","(?:[25689]\\\\d|40)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[24-689]"]]]],"BL":["590","00","(?:590|(?:69|80)\\\\d|976)\\\\d{6}",[9],0,"0",0,0,0,0,0,[["590(?:2[7-9]|5[12]|87)\\\\d{4}"],["69(?:0\\\\d\\\\d|1(?:2[2-9]|3[0-5]))\\\\d{4}"],["80[0-5]\\\\d{6}"],0,0,0,0,0,["976[01]\\\\d{5}"]]],"BM":["1","011","(?:441|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"1|([2-8]\\\\d{6})$","441$1",0,"441"],"BN":["673","00","[2-578]\\\\d{6}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[2-578]"]]]],"BO":["591","00(?:1\\\\d)?","(?:[2-467]\\\\d\\\\d|8001)\\\\d{5}",[8,9],[["(\\\\d)(\\\\d{7})","$1 $2",["[23]|4[46]"]],["(\\\\d{8})","$1",["[67]"]],["(\\\\d{3})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["8"]]],"0",0,"0(1\\\\d)?"],"BQ":["599","00","(?:[34]1|7\\\\d)\\\\d{5}",[7],0,0,0,0,0,0,"[347]"],"BR":["55","00(?:1[245]|2[1-35]|31|4[13]|[56]5|99)","(?:[1-46-9]\\\\d\\\\d|5(?:[0-46-9]\\\\d|5[0-46-9]))\\\\d{8}|[1-9]\\\\d{9}|[3589]\\\\d{8}|[34]\\\\d{7}",[8,9,10,11],[["(\\\\d{4})(\\\\d{4})","$1-$2",["300|4(?:0[02]|37)","4(?:02|37)0|[34]00"]],["(\\\\d{3})(\\\\d{2,3})(\\\\d{4})","$1 $2 $3",["(?:[358]|90)0"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2-$3",["(?:[14689][1-9]|2[12478]|3[1-578]|5[13-5]|7[13-579])[2-57]"],"($1)"],["(\\\\d{2})(\\\\d{5})(\\\\d{4})","$1 $2-$3",["[16][1-9]|[2-57-9]"],"($1)"]],"0",0,"(?:0|90)(?:(1[245]|2[1-35]|31|4[13]|[56]5|99)(\\\\d{10,11}))?","$2"],"BS":["1","011","(?:242|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"1|([3-8]\\\\d{6})$","242$1",0,"242"],"BT":["975","00","[17]\\\\d{7}|[2-8]\\\\d{6}",[7,8],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[2-68]|7[246]"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["1[67]|7"]]]],"BW":["267","00","(?:0800|(?:[37]|800)\\\\d)\\\\d{6}|(?:[2-6]\\\\d|90)\\\\d{5}",[7,8,10],[["(\\\\d{2})(\\\\d{5})","$1 $2",["90"]],["(\\\\d{3})(\\\\d{4})","$1 $2",["[24-6]|3[15-79]"]],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[37]"]],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["0"]],["(\\\\d{3})(\\\\d{4})(\\\\d{3})","$1 $2 $3",["8"]]]],"BY":["375","810","(?:[12]\\\\d|33|44|902)\\\\d{7}|8(?:0[0-79]\\\\d{5,7}|[1-7]\\\\d{9})|8(?:1[0-489]|[5-79]\\\\d)\\\\d{7}|8[1-79]\\\\d{6,7}|8[0-79]\\\\d{5}|8\\\\d{5}",[6,7,8,9,10,11],[["(\\\\d{3})(\\\\d{3})","$1 $2",["800"],"8 $1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2,4})","$1 $2 $3",["800"],"8 $1"],["(\\\\d{4})(\\\\d{2})(\\\\d{3})","$1 $2-$3",["1(?:5[169]|6[3-5]|7[179])|2(?:1[35]|2[34]|3[3-5])","1(?:5[169]|6(?:3[1-3]|4|5[125])|7(?:1[3-9]|7[0-24-6]|9[2-7]))|2(?:1[35]|2[34]|3[3-5])"],"8 0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2-$3-$4",["1(?:[56]|7[467])|2[1-3]"],"8 0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2-$3-$4",["[1-4]"],"8 0$1"],["(\\\\d{3})(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["[89]"],"8 $1"]],"8",0,"0|80?",0,0,0,0,"8~10"],"BZ":["501","00","(?:0800\\\\d|[2-8])\\\\d{6}",[7,11],[["(\\\\d{3})(\\\\d{4})","$1-$2",["[2-8]"]],["(\\\\d)(\\\\d{3})(\\\\d{4})(\\\\d{3})","$1-$2-$3-$4",["0"]]]],"CA":["1","011","(?:[2-8]\\\\d|90)\\\\d{8}|3\\\\d{6}",[7,10],0,"1",0,0,0,0,0,[["(?:2(?:04|[23]6|[48]9|50|63)|3(?:06|43|6[578])|4(?:03|1[68]|3[178]|50|68|74)|5(?:06|1[49]|48|79|8[147])|6(?:04|13|39|47|72)|7(?:0[59]|42|53|78|8[02])|8(?:[06]7|19|25|73)|90[25])[2-9]\\\\d{6}",[10]],["",[10]],["8(?:00|33|44|55|66|77|88)[2-9]\\\\d{6}",[10]],["900[2-9]\\\\d{6}",[10]],["52(?:3(?:[2-46-9][02-9]\\\\d|5(?:[02-46-9]\\\\d|5[0-46-9]))|4(?:[2-478][02-9]\\\\d|5(?:[034]\\\\d|2[024-9]|5[0-46-9])|6(?:0[1-9]|[2-9]\\\\d)|9(?:[05-9]\\\\d|2[0-5]|49)))\\\\d{4}|52[34][2-9]1[02-9]\\\\d{4}|(?:5(?:00|2[125-7]|33|44|66|77|88)|622)[2-9]\\\\d{6}",[10]],0,["310\\\\d{4}",[7]],0,["600[2-9]\\\\d{6}",[10]]]],"CC":["61","001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011","1(?:[0-79]\\\\d{8}(?:\\\\d{2})?|8[0-24-9]\\\\d{7})|[148]\\\\d{8}|1\\\\d{5,7}",[6,7,8,9,10,12],0,"0",0,"0|([59]\\\\d{7})$","8$1",0,0,[["8(?:51(?:0(?:02|31|60|89)|1(?:18|76)|223)|91(?:0(?:1[0-2]|29)|1(?:[28]2|50|79)|2(?:10|64)|3(?:[06]8|22)|4[29]8|62\\\\d|70[23]|959))\\\\d{3}",[9]],["4(?:83[0-38]|93[0-6])\\\\d{5}|4(?:[0-3]\\\\d|4[047-9]|5[0-25-9]|6[016-9]|7[02-9]|8[0-24-9]|9[0-27-9])\\\\d{6}",[9]],["180(?:0\\\\d{3}|2)\\\\d{3}",[7,10]],["190[0-26]\\\\d{6}",[10]],0,0,0,0,["14(?:5(?:1[0458]|[23][458])|71\\\\d)\\\\d{4}",[9]],["13(?:00\\\\d{6}(?:\\\\d{2})?|45[0-4]\\\\d{3})|13\\\\d{4}",[6,8,10,12]]],"0011"],"CD":["243","00","[189]\\\\d{8}|[1-68]\\\\d{6}",[7,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["88"],"0$1"],["(\\\\d{2})(\\\\d{5})","$1 $2",["[1-6]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[89]"],"0$1"]],"0"],"CF":["236","00","(?:[27]\\\\d{3}|8776)\\\\d{4}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[278]"]]]],"CG":["242","00","222\\\\d{6}|(?:0\\\\d|80)\\\\d{7}",[9],[["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["8"]],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[02]"]]]],"CH":["41","00","8\\\\d{11}|[2-9]\\\\d{8}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8[047]|90"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2-79]|81"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4 $5",["8"],"0$1"]],"0"],"CI":["225","00","[02]\\\\d{9}",[10],[["(\\\\d{2})(\\\\d{2})(\\\\d)(\\\\d{5})","$1 $2 $3 $4",["2"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{4})","$1 $2 $3 $4",["0"]]]],"CK":["682","00","[2-578]\\\\d{4}",[5],[["(\\\\d{2})(\\\\d{3})","$1 $2",["[2-578]"]]]],"CL":["56","(?:0|1(?:1[0-69]|2[02-5]|5[13-58]|69|7[0167]|8[018]))0","12300\\\\d{6}|6\\\\d{9,10}|[2-9]\\\\d{8}",[9,10,11],[["(\\\\d{5})(\\\\d{4})","$1 $2",["219","2196"],"($1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["44"]],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["2[1-36]"],"($1)"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["9[2-9]"]],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["3[2-5]|[47]|5[1-3578]|6[13-57]|8(?:0[1-9]|[1-9])"],"($1)"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["60|8"]],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"]],["(\\\\d{3})(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3 $4",["60"]]]],"CM":["237","00","[26]\\\\d{8}|88\\\\d{6,7}",[8,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["88"]],["(\\\\d)(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4 $5",["[26]|88"]]]],"CN":["86","00|1(?:[12]\\\\d|79)\\\\d\\\\d00","1[127]\\\\d{8,9}|2\\\\d{9}(?:\\\\d{2})?|[12]\\\\d{6,7}|86\\\\d{6}|(?:1[03-689]\\\\d|6)\\\\d{7,9}|(?:[3-579]\\\\d|8[0-57-9])\\\\d{6,9}",[7,8,9,10,11,12],[["(\\\\d{2})(\\\\d{5,6})","$1 $2",["(?:10|2[0-57-9])[19]","(?:10|2[0-57-9])(?:10|9[56])","(?:10|2[0-57-9])(?:100|9[56])"],"0$1"],["(\\\\d{3})(\\\\d{5,6})","$1 $2",["3(?:[157]|35|49|9[1-68])|4(?:[17]|2[179]|6[47-9]|8[23])|5(?:[1357]|2[37]|4[36]|6[1-46]|80)|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|[379]|4[13]|5[1-5])|(?:4[35]|59|85)[1-9]","(?:3(?:[157]\\\\d|35|49|9[1-68])|4(?:[17]\\\\d|2[179]|[35][1-9]|6[47-9]|8[23])|5(?:[1357]\\\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\\\d|5[1-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|[379]\\\\d|4[13]|5[1-5]))[19]","85[23](?:10|95)|(?:3(?:[157]\\\\d|35|49|9[1-68])|4(?:[17]\\\\d|2[179]|[35][1-9]|6[47-9]|8[23])|5(?:[1357]\\\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\\\d|5[14-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|[379]\\\\d|4[13]|5[1-5]))(?:10|9[56])","85[23](?:100|95)|(?:3(?:[157]\\\\d|35|49|9[1-68])|4(?:[17]\\\\d|2[179]|[35][1-9]|6[47-9]|8[23])|5(?:[1357]\\\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\\\d|5[14-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|[379]\\\\d|4[13]|5[1-5]))(?:100|9[56])"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["(?:4|80)0"]],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["10|2(?:[02-57-9]|1[1-9])","10|2(?:[02-57-9]|1[1-9])","10[0-79]|2(?:[02-57-9]|1[1-79])|(?:10|21)8(?:0[1-9]|[1-9])"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["3(?:[3-59]|7[02-68])|4(?:[26-8]|3[3-9]|5[2-9])|5(?:3[03-9]|[468]|7[028]|9[2-46-9])|6|7(?:[0-247]|3[04-9]|5[0-4689]|6[2368])|8(?:[1-358]|9[1-7])|9(?:[013479]|5[1-5])|(?:[34]1|55|79|87)[02-9]"],"0$1",1],["(\\\\d{3})(\\\\d{7,8})","$1 $2",["9"]],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["80"],"0$1",1],["(\\\\d{3})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["[3-578]"],"0$1",1],["(\\\\d{3})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["1[3-9]"]],["(\\\\d{2})(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3 $4",["[12]"],"0$1",1]],"0",0,"0|(1(?:[12]\\\\d|79)\\\\d\\\\d)",0,0,0,0,"00"],"CO":["57","00(?:4(?:[14]4|56)|[579])","(?:60\\\\d\\\\d|9101)\\\\d{6}|(?:1\\\\d|3)\\\\d{9}",[10,11],[["(\\\\d{3})(\\\\d{7})","$1 $2",["6"],"($1)"],["(\\\\d{3})(\\\\d{7})","$1 $2",["3[0-357]|91"]],["(\\\\d)(\\\\d{3})(\\\\d{7})","$1-$2-$3",["1"],"0$1",0,"$1 $2 $3"]],"0",0,"0(4(?:[14]4|56)|[579])?"],"CR":["506","00","(?:8\\\\d|90)\\\\d{8}|(?:[24-8]\\\\d{3}|3005)\\\\d{4}",[8,10],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[2-7]|8[3-9]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["[89]"]]],0,0,"(19(?:0[0-2468]|1[09]|20|66|77|99))"],"CU":["53","119","[27]\\\\d{6,7}|[34]\\\\d{5,7}|(?:5|8\\\\d\\\\d)\\\\d{7}",[6,7,8,10],[["(\\\\d{2})(\\\\d{4,6})","$1 $2",["2[1-4]|[34]"],"(0$1)"],["(\\\\d)(\\\\d{6,7})","$1 $2",["7"],"(0$1)"],["(\\\\d)(\\\\d{7})","$1 $2",["5"],"0$1"],["(\\\\d{3})(\\\\d{7})","$1 $2",["8"],"0$1"]],"0"],"CV":["238","0","(?:[2-59]\\\\d\\\\d|800)\\\\d{4}",[7],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["[2-589]"]]]],"CW":["599","00","(?:[34]1|60|(?:7|9\\\\d)\\\\d)\\\\d{5}",[7,8],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[3467]"]],["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["9[4-8]"]]],0,0,0,0,0,"[69]"],"CX":["61","001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011","1(?:[0-79]\\\\d{8}(?:\\\\d{2})?|8[0-24-9]\\\\d{7})|[148]\\\\d{8}|1\\\\d{5,7}",[6,7,8,9,10,12],0,"0",0,"0|([59]\\\\d{7})$","8$1",0,0,[["8(?:51(?:0(?:01|30|59|88)|1(?:17|46|75)|2(?:22|35))|91(?:00[6-9]|1(?:[28]1|49|78)|2(?:09|63)|3(?:12|26|75)|4(?:56|97)|64\\\\d|7(?:0[01]|1[0-2])|958))\\\\d{3}",[9]],["4(?:83[0-38]|93[0-6])\\\\d{5}|4(?:[0-3]\\\\d|4[047-9]|5[0-25-9]|6[016-9]|7[02-9]|8[0-24-9]|9[0-27-9])\\\\d{6}",[9]],["180(?:0\\\\d{3}|2)\\\\d{3}",[7,10]],["190[0-26]\\\\d{6}",[10]],0,0,0,0,["14(?:5(?:1[0458]|[23][458])|71\\\\d)\\\\d{4}",[9]],["13(?:00\\\\d{6}(?:\\\\d{2})?|45[0-4]\\\\d{3})|13\\\\d{4}",[6,8,10,12]]],"0011"],"CY":["357","00","(?:[279]\\\\d|[58]0)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{6})","$1 $2",["[257-9]"]]]],"CZ":["420","00","(?:[2-578]\\\\d|60)\\\\d{7}|9\\\\d{8,11}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[2-8]|9[015-7]"]],["(\\\\d{2})(\\\\d{3})(\\\\d{3})(\\\\d{2})","$1 $2 $3 $4",["96"]],["(\\\\d{2})(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["9"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["9"]]]],"DE":["49","00","[2579]\\\\d{5,14}|49(?:[34]0|69|8\\\\d)\\\\d\\\\d?|49(?:37|49|60|7[089]|9\\\\d)\\\\d{1,3}|49(?:2[024-9]|3[2-689]|7[1-7])\\\\d{1,8}|(?:1|[368]\\\\d|4[0-8])\\\\d{3,13}|49(?:[015]\\\\d|2[13]|31|[46][1-8])\\\\d{1,9}",[4,5,6,7,8,9,10,11,12,13,14,15],[["(\\\\d{2})(\\\\d{3,13})","$1 $2",["3[02]|40|[68]9"],"0$1"],["(\\\\d{3})(\\\\d{3,12})","$1 $2",["2(?:0[1-389]|1[124]|2[18]|3[14])|3(?:[35-9][15]|4[015])|906|(?:2[4-9]|4[2-9]|[579][1-9]|[68][1-8])1","2(?:0[1-389]|12[0-8])|3(?:[35-9][15]|4[015])|906|2(?:[13][14]|2[18])|(?:2[4-9]|4[2-9]|[579][1-9]|[68][1-8])1"],"0$1"],["(\\\\d{4})(\\\\d{2,11})","$1 $2",["[24-6]|3(?:[3569][02-46-9]|4[2-4679]|7[2-467]|8[2-46-8])|70[2-8]|8(?:0[2-9]|[1-8])|90[7-9]|[79][1-9]","[24-6]|3(?:3(?:0[1-467]|2[127-9]|3[124578]|7[1257-9]|8[1256]|9[145])|4(?:2[135]|4[13578]|9[1346])|5(?:0[14]|2[1-3589]|6[1-4]|7[13468]|8[13568])|6(?:2[1-489]|3[124-6]|6[13]|7[12579]|8[1-356]|9[135])|7(?:2[1-7]|4[145]|6[1-5]|7[1-4])|8(?:21|3[1468]|6|7[1467]|8[136])|9(?:0[12479]|2[1358]|4[134679]|6[1-9]|7[136]|8[147]|9[1468]))|70[2-8]|8(?:0[2-9]|[1-8])|90[7-9]|[79][1-9]|3[68]4[1347]|3(?:47|60)[1356]|3(?:3[46]|46|5[49])[1246]|3[4579]3[1357]"],"0$1"],["(\\\\d{3})(\\\\d{4})","$1 $2",["138"],"0$1"],["(\\\\d{5})(\\\\d{2,10})","$1 $2",["3"],"0$1"],["(\\\\d{3})(\\\\d{5,11})","$1 $2",["181"],"0$1"],["(\\\\d{3})(\\\\d)(\\\\d{4,10})","$1 $2 $3",["1(?:3|80)|9"],"0$1"],["(\\\\d{3})(\\\\d{7,8})","$1 $2",["1[67]"],"0$1"],["(\\\\d{3})(\\\\d{7,12})","$1 $2",["8"],"0$1"],["(\\\\d{5})(\\\\d{6})","$1 $2",["185","1850","18500"],"0$1"],["(\\\\d{3})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["7"],"0$1"],["(\\\\d{4})(\\\\d{7})","$1 $2",["18[68]"],"0$1"],["(\\\\d{5})(\\\\d{6})","$1 $2",["15[0568]"],"0$1"],["(\\\\d{4})(\\\\d{7})","$1 $2",["15[1279]"],"0$1"],["(\\\\d{3})(\\\\d{8})","$1 $2",["18"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{7,8})","$1 $2 $3",["1(?:6[023]|7)"],"0$1"],["(\\\\d{4})(\\\\d{2})(\\\\d{7})","$1 $2 $3",["15[279]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{8})","$1 $2 $3",["15"],"0$1"]],"0"],"DJ":["253","00","(?:2\\\\d|77)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[27]"]]]],"DK":["45","00","[2-9]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2-9]"]]]],"DM":["1","011","(?:[58]\\\\d\\\\d|767|900)\\\\d{7}",[10],0,"1",0,"1|([2-7]\\\\d{6})$","767$1",0,"767"],"DO":["1","011","(?:[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,0,0,0,"8001|8[024]9"],"DZ":["213","00","(?:[1-4]|[5-79]\\\\d|80)\\\\d{7}",[8,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[1-4]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["9"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[5-8]"],"0$1"]],"0"],"EC":["593","00","1\\\\d{9,10}|(?:[2-7]|9\\\\d)\\\\d{7}",[8,9,10,11],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2-$3",["[2-7]"],"(0$1)",0,"$1-$2-$3"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["9"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["1"]]],"0"],"EE":["372","00","8\\\\d{9}|[4578]\\\\d{7}|(?:[3-8]\\\\d|90)\\\\d{5}",[7,8,10],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[369]|4[3-8]|5(?:[0-2]|5[0-478]|6[45])|7[1-9]|88","[369]|4[3-8]|5(?:[02]|1(?:[0-8]|95)|5[0-478]|6(?:4[0-4]|5[1-589]))|7[1-9]|88"]],["(\\\\d{4})(\\\\d{3,4})","$1 $2",["[45]|8(?:00|[1-49])","[45]|8(?:00[1-9]|[1-49])"]],["(\\\\d{2})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["7"]],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8"]]]],"EG":["20","00","[189]\\\\d{8,9}|[24-6]\\\\d{8}|[135]\\\\d{7}",[8,9,10],[["(\\\\d)(\\\\d{7,8})","$1 $2",["[23]"],"0$1"],["(\\\\d{2})(\\\\d{6,7})","$1 $2",["1[35]|[4-6]|8[2468]|9[235-7]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[189]"],"0$1"]],"0"],"EH":["212","00","[5-8]\\\\d{8}",[9],0,"0",0,0,0,0,"528[89]"],"ER":["291","00","[178]\\\\d{6}",[7],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[178]"],"0$1"]],"0"],"ES":["34","00","[5-9]\\\\d{8}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[89]00"]],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[5-9]"]]]],"ET":["251","00","(?:11|[2-579]\\\\d)\\\\d{7}",[9],[["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[1-579]"],"0$1"]],"0"],"FI":["358","00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))","[1-35689]\\\\d{4}|7\\\\d{10,11}|(?:[124-7]\\\\d|3[0-46-9])\\\\d{8}|[1-9]\\\\d{5,8}",[5,6,7,8,9,10,11,12],[["(\\\\d)(\\\\d{4,9})","$1 $2",["[2568][1-8]|3(?:0[1-9]|[1-9])|9"],"0$1"],["(\\\\d{3})(\\\\d{3,7})","$1 $2",["[12]00|[368]|70[07-9]"],"0$1"],["(\\\\d{2})(\\\\d{4,8})","$1 $2",["[1245]|7[135]"],"0$1"],["(\\\\d{2})(\\\\d{6,10})","$1 $2",["7"],"0$1"]],"0",0,0,0,0,"1[03-79]|[2-9]",0,"00"],"FJ":["679","0(?:0|52)","45\\\\d{5}|(?:0800\\\\d|[235-9])\\\\d{6}",[7,11],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[235-9]|45"]],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["0"]]],0,0,0,0,0,0,0,"00"],"FK":["500","00","[2-7]\\\\d{4}",[5]],"FM":["691","00","(?:[39]\\\\d\\\\d|820)\\\\d{4}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[389]"]]]],"FO":["298","00","[2-9]\\\\d{5}",[6],[["(\\\\d{6})","$1",["[2-9]"]]],0,0,"(10(?:01|[12]0|88))"],"FR":["33","00","[1-9]\\\\d{8}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"],"0 $1"],["(\\\\d)(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4 $5",["[1-79]"],"0$1"]],"0"],"GA":["241","00","(?:[067]\\\\d|11)\\\\d{6}|[2-7]\\\\d{6}",[7,8],[["(\\\\d)(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2-7]"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["0"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["11|[67]"],"0$1"]],0,0,"0(11\\\\d{6}|60\\\\d{6}|61\\\\d{6}|6[256]\\\\d{6}|7[467]\\\\d{6})","$1"],"GB":["44","00","[1-357-9]\\\\d{9}|[18]\\\\d{8}|8\\\\d{6}",[7,9,10],[["(\\\\d{3})(\\\\d{4})","$1 $2",["800","8001","80011","800111","8001111"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["845","8454","84546","845464"],"0$1"],["(\\\\d{3})(\\\\d{6})","$1 $2",["800"],"0$1"],["(\\\\d{5})(\\\\d{4,5})","$1 $2",["1(?:38|5[23]|69|76|94)","1(?:(?:38|69)7|5(?:24|39)|768|946)","1(?:3873|5(?:242|39[4-6])|(?:697|768)[347]|9467)"],"0$1"],["(\\\\d{4})(\\\\d{5,6})","$1 $2",["1(?:[2-69][02-9]|[78])"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["[25]|7(?:0|6[02-9])","[25]|7(?:0|6(?:[03-9]|2[356]))"],"0$1"],["(\\\\d{4})(\\\\d{6})","$1 $2",["7"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[1389]"],"0$1"]],"0",0,0,0,0,0,[["(?:1(?:1(?:3(?:[0-58]\\\\d\\\\d|73[0235])|4(?:[0-5]\\\\d\\\\d|69[7-9]|70[013579])|(?:(?:5[0-26-9]|[78][0-49])\\\\d|6(?:[0-4]\\\\d|50))\\\\d)|2(?:(?:0[024-9]|2[3-9]|3[3-79]|4[1-689]|[58][02-9]|6[0-47-9]|7[013-9]|9\\\\d)\\\\d\\\\d|1(?:[0-7]\\\\d\\\\d|8(?:[02]\\\\d|1[0-246-9])))|(?:3(?:0\\\\d|1[0-8]|[25][02-9]|3[02-579]|[468][0-46-9]|7[1-35-79]|9[2-578])|4(?:0[03-9]|[137]\\\\d|[28][02-57-9]|4[02-69]|5[0-8]|[69][0-79])|5(?:0[1-35-9]|[16]\\\\d|2[024-9]|3[015689]|4[02-9]|5[03-9]|7[0-35-9]|8[0-468]|9[0-57-9])|6(?:0[034689]|1\\\\d|2[0-35689]|[38][013-9]|4[1-467]|5[0-69]|6[13-9]|7[0-8]|9[0-24578])|7(?:0[0246-9]|2\\\\d|3[0236-8]|4[03-9]|5[0-46-9]|6[013-9]|7[0-35-9]|8[024-9]|9[02-9])|8(?:0[35-9]|2[1-57-9]|3[02-578]|4[0-578]|5[124-9]|6[2-69]|7\\\\d|8[02-9]|9[02569])|9(?:0[02-589]|[18]\\\\d|2[02-689]|3[1-57-9]|4[2-9]|5[0-579]|6[2-47-9]|7[0-24578]|9[2-57]))\\\\d\\\\d)|2(?:0[013478]|3[0189]|4[017]|8[0-46-9]|9[0-2])\\\\d{3})\\\\d{4}|1(?:2(?:0(?:46[1-4]|87[2-9])|545[1-79]|76(?:2\\\\d|3[1-8]|6[1-6])|9(?:7(?:2[0-4]|3[2-5])|8(?:2[2-8]|7[0-47-9]|8[3-5])))|3(?:6(?:38[2-5]|47[23])|8(?:47[04-9]|64[0157-9]))|4(?:044[1-7]|20(?:2[23]|8\\\\d)|6(?:0(?:30|5[2-57]|6[1-8]|7[2-8])|140)|8(?:052|87[1-3]))|5(?:2(?:4(?:3[2-79]|6\\\\d)|76\\\\d)|6(?:26[06-9]|686))|6(?:06(?:4\\\\d|7[4-79])|295[5-7]|35[34]\\\\d|47(?:24|61)|59(?:5[08]|6[67]|74)|9(?:55[0-4]|77[23]))|7(?:26(?:6[13-9]|7[0-7])|(?:442|688)\\\\d|50(?:2[0-3]|[3-68]2|76))|8(?:27[56]\\\\d|37(?:5[2-5]|8[239])|843[2-58])|9(?:0(?:0(?:6[1-8]|85)|52\\\\d)|3583|4(?:66[1-8]|9(?:2[01]|81))|63(?:23|3[1-4])|9561))\\\\d{3}",[9,10]],["7(?:457[0-57-9]|700[01]|911[028])\\\\d{5}|7(?:[1-3]\\\\d\\\\d|4(?:[0-46-9]\\\\d|5[0-689])|5(?:0[0-8]|[13-9]\\\\d|2[0-35-9])|7(?:0[1-9]|[1-7]\\\\d|8[02-9]|9[0-689])|8(?:[014-9]\\\\d|[23][0-8])|9(?:[024-9]\\\\d|1[02-9]|3[0-689]))\\\\d{6}",[10]],["80[08]\\\\d{7}|800\\\\d{6}|8001111"],["(?:8(?:4[2-5]|7[0-3])|9(?:[01]\\\\d|8[2-49]))\\\\d{7}|845464\\\\d",[7,10]],["70\\\\d{8}",[10]],0,["(?:3[0347]|55)\\\\d{8}",[10]],["76(?:464|652)\\\\d{5}|76(?:0[0-28]|2[356]|34|4[01347]|5[49]|6[0-369]|77|8[14]|9[139])\\\\d{6}",[10]],["56\\\\d{8}",[10]]],0," x"],"GD":["1","011","(?:473|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"1|([2-9]\\\\d{6})$","473$1",0,"473"],"GE":["995","00","(?:[3-57]\\\\d\\\\d|800)\\\\d{6}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["70"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["32"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[57]"]],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[348]"],"0$1"]],"0"],"GF":["594","00","(?:[56]94|80\\\\d|976)\\\\d{6}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[569]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"],"0$1"]],"0"],"GG":["44","00","(?:1481|[357-9]\\\\d{3})\\\\d{6}|8\\\\d{6}(?:\\\\d{2})?",[7,9,10],0,"0",0,"0|([25-9]\\\\d{5})$","1481$1",0,0,[["1481[25-9]\\\\d{5}",[10]],["7(?:(?:781|839)\\\\d|911[17])\\\\d{5}",[10]],["80[08]\\\\d{7}|800\\\\d{6}|8001111"],["(?:8(?:4[2-5]|7[0-3])|9(?:[01]\\\\d|8[0-3]))\\\\d{7}|845464\\\\d",[7,10]],["70\\\\d{8}",[10]],0,["(?:3[0347]|55)\\\\d{8}",[10]],["76(?:464|652)\\\\d{5}|76(?:0[0-28]|2[356]|34|4[01347]|5[49]|6[0-369]|77|8[14]|9[139])\\\\d{6}",[10]],["56\\\\d{8}",[10]]]],"GH":["233","00","(?:[235]\\\\d{3}|800)\\\\d{5}",[8,9],[["(\\\\d{3})(\\\\d{5})","$1 $2",["8"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[235]"],"0$1"]],"0"],"GI":["350","00","(?:[25]\\\\d\\\\d|606)\\\\d{5}",[8],[["(\\\\d{3})(\\\\d{5})","$1 $2",["2"]]]],"GL":["299","00","(?:19|[2-689]\\\\d|70)\\\\d{4}",[6],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["19|[2-9]"]]]],"GM":["220","00","[2-9]\\\\d{6}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[2-9]"]]]],"GN":["224","00","722\\\\d{6}|(?:3|6\\\\d)\\\\d{7}",[8,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["3"]],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[67]"]]]],"GP":["590","00","(?:590|(?:69|80)\\\\d|976)\\\\d{6}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[569]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"],"0$1"]],"0",0,0,0,0,0,[["590(?:0[1-68]|[14][0-24-9]|2[0-68]|3[1289]|5[3-579]|6[0-289]|7[08]|8[0-689]|9\\\\d)\\\\d{4}"],["69(?:0\\\\d\\\\d|1(?:2[2-9]|3[0-5]))\\\\d{4}"],["80[0-5]\\\\d{6}"],0,0,0,0,0,["976[01]\\\\d{5}"]]],"GQ":["240","00","222\\\\d{6}|(?:3\\\\d|55|[89]0)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[235]"]],["(\\\\d{3})(\\\\d{6})","$1 $2",["[89]"]]]],"GR":["30","00","5005000\\\\d{3}|8\\\\d{9,11}|(?:[269]\\\\d|70)\\\\d{8}",[10,11,12],[["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["21|7"]],["(\\\\d{4})(\\\\d{6})","$1 $2",["2(?:2|3[2-57-9]|4[2-469]|5[2-59]|6[2-9]|7[2-69]|8[2-49])|5"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[2689]"]],["(\\\\d{3})(\\\\d{3,4})(\\\\d{5})","$1 $2 $3",["8"]]]],"GT":["502","00","(?:1\\\\d{3}|[2-7])\\\\d{7}",[8,11],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[2-7]"]],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"]]]],"GU":["1","011","(?:[58]\\\\d\\\\d|671|900)\\\\d{7}",[10],0,"1",0,"1|([3-9]\\\\d{6})$","671$1",0,"671"],"GW":["245","00","[49]\\\\d{8}|4\\\\d{6}",[7,9],[["(\\\\d{3})(\\\\d{4})","$1 $2",["40"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[49]"]]]],"GY":["592","001","9008\\\\d{3}|(?:[2-467]\\\\d\\\\d|862)\\\\d{4}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[2-46-9]"]]]],"HK":["852","00(?:30|5[09]|[126-9]?)","8[0-46-9]\\\\d{6,7}|9\\\\d{4,7}|(?:[2-7]|9\\\\d{3})\\\\d{7}",[5,6,7,8,9,11],[["(\\\\d{3})(\\\\d{2,5})","$1 $2",["900","9003"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["[2-7]|8[1-4]|9(?:0[1-9]|[1-8])"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8"]],["(\\\\d{3})(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["9"]]],0,0,0,0,0,0,0,"00"],"HN":["504","00","8\\\\d{10}|[237-9]\\\\d{7}",[8,11],[["(\\\\d{4})(\\\\d{4})","$1-$2",["[237-9]"]]]],"HR":["385","00","(?:[24-69]\\\\d|3[0-79])\\\\d{7}|80\\\\d{5,7}|[1-79]\\\\d{7}|6\\\\d{5,6}",[6,7,8,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2,3})","$1 $2 $3",["6[01]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2,3})","$1 $2 $3",["8"],"0$1"],["(\\\\d)(\\\\d{4})(\\\\d{3})","$1 $2 $3",["1"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[67]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["9"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[2-5]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8"],"0$1"]],"0"],"HT":["509","00","[2-489]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["[2-489]"]]]],"HU":["36","00","[235-7]\\\\d{8}|[1-9]\\\\d{7}",[8,9],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"],"(06 $1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[27][2-9]|3[2-7]|4[24-9]|5[2-79]|6|8[2-57-9]|9[2-69]"],"(06 $1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[2-9]"],"06 $1"]],"06"],"ID":["62","00[89]","(?:(?:00[1-9]|8\\\\d)\\\\d{4}|[1-36])\\\\d{6}|00\\\\d{10}|[1-9]\\\\d{8,10}|[2-9]\\\\d{7}",[7,8,9,10,11,12,13],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["15"]],["(\\\\d{2})(\\\\d{5,9})","$1 $2",["2[124]|[36]1"],"(0$1)"],["(\\\\d{3})(\\\\d{5,7})","$1 $2",["800"],"0$1"],["(\\\\d{3})(\\\\d{5,8})","$1 $2",["[2-79]"],"(0$1)"],["(\\\\d{3})(\\\\d{3,4})(\\\\d{3})","$1-$2-$3",["8[1-35-9]"],"0$1"],["(\\\\d{3})(\\\\d{6,8})","$1 $2",["1"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["804"],"0$1"],["(\\\\d{3})(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["80"],"0$1"],["(\\\\d{3})(\\\\d{4})(\\\\d{4,5})","$1-$2-$3",["8"],"0$1"]],"0"],"IE":["353","00","(?:1\\\\d|[2569])\\\\d{6,8}|4\\\\d{6,9}|7\\\\d{8}|8\\\\d{8,9}",[7,8,9,10],[["(\\\\d{2})(\\\\d{5})","$1 $2",["2[24-9]|47|58|6[237-9]|9[35-9]"],"(0$1)"],["(\\\\d{3})(\\\\d{5})","$1 $2",["[45]0"],"(0$1)"],["(\\\\d)(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["1"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[2569]|4[1-69]|7[14]"],"(0$1)"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["70"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["81"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[78]"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1"]],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["4"],"(0$1)"],["(\\\\d{2})(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3 $4",["8"],"0$1"]],"0"],"IL":["972","0(?:0|1[2-9])","1\\\\d{6}(?:\\\\d{3,5})?|[57]\\\\d{8}|[1-489]\\\\d{7}",[7,8,9,10,11,12],[["(\\\\d{4})(\\\\d{3})","$1-$2",["125"]],["(\\\\d{4})(\\\\d{2})(\\\\d{2})","$1-$2-$3",["121"]],["(\\\\d)(\\\\d{3})(\\\\d{4})","$1-$2-$3",["[2-489]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["[57]"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1-$2-$3",["12"]],["(\\\\d{4})(\\\\d{6})","$1-$2",["159"]],["(\\\\d)(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1-$2-$3-$4",["1[7-9]"]],["(\\\\d{3})(\\\\d{1,2})(\\\\d{3})(\\\\d{4})","$1-$2 $3-$4",["15"]]],"0"],"IM":["44","00","1624\\\\d{6}|(?:[3578]\\\\d|90)\\\\d{8}",[10],0,"0",0,"0|([25-8]\\\\d{5})$","1624$1",0,"74576|(?:16|7[56])24"],"IN":["91","00","(?:000800|[2-9]\\\\d\\\\d)\\\\d{7}|1\\\\d{7,12}",[8,9,10,11,12,13],[["(\\\\d{8})","$1",["5(?:0|2[23]|3[03]|[67]1|88)","5(?:0|2(?:21|3)|3(?:0|3[23])|616|717|888)","5(?:0|2(?:21|3)|3(?:0|3[23])|616|717|8888)"],0,1],["(\\\\d{4})(\\\\d{4,5})","$1 $2",["180","1800"],0,1],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["140"],0,1],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["11|2[02]|33|4[04]|79[1-7]|80[2-46]","11|2[02]|33|4[04]|79(?:[1-6]|7[19])|80(?:[2-4]|6[0-589])","11|2[02]|33|4[04]|79(?:[124-6]|3(?:[02-9]|1[0-24-9])|7(?:1|9[1-6]))|80(?:[2-4]|6[0-589])"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1(?:2[0-249]|3[0-25]|4[145]|[68]|7[1257])|2(?:1[257]|3[013]|4[01]|5[0137]|6[0158]|78|8[1568])|3(?:26|4[1-3]|5[34]|6[01489]|7[02-46]|8[159])|4(?:1[36]|2[1-47]|5[12]|6[0-26-9]|7[0-24-9]|8[013-57]|9[014-7])|5(?:1[025]|22|[36][25]|4[28]|5[12]|[78]1)|6(?:12|[2-4]1|5[17]|6[13]|80)|7(?:12|3[134]|4[47]|61|88)|8(?:16|2[014]|3[126]|6[136]|7[078]|8[34]|91)|(?:43|59|75)[15]|(?:1[59]|29|67|72)[14]","1(?:2[0-24]|3[0-25]|4[145]|[59][14]|6[1-9]|7[1257]|8[1-57-9])|2(?:1[257]|3[013]|4[01]|5[0137]|6[058]|78|8[1568]|9[14])|3(?:26|4[1-3]|5[34]|6[01489]|7[02-46]|8[159])|4(?:1[36]|2[1-47]|3[15]|5[12]|6[0-26-9]|7[0-24-9]|8[013-57]|9[014-7])|5(?:1[025]|22|[36][25]|4[28]|[578]1|9[15])|674|7(?:(?:2[14]|3[34]|5[15])[2-6]|61[346]|88[0-8])|8(?:70[2-6]|84[235-7]|91[3-7])|(?:1(?:29|60|8[06])|261|552|6(?:12|[2-47]1|5[17]|6[13]|80)|7(?:12|31|4[47])|8(?:16|2[014]|3[126]|6[136]|7[78]|83))[2-7]","1(?:2[0-24]|3[0-25]|4[145]|[59][14]|6[1-9]|7[1257]|8[1-57-9])|2(?:1[257]|3[013]|4[01]|5[0137]|6[058]|78|8[1568]|9[14])|3(?:26|4[1-3]|5[34]|6[01489]|7[02-46]|8[159])|4(?:1[36]|2[1-47]|3[15]|5[12]|6[0-26-9]|7[0-24-9]|8[013-57]|9[014-7])|5(?:1[025]|22|[36][25]|4[28]|[578]1|9[15])|6(?:12(?:[2-6]|7[0-8])|74[2-7])|7(?:(?:2[14]|5[15])[2-6]|3171|61[346]|88(?:[2-7]|82))|8(?:70[2-6]|84(?:[2356]|7[19])|91(?:[3-6]|7[19]))|73[134][2-6]|(?:74[47]|8(?:16|2[014]|3[126]|6[136]|7[78]|83))(?:[2-6]|7[19])|(?:1(?:29|60|8[06])|261|552|6(?:[2-4]1|5[17]|6[13]|7(?:1|4[0189])|80)|7(?:12|88[01]))[2-7]"],"0$1",1],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1(?:[2-479]|5[0235-9])|[2-5]|6(?:1[1358]|2[2457-9]|3[2-5]|4[235-7]|5[2-689]|6[24578]|7[235689]|8[1-6])|7(?:1[013-9]|28|3[129]|4[1-35689]|5[29]|6[02-5]|70)|807","1(?:[2-479]|5[0235-9])|[2-5]|6(?:1[1358]|2(?:[2457]|84|95)|3(?:[2-4]|55)|4[235-7]|5[2-689]|6[24578]|7[235689]|8[1-6])|7(?:1(?:[013-8]|9[6-9])|28[6-8]|3(?:17|2[0-49]|9[2-57])|4(?:1[2-4]|[29][0-7]|3[0-8]|[56]|8[0-24-7])|5(?:2[1-3]|9[0-6])|6(?:0[5689]|2[5-9]|3[02-8]|4|5[0-367])|70[13-7])|807[19]","1(?:[2-479]|5(?:[0236-9]|5[013-9]))|[2-5]|6(?:2(?:84|95)|355|83)|73179|807(?:1|9[1-3])|(?:1552|6(?:1[1358]|2[2457]|3[2-4]|4[235-7]|5[2-689]|6[24578]|7[235689]|8[124-6])\\\\d|7(?:1(?:[013-8]\\\\d|9[6-9])|28[6-8]|3(?:2[0-49]|9[2-57])|4(?:1[2-4]|[29][0-7]|3[0-8]|[56]\\\\d|8[0-24-7])|5(?:2[1-3]|9[0-6])|6(?:0[5689]|2[5-9]|3[02-8]|4\\\\d|5[0-367])|70[13-7]))[2-7]"],"0$1",1],["(\\\\d{5})(\\\\d{5})","$1 $2",["[6-9]"],"0$1",1],["(\\\\d{4})(\\\\d{2,4})(\\\\d{4})","$1 $2 $3",["1(?:6|8[06])","1(?:6|8[06]0)"],0,1],["(\\\\d{4})(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["18"],0,1]],"0"],"IO":["246","00","3\\\\d{6}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["3"]]]],"IQ":["964","00","(?:1|7\\\\d\\\\d)\\\\d{7}|[2-6]\\\\d{7,8}",[8,9,10],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[2-6]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["7"],"0$1"]],"0"],"IR":["98","00","[1-9]\\\\d{9}|(?:[1-8]\\\\d\\\\d|9)\\\\d{3,4}",[4,5,6,7,10],[["(\\\\d{4,5})","$1",["96"],"0$1"],["(\\\\d{2})(\\\\d{4,5})","$1 $2",["(?:1[137]|2[13-68]|3[1458]|4[145]|5[1468]|6[16]|7[1467]|8[13467])[12689]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["9"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["[1-8]"],"0$1"]],"0"],"IS":["354","00|1(?:0(?:01|[12]0)|100)","(?:38\\\\d|[4-9])\\\\d{6}",[7,9],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[4-9]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["3"]]],0,0,0,0,0,0,0,"00"],"IT":["39","00","0\\\\d{5,10}|1\\\\d{8,10}|3(?:[0-8]\\\\d{7,10}|9\\\\d{7,8})|(?:55|70)\\\\d{8}|8\\\\d{5}(?:\\\\d{2,4})?",[6,7,8,9,10,11],[["(\\\\d{2})(\\\\d{4,6})","$1 $2",["0[26]"]],["(\\\\d{3})(\\\\d{3,6})","$1 $2",["0[13-57-9][0159]|8(?:03|4[17]|9[2-5])","0[13-57-9][0159]|8(?:03|4[17]|9(?:2|3[04]|[45][0-4]))"]],["(\\\\d{4})(\\\\d{2,6})","$1 $2",["0(?:[13-579][2-46-8]|8[236-8])"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["894"]],["(\\\\d{2})(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["0[26]|5"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["1(?:44|[679])|[378]"]],["(\\\\d{3})(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["0[13-57-9][0159]|14"]],["(\\\\d{2})(\\\\d{4})(\\\\d{5})","$1 $2 $3",["0[26]"]],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["0"]],["(\\\\d{3})(\\\\d{4})(\\\\d{4,5})","$1 $2 $3",["3"]]],0,0,0,0,0,0,[["0669[0-79]\\\\d{1,6}|0(?:1(?:[0159]\\\\d|[27][1-5]|31|4[1-4]|6[1356]|8[2-57])|2\\\\d\\\\d|3(?:[0159]\\\\d|2[1-4]|3[12]|[48][1-6]|6[2-59]|7[1-7])|4(?:[0159]\\\\d|[23][1-9]|4[245]|6[1-5]|7[1-4]|81)|5(?:[0159]\\\\d|2[1-5]|3[2-6]|4[1-79]|6[4-6]|7[1-578]|8[3-8])|6(?:[0-57-9]\\\\d|6[0-8])|7(?:[0159]\\\\d|2[12]|3[1-7]|4[2-46]|6[13569]|7[13-6]|8[1-59])|8(?:[0159]\\\\d|2[3-578]|3[1-356]|[6-8][1-5])|9(?:[0159]\\\\d|[238][1-5]|4[12]|6[1-8]|7[1-6]))\\\\d{2,7}"],["3[1-9]\\\\d{8}|3[2-9]\\\\d{7}",[9,10]],["80(?:0\\\\d{3}|3)\\\\d{3}",[6,9]],["(?:0878\\\\d{3}|89(?:2\\\\d|3[04]|4(?:[0-4]|[5-9]\\\\d\\\\d)|5[0-4]))\\\\d\\\\d|(?:1(?:44|6[346])|89(?:38|5[5-9]|9))\\\\d{6}",[6,8,9,10]],["1(?:78\\\\d|99)\\\\d{6}",[9,10]],0,0,0,["55\\\\d{8}",[10]],["84(?:[08]\\\\d{3}|[17])\\\\d{3}",[6,9]]]],"JE":["44","00","1534\\\\d{6}|(?:[3578]\\\\d|90)\\\\d{8}",[10],0,"0",0,"0|([0-24-8]\\\\d{5})$","1534$1",0,0,[["1534[0-24-8]\\\\d{5}"],["7(?:(?:(?:50|82)9|937)\\\\d|7(?:00[378]|97[7-9]))\\\\d{5}"],["80(?:07(?:35|81)|8901)\\\\d{4}"],["(?:8(?:4(?:4(?:4(?:05|42|69)|703)|5(?:041|800))|7(?:0002|1206))|90(?:066[59]|1810|71(?:07|55)))\\\\d{4}"],["701511\\\\d{4}"],0,["(?:3(?:0(?:07(?:35|81)|8901)|3\\\\d{4}|4(?:4(?:4(?:05|42|69)|703)|5(?:041|800))|7(?:0002|1206))|55\\\\d{4})\\\\d{4}"],["76(?:464|652)\\\\d{5}|76(?:0[0-28]|2[356]|34|4[01347]|5[49]|6[0-369]|77|8[14]|9[139])\\\\d{6}"],["56\\\\d{8}"]]],"JM":["1","011","(?:[58]\\\\d\\\\d|658|900)\\\\d{7}",[10],0,"1",0,0,0,0,"658|876"],"JO":["962","00","(?:(?:[2689]|7\\\\d)\\\\d|32|53)\\\\d{6}",[8,9],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[2356]|87"],"(0$1)"],["(\\\\d{3})(\\\\d{5,6})","$1 $2",["[89]"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1 $2",["70"],"0$1"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["7"],"0$1"]],"0"],"JP":["81","010","00[1-9]\\\\d{6,14}|[257-9]\\\\d{9}|(?:00|[1-9]\\\\d\\\\d)\\\\d{6}",[8,9,10,11,12,13,14,15,16,17],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1-$2-$3",["(?:12|57|99)0"],"0$1"],["(\\\\d{4})(\\\\d)(\\\\d{4})","$1-$2-$3",["1(?:26|3[79]|4[56]|5[4-68]|6[3-5])|499|5(?:76|97)|746|8(?:3[89]|47|51|63)|9(?:80|9[16])","1(?:267|3(?:7[247]|9[278])|466|5(?:47|58|64)|6(?:3[245]|48|5[4-68]))|499[2468]|5(?:76|97)9|7468|8(?:3(?:8[7-9]|96)|477|51[2-9]|636)|9(?:802|9(?:1[23]|69))|1(?:45|58)[67]","1(?:267|3(?:7[247]|9[278])|466|5(?:47|58|64)|6(?:3[245]|48|5[4-68]))|499[2468]|5(?:769|979[2-69])|7468|8(?:3(?:8[7-9]|96[2457-9])|477|51[2-9]|636[457-9])|9(?:802|9(?:1[23]|69))|1(?:45|58)[67]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["60"],"0$1"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1-$2-$3",["[36]|4(?:2[09]|7[01])","[36]|4(?:2(?:0|9[02-69])|7(?:0[019]|1))"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["1(?:1|5[45]|77|88|9[69])|2(?:2[1-37]|3[0-269]|4[59]|5|6[24]|7[1-358]|8[1369]|9[0-38])|4(?:[28][1-9]|3[0-57]|[45]|6[248]|7[2-579]|9[29])|5(?:2|3[045]|4[0-369]|5[29]|8[02389]|9[0-389])|7(?:2[02-46-9]|34|[58]|6[0249]|7[57]|9[2-6])|8(?:2[124589]|3[27-9]|49|51|6|7[0-468]|8[68]|9[019])|9(?:[23][1-9]|4[15]|5[138]|6[1-3]|7[156]|8[189]|9[1-489])","1(?:1|5(?:4[018]|5[017])|77|88|9[69])|2(?:2(?:[127]|3[014-9])|3[0-269]|4[59]|5(?:[1-3]|5[0-69]|9[19])|62|7(?:[1-35]|8[0189])|8(?:[16]|3[0134]|9[0-5])|9(?:[028]|17))|4(?:2(?:[13-79]|8[014-6])|3[0-57]|[45]|6[248]|7[2-47]|8[1-9])|5(?:2|3[045]|4[0-369]|8[02389]|9[0-3])|7(?:2[02-46-9]|34|[58]|6[0249]|7[57]|9(?:[23]|4[0-59]|5[01569]|6[0167]))|8(?:2(?:[1258]|4[0-39]|9[0-2469])|49|51|6(?:[0-24]|36|5[0-3589]|72|9[01459])|7[0-468]|8[68])|9(?:[23][1-9]|4[15]|5[138]|6[1-3]|7[156]|8[189]|9(?:[1289]|3[34]|4[0178]))|(?:49|55|83)[29]|(?:264|837)[016-9]|2(?:57|93)[015-9]|(?:25[0468]|422|838)[01]|(?:47[59]|59[89]|8(?:6[68]|9))[019]","1(?:1|5(?:4[018]|5[017])|77|88|9[69])|2(?:2[127]|3[0-269]|4[59]|5(?:[1-3]|5[0-69]|9(?:17|99))|6(?:2|4[016-9])|7(?:[1-35]|8[0189])|8(?:[16]|3[0134]|9[0-5])|9(?:[028]|17))|4(?:2(?:[13-79]|8[014-6])|3[0-57]|[45]|6[248]|7[2-47]|9[29])|5(?:2|3[045]|4[0-369]|5[29]|8[02389]|9[0-3])|7(?:2[02-46-9]|34|[58]|6[0249]|7[57]|9(?:[23]|4[0-59]|5[01569]|6[0167]))|8(?:2(?:[1258]|4[0-39]|9[0169])|3(?:[29]|7(?:[017-9]|6[6-8]))|49|51|6(?:[0-24]|36[23]|5(?:[0-389]|5[23])|6(?:[01]|9[178])|72|9[0145])|7[0-468]|8[68])|9(?:4[15]|5[138]|7[156]|8[189]|9(?:[1289]|3(?:31|4[357])|4[0178]))|(?:8294|96)[1-3]|2(?:57|93)[015-9]|(?:223|8699)[014-9]|(?:25[0468]|422|838)[01]|(?:48|8292|9[23])[1-9]|(?:47[59]|59[89]|8(?:68|9))[019]","1(?:1|5(?:4[018]|5[017])|77|88|9[69])|2(?:2[127]|3[0-269]|4[59]|5(?:[1-3]|5[0-69]|7[015-9]|9(?:17|99))|6(?:2|4[016-9])|7(?:[1-35]|8[0189])|8(?:[16]|3[0134]|9[0-5])|9(?:[028]|17|3[015-9]))|4(?:2(?:[13-79]|8[014-6])|3[0-57]|[45]|6[248]|7[2-47]|9[29])|5(?:2|3[045]|4[0-369]|5[29]|8[02389]|9[0-3])|7(?:2[02-46-9]|34|[58]|6[0249]|7[57]|9(?:[23]|4[0-59]|5[01569]|6[0167]))|8(?:2(?:[1258]|4[0-39]|9(?:[019]|4[1-3]|6(?:[0-47-9]|5[01346-9])))|3(?:[29]|7(?:[017-9]|6[6-8]))|49|51|6(?:[0-24]|36[23]|5(?:[0-389]|5[23])|6(?:[01]|9[178])|72|9[0145])|7[0-468]|8[68])|9(?:4[15]|5[138]|6[1-3]|7[156]|8[189]|9(?:[1289]|3(?:31|4[357])|4[0178]))|(?:223|8699)[014-9]|(?:25[0468]|422|838)[01]|(?:48|829(?:2|66)|9[23])[1-9]|(?:47[59]|59[89]|8(?:68|9))[019]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{4})","$1-$2-$3",["[14]|[289][2-9]|5[3-9]|7[2-4679]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["800"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1-$2-$3",["[257-9]"],"0$1"]],"0"],"KE":["254","000","(?:[17]\\\\d\\\\d|900)\\\\d{6}|(?:2|80)0\\\\d{6,7}|[4-6]\\\\d{6,8}",[7,8,9,10],[["(\\\\d{2})(\\\\d{5,7})","$1 $2",["[24-6]"],"0$1"],["(\\\\d{3})(\\\\d{6})","$1 $2",["[17]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[89]"],"0$1"]],"0"],"KG":["996","00","8\\\\d{9}|(?:[235-8]\\\\d|99)\\\\d{7}",[9,10],[["(\\\\d{4})(\\\\d{5})","$1 $2",["3(?:1[346]|[24-79])"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[235-79]|88"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d)(\\\\d{2,3})","$1 $2 $3 $4",["8"],"0$1"]],"0"],"KH":["855","00[14-9]","1\\\\d{9}|[1-9]\\\\d{7,8}",[8,9,10],[["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[1-9]"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1"]]],"0"],"KI":["686","00","(?:[37]\\\\d|6[0-79])\\\\d{6}|(?:[2-48]\\\\d|50)\\\\d{3}",[5,8],0,"0"],"KM":["269","00","[3478]\\\\d{6}",[7],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["[3478]"]]]],"KN":["1","011","(?:[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"1|([2-7]\\\\d{6})$","869$1",0,"869"],"KP":["850","00|99","85\\\\d{6}|(?:19\\\\d|[2-7])\\\\d{7}",[8,10],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[2-7]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"],"0$1"]],"0"],"KR":["82","00(?:[125689]|3(?:[46]5|91)|7(?:00|27|3|55|6[126]))","00[1-9]\\\\d{8,11}|(?:[12]|5\\\\d{3})\\\\d{7}|[13-6]\\\\d{9}|(?:[1-6]\\\\d|80)\\\\d{7}|[3-6]\\\\d{4,5}|(?:00|7)0\\\\d{8}",[5,6,8,9,10,11,12,13,14],[["(\\\\d{2})(\\\\d{3,4})","$1-$2",["(?:3[1-3]|[46][1-4]|5[1-5])1"],"0$1"],["(\\\\d{4})(\\\\d{4})","$1-$2",["1"]],["(\\\\d)(\\\\d{3,4})(\\\\d{4})","$1-$2-$3",["2"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["60|8"],"0$1"],["(\\\\d{2})(\\\\d{3,4})(\\\\d{4})","$1-$2-$3",["[1346]|5[1-5]"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1-$2-$3",["[57]"],"0$1"],["(\\\\d{2})(\\\\d{5})(\\\\d{4})","$1-$2-$3",["5"],"0$1"]],"0",0,"0(8(?:[1-46-8]|5\\\\d\\\\d))?"],"KW":["965","00","18\\\\d{5}|(?:[2569]\\\\d|41)\\\\d{6}",[7,8],[["(\\\\d{4})(\\\\d{3,4})","$1 $2",["[169]|2(?:[235]|4[1-35-9])|52"]],["(\\\\d{3})(\\\\d{5})","$1 $2",["[245]"]]]],"KY":["1","011","(?:345|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"1|([2-9]\\\\d{6})$","345$1",0,"345"],"KZ":["7","810","(?:33622|8\\\\d{8})\\\\d{5}|[78]\\\\d{9}",[10,14],0,"8",0,0,0,0,"33|7",0,"8~10"],"LA":["856","00","[23]\\\\d{9}|3\\\\d{8}|(?:[235-8]\\\\d|41)\\\\d{6}",[8,9,10],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["2[13]|3[14]|[4-8]"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3 $4",["30[013-9]"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["[23]"],"0$1"]],"0"],"LB":["961","00","[27-9]\\\\d{7}|[13-9]\\\\d{6}",[7,8],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[13-69]|7(?:[2-57]|62|8[0-7]|9[04-9])|8[02-9]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[27-9]"]]],"0"],"LC":["1","011","(?:[58]\\\\d\\\\d|758|900)\\\\d{7}",[10],0,"1",0,"1|([2-8]\\\\d{6})$","758$1",0,"758"],"LI":["423","00","[68]\\\\d{8}|(?:[2378]\\\\d|90)\\\\d{5}",[7,9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["[2379]|8(?:0[09]|7)","[2379]|8(?:0(?:02|9)|7)"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8"]],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["69"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["6"]]],"0",0,"0|(1001)"],"LK":["94","00","[1-9]\\\\d{8}",[9],[["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["7"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[1-689]"],"0$1"]],"0"],"LR":["231","00","(?:2|33|5\\\\d|77|88)\\\\d{7}|[4-6]\\\\d{6}",[7,8,9],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[4-6]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["2"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[3578]"],"0$1"]],"0"],"LS":["266","00","(?:[256]\\\\d\\\\d|800)\\\\d{5}",[8],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[2568]"]]]],"LT":["370","00","(?:[3469]\\\\d|52|[78]0)\\\\d{6}",[8],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["52[0-7]"],"(8-$1)",1],["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["[7-9]"],"8 $1",1],["(\\\\d{2})(\\\\d{6})","$1 $2",["37|4(?:[15]|6[1-8])"],"(8-$1)",1],["(\\\\d{3})(\\\\d{5})","$1 $2",["[3-6]"],"(8-$1)",1]],"8",0,"[08]"],"LU":["352","00","35[013-9]\\\\d{4,8}|6\\\\d{8}|35\\\\d{2,4}|(?:[2457-9]\\\\d|3[0-46-9])\\\\d{2,9}",[4,5,6,7,8,9,10,11],[["(\\\\d{2})(\\\\d{3})","$1 $2",["2(?:0[2-689]|[2-9])|[3-57]|8(?:0[2-9]|[13-9])|9(?:0[89]|[2-579])"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["2(?:0[2-689]|[2-9])|[3-57]|8(?:0[2-9]|[13-9])|9(?:0[89]|[2-579])"]],["(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["20[2-689]"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{1,2})","$1 $2 $3 $4",["2(?:[0367]|4[3-8])"]],["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["80[01]|90[015]"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3 $4",["20"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["6"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{1,2})","$1 $2 $3 $4 $5",["2(?:[0367]|4[3-8])"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{1,5})","$1 $2 $3 $4",["[3-57]|8[13-9]|9(?:0[89]|[2-579])|(?:2|80)[2-9]"]]],0,0,"(15(?:0[06]|1[12]|[35]5|4[04]|6[26]|77|88|99)\\\\d)"],"LV":["371","00","(?:[268]\\\\d|90)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[269]|8[01]"]]]],"LY":["218","00","[2-9]\\\\d{8}",[9],[["(\\\\d{2})(\\\\d{7})","$1-$2",["[2-9]"],"0$1"]],"0"],"MA":["212","00","[5-8]\\\\d{8}",[9],[["(\\\\d{5})(\\\\d{4})","$1-$2",["5(?:29|38)","5(?:29[89]|389)","5(?:29[89]|389)0"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["5[45]"],"0$1"],["(\\\\d{4})(\\\\d{5})","$1-$2",["5(?:2[2-489]|3[5-9]|9)|892","5(?:2(?:[2-49]|8[235-9])|3[5-9]|9)|892"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1-$2",["8"],"0$1"],["(\\\\d{3})(\\\\d{6})","$1-$2",["[5-7]"],"0$1"]],"0",0,0,0,0,0,[["5(?:29(?:[189][05]|2[29]|3[01])|389[05])\\\\d{4}|5(?:2(?:[0-25-7]\\\\d|3[1-578]|4[02-46-8]|8[0235-7]|90)|3(?:[0-47]\\\\d|5[02-9]|6[02-8]|8[08]|9[3-9])|(?:4[067]|5[03])\\\\d)\\\\d{5}"],["(?:6(?:[0-79]\\\\d|8[0-247-9])|7(?:[017]\\\\d|2[0-2]|6[0-8]|8[0-3]))\\\\d{6}"],["80\\\\d{7}"],["89\\\\d{7}"],0,0,0,0,["592(?:4[0-2]|93)\\\\d{4}"]]],"MC":["377","00","(?:[3489]|6\\\\d)\\\\d{7}",[8,9],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["4"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[389]"]],["(\\\\d)(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4 $5",["6"],"0$1"]],"0"],"MD":["373","00","(?:[235-7]\\\\d|[89]0)\\\\d{6}",[8],[["(\\\\d{3})(\\\\d{5})","$1 $2",["[89]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["22|3"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["[25-7]"],"0$1"]],"0"],"ME":["382","00","(?:20|[3-79]\\\\d)\\\\d{6}|80\\\\d{6,7}",[8,9],[["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[2-9]"],"0$1"]],"0"],"MF":["590","00","(?:590|(?:69|80)\\\\d|976)\\\\d{6}",[9],0,"0",0,0,0,0,0,[["590(?:0[079]|[14]3|[27][79]|30|5[0-268]|87)\\\\d{4}"],["69(?:0\\\\d\\\\d|1(?:2[2-9]|3[0-5]))\\\\d{4}"],["80[0-5]\\\\d{6}"],0,0,0,0,0,["976[01]\\\\d{5}"]]],"MG":["261","00","[23]\\\\d{8}",[9],[["(\\\\d{2})(\\\\d{2})(\\\\d{3})(\\\\d{2})","$1 $2 $3 $4",["[23]"],"0$1"]],"0",0,"0|([24-9]\\\\d{6})$","20$1"],"MH":["692","011","329\\\\d{4}|(?:[256]\\\\d|45)\\\\d{5}",[7],[["(\\\\d{3})(\\\\d{4})","$1-$2",["[2-6]"]]],"1"],"MK":["389","00","[2-578]\\\\d{7}",[8],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["2|34[47]|4(?:[37]7|5[47]|64)"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[347]"],"0$1"],["(\\\\d{3})(\\\\d)(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[58]"],"0$1"]],"0"],"ML":["223","00","[24-9]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[24-9]"]]]],"MM":["95","00","1\\\\d{5,7}|95\\\\d{6}|(?:[4-7]|9[0-46-9])\\\\d{6,8}|(?:2|8\\\\d)\\\\d{5,8}",[6,7,8,9,10],[["(\\\\d)(\\\\d{2})(\\\\d{3})","$1 $2 $3",["16|2"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["[45]|6(?:0[23]|[1-689]|7[235-7])|7(?:[0-4]|5[2-7])|8[1-6]"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[12]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[4-7]|8[1-35]"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{4,6})","$1 $2 $3",["9(?:2[0-4]|[35-9]|4[137-9])"],"0$1"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["2"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["8"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["92"],"0$1"],["(\\\\d)(\\\\d{5})(\\\\d{4})","$1 $2 $3",["9"],"0$1"]],"0"],"MN":["976","001","[12]\\\\d{7,9}|[5-9]\\\\d{7}",[8,9,10],[["(\\\\d{2})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["[12]1"],"0$1"],["(\\\\d{4})(\\\\d{4})","$1 $2",["[5-9]"]],["(\\\\d{3})(\\\\d{5,6})","$1 $2",["[12]2[1-3]"],"0$1"],["(\\\\d{4})(\\\\d{5,6})","$1 $2",["[12](?:27|3[2-8]|4[2-68]|5[1-4689])","[12](?:27|3[2-8]|4[2-68]|5[1-4689])[0-3]"],"0$1"],["(\\\\d{5})(\\\\d{4,5})","$1 $2",["[12]"],"0$1"]],"0"],"MO":["853","00","0800\\\\d{3}|(?:28|[68]\\\\d)\\\\d{6}",[7,8],[["(\\\\d{4})(\\\\d{3})","$1 $2",["0"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["[268]"]]]],"MP":["1","011","[58]\\\\d{9}|(?:67|90)0\\\\d{7}",[10],0,"1",0,"1|([2-9]\\\\d{6})$","670$1",0,"670"],"MQ":["596","00","(?:69|80)\\\\d{7}|(?:59|97)6\\\\d{6}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[569]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"],"0$1"]],"0"],"MR":["222","00","(?:[2-4]\\\\d\\\\d|800)\\\\d{5}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2-48]"]]]],"MS":["1","011","(?:[58]\\\\d\\\\d|664|900)\\\\d{7}",[10],0,"1",0,"1|([34]\\\\d{6})$","664$1",0,"664"],"MT":["356","00","3550\\\\d{4}|(?:[2579]\\\\d\\\\d|800)\\\\d{5}",[8],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[2357-9]"]]]],"MU":["230","0(?:0|[24-7]0|3[03])","(?:5|8\\\\d\\\\d)\\\\d{7}|[2-468]\\\\d{6}",[7,8,10],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[2-46]|8[013]"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["5"]],["(\\\\d{5})(\\\\d{5})","$1 $2",["8"]]],0,0,0,0,0,0,0,"020"],"MV":["960","0(?:0|19)","(?:800|9[0-57-9]\\\\d)\\\\d{7}|[34679]\\\\d{6}",[7,10],[["(\\\\d{3})(\\\\d{4})","$1-$2",["[3467]|9[13-9]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[89]"]]],0,0,0,0,0,0,0,"00"],"MW":["265","00","(?:[1289]\\\\d|31|77)\\\\d{7}|1\\\\d{6}",[7,9],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1[2-9]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["2"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[137-9]"],"0$1"]],"0"],"MX":["52","0[09]","1(?:(?:44|99)[1-9]|65[0-689])\\\\d{7}|(?:1(?:[017]\\\\d|[235][1-9]|4[0-35-9]|6[0-46-9]|8[1-79]|9[1-8])|[2-9]\\\\d)\\\\d{8}",[10,11],[["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["33|5[56]|81"],0,1],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[2-9]"],0,1],["(\\\\d)(\\\\d{2})(\\\\d{4})(\\\\d{4})","$2 $3 $4",["1(?:33|5[56]|81)"],0,1],["(\\\\d)(\\\\d{3})(\\\\d{3})(\\\\d{4})","$2 $3 $4",["1"],0,1]],"01",0,"0(?:[12]|4[45])|1",0,0,0,0,"00"],"MY":["60","00","1\\\\d{8,9}|(?:3\\\\d|[4-9])\\\\d{7}",[8,9,10],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1-$2 $3",["[4-79]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1-$2 $3",["1(?:[02469]|[378][1-9]|53)|8","1(?:[02469]|[37][1-9]|53|8(?:[1-46-9]|5[7-9]))|8"],"0$1"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1-$2 $3",["3"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{2})(\\\\d{4})","$1-$2-$3-$4",["1(?:[367]|80)"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1-$2 $3",["15"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1-$2 $3",["1"],"0$1"]],"0"],"MZ":["258","00","(?:2|8\\\\d)\\\\d{7}",[8,9],[["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["2|8[2-79]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8"]]]],"NA":["264","00","[68]\\\\d{7,8}",[8,9],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["88"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["6"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["87"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["8"],"0$1"]],"0"],"NC":["687","00","(?:050|[2-57-9]\\\\d\\\\d)\\\\d{3}",[6],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1.$2.$3",["[02-57-9]"]]]],"NE":["227","00","[027-9]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["08"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[089]|2[013]|7[04]"]]]],"NF":["672","00","[13]\\\\d{5}",[6],[["(\\\\d{2})(\\\\d{4})","$1 $2",["1[0-3]"]],["(\\\\d)(\\\\d{5})","$1 $2",["[13]"]]],0,0,"([0-258]\\\\d{4})$","3$1"],"NG":["234","009","(?:[124-7]|9\\\\d{3})\\\\d{6}|[1-9]\\\\d{7}|[78]\\\\d{9,13}",[7,8,10,11,12,13,14],[["(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["78"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[12]|9(?:0[3-9]|[1-9])"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2,3})","$1 $2 $3",["[3-7]|8[2-9]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[7-9]"],"0$1"],["(\\\\d{3})(\\\\d{4})(\\\\d{4,5})","$1 $2 $3",["[78]"],"0$1"],["(\\\\d{3})(\\\\d{5})(\\\\d{5,6})","$1 $2 $3",["[78]"],"0$1"]],"0"],"NI":["505","00","(?:1800|[25-8]\\\\d{3})\\\\d{4}",[8],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[125-8]"]]]],"NL":["31","00","(?:[124-7]\\\\d\\\\d|3(?:[02-9]\\\\d|1[0-8]))\\\\d{6}|8\\\\d{6,9}|9\\\\d{6,10}|1\\\\d{4,5}",[5,6,7,8,9,10,11],[["(\\\\d{3})(\\\\d{4,7})","$1 $2",["[89]0"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1 $2",["66"],"0$1"],["(\\\\d)(\\\\d{8})","$1 $2",["6"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1[16-8]|2[259]|3[124]|4[17-9]|5[124679]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[1-578]|91"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{5})","$1 $2 $3",["9"],"0$1"]],"0"],"NO":["47","00","(?:0|[2-9]\\\\d{3})\\\\d{4}",[5,8],[["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["[489]|59"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[235-7]"]]],0,0,0,0,0,"[02-689]|7[0-8]"],"NP":["977","00","(?:1\\\\d|9)\\\\d{9}|[1-9]\\\\d{7}",[8,10,11],[["(\\\\d)(\\\\d{7})","$1-$2",["1[2-6]"],"0$1"],["(\\\\d{2})(\\\\d{6})","$1-$2",["1[01]|[2-8]|9(?:[1-59]|[67][2-6])"],"0$1"],["(\\\\d{3})(\\\\d{7})","$1-$2",["9"]]],"0"],"NR":["674","00","(?:444|(?:55|8\\\\d)\\\\d|666)\\\\d{4}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[4-68]"]]]],"NU":["683","00","(?:[47]|888\\\\d)\\\\d{3}",[4,7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["8"]]]],"NZ":["64","0(?:0|161)","[29]\\\\d{7,9}|50\\\\d{5}(?:\\\\d{2,3})?|6[0-35-9]\\\\d{6}|7\\\\d{7,8}|8\\\\d{4,9}|(?:11\\\\d|[34])\\\\d{7}",[5,6,7,8,9,10],[["(\\\\d{2})(\\\\d{3,8})","$1 $2",["8[1-579]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2,3})","$1 $2 $3",["50[036-8]|[89]0","50(?:[0367]|88)|[89]0"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["24|[346]|7[2-57-9]|9[2-9]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["2(?:10|74)|[59]|80"],"0$1"],["(\\\\d{2})(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["1|2[028]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,5})","$1 $2 $3",["2(?:[169]|7[0-35-9])|7|86"],"0$1"]],"0",0,0,0,0,0,0,"00"],"OM":["968","00","(?:1505|[279]\\\\d{3}|500)\\\\d{4}|800\\\\d{5,6}",[7,8,9],[["(\\\\d{3})(\\\\d{4,6})","$1 $2",["[58]"]],["(\\\\d{2})(\\\\d{6})","$1 $2",["2"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["[179]"]]]],"PA":["507","00","(?:00800|8\\\\d{3})\\\\d{6}|[68]\\\\d{7}|[1-57-9]\\\\d{6}",[7,8,10,11],[["(\\\\d{3})(\\\\d{4})","$1-$2",["[1-57-9]"]],["(\\\\d{4})(\\\\d{4})","$1-$2",["[68]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["8"]]]],"PE":["51","00|19(?:1[124]|77|90)00","(?:[14-8]|9\\\\d)\\\\d{7}",[8,9],[["(\\\\d{3})(\\\\d{5})","$1 $2",["80"],"(0$1)"],["(\\\\d)(\\\\d{7})","$1 $2",["1"],"(0$1)"],["(\\\\d{2})(\\\\d{6})","$1 $2",["[4-8]"],"(0$1)"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["9"]]],"0",0,0,0,0,0,0,"00"," Anexo "],"PF":["689","00","4\\\\d{5}(?:\\\\d{2})?|8\\\\d{7,8}",[6,8,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["44"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["4|8[7-9]"]],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"]]]],"PG":["675","00|140[1-3]","(?:180|[78]\\\\d{3})\\\\d{4}|(?:[2-589]\\\\d|64)\\\\d{5}",[7,8],[["(\\\\d{3})(\\\\d{4})","$1 $2",["18|[2-69]|85"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["[78]"]]],0,0,0,0,0,0,0,"00"],"PH":["63","00","(?:[2-7]|9\\\\d)\\\\d{8}|2\\\\d{5}|(?:1800|8)\\\\d{7,9}",[6,8,9,10,11,12,13],[["(\\\\d)(\\\\d{5})","$1 $2",["2"],"(0$1)"],["(\\\\d{4})(\\\\d{4,6})","$1 $2",["3(?:23|39|46)|4(?:2[3-6]|[35]9|4[26]|76)|544|88[245]|(?:52|64|86)2","3(?:230|397|461)|4(?:2(?:35|[46]4|51)|396|4(?:22|63)|59[347]|76[15])|5(?:221|446)|642[23]|8(?:622|8(?:[24]2|5[13]))"],"(0$1)"],["(\\\\d{5})(\\\\d{4})","$1 $2",["346|4(?:27|9[35])|883","3469|4(?:279|9(?:30|56))|8834"],"(0$1)"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["2"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[3-7]|8[2-8]"],"(0$1)"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[89]"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"]],["(\\\\d{4})(\\\\d{1,2})(\\\\d{3})(\\\\d{4})","$1 $2 $3 $4",["1"]]],"0"],"PK":["92","00","122\\\\d{6}|[24-8]\\\\d{10,11}|9(?:[013-9]\\\\d{8,10}|2(?:[01]\\\\d\\\\d|2(?:[06-8]\\\\d|1[01]))\\\\d{7})|(?:[2-8]\\\\d{3}|92(?:[0-7]\\\\d|8[1-9]))\\\\d{6}|[24-9]\\\\d{8}|[89]\\\\d{7}",[8,9,10,11,12],[["(\\\\d{3})(\\\\d{3})(\\\\d{2,7})","$1 $2 $3",["[89]0"],"0$1"],["(\\\\d{4})(\\\\d{5})","$1 $2",["1"]],["(\\\\d{3})(\\\\d{6,7})","$1 $2",["2(?:3[2358]|4[2-4]|9[2-8])|45[3479]|54[2-467]|60[468]|72[236]|8(?:2[2-689]|3[23578]|4[3478]|5[2356])|9(?:2[2-8]|3[27-9]|4[2-6]|6[3569]|9[25-8])","9(?:2[3-8]|98)|(?:2(?:3[2358]|4[2-4]|9[2-8])|45[3479]|54[2-467]|60[468]|72[236]|8(?:2[2-689]|3[23578]|4[3478]|5[2356])|9(?:22|3[27-9]|4[2-6]|6[3569]|9[25-7]))[2-9]"],"(0$1)"],["(\\\\d{2})(\\\\d{7,8})","$1 $2",["(?:2[125]|4[0-246-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91)[2-9]"],"(0$1)"],["(\\\\d{5})(\\\\d{5})","$1 $2",["58"],"(0$1)"],["(\\\\d{3})(\\\\d{7})","$1 $2",["3"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["2[125]|4[0-246-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91"],"(0$1)"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["[24-9]"],"(0$1)"]],"0"],"PL":["48","00","(?:6|8\\\\d\\\\d)\\\\d{7}|[1-9]\\\\d{6}(?:\\\\d{2})?|[26]\\\\d{5}",[6,7,8,9,10],[["(\\\\d{5})","$1",["19"]],["(\\\\d{3})(\\\\d{3})","$1 $2",["11|20|64"]],["(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["(?:1[2-8]|2[2-69]|3[2-4]|4[1-468]|5[24-689]|6[1-3578]|7[14-7]|8[1-79]|9[145])1","(?:1[2-8]|2[2-69]|3[2-4]|4[1-468]|5[24-689]|6[1-3578]|7[14-7]|8[1-79]|9[145])19"]],["(\\\\d{3})(\\\\d{2})(\\\\d{2,3})","$1 $2 $3",["64"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["21|39|45|5[0137]|6[0469]|7[02389]|8(?:0[14]|8)"]],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["1[2-8]|[2-7]|8[1-79]|9[145]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["8"]]]],"PM":["508","00","(?:[45]|80\\\\d\\\\d)\\\\d{5}",[6,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["[45]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"],"0$1"]],"0"],"PR":["1","011","(?:[589]\\\\d\\\\d|787)\\\\d{7}",[10],0,"1",0,0,0,0,"787|939"],"PS":["970","00","[2489]2\\\\d{6}|(?:1\\\\d|5)\\\\d{8}",[8,9,10],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[2489]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["5"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1"]]],"0"],"PT":["351","00","1693\\\\d{5}|(?:[26-9]\\\\d|30)\\\\d{7}",[9],[["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["2[12]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["16|[236-9]"]]]],"PW":["680","01[12]","(?:[24-8]\\\\d\\\\d|345|900)\\\\d{4}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[2-9]"]]]],"PY":["595","00","59\\\\d{4,6}|9\\\\d{5,10}|(?:[2-46-8]\\\\d|5[0-8])\\\\d{4,7}",[6,7,8,9,10,11],[["(\\\\d{3})(\\\\d{3,6})","$1 $2",["[2-9]0"],"0$1"],["(\\\\d{2})(\\\\d{5})","$1 $2",["[26]1|3[289]|4[1246-8]|7[1-3]|8[1-36]"],"(0$1)"],["(\\\\d{3})(\\\\d{4,5})","$1 $2",["2[279]|3[13-5]|4[359]|5|6(?:[34]|7[1-46-8])|7[46-8]|85"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["2[14-68]|3[26-9]|4[1246-8]|6(?:1|75)|7[1-35]|8[1-36]"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["87"]],["(\\\\d{3})(\\\\d{6})","$1 $2",["9(?:[5-79]|8[1-6])"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[2-8]"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["9"]]],"0"],"QA":["974","00","[2-7]\\\\d{7}|800\\\\d{4}(?:\\\\d{2})?|2\\\\d{6}",[7,8,9],[["(\\\\d{3})(\\\\d{4})","$1 $2",["2[126]|8"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["[2-7]"]]]],"RE":["262","00","976\\\\d{6}|(?:26|[68]\\\\d)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2689]"],"0$1"]],"0",0,0,0,0,"26[23]|69|[89]"],"RO":["40","00","(?:[2378]\\\\d|90)\\\\d{7}|[23]\\\\d{5}",[6,9],[["(\\\\d{3})(\\\\d{3})","$1 $2",["2[3-6]","2[3-6]\\\\d9"],"0$1"],["(\\\\d{2})(\\\\d{4})","$1 $2",["219|31"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[23]1"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[237-9]"],"0$1"]],"0",0,0,0,0,0,0,0," int "],"RS":["381","00","38[02-9]\\\\d{6,9}|6\\\\d{7,9}|90\\\\d{4,8}|38\\\\d{5,6}|(?:7\\\\d\\\\d|800)\\\\d{3,9}|(?:[12]\\\\d|3[0-79])\\\\d{5,10}",[6,7,8,9,10,11,12],[["(\\\\d{3})(\\\\d{3,9})","$1 $2",["(?:2[389]|39)0|[7-9]"],"0$1"],["(\\\\d{2})(\\\\d{5,10})","$1 $2",["[1-36]"],"0$1"]],"0"],"RU":["7","810","8\\\\d{13}|[347-9]\\\\d{9}",[10,14],[["(\\\\d{4})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["7(?:1[0-8]|2[1-9])","7(?:1(?:[0-6]2|7|8[27])|2(?:1[23]|[2-9]2))","7(?:1(?:[0-6]2|7|8[27])|2(?:13[03-69]|62[013-9]))|72[1-57-9]2"],"8 ($1)",1],["(\\\\d{5})(\\\\d)(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["7(?:1[0-68]|2[1-9])","7(?:1(?:[06][3-6]|[18]|2[35]|[3-5][3-5])|2(?:[13][3-5]|[24-689]|7[457]))","7(?:1(?:0(?:[356]|4[023])|[18]|2(?:3[013-9]|5)|3[45]|43[013-79]|5(?:3[1-8]|4[1-7]|5)|6(?:3[0-35-9]|[4-6]))|2(?:1(?:3[178]|[45])|[24-689]|3[35]|7[457]))|7(?:14|23)4[0-8]|71(?:33|45)[1-79]"],"8 ($1)",1],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["7"],"8 ($1)",1],["(\\\\d{3})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2-$3-$4",["[349]|8(?:[02-7]|1[1-8])"],"8 ($1)",1],["(\\\\d{4})(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["8"],"8 ($1)"]],"8",0,0,0,0,"3[04-689]|[489]",0,"8~10"],"RW":["250","00","(?:06|[27]\\\\d\\\\d|[89]00)\\\\d{6}",[8,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["0"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[7-9]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["2"]]],"0"],"SA":["966","00","92\\\\d{7}|(?:[15]|8\\\\d)\\\\d{8}",[9,10],[["(\\\\d{4})(\\\\d{5})","$1 $2",["9"]],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["5"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["81"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["8"]]],"0"],"SB":["677","0[01]","(?:[1-6]|[7-9]\\\\d\\\\d)\\\\d{4}",[5,7],[["(\\\\d{2})(\\\\d{5})","$1 $2",["7|8[4-9]|9(?:[1-8]|9[0-8])"]]]],"SC":["248","010|0[0-2]","800\\\\d{4}|(?:[249]\\\\d|64)\\\\d{5}",[7],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[246]|9[57]"]]],0,0,0,0,0,0,0,"00"],"SD":["249","00","[19]\\\\d{8}",[9],[["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[19]"],"0$1"]],"0"],"SE":["46","00","(?:[26]\\\\d\\\\d|9)\\\\d{9}|[1-9]\\\\d{8}|[1-689]\\\\d{7}|[1-4689]\\\\d{6}|2\\\\d{5}",[6,7,8,9,10],[["(\\\\d{2})(\\\\d{2,3})(\\\\d{2})","$1-$2 $3",["20"],"0$1",0,"$1 $2 $3"],["(\\\\d{3})(\\\\d{4})","$1-$2",["9(?:00|39|44|9)"],"0$1",0,"$1 $2"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})","$1-$2 $3",["[12][136]|3[356]|4[0246]|6[03]|90[1-9]"],"0$1",0,"$1 $2 $3"],["(\\\\d)(\\\\d{2,3})(\\\\d{2})(\\\\d{2})","$1-$2 $3 $4",["8"],"0$1",0,"$1 $2 $3 $4"],["(\\\\d{3})(\\\\d{2,3})(\\\\d{2})","$1-$2 $3",["1[2457]|2(?:[247-9]|5[0138])|3[0247-9]|4[1357-9]|5[0-35-9]|6(?:[125689]|4[02-57]|7[0-2])|9(?:[125-8]|3[02-5]|4[0-3])"],"0$1",0,"$1 $2 $3"],["(\\\\d{3})(\\\\d{2,3})(\\\\d{3})","$1-$2 $3",["9(?:00|39|44)"],"0$1",0,"$1 $2 $3"],["(\\\\d{2})(\\\\d{2,3})(\\\\d{2})(\\\\d{2})","$1-$2 $3 $4",["1[13689]|2[0136]|3[1356]|4[0246]|54|6[03]|90[1-9]"],"0$1",0,"$1 $2 $3 $4"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1-$2 $3 $4",["10|7"],"0$1",0,"$1 $2 $3 $4"],["(\\\\d)(\\\\d{3})(\\\\d{3})(\\\\d{2})","$1-$2 $3 $4",["8"],"0$1",0,"$1 $2 $3 $4"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1-$2 $3 $4",["[13-5]|2(?:[247-9]|5[0138])|6(?:[124-689]|7[0-2])|9(?:[125-8]|3[02-5]|4[0-3])"],"0$1",0,"$1 $2 $3 $4"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1-$2 $3 $4",["9"],"0$1",0,"$1 $2 $3 $4"],["(\\\\d{3})(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1-$2 $3 $4 $5",["[26]"],"0$1",0,"$1 $2 $3 $4 $5"]],"0"],"SG":["65","0[0-3]\\\\d","(?:(?:1\\\\d|8)\\\\d\\\\d|7000)\\\\d{7}|[3689]\\\\d{7}",[8,10,11],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[369]|8(?:0[1-5]|[1-9])"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["8"]],["(\\\\d{4})(\\\\d{4})(\\\\d{3})","$1 $2 $3",["7"]],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"]]]],"SH":["290","00","(?:[256]\\\\d|8)\\\\d{3}",[4,5],0,0,0,0,0,0,"[256]"],"SI":["386","00|10(?:22|66|88|99)","[1-7]\\\\d{7}|8\\\\d{4,7}|90\\\\d{4,6}",[5,6,7,8],[["(\\\\d{2})(\\\\d{3,6})","$1 $2",["8[09]|9"],"0$1"],["(\\\\d{3})(\\\\d{5})","$1 $2",["59|8"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[37][01]|4[0139]|51|6"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[1-57]"],"(0$1)"]],"0",0,0,0,0,0,0,"00"],"SJ":["47","00","0\\\\d{4}|(?:[489]\\\\d|[57]9)\\\\d{6}",[5,8],0,0,0,0,0,0,"79"],"SK":["421","00","[2-689]\\\\d{8}|[2-59]\\\\d{6}|[2-5]\\\\d{5}",[6,7,9],[["(\\\\d)(\\\\d{2})(\\\\d{3,4})","$1 $2 $3",["21"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{2,3})","$1 $2 $3",["[3-5][1-8]1","[3-5][1-8]1[67]"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{3})(\\\\d{2})","$1/$2 $3 $4",["2"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[689]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1/$2 $3 $4",["[3-5]"],"0$1"]],"0"],"SL":["232","00","(?:[237-9]\\\\d|66)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{6})","$1 $2",["[236-9]"],"(0$1)"]],"0"],"SM":["378","00","(?:0549|[5-7]\\\\d)\\\\d{6}",[8,10],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[5-7]"]],["(\\\\d{4})(\\\\d{6})","$1 $2",["0"]]],0,0,"([89]\\\\d{5})$","0549$1"],"SN":["221","00","(?:[378]\\\\d|93)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"]],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[379]"]]]],"SO":["252","00","[346-9]\\\\d{8}|[12679]\\\\d{7}|[1-5]\\\\d{6}|[1348]\\\\d{5}",[6,7,8,9],[["(\\\\d{2})(\\\\d{4})","$1 $2",["8[125]"]],["(\\\\d{6})","$1",["[134]"]],["(\\\\d)(\\\\d{6})","$1 $2",["[15]|2[0-79]|3[0-46-8]|4[0-7]"]],["(\\\\d)(\\\\d{7})","$1 $2",["24|[67]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[3478]|64|90"]],["(\\\\d{2})(\\\\d{5,7})","$1 $2",["1|28|6(?:0[5-7]|[1-35-9])|9[2-9]"]]],"0"],"SR":["597","00","(?:[2-5]|68|[78]\\\\d)\\\\d{5}",[6,7],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1-$2-$3",["56"]],["(\\\\d{3})(\\\\d{3})","$1-$2",["[2-5]"]],["(\\\\d{3})(\\\\d{4})","$1-$2",["[6-8]"]]]],"SS":["211","00","[19]\\\\d{8}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[19]"],"0$1"]],"0"],"ST":["239","00","(?:22|9\\\\d)\\\\d{5}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[29]"]]]],"SV":["503","00","[267]\\\\d{7}|[89]00\\\\d{4}(?:\\\\d{4})?",[7,8,11],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[89]"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["[267]"]],["(\\\\d{3})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["[89]"]]]],"SX":["1","011","7215\\\\d{6}|(?:[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"1|(5\\\\d{6})$","721$1",0,"721"],"SY":["963","00","[1-39]\\\\d{8}|[1-5]\\\\d{7}",[8,9],[["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[1-5]"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["9"],"0$1",1]],"0"],"SZ":["268","00","0800\\\\d{4}|(?:[237]\\\\d|900)\\\\d{6}",[8,9],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[0237]"]],["(\\\\d{5})(\\\\d{4})","$1 $2",["9"]]]],"TA":["290","00","8\\\\d{3}",[4],0,0,0,0,0,0,"8"],"TC":["1","011","(?:[58]\\\\d\\\\d|649|900)\\\\d{7}",[10],0,"1",0,"1|([2-479]\\\\d{6})$","649$1",0,"649"],"TD":["235","00|16","(?:22|[69]\\\\d|77)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2679]"]]],0,0,0,0,0,0,0,"00"],"TG":["228","00","[279]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[279]"]]]],"TH":["66","00[1-9]","(?:001800|[2-57]|[689]\\\\d)\\\\d{7}|1\\\\d{7,9}",[8,9,10,13],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["2"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[13-9]"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1"]]],"0"],"TJ":["992","810","(?:00|[1-57-9]\\\\d)\\\\d{7}",[9],[["(\\\\d{6})(\\\\d)(\\\\d{2})","$1 $2 $3",["331","3317"]],["(\\\\d{3})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["[34]7|91[78]"]],["(\\\\d{4})(\\\\d)(\\\\d{4})","$1 $2 $3",["3[1-5]"]],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[0-57-9]"]]],0,0,0,0,0,0,0,"8~10"],"TK":["690","00","[2-47]\\\\d{3,6}",[4,5,6,7]],"TL":["670","00","7\\\\d{7}|(?:[2-47]\\\\d|[89]0)\\\\d{5}",[7,8],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[2-489]|70"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["7"]]]],"TM":["993","810","[1-6]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2-$3-$4",["12"],"(8 $1)"],["(\\\\d{3})(\\\\d)(\\\\d{2})(\\\\d{2})","$1 $2-$3-$4",["[1-5]"],"(8 $1)"],["(\\\\d{2})(\\\\d{6})","$1 $2",["6"],"8 $1"]],"8",0,0,0,0,0,0,"8~10"],"TN":["216","00","[2-57-9]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[2-57-9]"]]]],"TO":["676","00","(?:0800|(?:[5-8]\\\\d\\\\d|999)\\\\d)\\\\d{3}|[2-8]\\\\d{4}",[5,7],[["(\\\\d{2})(\\\\d{3})","$1-$2",["[2-4]|50|6[09]|7[0-24-69]|8[05]"]],["(\\\\d{4})(\\\\d{3})","$1 $2",["0"]],["(\\\\d{3})(\\\\d{4})","$1 $2",["[5-9]"]]]],"TR":["90","00","4\\\\d{6}|8\\\\d{11,12}|(?:[2-58]\\\\d\\\\d|900)\\\\d{7}",[7,10,12,13],[["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["512|8[01589]|90"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["5(?:[0-59]|61)","5(?:[0-59]|616)","5(?:[0-59]|6161)"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[24][1-8]|3[1-9]"],"(0$1)",1],["(\\\\d{3})(\\\\d{3})(\\\\d{6,7})","$1 $2 $3",["80"],"0$1",1]],"0"],"TT":["1","011","(?:[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"1|([2-46-8]\\\\d{6})$","868$1",0,"868"],"TV":["688","00","(?:2|7\\\\d\\\\d|90)\\\\d{4}",[5,6,7],[["(\\\\d{2})(\\\\d{3})","$1 $2",["2"]],["(\\\\d{2})(\\\\d{4})","$1 $2",["90"]],["(\\\\d{2})(\\\\d{5})","$1 $2",["7"]]]],"TW":["886","0(?:0[25-79]|19)","[2-689]\\\\d{8}|7\\\\d{9,10}|[2-8]\\\\d{7}|2\\\\d{6}",[7,8,9,10,11],[["(\\\\d{2})(\\\\d)(\\\\d{4})","$1 $2 $3",["202"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[258]0"],"0$1"],["(\\\\d)(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["[23568]|4(?:0[02-48]|[1-47-9])|7[1-9]","[23568]|4(?:0[2-48]|[1-47-9])|(?:400|7)[1-9]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[49]"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4,5})","$1 $2 $3",["7"],"0$1"]],"0",0,0,0,0,0,0,0,"#"],"TZ":["255","00[056]","(?:[25-8]\\\\d|41|90)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["[89]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[24]"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1 $2",["5"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[67]"],"0$1"]],"0"],"UA":["380","00","[89]\\\\d{9}|[3-9]\\\\d{8}",[9,10],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["6[12][29]|(?:3[1-8]|4[136-8]|5[12457]|6[49])2|(?:56|65)[24]","6[12][29]|(?:35|4[1378]|5[12457]|6[49])2|(?:56|65)[24]|(?:3[1-46-8]|46)2[013-9]"],"0$1"],["(\\\\d{4})(\\\\d{5})","$1 $2",["3[1-8]|4(?:[1367]|[45][6-9]|8[4-6])|5(?:[1-5]|6[0135689]|7[4-6])|6(?:[12][3-7]|[459])","3[1-8]|4(?:[1367]|[45][6-9]|8[4-6])|5(?:[1-5]|6(?:[015689]|3[02389])|7[4-6])|6(?:[12][3-7]|[459])"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[3-7]|89|9[1-9]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[89]"],"0$1"]],"0",0,0,0,0,0,0,"0~0"],"UG":["256","00[057]","800\\\\d{6}|(?:[29]0|[347]\\\\d)\\\\d{7}",[9],[["(\\\\d{4})(\\\\d{5})","$1 $2",["202","2024"],"0$1"],["(\\\\d{3})(\\\\d{6})","$1 $2",["[27-9]|4(?:6[45]|[7-9])"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1 $2",["[34]"],"0$1"]],"0"],"US":["1","011","[2-9]\\\\d{9}|3\\\\d{6}",[10],[["(\\\\d{3})(\\\\d{4})","$1-$2",["310"],0,1],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","($1) $2-$3",["[2-9]"],0,1,"$1-$2-$3"]],"1",0,0,0,0,0,[["505(?:[2-57-9]\\\\d\\\\d|6(?:[0-35-9]\\\\d|44))\\\\d{4}|(?:2(?:0[1-35-9]|1[02-9]|2[03-589]|3[149]|4[08]|5[1-46]|6[0279]|7[0269]|8[13])|3(?:0[1-57-9]|1[02-9]|2[01356]|3[0-24679]|4[167]|5[12]|6[014]|8[056])|4(?:0[124-9]|1[02-579]|2[3-5]|3[0245]|4[023578]|58|6[349]|7[0589]|8[04])|5(?:0[1-47-9]|1[0235-8]|20|3[0149]|4[01]|5[19]|6[1-47]|7[0-5]|8[0256])|6(?:0[1-35-9]|1[024-9]|2[03689]|[34][016]|5[01679]|6[0-279]|78|8[0-29])|7(?:0[1-46-8]|1[2-9]|2[04-7]|3[1247]|4[037]|5[47]|6[02359]|7[0-59]|8[156])|8(?:0[1-68]|1[02-8]|2[068]|3[0-289]|4[03578]|5[046-9]|6[02-5]|7[028])|9(?:0[1346-9]|1[02-9]|2[0589]|3[0146-8]|4[01357-9]|5[12469]|7[0-389]|8[04-69]))[2-9]\\\\d{6}"],[""],["8(?:00|33|44|55|66|77|88)[2-9]\\\\d{6}"],["900[2-9]\\\\d{6}"],["52(?:3(?:[2-46-9][02-9]\\\\d|5(?:[02-46-9]\\\\d|5[0-46-9]))|4(?:[2-478][02-9]\\\\d|5(?:[034]\\\\d|2[024-9]|5[0-46-9])|6(?:0[1-9]|[2-9]\\\\d)|9(?:[05-9]\\\\d|2[0-5]|49)))\\\\d{4}|52[34][2-9]1[02-9]\\\\d{4}|5(?:00|2[125-7]|33|44|66|77|88)[2-9]\\\\d{6}"]]],"UY":["598","0(?:0|1[3-9]\\\\d)","4\\\\d{9}|[1249]\\\\d{7}|(?:[49]\\\\d|80)\\\\d{5}",[7,8,10],[["(\\\\d{3})(\\\\d{4})","$1 $2",["405|8|90"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["9"],"0$1"],["(\\\\d{4})(\\\\d{4})","$1 $2",["[124]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["4"],"0$1"]],"0",0,0,0,0,0,0,"00"," int. "],"UZ":["998","810","(?:33|55|[679]\\\\d|88)\\\\d{7}",[9],[["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[35-9]"],"8 $1"]],"8",0,0,0,0,0,0,"8~10"],"VA":["39","00","0\\\\d{5,10}|3[0-8]\\\\d{7,10}|55\\\\d{8}|8\\\\d{5}(?:\\\\d{2,4})?|(?:1\\\\d|39)\\\\d{7,8}",[6,7,8,9,10,11],0,0,0,0,0,0,"06698"],"VC":["1","011","(?:[58]\\\\d\\\\d|784|900)\\\\d{7}",[10],0,"1",0,"1|([2-7]\\\\d{6})$","784$1",0,"784"],"VE":["58","00","[68]00\\\\d{7}|(?:[24]\\\\d|[59]0)\\\\d{8}",[10],[["(\\\\d{3})(\\\\d{7})","$1-$2",["[24-689]"],"0$1"]],"0"],"VG":["1","011","(?:284|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"1|([2-578]\\\\d{6})$","284$1",0,"284"],"VI":["1","011","[58]\\\\d{9}|(?:34|90)0\\\\d{7}",[10],0,"1",0,"1|([2-9]\\\\d{6})$","340$1",0,"340"],"VN":["84","00","[12]\\\\d{9}|[135-9]\\\\d{8}|[16]\\\\d{7}|[16-8]\\\\d{6}",[7,8,9,10],[["(\\\\d{2})(\\\\d{5})","$1 $2",["80"],"0$1",1],["(\\\\d{4})(\\\\d{4,6})","$1 $2",["1"],0,1],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[69]"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[3578]"],"0$1",1],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["2[48]"],"0$1",1],["(\\\\d{3})(\\\\d{4})(\\\\d{3})","$1 $2 $3",["2"],"0$1",1]],"0"],"VU":["678","00","[57-9]\\\\d{6}|(?:[238]\\\\d|48)\\\\d{3}",[5,7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[57-9]"]]]],"WF":["681","00","(?:40|72)\\\\d{4}|8\\\\d{5}(?:\\\\d{3})?",[6,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["[478]"]],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"]]]],"WS":["685","0","(?:[2-6]|8\\\\d{5})\\\\d{4}|[78]\\\\d{6}|[68]\\\\d{5}",[5,6,7,10],[["(\\\\d{5})","$1",["[2-5]|6[1-9]"]],["(\\\\d{3})(\\\\d{3,7})","$1 $2",["[68]"]],["(\\\\d{2})(\\\\d{5})","$1 $2",["7"]]]],"XK":["383","00","[23]\\\\d{7,8}|(?:4\\\\d\\\\d|[89]00)\\\\d{5}",[8,9],[["(\\\\d{3})(\\\\d{5})","$1 $2",["[89]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[2-4]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[23]"],"0$1"]],"0"],"YE":["967","00","(?:1|7\\\\d)\\\\d{7}|[1-7]\\\\d{6}",[7,8,9],[["(\\\\d)(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[1-6]|7[24-68]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["7"],"0$1"]],"0"],"YT":["262","00","80\\\\d{7}|(?:26|63)9\\\\d{6}",[9],0,"0",0,0,0,0,"269|63"],"ZA":["27","00","[1-79]\\\\d{8}|8\\\\d{4,9}",[5,6,7,8,9,10],[["(\\\\d{2})(\\\\d{3,4})","$1 $2",["8[1-4]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2,3})","$1 $2 $3",["8[1-4]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["860"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[1-9]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["8"],"0$1"]],"0"],"ZM":["260","00","800\\\\d{6}|(?:21|63|[79]\\\\d)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[28]"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1 $2",["[79]"],"0$1"]],"0"],"ZW":["263","00","2(?:[0-57-9]\\\\d{6,8}|6[0-24-9]\\\\d{6,7})|[38]\\\\d{9}|[35-8]\\\\d{8}|[3-6]\\\\d{7}|[1-689]\\\\d{6}|[1-3569]\\\\d{5}|[1356]\\\\d{4}",[5,6,7,8,9,10],[["(\\\\d{3})(\\\\d{3,5})","$1 $2",["2(?:0[45]|2[278]|[49]8)|3(?:[09]8|17)|6(?:[29]8|37|75)|[23][78]|(?:33|5[15]|6[68])[78]"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{2,4})","$1 $2 $3",["[49]"],"0$1"],["(\\\\d{3})(\\\\d{4})","$1 $2",["80"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1 $2",["24|8[13-59]|(?:2[05-79]|39|5[45]|6[15-8])2","2(?:02[014]|4|[56]20|[79]2)|392|5(?:42|525)|6(?:[16-8]21|52[013])|8[13-59]"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["7"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["2(?:1[39]|2[0157]|[378]|[56][14])|3(?:12|29)","2(?:1[39]|2[0157]|[378]|[56][14])|3(?:123|29)"],"0$1"],["(\\\\d{4})(\\\\d{6})","$1 $2",["8"],"0$1"],["(\\\\d{2})(\\\\d{3,5})","$1 $2",["1|2(?:0[0-36-9]|12|29|[56])|3(?:1[0-689]|[24-6])|5(?:[0236-9]|1[2-4])|6(?:[013-59]|7[0-46-9])|(?:33|55|6[68])[0-69]|(?:29|3[09]|62)[0-79]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["29[013-9]|39|54"],"0$1"],["(\\\\d{4})(\\\\d{3,5})","$1 $2",["(?:25|54)8","258|5483"],"0$1"]],"0"]},"nonGeographic":{"800":["800",0,"(?:00|[1-9]\\\\d)\\\\d{6}",[8],[["(\\\\d{4})(\\\\d{4})","$1 $2",["\\\\d"]]],0,0,0,0,0,0,[0,0,["(?:00|[1-9]\\\\d)\\\\d{6}"]]],"808":["808",0,"[1-9]\\\\d{7}",[8],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[1-9]"]]],0,0,0,0,0,0,[0,0,0,0,0,0,0,0,0,["[1-9]\\\\d{7}"]]],"870":["870",0,"7\\\\d{11}|[35-7]\\\\d{8}",[9,12],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[35-7]"]]],0,0,0,0,0,0,[0,["(?:[356]|774[45])\\\\d{8}|7[6-8]\\\\d{7}"]]],"878":["878",0,"10\\\\d{10}",[12],[["(\\\\d{2})(\\\\d{5})(\\\\d{5})","$1 $2 $3",["1"]]],0,0,0,0,0,0,[0,0,0,0,0,0,0,0,["10\\\\d{10}"]]],"881":["881",0,"[0-36-9]\\\\d{8}",[9],[["(\\\\d)(\\\\d{3})(\\\\d{5})","$1 $2 $3",["[0-36-9]"]]],0,0,0,0,0,0,[0,["[0-36-9]\\\\d{8}"]]],"882":["882",0,"[13]\\\\d{6}(?:\\\\d{2,5})?|285\\\\d{9}|(?:[19]\\\\d|49)\\\\d{6}",[7,8,9,10,11,12],[["(\\\\d{2})(\\\\d{5})","$1 $2",["16|342"]],["(\\\\d{2})(\\\\d{6})","$1 $2",["4"]],["(\\\\d{2})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["[19]"]],["(\\\\d{2})(\\\\d{4})(\\\\d{3})","$1 $2 $3",["3[23]"]],["(\\\\d{2})(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["1"]],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["34[57]"]],["(\\\\d{3})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["34"]],["(\\\\d{2})(\\\\d{4,5})(\\\\d{5})","$1 $2 $3",["[1-3]"]]],0,0,0,0,0,0,[0,["342\\\\d{4}|(?:337|49)\\\\d{6}|3(?:2|47|7\\\\d{3})\\\\d{7}",[7,8,9,10,12]],0,0,0,0,0,0,["1(?:3(?:0[0347]|[13][0139]|2[035]|4[013568]|6[0459]|7[06]|8[15-8]|9[0689])\\\\d{4}|6\\\\d{5,10})|(?:(?:285\\\\d\\\\d|3(?:45|[69]\\\\d{3}))\\\\d|9[89])\\\\d{6}"]]],"883":["883",0,"(?:210|370\\\\d\\\\d)\\\\d{7}|51\\\\d{7}(?:\\\\d{3})?",[9,10,12],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["510"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["2"]],["(\\\\d{4})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["51[13]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["[35]"]]],0,0,0,0,0,0,[0,0,0,0,0,0,0,0,["(?:210|(?:370[1-9]|51[013]0)\\\\d)\\\\d{7}|5100\\\\d{5}"]]],"888":["888",0,"\\\\d{11}",[11],[["(\\\\d{3})(\\\\d{3})(\\\\d{5})","$1 $2 $3"]],0,0,0,0,0,0,[0,0,0,0,0,0,["\\\\d{11}"]]],"979":["979",0,"[1359]\\\\d{8}",[9],[["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["[1359]"]]],0,0,0,0,0,0,[0,0,0,["[1359]\\\\d{8}"]]]}}');
+module.exports = /*#__PURE__*/JSON.parse('{"version":4,"country_calling_codes":{"1":["US","AG","AI","AS","BB","BM","BS","CA","DM","DO","GD","GU","JM","KN","KY","LC","MP","MS","PR","SX","TC","TT","VC","VG","VI"],"7":["RU","KZ"],"20":["EG"],"27":["ZA"],"30":["GR"],"31":["NL"],"32":["BE"],"33":["FR"],"34":["ES"],"36":["HU"],"39":["IT","VA"],"40":["RO"],"41":["CH"],"43":["AT"],"44":["GB","GG","IM","JE"],"45":["DK"],"46":["SE"],"47":["NO","SJ"],"48":["PL"],"49":["DE"],"51":["PE"],"52":["MX"],"53":["CU"],"54":["AR"],"55":["BR"],"56":["CL"],"57":["CO"],"58":["VE"],"60":["MY"],"61":["AU","CC","CX"],"62":["ID"],"63":["PH"],"64":["NZ"],"65":["SG"],"66":["TH"],"81":["JP"],"82":["KR"],"84":["VN"],"86":["CN"],"90":["TR"],"91":["IN"],"92":["PK"],"93":["AF"],"94":["LK"],"95":["MM"],"98":["IR"],"211":["SS"],"212":["MA","EH"],"213":["DZ"],"216":["TN"],"218":["LY"],"220":["GM"],"221":["SN"],"222":["MR"],"223":["ML"],"224":["GN"],"225":["CI"],"226":["BF"],"227":["NE"],"228":["TG"],"229":["BJ"],"230":["MU"],"231":["LR"],"232":["SL"],"233":["GH"],"234":["NG"],"235":["TD"],"236":["CF"],"237":["CM"],"238":["CV"],"239":["ST"],"240":["GQ"],"241":["GA"],"242":["CG"],"243":["CD"],"244":["AO"],"245":["GW"],"246":["IO"],"247":["AC"],"248":["SC"],"249":["SD"],"250":["RW"],"251":["ET"],"252":["SO"],"253":["DJ"],"254":["KE"],"255":["TZ"],"256":["UG"],"257":["BI"],"258":["MZ"],"260":["ZM"],"261":["MG"],"262":["RE","YT"],"263":["ZW"],"264":["NA"],"265":["MW"],"266":["LS"],"267":["BW"],"268":["SZ"],"269":["KM"],"290":["SH","TA"],"291":["ER"],"297":["AW"],"298":["FO"],"299":["GL"],"350":["GI"],"351":["PT"],"352":["LU"],"353":["IE"],"354":["IS"],"355":["AL"],"356":["MT"],"357":["CY"],"358":["FI","AX"],"359":["BG"],"370":["LT"],"371":["LV"],"372":["EE"],"373":["MD"],"374":["AM"],"375":["BY"],"376":["AD"],"377":["MC"],"378":["SM"],"380":["UA"],"381":["RS"],"382":["ME"],"383":["XK"],"385":["HR"],"386":["SI"],"387":["BA"],"389":["MK"],"420":["CZ"],"421":["SK"],"423":["LI"],"500":["FK"],"501":["BZ"],"502":["GT"],"503":["SV"],"504":["HN"],"505":["NI"],"506":["CR"],"507":["PA"],"508":["PM"],"509":["HT"],"590":["GP","BL","MF"],"591":["BO"],"592":["GY"],"593":["EC"],"594":["GF"],"595":["PY"],"596":["MQ"],"597":["SR"],"598":["UY"],"599":["CW","BQ"],"670":["TL"],"672":["NF"],"673":["BN"],"674":["NR"],"675":["PG"],"676":["TO"],"677":["SB"],"678":["VU"],"679":["FJ"],"680":["PW"],"681":["WF"],"682":["CK"],"683":["NU"],"685":["WS"],"686":["KI"],"687":["NC"],"688":["TV"],"689":["PF"],"690":["TK"],"691":["FM"],"692":["MH"],"850":["KP"],"852":["HK"],"853":["MO"],"855":["KH"],"856":["LA"],"880":["BD"],"886":["TW"],"960":["MV"],"961":["LB"],"962":["JO"],"963":["SY"],"964":["IQ"],"965":["KW"],"966":["SA"],"967":["YE"],"968":["OM"],"970":["PS"],"971":["AE"],"972":["IL"],"973":["BH"],"974":["QA"],"975":["BT"],"976":["MN"],"977":["NP"],"992":["TJ"],"993":["TM"],"994":["AZ"],"995":["GE"],"996":["KG"],"998":["UZ"]},"countries":{"AC":["247","00","(?:[01589]\\\\d|[46])\\\\d{4}",[5,6]],"AD":["376","00","(?:1|6\\\\d)\\\\d{7}|[135-9]\\\\d{5}",[6,8,9],[["(\\\\d{3})(\\\\d{3})","$1 $2",["[135-9]"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["1"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["6"]]]],"AE":["971","00","(?:[4-7]\\\\d|9[0-689])\\\\d{7}|800\\\\d{2,9}|[2-4679]\\\\d{7}",[5,6,7,8,9,10,11,12],[["(\\\\d{3})(\\\\d{2,9})","$1 $2",["60|8"]],["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[236]|[479][2-8]"],"0$1"],["(\\\\d{3})(\\\\d)(\\\\d{5})","$1 $2 $3",["[479]"]],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["5"],"0$1"]],"0"],"AF":["93","00","[2-7]\\\\d{8}",[9],[["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[2-7]"],"0$1"]],"0"],"AG":["1","011","(?:268|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"([457]\\\\d{6})$|1","268$1",0,"268"],"AI":["1","011","(?:264|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"([2457]\\\\d{6})$|1","264$1",0,"264"],"AL":["355","00","(?:700\\\\d\\\\d|900)\\\\d{3}|8\\\\d{5,7}|(?:[2-5]|6\\\\d)\\\\d{7}",[6,7,8,9],[["(\\\\d{3})(\\\\d{3,4})","$1 $2",["80|9"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["4[2-6]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[2358][2-5]|4"],"0$1"],["(\\\\d{3})(\\\\d{5})","$1 $2",["[23578]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["6"],"0$1"]],"0"],"AM":["374","00","(?:[1-489]\\\\d|55|60|77)\\\\d{6}",[8],[["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["[89]0"],"0 $1"],["(\\\\d{3})(\\\\d{5})","$1 $2",["2|3[12]"],"(0$1)"],["(\\\\d{2})(\\\\d{6})","$1 $2",["1|47"],"(0$1)"],["(\\\\d{2})(\\\\d{6})","$1 $2",["[3-9]"],"0$1"]],"0"],"AO":["244","00","[29]\\\\d{8}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[29]"]]]],"AR":["54","00","(?:11|[89]\\\\d\\\\d)\\\\d{8}|[2368]\\\\d{9}",[10,11],[["(\\\\d{4})(\\\\d{2})(\\\\d{4})","$1 $2-$3",["2(?:2[024-9]|3[0-59]|47|6[245]|9[02-8])|3(?:3[28]|4[03-9]|5[2-46-8]|7[1-578]|8[2-9])","2(?:[23]02|6(?:[25]|4[6-8])|9(?:[02356]|4[02568]|72|8[23]))|3(?:3[28]|4(?:[04679]|3[5-8]|5[4-68]|8[2379])|5(?:[2467]|3[237]|8[2-5])|7[1-578]|8(?:[2469]|3[2578]|5[4-8]|7[36-8]|8[5-8]))|2(?:2[24-9]|3[1-59]|47)","2(?:[23]02|6(?:[25]|4(?:64|[78]))|9(?:[02356]|4(?:[0268]|5[2-6])|72|8[23]))|3(?:3[28]|4(?:[04679]|3[78]|5(?:4[46]|8)|8[2379])|5(?:[2467]|3[237]|8[23])|7[1-578]|8(?:[2469]|3[278]|5[56][46]|86[3-6]))|2(?:2[24-9]|3[1-59]|47)|38(?:[58][78]|7[378])|3(?:4[35][56]|58[45]|8(?:[38]5|54|76))[4-6]","2(?:[23]02|6(?:[25]|4(?:64|[78]))|9(?:[02356]|4(?:[0268]|5[2-6])|72|8[23]))|3(?:3[28]|4(?:[04679]|3(?:5(?:4[0-25689]|[56])|[78])|58|8[2379])|5(?:[2467]|3[237]|8(?:[23]|4(?:[45]|60)|5(?:4[0-39]|5|64)))|7[1-578]|8(?:[2469]|3[278]|54(?:4|5[13-7]|6[89])|86[3-6]))|2(?:2[24-9]|3[1-59]|47)|38(?:[58][78]|7[378])|3(?:454|85[56])[46]|3(?:4(?:36|5[56])|8(?:[38]5|76))[4-6]"],"0$1",1],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2-$3",["1"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["[68]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2-$3",["[23]"],"0$1",1],["(\\\\d)(\\\\d{4})(\\\\d{2})(\\\\d{4})","$2 15-$3-$4",["9(?:2[2-469]|3[3-578])","9(?:2(?:2[024-9]|3[0-59]|47|6[245]|9[02-8])|3(?:3[28]|4[03-9]|5[2-46-8]|7[1-578]|8[2-9]))","9(?:2(?:[23]02|6(?:[25]|4[6-8])|9(?:[02356]|4[02568]|72|8[23]))|3(?:3[28]|4(?:[04679]|3[5-8]|5[4-68]|8[2379])|5(?:[2467]|3[237]|8[2-5])|7[1-578]|8(?:[2469]|3[2578]|5[4-8]|7[36-8]|8[5-8])))|92(?:2[24-9]|3[1-59]|47)","9(?:2(?:[23]02|6(?:[25]|4(?:64|[78]))|9(?:[02356]|4(?:[0268]|5[2-6])|72|8[23]))|3(?:3[28]|4(?:[04679]|3[78]|5(?:4[46]|8)|8[2379])|5(?:[2467]|3[237]|8[23])|7[1-578]|8(?:[2469]|3[278]|5(?:[56][46]|[78])|7[378]|8(?:6[3-6]|[78]))))|92(?:2[24-9]|3[1-59]|47)|93(?:4[35][56]|58[45]|8(?:[38]5|54|76))[4-6]","9(?:2(?:[23]02|6(?:[25]|4(?:64|[78]))|9(?:[02356]|4(?:[0268]|5[2-6])|72|8[23]))|3(?:3[28]|4(?:[04679]|3(?:5(?:4[0-25689]|[56])|[78])|5(?:4[46]|8)|8[2379])|5(?:[2467]|3[237]|8(?:[23]|4(?:[45]|60)|5(?:4[0-39]|5|64)))|7[1-578]|8(?:[2469]|3[278]|5(?:4(?:4|5[13-7]|6[89])|[56][46]|[78])|7[378]|8(?:6[3-6]|[78]))))|92(?:2[24-9]|3[1-59]|47)|93(?:4(?:36|5[56])|8(?:[38]5|76))[4-6]"],"0$1",0,"$1 $2 $3-$4"],["(\\\\d)(\\\\d{2})(\\\\d{4})(\\\\d{4})","$2 15-$3-$4",["91"],"0$1",0,"$1 $2 $3-$4"],["(\\\\d{3})(\\\\d{3})(\\\\d{5})","$1-$2-$3",["8"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{3})(\\\\d{4})","$2 15-$3-$4",["9"],"0$1",0,"$1 $2 $3-$4"]],"0",0,"0?(?:(11|2(?:2(?:02?|[13]|2[13-79]|4[1-6]|5[2457]|6[124-8]|7[1-4]|8[13-6]|9[1267])|3(?:02?|1[467]|2[03-6]|3[13-8]|[49][2-6]|5[2-8]|[67])|4(?:7[3-578]|9)|6(?:[0136]|2[24-6]|4[6-8]?|5[15-8])|80|9(?:0[1-3]|[19]|2\\\\d|3[1-6]|4[02568]?|5[2-4]|6[2-46]|72?|8[23]?))|3(?:3(?:2[79]|6|8[2578])|4(?:0[0-24-9]|[12]|3[5-8]?|4[24-7]|5[4-68]?|6[02-9]|7[126]|8[2379]?|9[1-36-8])|5(?:1|2[1245]|3[237]?|4[1-46-9]|6[2-4]|7[1-6]|8[2-5]?)|6[24]|7(?:[069]|1[1568]|2[15]|3[145]|4[13]|5[14-8]|7[2-57]|8[126])|8(?:[01]|2[15-7]|3[2578]?|4[13-6]|5[4-8]?|6[1-357-9]|7[36-8]?|8[5-8]?|9[124])))15)?","9$1"],"AS":["1","011","(?:[58]\\\\d\\\\d|684|900)\\\\d{7}",[10],0,"1",0,"([267]\\\\d{6})$|1","684$1",0,"684"],"AT":["43","00","1\\\\d{3,12}|2\\\\d{6,12}|43(?:(?:0\\\\d|5[02-9])\\\\d{3,9}|2\\\\d{4,5}|[3467]\\\\d{4}|8\\\\d{4,6}|9\\\\d{4,7})|5\\\\d{4,12}|8\\\\d{7,12}|9\\\\d{8,12}|(?:[367]\\\\d|4[0-24-9])\\\\d{4,11}",[4,5,6,7,8,9,10,11,12,13],[["(\\\\d)(\\\\d{3,12})","$1 $2",["1(?:11|[2-9])"],"0$1"],["(\\\\d{3})(\\\\d{2})","$1 $2",["517"],"0$1"],["(\\\\d{2})(\\\\d{3,5})","$1 $2",["5[079]"],"0$1"],["(\\\\d{3})(\\\\d{3,10})","$1 $2",["(?:31|4)6|51|6(?:5[0-3579]|[6-9])|7(?:20|32|8)|[89]"],"0$1"],["(\\\\d{4})(\\\\d{3,9})","$1 $2",["[2-467]|5[2-6]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["5"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4,7})","$1 $2 $3",["5"],"0$1"]],"0"],"AU":["61","001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011","1(?:[0-79]\\\\d{7}(?:\\\\d(?:\\\\d{2})?)?|8[0-24-9]\\\\d{7})|[2-478]\\\\d{8}|1\\\\d{4,7}",[5,6,7,8,9,10,12],[["(\\\\d{2})(\\\\d{3,4})","$1 $2",["16"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2,4})","$1 $2 $3",["16"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["14|4"],"0$1"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["[2378]"],"(0$1)"],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1(?:30|[89])"]]],"0",0,"(183[12])|0",0,0,0,[["(?:(?:(?:2(?:[0-26-9]\\\\d|3[0-8]|4[02-9]|5[0135-9])|7(?:[013-57-9]\\\\d|2[0-8]))\\\\d|3(?:(?:[0-3589]\\\\d|6[1-9]|7[0-35-9])\\\\d|4(?:[0-578]\\\\d|90)))\\\\d\\\\d|8(?:51(?:0(?:0[03-9]|[12479]\\\\d|3[2-9]|5[0-8]|6[1-9]|8[0-7])|1(?:[0235689]\\\\d|1[0-69]|4[0-589]|7[0-47-9])|2(?:0[0-79]|[18][13579]|2[14-9]|3[0-46-9]|[4-6]\\\\d|7[89]|9[0-4])|3\\\\d\\\\d)|(?:6[0-8]|[78]\\\\d)\\\\d{3}|9(?:[02-9]\\\\d{3}|1(?:(?:[0-58]\\\\d|6[0135-9])\\\\d|7(?:0[0-24-9]|[1-9]\\\\d)|9(?:[0-46-9]\\\\d|5[0-79])))))\\\\d{3}",[9]],["4(?:79[01]|83[0-389]|94[0-4])\\\\d{5}|4(?:[0-36]\\\\d|4[047-9]|5[0-25-9]|7[02-8]|8[0-24-9]|9[0-37-9])\\\\d{6}",[9]],["180(?:0\\\\d{3}|2)\\\\d{3}",[7,10]],["190[0-26]\\\\d{6}",[10]],0,0,0,["163\\\\d{2,6}",[5,6,7,8,9]],["14(?:5(?:1[0458]|[23][458])|71\\\\d)\\\\d{4}",[9]],["13(?:00\\\\d{6}(?:\\\\d{2})?|45[0-4]\\\\d{3})|13\\\\d{4}",[6,8,10,12]]],"0011"],"AW":["297","00","(?:[25-79]\\\\d\\\\d|800)\\\\d{4}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[25-9]"]]]],"AX":["358","00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))","2\\\\d{4,9}|35\\\\d{4,5}|(?:60\\\\d\\\\d|800)\\\\d{4,6}|7\\\\d{5,11}|(?:[14]\\\\d|3[0-46-9]|50)\\\\d{4,8}",[5,6,7,8,9,10,11,12],0,"0",0,0,0,0,"18",0,"00"],"AZ":["994","00","365\\\\d{6}|(?:[124579]\\\\d|60|88)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["90"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["1[28]|2|365|46","1[28]|2|365[45]|46","1[28]|2|365(?:4|5[02])|46"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[13-9]"],"0$1"]],"0"],"BA":["387","00","6\\\\d{8}|(?:[35689]\\\\d|49|70)\\\\d{6}",[8,9],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["6[1-3]|[7-9]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2-$3",["[3-5]|6[56]"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3 $4",["6"],"0$1"]],"0"],"BB":["1","011","(?:246|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"([2-9]\\\\d{6})$|1","246$1",0,"246"],"BD":["880","00","[1-469]\\\\d{9}|8[0-79]\\\\d{7,8}|[2-79]\\\\d{8}|[2-9]\\\\d{7}|[3-9]\\\\d{6}|[57-9]\\\\d{5}",[6,7,8,9,10],[["(\\\\d{2})(\\\\d{4,6})","$1-$2",["31[5-8]|[459]1"],"0$1"],["(\\\\d{3})(\\\\d{3,7})","$1-$2",["3(?:[67]|8[013-9])|4(?:6[168]|7|[89][18])|5(?:6[128]|9)|6(?:[15]|28|4[14])|7[2-589]|8(?:0[014-9]|[12])|9[358]|(?:3[2-5]|4[235]|5[2-578]|6[0389]|76|8[3-7]|9[24])1|(?:44|66)[01346-9]"],"0$1"],["(\\\\d{4})(\\\\d{3,6})","$1-$2",["[13-9]|2[23]"],"0$1"],["(\\\\d)(\\\\d{7,8})","$1-$2",["2"],"0$1"]],"0"],"BE":["32","00","4\\\\d{8}|[1-9]\\\\d{7}",[8,9],[["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["(?:80|9)0"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[239]|4[23]"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[15-8]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["4"],"0$1"]],"0"],"BF":["226","00","[025-7]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[025-7]"]]]],"BG":["359","00","00800\\\\d{7}|[2-7]\\\\d{6,7}|[89]\\\\d{6,8}|2\\\\d{5}",[6,7,8,9,12],[["(\\\\d)(\\\\d)(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["2"],"0$1"],["(\\\\d{3})(\\\\d{4})","$1 $2",["43[1-6]|70[1-9]"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["2"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2,3})","$1 $2 $3",["[356]|4[124-7]|7[1-9]|8[1-6]|9[1-7]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["(?:70|8)0"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{2})","$1 $2 $3",["43[1-7]|7"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[48]|9[08]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["9"],"0$1"]],"0"],"BH":["973","00","[136-9]\\\\d{7}",[8],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[13679]|8[02-4679]"]]]],"BI":["257","00","(?:[267]\\\\d|31)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2367]"]]]],"BJ":["229","00","[24-689]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[24-689]"]]]],"BL":["590","00","590\\\\d{6}|(?:69|80|9\\\\d)\\\\d{7}",[9],0,"0",0,0,0,0,0,[["590(?:2[7-9]|3[3-7]|5[12]|87)\\\\d{4}"],["69(?:0\\\\d\\\\d|1(?:2[2-9]|3[0-5])|4(?:0[89]|1[2-6]|9\\\\d)|6(?:1[016-9]|5[0-4]|[67]\\\\d))\\\\d{4}"],["80[0-5]\\\\d{6}"],0,0,0,0,0,["9(?:(?:39[5-7]|76[018])\\\\d|475[0-5])\\\\d{4}"]]],"BM":["1","011","(?:441|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"([2-9]\\\\d{6})$|1","441$1",0,"441"],"BN":["673","00","[2-578]\\\\d{6}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[2-578]"]]]],"BO":["591","00(?:1\\\\d)?","8001\\\\d{5}|(?:[2-467]\\\\d|50)\\\\d{6}",[8,9],[["(\\\\d)(\\\\d{7})","$1 $2",["[235]|4[46]"]],["(\\\\d{8})","$1",["[67]"]],["(\\\\d{3})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["8"]]],"0",0,"0(1\\\\d)?"],"BQ":["599","00","(?:[34]1|7\\\\d)\\\\d{5}",[7],0,0,0,0,0,0,"[347]"],"BR":["55","00(?:1[245]|2[1-35]|31|4[13]|[56]5|99)","(?:[1-46-9]\\\\d\\\\d|5(?:[0-46-9]\\\\d|5[0-46-9]))\\\\d{8}|[1-9]\\\\d{9}|[3589]\\\\d{8}|[34]\\\\d{7}",[8,9,10,11],[["(\\\\d{4})(\\\\d{4})","$1-$2",["300|4(?:0[02]|37)","4(?:02|37)0|[34]00"]],["(\\\\d{3})(\\\\d{2,3})(\\\\d{4})","$1 $2 $3",["(?:[358]|90)0"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2-$3",["(?:[14689][1-9]|2[12478]|3[1-578]|5[13-5]|7[13-579])[2-57]"],"($1)"],["(\\\\d{2})(\\\\d{5})(\\\\d{4})","$1 $2-$3",["[16][1-9]|[2-57-9]"],"($1)"]],"0",0,"(?:0|90)(?:(1[245]|2[1-35]|31|4[13]|[56]5|99)(\\\\d{10,11}))?","$2"],"BS":["1","011","(?:242|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"([3-8]\\\\d{6})$|1","242$1",0,"242"],"BT":["975","00","[17]\\\\d{7}|[2-8]\\\\d{6}",[7,8],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[2-68]|7[246]"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["1[67]|7"]]]],"BW":["267","00","(?:0800|(?:[37]|800)\\\\d)\\\\d{6}|(?:[2-6]\\\\d|90)\\\\d{5}",[7,8,10],[["(\\\\d{2})(\\\\d{5})","$1 $2",["90"]],["(\\\\d{3})(\\\\d{4})","$1 $2",["[24-6]|3[15-9]"]],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[37]"]],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["0"]],["(\\\\d{3})(\\\\d{4})(\\\\d{3})","$1 $2 $3",["8"]]]],"BY":["375","810","(?:[12]\\\\d|33|44|902)\\\\d{7}|8(?:0[0-79]\\\\d{5,7}|[1-7]\\\\d{9})|8(?:1[0-489]|[5-79]\\\\d)\\\\d{7}|8[1-79]\\\\d{6,7}|8[0-79]\\\\d{5}|8\\\\d{5}",[6,7,8,9,10,11],[["(\\\\d{3})(\\\\d{3})","$1 $2",["800"],"8 $1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2,4})","$1 $2 $3",["800"],"8 $1"],["(\\\\d{4})(\\\\d{2})(\\\\d{3})","$1 $2-$3",["1(?:5[169]|6[3-5]|7[179])|2(?:1[35]|2[34]|3[3-5])","1(?:5[169]|6(?:3[1-3]|4|5[125])|7(?:1[3-9]|7[0-24-6]|9[2-7]))|2(?:1[35]|2[34]|3[3-5])"],"8 0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2-$3-$4",["1(?:[56]|7[467])|2[1-3]"],"8 0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2-$3-$4",["[1-4]"],"8 0$1"],["(\\\\d{3})(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["[89]"],"8 $1"]],"8",0,"0|80?",0,0,0,0,"8~10"],"BZ":["501","00","(?:0800\\\\d|[2-8])\\\\d{6}",[7,11],[["(\\\\d{3})(\\\\d{4})","$1-$2",["[2-8]"]],["(\\\\d)(\\\\d{3})(\\\\d{4})(\\\\d{3})","$1-$2-$3-$4",["0"]]]],"CA":["1","011","(?:[2-8]\\\\d|90)\\\\d{8}|3\\\\d{6}",[7,10],0,"1",0,0,0,0,0,[["(?:2(?:04|[23]6|[48]9|50|63)|3(?:06|43|54|6[578]|82)|4(?:03|1[68]|[26]8|3[178]|50|74)|5(?:06|1[49]|48|79|8[147])|6(?:04|[18]3|39|47|72)|7(?:0[59]|42|53|78|8[02])|8(?:[06]7|19|25|7[39])|90[25])[2-9]\\\\d{6}",[10]],["",[10]],["8(?:00|33|44|55|66|77|88)[2-9]\\\\d{6}",[10]],["900[2-9]\\\\d{6}",[10]],["52(?:3(?:[2-46-9][02-9]\\\\d|5(?:[02-46-9]\\\\d|5[0-46-9]))|4(?:[2-478][02-9]\\\\d|5(?:[034]\\\\d|2[024-9]|5[0-46-9])|6(?:0[1-9]|[2-9]\\\\d)|9(?:[05-9]\\\\d|2[0-5]|49)))\\\\d{4}|52[34][2-9]1[02-9]\\\\d{4}|(?:5(?:00|2[125-9]|33|44|66|77|88)|622)[2-9]\\\\d{6}",[10]],0,["310\\\\d{4}",[7]],0,["600[2-9]\\\\d{6}",[10]]]],"CC":["61","001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011","1(?:[0-79]\\\\d{8}(?:\\\\d{2})?|8[0-24-9]\\\\d{7})|[148]\\\\d{8}|1\\\\d{5,7}",[6,7,8,9,10,12],0,"0",0,"([59]\\\\d{7})$|0","8$1",0,0,[["8(?:51(?:0(?:02|31|60|89)|1(?:18|76)|223)|91(?:0(?:1[0-2]|29)|1(?:[28]2|50|79)|2(?:10|64)|3(?:[06]8|22)|4[29]8|62\\\\d|70[23]|959))\\\\d{3}",[9]],["4(?:79[01]|83[0-389]|94[0-4])\\\\d{5}|4(?:[0-36]\\\\d|4[047-9]|5[0-25-9]|7[02-8]|8[0-24-9]|9[0-37-9])\\\\d{6}",[9]],["180(?:0\\\\d{3}|2)\\\\d{3}",[7,10]],["190[0-26]\\\\d{6}",[10]],0,0,0,0,["14(?:5(?:1[0458]|[23][458])|71\\\\d)\\\\d{4}",[9]],["13(?:00\\\\d{6}(?:\\\\d{2})?|45[0-4]\\\\d{3})|13\\\\d{4}",[6,8,10,12]]],"0011"],"CD":["243","00","(?:(?:[189]|5\\\\d)\\\\d|2)\\\\d{7}|[1-68]\\\\d{6}",[7,8,9,10],[["(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["88"],"0$1"],["(\\\\d{2})(\\\\d{5})","$1 $2",["[1-6]"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["2"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[89]"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["5"],"0$1"]],"0"],"CF":["236","00","(?:[27]\\\\d{3}|8776)\\\\d{4}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[278]"]]]],"CG":["242","00","222\\\\d{6}|(?:0\\\\d|80)\\\\d{7}",[9],[["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["8"]],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[02]"]]]],"CH":["41","00","8\\\\d{11}|[2-9]\\\\d{8}",[9,12],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8[047]|90"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2-79]|81"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4 $5",["8"],"0$1"]],"0"],"CI":["225","00","[02]\\\\d{9}",[10],[["(\\\\d{2})(\\\\d{2})(\\\\d)(\\\\d{5})","$1 $2 $3 $4",["2"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{4})","$1 $2 $3 $4",["0"]]]],"CK":["682","00","[2-578]\\\\d{4}",[5],[["(\\\\d{2})(\\\\d{3})","$1 $2",["[2-578]"]]]],"CL":["56","(?:0|1(?:1[0-69]|2[02-5]|5[13-58]|69|7[0167]|8[018]))0","12300\\\\d{6}|6\\\\d{9,10}|[2-9]\\\\d{8}",[9,10,11],[["(\\\\d{5})(\\\\d{4})","$1 $2",["219","2196"],"($1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["44"]],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["2[1-36]"],"($1)"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["9[2-9]"]],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["3[2-5]|[47]|5[1-3578]|6[13-57]|8(?:0[1-9]|[1-9])"],"($1)"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["60|8"]],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"]],["(\\\\d{3})(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3 $4",["60"]]]],"CM":["237","00","[26]\\\\d{8}|88\\\\d{6,7}",[8,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["88"]],["(\\\\d)(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4 $5",["[26]|88"]]]],"CN":["86","00|1(?:[12]\\\\d|79)\\\\d\\\\d00","(?:(?:1[03-689]|2\\\\d)\\\\d\\\\d|6)\\\\d{8}|1\\\\d{10}|[126]\\\\d{6}(?:\\\\d(?:\\\\d{2})?)?|86\\\\d{5,6}|(?:[3-579]\\\\d|8[0-57-9])\\\\d{5,9}",[7,8,9,10,11,12],[["(\\\\d{2})(\\\\d{5,6})","$1 $2",["(?:10|2[0-57-9])[19]|3(?:[157]|35|49|9[1-68])|4(?:1[124-9]|2[179]|6[47-9]|7|8[23])|5(?:[1357]|2[37]|4[36]|6[1-46]|80)|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:07|1[236-8]|2[5-7]|[37]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|3|4[13]|5[1-5]|7[0-79]|9[0-35-9])|(?:4[35]|59|85)[1-9]","(?:10|2[0-57-9])(?:1[02]|9[56])|8078|(?:3(?:[157]\\\\d|35|49|9[1-68])|4(?:1[124-9]|2[179]|[35][1-9]|6[47-9]|7\\\\d|8[23])|5(?:[1357]\\\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\\\d|5[1-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|3\\\\d|4[13]|5[1-5]|7[0-79]|9[0-35-9]))1","10(?:1(?:0|23)|9[56])|2[0-57-9](?:1(?:00|23)|9[56])|80781|(?:3(?:[157]\\\\d|35|49|9[1-68])|4(?:1[124-9]|2[179]|[35][1-9]|6[47-9]|7\\\\d|8[23])|5(?:[1357]\\\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\\\d|5[1-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|3\\\\d|4[13]|5[1-5]|7[0-79]|9[0-35-9]))12","10(?:1(?:0|23)|9[56])|2[0-57-9](?:1(?:00|23)|9[56])|807812|(?:3(?:[157]\\\\d|35|49|9[1-68])|4(?:1[124-9]|2[179]|[35][1-9]|6[47-9]|7\\\\d|8[23])|5(?:[1357]\\\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\\\d|5[1-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|3\\\\d|4[13]|5[1-5]|7[0-79]|9[0-35-9]))123","10(?:1(?:0|23)|9[56])|2[0-57-9](?:1(?:00|23)|9[56])|(?:3(?:[157]\\\\d|35|49|9[1-68])|4(?:1[124-9]|2[179]|[35][1-9]|6[47-9]|7\\\\d|8[23])|5(?:[1357]\\\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:078|1[236-8]|2[5-7]|[37]\\\\d|5[1-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|3\\\\d|4[13]|5[1-5]|7[0-79]|9[0-35-9]))123"],"0$1"],["(\\\\d{3})(\\\\d{5,6})","$1 $2",["3(?:[157]|35|49|9[1-68])|4(?:[17]|2[179]|6[47-9]|8[23])|5(?:[1357]|2[37]|4[36]|6[1-46]|80)|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|[379]|4[13]|5[1-5])|(?:4[35]|59|85)[1-9]","(?:3(?:[157]\\\\d|35|49|9[1-68])|4(?:[17]\\\\d|2[179]|[35][1-9]|6[47-9]|8[23])|5(?:[1357]\\\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\\\d|5[1-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|[379]\\\\d|4[13]|5[1-5]))[19]","85[23](?:10|95)|(?:3(?:[157]\\\\d|35|49|9[1-68])|4(?:[17]\\\\d|2[179]|[35][1-9]|6[47-9]|8[23])|5(?:[1357]\\\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\\\d|5[14-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|[379]\\\\d|4[13]|5[1-5]))(?:10|9[56])","85[23](?:100|95)|(?:3(?:[157]\\\\d|35|49|9[1-68])|4(?:[17]\\\\d|2[179]|[35][1-9]|6[47-9]|8[23])|5(?:[1357]\\\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\\\d|5[14-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|[379]\\\\d|4[13]|5[1-5]))(?:100|9[56])"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["(?:4|80)0"]],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["10|2(?:[02-57-9]|1[1-9])","10|2(?:[02-57-9]|1[1-9])","10[0-79]|2(?:[02-57-9]|1[1-79])|(?:10|21)8(?:0[1-9]|[1-9])"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["3(?:[3-59]|7[02-68])|4(?:[26-8]|3[3-9]|5[2-9])|5(?:3[03-9]|[468]|7[028]|9[2-46-9])|6|7(?:[0-247]|3[04-9]|5[0-4689]|6[2368])|8(?:[1-358]|9[1-7])|9(?:[013479]|5[1-5])|(?:[34]1|55|79|87)[02-9]"],"0$1",1],["(\\\\d{3})(\\\\d{7,8})","$1 $2",["9"]],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["80"],"0$1",1],["(\\\\d{3})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["[3-578]"],"0$1",1],["(\\\\d{3})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["1[3-9]"]],["(\\\\d{2})(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3 $4",["[12]"],"0$1",1]],"0",0,"(1(?:[12]\\\\d|79)\\\\d\\\\d)|0",0,0,0,0,"00"],"CO":["57","00(?:4(?:[14]4|56)|[579])","(?:60\\\\d\\\\d|9101)\\\\d{6}|(?:1\\\\d|3)\\\\d{9}",[10,11],[["(\\\\d{3})(\\\\d{7})","$1 $2",["6"],"($1)"],["(\\\\d{3})(\\\\d{7})","$1 $2",["3[0-357]|91"]],["(\\\\d)(\\\\d{3})(\\\\d{7})","$1-$2-$3",["1"],"0$1",0,"$1 $2 $3"]],"0",0,"0([3579]|4(?:[14]4|56))?"],"CR":["506","00","(?:8\\\\d|90)\\\\d{8}|(?:[24-8]\\\\d{3}|3005)\\\\d{4}",[8,10],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[2-7]|8[3-9]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["[89]"]]],0,0,"(19(?:0[0-2468]|1[09]|20|66|77|99))"],"CU":["53","119","(?:[2-7]|8\\\\d\\\\d)\\\\d{7}|[2-47]\\\\d{6}|[34]\\\\d{5}",[6,7,8,10],[["(\\\\d{2})(\\\\d{4,6})","$1 $2",["2[1-4]|[34]"],"(0$1)"],["(\\\\d)(\\\\d{6,7})","$1 $2",["7"],"(0$1)"],["(\\\\d)(\\\\d{7})","$1 $2",["[56]"],"0$1"],["(\\\\d{3})(\\\\d{7})","$1 $2",["8"],"0$1"]],"0"],"CV":["238","0","(?:[2-59]\\\\d\\\\d|800)\\\\d{4}",[7],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["[2-589]"]]]],"CW":["599","00","(?:[34]1|60|(?:7|9\\\\d)\\\\d)\\\\d{5}",[7,8],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[3467]"]],["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["9[4-8]"]]],0,0,0,0,0,"[69]"],"CX":["61","001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011","1(?:[0-79]\\\\d{8}(?:\\\\d{2})?|8[0-24-9]\\\\d{7})|[148]\\\\d{8}|1\\\\d{5,7}",[6,7,8,9,10,12],0,"0",0,"([59]\\\\d{7})$|0","8$1",0,0,[["8(?:51(?:0(?:01|30|59|88)|1(?:17|46|75)|2(?:22|35))|91(?:00[6-9]|1(?:[28]1|49|78)|2(?:09|63)|3(?:12|26|75)|4(?:56|97)|64\\\\d|7(?:0[01]|1[0-2])|958))\\\\d{3}",[9]],["4(?:79[01]|83[0-389]|94[0-4])\\\\d{5}|4(?:[0-36]\\\\d|4[047-9]|5[0-25-9]|7[02-8]|8[0-24-9]|9[0-37-9])\\\\d{6}",[9]],["180(?:0\\\\d{3}|2)\\\\d{3}",[7,10]],["190[0-26]\\\\d{6}",[10]],0,0,0,0,["14(?:5(?:1[0458]|[23][458])|71\\\\d)\\\\d{4}",[9]],["13(?:00\\\\d{6}(?:\\\\d{2})?|45[0-4]\\\\d{3})|13\\\\d{4}",[6,8,10,12]]],"0011"],"CY":["357","00","(?:[279]\\\\d|[58]0)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{6})","$1 $2",["[257-9]"]]]],"CZ":["420","00","(?:[2-578]\\\\d|60)\\\\d{7}|9\\\\d{8,11}",[9,10,11,12],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[2-8]|9[015-7]"]],["(\\\\d{2})(\\\\d{3})(\\\\d{3})(\\\\d{2})","$1 $2 $3 $4",["96"]],["(\\\\d{2})(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["9"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["9"]]]],"DE":["49","00","[2579]\\\\d{5,14}|49(?:[34]0|69|8\\\\d)\\\\d\\\\d?|49(?:37|49|60|7[089]|9\\\\d)\\\\d{1,3}|49(?:2[024-9]|3[2-689]|7[1-7])\\\\d{1,8}|(?:1|[368]\\\\d|4[0-8])\\\\d{3,13}|49(?:[015]\\\\d|2[13]|31|[46][1-8])\\\\d{1,9}",[4,5,6,7,8,9,10,11,12,13,14,15],[["(\\\\d{2})(\\\\d{3,13})","$1 $2",["3[02]|40|[68]9"],"0$1"],["(\\\\d{3})(\\\\d{3,12})","$1 $2",["2(?:0[1-389]|1[124]|2[18]|3[14])|3(?:[35-9][15]|4[015])|906|(?:2[4-9]|4[2-9]|[579][1-9]|[68][1-8])1","2(?:0[1-389]|12[0-8])|3(?:[35-9][15]|4[015])|906|2(?:[13][14]|2[18])|(?:2[4-9]|4[2-9]|[579][1-9]|[68][1-8])1"],"0$1"],["(\\\\d{4})(\\\\d{2,11})","$1 $2",["[24-6]|3(?:[3569][02-46-9]|4[2-4679]|7[2-467]|8[2-46-8])|70[2-8]|8(?:0[2-9]|[1-8])|90[7-9]|[79][1-9]","[24-6]|3(?:3(?:0[1-467]|2[127-9]|3[124578]|7[1257-9]|8[1256]|9[145])|4(?:2[135]|4[13578]|9[1346])|5(?:0[14]|2[1-3589]|6[1-4]|7[13468]|8[13568])|6(?:2[1-489]|3[124-6]|6[13]|7[12579]|8[1-356]|9[135])|7(?:2[1-7]|4[145]|6[1-5]|7[1-4])|8(?:21|3[1468]|6|7[1467]|8[136])|9(?:0[12479]|2[1358]|4[134679]|6[1-9]|7[136]|8[147]|9[1468]))|70[2-8]|8(?:0[2-9]|[1-8])|90[7-9]|[79][1-9]|3[68]4[1347]|3(?:47|60)[1356]|3(?:3[46]|46|5[49])[1246]|3[4579]3[1357]"],"0$1"],["(\\\\d{3})(\\\\d{4})","$1 $2",["138"],"0$1"],["(\\\\d{5})(\\\\d{2,10})","$1 $2",["3"],"0$1"],["(\\\\d{3})(\\\\d{5,11})","$1 $2",["181"],"0$1"],["(\\\\d{3})(\\\\d)(\\\\d{4,10})","$1 $2 $3",["1(?:3|80)|9"],"0$1"],["(\\\\d{3})(\\\\d{7,8})","$1 $2",["1[67]"],"0$1"],["(\\\\d{3})(\\\\d{7,12})","$1 $2",["8"],"0$1"],["(\\\\d{5})(\\\\d{6})","$1 $2",["185","1850","18500"],"0$1"],["(\\\\d{3})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["7"],"0$1"],["(\\\\d{4})(\\\\d{7})","$1 $2",["18[68]"],"0$1"],["(\\\\d{4})(\\\\d{7})","$1 $2",["15[1279]"],"0$1"],["(\\\\d{5})(\\\\d{6})","$1 $2",["15[03568]","15(?:[0568]|31)"],"0$1"],["(\\\\d{3})(\\\\d{8})","$1 $2",["18"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{7,8})","$1 $2 $3",["1(?:6[023]|7)"],"0$1"],["(\\\\d{4})(\\\\d{2})(\\\\d{7})","$1 $2 $3",["15[279]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{8})","$1 $2 $3",["15"],"0$1"]],"0"],"DJ":["253","00","(?:2\\\\d|77)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[27]"]]]],"DK":["45","00","[2-9]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2-9]"]]]],"DM":["1","011","(?:[58]\\\\d\\\\d|767|900)\\\\d{7}",[10],0,"1",0,"([2-7]\\\\d{6})$|1","767$1",0,"767"],"DO":["1","011","(?:[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,0,0,0,"8001|8[024]9"],"DZ":["213","00","(?:[1-4]|[5-79]\\\\d|80)\\\\d{7}",[8,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[1-4]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["9"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[5-8]"],"0$1"]],"0"],"EC":["593","00","1\\\\d{9,10}|(?:[2-7]|9\\\\d)\\\\d{7}",[8,9,10,11],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2-$3",["[2-7]"],"(0$1)",0,"$1-$2-$3"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["9"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["1"]]],"0"],"EE":["372","00","8\\\\d{9}|[4578]\\\\d{7}|(?:[3-8]\\\\d|90)\\\\d{5}",[7,8,10],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[369]|4[3-8]|5(?:[0-2]|5[0-478]|6[45])|7[1-9]|88","[369]|4[3-8]|5(?:[02]|1(?:[0-8]|95)|5[0-478]|6(?:4[0-4]|5[1-589]))|7[1-9]|88"]],["(\\\\d{4})(\\\\d{3,4})","$1 $2",["[45]|8(?:00|[1-49])","[45]|8(?:00[1-9]|[1-49])"]],["(\\\\d{2})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["7"]],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8"]]]],"EG":["20","00","[189]\\\\d{8,9}|[24-6]\\\\d{8}|[135]\\\\d{7}",[8,9,10],[["(\\\\d)(\\\\d{7,8})","$1 $2",["[23]"],"0$1"],["(\\\\d{2})(\\\\d{6,7})","$1 $2",["1[35]|[4-6]|8[2468]|9[235-7]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[89]"],"0$1"],["(\\\\d{2})(\\\\d{8})","$1 $2",["1"],"0$1"]],"0"],"EH":["212","00","[5-8]\\\\d{8}",[9],0,"0",0,0,0,0,"528[89]"],"ER":["291","00","[178]\\\\d{6}",[7],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[178]"],"0$1"]],"0"],"ES":["34","00","[5-9]\\\\d{8}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[89]00"]],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[5-9]"]]]],"ET":["251","00","(?:11|[2-579]\\\\d)\\\\d{7}",[9],[["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[1-579]"],"0$1"]],"0"],"FI":["358","00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))","[1-35689]\\\\d{4}|7\\\\d{10,11}|(?:[124-7]\\\\d|3[0-46-9])\\\\d{8}|[1-9]\\\\d{5,8}",[5,6,7,8,9,10,11,12],[["(\\\\d{5})","$1",["20[2-59]"],"0$1"],["(\\\\d{3})(\\\\d{3,7})","$1 $2",["(?:[1-3]0|[68])0|70[07-9]"],"0$1"],["(\\\\d{2})(\\\\d{4,8})","$1 $2",["[14]|2[09]|50|7[135]"],"0$1"],["(\\\\d{2})(\\\\d{6,10})","$1 $2",["7"],"0$1"],["(\\\\d)(\\\\d{4,9})","$1 $2",["(?:1[49]|[2568])[1-8]|3(?:0[1-9]|[1-9])|9"],"0$1"]],"0",0,0,0,0,"1[03-79]|[2-9]",0,"00"],"FJ":["679","0(?:0|52)","45\\\\d{5}|(?:0800\\\\d|[235-9])\\\\d{6}",[7,11],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[235-9]|45"]],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["0"]]],0,0,0,0,0,0,0,"00"],"FK":["500","00","[2-7]\\\\d{4}",[5]],"FM":["691","00","(?:[39]\\\\d\\\\d|820)\\\\d{4}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[389]"]]]],"FO":["298","00","[2-9]\\\\d{5}",[6],[["(\\\\d{6})","$1",["[2-9]"]]],0,0,"(10(?:01|[12]0|88))"],"FR":["33","00","[1-9]\\\\d{8}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"],"0 $1"],["(\\\\d)(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4 $5",["[1-79]"],"0$1"]],"0"],"GA":["241","00","(?:[067]\\\\d|11)\\\\d{6}|[2-7]\\\\d{6}",[7,8],[["(\\\\d)(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2-7]"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["0"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["11|[67]"],"0$1"]],0,0,"0(11\\\\d{6}|60\\\\d{6}|61\\\\d{6}|6[256]\\\\d{6}|7[467]\\\\d{6})","$1"],"GB":["44","00","[1-357-9]\\\\d{9}|[18]\\\\d{8}|8\\\\d{6}",[7,9,10],[["(\\\\d{3})(\\\\d{4})","$1 $2",["800","8001","80011","800111","8001111"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["845","8454","84546","845464"],"0$1"],["(\\\\d{3})(\\\\d{6})","$1 $2",["800"],"0$1"],["(\\\\d{5})(\\\\d{4,5})","$1 $2",["1(?:38|5[23]|69|76|94)","1(?:(?:38|69)7|5(?:24|39)|768|946)","1(?:3873|5(?:242|39[4-6])|(?:697|768)[347]|9467)"],"0$1"],["(\\\\d{4})(\\\\d{5,6})","$1 $2",["1(?:[2-69][02-9]|[78])"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["[25]|7(?:0|6[02-9])","[25]|7(?:0|6(?:[03-9]|2[356]))"],"0$1"],["(\\\\d{4})(\\\\d{6})","$1 $2",["7"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[1389]"],"0$1"]],"0",0,0,0,0,0,[["(?:1(?:1(?:3(?:[0-58]\\\\d\\\\d|73[0-35])|4(?:(?:[0-5]\\\\d|70)\\\\d|69[7-9])|(?:(?:5[0-26-9]|[78][0-49])\\\\d|6(?:[0-4]\\\\d|50))\\\\d)|(?:2(?:(?:0[024-9]|2[3-9]|3[3-79]|4[1-689]|[58][02-9]|6[0-47-9]|7[013-9]|9\\\\d)\\\\d|1(?:[0-7]\\\\d|8[0-3]))|(?:3(?:0\\\\d|1[0-8]|[25][02-9]|3[02-579]|[468][0-46-9]|7[1-35-79]|9[2-578])|4(?:0[03-9]|[137]\\\\d|[28][02-57-9]|4[02-69]|5[0-8]|[69][0-79])|5(?:0[1-35-9]|[16]\\\\d|2[024-9]|3[015689]|4[02-9]|5[03-9]|7[0-35-9]|8[0-468]|9[0-57-9])|6(?:0[034689]|1\\\\d|2[0-35689]|[38][013-9]|4[1-467]|5[0-69]|6[13-9]|7[0-8]|9[0-24578])|7(?:0[0246-9]|2\\\\d|3[0236-8]|4[03-9]|5[0-46-9]|6[013-9]|7[0-35-9]|8[024-9]|9[02-9])|8(?:0[35-9]|2[1-57-9]|3[02-578]|4[0-578]|5[124-9]|6[2-69]|7\\\\d|8[02-9]|9[02569])|9(?:0[02-589]|[18]\\\\d|2[02-689]|3[1-57-9]|4[2-9]|5[0-579]|6[2-47-9]|7[0-24578]|9[2-57]))\\\\d)\\\\d)|2(?:0[013478]|3[0189]|4[017]|8[0-46-9]|9[0-2])\\\\d{3})\\\\d{4}|1(?:2(?:0(?:46[1-4]|87[2-9])|545[1-79]|76(?:2\\\\d|3[1-8]|6[1-6])|9(?:7(?:2[0-4]|3[2-5])|8(?:2[2-8]|7[0-47-9]|8[3-5])))|3(?:6(?:38[2-5]|47[23])|8(?:47[04-9]|64[0157-9]))|4(?:044[1-7]|20(?:2[23]|8\\\\d)|6(?:0(?:30|5[2-57]|6[1-8]|7[2-8])|140)|8(?:052|87[1-3]))|5(?:2(?:4(?:3[2-79]|6\\\\d)|76\\\\d)|6(?:26[06-9]|686))|6(?:06(?:4\\\\d|7[4-79])|295[5-7]|35[34]\\\\d|47(?:24|61)|59(?:5[08]|6[67]|74)|9(?:55[0-4]|77[23]))|7(?:26(?:6[13-9]|7[0-7])|(?:442|688)\\\\d|50(?:2[0-3]|[3-68]2|76))|8(?:27[56]\\\\d|37(?:5[2-5]|8[239])|843[2-58])|9(?:0(?:0(?:6[1-8]|85)|52\\\\d)|3583|4(?:66[1-8]|9(?:2[01]|81))|63(?:23|3[1-4])|9561))\\\\d{3}",[9,10]],["7(?:457[0-57-9]|700[01]|911[028])\\\\d{5}|7(?:[1-3]\\\\d\\\\d|4(?:[0-46-9]\\\\d|5[0-689])|5(?:0[0-8]|[13-9]\\\\d|2[0-35-9])|7(?:0[1-9]|[1-7]\\\\d|8[02-9]|9[0-689])|8(?:[014-9]\\\\d|[23][0-8])|9(?:[024-9]\\\\d|1[02-9]|3[0-689]))\\\\d{6}",[10]],["80[08]\\\\d{7}|800\\\\d{6}|8001111"],["(?:8(?:4[2-5]|7[0-3])|9(?:[01]\\\\d|8[2-49]))\\\\d{7}|845464\\\\d",[7,10]],["70\\\\d{8}",[10]],0,["(?:3[0347]|55)\\\\d{8}",[10]],["76(?:464|652)\\\\d{5}|76(?:0[0-28]|2[356]|34|4[01347]|5[49]|6[0-369]|77|8[14]|9[139])\\\\d{6}",[10]],["56\\\\d{8}",[10]]],0," x"],"GD":["1","011","(?:473|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"([2-9]\\\\d{6})$|1","473$1",0,"473"],"GE":["995","00","(?:[3-57]\\\\d\\\\d|800)\\\\d{6}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["70"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["32"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[57]"]],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[348]"],"0$1"]],"0"],"GF":["594","00","[56]94\\\\d{6}|(?:80|9\\\\d)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[56]|9[47]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[89]"],"0$1"]],"0"],"GG":["44","00","(?:1481|[357-9]\\\\d{3})\\\\d{6}|8\\\\d{6}(?:\\\\d{2})?",[7,9,10],0,"0",0,"([25-9]\\\\d{5})$|0","1481$1",0,0,[["1481[25-9]\\\\d{5}",[10]],["7(?:(?:781|839)\\\\d|911[17])\\\\d{5}",[10]],["80[08]\\\\d{7}|800\\\\d{6}|8001111"],["(?:8(?:4[2-5]|7[0-3])|9(?:[01]\\\\d|8[0-3]))\\\\d{7}|845464\\\\d",[7,10]],["70\\\\d{8}",[10]],0,["(?:3[0347]|55)\\\\d{8}",[10]],["76(?:464|652)\\\\d{5}|76(?:0[0-28]|2[356]|34|4[01347]|5[49]|6[0-369]|77|8[14]|9[139])\\\\d{6}",[10]],["56\\\\d{8}",[10]]]],"GH":["233","00","(?:[235]\\\\d{3}|800)\\\\d{5}",[8,9],[["(\\\\d{3})(\\\\d{5})","$1 $2",["8"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[235]"],"0$1"]],"0"],"GI":["350","00","(?:[25]\\\\d|60)\\\\d{6}",[8],[["(\\\\d{3})(\\\\d{5})","$1 $2",["2"]]]],"GL":["299","00","(?:19|[2-689]\\\\d|70)\\\\d{4}",[6],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["19|[2-9]"]]]],"GM":["220","00","[2-9]\\\\d{6}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[2-9]"]]]],"GN":["224","00","722\\\\d{6}|(?:3|6\\\\d)\\\\d{7}",[8,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["3"]],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[67]"]]]],"GP":["590","00","590\\\\d{6}|(?:69|80|9\\\\d)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[569]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"],"0$1"]],"0",0,0,0,0,0,[["590(?:0[1-68]|[14][0-24-9]|2[0-68]|3[1-9]|5[3-579]|[68][0-689]|7[08]|9\\\\d)\\\\d{4}"],["69(?:0\\\\d\\\\d|1(?:2[2-9]|3[0-5])|4(?:0[89]|1[2-6]|9\\\\d)|6(?:1[016-9]|5[0-4]|[67]\\\\d))\\\\d{4}"],["80[0-5]\\\\d{6}"],0,0,0,0,0,["9(?:(?:39[5-7]|76[018])\\\\d|475[0-5])\\\\d{4}"]]],"GQ":["240","00","222\\\\d{6}|(?:3\\\\d|55|[89]0)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[235]"]],["(\\\\d{3})(\\\\d{6})","$1 $2",["[89]"]]]],"GR":["30","00","5005000\\\\d{3}|8\\\\d{9,11}|(?:[269]\\\\d|70)\\\\d{8}",[10,11,12],[["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["21|7"]],["(\\\\d{4})(\\\\d{6})","$1 $2",["2(?:2|3[2-57-9]|4[2-469]|5[2-59]|6[2-9]|7[2-69]|8[2-49])|5"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[2689]"]],["(\\\\d{3})(\\\\d{3,4})(\\\\d{5})","$1 $2 $3",["8"]]]],"GT":["502","00","80\\\\d{6}|(?:1\\\\d{3}|[2-7])\\\\d{7}",[8,11],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[2-8]"]],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"]]]],"GU":["1","011","(?:[58]\\\\d\\\\d|671|900)\\\\d{7}",[10],0,"1",0,"([2-9]\\\\d{6})$|1","671$1",0,"671"],"GW":["245","00","[49]\\\\d{8}|4\\\\d{6}",[7,9],[["(\\\\d{3})(\\\\d{4})","$1 $2",["40"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[49]"]]]],"GY":["592","001","(?:[2-8]\\\\d{3}|9008)\\\\d{3}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[2-9]"]]]],"HK":["852","00(?:30|5[09]|[126-9]?)","8[0-46-9]\\\\d{6,7}|9\\\\d{4,7}|(?:[2-7]|9\\\\d{3})\\\\d{7}",[5,6,7,8,9,11],[["(\\\\d{3})(\\\\d{2,5})","$1 $2",["900","9003"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["[2-7]|8[1-4]|9(?:0[1-9]|[1-8])"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8"]],["(\\\\d{3})(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["9"]]],0,0,0,0,0,0,0,"00"],"HN":["504","00","8\\\\d{10}|[237-9]\\\\d{7}",[8,11],[["(\\\\d{4})(\\\\d{4})","$1-$2",["[237-9]"]]]],"HR":["385","00","(?:[24-69]\\\\d|3[0-79])\\\\d{7}|80\\\\d{5,7}|[1-79]\\\\d{7}|6\\\\d{5,6}",[6,7,8,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2,3})","$1 $2 $3",["6[01]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2,3})","$1 $2 $3",["8"],"0$1"],["(\\\\d)(\\\\d{4})(\\\\d{3})","$1 $2 $3",["1"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["6|7[245]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["9"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[2-57]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8"],"0$1"]],"0"],"HT":["509","00","(?:[2-489]\\\\d|55)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["[2-589]"]]]],"HU":["36","00","[235-7]\\\\d{8}|[1-9]\\\\d{7}",[8,9],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"],"(06 $1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[27][2-9]|3[2-7]|4[24-9]|5[2-79]|6|8[2-57-9]|9[2-69]"],"(06 $1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[2-9]"],"06 $1"]],"06"],"ID":["62","00[89]","00[1-9]\\\\d{9,14}|(?:[1-36]|8\\\\d{5})\\\\d{6}|00\\\\d{9}|[1-9]\\\\d{8,10}|[2-9]\\\\d{7}",[7,8,9,10,11,12,13,14,15,16,17],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["15"]],["(\\\\d{2})(\\\\d{5,9})","$1 $2",["2[124]|[36]1"],"(0$1)"],["(\\\\d{3})(\\\\d{5,7})","$1 $2",["800"],"0$1"],["(\\\\d{3})(\\\\d{5,8})","$1 $2",["[2-79]"],"(0$1)"],["(\\\\d{3})(\\\\d{3,4})(\\\\d{3})","$1-$2-$3",["8[1-35-9]"],"0$1"],["(\\\\d{3})(\\\\d{6,8})","$1 $2",["1"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["804"],"0$1"],["(\\\\d{3})(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["80"],"0$1"],["(\\\\d{3})(\\\\d{4})(\\\\d{4,5})","$1-$2-$3",["8"],"0$1"]],"0"],"IE":["353","00","(?:1\\\\d|[2569])\\\\d{6,8}|4\\\\d{6,9}|7\\\\d{8}|8\\\\d{8,9}",[7,8,9,10],[["(\\\\d{2})(\\\\d{5})","$1 $2",["2[24-9]|47|58|6[237-9]|9[35-9]"],"(0$1)"],["(\\\\d{3})(\\\\d{5})","$1 $2",["[45]0"],"(0$1)"],["(\\\\d)(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["1"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[2569]|4[1-69]|7[14]"],"(0$1)"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["70"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["81"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[78]"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1"]],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["4"],"(0$1)"],["(\\\\d{2})(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3 $4",["8"],"0$1"]],"0"],"IL":["972","0(?:0|1[2-9])","1\\\\d{6}(?:\\\\d{3,5})?|[57]\\\\d{8}|[1-489]\\\\d{7}",[7,8,9,10,11,12],[["(\\\\d{4})(\\\\d{3})","$1-$2",["125"]],["(\\\\d{4})(\\\\d{2})(\\\\d{2})","$1-$2-$3",["121"]],["(\\\\d)(\\\\d{3})(\\\\d{4})","$1-$2-$3",["[2-489]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["[57]"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1-$2-$3",["12"]],["(\\\\d{4})(\\\\d{6})","$1-$2",["159"]],["(\\\\d)(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1-$2-$3-$4",["1[7-9]"]],["(\\\\d{3})(\\\\d{1,2})(\\\\d{3})(\\\\d{4})","$1-$2 $3-$4",["15"]]],"0"],"IM":["44","00","1624\\\\d{6}|(?:[3578]\\\\d|90)\\\\d{8}",[10],0,"0",0,"([25-8]\\\\d{5})$|0","1624$1",0,"74576|(?:16|7[56])24"],"IN":["91","00","(?:000800|[2-9]\\\\d\\\\d)\\\\d{7}|1\\\\d{7,12}",[8,9,10,11,12,13],[["(\\\\d{8})","$1",["5(?:0|2[23]|3[03]|[67]1|88)","5(?:0|2(?:21|3)|3(?:0|3[23])|616|717|888)","5(?:0|2(?:21|3)|3(?:0|3[23])|616|717|8888)"],0,1],["(\\\\d{4})(\\\\d{4,5})","$1 $2",["180","1800"],0,1],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["140"],0,1],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["11|2[02]|33|4[04]|79[1-7]|80[2-46]","11|2[02]|33|4[04]|79(?:[1-6]|7[19])|80(?:[2-4]|6[0-589])","11|2[02]|33|4[04]|79(?:[124-6]|3(?:[02-9]|1[0-24-9])|7(?:1|9[1-6]))|80(?:[2-4]|6[0-589])"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1(?:2[0-249]|3[0-25]|4[145]|[68]|7[1257])|2(?:1[257]|3[013]|4[01]|5[0137]|6[0158]|78|8[1568])|3(?:26|4[1-3]|5[34]|6[01489]|7[02-46]|8[159])|4(?:1[36]|2[1-47]|5[12]|6[0-26-9]|7[0-24-9]|8[013-57]|9[014-7])|5(?:1[025]|22|[36][25]|4[28]|5[12]|[78]1)|6(?:12|[2-4]1|5[17]|6[13]|80)|7(?:12|3[134]|4[47]|61|88)|8(?:16|2[014]|3[126]|6[136]|7[078]|8[34]|91)|(?:43|59|75)[15]|(?:1[59]|29|67|72)[14]","1(?:2[0-24]|3[0-25]|4[145]|[59][14]|6[1-9]|7[1257]|8[1-57-9])|2(?:1[257]|3[013]|4[01]|5[0137]|6[058]|78|8[1568]|9[14])|3(?:26|4[1-3]|5[34]|6[01489]|7[02-46]|8[159])|4(?:1[36]|2[1-47]|3[15]|5[12]|6[0-26-9]|7[0-24-9]|8[013-57]|9[014-7])|5(?:1[025]|22|[36][25]|4[28]|[578]1|9[15])|674|7(?:(?:2[14]|3[34]|5[15])[2-6]|61[346]|88[0-8])|8(?:70[2-6]|84[235-7]|91[3-7])|(?:1(?:29|60|8[06])|261|552|6(?:12|[2-47]1|5[17]|6[13]|80)|7(?:12|31|4[47])|8(?:16|2[014]|3[126]|6[136]|7[78]|83))[2-7]","1(?:2[0-24]|3[0-25]|4[145]|[59][14]|6[1-9]|7[1257]|8[1-57-9])|2(?:1[257]|3[013]|4[01]|5[0137]|6[058]|78|8[1568]|9[14])|3(?:26|4[1-3]|5[34]|6[01489]|7[02-46]|8[159])|4(?:1[36]|2[1-47]|3[15]|5[12]|6[0-26-9]|7[0-24-9]|8[013-57]|9[014-7])|5(?:1[025]|22|[36][25]|4[28]|[578]1|9[15])|6(?:12(?:[2-6]|7[0-8])|74[2-7])|7(?:(?:2[14]|5[15])[2-6]|3171|61[346]|88(?:[2-7]|82))|8(?:70[2-6]|84(?:[2356]|7[19])|91(?:[3-6]|7[19]))|73[134][2-6]|(?:74[47]|8(?:16|2[014]|3[126]|6[136]|7[78]|83))(?:[2-6]|7[19])|(?:1(?:29|60|8[06])|261|552|6(?:[2-4]1|5[17]|6[13]|7(?:1|4[0189])|80)|7(?:12|88[01]))[2-7]"],"0$1",1],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1(?:[2-479]|5[0235-9])|[2-5]|6(?:1[1358]|2[2457-9]|3[2-5]|4[235-7]|5[2-689]|6[24578]|7[235689]|8[1-6])|7(?:1[013-9]|28|3[129]|4[1-35689]|5[29]|6[02-5]|70)|807","1(?:[2-479]|5[0235-9])|[2-5]|6(?:1[1358]|2(?:[2457]|84|95)|3(?:[2-4]|55)|4[235-7]|5[2-689]|6[24578]|7[235689]|8[1-6])|7(?:1(?:[013-8]|9[6-9])|28[6-8]|3(?:17|2[0-49]|9[2-57])|4(?:1[2-4]|[29][0-7]|3[0-8]|[56]|8[0-24-7])|5(?:2[1-3]|9[0-6])|6(?:0[5689]|2[5-9]|3[02-8]|4|5[0-367])|70[13-7])|807[19]","1(?:[2-479]|5(?:[0236-9]|5[013-9]))|[2-5]|6(?:2(?:84|95)|355|83)|73179|807(?:1|9[1-3])|(?:1552|6(?:1[1358]|2[2457]|3[2-4]|4[235-7]|5[2-689]|6[24578]|7[235689]|8[124-6])\\\\d|7(?:1(?:[013-8]\\\\d|9[6-9])|28[6-8]|3(?:2[0-49]|9[2-57])|4(?:1[2-4]|[29][0-7]|3[0-8]|[56]\\\\d|8[0-24-7])|5(?:2[1-3]|9[0-6])|6(?:0[5689]|2[5-9]|3[02-8]|4\\\\d|5[0-367])|70[13-7]))[2-7]"],"0$1",1],["(\\\\d{5})(\\\\d{5})","$1 $2",["[6-9]"],"0$1",1],["(\\\\d{4})(\\\\d{2,4})(\\\\d{4})","$1 $2 $3",["1(?:6|8[06])","1(?:6|8[06]0)"],0,1],["(\\\\d{4})(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["18"],0,1]],"0"],"IO":["246","00","3\\\\d{6}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["3"]]]],"IQ":["964","00","(?:1|7\\\\d\\\\d)\\\\d{7}|[2-6]\\\\d{7,8}",[8,9,10],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[2-6]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["7"],"0$1"]],"0"],"IR":["98","00","[1-9]\\\\d{9}|(?:[1-8]\\\\d\\\\d|9)\\\\d{3,4}",[4,5,6,7,10],[["(\\\\d{4,5})","$1",["96"],"0$1"],["(\\\\d{2})(\\\\d{4,5})","$1 $2",["(?:1[137]|2[13-68]|3[1458]|4[145]|5[1468]|6[16]|7[1467]|8[13467])[12689]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["9"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["[1-8]"],"0$1"]],"0"],"IS":["354","00|1(?:0(?:01|[12]0)|100)","(?:38\\\\d|[4-9])\\\\d{6}",[7,9],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[4-9]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["3"]]],0,0,0,0,0,0,0,"00"],"IT":["39","00","0\\\\d{5,10}|1\\\\d{8,10}|3(?:[0-8]\\\\d{7,10}|9\\\\d{7,8})|(?:43|55|70)\\\\d{8}|8\\\\d{5}(?:\\\\d{2,4})?",[6,7,8,9,10,11,12],[["(\\\\d{2})(\\\\d{4,6})","$1 $2",["0[26]"]],["(\\\\d{3})(\\\\d{3,6})","$1 $2",["0[13-57-9][0159]|8(?:03|4[17]|9[2-5])","0[13-57-9][0159]|8(?:03|4[17]|9(?:2|3[04]|[45][0-4]))"]],["(\\\\d{4})(\\\\d{2,6})","$1 $2",["0(?:[13-579][2-46-8]|8[236-8])"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["894"]],["(\\\\d{2})(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["0[26]|5"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["1(?:44|[679])|[378]|43"]],["(\\\\d{3})(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["0[13-57-9][0159]|14"]],["(\\\\d{2})(\\\\d{4})(\\\\d{5})","$1 $2 $3",["0[26]"]],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["0"]],["(\\\\d{3})(\\\\d{4})(\\\\d{4,5})","$1 $2 $3",["3"]]],0,0,0,0,0,0,[["0669[0-79]\\\\d{1,6}|0(?:1(?:[0159]\\\\d|[27][1-5]|31|4[1-4]|6[1356]|8[2-57])|2\\\\d\\\\d|3(?:[0159]\\\\d|2[1-4]|3[12]|[48][1-6]|6[2-59]|7[1-7])|4(?:[0159]\\\\d|[23][1-9]|4[245]|6[1-5]|7[1-4]|81)|5(?:[0159]\\\\d|2[1-5]|3[2-6]|4[1-79]|6[4-6]|7[1-578]|8[3-8])|6(?:[0-57-9]\\\\d|6[0-8])|7(?:[0159]\\\\d|2[12]|3[1-7]|4[2-46]|6[13569]|7[13-6]|8[1-59])|8(?:[0159]\\\\d|2[3-578]|3[1-356]|[6-8][1-5])|9(?:[0159]\\\\d|[238][1-5]|4[12]|6[1-8]|7[1-6]))\\\\d{2,7}",[6,7,8,9,10,11]],["3[2-9]\\\\d{7,8}|(?:31|43)\\\\d{8}",[9,10]],["80(?:0\\\\d{3}|3)\\\\d{3}",[6,9]],["(?:0878\\\\d{3}|89(?:2\\\\d|3[04]|4(?:[0-4]|[5-9]\\\\d\\\\d)|5[0-4]))\\\\d\\\\d|(?:1(?:44|6[346])|89(?:38|5[5-9]|9))\\\\d{6}",[6,8,9,10]],["1(?:78\\\\d|99)\\\\d{6}",[9,10]],["3[2-8]\\\\d{9,10}",[11,12]],0,0,["55\\\\d{8}",[10]],["84(?:[08]\\\\d{3}|[17])\\\\d{3}",[6,9]]]],"JE":["44","00","1534\\\\d{6}|(?:[3578]\\\\d|90)\\\\d{8}",[10],0,"0",0,"([0-24-8]\\\\d{5})$|0","1534$1",0,0,[["1534[0-24-8]\\\\d{5}"],["7(?:(?:(?:50|82)9|937)\\\\d|7(?:00[378]|97\\\\d))\\\\d{5}"],["80(?:07(?:35|81)|8901)\\\\d{4}"],["(?:8(?:4(?:4(?:4(?:05|42|69)|703)|5(?:041|800))|7(?:0002|1206))|90(?:066[59]|1810|71(?:07|55)))\\\\d{4}"],["701511\\\\d{4}"],0,["(?:3(?:0(?:07(?:35|81)|8901)|3\\\\d{4}|4(?:4(?:4(?:05|42|69)|703)|5(?:041|800))|7(?:0002|1206))|55\\\\d{4})\\\\d{4}"],["76(?:464|652)\\\\d{5}|76(?:0[0-28]|2[356]|34|4[01347]|5[49]|6[0-369]|77|8[14]|9[139])\\\\d{6}"],["56\\\\d{8}"]]],"JM":["1","011","(?:[58]\\\\d\\\\d|658|900)\\\\d{7}",[10],0,"1",0,0,0,0,"658|876"],"JO":["962","00","(?:(?:[2689]|7\\\\d)\\\\d|32|53)\\\\d{6}",[8,9],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[2356]|87"],"(0$1)"],["(\\\\d{3})(\\\\d{5,6})","$1 $2",["[89]"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1 $2",["70"],"0$1"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["7"],"0$1"]],"0"],"JP":["81","010","00[1-9]\\\\d{6,14}|[257-9]\\\\d{9}|(?:00|[1-9]\\\\d\\\\d)\\\\d{6}",[8,9,10,11,12,13,14,15,16,17],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1-$2-$3",["(?:12|57|99)0"],"0$1"],["(\\\\d{4})(\\\\d)(\\\\d{4})","$1-$2-$3",["1(?:26|3[79]|4[56]|5[4-68]|6[3-5])|499|5(?:76|97)|746|8(?:3[89]|47|51)|9(?:80|9[16])","1(?:267|3(?:7[247]|9[278])|466|5(?:47|58|64)|6(?:3[245]|48|5[4-68]))|499[2468]|5(?:76|97)9|7468|8(?:3(?:8[7-9]|96)|477|51[2-9])|9(?:802|9(?:1[23]|69))|1(?:45|58)[67]","1(?:267|3(?:7[247]|9[278])|466|5(?:47|58|64)|6(?:3[245]|48|5[4-68]))|499[2468]|5(?:769|979[2-69])|7468|8(?:3(?:8[7-9]|96[2457-9])|477|51[2-9])|9(?:802|9(?:1[23]|69))|1(?:45|58)[67]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["60"],"0$1"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1-$2-$3",["[36]|4(?:2[09]|7[01])","[36]|4(?:2(?:0|9[02-69])|7(?:0[019]|1))"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["1(?:1|5[45]|77|88|9[69])|2(?:2[1-37]|3[0-269]|4[59]|5|6[24]|7[1-358]|8[1369]|9[0-38])|4(?:[28][1-9]|3[0-57]|[45]|6[248]|7[2-579]|9[29])|5(?:2|3[0459]|4[0-369]|5[29]|8[02389]|9[0-389])|7(?:2[02-46-9]|34|[58]|6[0249]|7[57]|9[2-6])|8(?:2[124589]|3[26-9]|49|51|6|7[0-468]|8[68]|9[019])|9(?:[23][1-9]|4[15]|5[138]|6[1-3]|7[156]|8[189]|9[1-489])","1(?:1|5(?:4[018]|5[017])|77|88|9[69])|2(?:2(?:[127]|3[014-9])|3[0-269]|4[59]|5(?:[1-3]|5[0-69]|9[19])|62|7(?:[1-35]|8[0189])|8(?:[16]|3[0134]|9[0-5])|9(?:[028]|17))|4(?:2(?:[13-79]|8[014-6])|3[0-57]|[45]|6[248]|7[2-47]|8[1-9]|9[29])|5(?:2|3(?:[045]|9[0-8])|4[0-369]|5[29]|8[02389]|9[0-3])|7(?:2[02-46-9]|34|[58]|6[0249]|7[57]|9(?:[23]|4[0-59]|5[01569]|6[0167]))|8(?:2(?:[1258]|4[0-39]|9[0-2469])|3(?:[29]|60)|49|51|6(?:[0-24]|36|5[0-3589]|7[23]|9[01459])|7[0-468]|8[68])|9(?:[23][1-9]|4[15]|5[138]|6[1-3]|7[156]|8[189]|9(?:[1289]|3[34]|4[0178]))|(?:264|837)[016-9]|2(?:57|93)[015-9]|(?:25[0468]|422|838)[01]|(?:47[59]|59[89]|8(?:6[68]|9))[019]","1(?:1|5(?:4[018]|5[017])|77|88|9[69])|2(?:2[127]|3[0-269]|4[59]|5(?:[1-3]|5[0-69]|9(?:17|99))|6(?:2|4[016-9])|7(?:[1-35]|8[0189])|8(?:[16]|3[0134]|9[0-5])|9(?:[028]|17))|4(?:2(?:[13-79]|8[014-6])|3[0-57]|[45]|6[248]|7[2-47]|9[29])|5(?:2|3(?:[045]|9(?:[0-58]|6[4-9]|7[0-35689]))|4[0-369]|5[29]|8[02389]|9[0-3])|7(?:2[02-46-9]|34|[58]|6[0249]|7[57]|9(?:[23]|4[0-59]|5[01569]|6[0167]))|8(?:2(?:[1258]|4[0-39]|9[0169])|3(?:[29]|60|7(?:[017-9]|6[6-8]))|49|51|6(?:[0-24]|36[2-57-9]|5(?:[0-389]|5[23])|6(?:[01]|9[178])|7(?:2[2-468]|3[78])|9[0145])|7[0-468]|8[68])|9(?:4[15]|5[138]|7[156]|8[189]|9(?:[1289]|3(?:31|4[357])|4[0178]))|(?:8294|96)[1-3]|2(?:57|93)[015-9]|(?:223|8699)[014-9]|(?:25[0468]|422|838)[01]|(?:48|8292|9[23])[1-9]|(?:47[59]|59[89]|8(?:68|9))[019]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{4})","$1-$2-$3",["[14]|[289][2-9]|5[3-9]|7[2-4679]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["800"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1-$2-$3",["[257-9]"],"0$1"]],"0",0,"(000[259]\\\\d{6})$|(?:(?:003768)0?)|0","$1"],"KE":["254","000","(?:[17]\\\\d\\\\d|900)\\\\d{6}|(?:2|80)0\\\\d{6,7}|[4-6]\\\\d{6,8}",[7,8,9,10],[["(\\\\d{2})(\\\\d{5,7})","$1 $2",["[24-6]"],"0$1"],["(\\\\d{3})(\\\\d{6})","$1 $2",["[17]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[89]"],"0$1"]],"0"],"KG":["996","00","8\\\\d{9}|[235-9]\\\\d{8}",[9,10],[["(\\\\d{4})(\\\\d{5})","$1 $2",["3(?:1[346]|[24-79])"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[235-79]|88"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d)(\\\\d{2,3})","$1 $2 $3 $4",["8"],"0$1"]],"0"],"KH":["855","00[14-9]","1\\\\d{9}|[1-9]\\\\d{7,8}",[8,9,10],[["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[1-9]"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1"]]],"0"],"KI":["686","00","(?:[37]\\\\d|6[0-79])\\\\d{6}|(?:[2-48]\\\\d|50)\\\\d{3}",[5,8],0,"0"],"KM":["269","00","[3478]\\\\d{6}",[7],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["[3478]"]]]],"KN":["1","011","(?:[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"([2-7]\\\\d{6})$|1","869$1",0,"869"],"KP":["850","00|99","85\\\\d{6}|(?:19\\\\d|[2-7])\\\\d{7}",[8,10],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[2-7]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"],"0$1"]],"0"],"KR":["82","00(?:[125689]|3(?:[46]5|91)|7(?:00|27|3|55|6[126]))","00[1-9]\\\\d{8,11}|(?:[12]|5\\\\d{3})\\\\d{7}|[13-6]\\\\d{9}|(?:[1-6]\\\\d|80)\\\\d{7}|[3-6]\\\\d{4,5}|(?:00|7)0\\\\d{8}",[5,6,8,9,10,11,12,13,14],[["(\\\\d{2})(\\\\d{3,4})","$1-$2",["(?:3[1-3]|[46][1-4]|5[1-5])1"],"0$1"],["(\\\\d{4})(\\\\d{4})","$1-$2",["1"]],["(\\\\d)(\\\\d{3,4})(\\\\d{4})","$1-$2-$3",["2"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1-$2-$3",["[36]0|8"],"0$1"],["(\\\\d{2})(\\\\d{3,4})(\\\\d{4})","$1-$2-$3",["[1346]|5[1-5]"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1-$2-$3",["[57]"],"0$1"],["(\\\\d{2})(\\\\d{5})(\\\\d{4})","$1-$2-$3",["5"],"0$1"]],"0",0,"0(8(?:[1-46-8]|5\\\\d\\\\d))?"],"KW":["965","00","18\\\\d{5}|(?:[2569]\\\\d|41)\\\\d{6}",[7,8],[["(\\\\d{4})(\\\\d{3,4})","$1 $2",["[169]|2(?:[235]|4[1-35-9])|52"]],["(\\\\d{3})(\\\\d{5})","$1 $2",["[245]"]]]],"KY":["1","011","(?:345|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"([2-9]\\\\d{6})$|1","345$1",0,"345"],"KZ":["7","810","(?:33622|8\\\\d{8})\\\\d{5}|[78]\\\\d{9}",[10,14],0,"8",0,0,0,0,"33|7",0,"8~10"],"LA":["856","00","[23]\\\\d{9}|3\\\\d{8}|(?:[235-8]\\\\d|41)\\\\d{6}",[8,9,10],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["2[13]|3[14]|[4-8]"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3 $4",["30[0135-9]"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["[23]"],"0$1"]],"0"],"LB":["961","00","[27-9]\\\\d{7}|[13-9]\\\\d{6}",[7,8],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[13-69]|7(?:[2-57]|62|8[0-7]|9[04-9])|8[02-9]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[27-9]"]]],"0"],"LC":["1","011","(?:[58]\\\\d\\\\d|758|900)\\\\d{7}",[10],0,"1",0,"([2-8]\\\\d{6})$|1","758$1",0,"758"],"LI":["423","00","[68]\\\\d{8}|(?:[2378]\\\\d|90)\\\\d{5}",[7,9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["[2379]|8(?:0[09]|7)","[2379]|8(?:0(?:02|9)|7)"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8"]],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["69"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["6"]]],"0",0,"(1001)|0"],"LK":["94","00","[1-9]\\\\d{8}",[9],[["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["7"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[1-689]"],"0$1"]],"0"],"LR":["231","00","(?:[245]\\\\d|33|77|88)\\\\d{7}|(?:2\\\\d|[4-6])\\\\d{6}",[7,8,9],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["4[67]|[56]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["2"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[2-578]"],"0$1"]],"0"],"LS":["266","00","(?:[256]\\\\d\\\\d|800)\\\\d{5}",[8],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[2568]"]]]],"LT":["370","00","(?:[3469]\\\\d|52|[78]0)\\\\d{6}",[8],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["52[0-7]"],"(0-$1)",1],["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["[7-9]"],"0 $1",1],["(\\\\d{2})(\\\\d{6})","$1 $2",["37|4(?:[15]|6[1-8])"],"(0-$1)",1],["(\\\\d{3})(\\\\d{5})","$1 $2",["[3-6]"],"(0-$1)",1]],"0",0,"[08]"],"LU":["352","00","35[013-9]\\\\d{4,8}|6\\\\d{8}|35\\\\d{2,4}|(?:[2457-9]\\\\d|3[0-46-9])\\\\d{2,9}",[4,5,6,7,8,9,10,11],[["(\\\\d{2})(\\\\d{3})","$1 $2",["2(?:0[2-689]|[2-9])|[3-57]|8(?:0[2-9]|[13-9])|9(?:0[89]|[2-579])"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["2(?:0[2-689]|[2-9])|[3-57]|8(?:0[2-9]|[13-9])|9(?:0[89]|[2-579])"]],["(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["20[2-689]"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{1,2})","$1 $2 $3 $4",["2(?:[0367]|4[3-8])"]],["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["80[01]|90[015]"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3 $4",["20"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["6"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{1,2})","$1 $2 $3 $4 $5",["2(?:[0367]|4[3-8])"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{1,5})","$1 $2 $3 $4",["[3-57]|8[13-9]|9(?:0[89]|[2-579])|(?:2|80)[2-9]"]]],0,0,"(15(?:0[06]|1[12]|[35]5|4[04]|6[26]|77|88|99)\\\\d)"],"LV":["371","00","(?:[268]\\\\d|90)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[269]|8[01]"]]]],"LY":["218","00","[2-9]\\\\d{8}",[9],[["(\\\\d{2})(\\\\d{7})","$1-$2",["[2-9]"],"0$1"]],"0"],"MA":["212","00","[5-8]\\\\d{8}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["5[45]"],"0$1"],["(\\\\d{4})(\\\\d{5})","$1-$2",["5(?:2[2-46-9]|3[3-9]|9)|8(?:0[89]|92)"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1-$2",["8"],"0$1"],["(\\\\d{3})(\\\\d{6})","$1-$2",["[5-7]"],"0$1"]],"0",0,0,0,0,0,[["5(?:2(?:[0-25-79]\\\\d|3[1-578]|4[02-46-8]|8[0235-7])|3(?:[0-47]\\\\d|5[02-9]|6[02-8]|8[014-9]|9[3-9])|(?:4[067]|5[03])\\\\d)\\\\d{5}"],["(?:6(?:[0-79]\\\\d|8[0-247-9])|7(?:[0167]\\\\d|2[0-4]|5[01]|8[0-3]))\\\\d{6}"],["80[0-7]\\\\d{6}"],["89\\\\d{7}"],0,0,0,0,["(?:592(?:4[0-2]|93)|80[89]\\\\d\\\\d)\\\\d{4}"]]],"MC":["377","00","(?:[3489]|6\\\\d)\\\\d{7}",[8,9],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["4"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[389]"]],["(\\\\d)(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4 $5",["6"],"0$1"]],"0"],"MD":["373","00","(?:[235-7]\\\\d|[89]0)\\\\d{6}",[8],[["(\\\\d{3})(\\\\d{5})","$1 $2",["[89]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["22|3"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["[25-7]"],"0$1"]],"0"],"ME":["382","00","(?:20|[3-79]\\\\d)\\\\d{6}|80\\\\d{6,7}",[8,9],[["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[2-9]"],"0$1"]],"0"],"MF":["590","00","590\\\\d{6}|(?:69|80|9\\\\d)\\\\d{7}",[9],0,"0",0,0,0,0,0,[["590(?:0[079]|[14]3|[27][79]|3[03-7]|5[0-268]|87)\\\\d{4}"],["69(?:0\\\\d\\\\d|1(?:2[2-9]|3[0-5])|4(?:0[89]|1[2-6]|9\\\\d)|6(?:1[016-9]|5[0-4]|[67]\\\\d))\\\\d{4}"],["80[0-5]\\\\d{6}"],0,0,0,0,0,["9(?:(?:39[5-7]|76[018])\\\\d|475[0-5])\\\\d{4}"]]],"MG":["261","00","[23]\\\\d{8}",[9],[["(\\\\d{2})(\\\\d{2})(\\\\d{3})(\\\\d{2})","$1 $2 $3 $4",["[23]"],"0$1"]],"0",0,"([24-9]\\\\d{6})$|0","20$1"],"MH":["692","011","329\\\\d{4}|(?:[256]\\\\d|45)\\\\d{5}",[7],[["(\\\\d{3})(\\\\d{4})","$1-$2",["[2-6]"]]],"1"],"MK":["389","00","[2-578]\\\\d{7}",[8],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["2|34[47]|4(?:[37]7|5[47]|64)"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[347]"],"0$1"],["(\\\\d{3})(\\\\d)(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[58]"],"0$1"]],"0"],"ML":["223","00","[24-9]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[24-9]"]]]],"MM":["95","00","1\\\\d{5,7}|95\\\\d{6}|(?:[4-7]|9[0-46-9])\\\\d{6,8}|(?:2|8\\\\d)\\\\d{5,8}",[6,7,8,9,10],[["(\\\\d)(\\\\d{2})(\\\\d{3})","$1 $2 $3",["16|2"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["[45]|6(?:0[23]|[1-689]|7[235-7])|7(?:[0-4]|5[2-7])|8[1-6]"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[12]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[4-7]|8[1-35]"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{4,6})","$1 $2 $3",["9(?:2[0-4]|[35-9]|4[137-9])"],"0$1"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["2"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["8"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["92"],"0$1"],["(\\\\d)(\\\\d{5})(\\\\d{4})","$1 $2 $3",["9"],"0$1"]],"0"],"MN":["976","001","[12]\\\\d{7,9}|[5-9]\\\\d{7}",[8,9,10],[["(\\\\d{2})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["[12]1"],"0$1"],["(\\\\d{4})(\\\\d{4})","$1 $2",["[5-9]"]],["(\\\\d{3})(\\\\d{5,6})","$1 $2",["[12]2[1-3]"],"0$1"],["(\\\\d{4})(\\\\d{5,6})","$1 $2",["[12](?:27|3[2-8]|4[2-68]|5[1-4689])","[12](?:27|3[2-8]|4[2-68]|5[1-4689])[0-3]"],"0$1"],["(\\\\d{5})(\\\\d{4,5})","$1 $2",["[12]"],"0$1"]],"0"],"MO":["853","00","0800\\\\d{3}|(?:28|[68]\\\\d)\\\\d{6}",[7,8],[["(\\\\d{4})(\\\\d{3})","$1 $2",["0"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["[268]"]]]],"MP":["1","011","[58]\\\\d{9}|(?:67|90)0\\\\d{7}",[10],0,"1",0,"([2-9]\\\\d{6})$|1","670$1",0,"670"],"MQ":["596","00","596\\\\d{6}|(?:69|80|9\\\\d)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[569]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"],"0$1"]],"0"],"MR":["222","00","(?:[2-4]\\\\d\\\\d|800)\\\\d{5}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2-48]"]]]],"MS":["1","011","(?:[58]\\\\d\\\\d|664|900)\\\\d{7}",[10],0,"1",0,"([34]\\\\d{6})$|1","664$1",0,"664"],"MT":["356","00","3550\\\\d{4}|(?:[2579]\\\\d\\\\d|800)\\\\d{5}",[8],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[2357-9]"]]]],"MU":["230","0(?:0|[24-7]0|3[03])","(?:[57]|8\\\\d\\\\d)\\\\d{7}|[2-468]\\\\d{6}",[7,8,10],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[2-46]|8[013]"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["[57]"]],["(\\\\d{5})(\\\\d{5})","$1 $2",["8"]]],0,0,0,0,0,0,0,"020"],"MV":["960","0(?:0|19)","(?:800|9[0-57-9]\\\\d)\\\\d{7}|[34679]\\\\d{6}",[7,10],[["(\\\\d{3})(\\\\d{4})","$1-$2",["[34679]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[89]"]]],0,0,0,0,0,0,0,"00"],"MW":["265","00","(?:[1289]\\\\d|31|77)\\\\d{7}|1\\\\d{6}",[7,9],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1[2-9]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["2"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[137-9]"],"0$1"]],"0"],"MX":["52","0[09]","[2-9]\\\\d{9}",[10],[["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["33|5[56]|81"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[2-9]"]]],0,0,0,0,0,0,0,"00"],"MY":["60","00","1\\\\d{8,9}|(?:3\\\\d|[4-9])\\\\d{7}",[8,9,10],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1-$2 $3",["[4-79]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1-$2 $3",["1(?:[02469]|[378][1-9]|53)|8","1(?:[02469]|[37][1-9]|53|8(?:[1-46-9]|5[7-9]))|8"],"0$1"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1-$2 $3",["3"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{2})(\\\\d{4})","$1-$2-$3-$4",["1(?:[367]|80)"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1-$2 $3",["15"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1-$2 $3",["1"],"0$1"]],"0"],"MZ":["258","00","(?:2|8\\\\d)\\\\d{7}",[8,9],[["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["2|8[2-79]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["8"]]]],"NA":["264","00","[68]\\\\d{7,8}",[8,9],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["88"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["6"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["87"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["8"],"0$1"]],"0"],"NC":["687","00","(?:050|[2-57-9]\\\\d\\\\d)\\\\d{3}",[6],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1.$2.$3",["[02-57-9]"]]]],"NE":["227","00","[027-9]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["08"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[089]|2[013]|7[0467]"]]]],"NF":["672","00","[13]\\\\d{5}",[6],[["(\\\\d{2})(\\\\d{4})","$1 $2",["1[0-3]"]],["(\\\\d)(\\\\d{5})","$1 $2",["[13]"]]],0,0,"([0-258]\\\\d{4})$","3$1"],"NG":["234","009","38\\\\d{6}|[78]\\\\d{9,13}|(?:20|9\\\\d)\\\\d{8}",[8,10,11,12,13,14],[["(\\\\d{2})(\\\\d{3})(\\\\d{2,3})","$1 $2 $3",["3"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[7-9]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["20[129]"],"0$1"],["(\\\\d{4})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["2"],"0$1"],["(\\\\d{3})(\\\\d{4})(\\\\d{4,5})","$1 $2 $3",["[78]"],"0$1"],["(\\\\d{3})(\\\\d{5})(\\\\d{5,6})","$1 $2 $3",["[78]"],"0$1"]],"0"],"NI":["505","00","(?:1800|[25-8]\\\\d{3})\\\\d{4}",[8],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[125-8]"]]]],"NL":["31","00","(?:[124-7]\\\\d\\\\d|3(?:[02-9]\\\\d|1[0-8]))\\\\d{6}|8\\\\d{6,9}|9\\\\d{6,10}|1\\\\d{4,5}",[5,6,7,8,9,10,11],[["(\\\\d{3})(\\\\d{4,7})","$1 $2",["[89]0"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1 $2",["66"],"0$1"],["(\\\\d)(\\\\d{8})","$1 $2",["6"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1[16-8]|2[259]|3[124]|4[17-9]|5[124679]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[1-578]|91"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{5})","$1 $2 $3",["9"],"0$1"]],"0"],"NO":["47","00","(?:0|[2-9]\\\\d{3})\\\\d{4}",[5,8],[["(\\\\d{3})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["8"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2-79]"]]],0,0,0,0,0,"[02-689]|7[0-8]"],"NP":["977","00","(?:1\\\\d|9)\\\\d{9}|[1-9]\\\\d{7}",[8,10,11],[["(\\\\d)(\\\\d{7})","$1-$2",["1[2-6]"],"0$1"],["(\\\\d{2})(\\\\d{6})","$1-$2",["1[01]|[2-8]|9(?:[1-59]|[67][2-6])"],"0$1"],["(\\\\d{3})(\\\\d{7})","$1-$2",["9"]]],"0"],"NR":["674","00","(?:444|(?:55|8\\\\d)\\\\d|666)\\\\d{4}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[4-68]"]]]],"NU":["683","00","(?:[4-7]|888\\\\d)\\\\d{3}",[4,7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["8"]]]],"NZ":["64","0(?:0|161)","[1289]\\\\d{9}|50\\\\d{5}(?:\\\\d{2,3})?|[27-9]\\\\d{7,8}|(?:[34]\\\\d|6[0-35-9])\\\\d{6}|8\\\\d{4,6}",[5,6,7,8,9,10],[["(\\\\d{2})(\\\\d{3,8})","$1 $2",["8[1-79]"],"0$1"],["(\\\\d{3})(\\\\d{2})(\\\\d{2,3})","$1 $2 $3",["50[036-8]|8|90","50(?:[0367]|88)|8|90"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["24|[346]|7[2-57-9]|9[2-9]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["2(?:10|74)|[589]"],"0$1"],["(\\\\d{2})(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["1|2[028]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,5})","$1 $2 $3",["2(?:[169]|7[0-35-9])|7"],"0$1"]],"0",0,0,0,0,0,0,"00"],"OM":["968","00","(?:1505|[279]\\\\d{3}|500)\\\\d{4}|800\\\\d{5,6}",[7,8,9],[["(\\\\d{3})(\\\\d{4,6})","$1 $2",["[58]"]],["(\\\\d{2})(\\\\d{6})","$1 $2",["2"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["[179]"]]]],"PA":["507","00","(?:00800|8\\\\d{3})\\\\d{6}|[68]\\\\d{7}|[1-57-9]\\\\d{6}",[7,8,10,11],[["(\\\\d{3})(\\\\d{4})","$1-$2",["[1-57-9]"]],["(\\\\d{4})(\\\\d{4})","$1-$2",["[68]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["8"]]]],"PE":["51","00|19(?:1[124]|77|90)00","(?:[14-8]|9\\\\d)\\\\d{7}",[8,9],[["(\\\\d{3})(\\\\d{5})","$1 $2",["80"],"(0$1)"],["(\\\\d)(\\\\d{7})","$1 $2",["1"],"(0$1)"],["(\\\\d{2})(\\\\d{6})","$1 $2",["[4-8]"],"(0$1)"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["9"]]],"0",0,0,0,0,0,0,"00"," Anexo "],"PF":["689","00","4\\\\d{5}(?:\\\\d{2})?|8\\\\d{7,8}",[6,8,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["44"]],["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["4|8[7-9]"]],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"]]]],"PG":["675","00|140[1-3]","(?:180|[78]\\\\d{3})\\\\d{4}|(?:[2-589]\\\\d|64)\\\\d{5}",[7,8],[["(\\\\d{3})(\\\\d{4})","$1 $2",["18|[2-69]|85"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["[78]"]]],0,0,0,0,0,0,0,"00"],"PH":["63","00","(?:[2-7]|9\\\\d)\\\\d{8}|2\\\\d{5}|(?:1800|8)\\\\d{7,9}",[6,8,9,10,11,12,13],[["(\\\\d)(\\\\d{5})","$1 $2",["2"],"(0$1)"],["(\\\\d{4})(\\\\d{4,6})","$1 $2",["3(?:23|39|46)|4(?:2[3-6]|[35]9|4[26]|76)|544|88[245]|(?:52|64|86)2","3(?:230|397|461)|4(?:2(?:35|[46]4|51)|396|4(?:22|63)|59[347]|76[15])|5(?:221|446)|642[23]|8(?:622|8(?:[24]2|5[13]))"],"(0$1)"],["(\\\\d{5})(\\\\d{4})","$1 $2",["346|4(?:27|9[35])|883","3469|4(?:279|9(?:30|56))|8834"],"(0$1)"],["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["2"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[3-7]|8[2-8]"],"(0$1)"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[89]"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"]],["(\\\\d{4})(\\\\d{1,2})(\\\\d{3})(\\\\d{4})","$1 $2 $3 $4",["1"]]],"0"],"PK":["92","00","122\\\\d{6}|[24-8]\\\\d{10,11}|9(?:[013-9]\\\\d{8,10}|2(?:[01]\\\\d\\\\d|2(?:[06-8]\\\\d|1[01]))\\\\d{7})|(?:[2-8]\\\\d{3}|92(?:[0-7]\\\\d|8[1-9]))\\\\d{6}|[24-9]\\\\d{8}|[89]\\\\d{7}",[8,9,10,11,12],[["(\\\\d{3})(\\\\d{3})(\\\\d{2,7})","$1 $2 $3",["[89]0"],"0$1"],["(\\\\d{4})(\\\\d{5})","$1 $2",["1"]],["(\\\\d{3})(\\\\d{6,7})","$1 $2",["2(?:3[2358]|4[2-4]|9[2-8])|45[3479]|54[2-467]|60[468]|72[236]|8(?:2[2-689]|3[23578]|4[3478]|5[2356])|9(?:2[2-8]|3[27-9]|4[2-6]|6[3569]|9[25-8])","9(?:2[3-8]|98)|(?:2(?:3[2358]|4[2-4]|9[2-8])|45[3479]|54[2-467]|60[468]|72[236]|8(?:2[2-689]|3[23578]|4[3478]|5[2356])|9(?:22|3[27-9]|4[2-6]|6[3569]|9[25-7]))[2-9]"],"(0$1)"],["(\\\\d{2})(\\\\d{7,8})","$1 $2",["(?:2[125]|4[0-246-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91)[2-9]"],"(0$1)"],["(\\\\d{5})(\\\\d{5})","$1 $2",["58"],"(0$1)"],["(\\\\d{3})(\\\\d{7})","$1 $2",["3"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["2[125]|4[0-246-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91"],"(0$1)"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["[24-9]"],"(0$1)"]],"0"],"PL":["48","00","(?:6|8\\\\d\\\\d)\\\\d{7}|[1-9]\\\\d{6}(?:\\\\d{2})?|[26]\\\\d{5}",[6,7,8,9,10],[["(\\\\d{5})","$1",["19"]],["(\\\\d{3})(\\\\d{3})","$1 $2",["11|20|64"]],["(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1 $2 $3",["(?:1[2-8]|2[2-69]|3[2-4]|4[1-468]|5[24-689]|6[1-3578]|7[14-7]|8[1-79]|9[145])1","(?:1[2-8]|2[2-69]|3[2-4]|4[1-468]|5[24-689]|6[1-3578]|7[14-7]|8[1-79]|9[145])19"]],["(\\\\d{3})(\\\\d{2})(\\\\d{2,3})","$1 $2 $3",["64"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["21|39|45|5[0137]|6[0469]|7[02389]|8(?:0[14]|8)"]],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["1[2-8]|[2-7]|8[1-79]|9[145]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["8"]]]],"PM":["508","00","[45]\\\\d{5}|(?:708|80\\\\d)\\\\d{6}",[6,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["[45]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["7"]],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"],"0$1"]],"0"],"PR":["1","011","(?:[589]\\\\d\\\\d|787)\\\\d{7}",[10],0,"1",0,0,0,0,"787|939"],"PS":["970","00","[2489]2\\\\d{6}|(?:1\\\\d|5)\\\\d{8}",[8,9,10],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[2489]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["5"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1"]]],"0"],"PT":["351","00","1693\\\\d{5}|(?:[26-9]\\\\d|30)\\\\d{7}",[9],[["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["2[12]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["16|[236-9]"]]]],"PW":["680","01[12]","(?:[24-8]\\\\d\\\\d|345|900)\\\\d{4}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[2-9]"]]]],"PY":["595","00","59\\\\d{4,6}|9\\\\d{5,10}|(?:[2-46-8]\\\\d|5[0-8])\\\\d{4,7}",[6,7,8,9,10,11],[["(\\\\d{3})(\\\\d{3,6})","$1 $2",["[2-9]0"],"0$1"],["(\\\\d{2})(\\\\d{5})","$1 $2",["[26]1|3[289]|4[1246-8]|7[1-3]|8[1-36]"],"(0$1)"],["(\\\\d{3})(\\\\d{4,5})","$1 $2",["2[279]|3[13-5]|4[359]|5|6(?:[34]|7[1-46-8])|7[46-8]|85"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["2[14-68]|3[26-9]|4[1246-8]|6(?:1|75)|7[1-35]|8[1-36]"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["87"]],["(\\\\d{3})(\\\\d{6})","$1 $2",["9(?:[5-79]|8[1-7])"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[2-8]"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["9"]]],"0"],"QA":["974","00","800\\\\d{4}|(?:2|800)\\\\d{6}|(?:0080|[3-7])\\\\d{7}",[7,8,9,11],[["(\\\\d{3})(\\\\d{4})","$1 $2",["2[16]|8"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["[3-7]"]]]],"RE":["262","00","(?:26|[689]\\\\d)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[2689]"],"0$1"]],"0",0,0,0,0,0,[["26(?:2\\\\d\\\\d|3(?:0\\\\d|1[0-6]))\\\\d{4}"],["69(?:2\\\\d\\\\d|3(?:[06][0-6]|1[013]|2[0-2]|3[0-39]|4\\\\d|5[0-5]|7[0-37]|8[0-8]|9[0-479]))\\\\d{4}"],["80\\\\d{7}"],["89[1-37-9]\\\\d{6}"],0,0,0,0,["9(?:399[0-3]|479[0-5]|76(?:2[278]|3[0-37]))\\\\d{4}"],["8(?:1[019]|2[0156]|84|90)\\\\d{6}"]]],"RO":["40","00","(?:[236-8]\\\\d|90)\\\\d{7}|[23]\\\\d{5}",[6,9],[["(\\\\d{3})(\\\\d{3})","$1 $2",["2[3-6]","2[3-6]\\\\d9"],"0$1"],["(\\\\d{2})(\\\\d{4})","$1 $2",["219|31"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[23]1"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[236-9]"],"0$1"]],"0",0,0,0,0,0,0,0," int "],"RS":["381","00","38[02-9]\\\\d{6,9}|6\\\\d{7,9}|90\\\\d{4,8}|38\\\\d{5,6}|(?:7\\\\d\\\\d|800)\\\\d{3,9}|(?:[12]\\\\d|3[0-79])\\\\d{5,10}",[6,7,8,9,10,11,12],[["(\\\\d{3})(\\\\d{3,9})","$1 $2",["(?:2[389]|39)0|[7-9]"],"0$1"],["(\\\\d{2})(\\\\d{5,10})","$1 $2",["[1-36]"],"0$1"]],"0"],"RU":["7","810","8\\\\d{13}|[347-9]\\\\d{9}",[10,14],[["(\\\\d{4})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["7(?:1[0-8]|2[1-9])","7(?:1(?:[0-356]2|4[29]|7|8[27])|2(?:1[23]|[2-9]2))","7(?:1(?:[0-356]2|4[29]|7|8[27])|2(?:13[03-69]|62[013-9]))|72[1-57-9]2"],"8 ($1)",1],["(\\\\d{5})(\\\\d)(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["7(?:1[0-68]|2[1-9])","7(?:1(?:[06][3-6]|[18]|2[35]|[3-5][3-5])|2(?:[13][3-5]|[24-689]|7[457]))","7(?:1(?:0(?:[356]|4[023])|[18]|2(?:3[013-9]|5)|3[45]|43[013-79]|5(?:3[1-8]|4[1-7]|5)|6(?:3[0-35-9]|[4-6]))|2(?:1(?:3[178]|[45])|[24-689]|3[35]|7[457]))|7(?:14|23)4[0-8]|71(?:33|45)[1-79]"],"8 ($1)",1],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["7"],"8 ($1)",1],["(\\\\d{3})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2-$3-$4",["[349]|8(?:[02-7]|1[1-8])"],"8 ($1)",1],["(\\\\d{4})(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["8"],"8 ($1)"]],"8",0,0,0,0,"3[04-689]|[489]",0,"8~10"],"RW":["250","00","(?:06|[27]\\\\d\\\\d|[89]00)\\\\d{6}",[8,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["0"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["2"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[7-9]"],"0$1"]],"0"],"SA":["966","00","92\\\\d{7}|(?:[15]|8\\\\d)\\\\d{8}",[9,10],[["(\\\\d{4})(\\\\d{5})","$1 $2",["9"]],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["5"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["81"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["8"]]],"0"],"SB":["677","0[01]","[6-9]\\\\d{6}|[1-6]\\\\d{4}",[5,7],[["(\\\\d{2})(\\\\d{5})","$1 $2",["6[89]|7|8[4-9]|9(?:[1-8]|9[0-8])"]]]],"SC":["248","010|0[0-2]","(?:[2489]\\\\d|64)\\\\d{5}",[7],[["(\\\\d)(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[246]|9[57]"]]],0,0,0,0,0,0,0,"00"],"SD":["249","00","[19]\\\\d{8}",[9],[["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[19]"],"0$1"]],"0"],"SE":["46","00","(?:[26]\\\\d\\\\d|9)\\\\d{9}|[1-9]\\\\d{8}|[1-689]\\\\d{7}|[1-4689]\\\\d{6}|2\\\\d{5}",[6,7,8,9,10,12],[["(\\\\d{2})(\\\\d{2,3})(\\\\d{2})","$1-$2 $3",["20"],"0$1",0,"$1 $2 $3"],["(\\\\d{3})(\\\\d{4})","$1-$2",["9(?:00|39|44|9)"],"0$1",0,"$1 $2"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})","$1-$2 $3",["[12][136]|3[356]|4[0246]|6[03]|90[1-9]"],"0$1",0,"$1 $2 $3"],["(\\\\d)(\\\\d{2,3})(\\\\d{2})(\\\\d{2})","$1-$2 $3 $4",["8"],"0$1",0,"$1 $2 $3 $4"],["(\\\\d{3})(\\\\d{2,3})(\\\\d{2})","$1-$2 $3",["1[2457]|2(?:[247-9]|5[0138])|3[0247-9]|4[1357-9]|5[0-35-9]|6(?:[125689]|4[02-57]|7[0-2])|9(?:[125-8]|3[02-5]|4[0-3])"],"0$1",0,"$1 $2 $3"],["(\\\\d{3})(\\\\d{2,3})(\\\\d{3})","$1-$2 $3",["9(?:00|39|44)"],"0$1",0,"$1 $2 $3"],["(\\\\d{2})(\\\\d{2,3})(\\\\d{2})(\\\\d{2})","$1-$2 $3 $4",["1[13689]|2[0136]|3[1356]|4[0246]|54|6[03]|90[1-9]"],"0$1",0,"$1 $2 $3 $4"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1-$2 $3 $4",["10|7"],"0$1",0,"$1 $2 $3 $4"],["(\\\\d)(\\\\d{3})(\\\\d{3})(\\\\d{2})","$1-$2 $3 $4",["8"],"0$1",0,"$1 $2 $3 $4"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1-$2 $3 $4",["[13-5]|2(?:[247-9]|5[0138])|6(?:[124-689]|7[0-2])|9(?:[125-8]|3[02-5]|4[0-3])"],"0$1",0,"$1 $2 $3 $4"],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{3})","$1-$2 $3 $4",["9"],"0$1",0,"$1 $2 $3 $4"],["(\\\\d{3})(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1-$2 $3 $4 $5",["[26]"],"0$1",0,"$1 $2 $3 $4 $5"]],"0"],"SG":["65","0[0-3]\\\\d","(?:(?:1\\\\d|8)\\\\d\\\\d|7000)\\\\d{7}|[3689]\\\\d{7}",[8,10,11],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[369]|8(?:0[1-9]|[1-9])"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["8"]],["(\\\\d{4})(\\\\d{4})(\\\\d{3})","$1 $2 $3",["7"]],["(\\\\d{4})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["1"]]]],"SH":["290","00","(?:[256]\\\\d|8)\\\\d{3}",[4,5],0,0,0,0,0,0,"[256]"],"SI":["386","00|10(?:22|66|88|99)","[1-7]\\\\d{7}|8\\\\d{4,7}|90\\\\d{4,6}",[5,6,7,8],[["(\\\\d{2})(\\\\d{3,6})","$1 $2",["8[09]|9"],"0$1"],["(\\\\d{3})(\\\\d{5})","$1 $2",["59|8"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[37][01]|4[0139]|51|6"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[1-57]"],"(0$1)"]],"0",0,0,0,0,0,0,"00"],"SJ":["47","00","0\\\\d{4}|(?:[489]\\\\d|79)\\\\d{6}",[5,8],0,0,0,0,0,0,"79"],"SK":["421","00","[2-689]\\\\d{8}|[2-59]\\\\d{6}|[2-5]\\\\d{5}",[6,7,9],[["(\\\\d)(\\\\d{2})(\\\\d{3,4})","$1 $2 $3",["21"],"0$1"],["(\\\\d{2})(\\\\d{2})(\\\\d{2,3})","$1 $2 $3",["[3-5][1-8]1","[3-5][1-8]1[67]"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{3})(\\\\d{2})","$1/$2 $3 $4",["2"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[689]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1/$2 $3 $4",["[3-5]"],"0$1"]],"0"],"SL":["232","00","(?:[237-9]\\\\d|66)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{6})","$1 $2",["[236-9]"],"(0$1)"]],"0"],"SM":["378","00","(?:0549|[5-7]\\\\d)\\\\d{6}",[8,10],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[5-7]"]],["(\\\\d{4})(\\\\d{6})","$1 $2",["0"]]],0,0,"([89]\\\\d{5})$","0549$1"],"SN":["221","00","(?:[378]\\\\d|93)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"]],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[379]"]]]],"SO":["252","00","[346-9]\\\\d{8}|[12679]\\\\d{7}|[1-5]\\\\d{6}|[1348]\\\\d{5}",[6,7,8,9],[["(\\\\d{2})(\\\\d{4})","$1 $2",["8[125]"]],["(\\\\d{6})","$1",["[134]"]],["(\\\\d)(\\\\d{6})","$1 $2",["[15]|2[0-79]|3[0-46-8]|4[0-7]"]],["(\\\\d)(\\\\d{7})","$1 $2",["(?:2|90)4|[67]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[348]|64|79|90"]],["(\\\\d{2})(\\\\d{5,7})","$1 $2",["1|28|6[0-35-9]|77|9[2-9]"]]],"0"],"SR":["597","00","(?:[2-5]|68|[78]\\\\d)\\\\d{5}",[6,7],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1-$2-$3",["56"]],["(\\\\d{3})(\\\\d{3})","$1-$2",["[2-5]"]],["(\\\\d{3})(\\\\d{4})","$1-$2",["[6-8]"]]]],"SS":["211","00","[19]\\\\d{8}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[19]"],"0$1"]],"0"],"ST":["239","00","(?:22|9\\\\d)\\\\d{5}",[7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[29]"]]]],"SV":["503","00","[267]\\\\d{7}|(?:80\\\\d|900)\\\\d{4}(?:\\\\d{4})?",[7,8,11],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[89]"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["[267]"]],["(\\\\d{3})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["[89]"]]]],"SX":["1","011","7215\\\\d{6}|(?:[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"(5\\\\d{6})$|1","721$1",0,"721"],"SY":["963","00","[1-39]\\\\d{8}|[1-5]\\\\d{7}",[8,9],[["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[1-5]"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["9"],"0$1",1]],"0"],"SZ":["268","00","0800\\\\d{4}|(?:[237]\\\\d|900)\\\\d{6}",[8,9],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[0237]"]],["(\\\\d{5})(\\\\d{4})","$1 $2",["9"]]]],"TA":["290","00","8\\\\d{3}",[4],0,0,0,0,0,0,"8"],"TC":["1","011","(?:[58]\\\\d\\\\d|649|900)\\\\d{7}",[10],0,"1",0,"([2-479]\\\\d{6})$|1","649$1",0,"649"],"TD":["235","00|16","(?:22|[689]\\\\d|77)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[26-9]"]]],0,0,0,0,0,0,0,"00"],"TG":["228","00","[279]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[279]"]]]],"TH":["66","00[1-9]","(?:001800|[2-57]|[689]\\\\d)\\\\d{7}|1\\\\d{7,9}",[8,9,10,13],[["(\\\\d)(\\\\d{3})(\\\\d{4})","$1 $2 $3",["2"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[13-9]"],"0$1"],["(\\\\d{4})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["1"]]],"0"],"TJ":["992","810","[0-57-9]\\\\d{8}",[9],[["(\\\\d{6})(\\\\d)(\\\\d{2})","$1 $2 $3",["331","3317"]],["(\\\\d{3})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["44[02-479]|[34]7"]],["(\\\\d{4})(\\\\d)(\\\\d{4})","$1 $2 $3",["3(?:[1245]|3[12])"]],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[0-57-9]"]]],0,0,0,0,0,0,0,"8~10"],"TK":["690","00","[2-47]\\\\d{3,6}",[4,5,6,7]],"TL":["670","00","7\\\\d{7}|(?:[2-47]\\\\d|[89]0)\\\\d{5}",[7,8],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[2-489]|70"]],["(\\\\d{4})(\\\\d{4})","$1 $2",["7"]]]],"TM":["993","810","(?:[1-6]\\\\d|71)\\\\d{6}",[8],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2-$3-$4",["12"],"(8 $1)"],["(\\\\d{3})(\\\\d)(\\\\d{2})(\\\\d{2})","$1 $2-$3-$4",["[1-5]"],"(8 $1)"],["(\\\\d{2})(\\\\d{6})","$1 $2",["[67]"],"8 $1"]],"8",0,0,0,0,0,0,"8~10"],"TN":["216","00","[2-57-9]\\\\d{7}",[8],[["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[2-57-9]"]]]],"TO":["676","00","(?:0800|(?:[5-8]\\\\d\\\\d|999)\\\\d)\\\\d{3}|[2-8]\\\\d{4}",[5,7],[["(\\\\d{2})(\\\\d{3})","$1-$2",["[2-4]|50|6[09]|7[0-24-69]|8[05]"]],["(\\\\d{4})(\\\\d{3})","$1 $2",["0"]],["(\\\\d{3})(\\\\d{4})","$1 $2",["[5-9]"]]]],"TR":["90","00","4\\\\d{6}|8\\\\d{11,12}|(?:[2-58]\\\\d\\\\d|900)\\\\d{7}",[7,10,12,13],[["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["512|8[01589]|90"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["5(?:[0-59]|61)","5(?:[0-59]|61[06])","5(?:[0-59]|61[06]1)"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[24][1-8]|3[1-9]"],"(0$1)",1],["(\\\\d{3})(\\\\d{3})(\\\\d{6,7})","$1 $2 $3",["80"],"0$1",1]],"0"],"TT":["1","011","(?:[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"([2-46-8]\\\\d{6})$|1","868$1",0,"868"],"TV":["688","00","(?:2|7\\\\d\\\\d|90)\\\\d{4}",[5,6,7],[["(\\\\d{2})(\\\\d{3})","$1 $2",["2"]],["(\\\\d{2})(\\\\d{4})","$1 $2",["90"]],["(\\\\d{2})(\\\\d{5})","$1 $2",["7"]]]],"TW":["886","0(?:0[25-79]|19)","[2-689]\\\\d{8}|7\\\\d{9,10}|[2-8]\\\\d{7}|2\\\\d{6}",[7,8,9,10,11],[["(\\\\d{2})(\\\\d)(\\\\d{4})","$1 $2 $3",["202"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[258]0"],"0$1"],["(\\\\d)(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["[23568]|4(?:0[02-48]|[1-47-9])|7[1-9]","[23568]|4(?:0[2-48]|[1-47-9])|(?:400|7)[1-9]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[49]"],"0$1"],["(\\\\d{2})(\\\\d{4})(\\\\d{4,5})","$1 $2 $3",["7"],"0$1"]],"0",0,0,0,0,0,0,0,"#"],"TZ":["255","00[056]","(?:[25-8]\\\\d|41|90)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["[89]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[24]"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1 $2",["5"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[67]"],"0$1"]],"0"],"UA":["380","00","[89]\\\\d{9}|[3-9]\\\\d{8}",[9,10],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["6[12][29]|(?:3[1-8]|4[136-8]|5[12457]|6[49])2|(?:56|65)[24]","6[12][29]|(?:35|4[1378]|5[12457]|6[49])2|(?:56|65)[24]|(?:3[1-46-8]|46)2[013-9]"],"0$1"],["(\\\\d{4})(\\\\d{5})","$1 $2",["3[1-8]|4(?:[1367]|[45][6-9]|8[4-6])|5(?:[1-5]|6[0135689]|7[4-6])|6(?:[12][3-7]|[459])","3[1-8]|4(?:[1367]|[45][6-9]|8[4-6])|5(?:[1-5]|6(?:[015689]|3[02389])|7[4-6])|6(?:[12][3-7]|[459])"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[3-7]|89|9[1-9]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[89]"],"0$1"]],"0",0,0,0,0,0,0,"0~0"],"UG":["256","00[057]","800\\\\d{6}|(?:[29]0|[347]\\\\d)\\\\d{7}",[9],[["(\\\\d{4})(\\\\d{5})","$1 $2",["202","2024"],"0$1"],["(\\\\d{3})(\\\\d{6})","$1 $2",["[27-9]|4(?:6[45]|[7-9])"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1 $2",["[34]"],"0$1"]],"0"],"US":["1","011","[2-9]\\\\d{9}|3\\\\d{6}",[10],[["(\\\\d{3})(\\\\d{4})","$1-$2",["310"],0,1],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","($1) $2-$3",["[2-9]"],0,1,"$1-$2-$3"]],"1",0,0,0,0,0,[["(?:3052(?:0[0-8]|[1-9]\\\\d)|5056(?:[0-35-9]\\\\d|4[468])|7302[0-4]\\\\d)\\\\d{4}|(?:305[3-9]|472[24]|505[2-57-9]|7306|983[2-47-9])\\\\d{6}|(?:2(?:0[1-35-9]|1[02-9]|2[03-57-9]|3[1459]|4[08]|5[1-46]|6[0279]|7[0269]|8[13])|3(?:0[1-47-9]|1[02-9]|2[013569]|3[0-24679]|4[167]|5[0-2]|6[01349]|8[056])|4(?:0[124-9]|1[02-579]|2[3-5]|3[0245]|4[023578]|58|6[349]|7[0589]|8[04])|5(?:0[1-47-9]|1[0235-8]|20|3[0149]|4[01]|5[179]|6[1-47]|7[0-5]|8[0256])|6(?:0[1-35-9]|1[024-9]|2[03689]|3[016]|4[0156]|5[01679]|6[0-279]|78|8[0-29])|7(?:0[1-46-8]|1[2-9]|2[04-8]|3[1247]|4[037]|5[47]|6[02359]|7[0-59]|8[156])|8(?:0[1-68]|1[02-8]|2[068]|3[0-2589]|4[03578]|5[046-9]|6[02-5]|7[028])|9(?:0[1346-9]|1[02-9]|2[0589]|3[0146-8]|4[01357-9]|5[12469]|7[0-389]|8[04-69]))[2-9]\\\\d{6}"],[""],["8(?:00|33|44|55|66|77|88)[2-9]\\\\d{6}"],["900[2-9]\\\\d{6}"],["52(?:3(?:[2-46-9][02-9]\\\\d|5(?:[02-46-9]\\\\d|5[0-46-9]))|4(?:[2-478][02-9]\\\\d|5(?:[034]\\\\d|2[024-9]|5[0-46-9])|6(?:0[1-9]|[2-9]\\\\d)|9(?:[05-9]\\\\d|2[0-5]|49)))\\\\d{4}|52[34][2-9]1[02-9]\\\\d{4}|5(?:00|2[125-9]|33|44|66|77|88)[2-9]\\\\d{6}"],0,0,0,["305209\\\\d{4}"]]],"UY":["598","0(?:0|1[3-9]\\\\d)","0004\\\\d{2,9}|[1249]\\\\d{7}|(?:[49]\\\\d|80)\\\\d{5}",[6,7,8,9,10,11,12,13],[["(\\\\d{3})(\\\\d{3,4})","$1 $2",["0"]],["(\\\\d{3})(\\\\d{4})","$1 $2",["[49]0|8"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["9"],"0$1"],["(\\\\d{4})(\\\\d{4})","$1 $2",["[124]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{2,4})","$1 $2 $3",["0"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})(\\\\d{2,4})","$1 $2 $3 $4",["0"]]],"0",0,0,0,0,0,0,"00"," int. "],"UZ":["998","00","(?:20|33|[5-79]\\\\d|88)\\\\d{7}",[9],[["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["[235-9]"]]]],"VA":["39","00","0\\\\d{5,10}|3[0-8]\\\\d{7,10}|55\\\\d{8}|8\\\\d{5}(?:\\\\d{2,4})?|(?:1\\\\d|39)\\\\d{7,8}",[6,7,8,9,10,11,12],0,0,0,0,0,0,"06698"],"VC":["1","011","(?:[58]\\\\d\\\\d|784|900)\\\\d{7}",[10],0,"1",0,"([2-7]\\\\d{6})$|1","784$1",0,"784"],"VE":["58","00","[68]00\\\\d{7}|(?:[24]\\\\d|[59]0)\\\\d{8}",[10],[["(\\\\d{3})(\\\\d{7})","$1-$2",["[24-689]"],"0$1"]],"0"],"VG":["1","011","(?:284|[58]\\\\d\\\\d|900)\\\\d{7}",[10],0,"1",0,"([2-578]\\\\d{6})$|1","284$1",0,"284"],"VI":["1","011","[58]\\\\d{9}|(?:34|90)0\\\\d{7}",[10],0,"1",0,"([2-9]\\\\d{6})$|1","340$1",0,"340"],"VN":["84","00","[12]\\\\d{9}|[135-9]\\\\d{8}|[16]\\\\d{7}|[16-8]\\\\d{6}",[7,8,9,10],[["(\\\\d{2})(\\\\d{5})","$1 $2",["80"],"0$1",1],["(\\\\d{4})(\\\\d{4,6})","$1 $2",["1"],0,1],["(\\\\d{2})(\\\\d{3})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["6"],"0$1",1],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[357-9]"],"0$1",1],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["2[48]"],"0$1",1],["(\\\\d{3})(\\\\d{4})(\\\\d{3})","$1 $2 $3",["2"],"0$1",1]],"0"],"VU":["678","00","[57-9]\\\\d{6}|(?:[238]\\\\d|48)\\\\d{3}",[5,7],[["(\\\\d{3})(\\\\d{4})","$1 $2",["[57-9]"]]]],"WF":["681","00","(?:40|72)\\\\d{4}|8\\\\d{5}(?:\\\\d{3})?",[6,9],[["(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3",["[478]"]],["(\\\\d{3})(\\\\d{2})(\\\\d{2})(\\\\d{2})","$1 $2 $3 $4",["8"]]]],"WS":["685","0","(?:[2-6]|8\\\\d{5})\\\\d{4}|[78]\\\\d{6}|[68]\\\\d{5}",[5,6,7,10],[["(\\\\d{5})","$1",["[2-5]|6[1-9]"]],["(\\\\d{3})(\\\\d{3,7})","$1 $2",["[68]"]],["(\\\\d{2})(\\\\d{5})","$1 $2",["7"]]]],"XK":["383","00","2\\\\d{7,8}|3\\\\d{7,11}|(?:4\\\\d\\\\d|[89]00)\\\\d{5}",[8,9,10,11,12],[["(\\\\d{3})(\\\\d{5})","$1 $2",["[89]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[2-4]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["2|39"],"0$1"],["(\\\\d{2})(\\\\d{7,10})","$1 $2",["3"],"0$1"]],"0"],"YE":["967","00","(?:1|7\\\\d)\\\\d{7}|[1-7]\\\\d{6}",[7,8,9],[["(\\\\d)(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["[1-6]|7(?:[24-6]|8[0-7])"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["7"],"0$1"]],"0"],"YT":["262","00","(?:80|9\\\\d)\\\\d{7}|(?:26|63)9\\\\d{6}",[9],0,"0",0,0,0,0,0,[["269(?:0[0-467]|15|5[0-4]|6\\\\d|[78]0)\\\\d{4}"],["639(?:0[0-79]|1[019]|[267]\\\\d|3[09]|40|5[05-9]|9[04-79])\\\\d{4}"],["80\\\\d{7}"],0,0,0,0,0,["9(?:(?:39|47)8[01]|769\\\\d)\\\\d{4}"]]],"ZA":["27","00","[1-79]\\\\d{8}|8\\\\d{4,9}",[5,6,7,8,9,10],[["(\\\\d{2})(\\\\d{3,4})","$1 $2",["8[1-4]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{2,3})","$1 $2 $3",["8[1-4]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["860"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["[1-9]"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["8"],"0$1"]],"0"],"ZM":["260","00","800\\\\d{6}|(?:21|63|[79]\\\\d)\\\\d{7}",[9],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[28]"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1 $2",["[79]"],"0$1"]],"0"],"ZW":["263","00","2(?:[0-57-9]\\\\d{6,8}|6[0-24-9]\\\\d{6,7})|[38]\\\\d{9}|[35-8]\\\\d{8}|[3-6]\\\\d{7}|[1-689]\\\\d{6}|[1-3569]\\\\d{5}|[1356]\\\\d{4}",[5,6,7,8,9,10],[["(\\\\d{3})(\\\\d{3,5})","$1 $2",["2(?:0[45]|2[278]|[49]8)|3(?:[09]8|17)|6(?:[29]8|37|75)|[23][78]|(?:33|5[15]|6[68])[78]"],"0$1"],["(\\\\d)(\\\\d{3})(\\\\d{2,4})","$1 $2 $3",["[49]"],"0$1"],["(\\\\d{3})(\\\\d{4})","$1 $2",["80"],"0$1"],["(\\\\d{2})(\\\\d{7})","$1 $2",["24|8[13-59]|(?:2[05-79]|39|5[45]|6[15-8])2","2(?:02[014]|4|[56]20|[79]2)|392|5(?:42|525)|6(?:[16-8]21|52[013])|8[13-59]"],"(0$1)"],["(\\\\d{2})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["7"],"0$1"],["(\\\\d{3})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["2(?:1[39]|2[0157]|[378]|[56][14])|3(?:12|29)","2(?:1[39]|2[0157]|[378]|[56][14])|3(?:123|29)"],"0$1"],["(\\\\d{4})(\\\\d{6})","$1 $2",["8"],"0$1"],["(\\\\d{2})(\\\\d{3,5})","$1 $2",["1|2(?:0[0-36-9]|12|29|[56])|3(?:1[0-689]|[24-6])|5(?:[0236-9]|1[2-4])|6(?:[013-59]|7[0-46-9])|(?:33|55|6[68])[0-69]|(?:29|3[09]|62)[0-79]"],"0$1"],["(\\\\d{2})(\\\\d{3})(\\\\d{3,4})","$1 $2 $3",["29[013-9]|39|54"],"0$1"],["(\\\\d{4})(\\\\d{3,5})","$1 $2",["(?:25|54)8","258|5483"],"0$1"]],"0"]},"nonGeographic":{"800":["800",0,"(?:00|[1-9]\\\\d)\\\\d{6}",[8],[["(\\\\d{4})(\\\\d{4})","$1 $2",["\\\\d"]]],0,0,0,0,0,0,[0,0,["(?:00|[1-9]\\\\d)\\\\d{6}"]]],"808":["808",0,"[1-9]\\\\d{7}",[8],[["(\\\\d{4})(\\\\d{4})","$1 $2",["[1-9]"]]],0,0,0,0,0,0,[0,0,0,0,0,0,0,0,0,["[1-9]\\\\d{7}"]]],"870":["870",0,"7\\\\d{11}|[35-7]\\\\d{8}",[9,12],[["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["[35-7]"]]],0,0,0,0,0,0,[0,["(?:[356]|774[45])\\\\d{8}|7[6-8]\\\\d{7}"]]],"878":["878",0,"10\\\\d{10}",[12],[["(\\\\d{2})(\\\\d{5})(\\\\d{5})","$1 $2 $3",["1"]]],0,0,0,0,0,0,[0,0,0,0,0,0,0,0,["10\\\\d{10}"]]],"881":["881",0,"6\\\\d{9}|[0-36-9]\\\\d{8}",[9,10],[["(\\\\d)(\\\\d{3})(\\\\d{5})","$1 $2 $3",["[0-37-9]"]],["(\\\\d)(\\\\d{3})(\\\\d{5,6})","$1 $2 $3",["6"]]],0,0,0,0,0,0,[0,["6\\\\d{9}|[0-36-9]\\\\d{8}"]]],"882":["882",0,"[13]\\\\d{6}(?:\\\\d{2,5})?|[19]\\\\d{7}|(?:[25]\\\\d\\\\d|4)\\\\d{7}(?:\\\\d{2})?",[7,8,9,10,11,12],[["(\\\\d{2})(\\\\d{5})","$1 $2",["16|342"]],["(\\\\d{2})(\\\\d{6})","$1 $2",["49"]],["(\\\\d{2})(\\\\d{2})(\\\\d{4})","$1 $2 $3",["1[36]|9"]],["(\\\\d{2})(\\\\d{4})(\\\\d{3})","$1 $2 $3",["3[23]"]],["(\\\\d{2})(\\\\d{3,4})(\\\\d{4})","$1 $2 $3",["16"]],["(\\\\d{2})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["10|23|3(?:[15]|4[57])|4|51"]],["(\\\\d{3})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["34"]],["(\\\\d{2})(\\\\d{4,5})(\\\\d{5})","$1 $2 $3",["[1-35]"]]],0,0,0,0,0,0,[0,["342\\\\d{4}|(?:337|49)\\\\d{6}|(?:3(?:2|47|7\\\\d{3})|50\\\\d{3})\\\\d{7}",[7,8,9,10,12]],0,0,0,["348[57]\\\\d{7}",[11]],0,0,["1(?:3(?:0[0347]|[13][0139]|2[035]|4[013568]|6[0459]|7[06]|8[15-8]|9[0689])\\\\d{4}|6\\\\d{5,10})|(?:345\\\\d|9[89])\\\\d{6}|(?:10|2(?:3|85\\\\d)|3(?:[15]|[69]\\\\d\\\\d)|4[15-8]|51)\\\\d{8}"]]],"883":["883",0,"(?:[1-4]\\\\d|51)\\\\d{6,10}",[8,9,10,11,12],[["(\\\\d{3})(\\\\d{3})(\\\\d{2,8})","$1 $2 $3",["[14]|2[24-689]|3[02-689]|51[24-9]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3",["510"]],["(\\\\d{3})(\\\\d{3})(\\\\d{4})","$1 $2 $3",["21"]],["(\\\\d{4})(\\\\d{4})(\\\\d{4})","$1 $2 $3",["51[13]"]],["(\\\\d{3})(\\\\d{3})(\\\\d{3})(\\\\d{3})","$1 $2 $3 $4",["[235]"]]],0,0,0,0,0,0,[0,0,0,0,0,0,0,0,["(?:2(?:00\\\\d\\\\d|10)|(?:370[1-9]|51\\\\d0)\\\\d)\\\\d{7}|51(?:00\\\\d{5}|[24-9]0\\\\d{4,7})|(?:1[0-79]|2[24-689]|3[02-689]|4[0-4])0\\\\d{5,9}"]]],"888":["888",0,"\\\\d{11}",[11],[["(\\\\d{3})(\\\\d{3})(\\\\d{5})","$1 $2 $3"]],0,0,0,0,0,0,[0,0,0,0,0,0,["\\\\d{11}"]]],"979":["979",0,"[1359]\\\\d{8}",[9],[["(\\\\d)(\\\\d{4})(\\\\d{4})","$1 $2 $3",["[1359]"]]],0,0,0,0,0,0,[0,0,0,["[1359]\\\\d{8}"]]]}}');
 
 /***/ })
 
@@ -12642,31 +13284,31 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "NitrozenAutocomplete": function() { return /* reexport */ components_NAutocomplete; },
-  "NitrozenBadge": function() { return /* reexport */ components_NBadge; },
-  "NitrozenButton": function() { return /* reexport */ NBtn/* default */.Z; },
-  "NitrozenButtonV2": function() { return /* reexport */ components_NBtn2; },
-  "NitrozenCheckBox": function() { return /* reexport */ NCheckbox/* default */.Z; },
-  "NitrozenChips": function() { return /* reexport */ components_NChips; },
-  "NitrozenCustomForm": function() { return /* reexport */ components_NCustomForm; },
-  "NitrozenDialog": function() { return /* reexport */ components_NDialog; },
-  "NitrozenDropdown": function() { return /* reexport */ NDropdown/* default */.Z; },
-  "NitrozenError": function() { return /* reexport */ NError/* default */.Z; },
-  "NitrozenIconButton": function() { return /* reexport */ components_NIconBtn; },
-  "NitrozenInline": function() { return /* reexport */ NInline/* default */.Z; },
-  "NitrozenInput": function() { return /* reexport */ components_NInput/* default */.Z; },
-  "NitrozenMenu": function() { return /* reexport */ components_NMenu; },
-  "NitrozenMenuItem": function() { return /* reexport */ components_NMenuItem; },
-  "NitrozenPagination": function() { return /* reexport */ components_NPagination; },
-  "NitrozenRadio": function() { return /* reexport */ NRadio/* default */.Z; },
-  "NitrozenStepper": function() { return /* reexport */ components_NStepper; },
-  "NitrozenTab": function() { return /* reexport */ components_NTab; },
-  "NitrozenTabItem": function() { return /* reexport */ components_NTabItem; },
-  "NitrozenToggleBtn": function() { return /* reexport */ NToggleBtn/* default */.Z; },
-  "NitrozenTooltip": function() { return /* reexport */ NTooltip/* default */.Z; },
-  "clickOutside": function() { return /* reexport */ NClickOutside; },
-  "flatBtn": function() { return /* reexport */ NFlatBtn/* default */.Z; },
-  "strokeBtn": function() { return /* reexport */ NStrokeBtn/* default */.Z; }
+  NitrozenAutocomplete: function() { return /* reexport */ components_NAutocomplete; },
+  NitrozenBadge: function() { return /* reexport */ components_NBadge; },
+  NitrozenButton: function() { return /* reexport */ NBtn/* default */.A; },
+  NitrozenButtonV2: function() { return /* reexport */ components_NBtn2; },
+  NitrozenCheckBox: function() { return /* reexport */ NCheckbox/* default */.A; },
+  NitrozenChips: function() { return /* reexport */ components_NChips; },
+  NitrozenCustomForm: function() { return /* reexport */ components_NCustomForm; },
+  NitrozenDialog: function() { return /* reexport */ components_NDialog; },
+  NitrozenDropdown: function() { return /* reexport */ NDropdown/* default */.A; },
+  NitrozenError: function() { return /* reexport */ NError/* default */.A; },
+  NitrozenIconButton: function() { return /* reexport */ components_NIconBtn; },
+  NitrozenInline: function() { return /* reexport */ NInline/* default */.A; },
+  NitrozenInput: function() { return /* reexport */ components_NInput/* default */.A; },
+  NitrozenMenu: function() { return /* reexport */ components_NMenu; },
+  NitrozenMenuItem: function() { return /* reexport */ components_NMenuItem; },
+  NitrozenPagination: function() { return /* reexport */ components_NPagination; },
+  NitrozenRadio: function() { return /* reexport */ NRadio/* default */.A; },
+  NitrozenStepper: function() { return /* reexport */ components_NStepper; },
+  NitrozenTab: function() { return /* reexport */ components_NTab; },
+  NitrozenTabItem: function() { return /* reexport */ components_NTabItem; },
+  NitrozenToggleBtn: function() { return /* reexport */ NToggleBtn/* default */.A; },
+  NitrozenTooltip: function() { return /* reexport */ NTooltip/* default */.A; },
+  clickOutside: function() { return /* reexport */ NClickOutside; },
+  flatBtn: function() { return /* reexport */ NFlatBtn/* default */.A; },
+  strokeBtn: function() { return /* reexport */ NStrokeBtn/* default */.A; }
 });
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
@@ -12676,7 +13318,7 @@ __webpack_require__.d(__webpack_exports__, {
 if (typeof window !== 'undefined') {
   var currentScript = window.document.currentScript
   if (true) {
-    var getCurrentScript = __webpack_require__(7679)
+    var getCurrentScript = __webpack_require__(5003)
     currentScript = getCurrentScript()
 
     // for backward compatibility, because previously we directly included the polyfill
@@ -12694,7 +13336,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NAutocomplete/NAutocomplete.vue?vue&type=template&id=91f50dce&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NAutocomplete/NAutocomplete.vue?vue&type=template&id=91f50dce
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -12730,14 +13372,14 @@ var render = function render() {
 var staticRenderFns = [];
 
 // EXTERNAL MODULE: ./src/components/NInput/NInput.vue + 14 modules
-var NInput = __webpack_require__(1820);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NAutocomplete/NAutocomplete.vue?vue&type=script&lang=js&
+var NInput = __webpack_require__(8696);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NAutocomplete/NAutocomplete.vue?vue&type=script&lang=js
 
 
-/* harmony default export */ var NAutocompletevue_type_script_lang_js_ = ({
+/* harmony default export */ var NAutocompletevue_type_script_lang_js = ({
   name: 'nitrozen-autocomplete',
   components: {
-    'nitrozen-input': NInput/* default */.Z
+    'nitrozen-input': NInput/* default */.A
   },
   props: {
     id: {
@@ -12863,15 +13505,15 @@ var NInput = __webpack_require__(1820);
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NAutocomplete/NAutocomplete.vue?vue&type=script&lang=js&
- /* harmony default export */ var NAutocomplete_NAutocompletevue_type_script_lang_js_ = (NAutocompletevue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NAutocomplete/NAutocomplete.vue?vue&type=style&index=0&id=91f50dce&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NAutocomplete/NAutocomplete.vue?vue&type=script&lang=js
+ /* harmony default export */ var NAutocomplete_NAutocompletevue_type_script_lang_js = (NAutocompletevue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NAutocomplete/NAutocomplete.vue?vue&type=style&index=0&id=91f50dce&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NAutocomplete/NAutocomplete.vue?vue&type=style&index=0&id=91f50dce&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NAutocomplete/NAutocomplete.vue?vue&type=style&index=0&id=91f50dce&prod&lang=less
 
-// EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(3736);
+// EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(1656);
 ;// CONCATENATED MODULE: ./src/components/NAutocomplete/NAutocomplete.vue
 
 
@@ -12881,8 +13523,8 @@ var componentNormalizer = __webpack_require__(3736);
 
 /* normalize component */
 
-var component = (0,componentNormalizer/* default */.Z)(
-  NAutocomplete_NAutocompletevue_type_script_lang_js_,
+var component = (0,componentNormalizer/* default */.A)(
+  NAutocomplete_NAutocompletevue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -12897,15 +13539,15 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 /* harmony default export */ var components_NAutocomplete = (NAutocomplete);
 // EXTERNAL MODULE: ./src/components/NBtn/index.js + 5 modules
-var NBtn = __webpack_require__(9938);
+var NBtn = __webpack_require__(932);
 // EXTERNAL MODULE: ./src/components/NBtn/NBtnContent.vue + 6 modules
-var NBtnContent = __webpack_require__(7084);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn2/NBtn2.vue?vue&type=script&lang=js&
+var NBtnContent = __webpack_require__(7536);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn2/NBtn2.vue?vue&type=script&lang=js
 
-/* harmony default export */ var NBtn2vue_type_script_lang_js_ = ({
+/* harmony default export */ var NBtn2vue_type_script_lang_js = ({
   name: 'nitrozen-button-v2',
   components: {
-    NButtonContent: NBtnContent/* default */.Z
+    NButtonContent: NBtnContent/* default */.A
   },
   props: {
     href: {
@@ -12984,12 +13626,12 @@ var NBtnContent = __webpack_require__(7084);
     return createElement(tag, buttonAttrs, [slotElement]);
   }
 });
-;// CONCATENATED MODULE: ./src/components/NBtn2/NBtn2.vue?vue&type=script&lang=js&
- /* harmony default export */ var NBtn2_NBtn2vue_type_script_lang_js_ = (NBtn2vue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn2/NBtn2.vue?vue&type=style&index=0&id=7dc8142c&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NBtn2/NBtn2.vue?vue&type=script&lang=js
+ /* harmony default export */ var NBtn2_NBtn2vue_type_script_lang_js = (NBtn2vue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn2/NBtn2.vue?vue&type=style&index=0&id=7dc8142c&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NBtn2/NBtn2.vue?vue&type=style&index=0&id=7dc8142c&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NBtn2/NBtn2.vue?vue&type=style&index=0&id=7dc8142c&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NBtn2/NBtn2.vue
 var NBtn2_render, NBtn2_staticRenderFns
@@ -13000,8 +13642,8 @@ var NBtn2_render, NBtn2_staticRenderFns
 
 /* normalize component */
 
-var NBtn2_component = (0,componentNormalizer/* default */.Z)(
-  NBtn2_NBtn2vue_type_script_lang_js_,
+var NBtn2_component = (0,componentNormalizer/* default */.A)(
+  NBtn2_NBtn2vue_type_script_lang_js,
   NBtn2_render,
   NBtn2_staticRenderFns,
   false,
@@ -13015,7 +13657,7 @@ var NBtn2_component = (0,componentNormalizer/* default */.Z)(
 ;// CONCATENATED MODULE: ./src/components/NBtn2/index.js
 
 /* harmony default export */ var components_NBtn2 = (NBtn2);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBadge/NBadge.vue?vue&type=template&id=2234aa39&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBadge/NBadge.vue?vue&type=template&id=2234aa39
 var NBadgevue_type_template_id_2234aa39_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -13030,8 +13672,8 @@ var NBadgevue_type_template_id_2234aa39_render = function render() {
 };
 var NBadgevue_type_template_id_2234aa39_staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBadge/NBadge.vue?vue&type=script&lang=js&
-/* harmony default export */ var NBadgevue_type_script_lang_js_ = ({
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBadge/NBadge.vue?vue&type=script&lang=js
+/* harmony default export */ var NBadgevue_type_script_lang_js = ({
   name: "nitrozen-badge",
   props: {
     state: {
@@ -13076,12 +13718,12 @@ var NBadgevue_type_template_id_2234aa39_staticRenderFns = [];
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NBadge/NBadge.vue?vue&type=script&lang=js&
- /* harmony default export */ var NBadge_NBadgevue_type_script_lang_js_ = (NBadgevue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBadge/NBadge.vue?vue&type=style&index=0&id=2234aa39&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NBadge/NBadge.vue?vue&type=script&lang=js
+ /* harmony default export */ var NBadge_NBadgevue_type_script_lang_js = (NBadgevue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBadge/NBadge.vue?vue&type=style&index=0&id=2234aa39&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NBadge/NBadge.vue?vue&type=style&index=0&id=2234aa39&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NBadge/NBadge.vue?vue&type=style&index=0&id=2234aa39&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NBadge/NBadge.vue
 
@@ -13092,8 +13734,8 @@ var NBadgevue_type_template_id_2234aa39_staticRenderFns = [];
 
 /* normalize component */
 
-var NBadge_component = (0,componentNormalizer/* default */.Z)(
-  NBadge_NBadgevue_type_script_lang_js_,
+var NBadge_component = (0,componentNormalizer/* default */.A)(
+  NBadge_NBadgevue_type_script_lang_js,
   NBadgevue_type_template_id_2234aa39_render,
   NBadgevue_type_template_id_2234aa39_staticRenderFns,
   false,
@@ -13108,9 +13750,9 @@ var NBadge_component = (0,componentNormalizer/* default */.Z)(
 
 /* harmony default export */ var components_NBadge = (NBadge);
 // EXTERNAL MODULE: ./src/components/NCheckbox/index.js + 6 modules
-var NCheckbox = __webpack_require__(3849);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NChips/NChips.vue?vue&type=template&id=6c88e47d&
-var NChipsvue_type_template_id_6c88e47d_render = function render() {
+var NCheckbox = __webpack_require__(1986);
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NChips/NChips.vue?vue&type=template&id=625786bf
+var NChipsvue_type_template_id_625786bf_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('transition', {
@@ -13152,23 +13794,23 @@ var NChipsvue_type_template_id_6c88e47d_render = function render() {
     }
   })], 1) : _vm._e()])], 2)]);
 };
-var NChipsvue_type_template_id_6c88e47d_staticRenderFns = [];
+var NChipsvue_type_template_id_625786bf_staticRenderFns = [];
 
 // EXTERNAL MODULE: ./src/components/NInline/index.js + 6 modules
-var NInline = __webpack_require__(7549);
+var NInline = __webpack_require__(977);
 // EXTERNAL MODULE: ./src/utils/NUuid.js
-var NUuid = __webpack_require__(3934);
+var NUuid = __webpack_require__(5472);
 // EXTERNAL MODULE: ./src/components/NTooltip/index.js + 6 modules
-var NTooltip = __webpack_require__(632);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NChips/NChips.vue?vue&type=script&lang=js&
+var NTooltip = __webpack_require__(1649);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NChips/NChips.vue?vue&type=script&lang=js
 
 
 
-/* harmony default export */ var NChipsvue_type_script_lang_js_ = ({
+/* harmony default export */ var NChipsvue_type_script_lang_js = ({
   name: 'nitrozen-chips',
   components: {
-    'nitrozen-inline': NInline/* default */.Z,
-    'nitrozen-tooltip': NTooltip/* default */.Z
+    'nitrozen-inline': NInline/* default */.A,
+    'nitrozen-tooltip': NTooltip/* default */.A
   },
   props: {
     disable: {
@@ -13193,11 +13835,11 @@ var NTooltip = __webpack_require__(632);
     },
     iconId: {
       type: [Number, String],
-      default: () => 'nitrozen-icon' + (0,NUuid/* default */.Z)()
+      default: () => 'nitrozen-icon' + (0,NUuid/* default */.A)()
     },
     chipId: {
       type: [Number, String],
-      default: () => 'nitrozen-chip' + (0,NUuid/* default */.Z)()
+      default: () => 'nitrozen-chip' + (0,NUuid/* default */.A)()
     },
     multiSelect: {
       type: Boolean,
@@ -13243,12 +13885,12 @@ var NTooltip = __webpack_require__(632);
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NChips/NChips.vue?vue&type=script&lang=js&
- /* harmony default export */ var NChips_NChipsvue_type_script_lang_js_ = (NChipsvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NChips/NChips.vue?vue&type=style&index=0&id=6c88e47d&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NChips/NChips.vue?vue&type=script&lang=js
+ /* harmony default export */ var NChips_NChipsvue_type_script_lang_js = (NChipsvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NChips/NChips.vue?vue&type=style&index=0&id=625786bf&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NChips/NChips.vue?vue&type=style&index=0&id=6c88e47d&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NChips/NChips.vue?vue&type=style&index=0&id=625786bf&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NChips/NChips.vue
 
@@ -13259,10 +13901,10 @@ var NTooltip = __webpack_require__(632);
 
 /* normalize component */
 
-var NChips_component = (0,componentNormalizer/* default */.Z)(
-  NChips_NChipsvue_type_script_lang_js_,
-  NChipsvue_type_template_id_6c88e47d_render,
-  NChipsvue_type_template_id_6c88e47d_staticRenderFns,
+var NChips_component = (0,componentNormalizer/* default */.A)(
+  NChips_NChipsvue_type_script_lang_js,
+  NChipsvue_type_template_id_625786bf_render,
+  NChipsvue_type_template_id_625786bf_staticRenderFns,
   false,
   null,
   null,
@@ -13275,8 +13917,8 @@ var NChips_component = (0,componentNormalizer/* default */.Z)(
 
 /* harmony default export */ var components_NChips = (NChips);
 // EXTERNAL MODULE: ./src/components/NDropdown/index.js + 6 modules
-var NDropdown = __webpack_require__(7150);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDialog/NDialog.vue?vue&type=template&id=6f0e3ecc&
+var NDropdown = __webpack_require__(5757);
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDialog/NDialog.vue?vue&type=template&id=6f0e3ecc
 var NDialogvue_type_template_id_6f0e3ecc_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -13380,11 +14022,11 @@ var NDialogvue_type_template_id_6f0e3ecc_render = function render() {
 var NDialogvue_type_template_id_6f0e3ecc_staticRenderFns = [];
 
 // EXTERNAL MODULE: ./src/directives/NStrokeBtn.js
-var NStrokeBtn = __webpack_require__(8545);
+var NStrokeBtn = __webpack_require__(7218);
 // EXTERNAL MODULE: ./src/directives/NFlatBtn.js
-var NFlatBtn = __webpack_require__(3726);
+var NFlatBtn = __webpack_require__(7515);
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
-var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(3797);
+var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(4100);
 var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
 ;// CONCATENATED MODULE: ./src/directives/NClickOutside.js
 
@@ -13436,20 +14078,20 @@ external_commonjs_vue_commonjs2_vue_root_Vue_default().use(clickOutside);
 //     Vue.use(ele)
 // })
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDialog/NDialog.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDialog/NDialog.vue?vue&type=script&lang=js
 
 
 
 
-/* harmony default export */ var NDialogvue_type_script_lang_js_ = ({
+/* harmony default export */ var NDialogvue_type_script_lang_js = ({
   name: "nitrozen-dialog",
   components: {
-    NitrozenButton: NBtn/* default */.Z,
-    NitrozenInline: NInline/* default */.Z
+    NitrozenButton: NBtn/* default */.A,
+    NitrozenInline: NInline/* default */.A
   },
   directives: {
-    flatBtn: NFlatBtn/* default */.Z,
-    strokeBtn: NStrokeBtn/* default */.Z
+    flatBtn: NFlatBtn/* default */.A,
+    strokeBtn: NStrokeBtn/* default */.A
   },
   props: {
     /**
@@ -13457,7 +14099,7 @@ external_commonjs_vue_commonjs2_vue_root_Vue_default().use(clickOutside);
      */
     id: {
       type: [Number, String],
-      default: () => "nitrozen-dialog-" + (0,NUuid/* default */.Z)()
+      default: () => "nitrozen-dialog-" + (0,NUuid/* default */.A)()
     },
     /**
      * title of dialog
@@ -13550,12 +14192,12 @@ external_commonjs_vue_commonjs2_vue_root_Vue_default().use(clickOutside);
     document.removeEventListener("keydown", this.handleESCKey);
   }
 });
-;// CONCATENATED MODULE: ./src/components/NDialog/NDialog.vue?vue&type=script&lang=js&
- /* harmony default export */ var NDialog_NDialogvue_type_script_lang_js_ = (NDialogvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDialog/NDialog.vue?vue&type=style&index=0&id=6f0e3ecc&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NDialog/NDialog.vue?vue&type=script&lang=js
+ /* harmony default export */ var NDialog_NDialogvue_type_script_lang_js = (NDialogvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDialog/NDialog.vue?vue&type=style&index=0&id=6f0e3ecc&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NDialog/NDialog.vue?vue&type=style&index=0&id=6f0e3ecc&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NDialog/NDialog.vue?vue&type=style&index=0&id=6f0e3ecc&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NDialog/NDialog.vue
 
@@ -13566,8 +14208,8 @@ external_commonjs_vue_commonjs2_vue_root_Vue_default().use(clickOutside);
 
 /* normalize component */
 
-var NDialog_component = (0,componentNormalizer/* default */.Z)(
-  NDialog_NDialogvue_type_script_lang_js_,
+var NDialog_component = (0,componentNormalizer/* default */.A)(
+  NDialog_NDialogvue_type_script_lang_js,
   NDialogvue_type_template_id_6f0e3ecc_render,
   NDialogvue_type_template_id_6f0e3ecc_staticRenderFns,
   false,
@@ -13583,10 +14225,10 @@ var NDialog_component = (0,componentNormalizer/* default */.Z)(
 
 /* harmony default export */ var components_NDialog = (NDialog);
 // EXTERNAL MODULE: ./src/components/NError/index.js + 6 modules
-var NError = __webpack_require__(9751);
+var NError = __webpack_require__(5700);
 // EXTERNAL MODULE: ./src/components/NInput/index.js
-var components_NInput = __webpack_require__(5778);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NMenu/NMenu.vue?vue&type=template&id=308a10e0&
+var components_NInput = __webpack_require__(4271);
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NMenu/NMenu.vue?vue&type=template&id=308a10e0
 var NMenuvue_type_template_id_308a10e0_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -13629,22 +14271,22 @@ var NMenuvue_type_template_id_308a10e0_render = function render() {
 };
 var NMenuvue_type_template_id_308a10e0_staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NMenu/NMenu.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NMenu/NMenu.vue?vue&type=script&lang=js
 
 
 
-/* harmony default export */ var NMenuvue_type_script_lang_js_ = ({
+/* harmony default export */ var NMenuvue_type_script_lang_js = ({
   name: "nitrozen-menu",
   directives: {
     clickOutside: NClickOutside
   },
   components: {
-    "nitrozen-inline": NInline/* default */.Z
+    "nitrozen-inline": NInline/* default */.A
   },
   props: {
     id: {
       type: [Number, String],
-      default: () => "nitrozen-menu" + (0,NUuid/* default */.Z)()
+      default: () => "nitrozen-menu" + (0,NUuid/* default */.A)()
     },
     mode: {
       type: String,
@@ -13670,12 +14312,12 @@ var NMenuvue_type_template_id_308a10e0_staticRenderFns = [];
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NMenu/NMenu.vue?vue&type=script&lang=js&
- /* harmony default export */ var NMenu_NMenuvue_type_script_lang_js_ = (NMenuvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NMenu/NMenu.vue?vue&type=style&index=0&id=308a10e0&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NMenu/NMenu.vue?vue&type=script&lang=js
+ /* harmony default export */ var NMenu_NMenuvue_type_script_lang_js = (NMenuvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NMenu/NMenu.vue?vue&type=style&index=0&id=308a10e0&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NMenu/NMenu.vue?vue&type=style&index=0&id=308a10e0&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NMenu/NMenu.vue?vue&type=style&index=0&id=308a10e0&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NMenu/NMenu.vue
 
@@ -13686,8 +14328,8 @@ var NMenuvue_type_template_id_308a10e0_staticRenderFns = [];
 
 /* normalize component */
 
-var NMenu_component = (0,componentNormalizer/* default */.Z)(
-  NMenu_NMenuvue_type_script_lang_js_,
+var NMenu_component = (0,componentNormalizer/* default */.A)(
+  NMenu_NMenuvue_type_script_lang_js,
   NMenuvue_type_template_id_308a10e0_render,
   NMenuvue_type_template_id_308a10e0_staticRenderFns,
   false,
@@ -13701,7 +14343,7 @@ var NMenu_component = (0,componentNormalizer/* default */.Z)(
 ;// CONCATENATED MODULE: ./src/components/NMenu/index.js
 
 /* harmony default export */ var components_NMenu = (NMenu);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NMenuItem/NMenuItem.vue?vue&type=template&id=835c1ace&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NMenuItem/NMenuItem.vue?vue&type=template&id=835c1ace
 var NMenuItemvue_type_template_id_835c1ace_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -13711,23 +14353,23 @@ var NMenuItemvue_type_template_id_835c1ace_render = function render() {
 };
 var NMenuItemvue_type_template_id_835c1ace_staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NMenuItem/NMenuItem.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NMenuItem/NMenuItem.vue?vue&type=script&lang=js
 
-/* harmony default export */ var NMenuItemvue_type_script_lang_js_ = ({
+/* harmony default export */ var NMenuItemvue_type_script_lang_js = ({
   name: "nitrozen-menu-item",
   props: {
     id: {
       type: [Number, String],
-      default: () => "nitrozen-menu-item" + (0,NUuid/* default */.Z)()
+      default: () => "nitrozen-menu-item" + (0,NUuid/* default */.A)()
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NMenuItem/NMenuItem.vue?vue&type=script&lang=js&
- /* harmony default export */ var NMenuItem_NMenuItemvue_type_script_lang_js_ = (NMenuItemvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NMenuItem/NMenuItem.vue?vue&type=style&index=0&id=835c1ace&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NMenuItem/NMenuItem.vue?vue&type=script&lang=js
+ /* harmony default export */ var NMenuItem_NMenuItemvue_type_script_lang_js = (NMenuItemvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NMenuItem/NMenuItem.vue?vue&type=style&index=0&id=835c1ace&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NMenuItem/NMenuItem.vue?vue&type=style&index=0&id=835c1ace&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NMenuItem/NMenuItem.vue?vue&type=style&index=0&id=835c1ace&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NMenuItem/NMenuItem.vue
 
@@ -13738,8 +14380,8 @@ var NMenuItemvue_type_template_id_835c1ace_staticRenderFns = [];
 
 /* normalize component */
 
-var NMenuItem_component = (0,componentNormalizer/* default */.Z)(
-  NMenuItem_NMenuItemvue_type_script_lang_js_,
+var NMenuItem_component = (0,componentNormalizer/* default */.A)(
+  NMenuItem_NMenuItemvue_type_script_lang_js,
   NMenuItemvue_type_template_id_835c1ace_render,
   NMenuItemvue_type_template_id_835c1ace_staticRenderFns,
   false,
@@ -13753,7 +14395,7 @@ var NMenuItem_component = (0,componentNormalizer/* default */.Z)(
 ;// CONCATENATED MODULE: ./src/components/NMenuItem/index.js
 
 /* harmony default export */ var components_NMenuItem = (NMenuItem);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTab/NTab.vue?vue&type=template&id=2c61829c&scoped=true&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTab/NTab.vue?vue&type=template&id=2c61829c&scoped=true
 var NTabvue_type_template_id_2c61829c_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -13780,7 +14422,7 @@ var NTabvue_type_template_id_2c61829c_scoped_true_render = function render() {
 };
 var NTabvue_type_template_id_2c61829c_scoped_true_staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTabItem/NTabItem.vue?vue&type=template&id=cfd6b808&scoped=true&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTabItem/NTabItem.vue?vue&type=template&id=cfd6b808&scoped=true
 var NTabItemvue_type_template_id_cfd6b808_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -13790,23 +14432,23 @@ var NTabItemvue_type_template_id_cfd6b808_scoped_true_render = function render()
 };
 var NTabItemvue_type_template_id_cfd6b808_scoped_true_staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTabItem/NTabItem.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTabItem/NTabItem.vue?vue&type=script&lang=js
 
-/* harmony default export */ var NTabItemvue_type_script_lang_js_ = ({
+/* harmony default export */ var NTabItemvue_type_script_lang_js = ({
   name: "nitrozen-tab-item",
   props: {
     id: {
       type: [Number, String],
-      default: () => "nitrozen-tab-item" + (0,NUuid/* default */.Z)()
+      default: () => "nitrozen-tab-item" + (0,NUuid/* default */.A)()
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NTabItem/NTabItem.vue?vue&type=script&lang=js&
- /* harmony default export */ var NTabItem_NTabItemvue_type_script_lang_js_ = (NTabItemvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTabItem/NTabItem.vue?vue&type=style&index=0&id=cfd6b808&prod&lang=less&scoped=true&
+;// CONCATENATED MODULE: ./src/components/NTabItem/NTabItem.vue?vue&type=script&lang=js
+ /* harmony default export */ var NTabItem_NTabItemvue_type_script_lang_js = (NTabItemvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTabItem/NTabItem.vue?vue&type=style&index=0&id=cfd6b808&prod&lang=less&scoped=true
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NTabItem/NTabItem.vue?vue&type=style&index=0&id=cfd6b808&prod&lang=less&scoped=true&
+;// CONCATENATED MODULE: ./src/components/NTabItem/NTabItem.vue?vue&type=style&index=0&id=cfd6b808&prod&lang=less&scoped=true
 
 ;// CONCATENATED MODULE: ./src/components/NTabItem/NTabItem.vue
 
@@ -13817,8 +14459,8 @@ var NTabItemvue_type_template_id_cfd6b808_scoped_true_staticRenderFns = [];
 
 /* normalize component */
 
-var NTabItem_component = (0,componentNormalizer/* default */.Z)(
-  NTabItem_NTabItemvue_type_script_lang_js_,
+var NTabItem_component = (0,componentNormalizer/* default */.A)(
+  NTabItem_NTabItemvue_type_script_lang_js,
   NTabItemvue_type_template_id_cfd6b808_scoped_true_render,
   NTabItemvue_type_template_id_cfd6b808_scoped_true_staticRenderFns,
   false,
@@ -13832,10 +14474,10 @@ var NTabItem_component = (0,componentNormalizer/* default */.Z)(
 ;// CONCATENATED MODULE: ./src/components/NTabItem/index.js
 
 /* harmony default export */ var components_NTabItem = (NTabItem);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTab/NTab.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTab/NTab.vue?vue&type=script&lang=js
 
 
-/* harmony default export */ var NTabvue_type_script_lang_js_ = ({
+/* harmony default export */ var NTabvue_type_script_lang_js = ({
   name: "nitrozen-tab",
   components: {
     "nitrozen-tab-item": components_NTabItem
@@ -13843,7 +14485,7 @@ var NTabItem_component = (0,componentNormalizer/* default */.Z)(
   props: {
     id: {
       type: [Number, String],
-      default: () => "nitrozen-tab" + (0,NUuid/* default */.Z)()
+      default: () => "nitrozen-tab" + (0,NUuid/* default */.A)()
     },
     tabItem: {
       type: Array,
@@ -13874,12 +14516,12 @@ var NTabItem_component = (0,componentNormalizer/* default */.Z)(
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NTab/NTab.vue?vue&type=script&lang=js&
- /* harmony default export */ var NTab_NTabvue_type_script_lang_js_ = (NTabvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTab/NTab.vue?vue&type=style&index=0&id=2c61829c&prod&lang=less&scoped=true&
+;// CONCATENATED MODULE: ./src/components/NTab/NTab.vue?vue&type=script&lang=js
+ /* harmony default export */ var NTab_NTabvue_type_script_lang_js = (NTabvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NTab/NTab.vue?vue&type=style&index=0&id=2c61829c&prod&lang=less&scoped=true
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NTab/NTab.vue?vue&type=style&index=0&id=2c61829c&prod&lang=less&scoped=true&
+;// CONCATENATED MODULE: ./src/components/NTab/NTab.vue?vue&type=style&index=0&id=2c61829c&prod&lang=less&scoped=true
 
 ;// CONCATENATED MODULE: ./src/components/NTab/NTab.vue
 
@@ -13890,8 +14532,8 @@ var NTabItem_component = (0,componentNormalizer/* default */.Z)(
 
 /* normalize component */
 
-var NTab_component = (0,componentNormalizer/* default */.Z)(
-  NTab_NTabvue_type_script_lang_js_,
+var NTab_component = (0,componentNormalizer/* default */.A)(
+  NTab_NTabvue_type_script_lang_js,
   NTabvue_type_template_id_2c61829c_scoped_true_render,
   NTabvue_type_template_id_2c61829c_scoped_true_staticRenderFns,
   false,
@@ -13905,7 +14547,7 @@ var NTab_component = (0,componentNormalizer/* default */.Z)(
 ;// CONCATENATED MODULE: ./src/components/NTab/index.js
 
 /* harmony default export */ var components_NTab = (NTab);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=template&id=2637fc16&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=template&id=2637fc16
 var NPaginationvue_type_template_id_2637fc16_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -13975,19 +14617,19 @@ var NPaginationvue_type_template_id_2637fc16_render = function render() {
 };
 var NPaginationvue_type_template_id_2637fc16_staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=script&lang=js
 
 
 
 
 const MODE_REGULAR = "regular";
 const MODE_CURSOR = "cursor";
-/* harmony default export */ var NPaginationvue_type_script_lang_js_ = ({
+/* harmony default export */ var NPaginationvue_type_script_lang_js = ({
   name: "nitrozen-pagination",
   components: {
-    NitrozenButton: NBtn/* default */.Z,
-    NitrozenDropdown: NDropdown/* default */.Z,
-    NitrozenInline: NInline/* default */.Z
+    NitrozenButton: NBtn/* default */.A,
+    NitrozenDropdown: NDropdown/* default */.A,
+    NitrozenInline: NInline/* default */.A
   },
   props: {
     /**
@@ -13995,7 +14637,7 @@ const MODE_CURSOR = "cursor";
      */
     id: {
       type: [Number, String],
-      default: () => "nitrozen-pagination-" + (0,NUuid/* default */.Z)()
+      default: () => "nitrozen-pagination-" + (0,NUuid/* default */.A)()
     },
     /**
      * kind of pagination
@@ -14182,12 +14824,12 @@ const MODE_CURSOR = "cursor";
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NPagination/NPagination.vue?vue&type=script&lang=js&
- /* harmony default export */ var NPagination_NPaginationvue_type_script_lang_js_ = (NPaginationvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=style&index=0&id=2637fc16&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NPagination/NPagination.vue?vue&type=script&lang=js
+ /* harmony default export */ var NPagination_NPaginationvue_type_script_lang_js = (NPaginationvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NPagination/NPagination.vue?vue&type=style&index=0&id=2637fc16&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NPagination/NPagination.vue?vue&type=style&index=0&id=2637fc16&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NPagination/NPagination.vue?vue&type=style&index=0&id=2637fc16&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NPagination/NPagination.vue
 
@@ -14198,8 +14840,8 @@ const MODE_CURSOR = "cursor";
 
 /* normalize component */
 
-var NPagination_component = (0,componentNormalizer/* default */.Z)(
-  NPagination_NPaginationvue_type_script_lang_js_,
+var NPagination_component = (0,componentNormalizer/* default */.A)(
+  NPagination_NPaginationvue_type_script_lang_js,
   NPaginationvue_type_template_id_2637fc16_render,
   NPaginationvue_type_template_id_2637fc16_staticRenderFns,
   false,
@@ -14215,8 +14857,8 @@ var NPagination_component = (0,componentNormalizer/* default */.Z)(
 
 /* harmony default export */ var components_NPagination = (NPagination);
 // EXTERNAL MODULE: ./src/components/NRadio/index.js + 6 modules
-var NRadio = __webpack_require__(1232);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NStepper/NStepper.vue?vue&type=template&id=2023bb58&
+var NRadio = __webpack_require__(1478);
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NStepper/NStepper.vue?vue&type=template&id=2023bb58
 var NSteppervue_type_template_id_2023bb58_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -14283,9 +14925,9 @@ var NSteppervue_type_template_id_2023bb58_render = function render() {
 };
 var NSteppervue_type_template_id_2023bb58_staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NStepper/NStepper.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NStepper/NStepper.vue?vue&type=script&lang=js
 
-/* harmony default export */ var NSteppervue_type_script_lang_js_ = ({
+/* harmony default export */ var NSteppervue_type_script_lang_js = ({
   name: 'nitrozen-stepper',
   watch: {
     activeIndex(index) {
@@ -14334,7 +14976,7 @@ var NSteppervue_type_template_id_2023bb58_staticRenderFns = [];
     },
     id: {
       type: [Number, String],
-      default: () => "nitrozen-stepper" + (0,NUuid/* default */.Z)()
+      default: () => "nitrozen-stepper" + (0,NUuid/* default */.A)()
     }
   },
   methods: {
@@ -14347,12 +14989,12 @@ var NSteppervue_type_template_id_2023bb58_staticRenderFns = [];
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NStepper/NStepper.vue?vue&type=script&lang=js&
- /* harmony default export */ var NStepper_NSteppervue_type_script_lang_js_ = (NSteppervue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NStepper/NStepper.vue?vue&type=style&index=0&id=2023bb58&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NStepper/NStepper.vue?vue&type=script&lang=js
+ /* harmony default export */ var NStepper_NSteppervue_type_script_lang_js = (NSteppervue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NStepper/NStepper.vue?vue&type=style&index=0&id=2023bb58&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NStepper/NStepper.vue?vue&type=style&index=0&id=2023bb58&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NStepper/NStepper.vue?vue&type=style&index=0&id=2023bb58&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NStepper/NStepper.vue
 
@@ -14363,8 +15005,8 @@ var NSteppervue_type_template_id_2023bb58_staticRenderFns = [];
 
 /* normalize component */
 
-var NStepper_component = (0,componentNormalizer/* default */.Z)(
-  NStepper_NSteppervue_type_script_lang_js_,
+var NStepper_component = (0,componentNormalizer/* default */.A)(
+  NStepper_NSteppervue_type_script_lang_js,
   NSteppervue_type_template_id_2023bb58_render,
   NSteppervue_type_template_id_2023bb58_staticRenderFns,
   false,
@@ -14379,13 +15021,13 @@ var NStepper_component = (0,componentNormalizer/* default */.Z)(
 
 /* harmony default export */ var components_NStepper = (NStepper);
 // EXTERNAL MODULE: ./src/components/NToggleBtn/index.js + 6 modules
-var NToggleBtn = __webpack_require__(9831);
+var NToggleBtn = __webpack_require__(1147);
 // EXTERNAL MODULE: ./src/components/NCustomForm/NCustomForm.vue + 13 modules
-var NCustomForm = __webpack_require__(905);
+var NCustomForm = __webpack_require__(9154);
 ;// CONCATENATED MODULE: ./src/components/NCustomForm/index.js
 
 /* harmony default export */ var components_NCustomForm = (NCustomForm["default"]);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NIconBtn/NIconBtnContent.vue?vue&type=template&id=5e9367c7&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NIconBtn/NIconBtnContent.vue?vue&type=template&id=5e9367c7
 var NIconBtnContentvue_type_template_id_5e9367c7_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -14408,12 +15050,12 @@ var NIconBtnContentvue_type_template_id_5e9367c7_render = function render() {
 };
 var NIconBtnContentvue_type_template_id_5e9367c7_staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NIconBtn/NIconBtnContent.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NIconBtn/NIconBtnContent.vue?vue&type=script&lang=js
 
-/* harmony default export */ var NIconBtnContentvue_type_script_lang_js_ = ({
+/* harmony default export */ var NIconBtnContentvue_type_script_lang_js = ({
   name: 'icon-button-content',
   components: {
-    "nitrozen-inline": NInline/* default */.Z
+    "nitrozen-inline": NInline/* default */.A
   },
   props: {
     showProgress: {
@@ -14425,12 +15067,12 @@ var NIconBtnContentvue_type_template_id_5e9367c7_staticRenderFns = [];
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/NIconBtn/NIconBtnContent.vue?vue&type=script&lang=js&
- /* harmony default export */ var NIconBtn_NIconBtnContentvue_type_script_lang_js_ = (NIconBtnContentvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NIconBtn/NIconBtnContent.vue?vue&type=style&index=0&id=5e9367c7&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NIconBtn/NIconBtnContent.vue?vue&type=script&lang=js
+ /* harmony default export */ var NIconBtn_NIconBtnContentvue_type_script_lang_js = (NIconBtnContentvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NIconBtn/NIconBtnContent.vue?vue&type=style&index=0&id=5e9367c7&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NIconBtn/NIconBtnContent.vue?vue&type=style&index=0&id=5e9367c7&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NIconBtn/NIconBtnContent.vue?vue&type=style&index=0&id=5e9367c7&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NIconBtn/NIconBtnContent.vue
 
@@ -14441,8 +15083,8 @@ var NIconBtnContentvue_type_template_id_5e9367c7_staticRenderFns = [];
 
 /* normalize component */
 
-var NIconBtnContent_component = (0,componentNormalizer/* default */.Z)(
-  NIconBtn_NIconBtnContentvue_type_script_lang_js_,
+var NIconBtnContent_component = (0,componentNormalizer/* default */.A)(
+  NIconBtn_NIconBtnContentvue_type_script_lang_js,
   NIconBtnContentvue_type_template_id_5e9367c7_render,
   NIconBtnContentvue_type_template_id_5e9367c7_staticRenderFns,
   false,
@@ -14453,9 +15095,9 @@ var NIconBtnContent_component = (0,componentNormalizer/* default */.Z)(
 )
 
 /* harmony default export */ var NIconBtnContent = (NIconBtnContent_component.exports);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NIconBtn/NIconBtn.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NIconBtn/NIconBtn.vue?vue&type=script&lang=js
 
-/* harmony default export */ var NIconBtnvue_type_script_lang_js_ = ({
+/* harmony default export */ var NIconBtnvue_type_script_lang_js = ({
   name: 'nitrozen-icon-button',
   components: {
     'n-icbutton-content': NIconBtnContent
@@ -14514,7 +15156,6 @@ var NIconBtnContent_component = (0,componentNormalizer/* default */.Z)(
         icon: this.icon // take it from prop of icon btn
       }
     })])]);
-
     let buttonAttrs = {
       staticClass: 'n-icbutton ',
       class: [{
@@ -14547,12 +15188,12 @@ var NIconBtnContent_component = (0,componentNormalizer/* default */.Z)(
     return createElement(tag, buttonAttrs, [slotElement]);
   }
 });
-;// CONCATENATED MODULE: ./src/components/NIconBtn/NIconBtn.vue?vue&type=script&lang=js&
- /* harmony default export */ var NIconBtn_NIconBtnvue_type_script_lang_js_ = (NIconBtnvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NIconBtn/NIconBtn.vue?vue&type=style&index=0&id=bf254770&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NIconBtn/NIconBtn.vue?vue&type=script&lang=js
+ /* harmony default export */ var NIconBtn_NIconBtnvue_type_script_lang_js = (NIconBtnvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NIconBtn/NIconBtn.vue?vue&type=style&index=0&id=bf254770&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NIconBtn/NIconBtn.vue?vue&type=style&index=0&id=bf254770&prod&lang=less&
+;// CONCATENATED MODULE: ./src/components/NIconBtn/NIconBtn.vue?vue&type=style&index=0&id=bf254770&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NIconBtn/NIconBtn.vue
 var NIconBtn_render, NIconBtn_staticRenderFns
@@ -14563,8 +15204,8 @@ var NIconBtn_render, NIconBtn_staticRenderFns
 
 /* normalize component */
 
-var NIconBtn_component = (0,componentNormalizer/* default */.Z)(
-  NIconBtn_NIconBtnvue_type_script_lang_js_,
+var NIconBtn_component = (0,componentNormalizer/* default */.A)(
+  NIconBtn_NIconBtnvue_type_script_lang_js,
   NIconBtn_render,
   NIconBtn_staticRenderFns,
   false,
