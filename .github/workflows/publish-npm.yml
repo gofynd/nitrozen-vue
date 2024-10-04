@@ -41,7 +41,7 @@ jobs:
         run: echo "$NPM_VERSION"
 
       - name: Install Dependencies
-        run:  rm -rf dist && npm ci 
+        run:  npm i 
 
       - name: List Files
         run: ls -R
