@@ -52,7 +52,7 @@ jobs:
         run: npm run build-bundle
 
       - name: Login to npm
-        run: echo "//registry.npmjs.org/:_authToken=${NPM_PUBLISH_TOKEN}" >> ~/.npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
