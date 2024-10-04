@@ -41,7 +41,9 @@ jobs:
         run: echo "$NPM_VERSION"
 
       - name: Install Dependencies
-        run:  npm i 
+        run:  npm i
+      - name: Update Dependencies
+        run: npm install --legacy-peer-deps
 
       - name: List Files
         run: ls -R
