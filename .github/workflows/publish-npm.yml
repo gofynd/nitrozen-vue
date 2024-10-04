@@ -59,11 +59,16 @@ jobs:
       - name: Publish Package
         run: npm publish
 
+      - name: Set Remote URL
+        run: |
+          git remote set-url origin https://github.com/gofynd/nitrozen-vue
+
       - name: Stage changes
         run: git add .
 
       - name: Sync changes
         run: git pull
+
 
       - name: Commit changes
         run: |
