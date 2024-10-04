@@ -1,5 +1,7 @@
 const path = require('path');
 
+console.log('vue.config.js is being used!'); // Debug log
+
 module.exports = {
   configureWebpack: {
     resolve: {
@@ -7,5 +9,15 @@ module.exports = {
         '@': path.resolve(__dirname, 'src')
       }
     }
-  }
+  },
+  css: {
+    loaderOptions: {
+      less: {
+        lessOptions: {
+          strictMath: true,
+          noIeCompat: true,
+        },
+      },
+    },
+  },
 };
