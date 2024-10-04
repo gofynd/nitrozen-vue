@@ -16,6 +16,14 @@ jobs:
         node-version: [16.0.0]
 
     steps:
+      - task: Cache@2
+        inputs:
+          key: 'npm | "$(Agent.OS)" | package-lock.json'
+          restoreKeys: |
+            npm | "$(Agent.OS)"
+          path: $(Pipeline.Workspace)/.npm
+          cacheHitVar: CACHE_RESTORED
+
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
@@ -42,8 +50,8 @@ jobs:
 
       - name: Install Dependencies
         run:  npm i
-      - name: Update Dependencies
-        run: npm install --legacy-peer-deps
+      # - name: Update Dependencies
+      #   run: npm install --legacy-peer-deps
 
       - name: List Files
         run: ls -R
