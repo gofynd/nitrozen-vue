@@ -6,6 +6,7 @@ import NitrozenCheckBox from './NCheckbox';
 import NitrozenChips from './NChips';
 import NitrozenDropdown from './NDropdown';
 import NitrozenDialog from './NDialog';
+import NitrozenDialogV2 from './NDialog2';
 import NitrozenError from './NError';
 import NitrozenInline from './NInline';
 import NitrozenInput from './NInput';
@@ -29,6 +30,7 @@ export {
     NitrozenChips,
     NitrozenDropdown,
     NitrozenDialog,
+    NitrozenDialogV2,
     NitrozenError,
     NitrozenInline,
     NitrozenInput,
