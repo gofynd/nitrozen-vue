@@ -37,6 +37,7 @@
           </div>
         </div>
         <div
+          v-if="!loading"
           class="nitrozen-options"
           ref="nitrozen-select-option"
           v-on:scroll.passive="handleScroll"
@@ -150,6 +151,10 @@
             <div class="nitrozen-option-container">{{noresults_text}}</div>
           </div>
         </div>
+        <div v-else class="nitrozen-options" :class="{ 'nitrozen-dropup': dropUp }">
+          <dropdown-loader/>
+          <!-- <img class="n-btn-spinner" style="width: 50px;" src="./../../assets/loader-blue.gif"> -->
+        </div>
       </div>
     </div>
   </div>
@@ -157,6 +162,7 @@
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
 import NitrozenInline from "./../NInline";
+import DropdownLoader from "./DropdownLoader.vue";
 import NitrozenCheckbox from "./../NCheckbox";
 import NTooltip from "./../NTooltip";
 
@@ -166,6 +172,7 @@ export default {
     "nitrozen-inline": NitrozenInline,
     "nitrozen-checkbox": NitrozenCheckbox,
     "nitrozen-tooltip": NTooltip,
+    'dropdown-loader':DropdownLoader
   },
   props: {
     /**
@@ -253,6 +260,10 @@ export default {
     allseleceted_text: {
       type: String,
       default: ""
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => {
@@ -275,7 +286,7 @@ export default {
       }
       if (!this.multiple && this.searchable) {
         const selected = this.items.find((i) => i.value == this.value);
-        this.searchInput = selected ? selected.text : this.value;
+        // this.searchInput = selected ? selected.text : this.value;
       }
       this.setAllOptions()
     },
@@ -292,7 +303,7 @@ export default {
         if (this.value) {
           if (this.items.length) {
             this.selected = this.items.find((i) => i.value == this.value);
-            this.searchInput = this.selected ? this.selected.text: '';
+            //this.searchInput = this.selected ? this.selected.text: '';
           }
         }
         if (this.selected && this.selected.text) {
@@ -478,6 +489,9 @@ export default {
     handleScroll(event) {
       let elem = this.$refs["nitrozen-select-option"];
       this.$emit("scroll", elem);
+      if(event.target.scrollTop + event.target.clientHeight >= event.target.scrollHeight){
+        this.$emit('fetchMoreData');
+      }
     },
     handleTABKey: function(event) {
       // TAB key detection

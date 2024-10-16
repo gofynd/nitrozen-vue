@@ -14,9 +14,9 @@
           </template>
         </nitrozen-dialog>
         <div>Searchable Dropdown</div>
-        <nitrozen-dropdown  id="searchable-dropdown-1" :disabled="true"
+        <nitrozen-dropdown  id="searchable-dropdown-1" 
           tooltip="This is a searchable dropdown" :items="dropdownItemsFiltered" v-model="selectedGroupDropdown"
-          :searchable="true" @searchInputChange="dropdownInputChange"></nitrozen-dropdown>
+          :searchable="true" @searchInputChange="dropdownInputChange" ></nitrozen-dropdown>
       </div>
       <div>
         <nitrozen-chips deletable="true" v-for="(item, index) in ['tag1','tag2','tag3','tag4']" :key="'chips_' + index">
@@ -33,8 +33,8 @@
         <div>Custom Dropdown</div>
         <nitrozen-dropdown label="Data" :disabled="false" id="searchable-dropdown-1"
           tooltip="This is a searchable dropdown" :items="[]" v-model="selectedGroupDropdown"
-          :searchable="false" :add_option="false" @addOption="addOption"
-          @searchInputChange="dropdownInputChange"></nitrozen-dropdown>
+          :searchable="false" :add_option="true" @addOption="addOption"
+          @searchInputChange="dropdownInputChange" @scroll="handleScroll" @fetchMoreData="handleScroll1"></nitrozen-dropdown>
       </div>
 
       <div class="main-div space-between">
@@ -687,6 +687,13 @@ export default {
     // }, 5000);
   },
   methods: {
+    handleScroll1(){
+      console.log('At end of scroll');
+      const temp = this.dropdownItemsFiltered;
+      if(this.dropdownItemsFiltered.length < 50){
+      this.dropdownItemsFiltered = [...this.dropdownItemsFiltered,...temp];
+      }
+    },
     stepperNext() {
       let next = this.stepper.activeIndex + 1;
       if (this.stepper.maxActiveIndex < next) {
