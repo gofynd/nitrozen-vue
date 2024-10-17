@@ -1,37 +1,47 @@
 <template>
-  <span class="loader-container">
-    <nitrozen-inline class="loader" icon="loader"></nitrozen-inline>
-    <span>loading...</span>
-    </span>
+  <div class="loader-container">
+    <div class="dropdown-loader"></div>
+  </div>
 </template>
 <script>
-import NitrozenInline from "./../NInline";
-export default{
-    name:'Dropdown-loader',
-    components: { NitrozenInline },
+export default {
+  name: 'Dropdown-loader'
 }
 </script>
 <style lang="less" scoped>
-.loader-container{
+.loader-container {
   display: flex;
-  column-gap: 6px;
   align-items: center;
-  width: 24px;
-  padding: 4px;
-  color:#9B9B9B;
-  font-size: 14px;
-}
-.loader{
-    animation: rotate 2s linear infinite;
-    transform-origin: center;
-}
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  justify-content: center;
+
 }
 
-</style>
+.dropdown-loader {
+  width: 10px;
+  margin: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+}
+
+@keyframes l5 {
+  0% {
+    box-shadow: 15px 0 rgba(46, 49, 190, 1), -15px 0 rgba(46, 49, 190, 0.2);
+    background: rgba(46, 49, 190, 1);
+  }
+
+  33% {
+    box-shadow: 15px 0 rgba(46, 49, 190, 1), -15px 0 rgba(46, 49, 190, 0.2);
+    background: rgba(46, 49, 190, 0.2);
+  }
+
+  66% {
+    box-shadow: 15px 0 rgba(46, 49, 190, 0.2), -15px 0 rgba(46, 49, 190, 1);
+    background: rgba(46, 49, 190, 0.2);
+  }
+
+  100% {
+    box-shadow: 15px 0 rgba(46, 49, 190, 0.2), -15px 0 rgba(46, 49, 190, 1);
+    background: rgba(46, 49, 190, 1);
+  }
+}</style>

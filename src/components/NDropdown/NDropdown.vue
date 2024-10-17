@@ -37,7 +37,6 @@
           </div>
         </div>
         <div
-          v-if="!loading"
           class="nitrozen-options"
           ref="nitrozen-select-option"
           v-on:scroll.passive="handleScroll"
@@ -150,10 +149,9 @@
           <div v-else-if="items.length == 0" class="nitrozen-option">
             <div class="nitrozen-option-container">{{noresults_text}}</div>
           </div>
+          <div v-else-if="loading" class="loader-container">
+            <dropdown-loader />
         </div>
-        <div v-else class="nitrozen-options" :class="{ 'nitrozen-dropup': dropUp }">
-          <dropdown-loader/>
-          <!-- <img class="n-btn-spinner" style="width: 50px;" src="./../../assets/loader-blue.gif"> -->
         </div>
       </div>
     </div>
@@ -489,8 +487,8 @@ export default {
     handleScroll(event) {
       let elem = this.$refs["nitrozen-select-option"];
       this.$emit("scroll", elem);
-      if(event.target.scrollTop + event.target.clientHeight >= event.target.scrollHeight){
-        this.$emit('fetchMoreData');
+      if(event.target.scrollTop + event.target.clientHeight + 20 >= event.target.scrollHeight){
+        if(!this.loading){this.$emit('fetchMoreData');}
       }
     },
     handleTABKey: function(event) {
