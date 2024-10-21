@@ -13638,10 +13638,10 @@ var NBtnContent = __webpack_require__(6947);
 });
 ;// CONCATENATED MODULE: ./src/components/NBtn2/NBtn2.vue?vue&type=script&lang=js
  /* harmony default export */ var NBtn2_NBtn2vue_type_script_lang_js = (NBtn2vue_type_script_lang_js); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn2/NBtn2.vue?vue&type=style&index=0&id=7dc8142c&prod&lang=less
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NBtn2/NBtn2.vue?vue&type=style&index=0&id=2b88d33a&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NBtn2/NBtn2.vue?vue&type=style&index=0&id=7dc8142c&prod&lang=less
+;// CONCATENATED MODULE: ./src/components/NBtn2/NBtn2.vue?vue&type=style&index=0&id=2b88d33a&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NBtn2/NBtn2.vue
 var NBtn2_render, NBtn2_staticRenderFns
