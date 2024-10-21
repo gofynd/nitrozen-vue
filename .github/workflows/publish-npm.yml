@@ -5,6 +5,7 @@ on:
     branches:
       - master-old
   workflow_dispatch:
+  
 permissions:
     contents: write
 jobs:
@@ -61,21 +62,33 @@ jobs:
 
       - name: Set Remote URL
         run: |
-          git remote set-url origin https://github.com/gofynd/nitrozen-vue
-
-      - name: Stage changes
-        run: git add .
+          git remote set-url origin https://github.com/${{ github.repository }}.git
 
       - name: Sync changes
         run: git pull
 
+      - name: Create new branch
+        run: git checkout -b pipeline---update
 
       - name: Commit changes
         run: |
-          git add package.json
-          git commit -m "[Auto] Publish changes to NPM ::: bump version to $(npm version patch)"
+          git add . && git commit -m "[Auto] Publish changes to NPM ::: bump version to $(npm version patch)"
 
-      - name: Push changes
-        run: git push
+      - name: Push changes to new branch
+        run: git push origin pipeline---update
+
+      - name: Create Pull Request
+        run: gh pr create --base master-old --head pipeline---update --title "Automated PR" --body "Auto Created by npm publish pipeline"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge PR (optional)
+        run: gh pr merge pipeline---update --squash --delete-branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+
+
 
 
