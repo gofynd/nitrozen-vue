@@ -80,12 +80,12 @@ jobs:
       - name: Create Pull Request
         run: gh pr create --base master-old --head pipeline---update --title "Automated PR" --body "Auto Created by npm publish pipeline"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.NITROZEN-VUE-NPM-TOKEN }}
 
       - name: Merge PR (optional)
         run: gh pr merge pipeline---update --squash --delete-branch
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.NITROZEN-VUE-NPM-TOKEN }}
 
 
 
