@@ -29,6 +29,8 @@
               @search="searchInputChange"
               v-on:keyup="searchInputChange"
               :placeholder="searchInputPlaceholder"
+              :autocomplete="autocomplete"
+
             />
           </span>
           <span v-else>{{ selectedText }}</span>
@@ -100,12 +102,14 @@
                         ),
                       }"
                     >
+                    <div v-if="item.logo" class="nitrozen-option-logo">
                       <img
-                        v-if="item.logo"
                         class="nitrozen-option-logo"
                         :src="item.logo"
                         alt="logo"
+                         @error="handleImageError"
                       />
+                    </div>
                       {{ item.text }}</span
                     >
                   </nitrozen-checkbox>
@@ -118,26 +122,28 @@
                         items.find((i) => i.isGroupLabel) && !item.isGroupLabel,
                     }"
                   >
+                  <div  v-if="item.logo" class="nitrozen-option-logo">
                     <img
-                      v-if="item.logo"
                       class="nitrozen-option-logo"
                       :src="item.logo"
                       alt="logo"
+                      @error="handleImageError"
                     />
+                  </div>
                     {{ item.text }}
                   </span>
                 </template>
               </div>
             </slot>
           </span>
-          <div v-if="searchable && items.length == 0" class="nitrozen-option">
+          <div v-if="searchable && items.length == 0 && !loading" class="nitrozen-option">
             <div class="nitrozen-option-container" v-if="!add_option">{{noresults_text}}</div>
             <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length">
               <div class="nitrozen-dropdown-empty"
                 @click="addOption"
               >
                   <nitrozen-inline icon="add_outlined"></nitrozen-inline>
-                  <p>Add "{{ searchInput }}"</p>
+                  <p class="nitrozen-option-add-option">Add "{{ searchInput }}"</p>
               </div>
             </div>
             <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length === 0">
@@ -146,7 +152,7 @@
               <span>{{ noOptionForAddMoreProps[1] }}</span>
             </div>
           </div>
-          <div v-else-if="items.length == 0" class="nitrozen-option">
+          <div v-else-if="items.length == 0 && !loading" class="nitrozen-option">
             <div class="nitrozen-option-container">{{noresults_text}}</div>
           </div>
           <div v-else-if="loading" class="loader-container">
@@ -163,6 +169,7 @@ import NitrozenInline from "./../NInline";
 import DropdownLoader from "./DropdownLoader.vue";
 import NitrozenCheckbox from "./../NCheckbox";
 import NTooltip from "./../NTooltip";
+import fallbackImage from "./../../assets/webp/fallback-image.webp";
 
 export default {
   name: "nitrozen-dropdown",
@@ -259,9 +266,19 @@ export default {
       type: String,
       default: ""
     },
+    /**
+     * loading use for show loading state when new data fetch
+     */
     loading: {
       type: Boolean,
       default: false
+    },
+    /**
+     * autocomplete for searchable dropdown to disable auto complete
+     */
+    autocomplete:{
+      type:String,
+      default: "off"
     }
   },
   data: () => {
@@ -284,7 +301,7 @@ export default {
       }
       if (!this.multiple && this.searchable) {
         const selected = this.items.find((i) => i.value == this.value);
-        // this.searchInput = selected ? selected.text : this.value;
+        this.searchInput = selected ? selected.text : this.value;
       }
       this.setAllOptions()
     },
@@ -301,7 +318,8 @@ export default {
         if (this.value) {
           if (this.items.length) {
             this.selected = this.items.find((i) => i.value == this.value);
-            //this.searchInput = this.selected ? this.selected.text: '';
+            console.log(this.selected);
+            this.searchInput = this.selected ? this.selected.text: '';
           }
         }
         if (this.selected && this.selected.text) {
@@ -358,6 +376,7 @@ export default {
       this.enable_select_all = false;
       if (this.value) {
         const selected = this.items.find((i) => i.value == this.value);
+        console.log(this.selected);
         this.searchInput = selected ? selected.text : "";
       }
     } else {
@@ -499,6 +518,9 @@ export default {
         this.showOptions = false;
       }
     },
+    handleImageError: function(event) {
+      event.target.src = fallbackImage;
+    }
   },
   created() {
     this.calculateViewport();

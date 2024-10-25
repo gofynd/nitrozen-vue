@@ -116,8 +116,10 @@
 
     .nitrozen-option-logo {
       height: 24px;
-      width: auto;
+      width: 24px;
+      border-radius: 4px;
       padding-right: 8px;
+
     }
 
     .nitrozen-option-image{
@@ -192,15 +194,19 @@
 
 .nitrozen-dropdown-empty {
   display: flex;
+  align-items: center;
   .nitrozen-add-btn {
     width: 25px;
     height: 25px;
   }
-  p {
+  .nitrozen-option-add-option {
     margin: 0px;
     color: @SecondaryColor;
     font-weight: 700;
     font-size: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
   svg path{
     fill: @SecondaryColor;

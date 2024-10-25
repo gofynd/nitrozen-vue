@@ -27,7 +27,7 @@ export default {
     },
     icon: {
       type: String,
-      default: "info"
+      default: "tooltip"
     }
   },
   computed: {
@@ -54,22 +54,43 @@ export default {
   .nitrozen-tooltiptext {
     visibility: hidden;
     min-width: 150px;
-    max-width: 300px;
-    background-color: @TooltipBackground;
-    color: @TypographyPrimaryColor;
+    // min-width: 150px;
+    color: @WhiteColor;
     text-align: center;
     border-radius: 6px;
-    padding: 5px;
     font-family: @PrimaryFont;
     position: absolute;
-    z-index: 10;
-    font-size: @BaseFontSize - 2;
+    font-size: @BaseFontSize;
+    background-color: @Gray1;
+    padding: 10px;
+    left: -29px;
+    bottom: 19px;
+    text-align: left;
+    z-index: 99;
+    line-height: 19px;
+    font-weight: 400;
+    max-width:200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    & a{
+      color: @WhiteColor;
+        text-decoration: underline;
+        margin-top: 4px;
+        font-size: 11px;
+        font-weight: 400;
+    }
+
     &::after {
       content: " ";
       position: absolute;
       border-style: solid;
-      border-color: @TooltipBackground transparent transparent transparent;
       border-width: 5px;
+      border-color: @Gray1 transparent transparent transparent;
+      left: auto;
+      right: 50%;
     }
   }
 
@@ -84,7 +105,7 @@ export default {
 .nitrozen-tooltip-bottom {
   top: 100%;
   left: 50%;
-  margin-left: -45px;
+  margin-left: -60px;
   &::after {
     bottom: 100%; /* At the top of the tooltip */
     left: 30%;
