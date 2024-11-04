@@ -318,7 +318,6 @@ export default {
         if (this.value) {
           if (this.items.length) {
             this.selected = this.items.find((i) => i.value == this.value);
-            console.log(this.selected);
             this.searchInput = this.selected ? this.selected.text: '';
           }
         }
@@ -376,7 +375,6 @@ export default {
       this.enable_select_all = false;
       if (this.value) {
         const selected = this.items.find((i) => i.value == this.value);
-        console.log(this.selected);
         this.searchInput = selected ? selected.text : "";
       }
     } else {

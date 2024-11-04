@@ -688,7 +688,6 @@ export default {
   },
   methods: {
     handleScroll1(){
-      console.log('At end of scroll');
       const temp = this.dropdownItemsFiltered;
       if(this.dropdownItemsFiltered.length < 50){
       this.dropdownItemsFiltered = [...this.dropdownItemsFiltered,...temp];
