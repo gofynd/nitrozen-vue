@@ -170,6 +170,7 @@ import DropdownLoader from "./DropdownLoader.vue";
 import NitrozenCheckbox from "./../NCheckbox";
 import NTooltip from "./../NTooltip";
 import fallbackImage from "./../../assets/webp/fallback-image.webp";
+const LOADER_HEIGHT = 20;
 
 export default {
   name: "nitrozen-dropdown",
@@ -504,7 +505,7 @@ export default {
     handleScroll(event) {
       let elem = this.$refs["nitrozen-select-option"];
       this.$emit("scroll", elem);
-      if(event.target.scrollTop + event.target.clientHeight + 20 >= event.target.scrollHeight){
+      if(event.target.scrollTop + event.target.clientHeight + LOADER_HEIGHT >= event.target.scrollHeight){
         if(!this.loading){this.$emit('fetchMoreData');}
       }
     },
