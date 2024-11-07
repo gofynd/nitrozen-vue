@@ -29,6 +29,8 @@
               @search="searchInputChange"
               v-on:keyup="searchInputChange"
               :placeholder="searchInputPlaceholder"
+              :autocomplete="autocomplete"
+
             />
           </span>
           <span v-else>{{ selectedText }}</span>
@@ -100,12 +102,14 @@
                         ),
                       }"
                     >
+                    <div v-if="item.logo" class="nitrozen-option-logo">
                       <img
-                        v-if="item.logo"
                         class="nitrozen-option-logo"
                         :src="item.logo"
                         alt="logo"
+                         @error="handleImageError"
                       />
+                    </div>
                       {{ item.text }}</span
                     >
                   </nitrozen-checkbox>
@@ -118,26 +122,28 @@
                         items.find((i) => i.isGroupLabel) && !item.isGroupLabel,
                     }"
                   >
+                  <div  v-if="item.logo" class="nitrozen-option-logo">
                     <img
-                      v-if="item.logo"
                       class="nitrozen-option-logo"
                       :src="item.logo"
                       alt="logo"
+                      @error="handleImageError"
                     />
+                  </div>
                     {{ item.text }}
                   </span>
                 </template>
               </div>
             </slot>
           </span>
-          <div v-if="searchable && items.length == 0" class="nitrozen-option">
+          <div v-if="searchable && items.length == 0 && !loading" class="nitrozen-option">
             <div class="nitrozen-option-container" v-if="!add_option">{{noresults_text}}</div>
             <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length">
               <div class="nitrozen-dropdown-empty"
                 @click="addOption"
               >
                   <nitrozen-inline icon="add_outlined"></nitrozen-inline>
-                  <p>Add "{{ searchInput }}"</p>
+                  <p class="nitrozen-option-add-option">Add "{{ searchInput }}"</p>
               </div>
             </div>
             <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length === 0">
@@ -146,9 +152,12 @@
               <span>{{ noOptionForAddMoreProps[1] }}</span>
             </div>
           </div>
-          <div v-else-if="items.length == 0" class="nitrozen-option">
+          <div v-else-if="items.length == 0 && !loading" class="nitrozen-option">
             <div class="nitrozen-option-container">{{noresults_text}}</div>
           </div>
+          <div v-else-if="loading" class="loader-container">
+            <dropdown-loader />
+        </div>
         </div>
       </div>
     </div>
@@ -157,8 +166,11 @@
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
 import NitrozenInline from "./../NInline";
+import DropdownLoader from "./DropdownLoader.vue";
 import NitrozenCheckbox from "./../NCheckbox";
 import NTooltip from "./../NTooltip";
+import fallbackImage from "./../../assets/webp/fallback-image.webp";
+const LOADER_HEIGHT = 20;
 
 export default {
   name: "nitrozen-dropdown",
@@ -166,6 +178,7 @@ export default {
     "nitrozen-inline": NitrozenInline,
     "nitrozen-checkbox": NitrozenCheckbox,
     "nitrozen-tooltip": NTooltip,
+    'dropdown-loader':DropdownLoader
   },
   props: {
     /**
@@ -253,6 +266,20 @@ export default {
     allseleceted_text: {
       type: String,
       default: ""
+    },
+    /**
+     * loading use for show loading state when new data fetch
+     */
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * autocomplete for searchable dropdown to disable auto complete
+     */
+    autocomplete:{
+      type:String,
+      default: "off"
     }
   },
   data: () => {
@@ -332,9 +359,9 @@ export default {
     searchInputPlaceholder: function() {
       if (this.enable_select_all && this.selectedItems.length) {
         if(this.selectedItems.length === this.getItems(this.items).length) {
-          return this.allseleceted_text ? this.allseleceted_text : `All ${this.label ? this.label.toLowerCase() +'(s)' : ''} selected`;
+          return this.allseleceted_text ? this.allseleceted_text : `All ${this.label ? this.label.toLowerCase() : ''} selected`;
         }
-        return `${this.selectedItems.length} ${this.label ? this.label.toLowerCase() + '(s)' : ''} selected`
+        return `${this.selectedItems.length} ${this.label ? this.label.toLowerCase() : ''} selected`
       }
       return this.placeholder || `Search ${this.label ? this.label.toLowerCase() : ''}`;
     },
@@ -478,6 +505,9 @@ export default {
     handleScroll(event) {
       let elem = this.$refs["nitrozen-select-option"];
       this.$emit("scroll", elem);
+      if(event.target.scrollTop + event.target.clientHeight + LOADER_HEIGHT >= event.target.scrollHeight){
+        if(!this.loading){this.$emit('fetchMoreData');}
+      }
     },
     handleTABKey: function(event) {
       // TAB key detection
@@ -487,6 +517,9 @@ export default {
         this.showOptions = false;
       }
     },
+    handleImageError: function(event) {
+      event.target.src = fallbackImage;
+    }
   },
   created() {
     this.calculateViewport();

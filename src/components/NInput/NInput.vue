@@ -24,7 +24,7 @@
     <div class="nitrozen-input-grp">
       <!-- Search Icon -->
       <span class="nitrozen-search-icon" v-if="showSearchIcon">
-        <nitrozen-inline :icon="'search'"></nitrozen-inline>
+        <nitrozen-inline :icon="'search-black'"></nitrozen-inline>
       </span>
 
       <!-- Prefix -->
