@@ -78,6 +78,7 @@
         class="n-input input-text"
         :maxlength="maxlength"
         :disabled="disabled"
+        :autocomplete="autocomplete"
         :ref="id"
         :id="id"
         :placeholder="placeholder"
@@ -126,7 +127,7 @@ export default {
   props: {
     autocomplete: {
       type: String,
-      default: null,
+      default: 'off',
     },
     type: {
       type: String,

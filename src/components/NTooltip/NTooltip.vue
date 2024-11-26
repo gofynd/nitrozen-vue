@@ -54,7 +54,6 @@ export default {
   .nitrozen-tooltiptext {
     visibility: hidden;
     min-width: 150px;
-    // min-width: 150px;
     color: @WhiteColor;
     text-align: center;
     border-radius: 6px;
@@ -63,17 +62,16 @@ export default {
     font-size: @BaseFontSize;
     background-color: @Gray1;
     padding: 10px;
-    left: -29px;
-    bottom: 19px;
-    text-align: left;
-    z-index: 99;
+    z-index: 1000; /* Make sure the tooltip is above other elements */
     line-height: 19px;
     font-weight: 400;
-    max-width:200px;
+    max-width: 250px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; 
 
     & a{
       color: @WhiteColor;
@@ -87,16 +85,15 @@ export default {
       content: " ";
       position: absolute;
       border-style: solid;
-      border-width: 5px;
+      border-width: 6px;
       border-color: @Gray1 transparent transparent transparent;
-      left: auto;
-      right: 50%;
     }
   }
 
   &:hover {
     .nitrozen-tooltiptext {
       visibility: visible;
+      opacity: 1;
     }
   }
 }
@@ -105,10 +102,11 @@ export default {
 .nitrozen-tooltip-bottom {
   top: 100%;
   left: 50%;
-  margin-left: -60px;
+  transform: translateX(-50%);
+  margin-top: 10px;
   &::after {
     bottom: 100%; /* At the top of the tooltip */
-    left: 30%;
+    left: 50%;
     margin-left: -5px;
     transform: rotate(180deg);
   }
@@ -117,33 +115,37 @@ export default {
 .nitrozen-tooltip-top {
   bottom: 100%;
   left: 50%;
-  margin-left: -45px;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
   &::after {
     top: 100%; /* At the bottom of the tooltip */
-    left: 30%;
-    margin-left: -5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg)
   }
 }
 
 .nitrozen-tooltip-left {
-  top: -5px;
+  top: 50% ;
   right: 105%;
+  transform: translateY(-50%);
+  margin-right: 10px; 
   &::after {
     top: 50%;
     left: 100%; /* To the left of the tooltip */
-    margin-top: -5px;
     transform: rotate(270deg);
+    transform: translateY(-50%) rotate(270deg); 
   }
 }
 
 .nitrozen-tooltip-right {
-  top: -5px;
-  left: 105%;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  margin-left: 10px; 
   &::after {
     top: 50%;
-    right: 100%; /* To the right of the tooltip */
-    margin-top: -5px;
-    transform: rotate(90deg);
+    right: 100%; /* To the right of the tooltip */;
+    transform: translateY(-50%) rotate(90deg); /* Pointing right */
   }
 }
 </style>
