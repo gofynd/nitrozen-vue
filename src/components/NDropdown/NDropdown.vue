@@ -75,7 +75,7 @@
             class="horizantal-divider"
           />
           <span
-            v-for="(item, index) in items"
+            v-for="(item, index) in filteredItems"
             :key="index"
             :data-value="item.value"
             class="nitrozen-option ripple"
@@ -136,28 +136,28 @@
               </div>
             </slot>
           </span>
-          <div v-if="searchable && items.length == 0 && !loading" class="nitrozen-option">
-            <div class="nitrozen-option-container" v-if="!add_option">{{noresults_text}}</div>
-            <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length">
-              <div class="nitrozen-dropdown-empty"
-                @click="addOption"
-              >
-                  <nitrozen-inline icon="add_outlined"></nitrozen-inline>
-                  <p class="nitrozen-option-add-option">Add "{{ searchInput }}"</p>
-              </div>
+          <div v-if="showAddOption" class="nitrozen-option">
+            <div class="nitrozen-dropdown-empty" @click="addOption">
+              <nitrozen-inline icon="add_outlined" />
+              <p class="nitrozen-option-add-option">
+                Add "{{ searchInput }}"
+              </p>
             </div>
-            <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length === 0">
+          </div>
+
+          <div v-else-if="add_option && !searchInput && filteredItems.length === 0 && !loading" class="nitrozen-option">
+            <div class="nitrozen-option-container">
               <span>{{ noOptionForAddMoreProps[0] }}</span>
               <br>
               <span>{{ noOptionForAddMoreProps[1] }}</span>
             </div>
           </div>
-          <div v-else-if="items.length == 0 && !loading" class="nitrozen-option">
+          <div v-else-if="filteredItems.length === 0 && !loading" class="nitrozen-option">
             <div class="nitrozen-option-container">{{noresults_text}}</div>
           </div>
           <div v-else-if="loading" class="loader-container">
             <dropdown-loader />
-        </div>
+          </div>
         </div>
       </div>
     </div>
@@ -370,6 +370,33 @@ export default {
       const additionalMessage = 'Type and press enter to create new.';
       return [message, additionalMessage];
     },
+
+    filteredItems() {
+    if (!this.searchable || !this.searchInput) {
+      return this.items;
+    }
+    const term = this.searchInput.toLowerCase();
+    return this.items.filter(i =>
+      i.text.toLowerCase().includes(term)
+    );
+  },
+
+  hasExactMatch() {
+    const term = this.searchInput.trim().toLowerCase()
+    return this.items.some(
+      i => i.text.trim().toLowerCase() === term
+    )
+  },
+
+  showAddOption() {
+    return (
+      this.searchable &&
+      this.add_option &&
+      this.searchInput.trim().length > 0 &&
+      !this.hasExactMatch &&
+      !this.loading
+    )
+  }
   },
   mounted() {
     if (!this.multiple) {
