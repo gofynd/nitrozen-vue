@@ -1,4 +1,5 @@
 @import "./../../base/base.less";
+
 .n-input {
   // margin: 4px 0px 0px 0px;
   padding: 0 12px;
@@ -14,6 +15,7 @@
   box-sizing: border-box;
   font-size: @BaseFontSize + 2;
   -webkit-appearance: none;
+
   &:focus {
     border: 1px solid @SecondaryColor;
   }
@@ -32,8 +34,7 @@
   cursor: not-allowed;
 }
 
-.n-input:disabled + .n-input-label {
-}
+.n-input:disabled+.n-input-label {}
 
 .nitrozen-form-input {
   outline: none;
@@ -61,7 +62,7 @@
   position: relative;
 }
 
-.nitrozen-input-grp:focus-within + .n-input-label-container > .n-input-label {
+.nitrozen-input-grp:focus-within+.n-input-label-container>.n-input-label {
   color: @SecondaryColor !important;
 }
 
@@ -97,6 +98,7 @@ input[type="search"]::-webkit-search-cancel-button {
   position: relative;
   bottom: 52px;
   left: 20px;
+
   img {
     width: 65px;
   }
@@ -107,6 +109,11 @@ input[type="search"]::-webkit-search-cancel-button {
   position: absolute;
   left: 9px;
   top: 12px;
+}
+
+.nitrozen-ai-icon {
+  z-index: 2;
+  cursor: pointer;
 }
 
 .nitrozen-tooltip-icon {
@@ -120,6 +127,79 @@ input[type="search"]::-webkit-search-cancel-button {
 .nitrozen-input-label-div {
   display: flex;
   justify-content: space-between;
+}
+
+.n-input-inner-container {
+  display: flex;
+  gap: 10px;
+}
+
+.n-input-ai-pop {
+  background-color: #FFFFFF;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 16px 0px #00000029;
+}
+
+.n-input-ai-header {
+  background: var(--Background-Surface---20, #F5F5F5);
+  padding: 15px;
+  border-radius: 20px 20px 0 0 ;
+  font-family: JioType;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.5%;
+  color: var(--Text-Default, #141414);
+
+}
+.n-input-ai-input {
+  padding: 15px;
+}
+
+.n-input-ai-button-container {
+  display: flex;
+  justify-content: end;
+  box-shadow: 0px -4px 16px 0px #00000014;
+  padding: 15px;
+  border-radius: 0 0 20px 20px;
+}
+
+.n-input-ai-button {
+  background: linear-gradient(87.56deg, #1ECCB0 -14.85%, #3535F3 114.85%);
+  border-radius: 18px;
+  color: #FFFFFFFF;
+  padding: 10px;
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.n-input-ai-input>label {
+  font-family: JioType;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5%;
+  vertical-align: middle;
+  color: var(--Text-Subdued-1, #000000A6);
+}
+
+.n-input-ai-input-note {
+  font-family: JioType;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5%;
+  vertical-align: middle;
+  color: var(--Text-Subdued-1, #000000A6);
 }
 
 .n-input-label-container {
@@ -158,6 +238,7 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 10px;
   border: 1px solid @BorderColor;
 }
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

@@ -1,19 +1,43 @@
 <template>
   <div class="nitrozen-form-input">
+      <!-- Ai Icon--> 
+   
     <!-- Label -->
     <div class="n-input-label-container">
-      <label class="n-input-label" v-if="label" :for="id">
-        {{ label }} {{ required ? ' *' : '' }}
-        <span class="nitrozen-tooltip-icon" v-if="showTooltip">
-          <nitrozen-tooltip
-            :tooltipText="tooltipText"
-            position="top"
-          ></nitrozen-tooltip>
+      <div class="n-input-inner-container">
+        <span class="nitrozen-ai-icon" v-if="enable_ai" v-on:click="openAiDialog">
+          <nitrozen-inline :icon="'ai'"></nitrozen-inline>
         </span>
-      </label>
+        <label class="n-input-label" v-if="label" :for="id">
+          {{ label }} {{ required ? ' *' : '' }}
+          <span class="nitrozen-tooltip-icon" v-if="showTooltip">
+            <nitrozen-tooltip
+              :tooltipText="tooltipText"
+              position="top"
+            ></nitrozen-tooltip>
+          </span>
+        </label> 
+        
+      </div>
       <label class="n-input-label n-input-maxlength" v-if="maxlength"
         >{{ length }}/{{ maxlength }}</label
       >
+    </div>
+    <div class="n-input-ai-pop" v-if="showAiToolbar">
+      <div class="n-input-ai-header">Fill form with AI</div>
+      <div class="n-input-ai-input">
+        <label>
+          Describe
+        </label>
+        <textarea v-model="promptValue" class="n-input input-text n-input-textarea">
+        </textarea>
+        <div class="n-input-ai-input-note">
+          Note: Consider adding more details for better results
+        </div>
+      </div>
+      <div class="n-input-ai-button-container">
+        <button class="n-input-ai-button" v-on:click="eventEmit({prompt: promptValue}, 'ai-triggered')" >Fill With AI</button>
+      </div>
     </div>
 
     <!-- Input -->
@@ -22,6 +46,8 @@
     </span>
 
     <div class="nitrozen-input-grp">
+
+       
       <!-- Search Icon -->
       <span class="nitrozen-search-icon" v-if="showSearchIcon">
         <nitrozen-inline :icon="'search-black'"></nitrozen-inline>
@@ -116,6 +142,8 @@ export default {
   },
   data() {
     return {
+      promptValue: "",
+      showAiToolbar: false,
       loaderShow: false,
     };
   },
@@ -124,7 +152,7 @@ export default {
       return this.value.length;
     },
   },
-  props: {
+  props: { 
     autocomplete: {
       type: String,
       default: 'off',
@@ -140,6 +168,10 @@ export default {
     placeholder: {
       type: String,
       default: '',
+    },
+    enable_ai: {
+      type: Boolean,
+      default: false,
     },
     disabled: {
       type: Boolean,
@@ -228,6 +260,9 @@ export default {
     }
   },
   methods: {
+    openAiDialog: function() {
+      this.showAiToolbar = this.showAiToolbar?false:true
+    },
     valueChange: function(event) {
       let value = event.target.value;
       if (this.type === 'number') {
@@ -241,6 +276,7 @@ export default {
       }
     },
     eventEmit: function(event, type) {
+      console.log(event,"######",type)
       this.$emit(type, event);
     },
   },
