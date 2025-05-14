@@ -1,30 +1,25 @@
 <template>
   <div class="nitrozen-form-input">
-      <!-- Ai Icon--> 
-   
+    <!-- Ai Icon-->
+
     <!-- Label -->
     <div class="n-input-label-container">
       <div class="n-input-inner-container">
-        <span class="nitrozen-ai-icon" v-if="enable_ai" v-on:click="openAiDialog">
+        <span class="nitrozen-ai-icon" v-if="enableAi" v-on:click="openAiDialog">
           <nitrozen-inline :icon="'ai'"></nitrozen-inline>
         </span>
         <label class="n-input-label" v-if="label" :for="id">
           {{ label }} {{ required ? ' *' : '' }}
           <span class="nitrozen-tooltip-icon" v-if="showTooltip">
-            <nitrozen-tooltip
-              :tooltipText="tooltipText"
-              position="top"
-            ></nitrozen-tooltip>
+            <nitrozen-tooltip :tooltipText="tooltipText" position="top"></nitrozen-tooltip>
           </span>
-        </label> 
-        
+        </label>
+
       </div>
-      <label class="n-input-label n-input-maxlength" v-if="maxlength"
-        >{{ length }}/{{ maxlength }}</label
-      >
+      <label class="n-input-label n-input-maxlength" v-if="maxlength">{{ length }}/{{ maxlength }}</label>
     </div>
     <div class="n-input-ai-pop" v-if="showAiToolbar">
-      <div class="n-input-ai-header">Fill form with AI</div>
+      <div class="n-input-ai-header">Generate {{ label }} with AI</div>
       <div class="n-input-ai-input">
         <label>
           Describe
@@ -35,8 +30,43 @@
           Note: Consider adding more details for better results
         </div>
       </div>
+      <div class="n-input-ai-dropdown-container">
+        <nitrozen-dropdown placeholder="Choose an option" label="Length" v-model="selectedLength"
+          :items="lengthOptions">
+        </nitrozen-dropdown>
+        <nitrozen-dropdown placeholder="Choose an option" label="Tone" :items="aiTones" v-model="selectedTone">
+        </nitrozen-dropdown>
+      </div>
+      <div v-if="isGenerating || generatedResponse" class="preview-divider">
+        <div class="line"></div>
+        <span>Preview</span>
+        <div class="line"></div>
+      </div>
+      <div v-if="isGenerating || generatedResponse" class="n-input-ai-response">
+        <div class="description-wrapper">
+          <label class="description-label">Description</label>
+          <div class="description-box">
+            <p class="description-text">
+              {{ generatedResponse }}
+            </p>
+            <div class="generating-badge">
+              <span class="icon">✨</span>
+              <span>Generating</span>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="n-input-ai-button-container">
-        <button class="n-input-ai-button" v-on:click="eventEmit({prompt: promptValue}, 'ai-triggered')" >Fill With AI</button>
+        <button class="n-input-ai-button" v-if="!isGenerating && generatedResponse.length==0"
+          v-on:click="eventEmit({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'aiTriggered')">Fill
+          With AI</button>
+        <button class="n-input-ai-stop-button" v-if="isGenerating"
+          v-on:click="eventEmit({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'aiTriggeredStopped')"> <nitrozen-inline :icon="'stop'"></nitrozen-inline> Stop</button>
+        <div class="n-input-ai-generated" v-if="!isGenerating && generatedResponse.length>0">
+          <button class="n-input-ai-regenerate-button"
+            v-on:click="eventEmit({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'aiTriggered')">Re-Generate</button>
+          <button class="n-input-ai-use-content-button" v-on:click="useContent">Use Content</button>
+        </div>
       </div>
     </div>
 
@@ -47,78 +77,46 @@
 
     <div class="nitrozen-input-grp">
 
-       
+
       <!-- Search Icon -->
       <span class="nitrozen-search-icon" v-if="showSearchIcon">
         <nitrozen-inline :icon="'search-black'"></nitrozen-inline>
       </span>
 
       <!-- Prefix -->
-      <nitrozen-input-prefix
-        v-if="showPrefix"
-        class="nitrozen-input-prefix nitrozen-remove-right-border"
-        v-bind:class="{ 'nitrozen-prefix-padding': !custom }"
-      >
-        <span v-if="custom"><slot /></span>
+      <nitrozen-input-prefix v-if="showPrefix" class="nitrozen-input-prefix nitrozen-remove-right-border"
+        v-bind:class="{ 'nitrozen-prefix-padding': !custom }">
+        <span v-if="custom">
+          <slot />
+        </span>
         <span v-else>{{ prefix }}</span>
       </nitrozen-input-prefix>
 
       <!-- Input -->
-      <input
-        v-if="type != 'textarea'"
-        v-bind:class="{
-          'nitrozen-search-input-padding': showSearchIcon,
-          'nitrozen-remove-left-border': showPrefix,
-          'nitrozen-remove-right-border': showSuffix,
-        }"
-        v-on:keyup="eventEmit($event, 'keyup')"
-        v-on:change="eventEmit($event, 'change')"
-        v-on:blur="eventEmit($event, 'blur')"
-        v-on:focus="eventEmit($event, 'focus')"
-        v-on:click="eventEmit($event, 'click')"
-        v-on:keypress="eventEmit($event, 'keypress')"
-        class="n-input input-text"
-        :min="min"
-        :max="max"
-        :maxlength="maxlength"
-        :type="type"
-        :placeholder="placeholder"
-        :autocomplete="autocomplete"
-        :id="id"
-        :ref="id"
-        :disabled="disabled"
-        :value="value"
-        @input="valueChange"
-      />
+      <input v-if="type != 'textarea'" v-bind:class="{
+        'nitrozen-search-input-padding': showSearchIcon,
+        'nitrozen-remove-left-border': showPrefix,
+        'nitrozen-remove-right-border': showSuffix,
+      }" v-on:keyup="eventEmit($event, 'keyup')" v-on:change="eventEmit($event, 'change')"
+        v-on:blur="eventEmit($event, 'blur')" v-on:focus="eventEmit($event, 'focus')"
+        v-on:click="eventEmit($event, 'click')" v-on:keypress="eventEmit($event, 'keypress')" class="n-input input-text"
+        :min="min" :max="max" :maxlength="maxlength" :type="type" :placeholder="placeholder"
+        :autocomplete="autocomplete" :id="id" :ref="id" :disabled="disabled" :value="value" @input="valueChange" />
 
       <!-- Textarea -->
-      <textarea
-        v-if="type == 'textarea'"
-        v-on:keyup="eventEmit($event, 'keyup')"
-        v-on:change="eventEmit($event, 'change')"
-        v-on:blur="eventEmit($event, 'blur')"
-        v-on:focus="eventEmit($event, 'focus')"
-        v-on:click="eventEmit($event, 'click')"
-        v-on:keypress="eventEmit($event, 'keypress')"
-        v-bind:class="{ 'n-input-textarea': type == 'textarea' }"
-        class="n-input input-text"
-        :maxlength="maxlength"
-        :disabled="disabled"
-        :autocomplete="autocomplete"
-        :ref="id"
-        :id="id"
-        :placeholder="placeholder"
-        :value="value"
-        @input="valueChange"
-      ></textarea>
+      <textarea v-if="type == 'textarea'" v-on:keyup="eventEmit($event, 'keyup')"
+        v-on:change="eventEmit($event, 'change')" v-on:blur="eventEmit($event, 'blur')"
+        v-on:focus="eventEmit($event, 'focus')" v-on:click="eventEmit($event, 'click')"
+        v-on:keypress="eventEmit($event, 'keypress')" v-bind:class="{ 'n-input-textarea': type == 'textarea' }"
+        class="n-input input-text" :maxlength="maxlength" :disabled="disabled" :autocomplete="autocomplete" :ref="id"
+        :id="id" :placeholder="placeholder" :value="value" @input="valueChange"></textarea>
 
       <!-- Suffix -->
-      <nitrozen-input-suffix
-        v-if="showSuffix"
-        class="nitrozen-input-suffix nitrozen-remove-left-border"
-        v-bind:class="{ 'nitrozen-suffix-padding': !custom }"
-      >
-        <span v-if="custom"><slot /></span>
+      <nitrozen-input-suffix v-if="showSuffix" class="nitrozen-input-suffix nitrozen-remove-left-border"
+        v-bind:class="{ 'nitrozen-suffix-padding': !custom }">
+        <span v-if="custom">
+          <slot />
+        </span>
         <span v-else>{{ suffix }}</span>
       </nitrozen-input-suffix>
     </div>
@@ -131,6 +129,7 @@ import NInputSuffix from './NInputSuffix';
 import NTooltip from './../NTooltip';
 import NitrozenInline from './../NInline';
 import NitrozenUuid from './../../utils/NUuid';
+import NitrozenDropdown from '../NDropdown'
 
 export default {
   name: 'nitrozen-input',
@@ -139,20 +138,38 @@ export default {
     'nitrozen-input-suffix': NInputSuffix,
     'nitrozen-tooltip': NTooltip,
     'nitrozen-inline': NitrozenInline,
+    'nitrozen-dropdown': NitrozenDropdown
   },
   data() {
     return {
       promptValue: "",
+      selectedLength: 'Short',
+      selectedTone: 'Product Expert',
       showAiToolbar: false,
       loaderShow: false,
     };
   },
   computed: {
-    length: function() {
+    length: function () {
       return this.value.length;
     },
   },
-  props: { 
+  props: {
+    isGenerating: {
+      type: Boolean
+    },
+    generatedResponse: {
+      type: String,
+      default: ""
+    },
+    lengthOptions: {
+      type: Array,
+      default: [{ text: 'Short', value: 'Short' }]
+    },
+    aiTones: {
+      type: Array,
+      default: [{ text: 'Product Expert', value: 'Product Expert' }]
+    },
     autocomplete: {
       type: String,
       default: 'off',
@@ -169,7 +186,7 @@ export default {
       type: String,
       default: '',
     },
-    enable_ai: {
+    enableAi: {
       type: Boolean,
       default: false,
     },
@@ -260,10 +277,15 @@ export default {
     }
   },
   methods: {
-    openAiDialog: function() {
-      this.showAiToolbar = this.showAiToolbar?false:true
+    useContent() {
+      this.value = this.generatedResponse
+     this.showAiToolbar=false
+     this.generatedResponse=""
     },
-    valueChange: function(event) {
+    openAiDialog: function () {
+      this.showAiToolbar = this.showAiToolbar ? false : true
+    },
+    valueChange: function (event) {
       let value = event.target.value;
       if (this.type === 'number') {
         value = Number(event.target.value);
@@ -275,8 +297,7 @@ export default {
         this.loaderShow = true;
       }
     },
-    eventEmit: function(event, type) {
-      console.log(event,"######",type)
+    eventEmit: function (event, type) {
       this.$emit(type, event);
     },
   },
