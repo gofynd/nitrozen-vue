@@ -57,15 +57,18 @@
         </div>
       </div>
       <div class="n-input-ai-button-container">
-        <button class="n-input-ai-button" v-if="!isGenerating && generatedResponse.length==0"
-          v-on:click="eventEmit({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'aiTriggered')">Fill
+        <button class="n-input-ai-button" v-if="!isGenerating && generatedResponse.length == 0"
+          v-on:click="eventEmit({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'generateResponse')">Fill
           With AI</button>
         <button class="n-input-ai-stop-button" v-if="isGenerating"
-          v-on:click="eventEmit({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'aiTriggeredStopped')"> <nitrozen-inline :icon="'stop'"></nitrozen-inline> Stop</button>
-        <div class="n-input-ai-generated" v-if="!isGenerating && generatedResponse.length>0">
+          v-on:click="eventEmit({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'stopGeneration')">
+          <nitrozen-inline :icon="'stop'"></nitrozen-inline> Stop</button>
+        <div class="n-input-ai-generated" v-if="!isGenerating && generatedResponse.length > 0">
           <button class="n-input-ai-regenerate-button"
-            v-on:click="eventEmit({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'aiTriggered')">Re-Generate</button>
-          <button class="n-input-ai-use-content-button" v-on:click="useContent">Use Content</button>
+            v-on:click="eventEmit({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'generateResponse')">Re-Generate</button>
+          <button class="n-input-ai-use-content-button"
+            v-on:click="useContent({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'useContent')">Use
+            Content</button>
         </div>
       </div>
     </div>
@@ -164,11 +167,11 @@ export default {
     },
     lengthOptions: {
       type: Array,
-      default: [{ text: 'Short', value: 'Short' }]
+      default: () => [{ text: 'Short', value: 'Short' }]
     },
     aiTones: {
       type: Array,
-      default: [{ text: 'Product Expert', value: 'Product Expert' }]
+      default: () => [{ text: 'Product Expert', value: 'Product Expert' }]
     },
     autocomplete: {
       type: String,
@@ -277,10 +280,9 @@ export default {
     }
   },
   methods: {
-    useContent() {
-      this.value = this.generatedResponse
-     this.showAiToolbar=false
-     this.generatedResponse=""
+    useContent(event, type) {
+      this.showAiToolbar = false
+      this.$emit(type, event);
     },
     openAiDialog: function () {
       this.showAiToolbar = this.showAiToolbar ? false : true
