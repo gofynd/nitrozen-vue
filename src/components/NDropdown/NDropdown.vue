@@ -138,7 +138,7 @@
           </span>
           <div v-if="showAddOption" class="nitrozen-option">
             <div class="nitrozen-dropdown-empty" @click="addOption">
-              <nitrozen-inline icon="add_outlined" />
+              <nitrozen-inline icon="add_outlined"></nitrozen-inline>
               <p class="nitrozen-option-add-option">
                 Add "{{ searchInput }}"
               </p>
