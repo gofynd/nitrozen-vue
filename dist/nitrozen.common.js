@@ -985,7 +985,7 @@ var NCustomForm_component = (0,componentNormalizer/* default */.A)(
 
 /***/ }),
 
-/***/ 793:
+/***/ 1137:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -995,7 +995,7 @@ __webpack_require__.d(__webpack_exports__, {
   A: function() { return /* binding */ NInput; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=template&id=d06c7228
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=template&id=89d1135a
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1219,15 +1219,6 @@ var render = function render() {
   }, [!_vm.isGenerating && _vm.generatedResponse.length > 0 ? _c('div', {
     staticClass: "n-input-ai-generated"
   }, [_c('button', {
-    staticClass: "n-input-ai-regenerate-button",
-    on: {
-      "click": function ($event) {
-        return _vm.eventEmit({
-          prompt: _vm.promptValue
-        }, 'generateResponse');
-      }
-    }
-  }, [_vm._v("Re-Generate")]), _c('button', {
     staticClass: "n-input-ai-use-content-button",
     on: {
       "click": function ($event) {
@@ -1248,7 +1239,7 @@ var staticRenderFns = [function () {
   }, [_vm._v("✨")]), _c('span', [_vm._v("Generating")])]);
 }];
 
-;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=template&id=d06c7228
+;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=template&id=89d1135a
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInputPrefix.vue?vue&type=template&id=0872c97f
 var NInputPrefixvue_type_template_id_0872c97f_render = function render() {
@@ -1501,10 +1492,10 @@ var NDropdown = __webpack_require__(2567);
 });
 ;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=script&lang=js
  /* harmony default export */ var NInput_NInputvue_type_script_lang_js = (NInputvue_type_script_lang_js); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=style&index=0&id=d06c7228&prod&lang=less
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=style&index=0&id=89d1135a&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=style&index=0&id=d06c7228&prod&lang=less
+;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=style&index=0&id=89d1135a&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue
 
@@ -2802,7 +2793,7 @@ var component = (0,componentNormalizer/* default */.A)(
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _NInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(793);
+/* harmony import */ var _NInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1137);
 
 // import NInputPrefix from './NInputPrefix.vue';
 // import NInputSuffix from './NInputSuffix.vue';
@@ -13634,7 +13625,7 @@ var render = function render() {
 var staticRenderFns = [];
 
 // EXTERNAL MODULE: ./src/components/NInput/NInput.vue + 14 modules
-var NInput = __webpack_require__(793);
+var NInput = __webpack_require__(1137);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NAutocomplete/NAutocomplete.vue?vue&type=script&lang=js
 
 

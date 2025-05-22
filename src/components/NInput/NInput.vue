@@ -127,8 +127,6 @@
       </div>
       <div class="n-input-ai-button-container">
         <div class="n-input-ai-generated" v-if="!isGenerating && generatedResponse.length > 0">
-          <button class="n-input-ai-regenerate-button"
-            v-on:click="eventEmit({ prompt: promptValue}, 'generateResponse')">Re-Generate</button>
           <button class="n-input-ai-use-content-button"
             v-on:click="useContent({ prompt: promptValue}, 'useContent')">Use
             Content</button>
