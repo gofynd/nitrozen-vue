@@ -300,6 +300,7 @@ export default {
       }
     },
     eventEmit: function (event, type) {
+      console.log(event,":  EMITTING: ",type)
       this.$emit(type, event);
     },
   },
