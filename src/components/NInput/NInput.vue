@@ -83,7 +83,23 @@
 
     </div>
     <div class="n-input-ai-pop" v-if="showAiToolbar">
-      <div class="n-input-ai-header">Generate {{ label }} with AI</div>
+      <div class="n-input-ai-header"><span class="nitrozen-ai-icon" v-if="enableAi" v-on:click="openAiDialog">
+          <nitrozen-inline :icon="'ai'"></nitrozen-inline>
+        </span> Generate {{ label }} with AI</div>
+      <div v-if="isGenerating || generatedResponse" class="n-input-ai-response">
+        <div class="description-wrapper">
+          <label class="description-label">Description</label>
+          <div class="description-box">
+            <p class="description-text">
+              {{ generatedResponse }}
+            </p>
+            <div v-if="isGenerating" class="generating-badge">
+              <span class="icon">✨</span>
+              <span>Generating</span>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="n-input-ai-input">
         <label>
           Describe
@@ -93,42 +109,21 @@
             class="n-input input-text n-input-textarea n-input-right-padding">
         </textarea>
           <div>
-            <span v-if="isGenerating"
-              v-on:click="eventEmit({ prompt: promptValue}, 'stopGeneration')"
+            <span v-if="isGenerating" v-on:click="eventEmit({ prompt: promptValue }, 'stopGeneration')"
               :class="[promptValue.length == 0 ? 'n-submit-icon-disabled n-submit-icon' : 'n-submit-icon']">
               <nitrozen-inline :icon="'stop'"></nitrozen-inline>
             </span>
-            <span v-else
-              v-on:click="eventEmit({ prompt: promptValue}, 'generateResponse')"
+            <span v-else v-on:click="eventEmit({ prompt: promptValue }, 'generateResponse')"
               :class="[promptValue.length == 0 ? 'n-submit-icon-disabled n-submit-icon' : 'n-submit-icon']">
               <nitrozen-inline :icon="'submit'"></nitrozen-inline>
             </span>
           </div>
         </div>
       </div>
-      <div v-if="isGenerating || generatedResponse" class="preview-divider">
-        <div class="line"></div>
-        <span>Preview</span>
-        <div class="line"></div>
-      </div>
-      <div v-if="isGenerating || generatedResponse" class="n-input-ai-response">
-        <div class="description-wrapper">
-          <label class="description-label">Description</label>
-          <div class="description-box">
-            <p class="description-text">
-              {{ generatedResponse }}
-            </p>
-            <div class="generating-badge">
-              <span class="icon">✨</span>
-              <span>Generating</span>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="n-input-ai-button-container">
         <div class="n-input-ai-generated" v-if="!isGenerating && generatedResponse.length > 0">
           <button class="n-input-ai-use-content-button"
-            v-on:click="useContent({ prompt: promptValue}, 'useContent')">Use
+            v-on:click="useContent({ prompt: promptValue }, 'useContent')">Use
             Content</button>
         </div>
       </div>
