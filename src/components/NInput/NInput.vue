@@ -5,9 +5,6 @@
     <!-- Label -->
     <div class="n-input-label-container">
       <div class="n-input-inner-container">
-        <span class="nitrozen-ai-icon" v-if="enableAi" v-on:click="openAiDialog">
-          <nitrozen-inline :icon="'ai'"></nitrozen-inline>
-        </span>
         <label class="n-input-label" v-if="label" :for="id">
           {{ label }} {{ required ? ' *' : '' }}
           <span class="nitrozen-tooltip-icon" v-if="showTooltip">
@@ -17,60 +14,6 @@
 
       </div>
       <label class="n-input-label n-input-maxlength" v-if="maxlength">{{ length }}/{{ maxlength }}</label>
-    </div>
-    <div class="n-input-ai-pop" v-if="showAiToolbar">
-      <div class="n-input-ai-header">Generate {{ label }} with AI</div>
-      <div class="n-input-ai-input">
-        <label>
-          Describe
-        </label>
-        <textarea v-model="promptValue" class="n-input input-text n-input-textarea">
-        </textarea>
-        <div class="n-input-ai-input-note">
-          Note: Consider adding more details for better results
-        </div>
-      </div>
-      <div class="n-input-ai-dropdown-container">
-        <nitrozen-dropdown placeholder="Choose an option" label="Length" v-model="selectedLength"
-          :items="lengthOptions">
-        </nitrozen-dropdown>
-        <nitrozen-dropdown placeholder="Choose an option" label="Tone" :items="aiTones" v-model="selectedTone">
-        </nitrozen-dropdown>
-      </div>
-      <div v-if="isGenerating || generatedResponse" class="preview-divider">
-        <div class="line"></div>
-        <span>Preview</span>
-        <div class="line"></div>
-      </div>
-      <div v-if="isGenerating || generatedResponse" class="n-input-ai-response">
-        <div class="description-wrapper">
-          <label class="description-label">Description</label>
-          <div class="description-box">
-            <p class="description-text">
-              {{ generatedResponse }}
-            </p>
-            <div class="generating-badge">
-              <span class="icon">✨</span>
-              <span>Generating</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="n-input-ai-button-container">
-        <button class="n-input-ai-button" v-if="!isGenerating && generatedResponse.length == 0"
-          v-on:click="eventEmit({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'generateResponse')">Fill
-          With AI</button>
-        <button class="n-input-ai-stop-button" v-if="isGenerating"
-          v-on:click="eventEmit({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'stopGeneration')">
-          <nitrozen-inline :icon="'stop'"></nitrozen-inline> Stop</button>
-        <div class="n-input-ai-generated" v-if="!isGenerating && generatedResponse.length > 0">
-          <button class="n-input-ai-regenerate-button"
-            v-on:click="eventEmit({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'generateResponse')">Re-Generate</button>
-          <button class="n-input-ai-use-content-button"
-            v-on:click="useContent({ prompt: promptValue, length: selectedLength, tone: selectedTone }, 'useContent')">Use
-            Content</button>
-        </div>
-      </div>
     </div>
 
     <!-- Input -->
@@ -100,19 +43,33 @@
         'nitrozen-search-input-padding': showSearchIcon,
         'nitrozen-remove-left-border': showPrefix,
         'nitrozen-remove-right-border': showSuffix,
+        'n-input-right-padding': enableAi,
       }" v-on:keyup="eventEmit($event, 'keyup')" v-on:change="eventEmit($event, 'change')"
         v-on:blur="eventEmit($event, 'blur')" v-on:focus="eventEmit($event, 'focus')"
         v-on:click="eventEmit($event, 'click')" v-on:keypress="eventEmit($event, 'keypress')" class="n-input input-text"
         :min="min" :max="max" :maxlength="maxlength" :type="type" :placeholder="placeholder"
-        :autocomplete="autocomplete" :id="id" :ref="id" :disabled="disabled" :value="value" @input="valueChange" />
-
+        :autocomplete="autocomplete" :id="id" :ref="id" :disabled="disabled" :value="value" @input="valueChange">
+      <div class="n-input-icon">
+        <span class="nitrozen-ai-icon" v-if="enableAi && !showAiToolbar" v-on:click="openAiDialog">
+          <nitrozen-inline :icon="'ai'"></nitrozen-inline>
+        </span>
+        <span class="nitrozen-ai-icon" v-if="enableAi && showAiToolbar" v-on:click="openAiDialog">
+          <nitrozen-inline :icon="'cross-large'"></nitrozen-inline>
+        </span>
+      </div>
+      </input>
       <!-- Textarea -->
       <textarea v-if="type == 'textarea'" v-on:keyup="eventEmit($event, 'keyup')"
         v-on:change="eventEmit($event, 'change')" v-on:blur="eventEmit($event, 'blur')"
         v-on:focus="eventEmit($event, 'focus')" v-on:click="eventEmit($event, 'click')"
-        v-on:keypress="eventEmit($event, 'keypress')" v-bind:class="{ 'n-input-textarea': type == 'textarea' }"
+        v-on:keypress="eventEmit($event, 'keypress')"
+        v-bind:class="{ 'n-input-textarea': type == 'textarea', 'n-input-right-padding': enableAi, }"
         class="n-input input-text" :maxlength="maxlength" :disabled="disabled" :autocomplete="autocomplete" :ref="id"
-        :id="id" :placeholder="placeholder" :value="value" @input="valueChange"></textarea>
+        :id="id" :placeholder="placeholder" :value="value" @input="valueChange">
+         <span class="nitrozen-ai-icon" v-if="enableAi" v-on:click="openAiDialog">
+          <nitrozen-inline :icon="'ai'"></nitrozen-inline>
+        </span>
+      </textarea>
 
       <!-- Suffix -->
       <nitrozen-input-suffix v-if="showSuffix" class="nitrozen-input-suffix nitrozen-remove-left-border"
@@ -122,6 +79,61 @@
         </span>
         <span v-else>{{ suffix }}</span>
       </nitrozen-input-suffix>
+
+
+    </div>
+    <div class="n-input-ai-pop" v-if="showAiToolbar">
+      <div class="n-input-ai-header">Generate {{ label }} with AI</div>
+      <div class="n-input-ai-input">
+        <label>
+          Describe
+        </label>
+        <div class="n-input-textarea-container">
+          <textarea placeholder="e.g., Write a 100 words description for a cotton t-shirt" v-model="promptValue"
+            class="n-input input-text n-input-textarea n-input-right-padding">
+        </textarea>
+          <div>
+            <span v-if="isGenerating"
+              v-on:click="eventEmit({ prompt: promptValue}, 'generateResponse')"
+              :class="[promptValue.length == 0 ? 'n-submit-icon-disabled n-submit-icon' : 'n-submit-icon']">
+              <nitrozen-inline :icon="'stop'"></nitrozen-inline>
+            </span>
+            <span v-else
+              v-on:click="eventEmit({ prompt: promptValue}, 'stopGeneration')"
+              :class="[promptValue.length == 0 ? 'n-submit-icon-disabled n-submit-icon' : 'n-submit-icon']">
+              <nitrozen-inline :icon="'submit'"></nitrozen-inline>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div v-if="isGenerating || generatedResponse" class="preview-divider">
+        <div class="line"></div>
+        <span>Preview</span>
+        <div class="line"></div>
+      </div>
+      <div v-if="isGenerating || generatedResponse" class="n-input-ai-response">
+        <div class="description-wrapper">
+          <label class="description-label">Description</label>
+          <div class="description-box">
+            <p class="description-text">
+              {{ generatedResponse }}
+            </p>
+            <div class="generating-badge">
+              <span class="icon">✨</span>
+              <span>Generating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="n-input-ai-button-container">
+        <div class="n-input-ai-generated" v-if="!isGenerating && generatedResponse.length > 0">
+          <button class="n-input-ai-regenerate-button"
+            v-on:click="eventEmit({ prompt: promptValue}, 'generateResponse')">Re-Generate</button>
+          <button class="n-input-ai-use-content-button"
+            v-on:click="useContent({ prompt: promptValue}, 'useContent')">Use
+            Content</button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -146,8 +158,6 @@ export default {
   data() {
     return {
       promptValue: "",
-      selectedLength: 'Short',
-      selectedTone: 'Product Expert',
       showAiToolbar: false,
       loaderShow: false,
     };
@@ -164,14 +174,6 @@ export default {
     generatedResponse: {
       type: String,
       default: ""
-    },
-    lengthOptions: {
-      type: Array,
-      default: () => [{ text: 'Short', value: 'Short' }]
-    },
-    aiTones: {
-      type: Array,
-      default: () => [{ text: 'Product Expert', value: 'Product Expert' }]
     },
     autocomplete: {
       type: String,
