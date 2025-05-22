@@ -94,12 +94,12 @@
         </textarea>
           <div>
             <span v-if="isGenerating"
-              v-on:click="eventEmit({ prompt: promptValue}, 'generateResponse')"
+              v-on:click="eventEmit({ prompt: promptValue}, 'stopGeneration')"
               :class="[promptValue.length == 0 ? 'n-submit-icon-disabled n-submit-icon' : 'n-submit-icon']">
               <nitrozen-inline :icon="'stop'"></nitrozen-inline>
             </span>
             <span v-else
-              v-on:click="eventEmit({ prompt: promptValue}, 'stopGeneration')"
+              v-on:click="eventEmit({ prompt: promptValue}, 'generateResponse')"
               :class="[promptValue.length == 0 ? 'n-submit-icon-disabled n-submit-icon' : 'n-submit-icon']">
               <nitrozen-inline :icon="'submit'"></nitrozen-inline>
             </span>
@@ -300,7 +300,6 @@ export default {
       }
     },
     eventEmit: function (event, type) {
-      console.log(event,":  EMITTING: ",type)
       this.$emit(type, event);
     },
   },
