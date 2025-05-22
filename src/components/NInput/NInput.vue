@@ -83,15 +83,24 @@
 
     </div>
     <div class="n-input-ai-pop" v-if="showAiToolbar">
-      <div class="n-input-ai-header"><span class="nitrozen-ai-icon" v-if="enableAi" v-on:click="openAiDialog">
-          <nitrozen-inline :icon="'ai'"></nitrozen-inline>
-        </span> Generate {{ label }} with AI</div>
+      <div class="n-input-ai-header">
+        <div class="n-input-ai-header-title">
+          <span class="nitrozen-ai-icon" v-if="enableAi" v-on:click="openAiDialog">
+            <nitrozen-inline :icon="'ai'"></nitrozen-inline>
+          </span> Generate {{ label }} with AI
+        </div>
+        <div>
+          <span class="nitrozen-ai-icon" v-if="enableAi && showAiToolbar" v-on:click="openAiDialog">
+            <nitrozen-inline :icon="'cross-large'"></nitrozen-inline>
+          </span>
+        </div>
+      </div>
+
       <div v-if="isGenerating || generatedResponse" class="n-input-ai-response">
         <div class="description-wrapper">
-          <label class="description-label">Description</label>
-          <div class="description-box">
+          <div :class="[isGenerating ? 'description-box-active' : 'description-box']">
             <p class="description-text">
-              {{ generatedResponse }}
+              {{ isGenerating ? loadingDots : generatedResponse }}
             </p>
             <div v-if="isGenerating" class="generating-badge">
               <span class="icon">✨</span>
@@ -100,13 +109,10 @@
           </div>
         </div>
       </div>
-      <div class="n-input-ai-input">
-        <label>
-          Describe
-        </label>
+      <div>
         <div class="n-input-textarea-container">
           <textarea placeholder="e.g., Write a 100 words description for a cotton t-shirt" v-model="promptValue"
-            class="n-input input-text n-input-textarea n-input-right-padding">
+            class="n-input-ai-textarea n-input-right-padding">
         </textarea>
           <div>
             <span v-if="isGenerating" v-on:click="eventEmit({ prompt: promptValue }, 'stopGeneration')"
@@ -120,9 +126,14 @@
           </div>
         </div>
       </div>
-      <div class="n-input-ai-button-container">
-        <div class="n-input-ai-generated" v-if="!isGenerating && generatedResponse.length > 0">
-          <button class="n-input-ai-use-content-button"
+      <div class="n-input-ai-button-container" v-if="!isGenerating && generatedResponse.length > 0">
+        <div class="n-input-ai-generated">
+          <button class="n-input-ai-button n-input-ai-regenerate-button"
+            v-on:click="eventEmit({ prompt: promptValue }, 'generateResponse')">Re-
+            generate</button>
+        </div>
+        <div class="n-input-ai-generated">
+          <button class="n-input-ai-button"
             v-on:click="useContent({ prompt: promptValue }, 'useContent')">Use
             Content</button>
         </div>
@@ -152,7 +163,9 @@ export default {
     return {
       promptValue: "",
       showAiToolbar: false,
+      loadingDots: '...',
       loaderShow: false,
+      dotInterval: null,
     };
   },
   computed: {
@@ -263,6 +276,19 @@ export default {
     },
   },
   watch: {
+    isGenerating(newVal) {
+      console.log("newval", newVal)
+      if (newVal) {
+        this.startDotLoader();
+      } else {
+        this.stopDotLoader();
+      }
+    },
+    closeAiDialog() {
+      this.showAiToolbar = false
+      this.promptValue = ''
+      this.$emit('close', {});
+    },
     autofocus() {
       if (this.autofocus) {
         this.$refs[this.id].focus();
@@ -275,6 +301,18 @@ export default {
     }
   },
   methods: {
+    startDotLoader() {
+      this.loadingDots = '';
+      let dotCount = 0;
+      this.dotInterval = setInterval(() => {
+        dotCount = (dotCount + 1) % 4; // 0 to 3 dots
+        this.loadingDots = '.'.repeat(dotCount);
+      }, 200);
+    },
+    stopDotLoader() {
+      clearInterval(this.dotInterval);
+      this.loadingDots = '';
+    },
     useContent(event, type) {
       this.showAiToolbar = false
       this.$emit(type, event);
@@ -295,6 +333,14 @@ export default {
       }
     },
     eventEmit: function (event, type) {
+      if (type == 'generateResponse') {
+        this.isGenerating = true
+        setTimeout(() => {
+          this.isGenerating = false
+          this.generatedResponse = "Revitalize your summer wardrobe with our classic cotton polo tee. Crafted from premium cotton, it's breathable, easy to wash, and perfect for the season. Whether you're out or lounging, its relaxed fit and timeless style make it a must-have."
+        }, 1000);
+
+      }
       this.$emit(type, event);
     },
   },
