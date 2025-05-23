@@ -274,7 +274,6 @@ export default {
   },
   watch: {
     isGenerating(newVal) {
-      console.log("newval", newVal)
       if (newVal) {
         this.startDotLoader();
       } else {
