@@ -360,14 +360,6 @@ export default {
       }
     },
     eventEmit: function (event, type) {
-      if (type == 'generateResponse') {
-        this.isGenerating = true
-        setTimeout(() => {
-          this.isGenerating = false
-          this.generatedResponse = "Revitalize your summer wardrobe with our classic cotton polo tee. Crafted from premium cotton, it's breathable, easy to wash, and perfect for the season. Whether you're out or lounging, its relaxed fit and timeless style make it a must-have."
-        }, 1000);
-
-      }
       this.$emit(type, event);
     },
   },
