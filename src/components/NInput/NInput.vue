@@ -1,5 +1,5 @@
 <template>
-  <div class="nitrozen-form-input">
+  <div class="nitrozen-form-input" ref="inputEl" v-bind:class="{ 'nitrozen-form-ai-input': enableAi }">
     <!-- Ai Icon-->
 
     <!-- Label -->
@@ -82,7 +82,7 @@
 
 
     </div>
-    <div class="n-input-ai-pop" v-if="showAiToolbar">
+    <div class="n-input-ai-pop" :style="{ width: parentWidth + 'px' }" v-if="showAiToolbar">
       <div class="n-input-ai-header">
         <div class="n-input-ai-header-title">
           <span class="nitrozen-ai-icon" v-if="enableAi" v-on:click="openAiDialog">
@@ -165,6 +165,7 @@ export default {
       loadingDots: '...',
       loaderShow: false,
       dotInterval: null,
+      parentWidth: 0,
     };
   },
   computed: {
@@ -298,8 +299,31 @@ export default {
     if (this.autofocus) {
       this.$refs[this.id].focus();
     }
+    // Get the width of the parent component
+    this.updateParentWidth();
+    window.addEventListener('resize', this.updateParentWidth);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.updateParentWidth);
   },
   methods: {
+    updateParentWidth() {
+      this.$nextTick(() => {
+        const el = this.$refs.inputEl;
+        if (el) {
+          let width = el.getBoundingClientRect().width;
+          if (width > 450) {
+            this.parentWidth = 450
+          } else if (width < 300) {
+            this.parentWidth = 350
+          } else {
+            this.parentWidth = width
+          }
+        } else {
+          this.parentWidth = 350
+        }
+      });
+    },
     startDotLoader() {
       this.loadingDots = '';
       let dotCount = 0;

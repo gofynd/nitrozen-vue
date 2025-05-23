@@ -985,7 +985,7 @@ var NCustomForm_component = (0,componentNormalizer/* default */.A)(
 
 /***/ }),
 
-/***/ 6408:
+/***/ 1437:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -995,12 +995,16 @@ __webpack_require__.d(__webpack_exports__, {
   A: function() { return /* binding */ NInput; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=template&id=a3241890
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=template&id=372ee814
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
-    staticClass: "nitrozen-form-input"
+    ref: "inputEl",
+    staticClass: "nitrozen-form-input",
+    class: {
+      'nitrozen-form-ai-input': _vm.enableAi
+    }
   }, [_c('div', {
     staticClass: "n-input-label-container"
   }, [_c('div', {
@@ -1145,7 +1149,10 @@ var render = function render() {
       'nitrozen-suffix-padding': !_vm.custom
     }
   }, [_vm.custom ? _c('span', [_vm._t("default")], 2) : _c('span', [_vm._v(_vm._s(_vm.suffix))])]) : _vm._e()], 1), _vm.showAiToolbar ? _c('div', {
-    staticClass: "n-input-ai-pop"
+    staticClass: "n-input-ai-pop",
+    style: {
+      width: _vm.parentWidth + 'px'
+    }
   }, [_c('div', {
     staticClass: "n-input-ai-header"
   }, [_c('div', {
@@ -1256,7 +1263,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=template&id=a3241890
+;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=template&id=372ee814
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInputPrefix.vue?vue&type=template&id=0872c97f
 var NInputPrefixvue_type_template_id_0872c97f_render = function render() {
@@ -1358,7 +1365,8 @@ var NDropdown = __webpack_require__(2567);
       showAiToolbar: false,
       loadingDots: '...',
       loaderShow: false,
-      dotInterval: null
+      dotInterval: null,
+      parentWidth: 0
     };
   },
   computed: {
@@ -1492,8 +1500,31 @@ var NDropdown = __webpack_require__(2567);
     if (this.autofocus) {
       this.$refs[this.id].focus();
     }
+    // Get the width of the parent component
+    this.updateParentWidth();
+    window.addEventListener('resize', this.updateParentWidth);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.updateParentWidth);
   },
   methods: {
+    updateParentWidth() {
+      this.$nextTick(() => {
+        const el = this.$refs.inputEl;
+        if (el) {
+          let width = el.getBoundingClientRect().width;
+          if (width > 450) {
+            this.parentWidth = 450;
+          } else if (width < 300) {
+            this.parentWidth = 350;
+          } else {
+            this.parentWidth = width;
+          }
+        } else {
+          this.parentWidth = 350;
+        }
+      });
+    },
     startDotLoader() {
       this.loadingDots = '';
       let dotCount = 0;
@@ -1547,10 +1578,10 @@ var NDropdown = __webpack_require__(2567);
 });
 ;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=script&lang=js
  /* harmony default export */ var NInput_NInputvue_type_script_lang_js = (NInputvue_type_script_lang_js); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=style&index=0&id=a3241890&prod&lang=less
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=style&index=0&id=372ee814&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=style&index=0&id=a3241890&prod&lang=less
+;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=style&index=0&id=372ee814&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue
 
@@ -2848,7 +2879,7 @@ var component = (0,componentNormalizer/* default */.A)(
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _NInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6408);
+/* harmony import */ var _NInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1437);
 
 // import NInputPrefix from './NInputPrefix.vue';
 // import NInputSuffix from './NInputSuffix.vue';
@@ -13680,7 +13711,7 @@ var render = function render() {
 var staticRenderFns = [];
 
 // EXTERNAL MODULE: ./src/components/NInput/NInput.vue + 14 modules
-var NInput = __webpack_require__(6408);
+var NInput = __webpack_require__(1437);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NAutocomplete/NAutocomplete.vue?vue&type=script&lang=js
 
 
