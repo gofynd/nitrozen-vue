@@ -50,11 +50,8 @@
         :min="min" :max="max" :maxlength="maxlength" :type="type" :placeholder="placeholder"
         :autocomplete="autocomplete" :id="id" :ref="id" :disabled="disabled" :value="value" @input="valueChange">
       <div class="n-input-icon">
-        <span class="nitrozen-ai-icon" v-if="enableAi && !showAiToolbar" v-on:click="openAiDialog">
+        <span class="nitrozen-ai-icon" v-on:click="openAiDialog">
           <nitrozen-inline :icon="'ai'"></nitrozen-inline>
-        </span>
-        <span class="nitrozen-ai-icon" v-if="enableAi && showAiToolbar" v-on:click="openAiDialog">
-          <nitrozen-inline :icon="'cross-large'"></nitrozen-inline>
         </span>
       </div>
       </input>
@@ -342,7 +339,7 @@ export default {
     },
     closeAiDialog() {
       this.showAiToolbar = false
-      this.$emit('close-dialog', {});
+      this.$emit('closeDialog', {});
     },
     openAiDialog() {
       this.showAiToolbar = this.showAiToolbar ? false : true
