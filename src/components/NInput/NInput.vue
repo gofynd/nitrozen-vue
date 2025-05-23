@@ -50,7 +50,7 @@
         :min="min" :max="max" :maxlength="maxlength" :type="type" :placeholder="placeholder"
         :autocomplete="autocomplete" :id="id" :ref="id" :disabled="disabled" :value="value" @input="valueChange">
       <div class="n-input-icon">
-        <span class="nitrozen-ai-icon" v-on:click="openAiDialog">
+        <span class="nitrozen-ai-icon" v-if="enableAi" v-on:click="openAiDialog">
           <nitrozen-inline :icon="'ai'"></nitrozen-inline>
         </span>
       </div>
