@@ -314,7 +314,7 @@ export default {
           let width = el.getBoundingClientRect().width;
           if (width > 450) {
             this.parentWidth = 450
-          } else if (width < 300) {
+          } else if (width > 200 && width < 300) {
             this.parentWidth = 350
           } else {
             this.parentWidth = width
