@@ -90,7 +90,7 @@
           </span> Generate {{ label }} with AI
         </div>
         <div>
-          <span class="nitrozen-ai-icon" v-if="enableAi && showAiToolbar" v-on:click="openAiDialog">
+          <span class="nitrozen-ai-icon" v-if="enableAi && showAiToolbar" v-on:click="closeAiDialog">
             <nitrozen-inline :icon="'cross-large'"></nitrozen-inline>
           </span>
         </div>
@@ -133,8 +133,7 @@
             generate</button>
         </div>
         <div class="n-input-ai-generated">
-          <button class="n-input-ai-button"
-            v-on:click="useContent({ prompt: promptValue }, 'useContent')">Use
+          <button class="n-input-ai-button" v-on:click="useContent({ prompt: promptValue }, 'useContent')">Use
             Content</button>
         </div>
       </div>
@@ -317,7 +316,11 @@ export default {
       this.showAiToolbar = false
       this.$emit(type, event);
     },
-    openAiDialog: function () {
+    closeAiDialog() {
+      this.showAiToolbar = false
+      this.$emit('close-dialog', {});
+    },
+    openAiDialog() {
       this.showAiToolbar = this.showAiToolbar ? false : true
     },
     valueChange: function (event) {

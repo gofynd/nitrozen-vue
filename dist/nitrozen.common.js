@@ -985,7 +985,7 @@ var NCustomForm_component = (0,componentNormalizer/* default */.A)(
 
 /***/ }),
 
-/***/ 5388:
+/***/ 6408:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -995,7 +995,7 @@ __webpack_require__.d(__webpack_exports__, {
   A: function() { return /* binding */ NInput; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=template&id=3550f172
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=template&id=a3241890
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1148,6 +1148,8 @@ var render = function render() {
     staticClass: "n-input-ai-pop"
   }, [_c('div', {
     staticClass: "n-input-ai-header"
+  }, [_c('div', {
+    staticClass: "n-input-ai-header-title"
   }, [_vm.enableAi ? _c('span', {
     staticClass: "nitrozen-ai-icon",
     on: {
@@ -1157,23 +1159,28 @@ var render = function render() {
     attrs: {
       "icon": 'ai'
     }
-  })], 1) : _vm._e(), _vm._v(" Generate " + _vm._s(_vm.label) + " with AI")]), _vm.isGenerating || _vm.generatedResponse ? _c('div', {
+  })], 1) : _vm._e(), _vm._v(" Generate " + _vm._s(_vm.label) + " with AI ")]), _c('div', [_vm.enableAi && _vm.showAiToolbar ? _c('span', {
+    staticClass: "nitrozen-ai-icon",
+    on: {
+      "click": _vm.closeAiDialog
+    }
+  }, [_c('nitrozen-inline', {
+    attrs: {
+      "icon": 'cross-large'
+    }
+  })], 1) : _vm._e()])]), _vm.isGenerating || _vm.generatedResponse ? _c('div', {
     staticClass: "n-input-ai-response"
   }, [_c('div', {
     staticClass: "description-wrapper"
-  }, [_c('label', {
-    staticClass: "description-label"
-  }, [_vm._v("Description")]), _c('div', {
-    staticClass: "description-box"
+  }, [_c('div', {
+    class: [_vm.isGenerating ? 'description-box-active' : 'description-box']
   }, [_c('p', {
     staticClass: "description-text"
-  }, [_vm._v(" " + _vm._s(_vm.generatedResponse) + " ")]), _vm.isGenerating ? _c('div', {
+  }, [_vm._v(" " + _vm._s(_vm.isGenerating ? _vm.loadingDots : _vm.generatedResponse) + " ")]), _vm.isGenerating ? _c('div', {
     staticClass: "generating-badge"
   }, [_c('span', {
     staticClass: "icon"
-  }, [_vm._v("✨")]), _c('span', [_vm._v("Generating")])]) : _vm._e()])])]) : _vm._e(), _c('div', {
-    staticClass: "n-input-ai-input"
-  }, [_c('label', [_vm._v(" Describe ")]), _c('div', {
+  }, [_vm._v("✨")]), _c('span', [_vm._v("Generating")])]) : _vm._e()])])]) : _vm._e(), _c('div', [_c('div', {
     staticClass: "n-input-textarea-container"
   }, [_c('textarea', {
     directives: [{
@@ -1182,7 +1189,7 @@ var render = function render() {
       value: _vm.promptValue,
       expression: "promptValue"
     }],
-    staticClass: "n-input input-text n-input-textarea n-input-right-padding",
+    staticClass: "n-input-ai-textarea n-input-right-padding",
     attrs: {
       "placeholder": "e.g., Write a 100 words description for a cotton t-shirt"
     },
@@ -1221,12 +1228,23 @@ var render = function render() {
     attrs: {
       "icon": 'submit'
     }
-  })], 1)])])]), _c('div', {
+  })], 1)])])]), !_vm.isGenerating && _vm.generatedResponse.length > 0 ? _c('div', {
     staticClass: "n-input-ai-button-container"
-  }, [!_vm.isGenerating && _vm.generatedResponse.length > 0 ? _c('div', {
+  }, [_c('div', {
     staticClass: "n-input-ai-generated"
   }, [_c('button', {
-    staticClass: "n-input-ai-use-content-button",
+    staticClass: "n-input-ai-button n-input-ai-regenerate-button",
+    on: {
+      "click": function ($event) {
+        return _vm.eventEmit({
+          prompt: _vm.promptValue
+        }, 'generateResponse');
+      }
+    }
+  }, [_vm._v("Re- generate")])]), _c('div', {
+    staticClass: "n-input-ai-generated"
+  }, [_c('button', {
+    staticClass: "n-input-ai-button",
     on: {
       "click": function ($event) {
         return _vm.useContent({
@@ -1234,11 +1252,11 @@ var render = function render() {
         }, 'useContent');
       }
     }
-  }, [_vm._v("Use Content")])]) : _vm._e()])]) : _vm._e()]);
+  }, [_vm._v("Use Content")])])]) : _vm._e()]) : _vm._e()]);
 };
 var staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=template&id=3550f172
+;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=template&id=a3241890
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInputPrefix.vue?vue&type=template&id=0872c97f
 var NInputPrefixvue_type_template_id_0872c97f_render = function render() {
@@ -1338,7 +1356,9 @@ var NDropdown = __webpack_require__(2567);
     return {
       promptValue: "",
       showAiToolbar: false,
-      loaderShow: false
+      loadingDots: '...',
+      loaderShow: false,
+      dotInterval: null
     };
   },
   computed: {
@@ -1449,6 +1469,19 @@ var NDropdown = __webpack_require__(2567);
     }
   },
   watch: {
+    isGenerating(newVal) {
+      console.log("newval", newVal);
+      if (newVal) {
+        this.startDotLoader();
+      } else {
+        this.stopDotLoader();
+      }
+    },
+    closeAiDialog() {
+      this.showAiToolbar = false;
+      this.promptValue = '';
+      this.$emit('close', {});
+    },
     autofocus() {
       if (this.autofocus) {
         this.$refs[this.id].focus();
@@ -1461,11 +1494,27 @@ var NDropdown = __webpack_require__(2567);
     }
   },
   methods: {
+    startDotLoader() {
+      this.loadingDots = '';
+      let dotCount = 0;
+      this.dotInterval = setInterval(() => {
+        dotCount = (dotCount + 1) % 4; // 0 to 3 dots
+        this.loadingDots = '.'.repeat(dotCount);
+      }, 200);
+    },
+    stopDotLoader() {
+      clearInterval(this.dotInterval);
+      this.loadingDots = '';
+    },
     useContent(event, type) {
       this.showAiToolbar = false;
       this.$emit(type, event);
     },
-    openAiDialog: function () {
+    closeAiDialog() {
+      this.showAiToolbar = false;
+      this.$emit('close-dialog', {});
+    },
+    openAiDialog() {
       this.showAiToolbar = this.showAiToolbar ? false : true;
     },
     valueChange: function (event) {
@@ -1480,6 +1529,13 @@ var NDropdown = __webpack_require__(2567);
       }
     },
     eventEmit: function (event, type) {
+      if (type == 'generateResponse') {
+        this.isGenerating = true;
+        setTimeout(() => {
+          this.isGenerating = false;
+          this.generatedResponse = "Revitalize your summer wardrobe with our classic cotton polo tee. Crafted from premium cotton, it's breathable, easy to wash, and perfect for the season. Whether you're out or lounging, its relaxed fit and timeless style make it a must-have.";
+        }, 1000);
+      }
       this.$emit(type, event);
     }
   }
@@ -1491,10 +1547,10 @@ var NDropdown = __webpack_require__(2567);
 });
 ;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=script&lang=js
  /* harmony default export */ var NInput_NInputvue_type_script_lang_js = (NInputvue_type_script_lang_js); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=style&index=0&id=3550f172&prod&lang=less
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NInput/NInput.vue?vue&type=style&index=0&id=a3241890&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=style&index=0&id=3550f172&prod&lang=less
+;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue?vue&type=style&index=0&id=a3241890&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NInput/NInput.vue
 
@@ -2792,7 +2848,7 @@ var component = (0,componentNormalizer/* default */.A)(
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _NInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5388);
+/* harmony import */ var _NInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6408);
 
 // import NInputPrefix from './NInputPrefix.vue';
 // import NInputSuffix from './NInputSuffix.vue';
@@ -13624,7 +13680,7 @@ var render = function render() {
 var staticRenderFns = [];
 
 // EXTERNAL MODULE: ./src/components/NInput/NInput.vue + 14 modules
-var NInput = __webpack_require__(5388);
+var NInput = __webpack_require__(6408);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NAutocomplete/NAutocomplete.vue?vue&type=script&lang=js
 
 
