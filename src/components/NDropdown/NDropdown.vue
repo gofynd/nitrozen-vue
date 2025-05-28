@@ -139,7 +139,7 @@
             </slot>
           </span>
           <div v-if="showAddOption" class="nitrozen-option">
-            <div class="nitrozen-dropdown-empty" @click="addOption">
+            <div id="nitorzenAddOption" class="nitrozen-dropdown-empty" @click="addOption">
               <nitrozen-inline icon="add_outlined" />
               <p class="nitrozen-option-add-option">
                 Add "{{ searchInput }}"
