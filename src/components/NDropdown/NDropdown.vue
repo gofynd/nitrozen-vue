@@ -24,6 +24,7 @@
             class="nitrozen-searchable-input-container"
           >
             <input
+              :id="id"
               type="search"
               v-model="searchInput"
               @search="searchInputChange"
@@ -77,6 +78,7 @@
           <span
             v-for="(item, index) in filteredItems"
             :key="index"
+            :id="`${id}_${index}`"
             :data-value="item.value"
             class="nitrozen-option ripple"
             :class="{
