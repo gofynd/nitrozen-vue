@@ -29,6 +29,8 @@
               @search="searchInputChange"
               v-on:keyup="searchInputChange"
               :placeholder="searchInputPlaceholder"
+              :autocomplete="autocomplete"
+
             />
           </span>
           <span v-else>{{ selectedText }}</span>
@@ -73,7 +75,7 @@
             class="horizantal-divider"
           />
           <span
-            v-for="(item, index) in items"
+            v-for="(item, index) in filteredItems"
             :key="index"
             :data-value="item.value"
             class="nitrozen-option ripple"
@@ -100,12 +102,14 @@
                         ),
                       }"
                     >
+                    <div v-if="item.logo" class="nitrozen-option-logo">
                       <img
-                        v-if="item.logo"
                         class="nitrozen-option-logo"
                         :src="item.logo"
                         alt="logo"
+                         @error="handleImageError"
                       />
+                    </div>
                       {{ item.text }}</span
                     >
                   </nitrozen-checkbox>
@@ -118,29 +122,42 @@
                         items.find((i) => i.isGroupLabel) && !item.isGroupLabel,
                     }"
                   >
+                  <div  v-if="item.logo" class="nitrozen-option-logo">
                     <img
-                      v-if="item.logo"
                       class="nitrozen-option-logo"
                       :src="item.logo"
                       alt="logo"
+                      @error="handleImageError"
                     />
+                  </div>
                     {{ item.text }}
                   </span>
                 </template>
               </div>
             </slot>
           </span>
-          <span v-if="searchable && items.length == 0" class="nitrozen-option">
-            <div class="nitrozen-option-container" v-if="!add_option">No {{ label }} Found</div>
-            <div class="nitrozen-option-container" v-else-if="add_option && searchInput.length">
-              <div class="nitrozen-dropdown-empty"
-                @click="addOption"
-              >
-                  <nitrozen-inline icon="plus-btn"></nitrozen-inline>
-                  <p>Add {{ searchInput }}</p>
-              </div>
+          <div v-if="showAddOption" class="nitrozen-option">
+            <div class="nitrozen-dropdown-empty nitrozen-option-container" @click="addOption">
+              <nitrozen-inline icon="add_outlined" />
+              <p class="nitrozen-option-add-option">
+                Add "{{ searchInput }}"
+              </p>
             </div>
-          </span>
+          </div>
+
+          <div v-else-if="add_option && !searchInput && filteredItems.length === 0 && !loading" class="nitrozen-option">
+            <div class="nitrozen-option-container">
+              <span>{{ noOptionForAddMoreProps[0] }}</span>
+              <br>
+              <span>{{ noOptionForAddMoreProps[1] }}</span>
+            </div>
+          </div>
+          <div v-else-if="filteredItems.length === 0 && !loading" class="nitrozen-option">
+            <div class="nitrozen-option-container">{{noresults_text}}</div>
+          </div>
+          <div v-else-if="loading" class="loader-container">
+            <dropdown-loader />
+          </div>
         </div>
       </div>
     </div>
@@ -149,8 +166,11 @@
 <script>
 import NitrozenUuid from "./../../utils/NUuid";
 import NitrozenInline from "./../NInline";
+import DropdownLoader from "./DropdownLoader.vue";
 import NitrozenCheckbox from "./../NCheckbox";
 import NTooltip from "./../NTooltip";
+import fallbackImage from "./../../assets/webp/fallback-image.webp";
+const LOADER_HEIGHT = 20;
 
 export default {
   name: "nitrozen-dropdown",
@@ -158,6 +178,7 @@ export default {
     "nitrozen-inline": NitrozenInline,
     "nitrozen-checkbox": NitrozenCheckbox,
     "nitrozen-tooltip": NTooltip,
+    'dropdown-loader':DropdownLoader
   },
   props: {
     /**
@@ -237,6 +258,28 @@ export default {
     enable_select_all: {
       type: Boolean,
       default: false
+    },
+    noresults_text: {
+      type: String,
+      default: "No options found"
+    },
+    allseleceted_text: {
+      type: String,
+      default: ""
+    },
+    /**
+     * loading use for show loading state when new data fetch
+     */
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * autocomplete for searchable dropdown to disable auto complete
+     */
+    autocomplete:{
+      type:String,
+      default: "off"
     }
   },
   data: () => {
@@ -252,20 +295,28 @@ export default {
       all_option: {'text': 'Select All', 'value': 'all'},
     };
   },
-  watch: {
+   watch: {
     value() {
       if (Array.isArray(this.value)) {
         this.selectedItems = [...this.value];
       }
       if (!this.multiple && this.searchable) {
         const selected = this.items.find((i) => i.value == this.value);
+        this.selected = selected || null;
         this.searchInput = selected ? selected.text : this.value;
+      } else if (!this.multiple) {
+        const selected = this.items.find((i) => i.value == this.value);
+        this.selected = selected || null;
       }
-      this.setAllOptions()
+      this.setAllOptions();
     },
     items: {
       handler: function() {
-        this.setAllOptions()
+        if (!this.multiple) {
+          const selected = this.items.find((i) => i.value == this.value);
+          this.selected = selected || null;
+        }
+        this.setAllOptions();
       }
     }
   },
@@ -282,12 +333,12 @@ export default {
         if (this.selected && this.selected.text) {
           return this.selected.text;
         } else if (this.label) {
-          return this.placeholder || `Choose ${this.label}`;
+          return this.placeholder || `Select ${this.label.toLowerCase()}`;
         }
         return "";
       } else {
         if (this.allOptionsSelected) {
-          return `All ${this.selectedItems.length} ${this.label} selected`
+          return `All ${this.selectedItems.length} selected`;
         }
         let tmp = [];
         let selected = {};
@@ -306,9 +357,9 @@ export default {
             }
           });
           tmp = [...new Set(tmp)];
-          return `${tmp.join(", ")}`;
+          return `${tmp.length}` + ' Selected';
         } else if (this.label) {
-          return this.placeholder || `Choose ${this.label}`;
+          return this.placeholder || `Select ${this.label.toLowerCase()}`;
         }
         return "";
       }
@@ -316,12 +367,44 @@ export default {
     searchInputPlaceholder: function() {
       if (this.enable_select_all && this.selectedItems.length) {
         if(this.selectedItems.length === this.getItems(this.items).length) {
-          return `All ${this.label}(s) selected`
+          return this.allseleceted_text ? this.allseleceted_text : `All ${this.label ? this.label.toLowerCase() : ''} selected`;
         }
-        return `${this.selectedItems.length} ${this.label}(s) selected`
+        return `${this.selectedItems.length} ${this.label ? this.label.toLowerCase() : ''} selected`
       }
-      return this.placeholder || `Search ${this.label}`;
+      return this.placeholder || `Search ${this.label ? this.label.toLowerCase() : ''}`;
     },
+    noOptionForAddMoreProps: function() {
+      const message = `No ${this.label ? this.label.toLowerCase() : 'option'} found.`;
+      const additionalMessage = 'Type and press enter to create new.';
+      return [message, additionalMessage];
+    },
+
+    filteredItems() {
+    if (!this.searchable || !this.searchInput) {
+      return this.items;
+    }
+    const term = this.searchInput.toLowerCase();
+    return this.items.filter(i =>
+      i.text.toLowerCase().includes(term)
+    );
+  },
+
+  hasExactMatch() {
+    const term = this.searchInput.trim().toLowerCase()
+    return this.items.some(
+      i => i.text.trim().toLowerCase() === term
+    )
+  },
+
+  showAddOption() {
+    return (
+      this.searchable &&
+      this.add_option &&
+      this.searchInput.trim().length > 0 &&
+      !this.hasExactMatch &&
+      !this.loading
+    )
+  }
   },
   mounted() {
     if (!this.multiple) {
@@ -403,7 +486,17 @@ export default {
         text: this.searchInput,
       };
       if (!this.searchInput) {
-        this.setAllOptions()
+        this.setAllOptions();
+        // Remove selected option data when search input is cleared
+        if (this.multiple) {
+          this.selectedItems = [];
+          this.$emit("input", []);
+          this.$emit("change", []);
+        } else {
+          this.selected = null;
+          this.$emit("input", "");
+          this.$emit("change", "");
+        }
       }
       this.eventEmit(obj, "searchInputChange");
       this.calculateViewport();
@@ -457,6 +550,9 @@ export default {
     handleScroll(event) {
       let elem = this.$refs["nitrozen-select-option"];
       this.$emit("scroll", elem);
+      if(event.target.scrollTop + event.target.clientHeight + LOADER_HEIGHT >= event.target.scrollHeight){
+        if(!this.loading){this.$emit('fetchMoreData');}
+      }
     },
     handleTABKey: function(event) {
       // TAB key detection
@@ -466,6 +562,9 @@ export default {
         this.showOptions = false;
       }
     },
+    handleImageError: function(event) {
+      event.target.src = fallbackImage;
+    }
   },
   created() {
     this.calculateViewport();
