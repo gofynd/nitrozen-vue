@@ -1,76 +1,56 @@
 @import "./../../base/base.less";
 .n-input {
-  padding: 1.2rem;
+  // margin: 4px 0px 0px 0px;
+  padding: 0 12px;
+  height: 40px;
   color: @TypographyPrimaryColor;
- 
-  border-radius: 1.6rem;
+  border: 1px solid @BorderColor;
+  border-radius: 3px;
   width: 100%;
   background: @WhiteColor;
   font-family: @PrimaryFont;
   position: relative;
   outline: none;
   box-sizing: border-box;
-  font-size: 1.6rem;
+  font-size: @BaseFontSize + 2;
   -webkit-appearance: none;
-}
-.n-input-default-border{
-  border: 0.2rem solid  @ColorSparkleGrey60;
   &:focus {
-    border: 0.2rem solid @ColorPrimary60;
+    border: 1px solid @SecondaryColor;
   }
 }
-.n-success-border{
-  border: 0.2rem solid  @SuccessColor;
-}
-.n-warning-border{
-  border: 0.2rem solid  @WarningColor;
-}
-.n-error-border{
-  border: 0.2rem solid  @ErrorColor;
-}
-.n-input-underinfo{
-  color: @PrimaryGrey80;
-  margin-left: 1.2rem;
-  margin-top: 0.4rem;
-}
-.n-helper-text{
-    font-weight: 500;
-    text-transform: none;
-    font-size: 1.4rem;
-    letter-spacing: -0.07px;
-    line-height: 1.4285714286;
-    word-wrap: break-word;
-    color: @TypographyPrimaryColor;
-    // margin-top: 0.4rem;
-}
+
 .n-input-textarea {
-  height: 9.6rem;
-  line-height: 2.1rem;
-  padding-top: 0.6rem;
+  height: 96px;
+  line-height: 21px;
+  padding-top: 6px;
 }
 
 .n-input:disabled {
-  background: @HoverColor;
+  background: @disableBG;
+  color: @disableText;
   pointer-events: none;
   cursor: not-allowed;
-  opacity: 0.5;
 }
 
 .n-input:disabled + .n-input-label {
-  opacity: 0.5;
 }
 
 .nitrozen-form-input {
-  font-family: 'JioType';
   outline: none;
+  // &:focus {
+  //     label{
+  //         color: @SecondaryColor;
+  //         font-weight: 600;
+  //     }
+  // }
 }
 
 .n-input-label {
   color: @LabelColor;
   font-family: @PrimaryFont;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 2.1rem;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
   display: flex;
   flex: 1;
 }
@@ -87,27 +67,28 @@
 
 ::-webkit-input-placeholder {
   /* Edge */
-  color: @PlaceholderColor;
-  font-size: 1.6rem;
+  color: @LabelColor;
+  font-size: 12px;
   font-family: @PrimaryFont;
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: @PlaceholderColor;
-  font-size: 1.6rem;
+  color: @LabelColor;
+  font-size: 12px;
   font-family: @PrimaryFont;
 }
 
 ::placeholder {
-  color: @PlaceholderColor;
-  font-size: 1.6rem;
+  color: @LabelColor;
+  font-size: 12px;
   font-family: @PrimaryFont;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
   position: relative;
-  font-size: 1.6rem;
+  // right: 10px;
+  font-size: @BaseFontSize + 4px;
   cursor: pointer;
 }
 
@@ -124,19 +105,16 @@ input[type="search"]::-webkit-search-cancel-button {
 .nitrozen-search-icon {
   z-index: 2;
   position: absolute;
-  left: 1.2rem;
-  top: 1.6rem;
+  left: 9px;
+  top: 12px;
 }
 
 .nitrozen-tooltip-icon {
-  margin-left: 0.5rem;
+  margin-left: 5px;
 }
 
 .nitrozen-search-input-padding {
-  padding-left: 3.5rem;
-}
-.nitrozen-search-input-right-padding{
-  padding-right: 3.5rem;
+  padding-left: 35px;
 }
 
 .nitrozen-input-label-div {
@@ -146,31 +124,16 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .n-input-label-container {
   display: flex;
-  margin-left: 1.2rem;
 }
 
-.nitrozen-input-prefix{
-   margin: auto;
-   box-sizing: border-box;
-   color: @TypographyPrimaryColor;
-   z-index: @ZIndex3;
-   left: 1rem;
-   position: absolute;
-}
+.nitrozen-input-prefix,
 .nitrozen-input-suffix {
+  height: 40px;
   margin: auto;
   box-sizing: border-box;
   color: @TypographyPrimaryColor;
-  z-index: @ZIndex3;
-  position: absolute;
-  right: 1rem;
-}
-.n-texttype-position{
-  top: 1.6rem;
-  font-size: 1.2rem;
-}
-.n-svg-position{
-  top: 1rem;
+  border-radius: 3px;
+  background-color: @PrefixSuffixBackground;
 }
 
 .nitrozen-remove-left-border {
@@ -190,6 +153,11 @@ input[type="search"]::-webkit-search-cancel-button {
   position: relative;
 }
 
+.nitrozen-prefix-padding,
+.nitrozen-suffix-padding {
+  padding: 10px;
+  border: 1px solid @BorderColor;
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

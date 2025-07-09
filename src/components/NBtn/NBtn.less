@@ -1,75 +1,36 @@
 @import './../../base/base.less';
 
 .n-button {
-    height: 4rem;
+    // height: 40px;
+    height: 39px;
     cursor: pointer;
     box-shadow: none;
     font-family: @PrimaryFont;
-    font-size: @BaseFontSize + 5;
+    font-size: @BaseFontSize + 1;
     font-weight: 700;
-    line-height: 1.8rem;
+    line-height: 18px;
     text-align: center;
     outline: none;
     border: 0;
-    letter-spacing: 0rem;
+    letter-spacing: 0px;
     background: none;
-    // text-decoration: none;
+    text-decoration: none;
     box-sizing: border-box;
-    letter-spacing: 0.05rem;
-    padding: 0rem 2rem;
-    border-radius: 0.3rem;
-    color: @WhiteColor;
+    letter-spacing: 0.5px;
 
     &:disabled {
+        // opacity: 0.4;
         cursor: not-allowed;
         pointer-events: none;
     }
-
-    &:focus {
-        // text-decoration: none;
-        text-underline-position: under;
-    }
-
-    &:active {
-        background-color: @ColorPrimary20;
-    }
-
-    &:after {
-        transition: none !important;
-    }
-
-    &-primary:disabled {
-        border-color: @ColorSecondaryGrey80;
-        color: @WhiteColor;
-    }
-
-    &-secondary:disabled {
-        background-color: @ColorPrimary20;
-        color: @WhiteColor;
-    }
-
-    &-tertiary:disabled {
-        color: @ColorFeedbackError80;
-    }
 }
 
-//button themes[primary, secondary, destructive]
 .n-button-primary {
-    color: @ColorPrimary50;
+    color: @PrimaryColor;
 }
 
 .n-button-secondary {
-    color: @ColorFeedbackSuccess50;
-    &:active{
-        background-color: @ColorFeedbackSuccess20;
-    }
-}
-
-.n-button-destructive {
-    color: @ColorFeedbackError50;
-    &:active{
-        background-color: @ColorFeedbackError20;
-    }
+    color: @SecondaryColor;
 }
 
 .hover-state {
@@ -86,178 +47,86 @@
 }
 
 .n-flat-button {
-    // padding: 0px 30px;
+    // padding: 0px 40px;
+    padding: 0px 30px;
     border-radius: 3px;
     color: @WhiteColor;
-
-    &:focus {
-        text-underline-position: under;
-    }
-}
-
-//filled button states
-.n-flat-button-secondary {
-    background-color: @ColorPrimary50;
-
-    &:hover:not([disabled]) {
-        background-color: @ColorPrimary60;
-    }
-
-    &:active:not([disabled]) {
-        border-color: @ColorPrimary60;
-        background-color: @ColorPrimary60;
-        color: @ColorPrimary30;
-    }
-    &[disabled] {
-        opacity: 0.3;
-      }
 }
 
 .n-flat-button-primary {
-    background-color: @ColorFeedbackSuccess20;
-    color: @ColorFeedbackSuccess80;
-    &:hover:not([disabled]) {
-        background-color: @ColorFeedbackSuccess50;
-        color: @WhiteColor;
-    }
+    background-color: @PrimaryColor;
 
-    &:active:not([disabled]) {
-        color: @ColorFeedbackSuccess20;
-        border-color: @ColorFeedbackSuccess80;
-        background-color: @ColorFeedbackSuccess80;
+    &:hover:not([disabled]) {
+        background-color: @PrimaryHoverColor;
     }
-    &[disabled] {
-        opacity: 0.3;
-      }
 }
 
-.n-flat-button-destructive {
-    background-color: @ColorFeedbackError20;
-    color: @ColorFeedbackError80;
-    
-    &:hover:not([disabled]) {
-        background-color: @ColorFeedbackError50;
-        color: @ColorWhite;
-    }
+.n-flat-button-secondary {
+    background-color: @SecondaryColor;
 
-    &:active:not([disabled]) {
-        color:  @ColorFeedbackError20;
-        border-color: @ColorFeedbackError80;
-        background-color: @ColorFeedbackError80;
+    &:hover:not([disabled]) {
+        background-color: @SecondaryHoverColor;
     }
-    &[disabled] {
-        opacity: 0.3;
-      }
 }
 
-//outlined stroke states
+
+
 .n-button-stroke {
+    // padding: 0px 40px;
+    padding: 0px 30px;
     border-radius: 3px;
     background: @WhiteColor;
 
-    &:focus {
-        text-underline-position: under;
-    }
 }
 
 .n-button-stroke-primary {
-    border: 1px solid @ColorSecondaryGrey40;
-    color: @ColorFeedbackSuccess80;
+    border: 1px solid @PrimaryColor;
+    color: @PrimaryColor;
 
+    // background-color: #B5FFE7;
     &:hover:not([disabled]) {
-        background-color: @ColorFeedbackSuccess20;
+        background-color: #DFEFE9;
     }
-
-    &:active:not([disabled]) {
-        color: @ColorFeedbackSuccess20;
-        border-color: @ColorFeedbackSuccess80;
-        background-color: @ColorFeedbackSuccess80;
-    }
-    &[disabled] {
-        opacity: 0.3;
-      }
 }
 
 .n-button-stroke-secondary {
-    color: @ColorPrimary50;
-    border: 1px solid @ColorSecondaryGrey40;
+    border: 1px solid @SecondaryColor;
+    color: @SecondaryColor;
 
     &:hover:not([disabled]) {
-        background-color: @ColorPrimary20;
-    }
-
-    &:active:not([disabled]) {
-        color: @ColorPrimary20;;
-        border-color: @ColorPrimary60;
-        background-color: @ColorPrimary60;
-    }
-
-}
-
-.n-button-stroke-destructive {
-    color: @ColorFeedbackError50;
-    border: 1px solid @ColorSecondaryGrey40;
-
-    &:hover:not([disabled]) {
-        background-color: @ColorFeedbackError20;
-    }
-
-    &:active:not([disabled]) {
-        color:@ColorFeedbackError20;
-        border-color: @ColorFeedbackError80;
-        background-color: @ColorFeedbackError80;
+        background-color: #E2E4F1;
     }
 }
 
 .n-button-stroke:disabled,
 .n-flat-button:disabled,
 .n-button-rounded:disabled {
+    // opacity: 0.4;
     cursor: not-allowed;
-
+    pointer-events: none;
+    background-color: @SecondaryDisabledColor;
+    color: @BlackColor;
+    border: 1px solid @SecondaryDisabledColor;
 }
 
 .n-button-rounded {
-    border-radius: 40px;
+    border-radius: 24px;
+    padding: 0px 32px;
 }
 
 .n-button-large {
-    padding: 1.6rem 2.4rem;
-    height: 5.4rem;
+    // padding: 0px 64px;
+    // height: 64px;
+    padding: 0px 60px;
+    height: 60px;
     font-size: @BaseFontSize + 6;
-    line-height: 2.5rem;
-    min-width: 5.4rem;
-    .n-btn-spin > img{
-        width: @BaseFontSize + 14px;
-    }
+    line-height: 25px;
 }
 
 .n-button-mid {
-    height: 4.8rem;
+    // padding: 0px 48px;
+    padding: 0px 45px;
+    height: 48px;
     font-size: @BaseFontSize + 3;
-    line-height: 2.5rem;
-    min-width: 4.8rem;
-    .n-btn-spin > img{
-        width: @BaseFontSize + 14px;
-    }
-}
-
-.n-button-small {
-    padding: 0.4rem 1.6rem;
-    height: 3rem;
-    font-size: @BaseFontSize + 2;
-    line-height: 1.9rem;
-    min-width: 3rem;
-    svg{
-        width: @BaseFontSize + 5px;
-        height: @BaseFontSize + 5px;
-    }
-    .n-btn-spin > img{
-            width: @BaseFontSize + 5px;
-    }
-}
-
-.n-button-focused {
-    text-decoration: underline;
-    text-underline-position: under;
-    text-decoration-thickness: .15rem;
+    line-height: 21px;
 }

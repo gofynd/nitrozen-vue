@@ -1,10 +1,12 @@
 import NitrozenAutocomplete from './NAutocomplete';
 import NitrozenButton from './NBtn';
+import NitrozenButtonV2 from './NBtn2';
 import NitrozenBadge from './NBadge';
 import NitrozenCheckBox from './NCheckbox';
 import NitrozenChips from './NChips';
 import NitrozenDropdown from './NDropdown';
 import NitrozenDialog from './NDialog';
+import NitrozenDialogV2 from './NDialog2';
 import NitrozenError from './NError';
 import NitrozenInline from './NInline';
 import NitrozenInput from './NInput';
@@ -18,6 +20,7 @@ import NitrozenStepper from './NStepper';
 import NitrozenToggleBtn from './NToggleBtn';
 import NitrozenTooltip from './NTooltip';
 import NitrozenCustomForm from './NCustomForm';
+import NitrozenIconButton from './NIconBtn';
 
 export {
     NitrozenAutocomplete,
@@ -27,6 +30,7 @@ export {
     NitrozenChips,
     NitrozenDropdown,
     NitrozenDialog,
+    NitrozenDialogV2,
     NitrozenError,
     NitrozenInline,
     NitrozenInput,
@@ -40,4 +44,6 @@ export {
     NitrozenToggleBtn,
     NitrozenTooltip,
     NitrozenCustomForm,
+    NitrozenIconButton,
+    NitrozenButtonV2
 }

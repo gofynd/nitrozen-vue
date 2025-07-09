@@ -1,0 +1,79 @@
+name: NPM Components Package Publish
+
+on:
+  push:
+    branches:
+      - master-old
+  workflow_dispatch:
+permissions:
+    contents: write
+jobs:
+  build:
+    if: contains(github.event.head_commit.message, 'publish-npm')
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.0.0]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Update Git Config
+        run: |
+          # Modify git config to add user name and email
+          git config user.name "Paul Lobo (Auto)"
+          git config user.email "paullobo500@gmail.com"
+        shell: bash
+
+      - name: Bump version
+        run: npm version patch
+      
+      - name: Get new version
+        run: |
+          npm_version=$(node -p "require('./package.json').version")
+          echo "NPM_VERSION=$npm_version" >> $GITHUB_ENV
+          echo "New version: $npm_version"  # Add this line to debug
+
+      - name: Get new version
+        run: echo "$NPM_VERSION"
+
+      - name: Install Dependencies
+        run:  npm i
+      # - name: Update Dependencies
+      #   run: npm install --legacy-peer-deps
+
+      - name: List Files
+        run: ls -R
+
+      - name: Build Package
+        run: npm run build-bundle
+
+      - name: Login to npm
+        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
+      - name: Publish Package
+        run: npm publish
+
+      - name: Set Remote URL
+        run: |
+          git remote set-url origin https://github.com/gofynd/nitrozen-vue
+
+      - name: Stage changes
+        run: git add .
+
+      - name: Sync changes
+        run: git pull
+
+
+      - name: Commit changes
+        run: |
+          git add package.json
+          git commit -m "[Auto] Publish changes to NPM ::: bump version to $(npm version patch)"
+
+      - name: Push changes
+        run: git push

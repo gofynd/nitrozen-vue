@@ -116,8 +116,10 @@
 
     .nitrozen-option-logo {
       height: 24px;
-      width: auto;
+      width: 24px;
+      border-radius: 4px;
       padding-right: 8px;
+
     }
 
     .nitrozen-option-image{
@@ -140,15 +142,23 @@
   }
   // Disabled
   .nitrozen-select.disabled {
-    background-color: @BorderColor;
+    .disable(@disableBG);
+    opacity: 1;
   }
   .nitrozen-select.disabled .nitrozen-select__trigger {
-    color: @DisabledColor;
-    background-color: @BorderColor;
-    cursor: not-allowed;
+    color: @disableText;
+    .disable(@disableBG);
+    opacity: 1;
+
   }
   .nitrozen-select.disabled .nitrozen-select__trigger .nitrozen-dropdown-arrow {
-    color: @DisabledColor;
+    .nitrozen-inline-svg {
+      svg {
+        path {
+          fill: @GreyColor; // or use a specific color value
+        }
+      }
+    }
   }
 
   // Arrow
@@ -178,19 +188,32 @@
   color: @LabelColor;
   font-family: @PrimaryFont;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 21px;
 }
 
 .nitrozen-dropdown-empty {
   display: flex;
+  align-items: center;
   .nitrozen-add-btn {
     width: 25px;
     height: 25px;
   }
-  p {
-    margin: 0 px;
-    margin-left: 10px;
-    margin-top: 3px;
+  .nitrozen-option-add-option {
+    margin: 0px;
+    color: @SecondaryColor;
+    font-weight: 700;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
+  svg path{
+    fill: @SecondaryColor;
+  }
+}
+.loader-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

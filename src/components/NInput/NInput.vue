@@ -24,7 +24,7 @@
     <div class="nitrozen-input-grp">
       <!-- Search Icon -->
       <span class="nitrozen-search-icon" v-if="showSearchIcon">
-        <nitrozen-inline :icon="'search'"></nitrozen-inline>
+        <nitrozen-inline :icon="'search-black'"></nitrozen-inline>
       </span>
 
       <!-- Prefix -->
@@ -99,7 +99,9 @@
         }"
         :maxlength="maxlength"
         :disabled="disabled"
+        :autocomplete="autocomplete"
         :ref="id"
+        :id="id"
         :placeholder="placeholder"
         :value="value"
         @input="valueChange"
@@ -164,7 +166,7 @@ export default {
   props: {
     autocomplete: {
       type: String,
-      default: null,
+      default: 'off',
     },
     type: {
       type: String,

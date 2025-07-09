@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import __SVG from './../../utils/svgs';
+import __SVG from '../../auto_gen/svgs'
 export default {
     name: 'nitrozen-inline',
     props: {
@@ -30,6 +30,12 @@ export default {
 
 <style lang="less">
 .nitrozen-inline-svg{
-    height: 10px;
+    display: flex;
+    align-items: center;
+
+    svg{
+        flex-shrink: 0;
+    }
+
 }
 </style>

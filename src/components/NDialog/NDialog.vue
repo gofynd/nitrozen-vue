@@ -2,10 +2,9 @@
   <div v-show="isModalVisible" :id="id">
     <transition name="nitrozen-dialog-fade">
       <div class="nitrozen-dialog-backdrop" @click="backdropClick">
-        <div
+        <dialog
           ref="dialog"
           class="nitrozen-dialog"
-          role="dialog"
           :aria-labelledby="id + '_title'"
           :aria-describedby="id + '_desc'"
         >
@@ -20,7 +19,7 @@
                 v-if="showCloseButton"
                 title="close"
                 @click="close('close')"
-                icon="cross"
+                icon="cross-large"
               ></nitrozen-inline>
             </slot>
           </header>
@@ -53,7 +52,7 @@
               >
             </slot>
           </footer>
-        </div>
+        </dialog>
       </div>
     </transition>
   </div>
