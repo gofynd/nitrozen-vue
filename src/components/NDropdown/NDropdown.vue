@@ -25,6 +25,7 @@
           >
             <input
               type="search"
+              :id="id"
               v-model="searchInput"
               @search="searchInputChange"
               v-on:keyup="searchInputChange"
@@ -76,6 +77,7 @@
           />
           <span
             v-for="(item, index) in filteredItems"
+            :id="`${id}_${index}`"
             :key="index"
             :data-value="item.value"
             class="nitrozen-option ripple"
@@ -137,7 +139,7 @@
             </slot>
           </span>
           <div v-if="showAddOption" class="nitrozen-option">
-            <div class="nitrozen-dropdown-empty nitrozen-option-container" @click="addOption">
+            <div id="nitorzenAddOption" class="nitrozen-dropdown-empty nitrozen-option-container" @click="addOption">
               <nitrozen-inline icon="add_outlined" />
               <p class="nitrozen-option-add-option">
                 Add "{{ searchInput }}"
