@@ -9,7 +9,7 @@
         ></nitrozen-tooltip>
       </span>
     </label>
-    <div class="nitrozen-select-wrapper" @click="toggle">
+    <div id="toggle-dropdown" class="nitrozen-select-wrapper" @click="toggle">
       <div
         class="nitrozen-select"
         ref="n_dropdown"
