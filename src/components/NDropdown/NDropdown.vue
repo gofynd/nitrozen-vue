@@ -77,7 +77,7 @@
           />
           <span
             v-for="(item, index) in filteredItems"
-            :id="`${id}_${index}`"
+            :id="`${id}_${item.value}`"
             :key="index"
             :data-value="item.value"
             class="nitrozen-option ripple"
