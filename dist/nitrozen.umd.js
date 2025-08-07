@@ -773,7 +773,7 @@ var NCheckbox = __webpack_require__(343);
 // EXTERNAL MODULE: ./src/components/NRadio/index.js + 6 modules
 var NRadio = __webpack_require__(7770);
 // EXTERNAL MODULE: ./src/components/NDropdown/index.js + 14 modules
-var NDropdown = __webpack_require__(9962);
+var NDropdown = __webpack_require__(7827);
 // EXTERNAL MODULE: ./src/components/NInput/index.js
 var NInput = __webpack_require__(4233);
 // EXTERNAL MODULE: ./src/components/NError/index.js + 6 modules
@@ -1803,7 +1803,7 @@ var component = (0,componentNormalizer/* default */.A)(
 
 /***/ }),
 
-/***/ 9962:
+/***/ 7827:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1815,7 +1815,7 @@ __webpack_require__.d(__webpack_exports__, {
 
 // UNUSED EXPORTS: NDropdown
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=template&id=5f7f69c2
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=template&id=dd22e768
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1833,7 +1833,7 @@ var render = function render() {
   })], 1) : _vm._e()]) : _vm._e(), _c('div', {
     staticClass: "nitrozen-select-wrapper",
     attrs: {
-      "id": "toggle-dropdown"
+      "id": `${_vm.id}-toggle-dropdown`
     },
     on: {
       "click": _vm.toggle
@@ -2489,10 +2489,10 @@ const LOADER_HEIGHT = 20;
 });
 ;// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=script&lang=js
  /* harmony default export */ var NDropdown_NDropdownvue_type_script_lang_js = (NDropdownvue_type_script_lang_js); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=style&index=0&id=5f7f69c2&prod&lang=less
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-74.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-74.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-74.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-74.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDropdown/NDropdown.vue?vue&type=style&index=0&id=dd22e768&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=style&index=0&id=5f7f69c2&prod&lang=less
+;// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue?vue&type=style&index=0&id=dd22e768&prod&lang=less
 
 ;// CONCATENATED MODULE: ./src/components/NDropdown/NDropdown.vue
 
@@ -14046,7 +14046,7 @@ var NChips_component = (0,componentNormalizer/* default */.A)(
 
 /* harmony default export */ var components_NChips = (NChips);
 // EXTERNAL MODULE: ./src/components/NDropdown/index.js + 14 modules
-var NDropdown = __webpack_require__(9962);
+var NDropdown = __webpack_require__(7827);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NDialog/NDialog.vue?vue&type=template&id=6f0e3ecc
 var NDialogvue_type_template_id_6f0e3ecc_render = function render() {
   var _vm = this,
