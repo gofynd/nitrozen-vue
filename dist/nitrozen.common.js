@@ -757,7 +757,7 @@ function validateInput(input) {
 var vue_tel_input = __webpack_require__(3954);
 var vue_tel_input_default = /*#__PURE__*/__webpack_require__.n(vue_tel_input);
 // EXTERNAL MODULE: ./src/components/NToggleBtn/index.js + 6 modules
-var NToggleBtn = __webpack_require__(1147);
+var NToggleBtn = __webpack_require__(9436);
 // EXTERNAL MODULE: ./src/components/NCheckbox/index.js + 6 modules
 var NCheckbox = __webpack_require__(1986);
 // EXTERNAL MODULE: ./src/components/NRadio/index.js + 6 modules
@@ -2792,7 +2792,7 @@ var component = (0,componentNormalizer/* default */.A)(
 
 /***/ }),
 
-/***/ 1147:
+/***/ 9436:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2802,7 +2802,7 @@ __webpack_require__.d(__webpack_exports__, {
   A: function() { return /* binding */ components_NToggleBtn; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=template&id=6e43a86e
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=template&id=6e3f822e
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -2812,6 +2812,7 @@ var render = function render() {
     staticClass: "nitrozen-switch"
   }, [_c('input', {
     attrs: {
+      "id": _vm.id,
       "type": "checkbox",
       "disabled": _vm.disabled
     },
@@ -2841,6 +2842,10 @@ var staticRenderFns = [];
   //     }
   // },
   props: {
+    id: {
+      type: String,
+      default: 'toggleBtn'
+    },
     disabled: {
       type: Boolean,
       default: false
@@ -2865,10 +2870,10 @@ var staticRenderFns = [];
 });
 ;// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=script&lang=js
  /* harmony default export */ var NToggleBtn_NToggleBtnvue_type_script_lang_js = (NToggleBtnvue_type_script_lang_js); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=style&index=0&id=6e43a86e&prod&lang=less
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-32.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-32.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-32.use[2]!./node_modules/less-loader/dist/cjs.js??clonedRuleSet-32.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/NToggleBtn/NToggleBtn.vue?vue&type=style&index=0&id=6e3f822e&prod&lang=less
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=style&index=0&id=6e43a86e&prod&lang=less
+;// CONCATENATED MODULE: ./src/components/NToggleBtn/NToggleBtn.vue?vue&type=style&index=0&id=6e3f822e&prod&lang=less
 
 // EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(1656);
@@ -15366,7 +15371,7 @@ var NStepper_component = (0,componentNormalizer/* default */.A)(
 
 /* harmony default export */ var components_NStepper = (NStepper);
 // EXTERNAL MODULE: ./src/components/NToggleBtn/index.js + 6 modules
-var NToggleBtn = __webpack_require__(1147);
+var NToggleBtn = __webpack_require__(9436);
 // EXTERNAL MODULE: ./src/components/NCustomForm/NCustomForm.vue + 13 modules
 var NCustomForm = __webpack_require__(9154);
 ;// CONCATENATED MODULE: ./src/components/NCustomForm/index.js
