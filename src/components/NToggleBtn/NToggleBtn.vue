@@ -20,8 +20,7 @@ export default {
     // },
     props: {
         id: {
-            type: String,
-            default: 'toggleBtn',
+            type: String
         },
         disabled: {
             type: Boolean,
