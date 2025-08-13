@@ -9,7 +9,7 @@
         ></nitrozen-tooltip>
       </span>
     </label>
-    <div class="nitrozen-select-wrapper" @click="toggle">
+    <div :id="`${id}-toggle-dropdown`" class="nitrozen-select-wrapper" @click="toggle">
       <div
         class="nitrozen-select"
         ref="n_dropdown"
@@ -25,6 +25,7 @@
           >
             <input
               type="search"
+              :id="id"
               v-model="searchInput"
               @search="searchInputChange"
               v-on:keyup="searchInputChange"
@@ -137,7 +138,7 @@
             </slot>
           </span>
           <div v-if="showAddOption" class="nitrozen-option">
-            <div class="nitrozen-dropdown-empty nitrozen-option-container" @click="addOption">
+            <div id="nitorzenAddOption" class="nitrozen-dropdown-empty nitrozen-option-container" @click="addOption">
               <nitrozen-inline icon="add_outlined" />
               <p class="nitrozen-option-add-option">
                 Add "{{ searchInput }}"
