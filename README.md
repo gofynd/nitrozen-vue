@@ -1,8 +1,7 @@
 # @gofynd/nitrozen-vue
 
 > ⚠️ **Deprecation Notice:**  
-> This package is **no longer actively maintained** and has been **deprecated** in favor of the new [FyndOne Design System](https://opensource.gofynd.io/fyndone-vue) (or your replacement package name).  
-> Please migrate to the newer library for continued updates, bug fixes, and design consistency.
+> This package is **no longer actively maintained** and has been **deprecated**.  
 
 > Vue component library inspired from Nitrozen design system
 
