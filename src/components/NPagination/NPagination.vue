@@ -5,7 +5,7 @@
         <span class="nitrozen-pagination__count">{{ countsText }}</span>
       </div>
       <div class="nitrozen-pagination__right">
-        <div class="nitrozen-pagination__select">
+        <div v-show="showRowSelection" class="nitrozen-pagination__select">
           <span class="nitrozen-pagination__select__label">Rows per page</span>
           <nitrozen-dropdown
             class="nitrozen-pagination-page-size"
@@ -119,6 +119,13 @@ export default {
         };
       },
     },
+    /**
+     * toggles the Row Selection dropdown on view.
+     */
+    showRowSelection: {
+      type: Boolean,
+      default: true,
+    },
   },
   created() {
     this.setDefaults();
@@ -127,7 +134,7 @@ export default {
     return {};
   },
   computed: {
-    pages: function() {
+    pages: function () {
       if (this.value.limit > 0) {
         return Math.ceil(this.value.total / this.value.limit);
       }
@@ -210,7 +217,7 @@ export default {
         this.value.currentPage = this.value.prevPage;
       }
       this.change();
-      this.$emit('previousClick');
+      this.$emit("previousClick");
     },
     next() {
       if (this.value.total) {
@@ -230,7 +237,7 @@ export default {
         this.value.currentPage = this.value.nextPage;
       }
       this.change();
-      this.$emit('nextClick');
+      this.$emit("nextClick");
     },
     pageSizeChange(size) {
       this.value.current = 1;
