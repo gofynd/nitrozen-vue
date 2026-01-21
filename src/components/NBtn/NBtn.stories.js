@@ -46,7 +46,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   components: { NitrozenBtn },
   props: Object.keys(argTypes),
-  template: ' <nitrozen-btn v-flat-btn v-bind="$props">Flat</nitrozen-btn>',
+  template: ' <nitrozen-btn v-bind="$props">Flat</nitrozen-btn>',
 });
 
 export const Flat = Template.bind({})
@@ -59,7 +59,7 @@ Flat.args = {
 const StrokedButton = (args, { argTypes }) => ({
   components: { NitrozenBtn },
   props: Object.keys(argTypes),
-  template: '<nitrozen-btn v-bind="$props" v-stroke-btn>Stroked</nitrozen-btn>',
+  template: '<nitrozen-btn v-bind="$props" >Stroked</nitrozen-btn>',
 });
 
 export const Stroked = StrokedButton.bind({})
