@@ -17,6 +17,7 @@ declare module '@gofynd/nitrozen-vue' {
     const NitrozenMenuItem: VueConstructor
     const NitrozenTab: VueConstructor
     const NitrozenTabItem: VueConstructor
+    const NitrozenTable: VueConstructor
     const NitrozenPagination: VueConstructor
     const NitrozenRadio: VueConstructor
     const NitrozenStepper: VueConstructor
@@ -45,6 +46,7 @@ declare module '@gofynd/nitrozen-vue' {
         NitrozenMenuItem,
         NitrozenTab,
         NitrozenTabItem,
+        NitrozenTable,
         NitrozenPagination,
         NitrozenRadio,
         NitrozenStepper,
