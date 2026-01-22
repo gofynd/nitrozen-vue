@@ -189,13 +189,15 @@ export default {
         this.checkAllItems = [...this.tableRow];
         this.checkedItems = [...this.checkAllItems];
         row.forEach((element) => {
-          this.$set(element, "isChecked", status);
+          // this.$set(element, "isChecked", status);
+          element.isChecked = status; 
         });
       } else {
         this.checkAllItems = [];
         this.checkedItems = [];
         row.forEach((element) => {
-          this.$set(element, "isChecked", status);
+          // this.$set(element, "isChecked", status);
+          element.isChecked = status; 
         });
       }
     },

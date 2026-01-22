@@ -1,28 +1,21 @@
-// import NSnackbar from './NSnackbar';
-// export default NSnackbar;
-
-/**
- * Clone from https://github.com/shakee93/vue-toasted
- */
-
 import { Snackbar as T } from './js/snackbar';
 import NitrozenSnackbar from './NSnackbar.vue';
 
 const NSnackbar = {
-    install(Vue, options) {
+    install(app, options) {
         if (!options) {
             options = {};
         }
 
         const Snack = new T(options);
-        Vue.component('nitrozen-snackbar', NitrozenSnackbar);
-        Vue.Snackbar = Vue.snackbar = Vue.prototype.$snackbar = Snack;
+        app.component('nitrozen-snackbar', NitrozenSnackbar);
+        app.config.globalProperties.$snackbar = Snack;
     }
 };
 
-// register plugin if it is used via cdn or directly as a script tag
+// Register the plugin if used via CDN or directly as a script tag
 if (typeof window !== 'undefined' && window.Vue) {
-    window.Snackbar = window.snackbar = NSnackbar;
+    window.Snackbar = NSnackbar;
 }
 
-export default NSnackbar
+export default NSnackbar;
