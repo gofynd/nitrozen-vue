@@ -88,80 +88,103 @@
         <h6>Nitrozen Demo H6</h6>
       </div>
 
-      <!-- Flat Button -->
-      <div class="main-div space-between">
-        <nitrozen-button v-flat-btn @click="someFunc(true)
-          ">Primary Flat {{ numberOfClick }}</nitrozen-button>
-        <div class="hover-new">
-          <nitrozen-button v-flat-btn>Hover Flat</nitrozen-button>
-        </div>
-        <nitrozen-button v-flat-btn :showProgress="true"></nitrozen-button>
-        <nitrozen-button v-flat-btn :focused="true">Focused Flat</nitrozen-button>
-        <nitrozen-button v-flat-btn :disabled="true">Disabled Flat</nitrozen-button>
+      <!-- ====================================== -->
+      <!-- V1 BUTTONS - COMPREHENSIVE SHOWCASE -->
+      <!-- ====================================== -->
+      <h2 style="padding: 20px; background: #2E31BE; color: white; margin-top: 20px;">V1 Buttons (nitrozen-button)</h2>
+      
+      <!-- V1 Denotations -->
+      <div class="main-div" style="background: #fff3cd; border-left: 4px solid #ffc107;">
+        <h4 style="margin: 0 0 10px 0;">V1 Button Denotations</h4>
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Component:</strong></td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>&lt;nitrozen-button&gt;</code></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Directives:</strong></td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>v-flat-btn</code> (filled button), <code>v-stroke-btn</code> (outlined button)</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Themes:</strong></td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>primary</code> (default - green), <code>secondary</code> (blue/purple)</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Sizes:</strong></td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>small</code> (default - 39px), <code>medium</code> (48px), <code>large</code> (60px)</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Props:</strong></td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>:rounded</code>, <code>:disabled</code>, <code>:showProgress</code>, <code>:focused</code>, <code>:icon</code>, <code>:href</code></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px;"><strong>Border Radius:</strong></td>
+            <td style="padding: 8px;">250px (pill-shaped)</td>
+          </tr>
+        </table>
       </div>
 
-      <!-- Flat Stroke Button -->
+      <!-- V1: Primary Theme - Flat Buttons - All Sizes -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Primary Theme - Flat Buttons</h3>
+      <p style="padding: 0 20px;">Sizes: Small (default), Medium, Large</p>
       <div class="main-div space-between">
-        <nitrozen-button v-stroke-btn>Primary Stroke</nitrozen-button>
-        <div class="hover-new">
-          <nitrozen-button v-stroke-btn>Hover Stroke</nitrozen-button>
-        </div>
-        <nitrozen-button v-stroke-btn :focused="true">Focused Stroke</nitrozen-button>
-        <nitrozen-button v-stroke-btn :disabled="true">Disabled Stroke</nitrozen-button>
-      </div>
-      <p>Primary(default)</p>
-      <div class="main-div space-between">
-        <nitrozen-button-v2 appearance="negative"   size="extra-small">Negative XS Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="positive"  size="small">Positive S Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2 appearance="default"   >Positive M Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="warning" size="large">Warning L Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="positive"  size="extra-large">Positive XL Stroke</nitrozen-button-v2>
-      </div>
-      <p>Secondary</p>
-      <div class="main-div space-between">
-        <nitrozen-button-v2 appearance="negative" theme="secondary" size="extra-small">Negative Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="positive" theme="secondary"  size="small">Positive Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2 appearance="default" theme="secondary" >Positive Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="warning" theme="secondary" size="large">Warning Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="positive" theme="secondary" size="extra-large">Positive Stroke</nitrozen-button-v2>
-      </div>
-      <p>Primary(default) button with disabled</p>
-      <div class="main-div space-between">
-        <nitrozen-button-v2 appearance="negative"  disabled="true" size="extra-small">Negative Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="positive"  disabled="true"  size="small">Positive Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2 appearance="default" disabled="true" >Positive Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="warning" disabled="true" size="large">Warning Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="positive" disabled="true" size="extra-large">Positive Stroke</nitrozen-button-v2>
-      </div>
-      <p>Secondary button with disabled</p>
-      <div class="main-div space-between">
-        <nitrozen-button-v2 appearance="negative" disabled="true" theme="secondary" size="extra-small">Negative Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="positive" disabled="true" theme="secondary"  size="small">Positive Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2 appearance="default" disabled="true" theme="secondary" >Positive Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="warning" disabled="true" theme="secondary" size="large">Warning Stroke</nitrozen-button-v2>
-        <nitrozen-button-v2  appearance="positive" disabled="true" theme="secondary" size="extra-large">Positive Stroke</nitrozen-button-v2>
-      </div>
-      <div class="main-div space-between">
-        <nitrozen-button v-stroke-btn :theme="'primary'" appearance='positive' size="extra-large" >Primary stoke extra large</nitrozen-button>
-          <nitrozen-button v-flat-btn :theme="'primary'" appearance='negative' >Primary flat small</nitrozen-button>
-        <nitrozen-button v-stroke-btn :theme="'secondary'" appearance='warning'  >secondary stoke medium</nitrozen-button>
-        <nitrozen-button v-flat-btn :theme="'secondary'" appearance='warning'   >secondary flat large</nitrozen-button>
+        <nitrozen-button v-flat-btn>Small Flat</nitrozen-button>
+        <nitrozen-button v-flat-btn size="medium">Medium Flat</nitrozen-button>
+        <nitrozen-button v-flat-btn size="large">Large Flat</nitrozen-button>
       </div>
 
-      <!-- Rounded Button -->
+      <!-- V1: Primary Theme - Flat Buttons - States -->
+      <p style="padding: 0 20px;">States: Normal, Hover, Progress, Focused, Disabled</p>
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :rounded="true">Rounded</nitrozen-button>
+        <nitrozen-button v-flat-btn @click="someFunc(true)">Normal {{ numberOfClick }}</nitrozen-button>
+        <div class="hover-new">
+          <nitrozen-button v-flat-btn>Hover</nitrozen-button>
+        </div>
+        <nitrozen-button v-flat-btn :showProgress="true">Loading</nitrozen-button>
+        <nitrozen-button v-flat-btn :focused="true">Focused</nitrozen-button>
+        <nitrozen-button v-flat-btn :disabled="true">Disabled</nitrozen-button>
+      </div>
+
+      <!-- V1: Primary Theme - Stroke Buttons - All Sizes -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Primary Theme - Stroke Buttons</h3>
+      <p style="padding: 0 20px;">Sizes: Small (default), Medium, Large</p>
+      <div class="main-div space-between">
+        <nitrozen-button v-stroke-btn>Small Stroke</nitrozen-button>
+        <nitrozen-button v-stroke-btn size="medium">Medium Stroke</nitrozen-button>
+        <nitrozen-button v-stroke-btn size="large">Large Stroke</nitrozen-button>
+      </div>
+
+      <!-- V1: Primary Theme - Stroke Buttons - States -->
+      <p style="padding: 0 20px;">States: Normal, Hover, Focused, Disabled</p>
+      <div class="main-div space-between">
+        <nitrozen-button v-stroke-btn>Normal</nitrozen-button>
+        <div class="hover-new">
+          <nitrozen-button v-stroke-btn>Hover</nitrozen-button>
+        </div>
+        <nitrozen-button v-stroke-btn :focused="true">Focused</nitrozen-button>
+        <nitrozen-button v-stroke-btn :disabled="true">Disabled</nitrozen-button>
+      </div>
+
+      <!-- V1: Primary Theme - Rounded Flat Buttons -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Primary Theme - Rounded Flat Buttons</h3>
+      <div class="main-div space-between">
+        <nitrozen-button v-flat-btn :rounded="true">Normal</nitrozen-button>
+        <nitrozen-button v-flat-btn :rounded="true" size="medium">Medium</nitrozen-button>
+        <nitrozen-button v-flat-btn :rounded="true" size="large">Large</nitrozen-button>
         <div class="hover-new">
           <nitrozen-button v-flat-btn :rounded="true">Hover</nitrozen-button>
         </div>
-        <nitrozen-button v-flat-btn :rounded="true" :showProgress="true"></nitrozen-button>
+        <nitrozen-button v-flat-btn :rounded="true" :showProgress="true">Loading</nitrozen-button>
         <nitrozen-button v-flat-btn :rounded="true" :focused="true">Focused</nitrozen-button>
         <nitrozen-button v-flat-btn :rounded="true" :disabled="true">Disabled</nitrozen-button>
       </div>
 
-      <!-- Rounded Stroke Button -->
+      <!-- V1: Primary Theme - Rounded Stroke Buttons -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Primary Theme - Rounded Stroke Buttons</h3>
       <div class="main-div space-between">
-        <nitrozen-button v-stroke-btn :rounded="true">Rounded</nitrozen-button>
+        <nitrozen-button v-stroke-btn :rounded="true">Normal</nitrozen-button>
+        <nitrozen-button v-stroke-btn :rounded="true" size="medium">Medium</nitrozen-button>
+        <nitrozen-button v-stroke-btn :rounded="true" size="large">Large</nitrozen-button>
         <div class="hover-new">
           <nitrozen-button v-stroke-btn :rounded="true">Hover</nitrozen-button>
         </div>
@@ -169,48 +192,583 @@
         <nitrozen-button v-stroke-btn :rounded="true" :disabled="true">Disabled</nitrozen-button>
       </div>
 
-      <!-- Secondary Flat Button -->
+      <!-- V1: Secondary Theme - Flat Buttons - All Sizes -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Secondary Theme - Flat Buttons</h3>
+      <p style="padding: 0 20px;">Sizes: Small (default), Medium, Large</p>
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :theme="'secondary'">Primary Small Flat</nitrozen-button>
-        <nitrozen-button v-flat-btn :theme="'secondary'" size="medium">Primary Medium Flat</nitrozen-button>
-        <nitrozen-button v-flat-btn :theme="'secondary'" size="large">Primary Large Flat</nitrozen-button>
-        <div class="hover-new">
-          <nitrozen-button v-flat-btn :theme="'secondary'">Hover Flat</nitrozen-button>
-        </div>
-        <nitrozen-button v-flat-btn :showProgress="true" :theme="'secondary'"></nitrozen-button>
-        <nitrozen-button v-flat-btn :focused="true" :theme="'secondary'">Focused Flat</nitrozen-button>
-        <nitrozen-button v-flat-btn :disabled="true" :theme="'secondary'">Disabled Flat</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'">Small Flat</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'" size="medium">Medium Flat</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'" size="large">Large Flat</nitrozen-button>
       </div>
 
-      <!-- Secondary Stroke Button -->
+      <!-- V1: Secondary Theme - Flat Buttons - States -->
+      <p style="padding: 0 20px;">States: Normal, Hover, Progress, Focused, Disabled</p>
       <div class="main-div space-between">
-        <nitrozen-button v-stroke-btn :theme="'secondary'">Primary</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'">Normal</nitrozen-button>
+        <div class="hover-new">
+          <nitrozen-button v-flat-btn :theme="'secondary'">Hover</nitrozen-button>
+        </div>
+        <nitrozen-button v-flat-btn :theme="'secondary'" :showProgress="true">Loading</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'" :focused="true">Focused</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'" :disabled="true">Disabled</nitrozen-button>
+      </div>
+
+      <!-- V1: Secondary Theme - Stroke Buttons - All Sizes -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Secondary Theme - Stroke Buttons</h3>
+      <p style="padding: 0 20px;">Sizes: Small (default), Medium, Large</p>
+      <div class="main-div space-between">
+        <nitrozen-button v-stroke-btn :theme="'secondary'">Small Stroke</nitrozen-button>
+        <nitrozen-button v-stroke-btn :theme="'secondary'" size="medium">Medium Stroke</nitrozen-button>
+        <nitrozen-button v-stroke-btn :theme="'secondary'" size="large">Large Stroke</nitrozen-button>
+      </div>
+
+      <!-- V1: Secondary Theme - Stroke Buttons - States -->
+      <p style="padding: 0 20px;">States: Normal, Hover, Focused, Disabled</p>
+      <div class="main-div space-between">
+        <nitrozen-button v-stroke-btn :theme="'secondary'">Normal</nitrozen-button>
         <div class="hover-new">
           <nitrozen-button v-stroke-btn :theme="'secondary'">Hover</nitrozen-button>
         </div>
-        <nitrozen-button v-stroke-btn :focused="true" :theme="'secondary'">Focused Stroke</nitrozen-button>
-        <nitrozen-button v-stroke-btn :disabled="true" :theme="'secondary'">Disabled</nitrozen-button>
+        <nitrozen-button v-stroke-btn :theme="'secondary'" :focused="true">Focused</nitrozen-button>
+        <nitrozen-button v-stroke-btn :theme="'secondary'" :disabled="true">Disabled</nitrozen-button>
       </div>
 
-      <!-- Secondary Rounded Button -->
+      <!-- V1: Secondary Theme - Rounded Flat Buttons -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Secondary Theme - Rounded Flat Buttons</h3>
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :theme="'secondary'" :rounded="true">Rounded</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'" :rounded="true">Normal</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'" :rounded="true" size="medium">Medium</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'" :rounded="true" size="large">Large</nitrozen-button>
         <div class="hover-new">
           <nitrozen-button v-flat-btn :theme="'secondary'" :rounded="true">Hover</nitrozen-button>
         </div>
-        <nitrozen-button v-flat-btn :showProgress="true" :theme="'secondary'" :rounded="true"></nitrozen-button>
-        <nitrozen-button v-flat-btn :focused="true" :rounded="true" :theme="'secondary'">Disabled</nitrozen-button>
-        <nitrozen-button v-flat-btn :disabled="true" :rounded="true" :theme="'secondary'">Disabled</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'" :rounded="true" :showProgress="true">Loading</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'" :rounded="true" :focused="true">Focused</nitrozen-button>
+        <nitrozen-button v-flat-btn :theme="'secondary'" :rounded="true" :disabled="true">Disabled</nitrozen-button>
       </div>
 
-      <!-- Secondary Rounded Stroke Button -->
+      <!-- V1: Secondary Theme - Rounded Stroke Buttons -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Secondary Theme - Rounded Stroke Buttons</h3>
       <div class="main-div space-between">
-        <nitrozen-button v-stroke-btn :rounded="true" :theme="'secondary'">Primary</nitrozen-button>
+        <nitrozen-button v-stroke-btn :theme="'secondary'" :rounded="true">Normal</nitrozen-button>
+        <nitrozen-button v-stroke-btn :theme="'secondary'" :rounded="true" size="medium">Medium</nitrozen-button>
+        <nitrozen-button v-stroke-btn :theme="'secondary'" :rounded="true" size="large">Large</nitrozen-button>
         <div class="hover-new">
-          <nitrozen-button v-stroke-btn :rounded="true" :theme="'secondary'">Hover</nitrozen-button>
+          <nitrozen-button v-stroke-btn :theme="'secondary'" :rounded="true">Hover</nitrozen-button>
         </div>
-        <nitrozen-button v-stroke-btn :rounded="true" :focused="true" :theme="'secondary'">Focused</nitrozen-button>
-        <nitrozen-button v-stroke-btn :rounded="true" :disabled="true" :theme="'secondary'">Disabled</nitrozen-button>
+        <nitrozen-button v-stroke-btn :theme="'secondary'" :rounded="true" :focused="true">Focused</nitrozen-button>
+        <nitrozen-button v-stroke-btn :theme="'secondary'" :rounded="true" :disabled="true">Disabled</nitrozen-button>
+      </div>
+
+      <!-- V1: Link Buttons -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Link Buttons (with href)</h3>
+      <div class="main-div space-between">
+        <nitrozen-button :href="'https://google.com'">Primary Link</nitrozen-button>
+        <nitrozen-button :href="'https://google.com'" :theme="'secondary'">Secondary Link</nitrozen-button>
+        <nitrozen-button :href="'https://google.com'" :focused="true">Focused Link</nitrozen-button>
+      </div>
+
+      <!-- V1: Icon Buttons -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Icon Buttons</h3>
+      <div class="main-div space-between">
+        <nitrozen-button v-flat-btn :icon="'facebook'">Facebook</nitrozen-button>
+        <nitrozen-button v-flat-btn :icon="'white-dots'" :theme="'secondary'">Dots</nitrozen-button>
+        <nitrozen-button v-flat-btn :icon="'bag'" :theme="'secondary'">Bag</nitrozen-button>
+      </div>
+
+      <!-- V1: Button Groups -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Button Groups</h3>
+      <div class="main-div">
+        <div class="grouping">
+          <div class="width-50">
+            <nitrozen-button v-flat-btn>Save</nitrozen-button>
+            <nitrozen-button v-stroke-btn>Cancel</nitrozen-button>
+          </div>
+          <div class="width-50">
+            <nitrozen-button v-flat-btn :theme="'secondary'">Submit</nitrozen-button>
+            <nitrozen-button v-stroke-btn :theme="'secondary'">Reset</nitrozen-button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================== -->
+      <!-- V2 BUTTONS - COMPREHENSIVE SHOWCASE -->
+      <!-- ====================================== -->
+      <h2 style="padding: 20px; background: #2E31BE; color: white; margin-top: 40px;">V2 Buttons (nitrozen-button-v2)</h2>
+      
+      <!-- V2 Denotations -->
+      <div class="main-div" style="background: #d4edda; border-left: 4px solid #28a745;">
+        <h4 style="margin: 0 0 10px 0;">V2 Button Denotations</h4>
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Component:</strong></td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>&lt;nitrozen-button-v2&gt;</code></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Themes:</strong></td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>primary</code> (default - filled), <code>secondary</code> (outlined/stroke)</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Appearances:</strong></td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>default</code> (blue/purple), <code>positive</code> (green/success), <code>negative</code> (red/error), <code>warning</code> (orange/warning)</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Sizes:</strong></td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>extra-small</code> (24px), <code>small</code> (32px), <code>medium</code> (default - 40px), <code>large</code> (48px), <code>extra-large</code> (64px)</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Props:</strong></td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><code>:rounded</code>, <code>:disabled</code>, <code>:showProgress</code>, <code>:focused</code>, <code>:icon</code>, <code>:href</code></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px;"><strong>Border Radius:</strong></td>
+            <td style="padding: 8px;">250px (pill-shaped)</td>
+          </tr>
+        </table>
+      </div>
+      
+      <!-- V2 Key Differences from V1 -->
+      <div class="main-div" style="background: #e7f3ff; border-left: 4px solid #0d6efd;">
+        <h4 style="margin: 0 0 10px 0;">Key Differences: V1 vs V2</h4>
+        <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
+          <li><strong>No directives needed:</strong> V2 doesn't require <code>v-flat-btn</code> or <code>v-stroke-btn</code></li>
+          <li><strong>Appearance prop:</strong> V2 has semantic appearances (positive, negative, warning) for contextual actions</li>
+          <li><strong>More sizes:</strong> V2 has 5 sizes vs V1's 3 sizes</li>
+          <li><strong>Theme meaning:</strong> In V2, <code>secondary</code> theme creates outlined/stroke style (similar to V1's <code>v-stroke-btn</code>)</li>
+          <li><strong>Disabled styling:</strong> V2 uses opacity-based disabled state with specific colors per appearance</li>
+        </ul>
+      </div>
+
+      <!-- V2: Default Appearance - Primary Theme - All Sizes -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Default Appearance - Primary Theme</h3>
+      <p style="padding: 0 20px;">Sizes: Extra Small, Small, Medium (default), Large, Extra Large</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 size="extra-small">Extra Small</nitrozen-button-v2>
+        <nitrozen-button-v2 size="small">Small</nitrozen-button-v2>
+        <nitrozen-button-v2>Medium (default)</nitrozen-button-v2>
+        <nitrozen-button-v2 size="large">Large</nitrozen-button-v2>
+        <nitrozen-button-v2 size="extra-large">Extra Large</nitrozen-button-v2>
+      </div>
+
+      <!-- V2: Default Appearance - Primary Theme - States -->
+      <p style="padding: 0 20px;">States: Normal, Disabled</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 size="extra-small">Normal XS</nitrozen-button-v2>
+        <nitrozen-button-v2 size="small">Normal S</nitrozen-button-v2>
+        <nitrozen-button-v2>Normal M</nitrozen-button-v2>
+        <nitrozen-button-v2 size="large">Normal L</nitrozen-button-v2>
+        <nitrozen-button-v2 size="extra-large">Normal XL</nitrozen-button-v2>
+      </div>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 size="extra-small" :disabled="true">Disabled XS</nitrozen-button-v2>
+        <nitrozen-button-v2 size="small" :disabled="true">Disabled S</nitrozen-button-v2>
+        <nitrozen-button-v2 :disabled="true">Disabled M</nitrozen-button-v2>
+        <nitrozen-button-v2 size="large" :disabled="true">Disabled L</nitrozen-button-v2>
+        <nitrozen-button-v2 size="extra-large" :disabled="true">Disabled XL</nitrozen-button-v2>
+      </div>
+
+      <!-- V2: Default Appearance - Secondary Theme - All Sizes -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Default Appearance - Secondary Theme</h3>
+      <p style="padding: 0 20px;">Sizes: Extra Small, Small, Medium (default), Large, Extra Large</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 theme="secondary" size="extra-small">Extra Small</nitrozen-button-v2>
+        <nitrozen-button-v2 theme="secondary" size="small">Small</nitrozen-button-v2>
+        <nitrozen-button-v2 theme="secondary">Medium (default)</nitrozen-button-v2>
+        <nitrozen-button-v2 theme="secondary" size="large">Large</nitrozen-button-v2>
+        <nitrozen-button-v2 theme="secondary" size="extra-large">Extra Large</nitrozen-button-v2>
+      </div>
+
+      <!-- V2: Default Appearance - Secondary Theme - States -->
+      <p style="padding: 0 20px;">States: Normal, Disabled</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 theme="secondary" size="extra-small">Normal XS</nitrozen-button-v2>
+        <nitrozen-button-v2 theme="secondary" size="small">Normal S</nitrozen-button-v2>
+        <nitrozen-button-v2 theme="secondary">Normal M</nitrozen-button-v2>
+        <nitrozen-button-v2 theme="secondary" size="large">Normal L</nitrozen-button-v2>
+        <nitrozen-button-v2 theme="secondary" size="extra-large">Normal XL</nitrozen-button-v2>
+      </div>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 theme="secondary" size="extra-small" :disabled="true">Disabled XS</nitrozen-button-v2>
+        <nitrozen-button-v2 theme="secondary" size="small" :disabled="true">Disabled S</nitrozen-button-v2>
+        <nitrozen-button-v2 theme="secondary" :disabled="true">Disabled M</nitrozen-button-v2>
+        <nitrozen-button-v2 theme="secondary" size="large" :disabled="true">Disabled L</nitrozen-button-v2>
+        <nitrozen-button-v2 theme="secondary" size="extra-large" :disabled="true">Disabled XL</nitrozen-button-v2>
+      </div>
+
+      <!-- V2: Positive Appearance - Primary Theme -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Positive Appearance - Primary Theme</h3>
+      <p style="padding: 0 20px;">Sizes: Extra Small, Small, Medium (default), Large, Extra Large</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="positive" size="extra-small">Positive XS</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" size="small">Positive S</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive">Positive M</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" size="large">Positive L</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" size="extra-large">Positive XL</nitrozen-button-v2>
+      </div>
+      <p style="padding: 0 20px;">Disabled State</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="positive" size="extra-small" :disabled="true">Disabled XS</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" size="small" :disabled="true">Disabled S</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" :disabled="true">Disabled M</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" size="large" :disabled="true">Disabled L</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" size="extra-large" :disabled="true">Disabled XL</nitrozen-button-v2>
+      </div>
+
+      <!-- V2: Positive Appearance - Secondary Theme -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Positive Appearance - Secondary Theme</h3>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="positive" theme="secondary" size="extra-small">Positive XS</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" theme="secondary" size="small">Positive S</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" theme="secondary">Positive M</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" theme="secondary" size="large">Positive L</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" theme="secondary" size="extra-large">Positive XL</nitrozen-button-v2>
+      </div>
+      <p style="padding: 0 20px;">Disabled State</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="positive" theme="secondary" size="extra-small" :disabled="true">Disabled XS</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" theme="secondary" size="small" :disabled="true">Disabled S</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" theme="secondary" :disabled="true">Disabled M</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" theme="secondary" size="large" :disabled="true">Disabled L</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="positive" theme="secondary" size="extra-large" :disabled="true">Disabled XL</nitrozen-button-v2>
+      </div>
+
+      <!-- V2: Negative Appearance - Primary Theme -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Negative Appearance - Primary Theme</h3>
+      <p style="padding: 0 20px;">Sizes: Extra Small, Small, Medium (default), Large, Extra Large</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="negative" size="extra-small">Negative XS</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" size="small">Negative S</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative">Negative M</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" size="large">Negative L</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" size="extra-large">Negative XL</nitrozen-button-v2>
+      </div>
+      <p style="padding: 0 20px;">Disabled State</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="negative" size="extra-small" :disabled="true">Disabled XS</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" size="small" :disabled="true">Disabled S</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" :disabled="true">Disabled M</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" size="large" :disabled="true">Disabled L</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" size="extra-large" :disabled="true">Disabled XL</nitrozen-button-v2>
+      </div>
+
+      <!-- V2: Negative Appearance - Secondary Theme -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Negative Appearance - Secondary Theme</h3>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="negative" theme="secondary" size="extra-small">Negative XS</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" theme="secondary" size="small">Negative S</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" theme="secondary">Negative M</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" theme="secondary" size="large">Negative L</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" theme="secondary" size="extra-large">Negative XL</nitrozen-button-v2>
+      </div>
+      <p style="padding: 0 20px;">Disabled State</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="negative" theme="secondary" size="extra-small" :disabled="true">Disabled XS</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" theme="secondary" size="small" :disabled="true">Disabled S</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" theme="secondary" :disabled="true">Disabled M</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" theme="secondary" size="large" :disabled="true">Disabled L</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="negative" theme="secondary" size="extra-large" :disabled="true">Disabled XL</nitrozen-button-v2>
+      </div>
+
+      <!-- V2: Warning Appearance - Primary Theme -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Warning Appearance - Primary Theme</h3>
+      <p style="padding: 0 20px;">Sizes: Extra Small, Small, Medium (default), Large, Extra Large</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="warning" size="extra-small">Warning XS</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" size="small">Warning S</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning">Warning M</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" size="large">Warning L</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" size="extra-large">Warning XL</nitrozen-button-v2>
+      </div>
+      <p style="padding: 0 20px;">Disabled State</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="warning" size="extra-small" :disabled="true">Disabled XS</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" size="small" :disabled="true">Disabled S</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" :disabled="true">Disabled M</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" size="large" :disabled="true">Disabled L</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" size="extra-large" :disabled="true">Disabled XL</nitrozen-button-v2>
+      </div>
+
+      <!-- V2: Warning Appearance - Secondary Theme -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Warning Appearance - Secondary Theme</h3>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="warning" theme="secondary" size="extra-small">Warning XS</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" theme="secondary" size="small">Warning S</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" theme="secondary">Warning M</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" theme="secondary" size="large">Warning L</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" theme="secondary" size="extra-large">Warning XL</nitrozen-button-v2>
+      </div>
+      <p style="padding: 0 20px;">Disabled State</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 appearance="warning" theme="secondary" size="extra-small" :disabled="true">Disabled XS</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" theme="secondary" size="small" :disabled="true">Disabled S</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" theme="secondary" :disabled="true">Disabled M</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" theme="secondary" size="large" :disabled="true">Disabled L</nitrozen-button-v2>
+        <nitrozen-button-v2 appearance="warning" theme="secondary" size="extra-large" :disabled="true">Disabled XL</nitrozen-button-v2>
+      </div>
+
+      <!-- V2: Rounded Buttons -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Rounded Buttons - All Appearances</h3>
+      <p style="padding: 0 20px;">Default Appearance</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 :rounded="true" size="extra-small">Rounded XS</nitrozen-button-v2>
+        <nitrozen-button-v2 :rounded="true" size="small">Rounded S</nitrozen-button-v2>
+        <nitrozen-button-v2 :rounded="true">Rounded M</nitrozen-button-v2>
+        <nitrozen-button-v2 :rounded="true" size="large">Rounded L</nitrozen-button-v2>
+        <nitrozen-button-v2 :rounded="true" size="extra-large">Rounded XL</nitrozen-button-v2>
+      </div>
+      <p style="padding: 0 20px;">All Appearances - Rounded</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 :rounded="true">Default</nitrozen-button-v2>
+        <nitrozen-button-v2 :rounded="true" appearance="positive">Positive</nitrozen-button-v2>
+        <nitrozen-button-v2 :rounded="true" appearance="negative">Negative</nitrozen-button-v2>
+        <nitrozen-button-v2 :rounded="true" appearance="warning">Warning</nitrozen-button-v2>
+      </div>
+      <p style="padding: 0 20px;">All Appearances - Rounded - Secondary Theme</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 :rounded="true" theme="secondary">Default</nitrozen-button-v2>
+        <nitrozen-button-v2 :rounded="true" theme="secondary" appearance="positive">Positive</nitrozen-button-v2>
+        <nitrozen-button-v2 :rounded="true" theme="secondary" appearance="negative">Negative</nitrozen-button-v2>
+        <nitrozen-button-v2 :rounded="true" theme="secondary" appearance="warning">Warning</nitrozen-button-v2>
+      </div>
+      <p style="padding: 0 20px;">Rounded - Disabled</p>
+      <div class="main-div space-between">
+        <nitrozen-button-v2 :rounded="true" :disabled="true">Disabled</nitrozen-button-v2>
+        <nitrozen-button-v2 :rounded="true" :disabled="true" appearance="positive">Positive Disabled</nitrozen-button-v2>
+        <nitrozen-button-v2 :rounded="true" :disabled="true" appearance="negative">Negative Disabled</nitrozen-button-v2>
+        <nitrozen-button-v2 :rounded="true" :disabled="true" appearance="warning">Warning Disabled</nitrozen-button-v2>
+      </div>
+
+      <!-- V2: Comparison Grid - All Appearances x All Sizes -->
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Comparison Grid - All Combinations</h3>
+      <p style="padding: 0 20px;">Primary Theme - All Appearances x All Sizes</p>
+      <div class="main-div">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr style="background: #ddd;">
+              <th style="padding: 10px; text-align: left;">Size / Appearance</th>
+              <th style="padding: 10px;">Default</th>
+              <th style="padding: 10px;">Positive</th>
+              <th style="padding: 10px;">Negative</th>
+              <th style="padding: 10px;">Warning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 10px;">Extra Small</td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="extra-small">Default</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="extra-small" appearance="positive">Positive</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="extra-small" appearance="negative">Negative</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="extra-small" appearance="warning">Warning</nitrozen-button-v2></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px;">Small</td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="small">Default</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="small" appearance="positive">Positive</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="small" appearance="negative">Negative</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="small" appearance="warning">Warning</nitrozen-button-v2></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px;">Medium</td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2>Default</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 appearance="positive">Positive</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 appearance="negative">Negative</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 appearance="warning">Warning</nitrozen-button-v2></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px;">Large</td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="large">Default</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="large" appearance="positive">Positive</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="large" appearance="negative">Negative</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="large" appearance="warning">Warning</nitrozen-button-v2></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px;">Extra Large</td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="extra-large">Default</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="extra-large" appearance="positive">Positive</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="extra-large" appearance="negative">Negative</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 size="extra-large" appearance="warning">Warning</nitrozen-button-v2></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="padding: 0 20px;">Secondary Theme - All Appearances x All Sizes</p>
+      <div class="main-div">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr style="background: #ddd;">
+              <th style="padding: 10px; text-align: left;">Size / Appearance</th>
+              <th style="padding: 10px;">Default</th>
+              <th style="padding: 10px;">Positive</th>
+              <th style="padding: 10px;">Negative</th>
+              <th style="padding: 10px;">Warning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 10px;">Extra Small</td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="extra-small">Default</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="extra-small" appearance="positive">Positive</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="extra-small" appearance="negative">Negative</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="extra-small" appearance="warning">Warning</nitrozen-button-v2></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px;">Small</td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="small">Default</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="small" appearance="positive">Positive</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="small" appearance="negative">Negative</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="small" appearance="warning">Warning</nitrozen-button-v2></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px;">Medium</td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary">Default</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" appearance="positive">Positive</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" appearance="negative">Negative</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" appearance="warning">Warning</nitrozen-button-v2></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px;">Large</td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="large">Default</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="large" appearance="positive">Positive</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="large" appearance="negative">Negative</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="large" appearance="warning">Warning</nitrozen-button-v2></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px;">Extra Large</td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="extra-large">Default</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="extra-large" appearance="positive">Positive</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="extra-large" appearance="negative">Negative</nitrozen-button-v2></td>
+              <td style="padding: 10px; text-align: center;"><nitrozen-button-v2 theme="secondary" size="extra-large" appearance="warning">Warning</nitrozen-button-v2></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ====================================== -->
+      <!-- V1 vs V2 SIDE BY SIDE COMPARISON -->
+      <!-- ====================================== -->
+      <h2 style="padding: 20px; background: #2E31BE; color: white; margin-top: 40px;">V1 vs V2 Side by Side Comparison</h2>
+      
+      <!-- Comparison Legend -->
+      <div class="main-div" style="background: #f8f9fa; border-left: 4px solid #6c757d;">
+        <h4 style="margin: 0 0 10px 0;">Quick Reference</h4>
+        <div style="display: flex; gap: 40px; font-size: 14px;">
+          <div>
+            <strong style="color: #ffc107;">V1 (nitrozen-button)</strong>
+            <ul style="margin: 5px 0; padding-left: 20px;">
+              <li>Uses directives: <code>v-flat-btn</code>, <code>v-stroke-btn</code></li>
+              <li>3 sizes: small, medium, large</li>
+              <li>2 themes: primary, secondary</li>
+            </ul>
+          </div>
+          <div>
+            <strong style="color: #28a745;">V2 (nitrozen-button-v2)</strong>
+            <ul style="margin: 5px 0; padding-left: 20px;">
+              <li>No directives needed</li>
+              <li>5 sizes: extra-small to extra-large</li>
+              <li>4 appearances: default, positive, negative, warning</li>
+              <li>2 themes: primary (filled), secondary (outlined)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Primary Buttons Comparison</h3>
+      <div class="main-div space-between">
+        <div style="text-align: center;">
+          <p>V1 Flat Primary</p>
+          <nitrozen-button v-flat-btn>V1 Flat</nitrozen-button>
+        </div>
+        <div style="text-align: center;">
+          <p>V2 Default Primary</p>
+          <nitrozen-button-v2>V2 Default</nitrozen-button-v2>
+        </div>
+        <div style="text-align: center;">
+          <p>V1 Stroke Primary</p>
+          <nitrozen-button v-stroke-btn>V1 Stroke</nitrozen-button>
+        </div>
+        <div style="text-align: center;">
+          <p>V2 Default Secondary</p>
+          <nitrozen-button-v2 theme="secondary">V2 Secondary</nitrozen-button-v2>
+        </div>
+      </div>
+
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Size Comparison</h3>
+      <div class="main-div space-between">
+        <div style="text-align: center;">
+          <p>V1 Small</p>
+          <nitrozen-button v-flat-btn>Small</nitrozen-button>
+        </div>
+        <div style="text-align: center;">
+          <p>V1 Medium</p>
+          <nitrozen-button v-flat-btn size="medium">Medium</nitrozen-button>
+        </div>
+        <div style="text-align: center;">
+          <p>V1 Large</p>
+          <nitrozen-button v-flat-btn size="large">Large</nitrozen-button>
+        </div>
+      </div>
+      <div class="main-div space-between">
+        <div style="text-align: center;">
+          <p>V2 Extra Small</p>
+          <nitrozen-button-v2 size="extra-small">XS</nitrozen-button-v2>
+        </div>
+        <div style="text-align: center;">
+          <p>V2 Small</p>
+          <nitrozen-button-v2 size="small">Small</nitrozen-button-v2>
+        </div>
+        <div style="text-align: center;">
+          <p>V2 Medium</p>
+          <nitrozen-button-v2>Medium</nitrozen-button-v2>
+        </div>
+        <div style="text-align: center;">
+          <p>V2 Large</p>
+          <nitrozen-button-v2 size="large">Large</nitrozen-button-v2>
+        </div>
+        <div style="text-align: center;">
+          <p>V2 Extra Large</p>
+          <nitrozen-button-v2 size="extra-large">XL</nitrozen-button-v2>
+        </div>
+      </div>
+
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Disabled States Comparison</h3>
+      <div class="main-div space-between">
+        <div style="text-align: center;">
+          <p>V1 Flat Disabled</p>
+          <nitrozen-button v-flat-btn :disabled="true">V1 Disabled</nitrozen-button>
+        </div>
+        <div style="text-align: center;">
+          <p>V1 Stroke Disabled</p>
+          <nitrozen-button v-stroke-btn :disabled="true">V1 Disabled</nitrozen-button>
+        </div>
+        <div style="text-align: center;">
+          <p>V2 Primary Disabled</p>
+          <nitrozen-button-v2 :disabled="true">V2 Disabled</nitrozen-button-v2>
+        </div>
+        <div style="text-align: center;">
+          <p>V2 Secondary Disabled</p>
+          <nitrozen-button-v2 theme="secondary" :disabled="true">V2 Disabled</nitrozen-button-v2>
+        </div>
+      </div>
+
+      <h3 style="padding: 10px 20px; background: #e0e0e0;">Rounded Buttons Comparison</h3>
+      <div class="main-div space-between">
+        <div style="text-align: center;">
+          <p>V1 Rounded Flat</p>
+          <nitrozen-button v-flat-btn :rounded="true">V1 Rounded</nitrozen-button>
+        </div>
+        <div style="text-align: center;">
+          <p>V1 Rounded Stroke</p>
+          <nitrozen-button v-stroke-btn :rounded="true">V1 Rounded</nitrozen-button>
+        </div>
+        <div style="text-align: center;">
+          <p>V2 Rounded Primary</p>
+          <nitrozen-button-v2 :rounded="true">V2 Rounded</nitrozen-button-v2>
+        </div>
+        <div style="text-align: center;">
+          <p>V2 Rounded Secondary</p>
+          <nitrozen-button-v2 theme="secondary" :rounded="true">V2 Rounded</nitrozen-button-v2>
+        </div>
       </div>
 
       <!-- Gropup Button -->
