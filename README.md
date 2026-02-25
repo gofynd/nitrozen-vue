@@ -7,6 +7,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fc6557a3-7a3f-45c3-be9d-53bdd12f6dcf/deploy-status)](https://nitrozen.netlify.app/)
 
 
+
 ### Nitrozen Badge
 ​
 ```
