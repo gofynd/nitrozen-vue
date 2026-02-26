@@ -296,20 +296,32 @@ export default {
       all_option: {'text': 'Select All', 'value': 'all'},
     };
   },
-  watch: {
+   watch: {
     value() {
       if (Array.isArray(this.value)) {
         this.selectedItems = [...this.value];
       }
       if (!this.multiple && this.searchable) {
         const selected = this.items.find((i) => i.value == this.value);
-        this.searchInput = selected ? selected.text : this.value;
+        this.selected = selected || null;
+        if(this.add_option){
+              this.searchInput="";
+        }else{
+          this.searchInput = selected ? selected.text : this.value;
+        }
+      } else if (!this.multiple) {
+        const selected = this.items.find((i) => i.value == this.value);
+        this.selected = selected || null;
       }
-      this.setAllOptions()
+      this.setAllOptions();
     },
     items: {
       handler: function() {
-        this.setAllOptions()
+        if (!this.multiple) {
+          const selected = this.items.find((i) => i.value == this.value);
+          this.selected = selected || null;
+        }
+        this.setAllOptions();
       }
     }
   },
@@ -461,12 +473,30 @@ export default {
       }
     },
     addOption() {
-        let value = this.searchInput;
-        this.searchInput = '';
-        this.$emit("addOption", value);
-        this.eventEmit({}, "searchInputChange");
-        this.calculateViewport();
-    },
+    let value = this.searchInput && this.searchInput.trim();
+    if (!value) return;
+    // Create new item
+    const newItem = {
+        text: value,
+        value: value
+    };
+ 
+    // Add to items
+    this.$emit("addOption", newItem); 
+    // Select the new item
+    if (this.multiple) {
+        this.selectedItems.push(newItem.value);
+        this.$emit("input", this.selectedItems);
+        this.$emit("change", this.selectedItems);
+    } else {
+        this.selected = newItem;
+        this.$emit("input", newItem.value);
+        this.$emit("change", newItem.value);
+        this.searchInput= this.add_option? '': newItem.text;
+    }
+    this.eventEmit({}, "searchInputChange");
+    this.calculateViewport();
+},
     setCheckedItem() {
       this.$emit("input", this.selectedItems); // v-model implementation
       this.$emit("change", this.selectedItems);
@@ -479,7 +509,17 @@ export default {
         text: this.searchInput,
       };
       if (!this.searchInput) {
-        this.setAllOptions()
+        this.setAllOptions();
+        // Remove selected option data when search input is cleared
+        if (this.multiple) {
+          this.selectedItems = [];
+          this.$emit("input", []);
+          this.$emit("change", []);
+        } else {
+          this.selected = null;
+          this.$emit("input", "");
+          this.$emit("change", "");
+        }
       }
       this.eventEmit(obj, "searchInputChange");
       this.calculateViewport();
